@@ -1,0 +1,9 @@
+@import '../../styles/mixins.scss';
+
+.Button {
+  @include interactive-font;
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+}

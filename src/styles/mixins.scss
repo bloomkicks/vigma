@@ -1,0 +1,29 @@
+@import 'variables.scss';
+
+@mixin inherited-font {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+@mixin title-font {
+  font-family: Roboto, 'Segoe UI', Raleway, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.8rem;
+  color: $white;
+}
+
+@mixin important-font {
+  font-weight: bold;
+  font-style: italic;
+  color: $important;
+}
+
+@mixin interactive-font {
+  font-family: Merriweather, serif;
+  font-size: 1.1rem;
+  color: $interactive;
+}
+
+@mixin italic-font {
+  font-style: italic;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,45 @@
+.Review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid white;
+  width: 300px;
+}
+
+.Review > div {
+  margin-bottom: 15px;
+}
+
+.Review > h2 {
+  margin-bottom: 5px;
+}
+
+.Image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+
+.Rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 2rem;
+}
+
+.Star {
+  height: 100%;
+  width: auto;
+  margin: 0.2rem;
+}
+
+.Name {
+
+}
+
+.Text {
+
+}

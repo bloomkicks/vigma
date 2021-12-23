@@ -1,0 +1,6 @@
+@import '../../styles/mixins.scss';
+
+.Italic {
+  @include inherited-font;
+  @include italic-font;
+}

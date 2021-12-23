@@ -1,0 +1,11 @@
+.AboutUsSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.Heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,35 @@
+@import '../../styles/mixins'; 
+
+.Link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-decoration: none;
+  transition: outline-offset 0.1s ease-out;
+}
+
+.Link:hover {
+  outline-offset: -1px;
+  outline: 2px dashed #8a1133;
+}
+
+.Link:focus {
+  outline-offset: -2px;
+  outline: 3px solid #8a1133;
+}
+
+// .Link:active, .Link:visited {
+//   text-decoration: none; 
+//   color: inherit;
+//   @include inherited-font
+// }
+
+.LinkActive  {
+  text-decoration: underline; 
+  font-weight: bold;
+}
+
+.Link > div {
+  @include interactive-font;
+}

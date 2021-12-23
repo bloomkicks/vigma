@@ -1,0 +1,21 @@
+.ContactsSection {
+  position: relative;
+  height: 3rem;
+}
+
+.Text {
+  text-align: right;
+}
+
+.Logo {
+  position: absolute;
+  top: -25%;
+  left: -10%;
+  width: 3rem;
+  height: auto;
+  opacity: 0.4;
+}
+
+.Location {
+
+}

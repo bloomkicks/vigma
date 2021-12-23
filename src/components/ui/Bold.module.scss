@@ -1,0 +1,6 @@
+@import '../../styles/mixins';
+
+.Important {
+  @include inherited-font;
+  @include important-font;
+}

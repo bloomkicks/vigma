@@ -1,0 +1,12 @@
+.Page {
+  width: 100%;
+  max-width: 1366px;
+  height: 100vh;
+  max-height: 704px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #444c78;
+}
