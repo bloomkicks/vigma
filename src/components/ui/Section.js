@@ -11,7 +11,7 @@ const Section = props => {
   return (
     <section {...sectionProps} className={`
       ${isVertical ? classes.Vertical : classes.Section}
-      ${className}
+      ${className || ''}
     `.trim()}>
       {children}
     </section>

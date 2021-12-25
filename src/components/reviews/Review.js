@@ -1,9 +1,10 @@
-import starSrc from '../../assets/reviews/star.svg'
+import Rating from './Rating'
 import classes from './Review.module.css'
 
 const Review = props => {
   const {
     imageSrc,
+    rating,
     name,
     text,
     ...reviewProps
@@ -17,11 +18,7 @@ const Review = props => {
       <div className={classes.Image}>
         <img src={imageSrc} alt={name} />     
       </div>
-      <div className={classes.Rating}>
-        {[1,2,3,4,5].map(star => {
-          return <img className={classes.Star} src={starSrc} alt="Звезда" />
-        })}
-      </div>
+      <Rating rating={rating} />
       <h2 className={classes.Name}>{name}</h2>
       <p className={classes.Text}>{text}</p>
     </section> 

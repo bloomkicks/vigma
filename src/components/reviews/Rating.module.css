@@ -1,0 +1,17 @@
+.Rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 2rem;
+}
+
+.Star {
+  height: 100%;
+  width: auto;
+  margin: 0.2rem;
+}
+
+.NonActive {
+  opacity: 0.5;
+}
+

@@ -3,6 +3,7 @@ import {Routes, Route, Navigate} from 'react-router-dom'
 import ContactsPage from './pages/ContactsPage';
 import AboutUsPage from './pages/AboutUsPage';
 import ReviewsPage from './pages/ReviewsPage';
+import WorksPage from './pages/WorksPage'
 import MainPage from './pages/MainPage';
 import Layout from './components/layout/Layout';
 import './App.css';
@@ -37,7 +38,7 @@ function App() {
         />
         <Route 
           path="/works"  
-          element={<ContactsPage />}
+          element={<WorksPage />}
         />
       </Routes>
     </Layout>

@@ -15,7 +15,6 @@ const Link = (props) => {
           ${className || ""}
         `.trim()
       }}
-      exact
     >
       <div className={innerClassName}>{children}</div>
     </NavLink>

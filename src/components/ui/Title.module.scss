@@ -1,5 +1,5 @@
+@import '../../styles//mixins.scss';
+
 .Title {
-  position: absolute; 
-  left: 10px;
-  top: 20px;
+  @include title-font
 }

@@ -10,7 +10,7 @@ const Page = props => {
   } = props
 
   return (
-    <div {...pageProps} 
+    <article {...pageProps} 
       className={`
         ${classes.Page}
         ${className || ''}
@@ -18,7 +18,7 @@ const Page = props => {
     >
       <Title className={classes.Title}>{title}</Title>
       {children} 
-    </div>
+    </article>
   )
 }
 

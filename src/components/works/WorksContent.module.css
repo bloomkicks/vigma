@@ -1,8 +1,9 @@
-.Reviews {
-  width: 100%;
+.WorksContent {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
 }
