@@ -1,24 +1,20 @@
+import Secondary from "../ui/Secondary";
 import Section from "../ui/Section";
+import Bold from "../ui/Bold";
 import classes from "./AboutUsSection.module.css";
 
 const AboutUsSection = (props) => {
-  const { title, children, imgSrc, className, ...sectionProps } = props;
+  const { title, children, imgSrc, logoStyle, ...sectionProps } = props;
 
   return (
-    <Section 
-      {...sectionProps} 
-      className={`
-        ${classes.AboutUsSection}
-        ${className}
-      `}
-    >
+    <Section {...sectionProps} className={classes.AboutUsSection}>
       <div className={classes.Heading}>
-        <h2>{title}</h2>
-        <img className={classes.Logo} src={imgSrc} />
+        <Secondary>{title}</Secondary>
+        <img className={classes.Logo} style={logoStyle} src={imgSrc} />
       </div>
       <p>{children}</p>
     </Section>
-  )
+  );
 };
 
 export default AboutUsSection;

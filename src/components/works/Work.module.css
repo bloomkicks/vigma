@@ -1,6 +1,6 @@
 .Work {
-  width: 350px;
-  height: 250px;
+  width: 450px;
+  height: 330px;
 }
 
 .ImageContainer {
@@ -9,8 +9,7 @@
   flex-wrap: wrap;
   width: 100%;
   height: 95%;
-  border: 2px solid white;
-  border-radius: 5px;
+  border: 1px solid white;
   margin-bottom: 10px;
   overflow: hidden;
 }

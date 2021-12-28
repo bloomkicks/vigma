@@ -1,3 +1,5 @@
+import Secondary from '../ui/Secondary'
+import Section from '../ui/Section'
 import classes from './Work.module.css'
 
 const Work = props => {
@@ -9,14 +11,14 @@ const Work = props => {
   console.log(photos[0])
 
   return (
-    <section className={classes.Work}>
+    <Section className={classes.Work}>
       <div className={classes.ImageContainer}>
         {photos.map(photo => {
           return <img src={photo} key={Math.random()} />
         })}
       </div>
-      <h2>{name}</h2>
-    </section>
+      <Secondary>{name}</Secondary>
+    </Section>
   )
 }
 

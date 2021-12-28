@@ -1,45 +1,52 @@
 import OrderButton from "./OrderButton";
+import Content from "../layout/Content";
 import Section from "../ui/Section";
+import Anchor from "../ui/Anchor";
 import Title from "../ui/Title";
 import Bold from "../ui/Bold";
 import classes from "./MainContent.module.css";
 
 const MainContent = (props) => {
   return (
-    <main className={classes.MainContent}>
+    <Content className={classes.MainContent}>
       <Title>
-        VIGMA изменит ваш интерьер и <br />
-        <Bold>вашу жизнь</Bold>
+        Качественная мебель на заказ <Bold>быстро</Bold> и <Bold>недорого</Bold>
+        !
       </Title>
-      <Section>
+      <Section close={true}>
         <div>
-          Интерьер дома очень важен, ведь именно он формирует
-          <Bold> атмосферу</Bold> и <Bold>уют</Bold> и влияет на{" "}
-          <Bold>настроение</Bold> и <Bold>продуктивность</Bold>
-        </div>
-        <div>
-          Мы проектируем, изготовляем и доставляем мебель, чтобы заполнить{" "}
-          <Bold>внутренний мир</Bold> вашего дома!
-        </div>
-        <div>
-          У нас вы можете заказать от простого дивана до целой кухни, и мы
-          выполним ваш заказ <Bold>быстро</Bold>, <Bold>качественно</Bold> и{" "}
-          <Bold>на века</Bold>
+          У нас вы можете заказать любую корпусную мебель, которую мы изготовим
+          согласно высоким стандартам качества. <br />
+          <Anchor>Подробнее о нас...</Anchor>
         </div>
       </Section>
       <Section>
         <div>
-          Пройдите простой опрос, чтобы мы поняли какую мебель вы хотите, и мы
-          изготовим ее в промежуток от 5-и дней
-        </div>
-        <div className={classes.close}>
-          Замер и составление проекта - <Bold>бесплатно</Bold>
+          Мы поможем обустроить дом, который:
+          <ul>
+            <li>
+              улучшает <Bold>настроение</Bold>
+            </li>
+            <li>
+              повышает <Bold>продуктивность</Bold>
+            </li>
+            <li>
+              формирует <Bold>атмосферу</Bold>
+            </li>
+            <li>
+              создает <Bold>уют</Bold>
+            </li>
+          </ul>
         </div>
       </Section>
       <Section>
-        <OrderButton />
+        <div>
+          Пройдите простой опрос, чтобы мы поняли какая мебель подойдет вам
+          лучше или договоритесь <Anchor>по телефону</Anchor>
+        </div>
       </Section>
-    </main>
+      <OrderButton />
+    </Content>
   );
 };
 

@@ -10,7 +10,7 @@ const ContactsSection = props => {
   } = props
 
   return (
-    <Section {...sectionProps} className={classes.ContactsSection}>
+    <Section {...sectionProps} className={classes.ContactsSection} >
       <img {...imgProps} src={logoSrc} className={classes.Logo} />
       <p className={classes.Text}>{children}</p>
     </Section>

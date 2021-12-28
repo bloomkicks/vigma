@@ -7,6 +7,7 @@ const ReviewsPage = props => {
     <Page 
       title='Отзывы' 
       className={classes.ReviewsPage}
+      wrapperClassName={classes.ReviewsWrapper}
     >
       <Reviews />  
     </Page>

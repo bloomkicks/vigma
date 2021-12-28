@@ -1,18 +1,19 @@
-import phoneSvg from '../../assets/contact/phone.svg'
-import emailSvg from '../../assets/contact/email.svg'
-import locationSvg from '../../assets/contact/location.svg'
-import timeSvg from '../../assets/contact/time.svg'
-import directorSvg from '../../assets/contact/director.svg'
+import phoneSrc from '../../assets/contact/phone.svg'
+import emailSrc from '../../assets/contact/email.svg'
+import locationSrc from '../../assets/contact/location.svg'
+import timeSrc from '../../assets/contact/time.svg'
+import directorSrc from '../../assets/contact/director.svg'
 
 import ContactsSection from "./ContactsSection";
+import Content from '../layout/Content'
 import Italic from "../ui/Italic";
 import classes from "./ContactsContent.module.css";
 
 const ContactsContent = props => {
   return (
-    <main className={classes.ContactsContent}>
+    <Content className={classes.ContactsContent}>
       <ContactsSection 
-        logoSrc={phoneSvg} 
+        logoSrc={phoneSrc} 
         imgProps={{
           style: {top: '-55%'}
         }}
@@ -20,30 +21,30 @@ const ContactsContent = props => {
         Номер телефона: <b>8 (812) 924-10-19</b><br />
         <Italic>(с 12:00 до 18:00)</Italic>
       </ContactsSection>
-      <ContactsSection logoSrc={emailSvg}>
+      <ContactsSection logoSrc={emailSrc}>
         Адрес эл. почты: <b>vigma@gmail.com</b>
       </ContactsSection>
       <ContactsSection 
-        logoSrc={locationSvg} 
+        logoSrc={locationSrc} 
         imgProps={{
           style: {width: '2.5rem'}
         }}
       >
-        Наш салон: <b>497 Evergreen Rd. Roseville, CA 95673</b>
+        Наш адрес: <b>497 Evergreen Rd. Roseville, CA 95673</b>
       </ContactsSection>
-      <ContactsSection logoSrc={timeSvg}>
+      <ContactsSection close={true} logoSrc={timeSrc}>
         График посещения: <b>с 9:30 до 20:00</b> <br />
         <Italic>(по предварительной договорённости)</Italic>
       </ContactsSection>
       <ContactsSection 
-        logoSrc={directorSvg}
+        logoSrc={directorSrc}
         imgProps={{
           style: {width: '4rem'}
         }}
       >
-        Главный директор: <b>Филатов Михаил Юрьевич</b>
+        Главный менеджер: <b>Филатов Михаил Юрьевич</b>
       </ContactsSection>
-    </main>
+    </Content>
   )
 }
 

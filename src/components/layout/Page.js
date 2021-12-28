@@ -6,19 +6,25 @@ const Page = props => {
     title,
     children,
     className,
+    wrapperClassName,
     ...pageProps
   } = props
 
   return (
-    <article {...pageProps} 
-      className={`
-        ${classes.Page}
-        ${className || ''}
-      `} 
-    >
-      <Title className={classes.Title}>{title}</Title>
-      {children} 
-    </article>
+    <div className={`
+      ${classes.PageSpace}
+      ${wrapperClassName}
+    `}>
+      <article {...pageProps} 
+        className={`
+          ${classes.Page}
+          ${className || ''}
+        `} 
+      >
+        <Title className={classes.Title}>{title}</Title>
+        {children} 
+      </article>
+    </div>
   )
 }
 

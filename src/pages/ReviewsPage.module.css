@@ -1,0 +1,9 @@
+.ReviewsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReviewsWrapper {
+  height: auto;
+}

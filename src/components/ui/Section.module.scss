@@ -1,7 +1,26 @@
 .Section {
-  margin-top: 2.5rem;
+  margin-top: 30px;
+}
+
+.Close {
+  margin-top: 20px;
 }
 
 .Section > div {
-  margin-top: 1rem;
+  margin-top: 10px;
+}
+
+.Centered {
+  text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  .Section {
+    width: 90%;
+    margin-top: 2.5rem;
+  } 
+
+  .Section > div {
+    margin-top: 1rem;
+  }
 }

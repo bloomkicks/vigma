@@ -14,6 +14,7 @@ const works = [
     photos: [
       blackWhiteKitchen,
       blackWhiteKitchen2,
+      blackWhiteKitchen,
     ],
   },
 ];

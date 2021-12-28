@@ -4,6 +4,7 @@ import classes from "./Header.module.css";
 
 const Header = (props) => {
   return (
+    <>
     <header className={classes.Header}>
       <div className={classes.InnerHeader}>
         <Link
@@ -22,6 +23,8 @@ const Header = (props) => {
         </nav>
       </div>
     </header>
+    <div className={classes.HeaderSpace}></div>
+    </>
   );
 };
 

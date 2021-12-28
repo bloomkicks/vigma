@@ -4,7 +4,7 @@ import classes from './WorksPage.module.css'
 
 const WorkPage = props => {
   return (
-    <Page className={classes.WorksPage}>
+    <Page className={classes.WorksPage} title="Наши работы">
       <WorksContent />
     </Page>
   )

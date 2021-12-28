@@ -1,3 +1,5 @@
+import Secondary from '../ui/Secondary'
+import Section from '../ui/Section'
 import Rating from './Rating'
 import classes from './Review.module.css'
 
@@ -11,17 +13,15 @@ const Review = props => {
   } = props
 
   return (
-    <section 
+    <Section 
       {...reviewProps} 
       className={classes.Review}
     >
-      <div className={classes.Image}>
-        <img src={imageSrc} alt={name} />     
-      </div>
+      <img src={imageSrc} alt={name} className={classes.Image} />     
       <Rating rating={rating} />
-      <h2 className={classes.Name}>{name}</h2>
+      <Secondary className={classes.Name}>{name}</Secondary>
       <p className={classes.Text}>{text}</p>
-    </section> 
+    </Section> 
   )
 }
 
