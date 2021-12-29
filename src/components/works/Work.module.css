@@ -3,48 +3,69 @@
   height: 330px;
 }
 
+.Work > figcaption {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  border: 1px solid white;
+  border-top: none;
+  transform: translateY(-1px);
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.Work > figcaption > h2 {
+  color: #133758;
+}
+
 .ImageContainer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
   height: 95%;
-  border: 1px solid white;
-  margin-bottom: 10px;
   overflow: hidden;
 }
 
-.ImageContainer > img {
-  display: inline-block;
-  object-fit: cover; 
-  border: 1px solid white;
+.ImageContainer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   width: 40%;
   height: 50%;
 }
 
+.ImageContainer > div > img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+}
+
 /* ONE ITEM */
-.ImageContainer > img:first-child:last-child {
+.ImageContainer > div:first-child:last-child {
   width: 100%;
   height: 100%;
 }
 
 /* TWO ITEMS */
-.ImageContainer > img:first-child:nth-last-child(2), 
-.ImageContainer > img:nth-child(2):last-child {
+.ImageContainer > div:first-child:nth-last-child(2), 
+.ImageContainer > div:nth-child(2):last-child {
   height: 100%;
   width: 50%;
 }
 
 /* THREE ITEMS */
-.ImageContainer > img:first-child:nth-last-child(3) {
+.ImageContainer > div:first-child:nth-last-child(3) {
   height: 100%;
   width: 60%;
 }
 
 /* FOUR ITEMS */
-.ImageContainer > img:first-child:nth-last-child(4),
-.ImageContainer > img:nth-child(2):nth-last-child(3),
-.ImageContainer > img:nth-child(3):nth-last-child(2),
-.ImageContainer > img:nth-child(4):last-child {
+.ImageContainer > div:first-child:nth-last-child(4),
+.ImageContainer > div:nth-child(2):nth-last-child(3),
+.ImageContainer > div:nth-child(3):nth-last-child(2),
+.ImageContainer > div:nth-child(4):last-child {
   width: 50%;
 }

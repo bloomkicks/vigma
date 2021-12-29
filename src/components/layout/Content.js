@@ -8,13 +8,13 @@ const Content = props => {
   } = props
 
   return (
-    <main {...contentProps} className={`
+    <article {...contentProps} className={`
       ${classes.Content} 
       ${className || ''}
       ${classes.MediaContent}
     `}>
       {children}
-    </main>
+    </article>
   )
 }
 

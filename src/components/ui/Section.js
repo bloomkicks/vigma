@@ -3,6 +3,7 @@ import classes from './Section.module.scss'
 const Section = props => {
   const {
     close,
+    element,
     children,
     centered,
     className,
@@ -10,15 +11,18 @@ const Section = props => {
     ...sectionProps
   } = props
 
+  const SectionEl = element || 'section'
+
   return (
-    <section {...sectionProps} className={`
+    <SectionEl {...sectionProps} className={`
       ${isVertical ? classes.Vertical : classes.Section}
+      ${close && isVertical && classes.CloseVertical}
+      ${close && !isVertical && classes.Close}
       ${centered && classes.Centered}
-      ${close && classes.Close}
       ${className || ''}
     `.trim()}>
       {children}
-    </section>
+    </SectionEl>
   )
 }
 

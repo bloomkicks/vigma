@@ -17,7 +17,7 @@ const MainContent = (props) => {
         <div>
           У нас вы можете заказать любую корпусную мебель, которую мы изготовим
           согласно высоким стандартам качества. <br />
-          <Anchor>Подробнее о нас...</Anchor>
+          <Anchor href="/about-us">Подробнее о нас...</Anchor>
         </div>
       </Section>
       <Section>
@@ -42,7 +42,7 @@ const MainContent = (props) => {
       <Section>
         <div>
           Пройдите простой опрос, чтобы мы поняли какая мебель подойдет вам
-          лучше или договоритесь <Anchor>по телефону</Anchor>
+          лучше или договоритесь <Anchor href="/contacts">по телефону</Anchor>
         </div>
       </Section>
       <OrderButton />

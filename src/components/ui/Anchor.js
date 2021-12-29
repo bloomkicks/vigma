@@ -5,7 +5,7 @@ const Anchor = (props) => {
   const { href, children, ...anchorProps } = props;
 
   return (
-    <Link {...anchorProps} pathname={href} className={classes.Anchor}>
+    <Link {...anchorProps} to={href || '#'} className={classes.Anchor}>
       {children}
     </Link>
   );
