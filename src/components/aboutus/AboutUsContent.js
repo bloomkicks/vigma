@@ -8,6 +8,7 @@ import buildingSrc from "../../assets/about us/Building.svg";
 import AboutUsSection from "./AboutUsSection";
 import Content from '../layout/Content'
 import classes from "./AboutUsContent.module.css";
+import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
 
 const aboutUsSections = [
   {
@@ -52,7 +53,7 @@ const AboutUsContent = (props) => {
   return (
     <Content className={classes.AboutUsContent}>
       {aboutUsSections.map(section => {
-        return <AboutUsSection {...section} />
+        return <AboutUsSection {...section} key={Math.random()} />
       })}
     </Content>
   );
