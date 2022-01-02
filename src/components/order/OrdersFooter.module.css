@@ -1,0 +1,16 @@
+.OrdersFooter {
+  display: flex;
+}
+
+.Arrow {
+  width: 0;
+  right: 0;
+  border: 10px solid transparent;
+  border-right-color: white; 
+  border-top-color: white; 
+  transform: rotate(-135deg);
+}
+
+.Right {
+  transform: rotate(45deg);
+}
