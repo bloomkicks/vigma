@@ -1,11 +1,10 @@
 // ANGLED KITCHEN
-import angledHorizontal from "../../assets/works/angled kitchen/horizontal.jpg";
-import angledVertical from "../../assets/works/angled kitchen/vertical.jpg";
+import kitchenHorizontalSrc from "../../assets/works/kitchen/horizontal.jpg";
+import kitchenInsidesSrc from "../../assets/works/kitchen/with insides.jpg";
 
-// STRAIGHT KITCHEN
-import straightFridge from "../../assets/works/straight kitchen/fridge/outer.jpg";
-import straightBottom from "../../assets/works/straight kitchen/tables/outer.jpg";
-import straightTop from "../../assets/works/straight kitchen/top/outer.jpg";
+// BED AND DESK
+import bedSrc from "../../assets/works/bed, desk, shelf/bed.jpeg"
+import deskSrc from "../../assets/works/bed, desk, shelf/desk.jpeg"
 
 import Work from "./Work";
 import classes from "./WorksContent.module.css";
@@ -14,32 +13,32 @@ const works = [
   {
     photos: [
       {
-        src: angledVertical,
+        src: kitchenHorizontalSrc,
+      },
+      {
+        src: kitchenInsidesSrc,
+        isVertical: true,
+      },
+    ],
+    name: "Угловая Кухня Инь-Янь",
+    description: "Фактура: МДФ и Эмаль",
+    colors: ["#EEE9E5", "repeating-linear-gradient(90deg, #2e2926, #1F1D1E 1.4%)"],
+  },
+  {
+    photos: [
+      {
+        src: bedSrc,
         isVertical: true,
       },
       {
-        src: angledHorizontal,
-      },
+        src: deskSrc,
+        isVertical: true,
+      }
     ],
-    name: "Прямая кухня",
-    description: "Материалы: МДФ и массив Фактура: МДФ",
-    colors: ["#EEE9E5", "#1F1D1E"],
-  },
-  // {
-  //   name: "Прямая кухня",
-  //   photos: [
-  //     {
-  //       src: straightFridge,
-  //       isVertical: true,
-  //     },
-  //     {
-  //       src: straightTop,
-  //     },
-  //     {
-  //       src: straightBottom,
-  //     },
-  //   ],
-  // },
+    name: "Спальная Комната Уют",
+    description: "Фактура: ЛДСП",
+    colors: ["#c4c2b6", "repeating-linear-gradient(-45deg, #aca89c, #786859 1.4%)"]
+  }
 ];
 
 const WorksContent = (props) => {

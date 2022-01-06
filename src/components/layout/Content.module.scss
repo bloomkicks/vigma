@@ -1,5 +1,6 @@
 .Content {
-  width: 48%;
+  flex: 1 0 50%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,9 +9,8 @@
 
 @media screen and (max-width: 550px) {
   .MediaContent {
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
+    flex: 1 0 auto;
+    text-align: center;
     align-items: center;
   }
 }

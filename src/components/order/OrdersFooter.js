@@ -1,14 +1,31 @@
-import Third from '../ui/Third'
+import { useLocation, useNavigate } from "react-router-dom";
+import arrowSvg from "../../assets/order/next-arrow.svg";
+import Third from "../ui/Third";
 import classes from "./OrdersFooter.module.css";
 
 const OrdersFooter = (props) => {
-  const { children, ...footerProps } = props;
+  const { children, query, ...footerProps } = props;
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const clickHandler = (e) => {
+    const searchParams = new URLSearchParams(location.search);
+    let lastEntry = ''
+    searchParams.forEach((value, key) => lastEntry = key)
+    searchParams.delete(lastEntry)
+
+    navigate(`${location.pathname}?${searchParams}`)
+  };
 
   return (
     <div className={classes.OrdersFooter}>
-      <div className={classes.Arrow}></div>
+      <img
+        onClick={clickHandler}
+        src={arrowSvg}
+        alt="Назад"
+        className={classes.Arrow}
+      />
       <Third>{children}</Third>
-      <div className={`${classes.Arrow} ${classes.Right}`}></div>
     </div>
   );
 };

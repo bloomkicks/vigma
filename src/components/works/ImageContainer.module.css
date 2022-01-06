@@ -1,0 +1,68 @@
+.ImageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0;
+  height: 210px;
+  width: 100%;
+}
+
+.ImageContainer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+  border: 1px solid white;
+}
+
+.ImageContainer > .Vertical {
+  width: 50%;
+}
+
+.ImageContainer > .Vertical > img {
+  height: auto;
+  width: 100%;
+}
+.ImageContainer > .Horiz > img {
+  height: 100%;
+  width: auto;
+}
+
+/* ONE ITEM */
+.ImageContainer > div:nth-child(1):nth-last-child(1) {
+  height: auto;
+  width: 100%;
+}
+
+/* THREE ITEMS */
+.ImageContainer > .Horiz:nth-child(1):nth-last-child(3) {
+  height: 100%;
+  width: 60%;
+}
+.ImageContainer > .Vertical:nth-child(1):nth-last-child(3) {
+  width: auto;
+}
+
+/* FOUR ITEMS */
+.ImageContainer > div:nth-child(1):nth-last-child(4),
+.ImageContainer > div:nth-child(2):nth-last-child(3),
+.ImageContainer > div:nth-child(3):nth-last-child(2),
+.ImageContainer > div:nth-child(4):nth-last-child(1) {
+  width: 50%;
+  height: 50%;
+}
+
+.ZoomedImage {
+  width: auto;
+  height: auto;
+  transform: scale(1.5);
+}
+
+.ZoomedImage > img {
+  width: auto; 
+  height: auto;
+}

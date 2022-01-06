@@ -1,6 +1,8 @@
 .Work {
-  height: 220px;
-  width: 350px;
+  min-height: 220px;
+  max-width: 350px;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .Work > figcaption > h2 {
@@ -12,6 +14,7 @@
 }
 
 .Desc {
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -37,62 +40,4 @@
 
 .Colors > div:first-child {
   margin-left: 0;
-}
-
-.ImageContainer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 95%;
-  overflow: hidden;
-}
-
-.ImageContainer > div {
-  position: relative;
-  overflow: hidden;
-  width: 40%;
-  height: 50%;
-}
-
-.ImageContainer > .Vertical {
-  height: auto;
-}
-
-.ImageContainer > div > img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 1px solid white;
-}
-
-/* ONE ITEM */
-.ImageContainer > div:nth-child(1):nth-last-child(1) {
-  height: 100%;
-  width: auto;
-}
-
-/* TWO ITEMS */
-.ImageContainer > div:nth-child(1):nth-last-child(2),
-.ImageContainer > div:nth-child(2):nth-last-child(1) {
-  height: 100%;
-  width: 50%;
-}
-
-/* THREE ITEMS */
-.ImageContainer > div:nth-child(1):nth-last-child(3) {
-  height: 100%;
-  width: 60%;
-}
-.ImageContainer > .Vertical:nth-child(1):nth-last-child(3) {
-  width: auto;
-}
-
-/* FOUR ITEMS */
-.ImageContainer > div:nth-child(1):nth-last-child(4),
-.ImageContainer > div:nth-child(2):nth-last-child(3),
-.ImageContainer > div:nth-child(3):nth-last-child(2),
-.ImageContainer > div:nth-child(4):nth-last-child(1) {
-  width: auto;
-  height: 50%;
 }

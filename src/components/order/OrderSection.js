@@ -4,12 +4,20 @@ import Section from "../ui/Section";
 import classes from "./OrderSection.module.css";
 
 const OrderSection = (props) => {
-  const { imgSrc, others, query, title, ...sectionProps } = props;
+  const { imgSrc, others, total, query, title, ...sectionProps } = props;
   const location = useLocation();
   const navigate = useNavigate();
 
+  const formattedQuery = query.slice(1).split("=");
+  const searchParams = new URLSearchParams(location.search);
+  searchParams.delete(formattedQuery[0]);
+  searchParams.append(...formattedQuery);
+
+  let queryUrl = `${location.pathname}?${searchParams}`;
+  if (total) queryUrl = `${`/total-order?${searchParams}`}`
+
   const orderClickHandler = (e) => {
-    navigate(`${location.pathname}${location.search}${query}`);
+    navigate(queryUrl);
   };
 
   return (

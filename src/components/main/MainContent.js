@@ -1,3 +1,4 @@
+import MainAdvantages from "./MainAdvantages";
 import OrderButton from "./OrderButton";
 import Content from "../layout/Content";
 import Section from "../ui/Section";
@@ -10,8 +11,7 @@ const MainContent = (props) => {
   return (
     <Content className={classes.MainContent}>
       <Title>
-        Качественная мебель на заказ <Bold>быстро</Bold> и <Bold>недорого</Bold>
-        !
+        Качественная мебель на заказ <Bold>быстро</Bold> и <Bold>недорого</Bold>!
       </Title>
       <Section close={true}>
         <div>
@@ -20,25 +20,7 @@ const MainContent = (props) => {
           <Anchor href="/about-us">Подробнее о нас...</Anchor>
         </div>
       </Section>
-      <Section>
-        <div>
-          Мы поможем обустроить дом, который:
-          <ul>
-            <li>
-              улучшает <Bold>настроение</Bold>
-            </li>
-            <li>
-              повышает <Bold>продуктивность</Bold>
-            </li>
-            <li>
-              формирует <Bold>атмосферу</Bold>
-            </li>
-            <li>
-              создает <Bold>уют</Bold>
-            </li>
-          </ul>
-        </div>
-      </Section>
+      <MainAdvantages />
       <Section>
         <div>
           Пройдите простой опрос, чтобы мы поняли какая мебель подойдет вам

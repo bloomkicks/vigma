@@ -1,0 +1,9 @@
+.TotalOrderForm {
+  max-width: 750px;
+  width: 100%;
+}
+
+.CommentInput {
+  resize: vertical;
+  height: 6.6rem;
+}

@@ -1,0 +1,9 @@
+.TotalOrderPage {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.AntiButton {
+  margin-top: 40px;
+}

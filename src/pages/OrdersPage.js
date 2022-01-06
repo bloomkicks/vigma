@@ -160,22 +160,26 @@ const materialsOrders = [
   {
     imgSrc: glassSrc,
     title: "Стекло",
-    query: '&material=glass'
+    query: '&material=glass',
+    total: true,
   },
   {
     imgSrc: plasticSrc,
     title: "Пластик",
-    query: '&material=plastic'
+    query: '&material=plastic',
+    total: true,
   },
   {
     imgSrc: enamelSrc,
     title: "Эмаль",
-    query: '&material=enamel'
+    query: '&material=enamel',
+    total: true,
   },
   {
     imgSrc: materialsOthersSrc,
     others: true,
-    query: '&material=others'
+    query: '&material=others',
+    total: true,
   },
 ]
 
@@ -220,7 +224,7 @@ const OrdersPage = props => {
       content = {
         orders: materialsOrders,
         question: 'Выбирете материал фасадов',
-        title: 'Материалы'
+        title: 'Материалы',
       }
     }
   }

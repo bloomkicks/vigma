@@ -4,13 +4,13 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  height: 70%;
   max-height: 500px;
-  width: 30%;
-  min-width: 305px;
-  max-width: 400px;
+  min-width: 275px;
+  max-width: 350px;
   padding: 20px;
-  margin: 40px 20px;
+  padding-bottom: 10px;
+  margin: 30px 20px;
+  margin-top: 0;
   box-shadow: inset 0 0 10px black;
 }
 
@@ -34,8 +34,9 @@
 .Text {
   min-height: 133px;
   height: 50%;
-  width: 110%;
+  width: 107%;
   padding: 0 5%;
+  padding-left: 2%;
   overflow-y: auto;
   scrollbar-width: thin; 
   scrollbar-color: #ffffff #20273a;
@@ -49,4 +50,10 @@
 }
 .Text::-webkit-scrollbar-thumb {
   background-color: #ffffff;
+}
+
+@media screen and (max-width: 550px) {
+  .Text {
+    /* padding: 0 5px; */
+  } 
 }

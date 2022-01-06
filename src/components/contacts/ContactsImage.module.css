@@ -1,3 +1,11 @@
 .ContactsImage {
   border-radius: 20px;
+  flex-shrink: 0;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 550px) {
+  .ContactsImage {
+    height: 100vw;
+  }
 }

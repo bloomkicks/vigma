@@ -1,46 +1,27 @@
-import {Routes, Route, Navigate} from 'react-router-dom'
+import { Routes, Route, Navigate } from "react-router-dom";
 
-import ContactsPage from './pages/ContactsPage';
-import AboutUsPage from './pages/AboutUsPage';
-import ReviewsPage from './pages/ReviewsPage';
-import OrdersPage from './pages/OrdersPage'
-import WorksPage from './pages/WorksPage'
-import MainPage from './pages/MainPage';
-import Layout from './components/layout/Layout';
-import './App.css';
+import TotalOrderPage from "./pages/TotalOrderPage";
+import ContactsPage from "./pages/ContactsPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ReviewsPage from "./pages/ReviewsPage";
+import OrdersPage from "./pages/OrdersPage";
+import WorksPage from "./pages/WorksPage";
+import MainPage from "./pages/MainPage";
+import Layout from "./components/layout/Layout";
+import "./App.css";
 
 function App() {
   return (
     <Layout>
       <Routes>
-        <Route 
-          path="/"  
-          element={<Navigate replace to="/main"/>}
-        />
-        <Route 
-          path="/main"  
-          element={<MainPage />}
-        />
-        <Route 
-          path="/order"  
-          element={<OrdersPage />}
-        />
-        <Route 
-          path="/contacts"  
-          element={<ContactsPage />}
-        />
-        <Route 
-          path="/about-us"  
-          element={<AboutUsPage />}
-        />
-        <Route 
-          path="/reviews"  
-          element={<ReviewsPage />}
-        />
-        <Route 
-          path="/works"  
-          element={<WorksPage />}
-        />
+        <Route path="/" element={<Navigate replace to="/main" />} />
+        <Route path="/main" element={<MainPage />} />
+        <Route path="/order" element={<OrdersPage />} />
+        <Route path="/total-order" element={<TotalOrderPage />} />
+        <Route path="/contacts" element={<ContactsPage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
+        <Route path="/works" element={<WorksPage />} />
       </Routes>
     </Layout>
   );

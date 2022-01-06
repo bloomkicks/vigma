@@ -7,7 +7,7 @@ const Section = props => {
     children,
     centered,
     className,
-    isVertical,
+    isHorizontal,
     ...sectionProps
   } = props
 
@@ -15,10 +15,10 @@ const Section = props => {
 
   return (
     <SectionEl {...sectionProps} className={`
-      ${isVertical ? classes.Vertical : classes.Section}
-      ${close && isVertical && classes.CloseVertical}
-      ${close && !isVertical && classes.Close}
-      ${centered && classes.Centered}
+      ${isHorizontal ? classes.Horizontal : classes.Section || ''}
+      ${close && isHorizontal && classes.CloseHorizontal || ''}
+      ${close && !isHorizontal && classes.Close || ''}
+      ${centered && classes.Centered || ''}
       ${className || ''}
     `.trim()}>
       {children}

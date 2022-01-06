@@ -13,7 +13,7 @@ const Page = props => {
   return (
     <div className={`
       ${classes.PageSpace}
-      ${wrapperClassName}
+      ${wrapperClassName || ''}
     `}>
       <main {...pageProps} 
         className={`
@@ -21,7 +21,7 @@ const Page = props => {
           ${className || ''}
         `} 
       >
-        <Title className={classes.Title}>{title}</Title>
+        {title && <Title className={classes.Title}>{title}</Title>}
         {children} 
       </main>
     </div>

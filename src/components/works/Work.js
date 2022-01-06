@@ -1,3 +1,6 @@
+import { useMemo, useRef, useState } from "react";
+
+import ImageContainer from "./ImageContainer";
 import MainButton from "../ui/MainButton";
 import Secondary from "../ui/Secondary";
 import Section from "../ui/Section";
@@ -7,19 +10,8 @@ const Work = (props) => {
   const { photos, colors, description, name } = props;
 
   return (
-    <Section element="figure" className={classes.Work}>
-      <div className={classes.ImageContainer}>
-        {photos.map((photo) => {
-          return (
-            <div
-              key={Math.random()}
-              className={photo.isVertical && classes.Vertical}
-            >
-              <img src={photo.src} />
-            </div>
-          );
-        })}
-      </div>
+    <Section element="figure" isHorizontal={true} className={classes.Work}>
+      <ImageContainer photos={photos}/>
       <div className={classes.Desc}>
         <figcaption className={classes.DescSec}>
           <Secondary>{name}</Secondary>
@@ -28,7 +20,9 @@ const Work = (props) => {
         <div className={classes.DescSec}>
           <div className={classes.Colors}>
             {colors.map((color) => {
-              return <div style={{ backgroundColor: color }} key={Math.random()}></div>;
+              return (
+                <div style={{ background: color }} key={Math.random()}></div>
+              );
             })}
           </div>
           <MainButton>Заказать</MainButton>

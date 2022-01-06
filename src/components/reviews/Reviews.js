@@ -33,13 +33,13 @@ const reviews = [
 
 const Reviews = props => {
   return (
-    <main className={classes.Reviews}>
+    <article className={classes.Reviews}>
       {reviews.map(review => {
         return (
           <Review {...review} key={Math.random()} />
         )
       })}
-    </main>
+    </article>
   )
 }
 

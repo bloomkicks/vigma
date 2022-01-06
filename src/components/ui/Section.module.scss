@@ -1,16 +1,21 @@
 .Section {
   margin-top: 30px;
 }
+.Section:first-child {
+  margin-top: 0
+}
 
-.Vertical {
+.Horizontal {
   margin-left: 30px;
+}
+.Horizontal:first-child {
+  margin-left: 0
 }
 
 .Close {
   margin-top: 20px;
 }
-
-.CloseVertical {
+.CloseHorizontal {
   margin-left: 20px
 }
 
@@ -22,13 +27,16 @@
   text-align: center;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   .Section {
-    width: 90%;
-    margin-top: 2.5rem;
+    width: 100%;
+    margin-top: 20px;
   } 
+  .Close {
+    margin-top: 10px;
+  }
 
-  .Section > div {
-    margin-top: 1rem;
+  .Section > div, .Horizontal > div {
+    margin-top: 10px;
   }
 }

@@ -4,9 +4,16 @@
   justify-content: center;
   margin: 20px 25px;
   border-radius: 20px;
+  max-width: 515px;
+  width: 43%;
+  min-width: 300px;
 }
-.AboutUsSection > div {
-  margin-top: 0
+.AboutUsSection:first-child {
+  margin: 20px 25px;
+}
+
+.AboutUsSection > p {
+  text-align: left;
 }
 
 .Heading {
@@ -30,4 +37,15 @@
   position: absolute;
   bottom: 0;
   left: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  .AboutUsSection {
+    max-width: none;
+    margin: 20px 0;
+    width: 100%;
+  } 
+  .AboutUsSection:first-child {
+    margin: 20px 0;
+  }
 }
