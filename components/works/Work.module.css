@@ -1,0 +1,44 @@
+.Work {
+  min-height: 220px;
+  max-width: 380px;
+  min-width: 350px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.Work > figcaption > h2 {
+  color: #133758;
+}
+
+.Work > figcaption > p {
+  opacity: 0.9;
+}
+
+.Desc {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.DescSec {
+  display: flex;
+  flex-direction: column;
+}
+
+.Colors {
+  display: flex;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+.Colors > div {
+  width: 30px;
+  height: 30px;
+  margin-left: 0.5rem;
+  border-radius: 10px;
+}
+
+.Colors > div:first-child {
+  margin-left: 0;
+}

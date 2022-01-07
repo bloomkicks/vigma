@@ -1,0 +1,15 @@
+.Query {
+  padding: 1rem;
+  background-color: #8a1133;
+}
+
+.TotalOrderTree {
+  margin: 20px 0 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.TotalOrderTree > img {
+  height: 20px;
+  margin: 10px;
+}
