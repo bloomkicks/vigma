@@ -1,0 +1,11 @@
+.ContactsContent {
+  align-items: flex-end;
+  flex: 0 2 auto;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 550px){
+  .ContactsContent {
+    margin-top: 0;
+  } 
+}

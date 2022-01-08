@@ -1,0 +1,37 @@
+.ContactsSection {
+  margin-bottom: 25px;
+  max-height: 3rem;
+}
+
+.Text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: auto;
+  width: auto;
+  z-index: 1;
+  text-align: right;
+  width: fit-content;
+}
+
+.Text > *:first-child {
+  margin-right: 0.4em;
+}
+
+.Logo {
+  position: absolute;
+  right: 90%;
+  bottom: -5px;
+  width: 3rem;
+  height: auto;
+  opacity: 0.4;
+}
+
+.Key {
+  position: relative;
+}
+
+.Location {
+
+}

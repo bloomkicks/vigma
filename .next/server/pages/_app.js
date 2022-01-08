@@ -1,189 +1,487 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/_app";
-exports.ids = ["pages/_app"];
+exports.id = 888;
+exports.ids = [888];
 exports.modules = {
 
-/***/ "./components/layout/Footer.module.css":
-/*!*********************************************!*\
-  !*** ./components/layout/Footer.module.css ***!
-  \*********************************************/
+/***/ 2378:
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"Footer\": \"Footer_Footer__Vrx71\",\n\t\"InnerFooter\": \"Footer_InnerFooter__BRfMt\",\n\t\"Soc\": \"Footer_Soc__fCOtP\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2xheW91dC9Gb290ZXIubW9kdWxlLmNzcy5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly92aWdtYV9idWlsZC8uL2NvbXBvbmVudHMvbGF5b3V0L0Zvb3Rlci5tb2R1bGUuY3NzPzJlYWQiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiRm9vdGVyXCI6IFwiRm9vdGVyX0Zvb3Rlcl9fVnJ4NzFcIixcblx0XCJJbm5lckZvb3RlclwiOiBcIkZvb3Rlcl9Jbm5lckZvb3Rlcl9fQlJmTXRcIixcblx0XCJTb2NcIjogXCJGb290ZXJfU29jX19mQ090UFwiXG59O1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/layout/Footer.module.css\n");
+// Exports
+module.exports = {
+	"Footer": "Footer_Footer__k8_Ol",
+	"InnerFooter": "Footer_InnerFooter__B2Gnl",
+	"Soc": "Footer_Soc__qtY0H"
+};
+
 
 /***/ }),
 
-/***/ "./components/layout/Header.module.css":
-/*!*********************************************!*\
-  !*** ./components/layout/Header.module.css ***!
-  \*********************************************/
+/***/ 2816:
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"Header\": \"Header_Header__fhRxu\",\n\t\"HeaderSpace\": \"Header_HeaderSpace__lLWkw\",\n\t\"InnerHeader\": \"Header_InnerHeader__dWaGw\",\n\t\"LogoContainer\": \"Header_LogoContainer__Ew3V0\",\n\t\"LogoInnerContainer\": \"Header_LogoInnerContainer__G9Xjr\",\n\t\"Logo\": \"Header_Logo__4rpNc\",\n\t\"HamMenu\": \"Header_HamMenu__uczel\",\n\t\"Nav\": \"Header_Nav__XSev_\",\n\t\"Nav__active\": \"Header_Nav__active__t9BCO\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2xheW91dC9IZWFkZXIubW9kdWxlLmNzcy5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly92aWdtYV9idWlsZC8uL2NvbXBvbmVudHMvbGF5b3V0L0hlYWRlci5tb2R1bGUuY3NzPzFhNjAiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiSGVhZGVyXCI6IFwiSGVhZGVyX0hlYWRlcl9fZmhSeHVcIixcblx0XCJIZWFkZXJTcGFjZVwiOiBcIkhlYWRlcl9IZWFkZXJTcGFjZV9fbExXa3dcIixcblx0XCJJbm5lckhlYWRlclwiOiBcIkhlYWRlcl9Jbm5lckhlYWRlcl9fZFdhR3dcIixcblx0XCJMb2dvQ29udGFpbmVyXCI6IFwiSGVhZGVyX0xvZ29Db250YWluZXJfX0V3M1YwXCIsXG5cdFwiTG9nb0lubmVyQ29udGFpbmVyXCI6IFwiSGVhZGVyX0xvZ29Jbm5lckNvbnRhaW5lcl9fRzlYanJcIixcblx0XCJMb2dvXCI6IFwiSGVhZGVyX0xvZ29fXzRycE5jXCIsXG5cdFwiSGFtTWVudVwiOiBcIkhlYWRlcl9IYW1NZW51X191Y3plbFwiLFxuXHRcIk5hdlwiOiBcIkhlYWRlcl9OYXZfX1hTZXZfXCIsXG5cdFwiTmF2X19hY3RpdmVcIjogXCJIZWFkZXJfTmF2X19hY3RpdmVfX3Q5QkNPXCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/layout/Header.module.css\n");
+// Exports
+module.exports = {
+	"Header": "Header_Header__fF2ZS",
+	"HeaderSpace": "Header_HeaderSpace__DJ5Lz",
+	"InnerHeader": "Header_InnerHeader__j7yPX",
+	"LogoContainer": "Header_LogoContainer__igXDD",
+	"LogoInnerContainer": "Header_LogoInnerContainer__pr0p0",
+	"Logo": "Header_Logo__iHwi9",
+	"HamMenu": "Header_HamMenu__A8nyv",
+	"Nav": "Header_Nav__KVjhM",
+	"Nav__active": "Header_Nav__active__r8PfJ"
+};
+
 
 /***/ }),
 
-/***/ "./components/layout/Layout.module.css":
-/*!*********************************************!*\
-  !*** ./components/layout/Layout.module.css ***!
-  \*********************************************/
+/***/ 2411:
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"Layout\": \"Layout_Layout__mB2_t\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2xheW91dC9MYXlvdXQubW9kdWxlLmNzcy5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL3ZpZ21hX2J1aWxkLy4vY29tcG9uZW50cy9sYXlvdXQvTGF5b3V0Lm1vZHVsZS5jc3M/MTk1NyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJMYXlvdXRcIjogXCJMYXlvdXRfTGF5b3V0X19tQjJfdFwiXG59O1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/layout/Layout.module.css\n");
+// Exports
+module.exports = {
+	"Layout": "Layout_Layout__NQ5Vl"
+};
+
 
 /***/ }),
 
-/***/ "./components/layout/Page.module.css":
-/*!*******************************************!*\
-  !*** ./components/layout/Page.module.css ***!
-  \*******************************************/
+/***/ 6769:
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"PageSpace\": \"Page_PageSpace__alnVq\",\n\t\"Page\": \"Page_Page__aafO2\",\n\t\"Title\": \"Page_Title___gFK_\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2xheW91dC9QYWdlLm1vZHVsZS5jc3MuanMiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdmlnbWFfYnVpbGQvLi9jb21wb25lbnRzL2xheW91dC9QYWdlLm1vZHVsZS5jc3M/NmM0NyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJQYWdlU3BhY2VcIjogXCJQYWdlX1BhZ2VTcGFjZV9fYWxuVnFcIixcblx0XCJQYWdlXCI6IFwiUGFnZV9QYWdlX19hYWZPMlwiLFxuXHRcIlRpdGxlXCI6IFwiUGFnZV9UaXRsZV9fX2dGS19cIlxufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/layout/Page.module.css\n");
+// Exports
+module.exports = {
+	"Link": "NavLink_Link__HV0x9"
+};
+
 
 /***/ }),
 
-/***/ "./components/ui/NavLink.module.scss":
-/*!*******************************************!*\
-  !*** ./components/ui/NavLink.module.scss ***!
-  \*******************************************/
+/***/ 2991:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ _app)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+;// CONCATENATED MODULE: external "react-redux"
+const external_react_redux_namespaceObject = require("react-redux");
+;// CONCATENATED MODULE: external "@reduxjs/toolkit"
+const toolkit_namespaceObject = require("@reduxjs/toolkit");
+;// CONCATENATED MODULE: ./src/store/order-slice.js
+
+const orderSlice = (0,toolkit_namespaceObject.createSlice)({
+    name: 'order',
+    initialState: {
+    },
+    reducers: []
+});
+const orderReducer = orderSlice.reducer;
+const orderActions = orderSlice.actions;
+
+;// CONCATENATED MODULE: ./src/store/index.js
+
+
+const store = (0,toolkit_namespaceObject.configureStore)({
+    reducer: {
+        order: orderReducer
+    }
+});
+/* harmony default export */ const src_store = (store);
+
+// EXTERNAL MODULE: ./src/components/ui/Section.js
+var Section = __webpack_require__(4568);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(1664);
+// EXTERNAL MODULE: ./src/components/layout/Footer.module.css
+var Footer_module = __webpack_require__(2378);
+var Footer_module_default = /*#__PURE__*/__webpack_require__.n(Footer_module);
+;// CONCATENATED MODULE: ./src/components/layout/Footer.js
+
+
+
+
+const instaSvg = "/footer/instagram.svg";
+const vkSvg = "/footer/vkontakte.svg";
+const Footer = (props)=>{
+    return(/*#__PURE__*/ jsx_runtime_.jsx("footer", {
+        className: (Footer_module_default()).Footer,
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            className: (Footer_module_default()).InnerFooter,
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Section/* default */.Z, {
+                    className: (Footer_module_default()).Soc,
+                    isHorizontal: true,
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                            src: vkSvg,
+                            alt: "Наш ВКонтакте"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                            src: instaSvg,
+                            alt: "Наш Инстаграм"
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Section/* default */.Z, {
+                    isHorizontal: true,
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("h4", {
+                            children: "ОСТАВЬТЕ ОТЗЫВ"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            className: (Footer_module_default()).Text,
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                children: "vigmareviews@gmail.com"
+                            })
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Section/* default */.Z, {
+                    isHorizontal: true,
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("h4", {
+                            children: "НАШ АДРЕС"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            className: (Footer_module_default()).Text,
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                children: "г. Санкт-Петербург, ул. Автобусная, д. 3, лит. Б"
+                            })
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Section/* default */.Z, {
+                    isHorizontal: true,
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("h4", {
+                            children: "КОНТАКТЫ"
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: (Footer_module_default()).Text,
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                                        href: "tel:+7 (964) 342 60-51",
+                                        children: "+7 (964) 342 60-51"
+                                    })
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                                        href: "tel:642 60-51",
+                                        children: "642 60-51"
+                                    })
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Section/* default */.Z, {
+                    isHorizontal: true,
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("h4", {
+                            children: "ВАКАНСИИ"
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: (Footer_module_default()).Text,
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                    children: "Всегда открыты талантам:"
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                    children: "vigmajobs@gmail.com"
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+    }));
+};
+/* harmony default export */ const layout_Footer = (Footer);
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(6689);
+// EXTERNAL MODULE: ./src/components/ui/NavLink.module.scss
+var NavLink_module = __webpack_require__(6769);
+var NavLink_module_default = /*#__PURE__*/__webpack_require__.n(NavLink_module);
+;// CONCATENATED MODULE: ./src/components/ui/NavLink.js
+
+
+
+const NavLink = (props)=>{
+    const { className , innerClassName , img , href , children , ...linkProps } = props;
+    return(/*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+        href: href || "",
+        passHref: true,
+        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+            className: `
+        ${(NavLink_module_default()).Link}
+        ${className || ""}
+      `.trim(),
+            ...linkProps,
+            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: innerClassName,
+                children: children
+            })
+        })
+    }));
+};
+/* harmony default export */ const ui_NavLink = (NavLink);
+
+// EXTERNAL MODULE: ./src/components/layout/Header.module.css
+var Header_module = __webpack_require__(2816);
+var Header_module_default = /*#__PURE__*/__webpack_require__.n(Header_module);
+;// CONCATENATED MODULE: ./src/components/layout/Header.js
+
+
+
+
+const hamMenuSvg = "/ham-menu.svg";
+const blueLogo = "/logos/vigma_logo_blue.svg";
+const Header = (props)=>{
+    const { 0: isActiveNav , 1: setIsActiveNav  } = (0,external_react_.useState)(false);
+    const menuClickHandler = (e)=>{
+        e.stopPropagation();
+        setIsActiveNav((prevState)=>!prevState
+        );
+    };
+    const menuBlurHandler = (e)=>{
+        setIsActiveNav(false);
+    };
+    const navClickHandler = (e)=>{
+        e.stopPropagation();
+    };
+    (0,external_react_.useEffect)(()=>{
+        window.addEventListener("click", menuBlurHandler);
+    }, []);
+    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("header", {
+                className: (Header_module_default()).Header,
+                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: (Header_module_default()).InnerHeader,
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx(ui_NavLink, {
+                            innerClassName: (Header_module_default()).LogoInnerContainer,
+                            className: (Header_module_default()).LogoContainer,
+                            href: "/main",
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                src: blueLogo,
+                                className: (Header_module_default()).Logo,
+                                tabIndex: 1
+                            })
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                            src: hamMenuSvg,
+                            onClick: menuClickHandler,
+                            alt: "Открыть меню",
+                            tabIndex: 1,
+                            className: (Header_module_default()).HamMenu
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("nav", {
+                            onClick: navClickHandler,
+                            tabIndex: 1,
+                            className: `${(Header_module_default()).Nav} ${isActiveNav && (Header_module_default()).Nav__active}`,
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx(ui_NavLink, {
+                                    href: "/order/quiz",
+                                    children: "Заказать"
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(ui_NavLink, {
+                                    href: "/contacts",
+                                    children: "Контакты"
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(ui_NavLink, {
+                                    href: "/about-us",
+                                    children: "О нас"
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(ui_NavLink, {
+                                    href: "/reviews",
+                                    children: "Отзывы"
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(ui_NavLink, {
+                                    href: "/works",
+                                    children: [
+                                        "Наши",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("br", {
+                                        }),
+                                        " работы"
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                })
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (Header_module_default()).HeaderSpace
+            })
+        ]
+    }));
+};
+/* harmony default export */ const layout_Header = (Header);
+
+// EXTERNAL MODULE: ./src/components/layout/Layout.module.css
+var Layout_module = __webpack_require__(2411);
+var Layout_module_default = /*#__PURE__*/__webpack_require__.n(Layout_module);
+;// CONCATENATED MODULE: ./src/components/layout/Layout.js
+
+
+
+
+
+
+const Layout = (props)=>{
+    return(/*#__PURE__*/ jsx_runtime_.jsx(external_react_redux_namespaceObject.Provider, {
+        store: src_store,
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            className: (Layout_module_default()).Layout,
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx(layout_Header, {
+                }),
+                props.children,
+                /*#__PURE__*/ jsx_runtime_.jsx(layout_Footer, {
+                })
+            ]
+        })
+    }));
+};
+/* harmony default export */ const layout_Layout = (Layout);
+
+// EXTERNAL MODULE: ./src/components/layout/Page.js
+var Page = __webpack_require__(7514);
+;// CONCATENATED MODULE: ./src/pages/_app.js
+
+
+
+
+function App({ Component , pageProps  }) {
+    return(/*#__PURE__*/ jsx_runtime_.jsx(layout_Layout, {
+        children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
+            ...pageProps
+        })
+    }));
+}
+/* harmony default export */ const _app = (App);
+
+
+/***/ }),
+
+/***/ 562:
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"Link\": \"NavLink_Link__od70B\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL3VpL05hdkxpbmsubW9kdWxlLnNjc3MuanMiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly92aWdtYV9idWlsZC8uL2NvbXBvbmVudHMvdWkvTmF2TGluay5tb2R1bGUuc2Nzcz9iYzFlIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcIkxpbmtcIjogXCJOYXZMaW5rX0xpbmtfX29kNzBCXCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/ui/NavLink.module.scss\n");
+"use strict";
+module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ "./components/ui/Section.module.scss":
-/*!*******************************************!*\
-  !*** ./components/ui/Section.module.scss ***!
-  \*******************************************/
+/***/ 4014:
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"Section\": \"Section_Section__n8qxE\",\n\t\"Horizontal\": \"Section_Horizontal__6fY2W\",\n\t\"Close\": \"Section_Close__qZm4g\",\n\t\"CloseHorizontal\": \"Section_CloseHorizontal__ipn3P\",\n\t\"Centered\": \"Section_Centered__l1Qjx\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL3VpL1NlY3Rpb24ubW9kdWxlLnNjc3MuanMiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL3ZpZ21hX2J1aWxkLy4vY29tcG9uZW50cy91aS9TZWN0aW9uLm1vZHVsZS5zY3NzPzE4MTYiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiU2VjdGlvblwiOiBcIlNlY3Rpb25fU2VjdGlvbl9fbjhxeEVcIixcblx0XCJIb3Jpem9udGFsXCI6IFwiU2VjdGlvbl9Ib3Jpem9udGFsX182ZlkyV1wiLFxuXHRcIkNsb3NlXCI6IFwiU2VjdGlvbl9DbG9zZV9fcVptNGdcIixcblx0XCJDbG9zZUhvcml6b250YWxcIjogXCJTZWN0aW9uX0Nsb3NlSG9yaXpvbnRhbF9faXBuM1BcIixcblx0XCJDZW50ZXJlZFwiOiBcIlNlY3Rpb25fQ2VudGVyZWRfX2wxUWp4XCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/ui/Section.module.scss\n");
+"use strict";
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
-/***/ "./components/ui/Title.module.scss":
-/*!*****************************************!*\
-  !*** ./components/ui/Title.module.scss ***!
-  \*****************************************/
+/***/ 8020:
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"Title\": \"Title_Title__68f5_\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL3VpL1RpdGxlLm1vZHVsZS5zY3NzLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdmlnbWFfYnVpbGQvLi9jb21wb25lbnRzL3VpL1RpdGxlLm1vZHVsZS5zY3NzP2EwNGEiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiVGl0bGVcIjogXCJUaXRsZV9UaXRsZV9fNjhmNV9cIlxufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/ui/Title.module.scss\n");
+"use strict";
+module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
 
-/***/ "./components/layout/Footer.js":
-/*!*************************************!*\
-  !*** ./components/layout/Footer.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 4964:
+/***/ ((module) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ui_Section__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/Section */ \"./components/ui/Section.js\");\n/* harmony import */ var _Footer_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer.module.css */ \"./components/layout/Footer.module.css\");\n/* harmony import */ var _Footer_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Footer_module_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nconst instaSvg = \"/footer/instagram.svg\";\nconst vkSvg = \"/footer/vkontakte.svg\";\nconst Footer = (props)=>{\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"footer\", {\n        className: (_Footer_module_css__WEBPACK_IMPORTED_MODULE_2___default().Footer),\n        __source: {\n            fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n            lineNumber: 9,\n            columnNumber: 5\n        },\n        __self: undefined,\n        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"footer\", {\n            className: (_Footer_module_css__WEBPACK_IMPORTED_MODULE_2___default().InnerFooter),\n            __source: {\n                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                lineNumber: 10,\n                columnNumber: 7\n            },\n            __self: undefined,\n            children: [\n                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_ui_Section__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                    className: (_Footer_module_css__WEBPACK_IMPORTED_MODULE_2___default().Soc),\n                    isHorizontal: true,\n                    __source: {\n                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                        lineNumber: 11,\n                        columnNumber: 9\n                    },\n                    __self: undefined,\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"img\", {\n                            src: vkSvg,\n                            alt: \"Наш ВКонтакте\",\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                lineNumber: 12,\n                                columnNumber: 11\n                            },\n                            __self: undefined\n                        }),\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"img\", {\n                            src: instaSvg,\n                            alt: \"Наш Инстаграм\",\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                lineNumber: 13,\n                                columnNumber: 11\n                            },\n                            __self: undefined\n                        })\n                    ]\n                }),\n                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_ui_Section__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                    isHorizontal: true,\n                    __source: {\n                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                        lineNumber: 15,\n                        columnNumber: 9\n                    },\n                    __self: undefined,\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"h4\", {\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                lineNumber: 16,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: \"ОСТАВЬТЕ ОТЗЫВ\"\n                        }),\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n                            className: (_Footer_module_css__WEBPACK_IMPORTED_MODULE_2___default().Text),\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                lineNumber: 17,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"p\", {\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                        lineNumber: 18,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: \"vigmareviews@gmal.com\"\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"p\", {\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                        lineNumber: 19,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: \"+7 (965) 031 32-34\"\n                                })\n                            ]\n                        })\n                    ]\n                }),\n                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_ui_Section__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                    isHorizontal: true,\n                    __source: {\n                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                        lineNumber: 22,\n                        columnNumber: 9\n                    },\n                    __self: undefined,\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"h4\", {\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                lineNumber: 23,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: \"НАШ АДРЕС\"\n                        }),\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n                            className: (_Footer_module_css__WEBPACK_IMPORTED_MODULE_2___default().Text),\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                lineNumber: 24,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"p\", {\n                                __source: {\n                                    fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                    lineNumber: 25,\n                                    columnNumber: 13\n                                },\n                                __self: undefined,\n                                children: \"497 Evergreen Rd. Roseville, CA 95673\"\n                            })\n                        })\n                    ]\n                }),\n                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_ui_Section__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                    isHorizontal: true,\n                    __source: {\n                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                        lineNumber: 28,\n                        columnNumber: 9\n                    },\n                    __self: undefined,\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"h4\", {\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                lineNumber: 29,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: \"КОНТАКТЫ\"\n                        }),\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n                            className: (_Footer_module_css__WEBPACK_IMPORTED_MODULE_2___default().Text),\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                lineNumber: 30,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"p\", {\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                        lineNumber: 31,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: \"+7 (964) 341 60-51\"\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"p\", {\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                        lineNumber: 32,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: \"642 60-51\"\n                                })\n                            ]\n                        })\n                    ]\n                }),\n                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_ui_Section__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                    isHorizontal: true,\n                    __source: {\n                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                        lineNumber: 35,\n                        columnNumber: 9\n                    },\n                    __self: undefined,\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"h4\", {\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                lineNumber: 36,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: \"ВАКАНСИИ\"\n                        }),\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n                            className: (_Footer_module_css__WEBPACK_IMPORTED_MODULE_2___default().Text),\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                lineNumber: 37,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"p\", {\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                        lineNumber: 38,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: \"Всегда открыты талантам:\"\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"p\", {\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Footer.js\",\n                                        lineNumber: 39,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: \"vigmajobs@gmail.com\"\n                                })\n                            ]\n                        })\n                    ]\n                })\n            ]\n        })\n    }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2xheW91dC9Gb290ZXIuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUdtQztBQUNNO0FBSnpDLEtBQUssQ0FBQ0UsUUFBUSxHQUFHLENBQXVCO0FBQ3hDLEtBQUssQ0FBQ0MsS0FBSyxHQUFHLENBQXVCO0FBS3JDLEtBQUssQ0FBQ0MsTUFBTSxJQUFJQyxLQUFLLEdBQUssQ0FBQztJQUN6QixNQUFNLHNFQUNIQyxDQUFNO1FBQUNDLFNBQVMsRUFBRU4sa0VBQWM7Ozs7Ozs7d0ZBQzlCSyxDQUFNO1lBQUNDLFNBQVMsRUFBRU4sdUVBQW1COzs7Ozs7OztzRkFDbkNELG1EQUFPO29CQUFDTyxTQUFTLEVBQUVOLCtEQUFXO29CQUFFUyxZQUFZLEVBQUUsSUFBSTs7Ozs7Ozs7NkZBQ2hEQyxDQUFHOzRCQUFDQyxHQUFHLEVBQUVULEtBQUs7NEJBQUVVLEdBQUcsRUFBQyxDQUFlOzs7Ozs7Ozs2RkFDdkJGLENBQVQ7NEJBQUNDLEdBQUcsRUFBRVYsUUFBUTs0QkFBRVcsR0FBRyxFQUFDLENBQWU7Ozs7Ozs7Ozs7c0ZBRTVCYixtREFBTDtvQkFBQ1UsWUFBWSxFQUFFLElBQUk7Ozs7Ozs7OzZGQUN4QkksQ0FBRTs7Ozs7OztzQ0FBQyxDQUFjOzs4RkFDSkMsQ0FBVjs0QkFBQ1IsU0FBUyxFQUFFTixnRUFBWTs7Ozs7Ozs7cUdBQ3pCZ0IsQ0FBQzs7Ozs7Ozs4Q0FBQyxDQUFxQjs7cUdBQ3ZCQSxDQUFDOzs7Ozs7OzhDQUFDLENBQWtCOzs7Ozs7c0ZBR3hCakIsbURBQU87b0JBQUNVLFlBQVksRUFBRSxJQUFJOzs7Ozs7Ozs2RkFDeEJJLENBQUU7Ozs7Ozs7c0NBQUMsQ0FBUzs7NkZBQ0pDLENBQUw7NEJBQUNSLFNBQVMsRUFBRU4sZ0VBQVk7Ozs7Ozs7MkdBQ3pCZ0IsQ0FBQzs7Ozs7OzswQ0FBQyxDQUFxQzs7Ozs7c0ZBRzNDakIsbURBQU87b0JBQUNVLFlBQVksRUFBRSxJQUFJOzs7Ozs7Ozs2RkFDeEJJLENBQUU7Ozs7Ozs7c0NBQUMsQ0FBUTs7OEZBQ0hDLENBQUw7NEJBQUNSLFNBQVMsRUFBRU4sZ0VBQVk7Ozs7Ozs7O3FHQUN6QmdCLENBQUM7Ozs7Ozs7OENBQUMsQ0FBa0I7O3FHQUNwQkEsQ0FBQzs7Ozs7Ozs4Q0FBQyxDQUFTOzs7Ozs7c0ZBR2ZqQixtREFBTztvQkFBQ1UsWUFBWSxFQUFFLElBQUk7Ozs7Ozs7OzZGQUN4QkksQ0FBRTs7Ozs7OztzQ0FBQyxDQUFROzs4RkFDSEMsQ0FBTDs0QkFBQ1IsU0FBUyxFQUFFTixnRUFBWTs7Ozs7Ozs7cUdBQ3pCZ0IsQ0FBQzs7Ozs7Ozs4Q0FBQyxDQUF3Qjs7cUdBQzFCQSxDQUFDOzs7Ozs7OzhDQUFDLENBQW1COzs7Ozs7Ozs7QUFNbEMsQ0FBQztBQUVELGlFQUFlYixNQUFNLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly92aWdtYV9idWlsZC8uL2NvbXBvbmVudHMvbGF5b3V0L0Zvb3Rlci5qcz83Mjk4Il0sInNvdXJjZXNDb250ZW50IjpbImNvbnN0IGluc3RhU3ZnID0gXCIvZm9vdGVyL2luc3RhZ3JhbS5zdmdcIjtcclxuY29uc3QgdmtTdmcgPSBcIi9mb290ZXIvdmtvbnRha3RlLnN2Z1wiO1xyXG5cclxuaW1wb3J0IFNlY3Rpb24gZnJvbSBcIi4uL3VpL1NlY3Rpb25cIjtcclxuaW1wb3J0IGNsYXNzZXMgZnJvbSBcIi4vRm9vdGVyLm1vZHVsZS5jc3NcIjtcclxuXHJcbmNvbnN0IEZvb3RlciA9IChwcm9wcykgPT4ge1xyXG4gIHJldHVybiAoXHJcbiAgICA8Zm9vdGVyIGNsYXNzTmFtZT17Y2xhc3Nlcy5Gb290ZXJ9PlxyXG4gICAgICA8Zm9vdGVyIGNsYXNzTmFtZT17Y2xhc3Nlcy5Jbm5lckZvb3Rlcn0+XHJcbiAgICAgICAgPFNlY3Rpb24gY2xhc3NOYW1lPXtjbGFzc2VzLlNvY30gaXNIb3Jpem9udGFsPXt0cnVlfT5cclxuICAgICAgICAgIDxpbWcgc3JjPXt2a1N2Z30gYWx0PVwi0J3QsNGIINCS0JrQvtC90YLQsNC60YLQtVwiIC8+XHJcbiAgICAgICAgICA8aW1nIHNyYz17aW5zdGFTdmd9IGFsdD1cItCd0LDRiCDQmNC90YHRgtCw0LPRgNCw0LxcIiAvPlxyXG4gICAgICAgIDwvU2VjdGlvbj5cclxuICAgICAgICA8U2VjdGlvbiBpc0hvcml6b250YWw9e3RydWV9PlxyXG4gICAgICAgICAgPGg0PtCe0KHQotCQ0JLQrNCi0JUg0J7QotCX0KvQkjwvaDQ+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5UZXh0fT5cclxuICAgICAgICAgICAgPHA+dmlnbWFyZXZpZXdzQGdtYWwuY29tPC9wPlxyXG4gICAgICAgICAgICA8cD4rNyAoOTY1KSAwMzEgMzItMzQ8L3A+XHJcbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8L1NlY3Rpb24+XHJcbiAgICAgICAgPFNlY3Rpb24gaXNIb3Jpem9udGFsPXt0cnVlfT5cclxuICAgICAgICAgIDxoND7QndCQ0Kgg0JDQlNCg0JXQoTwvaDQ+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5UZXh0fT5cclxuICAgICAgICAgICAgPHA+NDk3IEV2ZXJncmVlbiBSZC4gUm9zZXZpbGxlLCBDQSA5NTY3MzwvcD5cclxuICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDwvU2VjdGlvbj5cclxuICAgICAgICA8U2VjdGlvbiBpc0hvcml6b250YWw9e3RydWV9PlxyXG4gICAgICAgICAgPGg0PtCa0J7QndCi0JDQmtCi0Ks8L2g0PlxyXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9e2NsYXNzZXMuVGV4dH0+XHJcbiAgICAgICAgICAgIDxwPis3ICg5NjQpIDM0MSA2MC01MTwvcD5cclxuICAgICAgICAgICAgPHA+NjQyIDYwLTUxPC9wPlxyXG4gICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9TZWN0aW9uPlxyXG4gICAgICAgIDxTZWN0aW9uIGlzSG9yaXpvbnRhbD17dHJ1ZX0+XHJcbiAgICAgICAgICA8aDQ+0JLQkNCa0JDQndCh0JjQmDwvaDQ+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5UZXh0fT5cclxuICAgICAgICAgICAgPHA+0JLRgdC10LPQtNCwINC+0YLQutGA0YvRgtGLINGC0LDQu9Cw0L3RgtCw0Lw6PC9wPlxyXG4gICAgICAgICAgICA8cD52aWdtYWpvYnNAZ21haWwuY29tPC9wPlxyXG4gICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9TZWN0aW9uPlxyXG4gICAgICA8L2Zvb3Rlcj5cclxuICAgIDwvZm9vdGVyPlxyXG4gICk7XHJcbn07XHJcblxyXG5leHBvcnQgZGVmYXVsdCBGb290ZXI7XHJcbiJdLCJuYW1lcyI6WyJTZWN0aW9uIiwiY2xhc3NlcyIsImluc3RhU3ZnIiwidmtTdmciLCJGb290ZXIiLCJwcm9wcyIsImZvb3RlciIsImNsYXNzTmFtZSIsIklubmVyRm9vdGVyIiwiU29jIiwiaXNIb3Jpem9udGFsIiwiaW1nIiwic3JjIiwiYWx0IiwiaDQiLCJkaXYiLCJUZXh0IiwicCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/layout/Footer.js\n");
+module.exports = require("next/dist/shared/lib/router-context.js");
 
 /***/ }),
 
-/***/ "./components/layout/Header.js":
-/*!*************************************!*\
-  !*** ./components/layout/Header.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 9565:
+/***/ ((module) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _ui_NavLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ui/NavLink */ \"./components/ui/NavLink.js\");\n/* harmony import */ var _Header_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header.module.css */ \"./components/layout/Header.module.css\");\n/* harmony import */ var _Header_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Header_module_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nconst hamMenuSvg = \"/ham-menu.svg\";\nconst blueLogo = \"/logos/vigma_logo_blue.svg\";\nconst Header = (props)=>{\n    const { 0: isActiveNav , 1: setIsActiveNav  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);\n    const menuClickHandler = (e)=>{\n        setIsActiveNav((prevState)=>!prevState\n        );\n    };\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"header\", {\n                className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_3___default().Header),\n                __source: {\n                    fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                    lineNumber: 17,\n                    columnNumber: 7\n                },\n                __self: undefined,\n                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n                    className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_3___default().InnerHeader),\n                    __source: {\n                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                        lineNumber: 18,\n                        columnNumber: 9\n                    },\n                    __self: undefined,\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_ui_NavLink__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                            innerClassName: (_Header_module_css__WEBPACK_IMPORTED_MODULE_3___default().LogoInnerContainer),\n                            className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_3___default().LogoContainer),\n                            href: \"/main\",\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                                lineNumber: 19,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"img\", {\n                                src: blueLogo,\n                                className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_3___default().Logo),\n                                __source: {\n                                    fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                                    lineNumber: 24,\n                                    columnNumber: 13\n                                },\n                                __self: undefined\n                            })\n                        }),\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"img\", {\n                            src: hamMenuSvg,\n                            onClick: menuClickHandler,\n                            alt: \"Открыть меню\",\n                            className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_3___default().HamMenu),\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                                lineNumber: 26,\n                                columnNumber: 11\n                            },\n                            __self: undefined\n                        }),\n                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"nav\", {\n                            className: `${(_Header_module_css__WEBPACK_IMPORTED_MODULE_3___default().Nav)} ${isActiveNav && (_Header_module_css__WEBPACK_IMPORTED_MODULE_3___default().Nav__active)}`,\n                            __source: {\n                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                                lineNumber: 32,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_ui_NavLink__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                                    href: \"/order/quiz\",\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                                        lineNumber: 33,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: \"Заказать\"\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_ui_NavLink__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                                    href: \"/contacts\",\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                                        lineNumber: 34,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: \"Контакты\"\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_ui_NavLink__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                                    href: \"/about-us\",\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                                        lineNumber: 35,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: \"О нас\"\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_ui_NavLink__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                                    href: \"/reviews\",\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                                        lineNumber: 36,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: \"Отзывы\"\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_ui_NavLink__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                                    href: \"/works\",\n                                    __source: {\n                                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                                        lineNumber: 37,\n                                        columnNumber: 13\n                                    },\n                                    __self: undefined,\n                                    children: [\n                                        \"Наши\",\n                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"br\", {\n                                            __source: {\n                                                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                                                lineNumber: 37,\n                                                columnNumber: 40\n                                            },\n                                            __self: undefined\n                                        }),\n                                        \" работы\"\n                                    ]\n                                })\n                            ]\n                        })\n                    ]\n                })\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n                className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_3___default().HeaderSpace),\n                __source: {\n                    fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Header.js\",\n                    lineNumber: 41,\n                    columnNumber: 7\n                },\n                __self: undefined\n            })\n        ]\n    }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2xheW91dC9IZWFkZXIuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQThCO0FBSUs7QUFDTTtBQUh6QyxLQUFLLENBQUNHLFVBQVUsR0FBRyxDQUFlO0FBQ2xDLEtBQUssQ0FBQ0MsUUFBUSxHQUFHLENBQTRCO0FBSTdDLEtBQUssQ0FBQ0MsTUFBTSxJQUFJQyxLQUFLLEdBQUssQ0FBQztJQUN6QixLQUFLLE1BQUVDLFdBQVcsTUFBRUMsY0FBYyxNQUFJUiwrQ0FBUSxDQUFDLEtBQUs7SUFFcEQsS0FBSyxDQUFDUyxnQkFBZ0IsSUFBSUMsQ0FBQyxHQUFLLENBQUM7UUFDL0JGLGNBQWMsRUFBRUcsU0FBUyxJQUFNQSxTQUFTOztJQUMxQyxDQUFDO0lBRUQsTUFBTTs7aUZBRURDLENBQU07Z0JBQUNDLFNBQVMsRUFBRVgsa0VBQWM7Ozs7Ozs7Z0dBQzlCWSxDQUFHO29CQUFDRCxTQUFTLEVBQUVYLHVFQUFtQjs7Ozs7Ozs7NkZBQ2hDRCxtREFBTzs0QkFDTmUsY0FBYyxFQUFFZCw4RUFBMEI7NEJBQzFDVyxTQUFTLEVBQUVYLHlFQUFxQjs0QkFDaENpQixJQUFJLEVBQUMsQ0FBTzs7Ozs7OzsyR0FFWEMsQ0FBRztnQ0FBQ0MsR0FBRyxFQUFFakIsUUFBUTtnQ0FBRVMsU0FBUyxFQUFFWCxnRUFBWTs7Ozs7Ozs7OzZGQUU1Q2tCLENBQUc7NEJBQ0ZDLEdBQUcsRUFBRWxCLFVBQVU7NEJBQ2ZvQixPQUFPLEVBQUVkLGdCQUFnQjs0QkFDekJlLEdBQUcsRUFBQyxDQUFjOzRCQUNQWCxTQUFGLEVBQUVYLG1FQUFlOzs7Ozs7Ozs4RkFFM0J3QixDQUFHOzRCQUFDYixTQUFTLEtBQUtYLCtEQUFXLENBQUMsQ0FBQyxFQUFFSyxXQUFXLElBQUlMLHVFQUFtQjs7Ozs7Ozs7cUdBQ2pFRCxtREFBTztvQ0FBQ2tCLElBQUksRUFBQyxDQUFhOzs7Ozs7OzhDQUFDLENBQVE7O3FHQUMzQmxCLG1EQUFEO29DQUFDa0IsSUFBSSxFQUFDLENBQVc7Ozs7Ozs7OENBQUMsQ0FBUTs7cUdBQ3pCbEIsbURBQUQ7b0NBQUNrQixJQUFJLEVBQUMsQ0FBVzs7Ozs7Ozs4Q0FBQyxDQUFLOztxR0FDMUJsQixtREFBRztvQ0FBQ2tCLElBQUksRUFBQyxDQUFVOzs7Ozs7OzhDQUFDLENBQU07O3NHQUN4QmxCLG1EQUFDO29DQUFDa0IsSUFBSSxFQUFDLENBQVE7Ozs7Ozs7O3dDQUFDLENBQUk7NkdBQUtVLENBQUU7Ozs7Ozs7O3dDQUFHLENBQU87Ozs7Ozs7O2lGQUk3Q2YsQ0FBRztnQkFBQ0QsU0FBUyxFQUFFWCx1RUFBbUI7Ozs7Ozs7Ozs7QUFHekMsQ0FBQztBQUVELGlFQUFlRyxNQUFNIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdmlnbWFfYnVpbGQvLi9jb21wb25lbnRzL2xheW91dC9IZWFkZXIuanM/NWVlZCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge3VzZVN0YXRlfSBmcm9tICdyZWFjdCdcclxuXHJcbmNvbnN0IGhhbU1lbnVTdmcgPSBcIi9oYW0tbWVudS5zdmdcIjtcclxuY29uc3QgYmx1ZUxvZ28gPSBcIi9sb2dvcy92aWdtYV9sb2dvX2JsdWUuc3ZnXCI7XHJcbmltcG9ydCBOYXZMaW5rIGZyb20gXCIuLi91aS9OYXZMaW5rXCI7XHJcbmltcG9ydCBjbGFzc2VzIGZyb20gXCIuL0hlYWRlci5tb2R1bGUuY3NzXCI7XHJcblxyXG5jb25zdCBIZWFkZXIgPSAocHJvcHMpID0+IHtcclxuICBjb25zdCBbaXNBY3RpdmVOYXYsIHNldElzQWN0aXZlTmF2XSA9IHVzZVN0YXRlKGZhbHNlKTtcclxuXHJcbiAgY29uc3QgbWVudUNsaWNrSGFuZGxlciA9IChlKSA9PiB7XHJcbiAgICBzZXRJc0FjdGl2ZU5hdigocHJldlN0YXRlKSA9PiAhcHJldlN0YXRlKTtcclxuICB9O1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPD5cclxuICAgICAgPGhlYWRlciBjbGFzc05hbWU9e2NsYXNzZXMuSGVhZGVyfT5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5Jbm5lckhlYWRlcn0+XHJcbiAgICAgICAgICA8TmF2TGlua1xyXG4gICAgICAgICAgICBpbm5lckNsYXNzTmFtZT17Y2xhc3Nlcy5Mb2dvSW5uZXJDb250YWluZXJ9XHJcbiAgICAgICAgICAgIGNsYXNzTmFtZT17Y2xhc3Nlcy5Mb2dvQ29udGFpbmVyfVxyXG4gICAgICAgICAgICBocmVmPVwiL21haW5cIlxyXG4gICAgICAgICAgPlxyXG4gICAgICAgICAgICA8aW1nIHNyYz17Ymx1ZUxvZ299IGNsYXNzTmFtZT17Y2xhc3Nlcy5Mb2dvfSAvPlxyXG4gICAgICAgICAgPC9OYXZMaW5rPlxyXG4gICAgICAgICAgPGltZ1xyXG4gICAgICAgICAgICBzcmM9e2hhbU1lbnVTdmd9XHJcbiAgICAgICAgICAgIG9uQ2xpY2s9e21lbnVDbGlja0hhbmRsZXJ9XHJcbiAgICAgICAgICAgIGFsdD1cItCe0YLQutGA0YvRgtGMINC80LXQvdGOXCJcclxuICAgICAgICAgICAgY2xhc3NOYW1lPXtjbGFzc2VzLkhhbU1lbnV9XHJcbiAgICAgICAgICAvPlxyXG4gICAgICAgICAgPG5hdiBjbGFzc05hbWU9e2Ake2NsYXNzZXMuTmF2fSAke2lzQWN0aXZlTmF2ICYmIGNsYXNzZXMuTmF2X19hY3RpdmV9YH0+XHJcbiAgICAgICAgICAgIDxOYXZMaW5rIGhyZWY9XCIvb3JkZXIvcXVpelwiPtCX0LDQutCw0LfQsNGC0Yw8L05hdkxpbms+XHJcbiAgICAgICAgICAgIDxOYXZMaW5rIGhyZWY9XCIvY29udGFjdHNcIj7QmtC+0L3RgtCw0LrRgtGLPC9OYXZMaW5rPlxyXG4gICAgICAgICAgICA8TmF2TGluayBocmVmPVwiL2Fib3V0LXVzXCI+0J4g0L3QsNGBPC9OYXZMaW5rPlxyXG4gICAgICAgICAgICA8TmF2TGluayBocmVmPVwiL3Jldmlld3NcIj7QntGC0LfRi9Cy0Ys8L05hdkxpbms+XHJcbiAgICAgICAgICAgIDxOYXZMaW5rIGhyZWY9XCIvd29ya3NcIj7QndCw0YjQuDxiciAvPiDRgNCw0LHQvtGC0Ys8L05hdkxpbms+XHJcbiAgICAgICAgICA8L25hdj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgPC9oZWFkZXI+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPXtjbGFzc2VzLkhlYWRlclNwYWNlfT48L2Rpdj5cclxuICAgIDwvPlxyXG4gICk7XHJcbn07XHJcblxyXG5leHBvcnQgZGVmYXVsdCBIZWFkZXI7XHJcbiJdLCJuYW1lcyI6WyJ1c2VTdGF0ZSIsIk5hdkxpbmsiLCJjbGFzc2VzIiwiaGFtTWVudVN2ZyIsImJsdWVMb2dvIiwiSGVhZGVyIiwicHJvcHMiLCJpc0FjdGl2ZU5hdiIsInNldElzQWN0aXZlTmF2IiwibWVudUNsaWNrSGFuZGxlciIsImUiLCJwcmV2U3RhdGUiLCJoZWFkZXIiLCJjbGFzc05hbWUiLCJkaXYiLCJJbm5lckhlYWRlciIsImlubmVyQ2xhc3NOYW1lIiwiTG9nb0lubmVyQ29udGFpbmVyIiwiTG9nb0NvbnRhaW5lciIsImhyZWYiLCJpbWciLCJzcmMiLCJMb2dvIiwib25DbGljayIsImFsdCIsIkhhbU1lbnUiLCJuYXYiLCJOYXYiLCJOYXZfX2FjdGl2ZSIsImJyIiwiSGVhZGVyU3BhY2UiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/layout/Header.js\n");
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
 
 /***/ }),
 
-/***/ "./components/layout/Layout.js":
-/*!*************************************!*\
-  !*** ./components/layout/Layout.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 4365:
+/***/ ((module) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer */ \"./components/layout/Footer.js\");\n/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ \"./components/layout/Header.js\");\n/* harmony import */ var _Page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Page */ \"./components/layout/Page.js\");\n/* harmony import */ var _Layout_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Layout.module.css */ \"./components/layout/Layout.module.css\");\n/* harmony import */ var _Layout_module_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Layout_module_css__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\nconst Layout = (props)=>{\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n        className: (_Layout_module_css__WEBPACK_IMPORTED_MODULE_4___default().Layout),\n        __source: {\n            fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Layout.js\",\n            lineNumber: 8,\n            columnNumber: 5\n        },\n        __self: undefined,\n        children: [\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Header__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                __source: {\n                    fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Layout.js\",\n                    lineNumber: 9,\n                    columnNumber: 7\n                },\n                __self: undefined\n            }),\n            props.children,\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                __source: {\n                    fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Layout.js\",\n                    lineNumber: 11,\n                    columnNumber: 7\n                },\n                __self: undefined\n            })\n        ]\n    }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2xheW91dC9MYXlvdXQuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQTZCO0FBQ0E7QUFDSjtBQUNnQjtBQUV6QyxLQUFLLENBQUNJLE1BQU0sSUFBR0MsS0FBSyxHQUFJLENBQUM7SUFDdkIsTUFBTSx1RUFDSEMsQ0FBRztRQUFDQyxTQUFTLEVBQUVKLGtFQUFjOzs7Ozs7OztpRkFDM0JGLCtDQUFNOzs7Ozs7OztZQUNOSSxLQUFLLENBQUNHLFFBQVE7aUZBQ2RSLCtDQUFNOzs7Ozs7Ozs7O0FBR2IsQ0FBQztBQUVELGlFQUFlSSxNQUFNIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdmlnbWFfYnVpbGQvLi9jb21wb25lbnRzL2xheW91dC9MYXlvdXQuanM/YzBmMyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgRm9vdGVyIGZyb20gJy4vRm9vdGVyJ1xyXG5pbXBvcnQgSGVhZGVyIGZyb20gJy4vSGVhZGVyJ1xyXG5pbXBvcnQgUGFnZSBmcm9tICcuL1BhZ2UnXHJcbmltcG9ydCBjbGFzc2VzIGZyb20gJy4vTGF5b3V0Lm1vZHVsZS5jc3MnXHJcblxyXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxkaXYgY2xhc3NOYW1lPXtjbGFzc2VzLkxheW91dH0+XHJcbiAgICAgIDxIZWFkZXIgLz5cclxuICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICA8Rm9vdGVyIC8+XHJcbiAgICA8L2Rpdj5cclxuICApXHJcbn1cclxuXHJcbmV4cG9ydCBkZWZhdWx0IExheW91dCJdLCJuYW1lcyI6WyJGb290ZXIiLCJIZWFkZXIiLCJQYWdlIiwiY2xhc3NlcyIsIkxheW91dCIsInByb3BzIiwiZGl2IiwiY2xhc3NOYW1lIiwiY2hpbGRyZW4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/layout/Layout.js\n");
+module.exports = require("next/dist/shared/lib/router/utils/get-middleware-regex.js");
 
 /***/ }),
 
-/***/ "./components/layout/Page.js":
-/*!***********************************!*\
-  !*** ./components/layout/Page.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 1428:
+/***/ ((module) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ui_Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/Title */ \"./components/ui/Title.js\");\n/* harmony import */ var _Page_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Page.module.css */ \"./components/layout/Page.module.css\");\n/* harmony import */ var _Page_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Page_module_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nconst Page = (props)=>{\n    const { title , children , className , wrapperClassName , ...pageProps } = props;\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n        className: `\n      ${(_Page_module_css__WEBPACK_IMPORTED_MODULE_2___default().PageSpace)}\n      ${wrapperClassName || ''}\n    `,\n        __source: {\n            fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Page.js\",\n            lineNumber: 14,\n            columnNumber: 5\n        },\n        __self: undefined,\n        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"main\", {\n            ...pageProps,\n            className: `\n          ${(_Page_module_css__WEBPACK_IMPORTED_MODULE_2___default().Page)}\n          ${className || ''}\n        `,\n            __source: {\n                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Page.js\",\n                lineNumber: 18,\n                columnNumber: 7\n            },\n            __self: undefined,\n            children: [\n                title && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_ui_Title__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                    className: (_Page_module_css__WEBPACK_IMPORTED_MODULE_2___default().Title),\n                    __source: {\n                        fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\layout\\\\Page.js\",\n                        lineNumber: 24,\n                        columnNumber: 19\n                    },\n                    __self: undefined,\n                    children: title\n                }),\n                children\n            ]\n        })\n    }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Page);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2xheW91dC9QYWdlLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBK0I7QUFDUTtBQUV2QyxLQUFLLENBQUNFLElBQUksSUFBR0MsS0FBSyxHQUFJLENBQUM7SUFDckIsS0FBSyxDQUFDLENBQUMsQ0FDTEMsS0FBSyxHQUNMQyxRQUFRLEdBQ1JDLFNBQVMsR0FDVEMsZ0JBQWdCLE1BQ2JDLFNBQVMsQ0FDZCxDQUFDLEdBQUdMLEtBQUs7SUFFVCxNQUFNLHNFQUNITSxDQUFHO1FBQUNILFNBQVMsR0FBRzs7Ozs7Ozs7O1lBS2JBLElBQUFBLFNBQUFBLENBQVM7Ozs7Ozs7O2dCQUtSRixLQUFLLHVCQUFLSixLQUFLO29CQUFDTSxTQUFTLEVBQUVMOzs7Ozs7OzhCQUFnQkc7O2dCQUMzQ0MsUUFBUTs7OztBQUlqQixDQUFDO0FBRUQsTUFBTSxTQUFTSCxJQUFJIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdmlnbWFfYnVpbGQvLi9jb21wb25lbnRzL2xheW91dC9QYWdlLmpzP2Q2MzQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFRpdGxlIGZyb20gJy4uL3VpL1RpdGxlJ1xyXG5pbXBvcnQgY2xhc3NlcyBmcm9tICcuL1BhZ2UubW9kdWxlLmNzcydcclxuXHJcbmNvbnN0IFBhZ2UgPSBwcm9wcyA9PiB7XHJcbiAgY29uc3Qge1xyXG4gICAgdGl0bGUsXHJcbiAgICBjaGlsZHJlbixcclxuICAgIGNsYXNzTmFtZSxcclxuICAgIHdyYXBwZXJDbGFzc05hbWUsXHJcbiAgICAuLi5wYWdlUHJvcHNcclxuICB9ID0gcHJvcHNcclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxkaXYgY2xhc3NOYW1lPXtgXHJcbiAgICAgICR7Y2xhc3Nlcy5QYWdlU3BhY2V9XHJcbiAgICAgICR7d3JhcHBlckNsYXNzTmFtZSB8fCAnJ31cclxuICAgIGB9PlxyXG4gICAgICA8bWFpbiB7Li4ucGFnZVByb3BzfSBcclxuICAgICAgICBjbGFzc05hbWU9e2BcclxuICAgICAgICAgICR7Y2xhc3Nlcy5QYWdlfVxyXG4gICAgICAgICAgJHtjbGFzc05hbWUgfHwgJyd9XHJcbiAgICAgICAgYH0gXHJcbiAgICAgID5cclxuICAgICAgICB7dGl0bGUgJiYgPFRpdGxlIGNsYXNzTmFtZT17Y2xhc3Nlcy5UaXRsZX0+e3RpdGxlfTwvVGl0bGU+fVxyXG4gICAgICAgIHtjaGlsZHJlbn0gXHJcbiAgICAgIDwvbWFpbj5cclxuICAgIDwvZGl2PlxyXG4gIClcclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgUGFnZSJdLCJuYW1lcyI6WyJUaXRsZSIsImNsYXNzZXMiLCJQYWdlIiwicHJvcHMiLCJ0aXRsZSIsImNoaWxkcmVuIiwiY2xhc3NOYW1lIiwid3JhcHBlckNsYXNzTmFtZSIsInBhZ2VQcm9wcyIsImRpdiIsIlBhZ2VTcGFjZSIsIm1haW4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/layout/Page.js\n");
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 
 /***/ }),
 
-/***/ "./components/ui/NavLink.js":
-/*!**********************************!*\
-  !*** ./components/ui/NavLink.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 1292:
+/***/ ((module) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _NavLink_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavLink.module.scss */ \"./components/ui/NavLink.module.scss\");\n/* harmony import */ var _NavLink_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_NavLink_module_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst NavLink = (props)=>{\n    const { className , innerClassName , img , href , children , ...linkProps } = props;\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"a\", {\n        ...linkProps,\n        href: href || \"\",\n        className: `\n        ${(_NavLink_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Link)}\n        ${className || \"\"}\n      `.trim(),\n        __source: {\n            fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\ui\\\\NavLink.js\",\n            lineNumber: 8,\n            columnNumber: 5\n        },\n        __self: undefined,\n        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n            className: innerClassName,\n            __source: {\n                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\ui\\\\NavLink.js\",\n                lineNumber: 16,\n                columnNumber: 7\n            },\n            __self: undefined,\n            children: children\n        })\n    }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavLink);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL3VpL05hdkxpbmsuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQTJDO0FBRTNDLEtBQUssQ0FBQ0MsT0FBTyxJQUFJQyxLQUFLLEdBQUssQ0FBQztJQUMxQixLQUFLLENBQUMsQ0FBQyxDQUFDQyxTQUFTLEdBQUVDLGNBQWMsR0FBRUMsR0FBRyxHQUFFQyxJQUFJLEdBQUVDLFFBQVEsTUFBS0MsU0FBUyxDQUFDLENBQUMsR0FDcEVOLEtBQUs7SUFFUCxNQUFNLHNFQUNITyxDQUFDO1dBQ0lELFNBQVM7UUFDYkYsSUFBSSxFQUFFQSxJQUFJLElBQUksQ0FBRTtRQUNoQkgsU0FBUyxHQUFHOzs7Ozs7Ozs7Ozs7Ozs7c0JBS3FCSSxRQUFROzs7QUFHL0MsQ0FBQztBQUVELE1BQU0iLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly92aWdtYV9idWlsZC8uL2NvbXBvbmVudHMvdWkvTmF2TGluay5qcz9lODdlIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBjbGFzc2VzIGZyb20gXCIuL05hdkxpbmsubW9kdWxlLnNjc3NcIjtcclxuXHJcbmNvbnN0IE5hdkxpbmsgPSAocHJvcHMpID0+IHtcclxuICBjb25zdCB7IGNsYXNzTmFtZSwgaW5uZXJDbGFzc05hbWUsIGltZywgaHJlZiwgY2hpbGRyZW4sIC4uLmxpbmtQcm9wcyB9ID1cclxuICAgIHByb3BzO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPGFcclxuICAgICAgey4uLmxpbmtQcm9wc31cclxuICAgICAgaHJlZj17aHJlZiB8fCBcIlwifVxyXG4gICAgICBjbGFzc05hbWU9e2BcclxuICAgICAgICAke2NsYXNzZXMuTGlua31cclxuICAgICAgICAke2NsYXNzTmFtZSB8fCBcIlwifVxyXG4gICAgICBgLnRyaW0oKX1cclxuICAgID5cclxuICAgICAgPGRpdiBjbGFzc05hbWU9e2lubmVyQ2xhc3NOYW1lfT57Y2hpbGRyZW59PC9kaXY+XHJcbiAgICA8L2E+XHJcbiAgKTtcclxufTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IE5hdkxpbms7XHJcbiJdLCJuYW1lcyI6WyJjbGFzc2VzIiwiTmF2TGluayIsInByb3BzIiwiY2xhc3NOYW1lIiwiaW5uZXJDbGFzc05hbWUiLCJpbWciLCJocmVmIiwiY2hpbGRyZW4iLCJsaW5rUHJvcHMiLCJhIiwiTGluayIsInRyaW0iLCJkaXYiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/ui/NavLink.js\n");
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
 
 /***/ }),
 
-/***/ "./components/ui/Section.js":
-/*!**********************************!*\
-  !*** ./components/ui/Section.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 979:
+/***/ ((module) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Section_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Section.module.scss */ \"./components/ui/Section.module.scss\");\n/* harmony import */ var _Section_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Section_module_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst Section = (props)=>{\n    const { close , element , children , centered , className , isHorizontal , ...sectionProps } = props;\n    const SectionEl = element || 'section';\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(SectionEl, {\n        ...sectionProps,\n        className: `\n      ${isHorizontal ? (_Section_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Horizontal) : (_Section_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Section) || ''}\n      ${close && isHorizontal && (_Section_module_scss__WEBPACK_IMPORTED_MODULE_1___default().CloseHorizontal) || ''}\n      ${close && !isHorizontal && (_Section_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Close) || ''}\n      ${centered && (_Section_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Centered) || ''}\n      ${className || ''}\n    `.trim(),\n        __source: {\n            fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\ui\\\\Section.js\",\n            lineNumber: 17,\n            columnNumber: 5\n        },\n        __self: undefined,\n        children: children\n    }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Section);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL3VpL1NlY3Rpb24uanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQTJDO0FBRTNDLEtBQUssQ0FBQ0MsT0FBTyxJQUFHQyxLQUFLLEdBQUksQ0FBQztJQUN4QixLQUFLLENBQUMsQ0FBQyxDQUNMQyxLQUFLLEdBQ0xDLE9BQU8sR0FDUEMsUUFBUSxHQUNSQyxRQUFRLEdBQ1JDLFNBQVMsR0FDVEMsWUFBWSxNQUNUQyxZQUFZLENBQ2pCLENBQUMsR0FBR1AsS0FBSztJQUVULEtBQUssQ0FBQ1EsU0FBUyxHQUFHTixPQUFPLElBQUksQ0FBUztJQUV0QyxNQUFNLHNFQUNITSxTQUFTO1dBQUtELFlBQVk7UUFBRUYsU0FBUyxHQUFHOzs7Ozs7O2tCQU90Q0Y7O0FBR1AsQ0FBQztBQUVELE1BQU0sU0FBU0osT0FBTyIsInNvdXJjZXMiOlsid2VicGFjazovL3ZpZ21hX2J1aWxkLy4vY29tcG9uZW50cy91aS9TZWN0aW9uLmpzP2EzNGUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNsYXNzZXMgZnJvbSAnLi9TZWN0aW9uLm1vZHVsZS5zY3NzJ1xyXG5cclxuY29uc3QgU2VjdGlvbiA9IHByb3BzID0+IHtcclxuICBjb25zdCB7XHJcbiAgICBjbG9zZSxcclxuICAgIGVsZW1lbnQsXHJcbiAgICBjaGlsZHJlbixcclxuICAgIGNlbnRlcmVkLFxyXG4gICAgY2xhc3NOYW1lLFxyXG4gICAgaXNIb3Jpem9udGFsLFxyXG4gICAgLi4uc2VjdGlvblByb3BzXHJcbiAgfSA9IHByb3BzXHJcblxyXG4gIGNvbnN0IFNlY3Rpb25FbCA9IGVsZW1lbnQgfHwgJ3NlY3Rpb24nXHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8U2VjdGlvbkVsIHsuLi5zZWN0aW9uUHJvcHN9IGNsYXNzTmFtZT17YFxyXG4gICAgICAke2lzSG9yaXpvbnRhbCA/IGNsYXNzZXMuSG9yaXpvbnRhbCA6IGNsYXNzZXMuU2VjdGlvbiB8fCAnJ31cclxuICAgICAgJHtjbG9zZSAmJiBpc0hvcml6b250YWwgJiYgY2xhc3Nlcy5DbG9zZUhvcml6b250YWwgfHwgJyd9XHJcbiAgICAgICR7Y2xvc2UgJiYgIWlzSG9yaXpvbnRhbCAmJiBjbGFzc2VzLkNsb3NlIHx8ICcnfVxyXG4gICAgICAke2NlbnRlcmVkICYmIGNsYXNzZXMuQ2VudGVyZWQgfHwgJyd9XHJcbiAgICAgICR7Y2xhc3NOYW1lIHx8ICcnfVxyXG4gICAgYC50cmltKCl9PlxyXG4gICAgICB7Y2hpbGRyZW59XHJcbiAgICA8L1NlY3Rpb25FbD5cclxuICApXHJcbn1cclxuXHJcbmV4cG9ydCBkZWZhdWx0IFNlY3Rpb24iXSwibmFtZXMiOlsiY2xhc3NlcyIsIlNlY3Rpb24iLCJwcm9wcyIsImNsb3NlIiwiZWxlbWVudCIsImNoaWxkcmVuIiwiY2VudGVyZWQiLCJjbGFzc05hbWUiLCJpc0hvcml6b250YWwiLCJzZWN0aW9uUHJvcHMiLCJTZWN0aW9uRWwiLCJIb3Jpem9udGFsIiwiQ2xvc2VIb3Jpem9udGFsIiwiQ2xvc2UiLCJDZW50ZXJlZCIsInRyaW0iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/ui/Section.js\n");
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
 
 /***/ }),
 
-/***/ "./components/ui/Title.js":
-/*!********************************!*\
-  !*** ./components/ui/Title.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 6052:
+/***/ ((module) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Title_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Title.module.scss */ \"./components/ui/Title.module.scss\");\n/* harmony import */ var _Title_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Title_module_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst Title = (props)=>{\n    const { className  } = props;\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"h1\", {\n        className: `\n        ${(_Title_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Title)}\n        ${className || ''}\n      `.trim(),\n        __source: {\n            fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\components\\\\ui\\\\Title.js\",\n            lineNumber: 7,\n            columnNumber: 5\n        },\n        __self: undefined,\n        children: props.children\n    }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Title);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL3VpL1RpdGxlLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUF5QztBQUV6QyxLQUFLLENBQUNDLEtBQUssSUFBSUMsS0FBSyxHQUFLLENBQUM7SUFDeEIsS0FBSyxDQUFDLENBQUMsQ0FBQ0MsU0FBUyxFQUFDLENBQUMsR0FBR0QsS0FBSztJQUUzQixNQUFNLHNFQUNIRSxDQUFFO1FBQ0RELFNBQVMsR0FBRzs7Ozs7OztrQkFLWEQsS0FBSyxDQUFDSTs7QUFHYixDQUFDO0FBRUQsTUFBTSxTQUFTTCxLQUFLIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdmlnbWFfYnVpbGQvLi9jb21wb25lbnRzL3VpL1RpdGxlLmpzPzQwYWEiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNsYXNzZXMgZnJvbSBcIi4vVGl0bGUubW9kdWxlLnNjc3NcIjtcclxuXHJcbmNvbnN0IFRpdGxlID0gKHByb3BzKSA9PiB7XHJcbiAgY29uc3QgeyBjbGFzc05hbWUgfSA9IHByb3BzO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPGgxXHJcbiAgICAgIGNsYXNzTmFtZT17YFxyXG4gICAgICAgICR7Y2xhc3Nlcy5UaXRsZX1cclxuICAgICAgICAke2NsYXNzTmFtZSB8fCAnJ31cclxuICAgICAgYC50cmltKCl9XHJcbiAgICA+XHJcbiAgICAgIHtwcm9wcy5jaGlsZHJlbn1cclxuICAgIDwvaDE+XHJcbiAgKTtcclxufTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IFRpdGxlO1xyXG4iXSwibmFtZXMiOlsiY2xhc3NlcyIsIlRpdGxlIiwicHJvcHMiLCJjbGFzc05hbWUiLCJoMSIsInRyaW0iLCJjaGlsZHJlbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/ui/Title.js\n");
+module.exports = require("next/dist/shared/lib/router/utils/resolve-rewrites.js");
 
 /***/ }),
 
-/***/ "./pages/_app.js":
-/*!***********************!*\
-  !*** ./pages/_app.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 4226:
+/***/ ((module) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_layout_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout/Layout */ \"./components/layout/Layout.js\");\n/* harmony import */ var _components_layout_Page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout/Page */ \"./components/layout/Page.js\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/globals.css */ \"./styles/globals.css\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nfunction App({ Component , pageProps  }) {\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_layout_Layout__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n        __source: {\n            fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\pages\\\\_app.js\",\n            lineNumber: 7,\n            columnNumber: 5\n        },\n        __self: this,\n        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Component, {\n            ...pageProps,\n            __source: {\n                fileName: \"C:\\\\Users\\\\Glincky\\\\vigma\\\\Front-End Build\\\\vigma_build\\\\pages\\\\_app.js\",\n                lineNumber: 9,\n                columnNumber: 7\n            },\n            __self: this\n        })\n    }));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9fYXBwLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQWdEO0FBQ0o7QUFDZDtTQUVyQkUsR0FBRyxDQUFDLENBQUMsQ0FBQ0MsU0FBUyxHQUFFQyxTQUFTLEVBQUMsQ0FBQyxFQUFFLENBQUM7SUFDdEMsTUFBTSxzRUFDSEosaUVBQU07Ozs7Ozs7dUZBRUpHLFNBQVM7ZUFBS0MsU0FBUzs7Ozs7Ozs7O0FBRzlCLENBQUM7QUFFRCxpRUFBZUYsR0FBRyxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdmlnbWFfYnVpbGQvLi9wYWdlcy9fYXBwLmpzP2UwYWQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExheW91dCBmcm9tIFwiLi4vY29tcG9uZW50cy9sYXlvdXQvTGF5b3V0XCI7XHJcbmltcG9ydCBQYWdlIGZyb20gXCIuLi9jb21wb25lbnRzL2xheW91dC9QYWdlXCI7XHJcbmltcG9ydCBcIi4uL3N0eWxlcy9nbG9iYWxzLmNzc1wiO1xyXG5cclxuZnVuY3Rpb24gQXBwKHsgQ29tcG9uZW50LCBwYWdlUHJvcHMgfSkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8TGF5b3V0PlxyXG4gICAgICB7LyogPGgxPmhleTwvaDE+ICovfVxyXG4gICAgICA8Q29tcG9uZW50IHsuLi5wYWdlUHJvcHN9IC8+XHJcbiAgICA8L0xheW91dD5cclxuICApO1xyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBBcHA7Il0sIm5hbWVzIjpbIkxheW91dCIsIlBhZ2UiLCJBcHAiLCJDb21wb25lbnQiLCJwYWdlUHJvcHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/_app.js\n");
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 
 /***/ }),
 
-/***/ "./styles/globals.css":
-/*!****************************!*\
-  !*** ./styles/globals.css ***!
-  \****************************/
-/***/ (() => {
+/***/ 5052:
+/***/ ((module) => {
 
-
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 9232:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 6689:
 /***/ ((module) => {
 
 "use strict";
@@ -191,10 +489,7 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react/jsx-runtime":
-/*!************************************!*\
-  !*** external "react/jsx-runtime" ***!
-  \************************************/
+/***/ 997:
 /***/ ((module) => {
 
 "use strict";
@@ -209,7 +504,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/_app.js"));
+var __webpack_exports__ = __webpack_require__.X(0, [730,664,178], () => (__webpack_exec__(2991)));
 module.exports = __webpack_exports__;
 
 })();

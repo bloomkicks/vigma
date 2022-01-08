@@ -1,0 +1,13 @@
+.Orders {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 550px) {
+  .Orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+}

@@ -1,0 +1,33 @@
+.TotalOrderForm {
+  max-width: 750px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TotalOrderForm > button {
+  margin-top: 15px
+}
+
+.MainButton {
+  align-self: flex-end;
+}
+
+.FileInput {
+  display: none;
+}
+
+button.FileInputWrapper {
+  padding: 0;
+  cursor: pointer;
+}
+.FileInputWrapper > label {
+  line-height: 2.4rem;
+  padding: 0 20px;
+}
+
+.CommentInput {
+  resize: vertical;
+  height: 6.6rem;
+}

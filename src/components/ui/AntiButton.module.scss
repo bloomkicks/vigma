@@ -1,0 +1,18 @@
+@import '../../styles/mixins.scss';
+
+.AntiButton {
+  background-color: #8a1133; 
+  border: none;
+  width: max-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: transform 80ms ease-in;
+}
+.AntiButton:hover {
+  transform: scale(1.03);
+}
+
+.AntiButton > * {
+  @include interactive-font;
+  color: white;
+}

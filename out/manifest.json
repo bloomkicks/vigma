@@ -1,0 +1,10 @@
+{
+  "short_name": "Vigma",
+  "name": "Vigma - лучшая мебель на заказ, быстро, качественно и на века!",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#444c78",
+  "background_color": "#ffffff"
+}

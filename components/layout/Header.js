@@ -30,11 +30,11 @@ const Header = (props) => {
             className={classes.HamMenu}
           />
           <nav className={`${classes.Nav} ${isActiveNav && classes.Nav__active}`}>
-            <NavLink href="/order/quiz">Заказать</NavLink>
-            <NavLink href="/contacts">Контакты</NavLink>
-            <NavLink href="/about-us">О нас</NavLink>
-            <NavLink href="/reviews">Отзывы</NavLink>
-            <NavLink href="/works">Наши<br /> работы</NavLink>
+            <NavLink href="/order/quiz.html">Заказать</NavLink>
+            <NavLink href="/contacts.html">Контакты</NavLink>
+            <NavLink href="/about-us.html">О нас</NavLink>
+            <NavLink href="/reviews.html">Отзывы</NavLink>
+            <NavLink href="/works.html">Наши<br /> работы</NavLink>
           </nav>
         </div>
       </header>
