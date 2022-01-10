@@ -29,7 +29,7 @@ const startingOrders = [
   },
   {
     imgSrc: entrySrc,
-    title: "Шкаф (Прихожая)",
+    title: "Шкаф или Прихожая",
     query: "?type=entry",
   },
   {
@@ -112,7 +112,7 @@ const OrdersPage = (props) => {
   } else if (router.query["type"]) {
     content = {
       orders: materialsOrders,
-      question: "Выбирете материал фасадов",
+      question: "Выбирете материалы",
       title: "Материалы",
     };
   }
