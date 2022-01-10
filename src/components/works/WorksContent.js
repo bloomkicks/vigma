@@ -24,9 +24,9 @@ const works = [
     description: "Фактура: МДФ и ЛДСП",
     colors: ["#EEE9E5", "repeating-linear-gradient(90deg, #2e2926, #1F1D1E 3px)"],
     query: {
-      room: 'kitchen',
-      type: 'angled',
-      material: 'enamel'
+      type: 'kitchen',
+      shape: 'angled',
+      material: 'mdf+ldsp'
     }
   },
   {
@@ -44,9 +44,8 @@ const works = [
     description: "Фактура: ЛДСП",
     colors: ["#c4c2b6", "repeating-linear-gradient(-45deg, #aca89c, #786859 3px)"],
     query: {
-      room: 'bedroom',
-      type: 'bed',
-      material: 'enamel'
+      type: 'child',
+      material: 'ldsp'
     }
   }
 ];

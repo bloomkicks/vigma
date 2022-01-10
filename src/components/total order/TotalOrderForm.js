@@ -54,10 +54,15 @@ const TotalOrderForm = (props) => {
     props.orderInfo.map((info, index) => {
       switch (index) {
         case 0:
-          orderParams.room = info.property;
+          orderParams.type = info.property;
           break;
         case 1:
-          orderParams.type = info.property;
+          if (info.key == 'Форма') {
+            orderParams.shape = info.property;
+          }
+          else {
+            orderParams.materials = info.property;
+          }
           break;
         case 2:
           orderParams.materials = info.property;

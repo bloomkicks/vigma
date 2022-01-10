@@ -6,25 +6,16 @@ import Page from "../../components/layout/Page";
 import classes from "./TotalOrderPage.module.css";
 
 const translations = {
-  room: {
-    office: "Офис",
-    kitchen: "Кухня",
-    bedroom: "Спальная",
-    others: "Другое",
-  },
   type: {
-    desk: "Столы",
-    chair: "Стулья",
-    cabinet: "Тумбы",
+    kitchen: "Кухня",
+    entry: "Шкаф",
+    child: "Детская",
+    "tc-island": "Торговый островок",
+  },
+  shape: {
     linear: "Прямая",
     angled: "Угловая",
     "u-shaped": "П-образная",
-    bed: "Кровать",
-    closet: "Шкаф",
-    sofa: "Диван",
-    bathroom: "Ванная",
-    entryway: "Прихожая",
-    "tc-island": "Торговый островок",
     others: "Другое",
   },
   material: {
@@ -39,12 +30,12 @@ const TotalOrderPage = (props) => {
   const router = useRouter();
 
   const orderInfo = [
-    { key: "Комната", property: translations.room[router.query.room] },
     { key: "Мебель", property: translations.type[router.query.type] },
+    { key: "Форма", property: translations.shape[router.query.shape] },
     {
       key: "Материалы",
       property: (router.query.material || "")
-        .split(" ")
+        .split("+")
         .map((query) => translations.material[query])
         .join(" + "),
     },

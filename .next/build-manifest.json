@@ -5,9 +5,9 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/Vvkppb1CA2Yk4ICHxo3P1/_buildManifest.js",
-    "static/Vvkppb1CA2Yk4ICHxo3P1/_ssgManifest.js",
-    "static/Vvkppb1CA2Yk4ICHxo3P1/_middlewareManifest.js"
+    "static/ldblegS2NEzhpYvgdgMEA/_buildManifest.js",
+    "static/ldblegS2NEzhpYvgdgMEA/_ssgManifest.js",
+    "static/ldblegS2NEzhpYvgdgMEA/_middlewareManifest.js"
   ],
   "pages": {
     "/_app": [
@@ -15,7 +15,7 @@
       "static/chunks/framework-91d7f78b5b4003c8.js",
       "static/chunks/main-f13881c64383263e.js",
       "static/css/5c916fc31af623d1.css",
-      "static/chunks/pages/_app-040b530dc4e4384d.js"
+      "static/chunks/pages/_app-860f41a11b1171fe.js"
     ],
     "/_error": [
       "static/chunks/webpack-e2e8e0e4cdaa3d9e.js",
@@ -50,14 +50,14 @@
       "static/chunks/framework-91d7f78b5b4003c8.js",
       "static/chunks/main-f13881c64383263e.js",
       "static/css/486495fbae036fe1.css",
-      "static/chunks/pages/order-44a8591a2f39737c.js"
+      "static/chunks/pages/order-6cb882eb4ccc1c8e.js"
     ],
     "/order/quiz": [
       "static/chunks/webpack-e2e8e0e4cdaa3d9e.js",
       "static/chunks/framework-91d7f78b5b4003c8.js",
       "static/chunks/main-f13881c64383263e.js",
       "static/css/3b8f855ad4451bc5.css",
-      "static/chunks/pages/order/quiz-0db76f346c3e4a27.js"
+      "static/chunks/pages/order/quiz-2df2075d4c803a9f.js"
     ],
     "/reviews": [
       "static/chunks/webpack-e2e8e0e4cdaa3d9e.js",
@@ -71,7 +71,7 @@
       "static/chunks/framework-91d7f78b5b4003c8.js",
       "static/chunks/main-f13881c64383263e.js",
       "static/css/63db7c52be843451.css",
-      "static/chunks/pages/works-001469895396d3e8.js"
+      "static/chunks/pages/works-b7663117fb540442.js"
     ]
   },
   "ampFirstPages": []

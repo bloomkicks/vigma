@@ -9,14 +9,20 @@ const TotalOrderTree = (props) => {
   return (
     <Section className={classes.TotalOrderTree}>
       {orderInfo
-        .filter((item) => item)
+        .filter((item) => item.property)
         .map((info, index, array) => {
           const isLast = index >= array.length - 1;
           return (
             <div key={index}>
               <div>
                 <p>{info.key}:</p>
-                <Third>{info.property}</Third>
+                {typeof info.property === "object" ? (
+                  info.property.map((prop, i) => {
+                    <Third key={prop + i}>{prop}</Third>
+                  })
+                ) : (
+                  <Third>{info.property}</Third>
+                )}
               </div>
               {!isLast && <img src={doubleArrowSvg} key={Math.random()} />}
             </div>

@@ -80,13 +80,13 @@ const Footer = props => {
           className: (Footer_module_default()).Text,
           children: [/*#__PURE__*/jsx_runtime_.jsx("p", {
             children: /*#__PURE__*/jsx_runtime_.jsx(next_link["default"], {
-              href: "tel:+7 (964) 342 60-51",
-              children: "+7 (964) 342 60-51"
+              href: "tel:+7 (812) 642 60-51",
+              children: "+7 (812) 642 60-51"
             })
           }), /*#__PURE__*/jsx_runtime_.jsx("p", {
             children: /*#__PURE__*/jsx_runtime_.jsx(next_link["default"], {
-              href: "tel:+7 (812) 642 60-51",
-              children: "+7 (812) 642 60-51"
+              href: "tel:+7 (964) 342 60-51",
+              children: "+7 (964) 342 60-51"
             })
           })]
         })]
