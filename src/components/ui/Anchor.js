@@ -5,11 +5,10 @@ const Anchor = (props) => {
   const { href, children, className, ...anchorProps } = props;
 
   return (
-    
     <Link href={href || ""} passHref>
-      <div className={`${classes.Anchor} ${className || ""}`} {...anchorProps}>
+      <span className={`${classes.Anchor} ${className || ""}`} {...anchorProps}>
         {children}
-      </div>
+      </span>
     </Link>
   );
 };

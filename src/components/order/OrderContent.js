@@ -14,7 +14,6 @@ const OrderContent = (props) => {
       <Question>{props.question}</Question>
       <Orders orders={props.orders} />
       {!props.title ? (
-        
         <Link href="/contacts">
           <AntiButton>По Телефону</AntiButton>
         </Link>

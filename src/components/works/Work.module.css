@@ -2,8 +2,11 @@
   min-height: 220px;
   max-width: 380px;
   min-width: 350px;
-  margin-right: 0 20px;
+  margin: 0 20px;
   margin-bottom: 20px;
+}
+.Work:first-child {
+  margin-left: 20px;
 }
 
 .Work > figcaption > h2 {
@@ -42,3 +45,4 @@
 .Colors > div:first-child {
   margin-left: 0;
 }
+

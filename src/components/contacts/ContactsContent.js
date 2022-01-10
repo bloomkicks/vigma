@@ -4,10 +4,10 @@ const locationSrc = "/contact/location.svg";
 const timeSrc = "/contact/time.svg";
 const directorSrc = "/contact/director.svg";
 
-import ContactsSection from "./ContactsSection";
+import Link from "next/link";
 import Anchor from "../ui/Anchor";
 import Content from "../layout/Content";
-import Italic from "../ui/Italic";
+import ContactsSection from "./ContactsSection";
 import classes from "./ContactsContent.module.css";
 
 const ContactsContent = (props) => {
@@ -22,14 +22,14 @@ const ContactsContent = (props) => {
       >
         <Anchor
           style={{ color: "inherit", fontSize: "inherit", color: "inherit" }}
-          href="tel:642-60-51"
+          href="tel:+7 (812) 642 60-51"
         >
-          <b>942-60-42</b>
+          <b>+7 (812) 642 60-51</b>
         </Anchor>
         <br />
       </ContactsSection>
       <ContactsSection contactKey="Адрес эл. почты:"logoSrc={emailSrc}>
-        <b>vigmamebel@gmail.com</b>
+        <b><Link href="mailto:vigmaspb@gmail.com">vigmaspb@gmail.com</Link></b>
       </ContactsSection>
       <ContactsSection
         logoSrc={locationSrc}
@@ -38,13 +38,14 @@ const ContactsContent = (props) => {
         }}
         contactKey="Адрес производства:"
       >
+        <br />
         <b>г. Санкт-Петербург, ул. Автобусная, д. 3, лит. Б</b>
       </ContactsSection>
       <ContactsSection close={true} contactKey="График работы:" logoSrc={timeSrc}>
         <b>с 9:30 до 20:00</b>
       </ContactsSection>
       <ContactsSection contactKey="Главный менеджер:" logoSrc={directorSrc}>
-        <b>Филатов Михаил Юрьевич</b>
+        <b>Филатова Галина Михайловна</b>
       </ContactsSection>
     </Content>
   );

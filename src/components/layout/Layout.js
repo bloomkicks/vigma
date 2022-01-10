@@ -1,20 +1,15 @@
-import { Provider } from 'react-redux'
+import Footer from "./Footer";
+import Header from "./Header";
+import classes from "./Layout.module.css";
 
-import store from '../../store/index'
-import Footer from './Footer'
-import Header from './Header'
-import classes from './Layout.module.css'
-
-const Layout = props => {
+const Layout = (props) => {
   return (
-    <Provider store={store}>
-      <div className={classes.Layout}>
-        <Header />
-        {props.children}
-        <Footer />
-      </div>
-    </Provider>
-  )
-}
+    <div className={classes.Layout}>
+      <Header />
+      {props.children}
+      <Footer />
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;

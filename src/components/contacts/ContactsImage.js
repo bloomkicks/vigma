@@ -4,7 +4,7 @@ import classes from "./ContactsImage.module.css";
 const ContactsImage = (props) => {
   return (
     <AsideImage
-      className={classes.ContactsImage}
+      containerClassName={classes.ContactsImage}
       src={"/contact/assistant.jpeg"}
       alt=""
     />

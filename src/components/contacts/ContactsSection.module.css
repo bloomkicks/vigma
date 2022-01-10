@@ -13,6 +13,7 @@
   z-index: 1;
   text-align: right;
   width: fit-content;
+  max-width: 500px;
 }
 
 .Text > *:first-child {

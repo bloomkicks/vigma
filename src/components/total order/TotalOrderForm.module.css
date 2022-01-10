@@ -1,13 +1,36 @@
 .TotalOrderForm {
   max-width: 750px;
+  padding-right: 5px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.TotalOrderForm > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.TotalOrderForm > div > section {
+  width: auto;
+  flex-grow: 1;
+  margin-top: 15px;
+}
+.TotalOrderForm > div > section:first-child {
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.MinInput {
+  min-width: 200px;
+  max-width: 300px;
+}
+
 .TotalOrderForm > button {
-  margin-top: 15px
+  margin: 25px 0;
 }
 
 .MainButton {
@@ -29,5 +52,5 @@ button.FileInputWrapper {
 
 .CommentInput {
   resize: vertical;
-  height: 6.6rem;
+  height: 5rem;
 }

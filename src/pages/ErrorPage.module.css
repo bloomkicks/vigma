@@ -1,0 +1,15 @@
+.ErrorPage {
+  text-align: right;
+}
+
+.Arrow {
+  transform: rotate(90deg) translateX(-25px);
+  margin: 25px 0;
+  width: 4rem;
+}
+
+@media screen and (max-width: 550px){
+  .Arrow {
+    transform: rotate(90deg);
+  } 
+}

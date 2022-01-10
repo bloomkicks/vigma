@@ -31,7 +31,9 @@ const Work = (props) => {
               );
             })}
           </div>
-          <MainButton onClick={orderHandler}>Заказать</MainButton>
+          <MainButton onClick={orderHandler} className={classes.OrderButton}>
+            Заказать
+          </MainButton>
         </div>
       </div>
     </Section>

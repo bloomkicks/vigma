@@ -31,20 +31,15 @@ const bedroomOthersSrc = "/order-assets/bedroom/other.jpg";
 const bathroomSrc = "/order-assets/other/bathroom.jpg";
 const entrySrc = "/order-assets/other/entryway.jpg";
 const TCIslandSrc = "/order-assets/other/TC island.jpg";
-const othersSrc = "/order-assets/other/TC island.jpg";
+const othersSrc = "/order-assets/other/childroom.jpg";
 
 // MATERIALS ORDERS
-const glassSrc = "/order-assets/materials/glass.jpg";
-const plasticSrc = "/order-assets/materials/plastic.jpg";
-const enamelSrc = "/order-assets/materials/enamel.jpg";
+const ldspSrc = "/order-assets/materials/ldsp.jpg";
+const mdfSrc = "/order-assets/materials/mdf.jpg";
+const massiveSrc = "/order-assets/materials/massive.jpg";
 const materialsOthersSrc = "/order-assets/materials/other.jpg";
 
 const startingOrders = [
-  {
-    imgSrc: officeSrc,
-    title: "Офис",
-    query: "?room=office",
-  },
   {
     imgSrc: kitchenSrc,
     title: "Кухня",
@@ -54,6 +49,11 @@ const startingOrders = [
     imgSrc: bedroomSrc,
     title: "Спальная",
     query: "?room=bedroom",
+  },
+  {
+    imgSrc: officeSrc,
+    title: "Офис",
+    query: "?room=office",
   },
   {
     imgSrc: startingOthesrSrc,
@@ -156,21 +156,21 @@ const othersOrders = [
 
 const materialsOrders = [
   {
-    imgSrc: glassSrc,
-    title: "Стекло",
-    query: "&material=glass",
+    imgSrc: ldspSrc,
+    title: "ЛДСП",
+    query: "&material=ldsp",
     total: true,
   },
   {
-    imgSrc: plasticSrc,
-    title: "Пластик",
-    query: "&material=plastic",
+    imgSrc: mdfSrc,
+    title: "МДФ",
+    query: "&material=mdf",
     total: true,
   },
   {
-    imgSrc: enamelSrc,
-    title: "Эмаль",
-    query: "&material=enamel",
+    imgSrc: massiveSrc,
+    title: "Массив",
+    query: "&material=massive",
     total: true,
   },
   {

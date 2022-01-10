@@ -5,7 +5,6 @@ import "../styles/globals.css";
 function App({ Component, pageProps }) {
   return (
     <Layout>
-      {/* <h1>hey</h1> */}
       <Component {...pageProps} />
     </Layout>
   );

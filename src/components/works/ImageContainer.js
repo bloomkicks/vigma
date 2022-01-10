@@ -7,13 +7,13 @@ const ImageContainer = (props) => {
   const [zoomedId, setZoomedId] = useState();
 
   const zoomHandler = (e) => {
-    const id = parseFloat(e.target.id);
+    const id = e.target.id;
     if (zoomedId == id) setZoomedId(null);
     else setZoomedId(id);
   };
 
   const zoomBlurHandler = (e) => {
-    const id = parseFloat(e.target.id);
+    const id = e.target.id;
     if (zoomedId == id) {
       setZoomedId(null);
     }

@@ -16,7 +16,7 @@ const Footer = (props) => {
         <Section isHorizontal={true}>
           <h4>ОСТАВЬТЕ ОТЗЫВ</h4>
           <div className={classes.Text}>
-            <p>vigmareviews@gmail.com</p>
+            <p><Link href="mailto:vigmaspb@gmail.com">vigmaspb@gmail.com</Link></p>
           </div>
         </Section>
         <Section isHorizontal={true}>
@@ -31,14 +31,14 @@ const Footer = (props) => {
             
             <p><Link href="tel:+7 (964) 342 60-51">+7 (964) 342 60-51</Link></p>
             
-            <p><Link href="tel:642 60-51">642 60-51</Link></p>
+            <p><Link href="tel:+7 (812) 642 60-51">+7 (812) 642 60-51</Link></p>
           </div>
         </Section>
         <Section isHorizontal={true}>
           <h4>ВАКАНСИИ</h4>
           <div className={classes.Text}>
             <p>Всегда открыты талантам:</p>
-            <p>vigmajobs@gmail.com</p>
+            <p><Link href="mailto:vigmaspb@gmail.com">vigmaspb@gmail.com</Link></p>
           </div>
         </Section>
       </div>
