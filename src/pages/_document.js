@@ -5,9 +5,9 @@ class MyDocument extends Document {
     return (
       <Html lang="ru">
         <Head>
+          {/* REGULAR TAGS */}
           <meta charSet="utf-8" />
           <link rel="icon" href="/icon.ico" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#444c78" />
           <meta
             name="description"
@@ -23,7 +23,7 @@ class MyDocument extends Document {
             property="og:title"
             content=" Мебель На Заказ От Производителя Vigma - Недорого, Качественно, Быстро! Доставка От 4-и Дней "
           />
-          <meta property="og:image" content="/logos/vigma_logo_blue.jpg" />
+          <meta property="og:image" content="/logos/mini_blue.jpg" />
           <meta property="og:site_name" content="Vigma" />
           <meta
             property="og:description"
@@ -37,7 +37,7 @@ class MyDocument extends Document {
             name="twitter:title"
             content=" Мебель На Заказ От Производителя Vigma - Недорого, Качественно, Быстро! Доставка От 4-и Дней "
           />
-          <meta name="twitter:image" content="/logos/vigma_logo_blue.jpg" />
+          <meta name="twitter:image" content="/logos/mini_blue.jpg" />
           <meta
             name="og:description"
             content="Качественная и недорогая мебель на заказ в CПб и Лен. области. Закажите у нас и мы доставим и установим любую мебель быстро и ..."

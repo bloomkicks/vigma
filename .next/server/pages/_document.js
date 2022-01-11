@@ -30,9 +30,6 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_0__["default"] {
           rel: "icon",
           href: "/icon.ico"
         }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("meta", {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1"
-        }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("meta", {
           name: "theme-color",
           content: "#444c78"
         }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("meta", {
@@ -48,7 +45,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_0__["default"] {
           content: " \u041C\u0435\u0431\u0435\u043B\u044C \u041D\u0430 \u0417\u0430\u043A\u0430\u0437 \u041E\u0442 \u041F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044F Vigma - \u041D\u0435\u0434\u043E\u0440\u043E\u0433\u043E, \u041A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E, \u0411\u044B\u0441\u0442\u0440\u043E! \u0414\u043E\u0441\u0442\u0430\u0432\u043A\u0430 \u041E\u0442 4-\u0438 \u0414\u043D\u0435\u0439 "
         }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("meta", {
           property: "og:image",
-          content: "/logos/vigma_logo_blue.jpg"
+          content: "/logos/mini_blue.jpg"
         }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("meta", {
           property: "og:site_name",
           content: "Vigma"
@@ -66,7 +63,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_0__["default"] {
           content: " \u041C\u0435\u0431\u0435\u043B\u044C \u041D\u0430 \u0417\u0430\u043A\u0430\u0437 \u041E\u0442 \u041F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044F Vigma - \u041D\u0435\u0434\u043E\u0440\u043E\u0433\u043E, \u041A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E, \u0411\u044B\u0441\u0442\u0440\u043E! \u0414\u043E\u0441\u0442\u0430\u0432\u043A\u0430 \u041E\u0442 4-\u0438 \u0414\u043D\u0435\u0439 "
         }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("meta", {
           name: "twitter:image",
-          content: "/logos/vigma_logo_blue.jpg"
+          content: "/logos/mini_blue.jpg"
         }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("meta", {
           name: "og:description",
           content: "\u041A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u0430\u044F \u0438 \u043D\u0435\u0434\u043E\u0440\u043E\u0433\u0430\u044F \u043C\u0435\u0431\u0435\u043B\u044C \u043D\u0430 \u0437\u0430\u043A\u0430\u0437 \u0432 C\u041F\u0431 \u0438 \u041B\u0435\u043D. \u043E\u0431\u043B\u0430\u0441\u0442\u0438. \u0417\u0430\u043A\u0430\u0436\u0438\u0442\u0435 \u0443 \u043D\u0430\u0441 \u0438 \u043C\u044B \u0434\u043E\u0441\u0442\u0430\u0432\u0438\u043C \u0438 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u043C \u043B\u044E\u0431\u0443\u044E \u043C\u0435\u0431\u0435\u043B\u044C \u0431\u044B\u0441\u0442\u0440\u043E \u0438 ..."

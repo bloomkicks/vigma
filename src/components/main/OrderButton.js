@@ -4,7 +4,7 @@ import classes from './OrderButton.module.css'
 
 const OrderButton = props => {
   return (
-    <Anchor className={classes.ButtonWrapper} href="/order">
+    <Anchor className={classes.ButtonWrapper} href="/order/quiz">
       <MainButton className={classes.Button}>
         <p>Закажите сейчас</p>
       </MainButton>

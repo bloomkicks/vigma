@@ -12,4 +12,8 @@
   .Arrow {
     transform: rotate(90deg);
   } 
+  .ErrorPage {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 }

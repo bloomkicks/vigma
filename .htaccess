@@ -1,6 +1,10 @@
+DirectoryIndex main.html
+ErrorDocument 404 /404.html
+
 RewriteEngine on
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^ %{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [NC,L,R]
 RewriteCond %{REQUEST_FILENAME}.html -f

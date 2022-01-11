@@ -16,6 +16,7 @@ const USER_ID = "user_2FU0yfDjTaoUzX8yIWhal";
 
 const TotalOrderForm = (props) => {
   const router = useRouter();
+  const isFirstRendered = useRef(true)
   const [isSent, setIsSent] = useState(false);
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -92,7 +93,11 @@ const TotalOrderForm = (props) => {
   };
 
   const telInputHandler = (e) => {
-    const cleanNumber = e.target.value.replace(/[^\d]/g, "");
+    let cleanNumber = e.target.value.replace(/[^\d]/g, "");
+    if (isFirstRendered.current) {
+      isFirstRendered.current = false
+      cleanNumber = '7'
+    }
     if (!cleanNumber) return e.target.value=''; 
     const number = [
       cleanNumber[0],

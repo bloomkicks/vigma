@@ -52,11 +52,11 @@ const works = [
 
 const WorksContent = (props) => {
   return (
-    <main className={classes.WorksContent}>
+    <article className={classes.WorksContent}>
       {works.map((work) => {
         return <Work {...work} key={Math.random()} />;
       })}
-    </main>
+    </article>
   );
 };
 
