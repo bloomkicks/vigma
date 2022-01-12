@@ -11,16 +11,27 @@ const Header = (props) => {
 
   const menuClickHandler = (e) => {
     e.stopPropagation();
-    setIsActiveNav((prevState) => !prevState);
+    setIsActiveNav((prevState) => {
+      if (prevState) {
+        e.target.blur()
+      }
+      return !prevState
+    });
   };
-  const menuBlurHandler = (e) => {
-    setIsActiveNav(false);
+  const navFocusHandler = (e) => {
+    e.stopPropagation()
+    setIsActiveNav(true);
   };
+  const navBlurHandler = e => {
+    setIsActiveNav(false)
+  }
   const navClickHandler = (e) => {
     e.stopPropagation();
+    setIsActiveNav((prevState) => !prevState);
+    e.target.blur();
   };
   useEffect(() => {
-    window.addEventListener("click", menuBlurHandler);
+    window.addEventListener("click", () => setIsActiveNav(false));
   }, []);
 
   return (
@@ -43,14 +54,51 @@ const Header = (props) => {
           />
           <nav
             onClick={navClickHandler}
-            tabIndex={1}
             className={`${classes.Nav} ${isActiveNav && classes.Nav__active}`}
           >
-            <NavLink href="/order/quiz">Заказать</NavLink>
-            <NavLink href="/contacts">Контакты</NavLink>
-            <NavLink href="/about-us">О нас</NavLink>
-            <NavLink href="/reviews">Отзывы</NavLink>
-            <NavLink href="/works">
+            <NavLink
+              href="/order/quiz"
+              tabIndex={1}
+              onClick={navClickHandler}
+              onFocus={navFocusHandler}
+              onBlur={navBlurHandler}
+            >
+              Заказать
+            </NavLink>
+            <NavLink
+              href="/contacts"
+              tabIndex={1}
+              onClick={navClickHandler}
+              onFocus={navFocusHandler}
+              onBlur={navBlurHandler}
+            >
+              Контакты
+            </NavLink>
+            <NavLink
+              href="/about-us"
+              tabIndex={1}
+              onClick={navClickHandler}
+              onFocus={navFocusHandler}
+              onBlur={navBlurHandler}
+            >
+              О нас
+            </NavLink>
+            <NavLink
+              href="/reviews"
+              tabIndex={1}
+              onClick={navClickHandler}
+              onFocus={navFocusHandler}
+              onBlur={navBlurHandler}
+            >
+              Отзывы
+            </NavLink>
+            <NavLink
+              href="/works"
+              tabIndex={1}
+              onClick={navClickHandler}
+              onFocus={navFocusHandler}
+              onBlur={navBlurHandler}
+            >
               Наши
               <br /> работы
             </NavLink>

@@ -52,7 +52,8 @@
   cursor: pointer;
   transition: transform 85ms ease-in;
 }
-.HamMenu:hover {
+.HamMenu:hover, .HamMenu:focus {
+  outline: none;
   transform: scaleY(1.25);
 }
 
@@ -90,11 +91,9 @@
   .Nav__active {
     transform: translatex(-100%);
   }
+
   .HamMenu {
     display: block;
-  }
-  .Nav:focus {
-    transform: translatex(-100%);
   }
 }
 

@@ -33,11 +33,18 @@ section.OrderSection:first-child {
   min-height: 35px;
   background-color: #cc08088c;
   text-align: center;
-  padding: 0 10px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.OrderSection .Title h2 {
+  font-size: 1.225rem;
+}
+
 @media screen and (max-width: 550px) {
+  .OrderSection .Title h2 {
+    font-size: 1.3rem;
+  }
 }

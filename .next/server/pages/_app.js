@@ -182,19 +182,32 @@ const Header = props => {
 
   const menuClickHandler = e => {
     e.stopPropagation();
-    setIsActiveNav(prevState => !prevState);
+    setIsActiveNav(prevState => {
+      if (prevState) {
+        e.target.blur();
+      }
+
+      return !prevState;
+    });
   };
 
-  const menuBlurHandler = e => {
+  const navFocusHandler = e => {
+    e.stopPropagation();
+    setIsActiveNav(true);
+  };
+
+  const navBlurHandler = e => {
     setIsActiveNav(false);
   };
 
   const navClickHandler = e => {
     e.stopPropagation();
+    setIsActiveNav(prevState => !prevState);
+    e.target.blur();
   };
 
   (0,external_react_.useEffect)(() => {
-    window.addEventListener("click", menuBlurHandler);
+    window.addEventListener("click", () => setIsActiveNav(false));
   }, []);
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
     children: [/*#__PURE__*/jsx_runtime_.jsx("header", {
@@ -218,22 +231,41 @@ const Header = props => {
           className: (Header_module_default()).HamMenu
         }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("nav", {
           onClick: navClickHandler,
-          tabIndex: 1,
           className: `${(Header_module_default()).Nav} ${isActiveNav && (Header_module_default()).Nav__active}`,
           children: [/*#__PURE__*/jsx_runtime_.jsx(ui_NavLink, {
             href: "/order/quiz",
+            tabIndex: 1,
+            onClick: navClickHandler,
+            onFocus: navFocusHandler,
+            onBlur: navBlurHandler,
             children: "\u0417\u0430\u043A\u0430\u0437\u0430\u0442\u044C"
           }), /*#__PURE__*/jsx_runtime_.jsx(ui_NavLink, {
             href: "/contacts",
+            tabIndex: 1,
+            onClick: navClickHandler,
+            onFocus: navFocusHandler,
+            onBlur: navBlurHandler,
             children: "\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u044B"
           }), /*#__PURE__*/jsx_runtime_.jsx(ui_NavLink, {
             href: "/about-us",
+            tabIndex: 1,
+            onClick: navClickHandler,
+            onFocus: navFocusHandler,
+            onBlur: navBlurHandler,
             children: "\u041E \u043D\u0430\u0441"
           }), /*#__PURE__*/jsx_runtime_.jsx(ui_NavLink, {
             href: "/reviews",
+            tabIndex: 1,
+            onClick: navClickHandler,
+            onFocus: navFocusHandler,
+            onBlur: navBlurHandler,
             children: "\u041E\u0442\u0437\u044B\u0432\u044B"
           }), /*#__PURE__*/(0,jsx_runtime_.jsxs)(ui_NavLink, {
             href: "/works",
+            tabIndex: 1,
+            onClick: navClickHandler,
+            onFocus: navFocusHandler,
+            onBlur: navBlurHandler,
             children: ["\u041D\u0430\u0448\u0438", /*#__PURE__*/jsx_runtime_.jsx("br", {}), " \u0440\u0430\u0431\u043E\u0442\u044B"]
           })]
         })]

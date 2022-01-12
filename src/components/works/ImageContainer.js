@@ -1,45 +1,56 @@
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
+
+import ZoomedImage from "./ZoomedImage";
 import classes from "./ImageContainer.module.css";
 
 const ImageContainer = (props) => {
   const { photos, ...containerProps } = props;
-  const imageIds = useRef(photos.map((p, i) => p.src + "" + i));
-  const [zoomedId, setZoomedId] = useState();
+  const [zoomedSrc, setZoomedSrc] = useState(null);
 
-  const zoomHandler = (e) => {
-    const id = e.target.id;
-    if (zoomedId == id) setZoomedId(null);
-    else setZoomedId(id);
+  const zoomClickHandler = (e) => {
+    e.stopPropagation();
+    const src = e.target.getAttribute("src");
+    if (zoomedSrc == src) setZoomedSrc(null);
+  };
+
+  const zoomFocusHandler = (e) => {
+    const src = e.target.getAttribute("src");
+    if (zoomedSrc == src) setZoomedSrc(null);
+    setZoomedSrc(src);
   };
 
   const zoomBlurHandler = (e) => {
-    const id = e.target.id;
-    if (zoomedId == id) {
-      setZoomedId(null);
+    const src = e.target.getAttribute("src");
+    console.log(src);
+    if (zoomedSrc == src) {
+      setZoomedSrc(null);
     }
   };
 
   return (
-    <div className={classes.ImageContainer}>
-      {photos.map((photo, index) => {
-        const id = imageIds.current[index];
-        return (
-          <div
-            key={id}
-            id={id}
-            tabIndex={index}
-            onFocus={zoomHandler}
-            onBlur={zoomBlurHandler}
-            className={`
+    <>
+      <div className={classes.ImageContainer}>
+        {photos.map((photo, index) => {
+          return (
+            <div
+              key={index + Math.random()}
+              className={`
               ${photo.isVertical ? classes.Vertical : classes.Horiz}
-              ${id === zoomedId && classes.ZoomedImage}
             `}
-          >
-            <img src={photo.src} />
-          </div>
-        );
-      })}
-    </div>
+            >
+              <img
+                tabIndex={1}
+                onClick={zoomClickHandler}
+                onFocus={zoomFocusHandler}
+                onBlur={zoomBlurHandler}
+                src={photo.src}
+              />
+            </div>
+          );
+        })}
+      </div>
+      {zoomedSrc && <ZoomedImage src={zoomedSrc} key={Math.random()} />}
+    </>
   );
 };
 

@@ -28,9 +28,6 @@
   border-radius: 50%;
 }
 
-.Name {
-}
-
 .Text {
   min-height: 133px;
   height: 50%;
@@ -50,10 +47,4 @@
 }
 .Text::-webkit-scrollbar-thumb {
   background-color: #ffffff;
-}
-
-@media screen and (max-width: 550px) {
-  .Text {
-    /* padding: 0 5px; */
-  }
 }

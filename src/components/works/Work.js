@@ -21,7 +21,9 @@ const Work = (props) => {
       <div className={classes.Desc}>
         <figcaption className={classes.DescSec}>
           <Secondary>{name}</Secondary>
-          <p>{description}</p>
+          {description.map((descrip) => {
+            return <p key={Math.random()}>{descrip}</p>;
+          })}
         </figcaption>
         <div className={classes.DescSec}>
           <div className={classes.Colors}>

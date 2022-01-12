@@ -1,12 +1,14 @@
-.Work {
+figure.Work {
   min-height: 220px;
   max-width: 380px;
   min-width: 350px;
   margin: 0 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
-.Work:first-child {
-  margin-left: 20px;
+
+figure.Work:first-child {
+  margin: 0 20px;
+  margin-bottom: 40px;
 }
 
 .Work > figcaption > h2 {
