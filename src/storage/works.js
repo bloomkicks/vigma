@@ -231,8 +231,8 @@ const works = [
     description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Крашенный"],
     colors: [
       "repeating-linear-gradient(90deg, #b18a3b, #a37931 3px )",
+      "#c2d5db",
       "#0b151f",
-      "#61b9cf",
     ],
     query: {
       type: "kitchen",
