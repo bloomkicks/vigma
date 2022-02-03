@@ -6,9 +6,8 @@
 }
 
 .ZoomedImage {
-  max-height: 750px;
-  height: 50vh;
-  min-height: 300px; 
-  max-width: 100vw;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
   width: auto;
 }

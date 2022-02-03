@@ -8,6 +8,6 @@
   padding: 7.5px 10px;
   transition: transform 50ms ease-in;
 }
-.Button:hover {
+.Button:hover, .Button:focus {
   transform: scale(1.03);
 }

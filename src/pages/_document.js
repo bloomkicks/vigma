@@ -7,7 +7,8 @@ class MyDocument extends Document {
         <Head>
           {/* REGULAR TAGS */}
           <meta charSet="utf-8" />
-          <link rel="icon" href="/icon.ico" />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/logos/mini_blue.svg" />
           <meta name="theme-color" content="#444c78" />
           <meta
             name="description"

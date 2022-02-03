@@ -15,7 +15,7 @@ const MainAdvantages = (pros) => {
         <MainAdvantage title="Собственное производство" logoSrc={gearsSvg}>
           из-за чего цены ниже, чем у конкурентов
         </MainAdvantage>
-        <MainAdvantage title="Выезд менеджера" logoSrc={rulerSvg}>
+        <MainAdvantage title="Выезд замерщика" logoSrc={rulerSvg}>
           бесплатный замер и составление проекта
         </MainAdvantage>
         <MainAdvantage title="Доставка и установка" logoSrc={packageSvg}>
