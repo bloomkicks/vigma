@@ -1,12 +1,12 @@
 import MainContent from "../components/main/MainContent"
-import MainImage from '../components/main/MainImage'
+import MainWork from '../components/main/MainWork'
 import Page from '../components/layout/Page'
 
 const MainPage = props => {
   return (
     <Page>
       <MainContent />
-      <MainImage />
+      <MainWork />
     </Page >
   )
 }

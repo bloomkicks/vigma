@@ -51,7 +51,7 @@ const solidKitchenAngleMain = "solid/angle_main.jpeg";
 const solidKitchenAngle2 = "solid/angle2.jpeg";
 const solidKitchenMain = "solid/main.jpeg";
 
-const works = [
+export const firstWorks = [
   {
     photos: [
       {
@@ -97,6 +97,10 @@ const works = [
       material: "ldsp",
     },
   },
+];
+
+const works = [
+  ...firstWorks,
   {
     photos: [
       {

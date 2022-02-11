@@ -26,6 +26,10 @@ figure.Work:first-child {
   justify-content: space-between;
 }
 
+.Desc button {
+  border-radius: 10px;
+}
+
 .DescSec {
   display: flex;
   flex-direction: column;
@@ -38,8 +42,8 @@ figure.Work:first-child {
 }
 
 .Colors > div {
-  width: 30px;
-  height: 30px;
+  width: 1.3rem;
+  height: 1.3rem;
   margin-left: 0.5rem;
   border-radius: 10px;
 }
@@ -47,4 +51,3 @@ figure.Work:first-child {
 .Colors > div:first-child {
   margin-left: 0;
 }
-
