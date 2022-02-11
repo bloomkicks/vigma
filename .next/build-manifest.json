@@ -25,10 +25,30 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/about-us": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/about-us.js"
+    ],
+    "/contacts": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/contacts.js"
+    ],
     "/main": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/main.js"
+    ],
+    "/order/quiz": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/order/quiz.js"
+    ],
+    "/reviews": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/reviews.js"
     ],
     "/works": [
       "static/chunks/webpack.js",

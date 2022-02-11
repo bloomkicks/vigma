@@ -78,23 +78,27 @@ export const firstWorks = [
   {
     photos: [
       {
-        src: bed,
+        src: solidKitchenAngleMain,
+      },
+      {
+        src: solidKitchenAngle2,
         isVertical: true,
       },
       {
-        src: desk,
+        src: solidKitchenMain,
         isVertical: true,
       },
     ],
-    name: 'Детская "Уют"',
-    description: ["Фактура: ЛДСП"],
+    name: 'Кухня "Солид"',
+    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Крашенный"],
     colors: [
-      "#c4c2b6",
-      "repeating-linear-gradient(-45deg, #aca89c, #786859 3px)",
+      "linear-gradient(125deg, #746d71 25%, #cfcfcf 45%, #746d71 60%)",
+      "repeating-linear-gradient(90deg, #733617, #965632 3px)",
     ],
     query: {
-      type: "child",
-      material: "ldsp",
+      type: "kitchen",
+      shape: "angled",
+      material: "lsdp+mdf",
     },
   },
 ];
@@ -247,27 +251,23 @@ const works = [
   {
     photos: [
       {
-        src: solidKitchenAngleMain,
-      },
-      {
-        src: solidKitchenAngle2,
+        src: bed,
         isVertical: true,
       },
       {
-        src: solidKitchenMain,
+        src: desk,
         isVertical: true,
       },
     ],
-    name: 'Кухня "Солид"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Крашенный"],
+    name: 'Детская "Уют"',
+    description: ["Фактура: ЛДСП"],
     colors: [
-      "linear-gradient(125deg, #746d71 25%, #cfcfcf 45%, #746d71 60%)",
-      "repeating-linear-gradient(90deg, #733617, #965632 3px)",
+      "#c4c2b6",
+      "repeating-linear-gradient(-45deg, #aca89c, #786859 3px)",
     ],
     query: {
-      type: "kitchen",
-      shape: "angled",
-      material: "lsdp+mdf",
+      type: "child",
+      material: "ldsp",
     },
   },
   {

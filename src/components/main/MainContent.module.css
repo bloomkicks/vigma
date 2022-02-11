@@ -1,6 +1,10 @@
 .MainContent {
   padding-top: 0;
   margin-right: 10px;
+  max-width: none;
+  width: 90%;
+  flex: 1 0 100%;
+  text-align: center;
 }
 
 .Logo {
@@ -8,3 +12,4 @@
   margin-right: 0.5rem;
   transform: translateY(15%);
 }
+
