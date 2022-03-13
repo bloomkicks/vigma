@@ -8,7 +8,7 @@
 @mixin title-font {
   font-family: $sans-serif;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: $white;
 }
 
@@ -30,14 +30,14 @@
 
 @mixin interactive-font {
   font-family: $serif;
-  font-size: 1.1rem;
+  font-weight: bold;
+  font-size: 1.15rem;
   color: $interactive;
   cursor: pointer;
 }
 
 @mixin italic-font {
   font-style: italic;
-  font-size: 0.9rem;
 }
 
 @mixin anchor-font {

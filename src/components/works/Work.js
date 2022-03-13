@@ -7,7 +7,16 @@ import Section from "../ui/Section";
 import classes from "./Work.module.css";
 
 const Work = (props) => {
-  const { photos, colors, query, description, name } = props;
+  const {
+    photos,
+    colors,
+    query,
+    description,
+    name,
+    style,
+    deskStyle,
+    imgContainerStyle,
+  } = props;
   const router = useRouter();
 
   const searchParams = new URLSearchParams(query);
@@ -16,9 +25,14 @@ const Work = (props) => {
   };
 
   return (
-    <Section element="figure" isHorizontal={true} className={classes.Work}>
-      <ImageContainer photos={photos} />
-      <div className={classes.Desc}>
+    <Section
+      element="figure"
+      isHorizontal={true}
+      className={classes.Work}
+      style={style || {}}
+    >
+      <ImageContainer style={imgContainerStyle} photos={photos} />
+      <div className={classes.Desc} style={deskStyle || {}}>
         <figcaption className={classes.DescSec}>
           <Secondary>{name}</Secondary>
           {description.map((descrip) => {
@@ -34,7 +48,7 @@ const Work = (props) => {
             })}
           </div>
           <MainButton onClick={orderHandler} className={classes.OrderButton}>
-            Заказать
+            <p>Заказать</p>
           </MainButton>
         </div>
       </div>

@@ -1,7 +1,13 @@
 .ContactsContent {
+  font-size: 0.9rem;
   align-items: flex-end;
   flex: 0 2 auto;
   margin-top: 30px;
+  padding-right: 15px;
+}
+
+.ContactsContent b span {
+  display: inline-block;
 }
 
 @media screen and (max-width: 550px){

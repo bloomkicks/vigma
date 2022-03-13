@@ -1,8 +1,7 @@
 .MainWork {
   margin: 20px 20px 10px 20px;
-  width: 90%;
+  width: 100%;
   max-width: 800px;
-  min-width: 300px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -17,42 +16,81 @@
   flex-wrap: wrap;
 }
 
-.MainWork figure {
-  margin: 0;
-  max-width: 370px;
+.MainWork figure,
+.MainWork figure:first-child {
+  margin: 10px;
+  margin-left: 0;
+  margin-bottom: 45px;
 }
 
 .MainWork figure:first-child {
-  margin: 0;
-  margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 .MainWork > p {
-  margin-top: 15px;
-  text-transform: uppercase;
+  display: block;
+  font-size: 1.1rem;
+  text-transform: capitalize;
   font-weight: bold;
-  text-decoration: underline;
   color: #ffd8a5;
   cursor: pointer;
+  position: relative;
+}
+
+.MainWork > p::after {
+  content: "";
+  position: absolute;
+  left: -1%;
+  top: 102.9%;
+  width: 102%;
+  height: 2.5px;
+  background-color: #ffd8a5;
+  transition: transform 0.1s ease-out;
+}
+
+.MainWork > p:hover::after {
+  transform: translateY(3px);
 }
 
 @media screen and (max-width: 950px) {
   .MainWork {
-    width: 90%;
-  } 
+    margin-right: 0;
+    margin-left: 0;
+  }
   .MainWork > section {
     justify-content: center;
   }
   .MainWork figure {
-    max-width: 300px
+    margin-right: 10px;
+    max-width: 320px;
   }
-  .MainWork figure:first-child {
-    margin-right: 15px;
+  .MainWork figure:last-of-type {
+    margin-left: 10px;
+    margin-right: 0px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 710px) {
+  .MainWork figure,
+  .MainWork figure:last-of-type {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .MainWork {
+    padding-top: 15px;
+  }
+  .MainWork figure,
   .MainWork figure:first-child {
-    margin-right: 0
-  } 
+    margin: 0;
+    margin-bottom: 30px;
+    height: 260px;
+  }
+
+  .MainWork {
+    margin: 10px 0;
+  }
 }

@@ -23,7 +23,7 @@
   height: 100%;
   width: 100%;
   max-width: 1366px;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .LogoContainer,
@@ -43,6 +43,9 @@
 .Logo {
   height: 65%;
   width: auto;
+}
+.Logo:focus {
+  outline: none;
 }
 
 .HamMenu {

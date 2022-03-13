@@ -1,5 +1,10 @@
 @import '../../styles/mixins.scss';
 
 .Anchor {
-  @include anchor-font
+  @include anchor-font;
+  transition: opacity 80ms ease-in;
+}
+
+.Anchor:hover {
+  opacity: 0.8;
 }

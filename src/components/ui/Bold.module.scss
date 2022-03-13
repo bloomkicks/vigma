@@ -1,6 +1,7 @@
 @import '../../styles/mixins';
 
 .Important {
+  display: inline-block;
   @include inherited-font;
   @include important-font;
 }

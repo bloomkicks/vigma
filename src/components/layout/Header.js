@@ -75,24 +75,6 @@ const Header = (props) => {
               Контакты
             </NavLink>
             <NavLink
-              href="/about-us"
-              tabIndex={1}
-              onClick={navClickHandler}
-              onFocus={navFocusHandler}
-              onBlur={navBlurHandler}
-            >
-              О нас
-            </NavLink>
-            <NavLink
-              href="/reviews"
-              tabIndex={1}
-              onClick={navClickHandler}
-              onFocus={navFocusHandler}
-              onBlur={navBlurHandler}
-            >
-              Отзывы
-            </NavLink>
-            <NavLink
               href="/works"
               tabIndex={1}
               onClick={navClickHandler}
@@ -101,6 +83,15 @@ const Header = (props) => {
             >
               Наши
               <br /> работы
+            </NavLink>
+            <NavLink
+              href="/about-us"
+              tabIndex={1}
+              onClick={navClickHandler}
+              onFocus={navFocusHandler}
+              onBlur={navBlurHandler}
+            >
+              О нас
             </NavLink>
           </nav>
         </div>

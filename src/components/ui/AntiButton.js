@@ -11,7 +11,7 @@ const AntiButton = (props) => {
     `}
       {...buttonProps}
     >
-      <div>{children}</div>
+      {children}
     </button>
   );
 };

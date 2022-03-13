@@ -47,4 +47,8 @@ section.OrderSection:first-child {
   .OrderSection .Title h2 {
     font-size: 1.3rem;
   }
+  .OrderSection {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

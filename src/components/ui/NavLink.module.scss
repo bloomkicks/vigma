@@ -8,6 +8,7 @@
   padding: 0 20px;
   text-decoration: none;
   transition: outline-offset 0.1s ease-out;
+  cursor: pointer;
 }
 
 .Link:hover {
@@ -21,7 +22,6 @@
 }
 
 .Link:active, .Link:visited  {
-  text-decoration: underline; 
   font-weight: bold;
   color: #8a1133
 }

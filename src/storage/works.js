@@ -1,8 +1,12 @@
 const parentFolder = "/works-assets/";
 
-// ANGLED KITCHEN
-const inYanKitchenHorizontal = "kitchen/horizontal.jpg";
-const inYanKitchenInsides = "kitchen/with insides.jpg";
+// QUARTZ KITCHEN
+const quartzKitchenFront = "quartz/front.jpeg";
+const quartzKitchenSide = "quartz/side.jpeg";
+
+// TIMBER CLOSET
+const timberClosetClosed = "timber/closed.jpg";
+const timberClosetOpen = "timber/open.jpg";
 
 // BED AND DESK
 const bed = "bed, desk, shelf/bed.jpeg";
@@ -17,9 +21,8 @@ const lessLimeKitchenLeft = "less lime kitchen/left.jpeg";
 const lessLimeKitchenRight = "less lime kitchen/right.jpeg";
 
 // FUTURE KITCHEN
-const futureKitchenFridge = "kitchen details/fridge.jpg";
-const futureKitchenTable = "kitchen details/table.jpg";
 const futureKitchenTop = "kitchen details/top.jpg";
+const futureKitchenBottom = "kitchen details/bottom.jpg";
 
 // LATTE KITCHEN
 const latteKitchenMain = "latte/main.jpeg";
@@ -53,6 +56,7 @@ const solidKitchenMain = "solid/main.jpeg";
 
 export const firstWorks = [
   {
+    id: Math.random(),
     photos: [
       {
         src: latteKitchenMain,
@@ -76,6 +80,8 @@ export const firstWorks = [
     },
   },
   {
+    // SOLID
+    id: Math.random(),
     photos: [
       {
         src: solidKitchenAngleMain,
@@ -92,7 +98,7 @@ export const firstWorks = [
     name: 'Кухня "Солид"',
     description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Крашенный"],
     colors: [
-      "linear-gradient(125deg, #746d71 25%, #cfcfcf 45%, #746d71 60%)",
+      "#746d71",
       "repeating-linear-gradient(90deg, #733617, #965632 3px)",
     ],
     query: {
@@ -106,6 +112,37 @@ export const firstWorks = [
 const works = [
   ...firstWorks,
   {
+    // FUTURISTIC
+    id: Math.random(),
+    photos: [
+      {
+        src: futureKitchenTop,
+      },
+      {
+        src: futureKitchenBottom,
+      },
+    ],
+    name: 'Кухня "Футуристик"',
+    description: [
+      "Корпус: Egger Влагостойкий",
+      "Фасад: МДФ",
+      "Фурнитура: Hettich",
+    ],
+    colors: ["#b8b19f", "#353444"],
+    query: {
+      type: "kitchen",
+      shape: "angled",
+      material: "lsdp+mdf",
+    },
+    style: {
+      height: "350px",
+    },
+    imgContainerStyle: {
+      height: "65%",
+    },
+  },
+  {
+    id: Math.random(),
     photos: [
       {
         src: redKitchenLeft,
@@ -129,6 +166,41 @@ const works = [
     },
   },
   {
+    // MODERN
+    id: Math.random(),
+    photos: [
+      {
+        src: modernKitchenMain,
+      },
+      {
+        src: modernKitchenFront,
+        isVertical: true,
+      },
+      {
+        src: modernKitchenLong,
+      },
+    ],
+    name: 'Кухня "Модерн"',
+    description: [
+      "Корпус: Влагостойкий Lamarty",
+      "Фасад: Mattelux Super",
+      "Фурнитура: Hettich",
+    ],
+    colors: ["#747675", "#c4baa4", "#644028"],
+    query: {
+      type: "kitchen",
+      shape: "island",
+      material: "lsdp+mdf",
+    },
+    style: {
+      height: "350px",
+    },
+    imgContainerStyle: {
+      height: "60%",
+    },
+  },
+  {
+    id: Math.random(),
     photos: [
       {
         src: norwayKitchenMain,
@@ -152,8 +224,13 @@ const works = [
       shape: "angled",
       material: "lsdp+mdf",
     },
+    style: {
+      height: "350px",
+    },
   },
   {
+    // EXPLIT
+    id: Math.random(),
     photos: [
       {
         src: linear2KitchenMain,
@@ -177,51 +254,8 @@ const works = [
     },
   },
   {
-    photos: [
-      {
-        src: futureKitchenFridge,
-        isVertical: true,
-      },
-      {
-        src: futureKitchenTop,
-      },
-      {
-        src: futureKitchenTable,
-      },
-    ],
-    name: 'Кухня "Футуристик"',
-    description: ["Фактура: ЛДСП + МДФ", "Фасад: крашенный"],
-    colors: ["#b8b19f", "#353444"],
-    query: {
-      type: "kitchen",
-      shape: "angled",
-      material: "lsdp+mdf",
-    },
-  },
-  {
-    photos: [
-      {
-        src: modernKitchenMain,
-        isVertical: true,
-      },
-      {
-        src: modernKitchenFront,
-        isVertical: true,
-      },
-      {
-        src: modernKitchenLong,
-      },
-    ],
-    name: 'Кухня "Модерн"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Крашенный"],
-    colors: ["#747675", "#c4baa4", "#644028"],
-    query: {
-      type: "kitchen",
-      shape: "island",
-      material: "lsdp+mdf",
-    },
-  },
-  {
+    // SAFARI
+    id: Math.random(),
     photos: [
       {
         src: safariKitchenAngle,
@@ -249,6 +283,55 @@ const works = [
     },
   },
   {
+    // QUARTZ
+    id: Math.random(),
+    photos: [
+      {
+        src: quartzKitchenFront,
+        isVertical: true,
+      },
+      {
+        src: quartzKitchenSide,
+        isVertical: true,
+      },
+    ],
+    name: 'Кухня "Кварц"',
+    description: ["Фасад: МДФ Софт Крем", "Фурнитура: Hettich", "Корпус: ЛДСП"],
+    query: {
+      type: "kitchen",
+      shape: "angled",
+      material: "ldsp+mdf",
+    },
+    colors: ["#a3bec5", "#6b5851"],
+    style: {
+      height: "300px",
+    },
+    imgContainerStyle: {
+      height: "70%",
+    },
+  },
+  {
+    // TIMBER
+    id: Math.random(),
+    photos: [
+      {
+        src: timberClosetClosed,
+      },
+      {
+        src: timberClosetOpen,
+      },
+    ],
+    name: 'Шкаф "Тимбер"',
+    colors: ["#ada2a0", "#6b4b38", "#c0bcc3"],
+    description: ["Фасад: МДФ Дуб Молочный", "Корпуса: ЛДСП Egger"],
+    query: {
+      type: "closet",
+      material: "ldsp+mdf",
+    },
+  },
+  {
+    // UYT
+    id: Math.random(),
     photos: [
       {
         src: bed,
@@ -260,7 +343,7 @@ const works = [
       },
     ],
     name: 'Детская "Уют"',
-    description: ["Фактура: ЛДСП"],
+    description: ["Фактура: ЛДСП", "Корпус: МДФ"],
     colors: [
       "#c4c2b6",
       "repeating-linear-gradient(-45deg, #aca89c, #786859 3px)",
@@ -270,29 +353,33 @@ const works = [
       material: "ldsp",
     },
   },
+  // {
+  //   // IN YAN
+  //   id: Math.random(),
+  //   photos: [
+  //     {
+  //       src: inYanKitchenHorizontal,
+  //     },
+  //     {
+  //       src: inYanKitchenInsides,
+  //       isVertical: true,
+  //     },
+  //   ],
+  //   name: 'Кухня "Инь-Янь"',
+  //   description: ["Фактура: ЛДСП + МДФ", "Фасад: крашенный"],
+  //   colors: [
+  //     "#EEE9E5",
+  //     "repeating-linear-gradient(90deg, #2e2926, #1F1D1E 3px)",
+  //   ],
+  //   query: {
+  //     type: "kitchen",
+  //     shape: "angled",
+  //     material: "ldsp+lsdp+mdf",
+  //   },
+  // },
   {
-    photos: [
-      {
-        src: inYanKitchenHorizontal,
-      },
-      {
-        src: inYanKitchenInsides,
-        isVertical: true,
-      },
-    ],
-    name: 'Кухня "Инь-Янь"',
-    description: ["Фактура: ЛДСП + МДФ", "Фасад: крашенный"],
-    colors: [
-      "#EEE9E5",
-      "repeating-linear-gradient(90deg, #2e2926, #1F1D1E 3px)",
-    ],
-    query: {
-      type: "kitchen",
-      shape: "angled",
-      material: "ldsp+lsdp+mdf",
-    },
-  },
-  {
+    // LIME
+    id: Math.random(),
     photos: [
       {
         src: lessLimeKitchenLeft,

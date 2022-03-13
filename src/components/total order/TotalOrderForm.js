@@ -219,7 +219,7 @@ const TotalOrderForm = (props) => {
         </label>
       </button> */}
         <MainButton type="submit" className={classes.MainButton}>
-          Оставить заявку
+          <p>Оставить заявку</p>
         </MainButton>
       </form>
     </>

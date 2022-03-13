@@ -1,6 +1,7 @@
 .ContactsSection {
-  margin-bottom: 25px;
-  max-height: 3rem;
+  margin-bottom: 15px;
+  max-height: 2.5rem;
+  max-width: 25rem;
 }
 
 .Text {
@@ -24,15 +25,11 @@
   position: absolute;
   right: 90%;
   bottom: -5px;
-  width: 3rem;
-  height: auto;
+  height: 2.5rem;
+  width: auto;
   opacity: 0.4;
 }
 
 .Key {
   position: relative;
-}
-
-.Location {
-
 }

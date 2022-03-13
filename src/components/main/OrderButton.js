@@ -1,14 +1,14 @@
+import Link from 'next/link'
 import MainButton from '../ui/MainButton'
-import Anchor from '../ui/Anchor'
 import classes from './OrderButton.module.css'
 
 const OrderButton = props => {
   return (
-    <Anchor className={classes.ButtonWrapper} href="/order/quiz">
+    <Link href="/order/quiz" passHref>
       <MainButton className={classes.Button}>
         <p>Закажите сейчас</p>
       </MainButton>
-    </Anchor>
+    </Link>
   )
 }
 

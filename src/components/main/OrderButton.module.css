@@ -1,6 +1,12 @@
-.ButtonWrapper {
+.Button {
   margin: 15px auto 0 auto;
+  padding: 6px 15px;
 }
 
+.Button:hover {
+  transform: scalex(1.05);
+}
 
-
+.Button:hover > p {
+  transform: scalex(0.95);
+}

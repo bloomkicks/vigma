@@ -4,7 +4,7 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  max-height: 500px;
+  max-height: 520px;
   min-width: 275px;
   max-width: 350px;
   padding: 20px;
@@ -30,9 +30,13 @@
 
 .Text {
   min-height: 133px;
+  border-radius: 10px;
+  box-shadow: inset 3px 3px 5px black;
+  margin-top: 7.5px;
   height: 50%;
   width: 107%;
   padding: 0 5%;
+  padding-top: 7.5px;
   padding-left: 2%;
   overflow-y: auto;
   scrollbar-width: thin;

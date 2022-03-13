@@ -2,9 +2,16 @@
   padding-top: 0;
   margin-right: 10px;
   max-width: none;
-  width: 90%;
+  width: 100%;
   flex: 1 0 100%;
   text-align: center;
+}
+
+.MainContent > h1 {
+  font-size: 1.5rem;
+  margin: 15px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 .Logo {
@@ -13,3 +20,13 @@
   transform: translateY(15%);
 }
 
+.onPhone {
+  display: inline-block;
+  word-break: keep-all;
+}
+
+@media screen and (max-width: 550px) {
+  .MainContent {
+    margin: 0
+  } 
+}

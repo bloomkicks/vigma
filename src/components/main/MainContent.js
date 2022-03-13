@@ -11,22 +11,16 @@ const MainContent = (props) => {
   return (
     <Content className={classes.MainContent}>
       <Title>
-        Качественная мебель на заказ <Bold>быстро</Bold> и <Bold>недорого</Bold>
-        !
+        Производим корпусную мебель на заказ в <Bold>СПб</Bold> и <Bold>Лен. области</Bold>
       </Title>
-      <Section close={true}>
-        <div>
-          У нас вы можете заказать любую корпусную мебель, и мы изготовим её
-          согласно высоким стандартам качества. <br />
-          <Anchor href="/about-us">Подробнее о нас...</Anchor>
-        </div>
-      </Section>
       <MainAdvantages />
       <Section>
-        <div>
-          Пройдите простой опрос, чтобы мы поняли какая мебель подойдет вам
-          лучше или договоритесь <Anchor href="/contacts">по телефону</Anchor>
-        </div>
+        <p>
+          Пройдите простой опрос или{" "}
+          <span className={classes.onPhone}>
+            договоритесь <Anchor href="/contacts">по телефону</Anchor>
+          </span>
+        </p>
       </Section>
       <OrderButton />
     </Content>

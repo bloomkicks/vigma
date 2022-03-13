@@ -29,7 +29,7 @@ const ImageContainer = (props) => {
 
   return (
     <>
-      <div className={classes.ImageContainer}>
+      <div className={classes.ImageContainer} style={props.style || {}}>
         {photos.map((photo, index) => {
           return (
             <div

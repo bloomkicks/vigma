@@ -4,9 +4,16 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 0;
-  height: 210px;
+  margin: 0 !important;
+  height: 72.5%;
   width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 330px) {
+  .ImageContainer {
+    height: 60%;
+  }
 }
 
 .ImageContainer > div.Vertical,
@@ -20,8 +27,17 @@
   border: 1px solid white;
 }
 
-.Vertical {
-  width: 50%;
+div.Vertical {
+  align-items: stretch;
+}
+div.Horiz {
+  justify-content: stretch;
+}
+
+.ImageContainer > div.Horiz {
+  width: 100%;
+  width: fit-content;
+  height: 50%;
 }
 
 .Vertical > img {

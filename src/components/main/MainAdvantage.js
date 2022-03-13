@@ -1,5 +1,4 @@
 import Third from "../ui/Third";
-import Italic from "../ui/Italic";
 import classes from "./MainAdvantage.module.css";
 
 const MainAdvantage = (props) => {
@@ -10,7 +9,7 @@ const MainAdvantage = (props) => {
       <Third>
         {title} <img alt="" src={logoSrc} className={classes.Logo} />
       </Third>
-      <Italic>{children}</Italic>
+      <p>{children}</p>
     </div>
   );
 };

@@ -10,7 +10,7 @@ import classes from "./MainAdvantages.module.css";
 const MainAdvantages = (pros) => {
   return (
     <Section className={classes.Advantages}>
-      <Secondary>Почему выбирают нас</Secondary>
+      <Secondary>Почему выбирают нас:</Secondary>
       <div>
         <MainAdvantage title="Собственное производство" logoSrc={gearsSvg}>
           из-за чего цены ниже, чем у конкурентов

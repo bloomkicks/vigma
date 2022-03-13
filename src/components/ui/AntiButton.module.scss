@@ -6,10 +6,19 @@
   width: max-content;
   padding: 10px 20px;
   border-radius: 10px;
-  transition: transform 80ms ease-in;
+  transition: transform 50ms ease-in;
 }
+
+.AntiButton > p {
+  transition: transform 50ms ease-in
+}
+
 .AntiButton:hover, .AntiButton:focus {
-  transform: scale(1.03);
+  transform: scalex(1.1);
+}
+
+.AntiButton:hover > p {
+  transform: scalex(0.9);
 }
 
 .AntiButton > * {

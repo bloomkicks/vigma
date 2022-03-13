@@ -19,8 +19,8 @@ const Page = props => {
       <main {...pageProps} 
         className={`
           ${classes.Page}
-          ${title && classes.Spaced}
-          ${notSpaced && classes.NotSpaced}
+          ${title && classes.Spaced || ''}
+          ${notSpaced && classes.NotSpaced || ''}
           ${className || ''}
         `} 
       >

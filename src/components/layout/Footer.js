@@ -2,7 +2,7 @@ const instaSvg = "/footer/instagram.svg";
 const vkSvg = "/footer/vkontakte.svg";
 
 import Section from "../ui/Section";
-import Link from "next/link";
+
 import classes from "./Footer.module.css";
 
 const Footer = (props) => {
@@ -10,14 +10,18 @@ const Footer = (props) => {
     <footer className={classes.Footer}>
       <div className={classes.InnerFooter}>
         <Section className={classes.Soc} isHorizontal={true}>
-          <img src={vkSvg} alt="Наш ВКонтакте" />
-          <img src={instaSvg} alt="Наш Инстаграм" />
+          <a href="https://vk.com/vigmaspb">
+            <img tabIndex="1" src={vkSvg} alt="Наш ВКонтакте" />
+          </a>
+          <a href="https://instagram.com/vigmaspb">
+            <img tabIndex="1" src={instaSvg} alt="Наш Инстаграм" />
+          </a>
         </Section>
         <Section isHorizontal={true}>
           <h4>ОСТАВЬТЕ ОТЗЫВ</h4>
           <div className={classes.Text}>
             <p>
-              <Link href="mailto:vigmaspb@gmail.com">vigmaspb@gmail.com</Link>
+              <a href="mailto:vigmaspb@gmail.com">vigmaspb@gmail.com</a>
             </p>
           </div>
         </Section>
@@ -31,10 +35,10 @@ const Footer = (props) => {
           <h4>КОНТАКТЫ</h4>
           <div className={classes.Text}>
             <p>
-              <Link href="tel:+7 (812) 642 60-51">+7 (812) 642 60-51</Link>
+              <a href="tel:+7 (812) 642 60-51">+7 (812) 642 60-51</a>
             </p>
             <p>
-              <Link href="tel:+7 (964) 342 60-51">+7 (964) 342 60-51</Link>
+              <a href="tel:+7 (964) 342 60-51">+7 (964) 342 60-51</a>
             </p>
           </div>
         </Section>
@@ -43,7 +47,7 @@ const Footer = (props) => {
           <div className={classes.Text}>
             <p>Всегда открыты талантам:</p>
             <p>
-              <Link href="mailto:vigmaspb@gmail.com">vigmaspb@gmail.com</Link>
+              <a href="mailto:vigmaspb@gmail.com">vigmaspb@gmail.com</a>
             </p>
           </div>
         </Section>
