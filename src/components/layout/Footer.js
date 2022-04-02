@@ -3,7 +3,7 @@ const vkSvg = "/footer/vkontakte.svg";
 
 import Section from "../ui/Section";
 
-import classes from "./Footer.module.css";
+import classes from "./Footer.module.scss";
 
 const Footer = (props) => {
   return (

@@ -270,7 +270,7 @@ const works = [
       },
     ],
     name: 'Кухня "Сафари"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Крашенный"],
+    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ"],
     colors: [
       "repeating-linear-gradient(90deg, #b18a3b, #a37931 3px )",
       "#c2d5db",
@@ -391,7 +391,7 @@ const works = [
       },
     ],
     name: 'Кухня "Лайм"',
-    description: ["Фактура: МДФ", "Фасад: крашенный"],
+    description: ["Фактура: МДФ", "Фасад: МДФ в плёнке"],
     colors: [
       "linear-gradient(150deg, #e1fd5b 50%, #ffffff)",
       "#dfe1d4",

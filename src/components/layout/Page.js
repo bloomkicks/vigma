@@ -1,5 +1,5 @@
 import Title from '../ui/Title'
-import classes from './Page.module.css'
+import classes from './Page.module.scss'
 
 const Page = props => {
   const {

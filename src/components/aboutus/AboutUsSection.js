@@ -1,7 +1,7 @@
 import Secondary from "../ui/Secondary";
 import Section from "../ui/Section";
 import Bold from "../ui/Bold";
-import classes from "./AboutUsSection.module.css";
+import classes from "./AboutUsSection.module.scss";
 
 const AboutUsSection = (props) => {
   const { title, children, imgSrc, logoStyle, ...sectionProps } = props;

@@ -12,14 +12,19 @@ const MainAdvantages = (pros) => {
     <Section className={classes.Advantages}>
       <Secondary>Почему выбирают нас:</Secondary>
       <div>
-        <MainAdvantage title="Собственное производство" logoSrc={gearsSvg}>
-          из-за чего цены ниже, чем у конкурентов
+        <MainAdvantage
+          title="Собственное производство"
+          logoSrc={gearsSvg}
+          style={{ fontSize: "0.76rem", marginTop: '3px'}}
+        >
+          Благодаря отсутствию торговых посредников в цепочке поставок, вы
+          можете приобрести мебель по доступным ценам
         </MainAdvantage>
-        <MainAdvantage title="Выезд замерщика" logoSrc={rulerSvg}>
-          бесплатный замер и составление проекта
+        <MainAdvantage title="Выезд дизайнера-замерщика" logoSrc={rulerSvg}>
+          Предоставляем дизайн-проект с замером бесплатно
         </MainAdvantage>
         <MainAdvantage title="Доставка и установка" logoSrc={packageSvg}>
-          мы осуществляем доставку по СПб и Лен. области
+          Мы оказываем услуги по доставке в пределах Санкт-Петербурга и ЛО
         </MainAdvantage>
       </div>
     </Section>

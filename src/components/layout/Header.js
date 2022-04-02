@@ -4,7 +4,7 @@ import NavLink from "../ui/NavLink";
 import classes from "./Header.module.css";
 
 const hamMenuSvg = "/ham-menu.svg";
-const blueLogo = "/logos/vigma_logo_blue.svg";
+const blueLogo = "/logos/logo_new.svg";
 
 const Header = (props) => {
   const [isActiveNav, setIsActiveNav] = useState(false);

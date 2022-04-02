@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { firstWorks } from "../../storage/works";
 import Work from "../works/Work";
-import classes from "./MainWork.module.css";
+import classes from "./MainWork.module.scss";
 
 const MainWork = (props) => {
   return (

@@ -9,8 +9,8 @@ class MyDocument extends Document {
     return (
       <Html lang="ru">
         <Head>
+          <link rel="icon" href="/logos/mini_new.svg" />
           <link rel="icon" href="/favicon.ico" />
-          <link rel="icon" href="/logos/mini_blue.svg" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />

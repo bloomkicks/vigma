@@ -11,16 +11,17 @@ const MainContent = (props) => {
   return (
     <Content className={classes.MainContent}>
       <Title>
-        Производим корпусную мебель на заказ в <Bold>СПб</Bold> и <Bold>Лен. области</Bold>
+        создадим мебель по <Bold>индивидуальному</Bold> проекту в
+        Санкт-Петербурге и ЛО
       </Title>
       <MainAdvantages />
       <Section>
-        <p>
-          Пройдите простой опрос или{" "}
+        <h4>
+          ЕСТЬ ВОПРОС?{" "}
           <span className={classes.onPhone}>
-            договоритесь <Anchor href="/contacts">по телефону</Anchor>
+            - Задайте его <Anchor href="/contacts">по телефону</Anchor>
           </span>
-        </p>
+        </h4>
       </Section>
       <OrderButton />
     </Content>

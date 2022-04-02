@@ -1,15 +1,15 @@
-import Link from 'next/link'
-import MainButton from '../ui/MainButton'
-import classes from './OrderButton.module.css'
+import Link from "next/link";
+import MainButton from "../ui/MainButton";
+import classes from "./OrderButton.module.css";
 
-const OrderButton = props => {
+const OrderButton = (props) => {
   return (
     <Link href="/order/quiz" passHref>
       <MainButton className={classes.Button}>
-        <p>Закажите сейчас</p>
+        <p>Заказать дизайн-проект</p>
       </MainButton>
     </Link>
-  )
-}
+  );
+};
 
-export default OrderButton 
+export default OrderButton;
