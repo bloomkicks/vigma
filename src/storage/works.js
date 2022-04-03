@@ -71,7 +71,7 @@ export const firstWorks = [
       },
     ],
     name: 'Кухня "Латте"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Крашенный"],
+    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Плёнка"],
     colors: ["#cdcbcc", "#7d665e"],
     query: {
       type: "kitchen",
@@ -96,7 +96,7 @@ export const firstWorks = [
       },
     ],
     name: 'Кухня "Солид"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Крашенный"],
+    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Плёнка"],
     colors: [
       "#746d71",
       "repeating-linear-gradient(90deg, #733617, #965632 3px)",
@@ -123,11 +123,7 @@ const works = [
       },
     ],
     name: 'Кухня "Футуристик"',
-    description: [
-      "Корпус: Egger Влагостойкий",
-      "Фасад: МДФ",
-      "Фурнитура: Hettich",
-    ],
+    description: ["Корпус: ЛДСП Egger", "Фасад: МДФ", "Фурнитура: Hettich"],
     colors: ["#b8b19f", "#353444"],
     query: {
       type: "kitchen",
@@ -154,7 +150,7 @@ const works = [
       },
     ],
     name: 'Кухня "Брусника"',
-    description: ["Фактура: ЛДСП + МДФ", "Фасад: крашенный"],
+    description: ["Корпус: ЛДСП", "Фасад: МДФ Плёнка"],
     colors: [
       "#fcfaee",
       "linear-gradient(45deg, #bb2725 30%, #c26267 50%, #bb2725 65%)",
@@ -182,7 +178,7 @@ const works = [
     ],
     name: 'Кухня "Модерн"',
     description: [
-      "Корпус: Влагостойкий Lamarty",
+      "Корпус: ЛДСП Lamarty",
       "Фасад: Mattelux Super",
       "Фурнитура: Hettich",
     ],
@@ -213,7 +209,7 @@ const works = [
       },
     ],
     name: 'Кухня "Норвегия"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Крашенный"],
+    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Плёнка"],
     colors: [
       "#b8bab9",
       "#41454e",
@@ -245,7 +241,7 @@ const works = [
       },
     ],
     name: 'Кухня "Эксплит"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Крашенный"],
+    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Плёнка"],
     colors: ["#c6bbb7", "#141614"],
     query: {
       type: "kitchen",
@@ -296,7 +292,7 @@ const works = [
       },
     ],
     name: 'Кухня "Кварц"',
-    description: ["Фасад: МДФ Софт Крем", "Фурнитура: Hettich", "Корпус: ЛДСП"],
+    description: ["Корпус: ЛДСП", "Фасад: МДФ Софт Крем", "Фурнитура: Hettich"],
     query: {
       type: "kitchen",
       shape: "angled",
@@ -323,7 +319,7 @@ const works = [
     ],
     name: 'Шкаф "Тимбер"',
     colors: ["#ada2a0", "#6b4b38", "#c0bcc3"],
-    description: ["Фасад: МДФ Дуб Молочный", "Корпуса: ЛДСП Egger"],
+    description: ["Корпус: ЛДСП Egger","Фасад: МДФ Дуб Молочный", ],
     query: {
       type: "closet",
       material: "ldsp+mdf",
@@ -343,7 +339,7 @@ const works = [
       },
     ],
     name: 'Детская "Уют"',
-    description: ["Фактура: ЛДСП", "Корпус: МДФ"],
+    description: ["Корпус: ЛДСП", "Фасад: МДФ"],
     colors: [
       "#c4c2b6",
       "repeating-linear-gradient(-45deg, #aca89c, #786859 3px)",
@@ -353,30 +349,6 @@ const works = [
       material: "ldsp",
     },
   },
-  // {
-  //   // IN YAN
-  //   id: Math.random(),
-  //   photos: [
-  //     {
-  //       src: inYanKitchenHorizontal,
-  //     },
-  //     {
-  //       src: inYanKitchenInsides,
-  //       isVertical: true,
-  //     },
-  //   ],
-  //   name: 'Кухня "Инь-Янь"',
-  //   description: ["Фактура: ЛДСП + МДФ", "Фасад: крашенный"],
-  //   colors: [
-  //     "#EEE9E5",
-  //     "repeating-linear-gradient(90deg, #2e2926, #1F1D1E 3px)",
-  //   ],
-  //   query: {
-  //     type: "kitchen",
-  //     shape: "angled",
-  //     material: "ldsp+lsdp+mdf",
-  //   },
-  // },
   {
     // LIME
     id: Math.random(),
@@ -391,7 +363,7 @@ const works = [
       },
     ],
     name: 'Кухня "Лайм"',
-    description: ["Фактура: МДФ", "Фасад: МДФ в плёнке"],
+    description: ["Корпус: ЛДСП", "Фасад: МДФ Плёнке"],
     colors: [
       "linear-gradient(150deg, #e1fd5b 50%, #ffffff)",
       "#dfe1d4",

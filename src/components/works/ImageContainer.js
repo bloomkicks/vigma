@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 import ZoomedImage from "./ZoomedImage";
-import classes from "./ImageContainer.module.css";
+import classes from "./ImageContainer.module.scss";
 
 const ImageContainer = (props) => {
   const { photos, ...containerProps } = props;

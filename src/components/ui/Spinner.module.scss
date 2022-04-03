@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@use "../../styles/colors.scss";
 
 .SpinnerWrapper {
   display: flex;
@@ -10,7 +10,7 @@
   width: 50px;
   height: 50px;
   border: 5px solid rgba(255, 255, 255, 0.3);
-  border-top: 5px solid $theme;
+  border-top: 5px solid colors.$theme;
   margin-right: 10px;
   animation: spin 0.5s linear 0s infinite;
 }

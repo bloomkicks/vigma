@@ -1,7 +1,7 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss';
 
 .Anchor {
-  @include anchor-font;
+  @include mixins.anchor-font;
   transition: opacity 80ms ease-in;
 }
 

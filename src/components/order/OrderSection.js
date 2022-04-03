@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import Secondary from "../ui/Secondary";
 import Section from "../ui/Section";
-import classes from "./OrderSection.module.css";
+import classes from "./OrderSection.module.scss";
 
 const OrderSection = (props) => {
   const { imgSrc, others, total, query, title, ...sectionProps } = props;

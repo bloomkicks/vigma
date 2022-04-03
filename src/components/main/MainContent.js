@@ -11,15 +11,15 @@ const MainContent = (props) => {
   return (
     <Content className={classes.MainContent}>
       <Title>
-        создадим мебель по <Bold>индивидуальному</Bold> проекту в
-        Санкт-Петербурге и ЛО
+        создадим мебель по <Bold>индивидуальному</Bold> проекту в{" "}
+        <span className="block">Санкт-Петербурге</span> и ЛО
       </Title>
       <MainAdvantages />
       <Section>
         <h4>
-          ЕСТЬ ВОПРОС?{" "}
+          Есть вопрос?{" "}
           <span className={classes.onPhone}>
-            - Задайте его <Anchor href="/contacts">по телефону</Anchor>
+            - Мы с радостью ответим вам <Anchor href="/contacts">по телефону</Anchor>
           </span>
         </h4>
       </Section>

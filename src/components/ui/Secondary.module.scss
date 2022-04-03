@@ -1,5 +1,5 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss';
 
 .Secondary {
-  @include secondary-font
+  @include mixins.secondary-font
 }

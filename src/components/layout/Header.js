@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import NavLink from "../ui/NavLink";
-import classes from "./Header.module.css";
+import classes from "./Header.module.scss";
 
 const hamMenuSvg = "/ham-menu.svg";
 const blueLogo = "/logos/logo_new.svg";
@@ -13,18 +13,18 @@ const Header = (props) => {
     e.stopPropagation();
     setIsActiveNav((prevState) => {
       if (prevState) {
-        e.target.blur()
+        e.target.blur();
       }
-      return !prevState
+      return !prevState;
     });
   };
   const navFocusHandler = (e) => {
-    e.stopPropagation()
+    e.stopPropagation();
     setIsActiveNav(true);
   };
-  const navBlurHandler = e => {
-    setIsActiveNav(false)
-  }
+  const navBlurHandler = (e) => {
+    setIsActiveNav(false);
+  };
   const navClickHandler = (e) => {
     e.stopPropagation();
     setIsActiveNav((prevState) => !prevState);
@@ -41,9 +41,16 @@ const Header = (props) => {
           <NavLink
             innerClassName={classes.LogoInnerContainer}
             className={classes.LogoContainer}
+            style={{ color: "black" }}
             href="/main"
           >
-            <img src={blueLogo} className={classes.Logo} tabIndex={1} />
+            <img
+              src={blueLogo}
+              className={classes.Logo}
+              title="На Главную"
+              alt="На Главную"
+              tabIndex={1}
+            />
           </NavLink>
           <img
             src={hamMenuSvg}
@@ -62,6 +69,7 @@ const Header = (props) => {
               onClick={navClickHandler}
               onFocus={navFocusHandler}
               onBlur={navBlurHandler}
+              isBlack
             >
               Заказать
             </NavLink>
@@ -71,6 +79,7 @@ const Header = (props) => {
               onClick={navClickHandler}
               onFocus={navFocusHandler}
               onBlur={navBlurHandler}
+              isBlack
             >
               Контакты
             </NavLink>
@@ -80,6 +89,7 @@ const Header = (props) => {
               onClick={navClickHandler}
               onFocus={navFocusHandler}
               onBlur={navBlurHandler}
+              isBlack
             >
               Наши
               <br /> работы
@@ -90,6 +100,7 @@ const Header = (props) => {
               onClick={navClickHandler}
               onFocus={navFocusHandler}
               onBlur={navBlurHandler}
+              isBlack
             >
               О нас
             </NavLink>

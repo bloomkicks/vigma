@@ -1,6 +1,6 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss';
 
 .Italic {
-  @include inherited-font;
-  @include italic-font;
+  @include mixins.inherited-font;
+  @include mixins.italic-font;
 }

@@ -20,30 +20,34 @@ const ContactsContent = (props) => {
         }}
         contactKey="Номер телефона:"
       >
-        <a
-          style={{ color: "inherit", fontSize: "inherit", fontStyle: "normal" }}
-          tabIndex="1"
-          href="tel:+7 (812) 642 60-51"
-        >
+        <Anchor tabIndex="1" href="tel:+7 (812) 642 60-51">
           <b>+7 (812) 642 60-51</b>
-        </a>
+        </Anchor>
+        <p>
+          WhatsApp: {" "}
+          <Anchor tabIndex="1" href="tel:+7 (812) 642 60-51">
+            <b>+7 (964) 342 60-51</b>
+          </Anchor>
+        </p>
+
         <br />
       </ContactsSection>
       <ContactsSection
         contactKey="Адрес эл. почты:"
         logoSrc={emailSrc}
-        imgProps={{ style: { width: "2.5rem", height: "auto" } }}
+        imgProps={{ style: { width: "2.5rem", height: "auto", left: "-40%"} }}
       >
-        <a href="mailto:vigmaspb@gmail.com">
+        <Anchor href="mailto:vigmaspb@gmail.com">
           <b>vigmaspb@gmail.com</b>
-        </a>
+        </Anchor>
       </ContactsSection>
       <ContactsSection
         logoSrc={locationSrc}
         imgProps={{
           style: {
-            transform: "rotate(5deg) scaleX(-1)",
+            transform: "scaleX(-1)",
             bottom: "-15px",
+            left: "-20%",
             height: "2.5rem",
           },
         }}
@@ -70,7 +74,7 @@ const ContactsContent = (props) => {
         contactKey="Имя менеджера:"
         logoSrc={directorSrc}
         imgProps={{
-          style: { width: "2.5rem", height: "auto", bottom: "-15px" },
+          style: { width: "2.5rem", height: "auto", bottom: "-5px" },
         }}
       >
         <b>Филатова Галина Михайловна</b>

@@ -1,11 +1,17 @@
-@import "../../../src/styles/variables.scss";
+@use "sass:color" as col;
+@use "../../../src/styles/colors.scss";
 
 .PageSpace {
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: rgb(16, 63, 107);
-  background: linear-gradient(135deg, $theme, #173620 60%, $theme);
+  background: linear-gradient(
+    135deg,
+    colors.$theme,
+    col.adjust(colors.$theme, $lightness: -5%) 60%,
+    colors.$theme
+  );
   margin-bottom: 30px;
 }
 

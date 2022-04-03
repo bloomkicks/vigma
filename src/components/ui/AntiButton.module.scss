@@ -1,11 +1,13 @@
-@import '../../styles/mixins.scss';
+@use "sass:color" as col;
+@use "../../styles/colors.scss";
+@use '../../styles/mixins.scss';
 
 .AntiButton {
-  background-color: #0180f7bf; 
+  background-color: col.adjust(colors.$interact, $lightness: 20%);
   border: none;
   width: max-content;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   transition: transform 50ms ease-in;
 }
 
@@ -14,14 +16,14 @@
 }
 
 .AntiButton:hover, .AntiButton:focus {
-  transform: scalex(1.1);
+  transform: scalex(1.05);
 }
 
 .AntiButton:hover > p {
-  transform: scalex(0.9);
+  transform: scalex(0.95);
 }
 
 .AntiButton > * {
-  @include interactive-font;
-  color: white;
+  @include mixins.interactive-font;
+  color:colors.$anti-theme;
 }

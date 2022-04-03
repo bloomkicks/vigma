@@ -1,7 +1,7 @@
 const doubleArrowSvg = "/order-assets/double-arrow.svg";
 import Section from "../ui/Section";
 import Third from "../ui/Third";
-import classes from "./TotalOrderTree.module.css";
+import classes from "./TotalOrderTree.module.scss";
 
 const TotalOrderTree = (props) => {
   const { orderInfo, ...treeProps } = props;

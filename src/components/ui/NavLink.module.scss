@@ -1,4 +1,5 @@
-@import '../../styles/mixins'; 
+@use "../../styles/colors.scss";
+@use "../../styles/mixins";
 
 .Link {
   text-align: center;
@@ -13,19 +14,30 @@
 
 .Link:hover {
   outline-offset: -1px;
-  outline: 2px dashed #00396D;
+  outline: 2px dashed colors.$theme;
 }
 
 .Link:focus {
   outline-offset: -2px;
-  outline: 3px solid #00396D;
+  outline: 3px solid colors.$theme;
 }
 
-.Link:active, .Link:visited  {
+.Link:active,
+.Link:visited {
   font-weight: bold;
-  color: #00396D
+  color: colors.$theme;
 }
 
 .Link > div {
-  @include interactive-font;
+  @include mixins.interactive-font;
+}
+
+.black {
+  background-color: colors.$anti-theme;
+}
+
+@media screen and (max-width: 710px) {
+  .black {
+    background-color: transparent;
+  }
 }

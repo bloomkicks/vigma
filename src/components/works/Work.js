@@ -4,7 +4,7 @@ import ImageContainer from "./ImageContainer";
 import MainButton from "../ui/MainButton";
 import Secondary from "../ui/Secondary";
 import Section from "../ui/Section";
-import classes from "./Work.module.css";
+import classes from "./Work.module.scss";
 
 const Work = (props) => {
   const {

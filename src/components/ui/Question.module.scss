@@ -1,7 +1,8 @@
-@import '../../styles/mixins.scss';
+@use "../../styles/colors.scss";
+@use '../../styles/mixins.scss';
 
 .Question {
-  background-color: white;
+  background-color:colors.$anti-theme;
   padding: 10px 20px;
   text-align: center;
   // position: absolute;
@@ -11,5 +12,5 @@
 }
 
 .Question > h2 {
-  @include interactive-font;
+  @include mixins.interactive-font;
 }

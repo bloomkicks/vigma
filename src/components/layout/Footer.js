@@ -23,6 +23,9 @@ const Footer = (props) => {
             <p>
               <a href="mailto:vigmaspb@gmail.com">vigmaspb@gmail.com</a>
             </p>
+            <p>
+              <a href="vk.com/vigmaspb">В ВКонтакте</a>
+            </p>
           </div>
         </Section>
         <Section isHorizontal={true}>

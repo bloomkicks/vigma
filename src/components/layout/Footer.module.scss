@@ -1,4 +1,5 @@
-@import "../../styles/variables.scss";
+@use "sass:color" as col;
+@use "../../styles/colors.scss";
 
 .Footer {
   display: flex;
@@ -8,10 +9,10 @@
   margin-top: auto;
   background-color: rgb(16, 63, 107);
   background: linear-gradient(
-    135deg,
-    $theme 1%,
-    #013504f0 70%,
-    $theme 99%
+    -135deg,
+    colors.$theme 1%,
+    col.adjust(colors.$theme, $lightness: -5%) 70%,
+    colors.$theme 99%
   );
   z-index: 5;
 }

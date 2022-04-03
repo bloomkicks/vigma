@@ -1,0 +1,80 @@
+@use "../../styles/colors.scss";
+
+figure.Work {
+  width: 370px;
+  max-width: 95%;
+  height: 305px;
+  margin: 0 30px;
+  margin-bottom: 50px;
+}
+
+figure.Work:first-child {
+  margin: 0 25px;
+  margin-bottom: 50px;
+}
+
+.Work > figcaption > h2 {
+  color: colors.$theme;
+  color: white;
+}
+
+.Work > figcaption > p {
+  opacity: 0.9;
+}
+
+.Desc {
+  padding-top: 10px;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Desc button {
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.Desc button:hover {
+  transform: scalex(1.08);
+}
+
+.Desc button:hover > p {
+  transform: scalex(0.92);
+}
+
+.DescSec {
+  display: flex;
+  flex-direction: column;
+}
+
+.Colors {
+  display: flex;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+.Colors > div {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-left: 0.5rem;
+  border-radius: 10px;
+}
+
+.Colors > div:first-child {
+  margin-left: 0;
+}
+
+@media screen and (min-width: 1366px) {
+  .Desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  figure.Work,
+  figure.Work:first-child {
+    margin: 15px 0;
+    height: 300px;
+  }
+}

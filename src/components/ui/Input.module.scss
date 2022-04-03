@@ -1,4 +1,5 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/colors.scss';
+@use '../../styles/mixins.scss';
 
 .Container {
   width: 100%;
@@ -12,14 +13,14 @@
 }
 
 .Input {
-  @include interactive-font;
+  @include mixins.interactive-font;
   font-family: Roboto, 'Segoe UI', Raleway, 'Open Sans', 'Helvetica Neue', sans-serif;
   height: 2.2rem;
   width: 100%;
   border: none;
   border-radius: 5px;
   padding: 10px;
-  background-color: white;
+  background-color:colors.$anti-theme;
 }
 
 .Input::placeholder {
