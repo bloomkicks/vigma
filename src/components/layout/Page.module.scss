@@ -12,6 +12,7 @@
     col.adjust(colors.$theme, $lightness: -5%) 60%,
     colors.$theme
   );
+  background-blend-mode: multiply;
   margin-bottom: 30px;
 }
 

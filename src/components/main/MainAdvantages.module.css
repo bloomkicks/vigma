@@ -1,5 +1,6 @@
 .Advantages {
   margin: 10px;
+  margin-bottom: 0;
 }
 
 .Advantages > h2 {
@@ -13,7 +14,7 @@
   margin-top: 18px;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .Advantages > div {
     flex-wrap: wrap;
   } 

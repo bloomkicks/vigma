@@ -26,8 +26,8 @@ const MainAdvantages = (pros) => {
         <MainAdvantage title="Выезд дизайнера-замерщика" logoSrc={rulerSvg}>
           Предоставляем дизайн-проект с замером бесплатно
         </MainAdvantage>
-        <MainAdvantage title="Доставка" logoSrc={packageSvg}>
-          Мы оказываем услуги по доставке в пределах Санкт-Петербурга и ЛО
+        <MainAdvantage title="Доставка и установка" logoSrc={packageSvg}>
+          Мы оказываем услуги по установке и доставке в пределах Санкт-Петербурга и ЛО
         </MainAdvantage>
       </div>
     </Section>

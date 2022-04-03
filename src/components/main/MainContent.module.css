@@ -25,8 +25,25 @@
   word-break: keep-all;
 }
 
+.MainContent > section > h4 {
+  margin-top: 5px;
+}
+
 @media screen and (max-width: 550px) {
+  .MainContent > h1 {
+    font-size: 1.35rem;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .MainContent h2 {
+    margin-bottom: 5px;
+  }
+
+  .MainContent > section > h4 {
+    margin-top: 20px;
+  }
+
   .MainContent {
-    margin: 0
-  } 
+    margin: 0;
+  }
 }

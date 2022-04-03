@@ -1,7 +1,8 @@
-import Title from '../ui/Title'
-import classes from './Page.module.scss'
+import Title from "../ui/Title";
 
-const Page = props => {
+import classes from "./Page.module.scss";
+
+const Page = (props) => {
   const {
     title,
     children,
@@ -9,26 +10,30 @@ const Page = props => {
     className,
     wrapperClassName,
     ...pageProps
-  } = props
+  } = props;
 
   return (
-    <div className={`
+    <div
+      // style={{ backgroundImage: "/bg.jpg" }}
+      className={`
       ${classes.PageSpace}
-      ${wrapperClassName || ''}
-    `}>
-      <main {...pageProps} 
+      ${wrapperClassName || ""}
+    `}
+    >
+      <main
+        {...pageProps}
         className={`
           ${classes.Page}
-          ${title && classes.Spaced || ''}
-          ${notSpaced && classes.NotSpaced || ''}
-          ${className || ''}
-        `} 
+          ${(title && classes.Spaced) || ""}
+          ${(notSpaced && classes.NotSpaced) || ""}
+          ${className || ""}
+        `}
       >
         {title && <Title className={classes.Title}>{title}</Title>}
-        {children} 
+        {children}
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
