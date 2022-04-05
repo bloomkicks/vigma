@@ -2,97 +2,9 @@
 
 .MainWork {
   margin: 20px 20px 10px 20px;
-  width: 100%;
-  max-width: 800px;
-  height: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.MainWork > section {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: space-between;
   flex-wrap: wrap;
-}
-
-.MainWork figure,
-.MainWork figure:first-child {
-  margin: 10px;
-  margin-left: 0;
-  margin-bottom: 45px;
-}
-
-.MainWork figure:first-child {
-  margin-left: 10px;
-}
-
-.MainWork > p {
-  display: block;
-  font-size: 1.1rem;
-  text-transform: capitalize;
-  font-weight: bold;
-  color: colors.$bold;
-  cursor: pointer;
-  position: relative;
-}
-
-.MainWork > p::after {
-  content: "";
-  position: absolute;
-  left: -1%;
-  top: 102.9%;
-  width: 102%;
-  height: 2.5px;
-  background-color: colors.$bold;
-  transition: transform 0.1s ease-out;
-}
-
-.MainWork > p:hover::after {
-  transform: translateY(3px);
-}
-
-@media screen and (max-width: 950px) {
-  .MainWork {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .MainWork > section {
-    justify-content: center;
-  }
-  .MainWork figure {
-    margin-right: 10px;
-    max-width: 320px;
-  }
-  .MainWork figure:last-of-type {
-    margin-left: 10px;
-    margin-right: 0px;
-  }
-}
-
-@media screen and (max-width: 710px) {
-  .MainWork figure,
-  .MainWork figure:last-of-type {
-    margin-right: 0;
-    margin-left: 0;
-    max-width: 400px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .MainWork {
-    padding-top: 15px;
-  }
-  .MainWork figure,
-  .MainWork figure:first-child {
-    margin: 0;
-    margin-bottom: 30px;
-    height: 260px;
-  }
-
-  .MainWork {
-    margin: 10px 0;
-  }
+  text-align: left;
 }

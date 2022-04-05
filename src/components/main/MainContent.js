@@ -1,10 +1,12 @@
+import Link from 'next/link'
+import MainWork from "./MainWork";
 import MainAdvantages from "./MainAdvantages";
 import OrderButton from "./OrderButton";
 import Content from "../layout/Content";
 import Anchor from "../ui/Anchor";
 import Title from "../ui/Title";
 import Bold from "../ui/Bold";
-import classes from "./MainContent.module.css";
+import classes from "./MainContent.module.scss";
 
 const MainContent = (props) => {
   return (
@@ -25,6 +27,10 @@ const MainContent = (props) => {
         </h4>
       </section>
       <OrderButton />
+      <MainWork />
+      <Link passHref href="/works">
+        <p>Больше наших работ</p>
+      </Link>
     </Content>
   );
 };

@@ -11,7 +11,7 @@ const TotalOrderPage = (props) => {
   const router = useRouter();
 
   const orderInfo = [
-    { key: "Мебель", property: orderTranslations.type[router.query.type] },
+    { key: "Категория", property: orderTranslations.type[router.query.type] },
     { key: "Форма", property: orderTranslations.shape[router.query.shape] },
     {
       key: "Материалы",
