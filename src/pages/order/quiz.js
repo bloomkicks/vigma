@@ -10,7 +10,7 @@ const OrderPage = (props) => {
 
   let content = {
     orders: quizOrders.starting,
-    question: "Выбирете нужную мебель",
+    question: "Выбирете категорию мебель",
     title: null,
   };
 

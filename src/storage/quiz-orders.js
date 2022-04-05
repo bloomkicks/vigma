@@ -1,8 +1,10 @@
 // STARTING ORDERS
-const kitchenSrc = "/order-assets/kitchen/kitchen.jpg";
-const childroomSrc = "/order-assets/childroom.jpg";
-const entrySrc = "/order-assets/closet.jpg";
-const TCIslandSrc = "/order-assets/TC island.jpg";
+const kitchenSrc = "/order-assets/starting_items/kitchen.jpg";
+const closetSrc = "/order-assets/starting_items/closet.jpg";
+const childSrc = "/order-assets/starting_items/child.jpg";
+const officeSrc = "/order-assets/starting_items/office.jpg";
+const bathSrc = "/order-assets/starting_items/bath.jpg";
+const tradeSrc = "/order-assets/starting_items/trade.jpg";
 
 // KITCHEN ORDERS
 const linearSrc = "/order-assets/kitchen/linear.jpg";
@@ -23,19 +25,29 @@ const startingOrders = [
     query: "?type=kitchen",
   },
   {
-    imgSrc: entrySrc,
+    imgSrc: closetSrc,
     title: "Шкаф или Прихожая",
-    query: "?type=entry",
+    query: "?type=closet",
   },
   {
-    imgSrc: childroomSrc,
+    imgSrc: childSrc,
     title: "Детская",
     query: "?type=child",
   },
   {
-    imgSrc: TCIslandSrc,
-    title: "Торговый островок",
-    query: "?type=tc-island",
+    imgSrc: officeSrc,
+    title: "Офисная мебель",
+    query: "?type=office",
+  },
+  {
+    imgSrc: bathSrc,
+    title: "Мебель для Ванной",
+    query: "?type=bath",
+  },
+  {
+    imgSrc: tradeSrc,
+    title: "Торговая мебель",
+    query: "?type=trade",
   },
 ];
 

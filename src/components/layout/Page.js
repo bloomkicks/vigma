@@ -14,7 +14,6 @@ const Page = (props) => {
 
   return (
     <div
-      // style={{ backgroundImage: "/bg.jpg" }}
       className={`
       ${classes.PageSpace}
       ${wrapperClassName || ""}

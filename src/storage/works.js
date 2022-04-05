@@ -363,7 +363,7 @@ const works = [
       },
     ],
     name: 'Кухня "Лайм"',
-    description: ["Корпус: ЛДСП", "Фасад: МДФ Плёнке"],
+    description: ["Корпус: ЛДСП", "Фасад: МДФ Плёнка"],
     colors: [
       "linear-gradient(150deg, #e1fd5b 50%, #ffffff)",
       "#dfe1d4",

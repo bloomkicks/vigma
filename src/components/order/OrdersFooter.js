@@ -9,9 +9,9 @@ const OrdersFooter = (props) => {
 
   const clickHandler = (e) => {
     const searchParams = new URLSearchParams(router.query);
-    let lastEntry = "";
-    searchParams.forEach((value, key) => (lastEntry = key));
-    searchParams.delete(lastEntry)
+    let lastCloset = "";
+    searchParams.forEach((value, key) => (lastCloset = key));
+    searchParams.delete(lastCloset)
 
     router.push(`${location.pathname}?${searchParams}`);
   };

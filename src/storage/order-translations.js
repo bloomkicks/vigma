@@ -1,9 +1,9 @@
 const orderTranslations = {
   type: {
     kitchen: "Кухня",
-    entry: "Шкаф",
+    closet: "Шкаф",
     child: "Детская",
-    "tc-island": "Торговый островок",
+    "trade": "Торговый островок",
   },
   shape: {
     linear: "Прямая",

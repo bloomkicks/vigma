@@ -8,13 +8,7 @@
 }
 
 .Header {
-  background-color: colors.$mobile-header;
-  background: linear-gradient(
-    90deg,
-    colors.$mobile-header,
-    colors.$mobile-header 30%,
-    colors.$anti-theme 30%,
-  );
+  background-color: colors.$anti-theme;
   display: flex;
   justify-content: center;
   z-index: 10;

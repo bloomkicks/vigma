@@ -4,7 +4,7 @@ import NavLink from "../ui/NavLink";
 import classes from "./Header.module.scss";
 
 const hamMenuSvg = "/ham-menu.svg";
-const blueLogo = "/logos/logo_new.svg";
+const blueLogo = "/logos/header_new.png";
 
 const Header = (props) => {
   const [isActiveNav, setIsActiveNav] = useState(false);
