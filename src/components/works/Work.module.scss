@@ -1,80 +1,94 @@
-@use "../../styles/colors.scss";
+@use "../../styles/colors";
 
-figure.Work {
-  width: 370px;
-  max-width: 95%;
-  height: 305px;
-  margin: 0 30px;
-  margin-bottom: 50px;
-}
-
-figure.Work:first-child {
-  margin: 0 25px;
-  margin-bottom: 50px;
-}
-
-.Work > figcaption > h2 {
-  color: colors.$theme;
-  color: white;
-}
-
-.Work > figcaption > p {
-  opacity: 0.9;
-}
-
-.Desc {
-  padding-top: 10px;
-  margin: 0 !important;
+.work {
+  width: 45vw;
+  min-width: 400px;
+  max-width: 430px;
+  background-color: colors.$interact;
+  padding: 10px 5px 15px 5px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 5px;
+  flex: 1 1 30%;
 }
 
-.Desc button {
-  border-radius: 10px;
-  font-size: 1rem;
-}
-
-.Desc button:hover {
-  transform: scalex(1.08);
-}
-
-.Desc button:hover > p {
-  transform: scalex(0.92);
-}
-
-.DescSec {
+.work figcaption {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 }
 
-.Colors {
-  display: flex;
-  align-self: flex-end;
-  margin-bottom: 10px;
+.left {
+  padding-left: 5px;
+  width: 75%;
 }
 
-.Colors > div {
-  width: 1.3rem;
-  height: 1.3rem;
-  margin-left: 0.5rem;
+.left > h2 {
+  line-height: 1.04em;
+  margin-bottom: 5px;
+}
+
+.left > p {
+  font-size: 0.95rem;
+}
+
+.right {
+  padding-right: 5px;
+  margin-left: auto;
+  align-items: flex-end;
+  width: 25%;
+}
+
+.price {
+  width: 7em
+}
+
+.price > * {
+  float: right;
+  text-align: right;
+}
+
+.price > b {
+  font-size: 1.15rem;
+}
+
+.price > small {
+  display: block;
+  margin-top: -0.3em;
+  color: colors.$bold;
+  font-size: 0.8rem;
+}
+
+.work > button {
+  margin-top: 15px;
+  font-size: 1.05rem;
+  padding: 10px 15px;
   border-radius: 10px;
 }
 
-.Colors > div:first-child {
-  margin-left: 0;
-}
+.colors {
+  display: flex;
 
-@media screen and (min-width: 1366px) {
-  .Desc {
-    font-size: 0.9rem;
+  div {
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(163, 126, 105);
+  }
+  div:first-child {
+    background-color: rgb(28, 59, 59);
+  }
+  div:last-child {
+    background-color: rgb(53, 28, 59);
   }
 }
 
 @media screen and (max-width: 550px) {
-  figure.Work,
-  figure.Work:first-child {
-    margin: 15px 0;
-    height: 300px;
-  }
+  .work {
+    min-width: 200px;
+    flex-basis: 100%;
+  }  
 }

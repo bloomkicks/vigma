@@ -1,58 +1,70 @@
+import MainButton from "../ui/MainButton";
+import Bold from "../ui/Bold";
+import Secondary from "../ui/Secondary";
+import ImageContainer from "./ImageContainer";
+import classes from "./Work.module.scss";
 import { useRouter } from "next/router";
 
-import ImageContainer from "./ImageContainer";
-import MainButton from "../ui/MainButton";
-import Secondary from "../ui/Secondary";
-import Section from "../ui/Section";
-import classes from "./Work.module.scss";
+function formatPrice(price) {
+  let formattedPrice = "";
+  for (let i = price.length; i > 0; i--) {
+    let toAdd = "";
+    if (i % 3 === 0) {
+      toAdd = ".";
+    }
+    toAdd += price[i - 1];
+    formattedPrice = toAdd + formattedPrice;
+  }
+  formattedPrice = "от " + formattedPrice;
+  return formattedPrice;
+}
 
 const Work = (props) => {
+  const router = useRouter();
   const {
     photos,
+    title,
+    description,
+    price,
     colors,
     query,
-    description,
-    name,
-    style,
-    deskStyle,
-    imgContainerStyle,
   } = props;
-  const router = useRouter();
 
-  const searchParams = new URLSearchParams(query);
+  let formattedPrice = "";
+  if (price) {
+    formattedPrice = formatPrice(price);
+  }
+
   const orderHandler = (e) => {
-    router.push(`/order?${searchParams}`);
+    router.push("/order?item=" + query.item);
   };
 
   return (
-    <Section
-      element="figure"
-      isHorizontal={true}
-      className={classes.Work}
-      style={style || {}}
-    >
-      <ImageContainer style={imgContainerStyle} photos={photos} />
-      <div className={classes.Desc} style={deskStyle || {}}>
-        <figcaption className={classes.DescSec}>
-          <Secondary>{name}</Secondary>
-          {description.map((descrip) => {
-            return <p key={Math.random()}>{descrip}</p>;
-          })}
-        </figcaption>
-        <div className={classes.DescSec}>
-          <div className={classes.Colors}>
-            {colors.map((color) => {
-              return (
-                <div style={{ background: color }} key={Math.random()}></div>
-              );
-            })}
-          </div>
-          <MainButton onClick={orderHandler} className={classes.OrderButton}>
-            <p>Заказать</p>
-          </MainButton>
+    <section className={classes.work}>
+      <ImageContainer photos={photos} title={title} />
+      <figcaption className={classes.left}>
+        <Secondary>{title}</Secondary>
+        {description.map((desc) => (
+          <p key={Math.random()}>{desc}</p>
+        ))}
+      </figcaption>
+      <figcaption className={classes.right}>
+        <div className={classes.colors}>
+          {colors.map((color) => (
+            <div key={Math.random()} style={{ background: color }}></div>
+          ))}
         </div>
-      </div>
-    </Section>
+        {price && (
+          <div className={classes.price}>
+            <Bold>{formattedPrice}</Bold>
+            <small>руб. за п.м.</small>
+          </div>
+        )}
+      </figcaption>
+      <MainButton tabIndex={1} onClick={orderHandler}>
+        <p>ЗАКАЗАТЬ</p>
+      </MainButton>
+    </section>
   );
 };
 

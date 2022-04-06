@@ -1,55 +1,44 @@
-import { useRef, useState } from "react";
-
 import ZoomedImage from "./ZoomedImage";
 import classes from "./ImageContainer.module.scss";
+import { useState } from "react";
 
 const ImageContainer = (props) => {
-  const { photos, ...containerProps } = props;
-  const [zoomedSrc, setZoomedSrc] = useState(null);
+  const [zoomed, setZoomed] = useState(null);
+  const { photos, title } = props;
 
-  const zoomClickHandler = (e) => {
-    e.stopPropagation();
-    const src = e.target.getAttribute("src");
-    if (zoomedSrc == src) setZoomedSrc(null);
+  const zoomHandler = (e) => {
+    setZoomed(e.target.src);
   };
-
-  const zoomFocusHandler = (e) => {
-    const src = e.target.getAttribute("src");
-    if (zoomedSrc == src) setZoomedSrc(null);
-    setZoomedSrc(src);
-  };
-
-  const zoomBlurHandler = (e) => {
-    const src = e.target.getAttribute("src");
-    console.log(src);
-    if (zoomedSrc == src) {
-      setZoomedSrc(null);
-    }
-  };
+  const unzoomHandler = e => {
+    setZoomed(null)
+  }
 
   return (
     <>
-      <div className={classes.ImageContainer} style={props.style || {}}>
-        {photos.map((photo, index) => {
+      {zoomed && (
+        <ZoomedImage
+          onClose={unzoomHandler}
+          src={zoomed}
+        />
+      )}
+      <div className={classes.images}>
+        {photos.map((photo) => {
           return (
             <div
-              key={index + Math.random()}
-              className={`
-              ${photo.isVertical ? classes.Vertical : classes.Horiz}
-            `}
+              onClick={zoomHandler}
+              key={Math.random()}
+              className={
+                photo.isVertical ? classes.ver : classes.hor
+              }
             >
               <img
-                tabIndex={1}
-                onClick={zoomClickHandler}
-                onFocus={zoomFocusHandler}
-                onBlur={zoomBlurHandler}
                 src={photo.src}
+                alt={title + " Фотография"}
               />
             </div>
           );
         })}
       </div>
-      {zoomedSrc && <ZoomedImage src={zoomedSrc} key={Math.random()} />}
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { firstWorks } from "../../storage/works";
-import NewWork from "../works/NewWork";
+import Work from "../works/Work";
 import classes from "./MainWork.module.scss";
 
 const MainWork = (props) => {
@@ -7,7 +7,7 @@ const MainWork = (props) => {
     <aside className={classes.MainWork}>
       {firstWorks.map((work, index) => {
         return (
-          <NewWork
+          <Work
             {...work}
             tabIndex={"1" + index}
             key={work.id}
