@@ -29,7 +29,7 @@ const MainContent = (props) => {
       <OrderButton />
       <MainWork />
       <Link passHref href="/works">
-        <p>Больше наших работ</p>
+        <p tabIndex={20}>Больше наших работ</p>
       </Link>
     </Content>
   );

@@ -7,7 +7,7 @@ const WorksContent = (props) => {
   return (
     <article className={classes.WorksContent}>
       {works.map((work) => {
-        return <NewWork {...work} key={Math.random()} />;
+        return <NewWork {...work} key={work.id} />;
       })}
     </article>
   );

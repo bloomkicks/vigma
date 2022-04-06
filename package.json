@@ -29,6 +29,8 @@
     ]
   },
   "devDependencies": {
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "html-minimizer-webpack-plugin": "^3.5.0",
     "sass": "^1.49.11"
   }
 }

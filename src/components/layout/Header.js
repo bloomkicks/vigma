@@ -30,8 +30,11 @@ const Header = (props) => {
     setIsActiveNav((prevState) => !prevState);
     e.target.blur();
   };
+
   useEffect(() => {
-    window.addEventListener("click", () => setIsActiveNav(false));
+    window.addEventListener("click", () =>
+      setIsActiveNav(false)
+    );
   }, []);
 
   return (
@@ -41,6 +44,7 @@ const Header = (props) => {
           <NavLink
             innerClassName={classes.LogoInnerContainer}
             className={classes.LogoContainer}
+              tabIndex={1}
             style={{ color: "black" }}
             href="/main"
           >
@@ -49,19 +53,19 @@ const Header = (props) => {
               className={classes.Logo}
               title="На Главную"
               alt="На Главную"
-              tabIndex={1}
             />
           </NavLink>
           <img
             src={hamMenuSvg}
             onClick={menuClickHandler}
             alt="Открыть меню"
-            tabIndex={1}
             className={classes.HamMenu}
           />
           <nav
             onClick={navClickHandler}
-            className={`${classes.Nav} ${isActiveNav && classes.Nav__active}`}
+            className={`${classes.Nav} ${
+              isActiveNav && classes.Nav__active
+            }`}
           >
             <NavLink
               href="/order/quiz"

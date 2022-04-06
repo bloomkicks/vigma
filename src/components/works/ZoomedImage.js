@@ -3,8 +3,8 @@ import classes from "./ZoomedImage.module.css";
 
 const ZoomedImage = (props) => {
   return (
-    <Modal className={classes.ZoomedWrapper}>
-      <img src={props.src} alt="" className={classes.ZoomedImage} />
+    <Modal className={classes.ZoomedWrapper} onClose={props.onClose} >
+      <img src={props.src} alt="Фотография в фокусе" className={classes.ZoomedImage} />
     </Modal>
   );
 };

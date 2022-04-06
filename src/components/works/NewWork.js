@@ -3,24 +3,41 @@ import Bold from "../ui/Bold";
 import Secondary from "../ui/Secondary";
 import NewImages from "./NewImages";
 import classes from "./NewWork.module.scss";
+import { useRouter } from "next/router";
+
+function formatPrice(price) {
+  let formattedPrice = "";
+  for (let i = price.length; i > 0; i--) {
+    let toAdd = "";
+    if (i % 3 === 0) {
+      toAdd = ".";
+    }
+    toAdd += price[i - 1];
+    formattedPrice = toAdd + formattedPrice;
+  }
+  formattedPrice = "от " + formattedPrice;
+  return formattedPrice;
+}
 
 const NewWork = (props) => {
-  const { photos, title, description, price, colors } = props;
+  const router = useRouter();
+  const {
+    photos,
+    title,
+    description,
+    price,
+    colors,
+    query,
+  } = props;
 
   let formattedPrice = "";
   if (price) {
-    formattedPrice = "от ";
-    for (let i = 1; i <= price.length; i++) {
-      let toAdd = "";
-      if (i % 3 === 0) {
-        toAdd += ".";
-      }
-      toAdd += price[i - 1];
-      formattedPrice += toAdd;
-    }
-
-    formattedPrice += "₽";
+    formattedPrice = formatPrice(price);
   }
+
+  const orderHandler = (e) => {
+    router.push("/order?item=" + query.item);
+  };
 
   return (
     <section className={classes.work}>
@@ -34,12 +51,17 @@ const NewWork = (props) => {
       <figcaption className={classes.right}>
         <div className={classes.colors}>
           {colors.map((color) => (
-            <div style={{ background: color }}></div>
+            <div key={Math.random()} style={{ background: color }}></div>
           ))}
         </div>
-        <Bold>{formattedPrice}</Bold>
+        {price && (
+          <div className={classes.price}>
+            <Bold>{formattedPrice}</Bold>
+            <small>руб. за п.м.</small>
+          </div>
+        )}
       </figcaption>
-      <MainButton>
+      <MainButton tabIndex={1} onClick={orderHandler}>
         <p>ЗАКАЗАТЬ</p>
       </MainButton>
     </section>

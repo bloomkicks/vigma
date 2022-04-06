@@ -6,26 +6,39 @@ import orderTranslations from "../../storage/order-translations";
 import Page from "../../components/layout/Page";
 import classes from "./TotalOrderPage.module.css";
 
-
 const TotalOrderPage = (props) => {
   const router = useRouter();
+  const item = router.query.item;
 
-  const orderInfo = [
-    { key: "Категория", property: orderTranslations.type[router.query.type] },
-    { key: "Форма", property: orderTranslations.shape[router.query.shape] },
-    {
-      key: "Материалы",
-      property: (router.query.material || "")
-        .split("+")
-        .map((query) => orderTranslations.material[query])
-        .join(" + "),
-    },
-  ];
+  let orderInfo;
+  if (!item) {
+    orderInfo = [
+      {
+        key: "Категория",
+        property: orderTranslations.type[router.query.type],
+      },
+      {
+        key: "Форма",
+        property:
+          orderTranslations.shape[router.query.shape],
+      },
+      {
+        key: "Материалы",
+        property: (router.query.material || "")
+          .split("+")
+          .map((query) => orderTranslations.material[query])
+          .join(" + "),
+      },
+    ];
+  }
 
   return (
-    <Page title="Заказать" className={classes.TotalOrderPage}>
-      {orderInfo[0].property && <TotalOrderTree orderInfo={orderInfo} />}
-      <TotalOrderForm orderInfo={orderInfo} />
+    <Page
+      title="Заказать"
+      className={classes.TotalOrderPage}
+    >
+      <TotalOrderTree item={item} orderInfo={orderInfo} />
+      <TotalOrderForm item={item} orderInfo={orderInfo} />
     </Page>
   );
 };

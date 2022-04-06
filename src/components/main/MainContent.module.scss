@@ -53,7 +53,8 @@
   transition: transform 0.1s ease-out;
 }
 
-.MainContent > p:hover::after {
+.MainContent > p:hover::after,
+.MainContent > p:focus::after {
   transform: translateY(3px);
 }
 

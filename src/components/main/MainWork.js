@@ -5,8 +5,14 @@ import classes from "./MainWork.module.scss";
 const MainWork = (props) => {
   return (
     <aside className={classes.MainWork}>
-      {firstWorks.map((work) => {
-        return <NewWork {...work} key={work.id} />;
+      {firstWorks.map((work, index) => {
+        return (
+          <NewWork
+            {...work}
+            tabIndex={"1" + index}
+            key={work.id}
+          />
+        );
       })}
     </aside>
   );

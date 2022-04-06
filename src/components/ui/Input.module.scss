@@ -1,5 +1,5 @@
-@use '../../styles/colors.scss';
-@use '../../styles/mixins.scss';
+@use "../../styles/colors.scss";
+@use "../../styles/mixins.scss";
 
 .Container {
   width: 100%;
@@ -14,13 +14,26 @@
 
 .Input {
   @include mixins.interactive-font;
-  font-family: Roboto, 'Segoe UI', Raleway, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Roboto, "Segoe UI", Raleway, "Open Sans",
+    "Helvetica Neue", sans-serif;
   height: 2.2rem;
   width: 100%;
   border: none;
   border-radius: 5px;
   padding: 10px;
-  background-color:colors.$anti-theme;
+  background-color: colors.$anti-theme;
+}
+
+.needed {
+  position: relative;
+}
+
+.needSign {
+  font-weight: bold;
+  color: colors.$bold;
+  position: absolute;
+  right: -0.55rem;
+  top: -0.2rem;
 }
 
 .Input::placeholder {

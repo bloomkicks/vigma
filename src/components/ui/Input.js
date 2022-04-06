@@ -4,9 +4,9 @@ import Section from "./Section";
 import classes from "./Input.module.scss";
 
 const Input = (props) => {
-  let { label, input, InputElement, id } = props;
+  let { label, input, InputElement, id, isNeeded } = props;
 
-  id = useRef(id || Math.random())
+  id = useRef(id || Math.random());
   InputElement = InputElement || "input";
 
   return (
@@ -17,9 +17,13 @@ const Input = (props) => {
         className={`
           ${classes.Label}
           ${label.className || ""}
+          ${(isNeeded && classes.needed) || ""}
         `.trim()}
       >
-        {label.children}
+        {label.children}{" "}
+        {isNeeded && (
+          <span title="Обязательное поле" className={classes.needSign}>*</span>
+        )}
       </label>
       <InputElement
         {...input.props}

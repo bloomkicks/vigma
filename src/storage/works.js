@@ -1,5 +1,4 @@
 const parentFolder = "/works-assets/";
-
 // QUARTZ KITCHEN
 const quartzKitchenFront = "quartz/front.jpeg";
 const quartzKitchenSide = "quartz/side.jpeg";
@@ -70,8 +69,15 @@ export const firstWorks = [
         isVertical: true,
       },
     ],
-    title: 'Кухня "Латте"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Плёнка"],
+    title: 'Кухня "Латте" Прямая',
+    description: [
+      "Габариты: 3000x500x2400",
+      "Корпус: ЛДСП Влагостойкий",
+      "Фасад: МДФ Пластик",
+      "Фурнитура: Hettich",
+      "Столешница: ДСП Пластик Троя",
+    ],
+    price: "38651",
     colors: ["#cdcbcc", "#7d665e"],
     query: {
       type: "kitchen",
@@ -95,8 +101,15 @@ export const firstWorks = [
         isVertical: true,
       },
     ],
-    title: 'Кухня "Солид"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Плёнка"],
+    title: 'Кухня "Солид" Угловая',
+    description: [
+      "Габариты: 4200x2420x600",
+      "Корпус: ЛДСП Влагостойкий",
+      "Фасад: МДФ Эмаль",
+      "Фурнитура: Hettich",
+      "Столешница: Пластик",
+    ],
+    price: "34376",
     colors: [
       "#746d71",
       "repeating-linear-gradient(90deg, #733617, #965632 3px)",
@@ -122,8 +135,15 @@ const works = [
         src: futureKitchenBottom,
       },
     ],
-    title: 'Кухня "Футуристик"',
-    description: ["Корпус: ЛДСП Egger", "Фасад: МДФ", "Фурнитура: Hettich"],
+    title: 'Кухня "Футуристик" Угловая',
+    description: [
+      "Габариты: 2750x500x2400",
+      "Корпус: ЛДСП Egger",
+      "Фасад: МДФ",
+      "Фурнитура: Hettich",
+      "Столешница: Искусcтвенный камень",
+    ],
+    price: "29875",
     colors: ["#b8b19f", "#353444"],
     query: {
       type: "kitchen",
@@ -138,6 +158,7 @@ const works = [
     },
   },
   {
+    // RED BRUSNIKA
     id: Math.random(),
     photos: [
       {
@@ -149,8 +170,15 @@ const works = [
         isVertical: true,
       },
     ],
-    title: 'Кухня "Брусника"',
-    description: ["Корпус: ЛДСП", "Фасад: МДФ Плёнка"],
+    title: 'Кухня "Брусника" Угловая',
+    description: [
+      "Габариты: 2750x500x2400",
+      "Корпус: ЛДСП",
+      "Фасад: МДФ Плёнка",
+      "Фурнитура: FGV (Италия)",
+      "Столешница: Пластик",
+    ],
+    price: "30610",
     colors: [
       "#fcfaee",
       "linear-gradient(45deg, #bb2725 30%, #c26267 50%, #bb2725 65%)",
@@ -176,12 +204,15 @@ const works = [
         src: modernKitchenLong,
       },
     ],
-    title: 'Кухня "Модерн"',
+    title: 'Кухня "Модерн" c островком',
     description: [
+      "Габариты: 2650х600х2500",
       "Корпус: ЛДСП Lamarty",
       "Фасад: Mattelux Super",
       "Фурнитура: Hettich",
+      "Столешница: Пластик",
     ],
+    price: "33870",
     colors: ["#747675", "#c4baa4", "#644028"],
     query: {
       type: "kitchen",
@@ -208,8 +239,15 @@ const works = [
         src: norwayKitchenLight,
       },
     ],
-    title: 'Кухня "Норвегия"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Плёнка"],
+    title: 'Кухня "Норвегия" Угловая',
+    description: [
+      "Габариты: 2750х500х2400",
+      "Корпус: ЛДСП Влагостойкий",
+      "Фасад: МДФ Плёнка",
+      "Фурнитура: Hettich",
+      "Столешница: Пластик",
+    ],
+    price: "22600",
     colors: [
       "#b8bab9",
       "#41454e",
@@ -240,8 +278,14 @@ const works = [
         isVertical: true,
       },
     ],
-    title: 'Кухня "Эксплит"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ Плёнка"],
+    title: 'Кухня "Эксплит" Прямая',
+    description: [
+      "Габариты: 2850x500x23500",
+      "Корпус: ЛДСП Влагостойкий",
+      "Фасад: МДФ Плёнка",
+      "Фурнитура: Boyard (Китай)",
+    ],
+    price: "19400",
     colors: ["#c6bbb7", "#141614"],
     query: {
       type: "kitchen",
@@ -265,8 +309,15 @@ const works = [
         isVertical: true,
       },
     ],
-    title: 'Кухня "Сафари"',
-    description: ["Корпус: ЛДСП Влагостойкий", "Фасад: МДФ"],
+    title: 'Кухня "Сафари" Угловая',
+    description: [
+      "Габариты: 2500х600х2400",
+      "Корпус: ЛДСП Влагостойкий",
+      "Фасад: МДФ Плёнка",
+      "Фурнитура: Hettich",
+      "Столешница: Массив"
+    ],
+    price: "31870",
     colors: [
       "repeating-linear-gradient(90deg, #b18a3b, #a37931 3px )",
       "#c2d5db",
@@ -291,8 +342,15 @@ const works = [
         isVertical: true,
       },
     ],
-    title: 'Кухня "Кварц"',
-    description: ["Корпус: ЛДСП", "Фасад: МДФ Софт Крем", "Фурнитура: Hettich"],
+    title: 'Кухня "Кварц" Угловая',
+    description: [
+      "Габариты: 2400х600х2450",
+      "Корпус: ЛДСП",
+      "Фасад: МДФ Плёнка",
+      "Фурнитура: Hettich",
+      "Столешница: Массив",
+    ],
+    price: "41300",
     query: {
       type: "kitchen",
       shape: "angled",
@@ -319,7 +377,13 @@ const works = [
     ],
     title: 'Шкаф "Тимбер"',
     colors: ["#ada2a0", "#6b4b38", "#c0bcc3"],
-    description: ["Корпус: ЛДСП Egger","Фасад: МДФ Дуб Молочный", ],
+    description: [
+      "Габариты: 3100x600x2400",
+      "Корпус: ЛДСП Egger",
+      "Фасад: МДФ Дуб Молочный",
+      "Фурнитура: Boyard (Китай)",
+    ],
+    price: "28400",
     query: {
       type: "closet",
       material: "ldsp+mdf",
@@ -339,7 +403,12 @@ const works = [
       },
     ],
     title: 'Детская "Уют"',
-    description: ["Корпус: ЛДСП", "Фасад: МДФ"],
+    description: [
+      "Габариты: 3700х2100х2400",
+      "Корпус: ЛДСП с кромкой ПВХ 2мм",
+      "Ручки: Направляющие Шариковые",
+    ],
+    price: "35400",
     colors: [
       "#c4c2b6",
       "repeating-linear-gradient(-45deg, #aca89c, #786859 3px)",
@@ -362,8 +431,15 @@ const works = [
         isVertical: true,
       },
     ],
-    title: 'Кухня "Лайм"',
-    description: ["Корпус: ЛДСП", "Фасад: МДФ Плёнка"],
+    title: 'Кухня "Лайм" Угловая',
+    description: [
+      "Габариты: 2780х600х2450",
+      "Корпус: ЛДСП",
+      "Фасад: МДФ Плёнка",
+      "Фурнитура: Hettich",
+      "Столешница: Искусственный Камень",
+    ],
+    price: "23400",
     colors: [
       "linear-gradient(150deg, #e1fd5b 50%, #ffffff)",
       "#dfe1d4",
@@ -378,7 +454,17 @@ const works = [
 ];
 
 works.forEach((work, index) => {
-  work.photos.forEach((photo) => (photo.src = parentFolder + photo.src));
+  const zeros = Array(3 - index.toString().length)
+    .fill("0")
+    .join("");
+  const id = "p" + zeros + index;
+
+  work.id = id;
+  work.query.item = work.title;
+
+  work.photos.forEach(
+    (photo) => (photo.src = parentFolder + photo.src)
+  );
 });
 
 export default works;

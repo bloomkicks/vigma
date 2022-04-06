@@ -1,0 +1,1843 @@
+(self["webpackChunk_N_E"] = self["webpackChunk_N_E"] || []).push([[671],{
+
+/***/ 7039:
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+
+    (window.__NEXT_P = window.__NEXT_P || []).push([
+      "/main",
+      function () {
+        return __webpack_require__(1368);
+      }
+    ]);
+    if(false) {}
+  
+
+/***/ }),
+
+/***/ 4712:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _Content_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6653);
+/* harmony import */ var _Content_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Content_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _defineProperty(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {
+        };
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {
+    };
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+var Content = function(props) {
+    var children = props.children, className = props.className, contentProps = _objectWithoutProperties(props, [
+        "children",
+        "className"
+    ]);
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("article", _objectSpread({
+    }, contentProps, {
+        className: "\n      ".concat((_Content_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Content), " \n      ").concat(className || '', "\n      ").concat((_Content_module_scss__WEBPACK_IMPORTED_MODULE_1___default().MediaContent), "\n    "),
+        children: children
+    })));
+};
+/* harmony default export */ __webpack_exports__["Z"] = (Content);
+
+
+/***/ }),
+
+/***/ 7514:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _ui_Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9240);
+/* harmony import */ var _Page_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2440);
+/* harmony import */ var _Page_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Page_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+function _defineProperty(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {
+        };
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {
+    };
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+var Page = function(props) {
+    var title = props.title, children = props.children, notSpaced = props.notSpaced, className = props.className, wrapperClassName = props.wrapperClassName, pageProps = _objectWithoutProperties(props, [
+        "title",
+        "children",
+        "notSpaced",
+        "className",
+        "wrapperClassName"
+    ]);
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        className: "\n      ".concat((_Page_module_scss__WEBPACK_IMPORTED_MODULE_2___default().PageSpace), "\n      ").concat(wrapperClassName || "", "\n    "),
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", _objectSpread({
+        }, pageProps, {
+            className: "\n          ".concat((_Page_module_scss__WEBPACK_IMPORTED_MODULE_2___default().Page), "\n          ").concat(title && (_Page_module_scss__WEBPACK_IMPORTED_MODULE_2___default().Spaced) || "", "\n          ").concat(notSpaced && (_Page_module_scss__WEBPACK_IMPORTED_MODULE_2___default().NotSpaced) || "", "\n          ").concat(className || "", "\n        "),
+            children: [
+                title && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_ui_Title__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {
+                    className: (_Page_module_scss__WEBPACK_IMPORTED_MODULE_2___default().Title),
+                    children: title
+                }),
+                children
+            ]
+        }))
+    }));
+};
+/* harmony default export */ __webpack_exports__["Z"] = (Page);
+
+
+/***/ }),
+
+/***/ 224:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _Anchor_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7051);
+/* harmony import */ var _Anchor_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Anchor_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _defineProperty(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {
+        };
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {
+    };
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+var Anchor = function(props) {
+    var href = props.href, children = props.children, className = props.className, anchorProps = _objectWithoutProperties(props, [
+        "href",
+        "children",
+        "className"
+    ]);
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", _objectSpread({
+        href: href || "",
+        className: "".concat((_Anchor_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Anchor), " ").concat(className || "")
+    }, anchorProps, {
+        tabIndex: "1",
+        children: children
+    })));
+};
+/* harmony default export */ __webpack_exports__["Z"] = (Anchor);
+
+
+/***/ }),
+
+/***/ 9741:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _Bold_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6530);
+/* harmony import */ var _Bold_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Bold_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var Bold = function(props) {
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("b", {
+        className: (_Bold_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Important),
+        children: props.children
+    }));
+};
+/* harmony default export */ __webpack_exports__["Z"] = (Bold);
+
+
+/***/ }),
+
+/***/ 834:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _MainButton_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1281);
+/* harmony import */ var _MainButton_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_MainButton_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _defineProperty(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {
+        };
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {
+    };
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+var MainButton = function(props) {
+    var children = props.children, className = props.className, buttonProps = _objectWithoutProperties(props, [
+        "children",
+        "className"
+    ]);
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", _objectSpread({
+    }, buttonProps, {
+        className: "".concat((_MainButton_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Button), " ").concat(className || ""),
+        children: children
+    })));
+};
+/* harmony default export */ __webpack_exports__["Z"] = (MainButton);
+
+
+/***/ }),
+
+/***/ 1089:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export Backdrop */
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7294);
+/* harmony import */ var _Modal_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3033);
+/* harmony import */ var _Modal_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Modal_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+function _defineProperty(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {
+        };
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {
+    };
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+var Backdrop = function(props) {
+    var children = props.children, backdropProps = _objectWithoutProperties(props, [
+        "children"
+    ]);
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", _objectSpread({
+        id: "backdrop",
+        className: (_Modal_module_scss__WEBPACK_IMPORTED_MODULE_2___default().Backdrop)
+    }, backdropProps, {
+        children: children
+    })));
+};
+
+var Modal = function(props) {
+    var ref = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(true), isActive = ref[0], setIsActive = ref[1];
+    var clickHandler = function(e) {
+        props.onClose && props.onClose(e);
+        setIsActive(false);
+    };
+    return isActive && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Backdrop, {
+        onClick: clickHandler,
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+            className: "".concat((_Modal_module_scss__WEBPACK_IMPORTED_MODULE_2___default().Modal), " ").concat(props.className),
+            children: props.children
+        })
+    });
+};
+/* harmony default export */ __webpack_exports__["Z"] = (Modal);
+
+
+/***/ }),
+
+/***/ 2276:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _Secondary_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5917);
+/* harmony import */ var _Secondary_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Secondary_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _defineProperty(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {
+        };
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {
+    };
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+var Secondary = function(props) {
+    var children = props.children, secondaryProps = _objectWithoutProperties(props, [
+        "children"
+    ]);
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", _objectSpread({
+    }, secondaryProps, {
+        className: (_Secondary_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Secondary),
+        children: children
+    })));
+};
+/* harmony default export */ __webpack_exports__["Z"] = (Secondary);
+
+
+/***/ }),
+
+/***/ 5328:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _Third_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5761);
+/* harmony import */ var _Third_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Third_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _defineProperty(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {
+        };
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {
+    };
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+var Third = function(props) {
+    var children = props.children, thirdProps = _objectWithoutProperties(props, [
+        "children"
+    ]);
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h3", _objectSpread({
+    }, thirdProps, {
+        className: (_Third_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Third),
+        children: children
+    })));
+};
+/* harmony default export */ __webpack_exports__["Z"] = (Third);
+
+
+/***/ }),
+
+/***/ 9240:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _Title_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2333);
+/* harmony import */ var _Title_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Title_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var Title = function(props) {
+    var className = props.className;
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", {
+        className: "\n        ".concat((_Title_module_scss__WEBPACK_IMPORTED_MODULE_1___default().Title), "\n        ").concat(className || '', "\n      ").trim(),
+        children: props.children
+    }));
+};
+/* harmony default export */ __webpack_exports__["Z"] = (Title);
+
+
+/***/ }),
+
+/***/ 9848:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Z": function() { return /* binding */ works_NewWork; }
+});
+
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(5893);
+// EXTERNAL MODULE: ./src/components/ui/MainButton.js
+var MainButton = __webpack_require__(834);
+// EXTERNAL MODULE: ./src/components/ui/Bold.js
+var Bold = __webpack_require__(9741);
+// EXTERNAL MODULE: ./src/components/ui/Secondary.js
+var Secondary = __webpack_require__(2276);
+// EXTERNAL MODULE: ./src/components/works/ZoomedImage.js
+var ZoomedImage = __webpack_require__(2171);
+// EXTERNAL MODULE: ./src/components/works/NewImages.module.scss
+var NewImages_module = __webpack_require__(1588);
+var NewImages_module_default = /*#__PURE__*/__webpack_require__.n(NewImages_module);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(7294);
+;// CONCATENATED MODULE: ./src/components/works/NewImages.js
+
+
+
+
+var NewImages = function(props) {
+    var ref = (0,react.useState)(null), zoomed = ref[0], setZoomed = ref[1];
+    var photos = props.photos, title = props.title;
+    var zoomHandler = function(e) {
+        setZoomed(e.target.src);
+    };
+    var unzoomHandler = function(e) {
+        setZoomed(null);
+    };
+    return(/*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [
+            zoomed && /*#__PURE__*/ (0,jsx_runtime.jsx)(ZoomedImage/* default */.Z, {
+                onClose: unzoomHandler,
+                src: zoomed
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                className: (NewImages_module_default()).images,
+                children: photos.map(function(photo) {
+                    return(/*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                        onClick: zoomHandler,
+                        className: photo.isVertical ? (NewImages_module_default()).ver : (NewImages_module_default()).hor,
+                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("img", {
+                            src: photo.src,
+                            alt: title + " Фотография"
+                        })
+                    }, Math.random()));
+                })
+            })
+        ]
+    }));
+};
+/* harmony default export */ var works_NewImages = (NewImages);
+
+// EXTERNAL MODULE: ./src/components/works/NewWork.module.scss
+var NewWork_module = __webpack_require__(2060);
+var NewWork_module_default = /*#__PURE__*/__webpack_require__.n(NewWork_module);
+// EXTERNAL MODULE: ./node_modules/next/router.js
+var next_router = __webpack_require__(1163);
+;// CONCATENATED MODULE: ./src/components/works/NewWork.js
+
+
+
+
+
+
+
+function formatPrice(price) {
+    var formattedPrice = "";
+    for(var i = price.length; i > 0; i--){
+        var toAdd = "";
+        if (i % 3 === 0) {
+            toAdd = ".";
+        }
+        toAdd += price[i - 1];
+        formattedPrice = toAdd + formattedPrice;
+    }
+    formattedPrice = "от " + formattedPrice;
+    return formattedPrice;
+}
+var NewWork = function(props) {
+    var router = (0,next_router.useRouter)();
+    var photos = props.photos, title = props.title, description = props.description, price = props.price, colors = props.colors, query = props.query;
+    var formattedPrice = "";
+    if (price) {
+        formattedPrice = formatPrice(price);
+    }
+    var orderHandler = function(e) {
+        router.push("/order?item=" + query.item);
+    };
+    return(/*#__PURE__*/ (0,jsx_runtime.jsxs)("section", {
+        className: (NewWork_module_default()).work,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(works_NewImages, {
+                photos: photos,
+                title: title
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("figcaption", {
+                className: (NewWork_module_default()).left,
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(Secondary/* default */.Z, {
+                        children: title
+                    }),
+                    description.map(function(desc) {
+                        /*#__PURE__*/ return (0,jsx_runtime.jsx)("p", {
+                            children: desc
+                        }, Math.random());
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("figcaption", {
+                className: (NewWork_module_default()).right,
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                        className: (NewWork_module_default()).colors,
+                        children: colors.map(function(color) {
+                            /*#__PURE__*/ return (0,jsx_runtime.jsx)("div", {
+                                style: {
+                                    background: color
+                                }
+                            }, Math.random());
+                        })
+                    }),
+                    price && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        className: (NewWork_module_default()).price,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Bold/* default */.Z, {
+                                children: formattedPrice
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("small", {
+                                children: "руб. за п.м."
+                            })
+                        ]
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(MainButton/* default */.Z, {
+                tabIndex: 1,
+                onClick: orderHandler,
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                    children: "ЗАКАЗАТЬ"
+                })
+            })
+        ]
+    }));
+};
+/* harmony default export */ var works_NewWork = (NewWork);
+
+
+/***/ }),
+
+/***/ 2171:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _ui_Modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1089);
+/* harmony import */ var _ZoomedImage_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8693);
+/* harmony import */ var _ZoomedImage_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ZoomedImage_module_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var ZoomedImage = function(props) {
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_ui_Modal__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {
+        className: (_ZoomedImage_module_css__WEBPACK_IMPORTED_MODULE_2___default().ZoomedWrapper),
+        onClose: props.onClose,
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
+            src: props.src,
+            alt: "Фотография в фокусе",
+            className: (_ZoomedImage_module_css__WEBPACK_IMPORTED_MODULE_2___default().ZoomedImage)
+        })
+    }));
+};
+/* harmony default export */ __webpack_exports__["Z"] = (ZoomedImage);
+
+
+/***/ }),
+
+/***/ 1368:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": function() { return /* binding */ main; }
+});
+
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(5893);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(1664);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(7294);
+// EXTERNAL MODULE: ./src/storage/works.js
+var works = __webpack_require__(1963);
+// EXTERNAL MODULE: ./src/components/works/NewWork.js + 1 modules
+var NewWork = __webpack_require__(9848);
+// EXTERNAL MODULE: ./src/components/main/MainWork.module.scss
+var MainWork_module = __webpack_require__(382);
+var MainWork_module_default = /*#__PURE__*/__webpack_require__.n(MainWork_module);
+;// CONCATENATED MODULE: ./src/components/main/MainWork.js
+
+
+
+
+
+function _defineProperty(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {
+        };
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+    }
+    return target;
+}
+var MainWork = function(props) {
+    return(/*#__PURE__*/ (0,jsx_runtime.jsx)("aside", {
+        className: (MainWork_module_default()).MainWork,
+        children: works/* firstWorks.map */.p.map(function(work, index) {
+            return(/*#__PURE__*/ (0,react.createElement)(NewWork/* default */.Z, _objectSpread({
+            }, work, {
+                tabIndex: "1" + index,
+                key: work.id
+            })));
+        })
+    }));
+};
+/* harmony default export */ var main_MainWork = (MainWork);
+
+// EXTERNAL MODULE: ./src/components/ui/Third.js
+var Third = __webpack_require__(5328);
+// EXTERNAL MODULE: ./src/components/main/MainAdvantage.module.css
+var MainAdvantage_module = __webpack_require__(9530);
+var MainAdvantage_module_default = /*#__PURE__*/__webpack_require__.n(MainAdvantage_module);
+;// CONCATENATED MODULE: ./src/components/main/MainAdvantage.js
+
+
+
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {
+    };
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+var MainAdvantage = function(props) {
+    var style = props.style, children = props.children, title = props.title, logoSrc = props.logoSrc, advantageProps = _objectWithoutProperties(props, [
+        "style",
+        "children",
+        "title",
+        "logoSrc"
+    ]);
+    return(/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: (MainAdvantage_module_default()).MainAdvantage,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)(Third/* default */.Z, {
+                children: [
+                    title,
+                    " ",
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("img", {
+                        alt: "",
+                        src: logoSrc,
+                        className: (MainAdvantage_module_default()).Logo
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                style: style,
+                children: children
+            })
+        ]
+    }));
+};
+/* harmony default export */ var main_MainAdvantage = (MainAdvantage);
+
+// EXTERNAL MODULE: ./src/components/ui/Secondary.js
+var Secondary = __webpack_require__(2276);
+// EXTERNAL MODULE: ./src/components/ui/Bold.js
+var Bold = __webpack_require__(9741);
+// EXTERNAL MODULE: ./src/components/ui/Section.js
+var Section = __webpack_require__(4568);
+// EXTERNAL MODULE: ./src/components/main/MainAdvantages.module.css
+var MainAdvantages_module = __webpack_require__(3754);
+var MainAdvantages_module_default = /*#__PURE__*/__webpack_require__.n(MainAdvantages_module);
+;// CONCATENATED MODULE: ./src/components/main/MainAdvantages.js
+
+
+
+
+
+
+var packageSvg = "/main-assets/package.svg";
+var rulerSvg = "/main-assets/ruler.svg";
+var gearsSvg = "/main-assets/gears.svg";
+var MainAdvantages = function(pros) {
+    return(/*#__PURE__*/ (0,jsx_runtime.jsxs)(Section/* default */.Z, {
+        className: (MainAdvantages_module_default()).Advantages,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)(Secondary/* default */.Z, {
+                children: [
+                    "Почему ",
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(Bold/* default */.Z, {
+                        children: " выбирают нас"
+                    }),
+                    ":"
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(main_MainAdvantage, {
+                        title: "Собственное производство",
+                        logoSrc: gearsSvg,
+                        style: {
+                            fontSize: "0.76rem",
+                            marginTop: "3px"
+                        },
+                        children: "Благодаря отсутствию торговых посредников в цепочке поставок, вы можете приобрести мебель по доступным ценам"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(main_MainAdvantage, {
+                        title: "Выезд дизайнера-замерщика",
+                        logoSrc: rulerSvg,
+                        children: "Предоставляем дизайн-проект с замером бесплатно"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(main_MainAdvantage, {
+                        title: "Доставка и установка",
+                        logoSrc: packageSvg,
+                        children: "Мы оказываем услуги по установке и доставке в пределах Санкт-Петербурга и ЛО"
+                    })
+                ]
+            })
+        ]
+    }));
+};
+/* harmony default export */ var main_MainAdvantages = (MainAdvantages);
+
+// EXTERNAL MODULE: ./src/components/ui/MainButton.js
+var MainButton = __webpack_require__(834);
+// EXTERNAL MODULE: ./src/components/main/OrderButton.module.css
+var OrderButton_module = __webpack_require__(7859);
+var OrderButton_module_default = /*#__PURE__*/__webpack_require__.n(OrderButton_module);
+;// CONCATENATED MODULE: ./src/components/main/OrderButton.js
+
+
+
+
+var OrderButton = function(props) {
+    return(/*#__PURE__*/ (0,jsx_runtime.jsx)(next_link["default"], {
+        href: "/order/quiz",
+        passHref: true,
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(MainButton/* default */.Z, {
+            tabindex: 5,
+            className: (OrderButton_module_default()).Button,
+            children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                children: "Заказать дизайн-проект"
+            })
+        })
+    }));
+};
+/* harmony default export */ var main_OrderButton = (OrderButton);
+
+// EXTERNAL MODULE: ./src/components/layout/Content.js
+var Content = __webpack_require__(4712);
+// EXTERNAL MODULE: ./src/components/ui/Anchor.js
+var Anchor = __webpack_require__(224);
+// EXTERNAL MODULE: ./src/components/ui/Title.js
+var Title = __webpack_require__(9240);
+// EXTERNAL MODULE: ./src/components/main/MainContent.module.scss
+var MainContent_module = __webpack_require__(4703);
+var MainContent_module_default = /*#__PURE__*/__webpack_require__.n(MainContent_module);
+;// CONCATENATED MODULE: ./src/components/main/MainContent.js
+
+
+
+
+
+
+
+
+
+
+var MainContent = function(props) {
+    return(/*#__PURE__*/ (0,jsx_runtime.jsxs)(Content/* default */.Z, {
+        className: (MainContent_module_default()).MainContent,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)(Title/* default */.Z, {
+                children: [
+                    "создадим ",
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                        className: "block",
+                        children: " мебель по"
+                    }),
+                    " ",
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(Bold/* default */.Z, {
+                        children: "индивидуальному"
+                    }),
+                    " проекту в",
+                    " ",
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                        className: "block",
+                        children: "Санкт-Петербурге"
+                    }),
+                    " и Лен. области"
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(main_MainAdvantages, {
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("section", {
+                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("h4", {
+                    children: [
+                        "Есть вопрос?",
+                        " ",
+                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
+                            className: (MainContent_module_default()).onPhone,
+                            children: [
+                                "- Мы с радостью ответим вам",
+                                " ",
+                                /*#__PURE__*/ (0,jsx_runtime.jsx)(Anchor/* default */.Z, {
+                                    href: "/contacts",
+                                    children: "по телефону"
+                                })
+                            ]
+                        })
+                    ]
+                })
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(main_OrderButton, {
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(main_MainWork, {
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(next_link["default"], {
+                passHref: true,
+                href: "/works",
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                    tabIndex: 20,
+                    children: "Больше наших работ"
+                })
+            })
+        ]
+    }));
+};
+/* harmony default export */ var main_MainContent = (MainContent);
+
+// EXTERNAL MODULE: ./src/components/layout/Page.js
+var Page = __webpack_require__(7514);
+;// CONCATENATED MODULE: ./src/pages/main.js
+
+
+
+var MainPage = function(props) {
+    return(/*#__PURE__*/ (0,jsx_runtime.jsx)(Page/* default */.Z, {
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(main_MainContent, {
+        })
+    }));
+};
+/* harmony default export */ var main = (MainPage);
+
+
+/***/ }),
+
+/***/ 1963:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "p": function() { return /* binding */ firstWorks; }
+/* harmony export */ });
+function _arrayWithoutHoles(arr) {
+    if (Array.isArray(arr)) {
+        for(var i = 0, arr2 = new Array(arr.length); i < arr.length; i++){
+            arr2[i] = arr[i];
+        }
+        return arr2;
+    }
+}
+function _iterableToArray(iter) {
+    if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+function _nonIterableSpread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+function _toConsumableArray(arr) {
+    return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+}
+var parentFolder = "/works-assets/";
+// QUARTZ KITCHEN
+var quartzKitchenFront = "quartz/front.jpeg";
+var quartzKitchenSide = "quartz/side.jpeg";
+// TIMBER CLOSET
+var timberClosetClosed = "timber/closed.jpg";
+var timberClosetOpen = "timber/open.jpg";
+// BED AND DESK
+var bed = "bed, desk, shelf/bed.jpeg";
+var desk = "bed, desk, shelf/desk.jpeg";
+// RED KITCHEN
+var redKitchenLeft = "kitchen_2/left.jpeg";
+var redKitchenRight = "kitchen_2/right.jpeg";
+// LESS LIME KITCHEN
+var lessLimeKitchenLeft = "less lime kitchen/left.jpeg";
+var lessLimeKitchenRight = "less lime kitchen/right.jpeg";
+// FUTURE KITCHEN
+var futureKitchenTop = "kitchen details/top.jpg";
+var futureKitchenBottom = "kitchen details/bottom.jpg";
+// LATTE KITCHEN
+var latteKitchenMain = "latte/main.jpeg";
+var latteKitchenAngle = "latte/angle.jpeg";
+var latteKitchenFar = "latte/far.jpeg";
+// LINEAR_2 KITCHEN
+var linear2KitchenMain = "linear_2/main.jpeg";
+var linear2KitchenLilFar = "linear_2/lilfar.jpeg";
+var linear2KitchenFar = "linear_2/far.jpeg";
+// MODERN KITCHEN
+var modernKitchenMain = "modern/main.jpeg";
+var modernKitchenFront = "modern/front.jpeg";
+var modernKitchenLong = "modern/long.jpeg";
+// NORWAY KITCHEN
+var norwayKitchenMain = "norway/main.jpeg";
+var norwayKitchenLight = "norway/light.jpeg";
+var norwayKitchenAngle = "norway/angle.jpeg";
+// SAFARI KITCHEN
+var safariKitchenAngle = "safari/angle.jpeg";
+var safariKitchenMain = "safari/main.jpeg";
+var safariKitchenFar = "safari/far.jpeg";
+// SOLID KITCHEN
+var solidKitchenAngleMain = "solid/angle_main.jpeg";
+var solidKitchenAngle2 = "solid/angle2.jpeg";
+var solidKitchenMain = "solid/main.jpeg";
+var firstWorks = [
+    {
+        id: Math.random(),
+        photos: [
+            {
+                src: latteKitchenMain
+            },
+            {
+                src: latteKitchenAngle,
+                isVertical: true
+            },
+            {
+                src: latteKitchenFar,
+                isVertical: true
+            }, 
+        ],
+        title: 'Кухня "Латте" Прямая',
+        description: [
+            "Габариты: 3000x500x2400",
+            "Корпус: ЛДСП Влагостойкий",
+            "Фасад: МДФ Пластик",
+            "Фурнитура: Hettich",
+            "Столешница: ДСП Пластик Троя", 
+        ],
+        price: "38651",
+        colors: [
+            "#cdcbcc",
+            "#7d665e"
+        ],
+        query: {
+            type: "kitchen",
+            shape: "straight",
+            material: "ldsp+mdf"
+        }
+    },
+    {
+        // SOLID
+        id: Math.random(),
+        photos: [
+            {
+                src: solidKitchenAngleMain
+            },
+            {
+                src: solidKitchenAngle2,
+                isVertical: true
+            },
+            {
+                src: solidKitchenMain,
+                isVertical: true
+            }, 
+        ],
+        title: 'Кухня "Солид" Угловая',
+        description: [
+            "Габариты: 4200x2420x600",
+            "Корпус: ЛДСП Влагостойкий",
+            "Фасад: МДФ Эмаль",
+            "Фурнитура: Hettich",
+            "Столешница: Пластик", 
+        ],
+        price: "34376",
+        colors: [
+            "#746d71",
+            "repeating-linear-gradient(90deg, #733617, #965632 3px)", 
+        ],
+        query: {
+            type: "kitchen",
+            shape: "angled",
+            material: "lsdp+mdf"
+        }
+    }, 
+];
+var works = _toConsumableArray(firstWorks).concat([
+    {
+        // FUTURISTIC
+        id: Math.random(),
+        photos: [
+            {
+                src: futureKitchenTop
+            },
+            {
+                src: futureKitchenBottom
+            }, 
+        ],
+        title: 'Кухня "Футуристик" Угловая',
+        description: [
+            "Габариты: 2750x500x2400",
+            "Корпус: ЛДСП Egger",
+            "Фасад: МДФ",
+            "Фурнитура: Hettich",
+            "Столешница: Искусcтвенный камень", 
+        ],
+        price: "29875",
+        colors: [
+            "#b8b19f",
+            "#353444"
+        ],
+        query: {
+            type: "kitchen",
+            shape: "angled",
+            material: "lsdp+mdf"
+        },
+        style: {
+            height: "350px"
+        },
+        imgContainerStyle: {
+            height: "65%"
+        }
+    },
+    {
+        // RED BRUSNIKA
+        id: Math.random(),
+        photos: [
+            {
+                src: redKitchenLeft,
+                isVertical: true
+            },
+            {
+                src: redKitchenRight,
+                isVertical: true
+            }, 
+        ],
+        title: 'Кухня "Брусника" Угловая',
+        description: [
+            "Габариты: 2750x500x2400",
+            "Корпус: ЛДСП",
+            "Фасад: МДФ Плёнка",
+            "Фурнитура: FGV (Италия)",
+            "Столешница: Пластик", 
+        ],
+        price: "30610",
+        colors: [
+            "#fcfaee",
+            "linear-gradient(45deg, #bb2725 30%, #c26267 50%, #bb2725 65%)", 
+        ],
+        query: {
+            type: "kitchen",
+            shape: "angled",
+            material: "ldsp+lsdp+mdf"
+        }
+    },
+    {
+        // MODERN
+        id: Math.random(),
+        photos: [
+            {
+                src: modernKitchenMain
+            },
+            {
+                src: modernKitchenFront,
+                isVertical: true
+            },
+            {
+                src: modernKitchenLong
+            }, 
+        ],
+        title: 'Кухня "Модерн" c островком',
+        description: [
+            "Габариты: 2650х600х2500",
+            "Корпус: ЛДСП Lamarty",
+            "Фасад: Mattelux Super",
+            "Фурнитура: Hettich",
+            "Столешница: Пластик", 
+        ],
+        price: "33870",
+        colors: [
+            "#747675",
+            "#c4baa4",
+            "#644028"
+        ],
+        query: {
+            type: "kitchen",
+            shape: "island",
+            material: "lsdp+mdf"
+        },
+        style: {
+            height: "350px"
+        },
+        imgContainerStyle: {
+            height: "60%"
+        }
+    },
+    {
+        id: Math.random(),
+        photos: [
+            {
+                src: norwayKitchenMain
+            },
+            {
+                src: norwayKitchenAngle
+            },
+            {
+                src: norwayKitchenLight
+            }, 
+        ],
+        title: 'Кухня "Норвегия" Угловая',
+        description: [
+            "Габариты: 2750х500х2400",
+            "Корпус: ЛДСП Влагостойкий",
+            "Фасад: МДФ Плёнка",
+            "Фурнитура: Hettich",
+            "Столешница: Пластик", 
+        ],
+        price: "22600",
+        colors: [
+            "#b8bab9",
+            "#41454e",
+            "repeating-linear-gradient(90deg, #a37452, #894f20 3px)", 
+        ],
+        query: {
+            type: "kitchen",
+            shape: "angled",
+            material: "lsdp+mdf"
+        },
+        style: {
+            height: "350px"
+        }
+    },
+    {
+        // EXPLIT
+        id: Math.random(),
+        photos: [
+            {
+                src: linear2KitchenMain
+            },
+            {
+                src: linear2KitchenLilFar,
+                isVertical: true
+            },
+            {
+                src: linear2KitchenFar,
+                isVertical: true
+            }, 
+        ],
+        title: 'Кухня "Эксплит" Прямая',
+        description: [
+            "Габариты: 2850x500x23500",
+            "Корпус: ЛДСП Влагостойкий",
+            "Фасад: МДФ Плёнка",
+            "Фурнитура: Boyard (Китай)", 
+        ],
+        price: "19400",
+        colors: [
+            "#c6bbb7",
+            "#141614"
+        ],
+        query: {
+            type: "kitchen",
+            shape: "straight",
+            material: "lsdp+mdf"
+        }
+    },
+    {
+        // SAFARI
+        id: Math.random(),
+        photos: [
+            {
+                src: safariKitchenAngle
+            },
+            {
+                src: safariKitchenMain,
+                isVertical: true
+            },
+            {
+                src: safariKitchenFar,
+                isVertical: true
+            }, 
+        ],
+        title: 'Кухня "Сафари" Угловая',
+        description: [
+            "Габариты: 2500х600х2400",
+            "Корпус: ЛДСП Влагостойкий",
+            "Фасад: МДФ Плёнка",
+            "Фурнитура: Hettich",
+            "Столешница: Массив"
+        ],
+        price: "31870",
+        colors: [
+            "repeating-linear-gradient(90deg, #b18a3b, #a37931 3px )",
+            "#c2d5db",
+            "#0b151f", 
+        ],
+        query: {
+            type: "kitchen",
+            shape: "angled",
+            material: "lsdp+mdf"
+        }
+    },
+    {
+        // QUARTZ
+        id: Math.random(),
+        photos: [
+            {
+                src: quartzKitchenFront,
+                isVertical: true
+            },
+            {
+                src: quartzKitchenSide,
+                isVertical: true
+            }, 
+        ],
+        title: 'Кухня "Кварц" Угловая',
+        description: [
+            "Габариты: 2400х600х2450",
+            "Корпус: ЛДСП",
+            "Фасад: МДФ Плёнка",
+            "Фурнитура: Hettich",
+            "Столешница: Массив", 
+        ],
+        price: "41300",
+        query: {
+            type: "kitchen",
+            shape: "angled",
+            material: "ldsp+mdf"
+        },
+        colors: [
+            "#a3bec5",
+            "#6b5851"
+        ],
+        style: {
+            height: "300px"
+        },
+        imgContainerStyle: {
+            height: "70%"
+        }
+    },
+    {
+        // TIMBER
+        id: Math.random(),
+        photos: [
+            {
+                src: timberClosetClosed
+            },
+            {
+                src: timberClosetOpen
+            }, 
+        ],
+        title: 'Шкаф "Тимбер"',
+        colors: [
+            "#ada2a0",
+            "#6b4b38",
+            "#c0bcc3"
+        ],
+        description: [
+            "Габариты: 3100x600x2400",
+            "Корпус: ЛДСП Egger",
+            "Фасад: МДФ Дуб Молочный",
+            "Фурнитура: Boyard (Китай)", 
+        ],
+        price: "28400",
+        query: {
+            type: "closet",
+            material: "ldsp+mdf"
+        }
+    },
+    {
+        // UYT
+        id: Math.random(),
+        photos: [
+            {
+                src: bed,
+                isVertical: true
+            },
+            {
+                src: desk,
+                isVertical: true
+            }, 
+        ],
+        title: 'Детская "Уют"',
+        description: [
+            "Габариты: 3700х2100х2400",
+            "Корпус: ЛДСП с кромкой ПВХ 2мм",
+            "Ручки: Направляющие Шариковые", 
+        ],
+        price: "35400",
+        colors: [
+            "#c4c2b6",
+            "repeating-linear-gradient(-45deg, #aca89c, #786859 3px)", 
+        ],
+        query: {
+            type: "child",
+            material: "ldsp"
+        }
+    },
+    {
+        // LIME
+        id: Math.random(),
+        photos: [
+            {
+                src: lessLimeKitchenLeft,
+                isVertical: true
+            },
+            {
+                src: lessLimeKitchenRight,
+                isVertical: true
+            }, 
+        ],
+        title: 'Кухня "Лайм" Угловая',
+        description: [
+            "Габариты: 2780х600х2450",
+            "Корпус: ЛДСП",
+            "Фасад: МДФ Плёнка",
+            "Фурнитура: Hettich",
+            "Столешница: Искусственный Камень", 
+        ],
+        price: "23400",
+        colors: [
+            "linear-gradient(150deg, #e1fd5b 50%, #ffffff)",
+            "#dfe1d4",
+            "linear-gradient(45deg, #4f3d2b 20%, #86634d 50%, #4f3d2b)", 
+        ],
+        query: {
+            type: "kitchen",
+            shape: "angled",
+            material: "lsdp+mdf"
+        }
+    }, 
+]);
+works.forEach(function(work, index) {
+    var zeros = Array(3 - index.toString().length).fill("0").join("");
+    var id = "p" + zeros + index;
+    work.id = id;
+    work.query.item = work.title;
+    work.photos.forEach(function(photo) {
+        return photo.src = parentFolder + photo.src;
+    });
+});
+/* harmony default export */ __webpack_exports__["Z"] = (works);
+
+
+/***/ }),
+
+/***/ 9530:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"MainAdvantage":"MainAdvantage_MainAdvantage__W9KIv","Logo":"MainAdvantage_Logo__h1XgZ"};
+
+/***/ }),
+
+/***/ 3754:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Advantages":"MainAdvantages_Advantages__GRyQS"};
+
+/***/ }),
+
+/***/ 7859:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Button":"OrderButton_Button__57kTn"};
+
+/***/ }),
+
+/***/ 8693:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"ZoomedWrapper":"ZoomedImage_ZoomedWrapper__MLfN_","ZoomedImage":"ZoomedImage_ZoomedImage__ESo8H"};
+
+/***/ }),
+
+/***/ 6653:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Content":"Content_Content__Klmip","MediaContent":"Content_MediaContent__YIf_4"};
+
+/***/ }),
+
+/***/ 2440:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"PageSpace":"Page_PageSpace__vlRAS","Page":"Page_Page__TDaJa","Spaced":"Page_Spaced__m35pe","NotSpaced":"Page_NotSpaced__4YxgJ","Title":"Page_Title__TdQ_T"};
+
+/***/ }),
+
+/***/ 4703:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"MainContent":"MainContent_MainContent__Ge2SR","Logo":"MainContent_Logo__8IdHR","onPhone":"MainContent_onPhone__inXvR"};
+
+/***/ }),
+
+/***/ 382:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"MainWork":"MainWork_MainWork__E7j9d"};
+
+/***/ }),
+
+/***/ 7051:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Anchor":"Anchor_Anchor__KIGyl"};
+
+/***/ }),
+
+/***/ 6530:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Important":"Bold_Important__I4TSj"};
+
+/***/ }),
+
+/***/ 1281:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Button":"MainButton_Button__n72zw"};
+
+/***/ }),
+
+/***/ 3033:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Backdrop":"Modal_Backdrop__9RcyN","Modal":"Modal_Modal__FQ769"};
+
+/***/ }),
+
+/***/ 5917:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Secondary":"Secondary_Secondary__TPia2"};
+
+/***/ }),
+
+/***/ 5761:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Third":"Third_Third__Uq0Dd"};
+
+/***/ }),
+
+/***/ 2333:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Title":"Title_Title__q7br5"};
+
+/***/ }),
+
+/***/ 1588:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"images":"NewImages_images__QTKsL","ver":"NewImages_ver__6_1G1","hor":"NewImages_hor__kB0VI"};
+
+/***/ }),
+
+/***/ 2060:
+/***/ (function(module) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"work":"NewWork_work__k23Zb","left":"NewWork_left__u0vvb","right":"NewWork_right__EyQRm","price":"NewWork_price__6pO8i","colors":"NewWork_colors__Pe5CV"};
+
+/***/ }),
+
+/***/ 1163:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__(387)
+
+
+/***/ })
+
+},
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
+/******/ __webpack_require__.O(0, [888], function() { return __webpack_exec__(7039); });
+/******/ var __webpack_exports__ = __webpack_require__.O();
+/******/ _N_E = __webpack_exports__;
+/******/ }
+]);
