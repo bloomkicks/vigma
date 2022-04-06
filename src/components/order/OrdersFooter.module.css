@@ -1,0 +1,11 @@
+.OrdersFooter {
+  display: flex;
+  align-items: center;
+}
+
+.Arrow {
+  height: 30px;
+  width: 30px;
+  transform: scale(-1);
+  margin-right: 10px;
+}

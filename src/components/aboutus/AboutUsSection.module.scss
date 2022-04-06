@@ -1,0 +1,54 @@
+@use "sass:color" as col;
+@use "../../styles/colors.scss";
+
+.AboutUsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 25px;
+  border-radius: 20px;
+  max-width: 515px;
+  width: 43%;
+  min-width: 300px;
+}
+.AboutUsSection:first-child {
+  margin: 20px 25px;
+}
+
+.AboutUsSection > p {
+  text-align: left;
+}
+
+.Heading {
+  width: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  position: relative;
+  border-left: 5px solid colors.$bold;
+  background-color: col.adjust(colors.$bold, $alpha: -0.85);
+  padding-left: 10px;
+  padding-right: 8px;
+}
+.Heading > h2 {
+  color: colors.$bold;
+} 
+
+.Logo {
+  width: 3rem;
+  opacity: 0.7;
+  margin-left: 0.7rem;
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  .AboutUsSection {
+    max-width: none;
+    margin: 20px 0;
+    width: 100%;
+  } 
+  .AboutUsSection:first-child {
+    margin: 20px 0;
+  }
+}

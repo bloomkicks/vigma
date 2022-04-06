@@ -1,0 +1,21 @@
+.Advantages {
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+.Advantages > h2 {
+  margin-bottom: 25px;  
+}
+
+.Advantages > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+@media screen and (max-width: 650px) {
+  .Advantages > div {
+    flex-wrap: wrap;
+  } 
+}

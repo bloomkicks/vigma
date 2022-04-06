@@ -1,0 +1,5 @@
+@use '../../styles/mixins.scss';
+
+.Secondary {
+  @include mixins.secondary-font
+}

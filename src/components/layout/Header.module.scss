@@ -1,0 +1,108 @@
+@use "sass:color" as col;
+@use "../../styles/colors.scss";
+
+.Header,
+.HeaderSpace {
+  width: 100%;
+  height: 64px;
+}
+
+.Header {
+  background-color: colors.$anti-theme;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.InnerHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 30px;
+}
+
+.LogoContainer,
+.LogoInnerContainer {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.LogoContainer:hover,
+.LogoContainer:focus {
+  outline: none;
+  transform: scale(1.04);
+}
+
+.Logo {
+  height: 70%;
+  width: auto;
+}
+.Logo:focus {
+  outline: none;
+}
+
+.HamMenu {
+  display: none;
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 85ms ease-in;
+}
+.HamMenu:hover,
+.HamMenu:focus {
+  outline: none;
+  transform: scaleY(1.25);
+}
+
+.Nav {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 710px) {
+  .Nav {
+    position: absolute;
+    justify-content: flex-start;
+    left: 100%;
+    top: 100%;
+    height: 100vh;
+    margin-left: auto;
+    padding-top: 5px;
+    background-color: col.change(colors.$anti-theme, $alpha: 0.85);
+    flex-direction: column;
+    transition: transform 0.2s ease-out;
+  }
+  .Nav > div {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .Nav > div > div {
+    font-size: 1.2rem;
+  }
+
+  .Nav__active {
+    transform: translatex(-100%);
+  }
+
+  .HamMenu {
+    display: block;
+  }
+
+  .Header {
+    background: colors.$mobile-header;
+  }
+}

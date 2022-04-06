@@ -1,0 +1,13 @@
+.ZoomedWrapper {
+  padding: 0;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.ZoomedImage {
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+}

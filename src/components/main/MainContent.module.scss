@@ -1,0 +1,78 @@
+@use "../../styles/colors.scss";
+
+.MainContent {
+  padding-top: 0;
+  margin-right: 10px;
+  max-width: none;
+  width: 100%;
+  flex: 1 0 100%;
+  text-align: center;
+}
+
+.MainContent > h1 {
+  font-size: 1.5rem;
+  margin: 15px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.Logo {
+  height: 2.25rem;
+  margin-right: 0.5rem;
+  transform: translateY(15%);
+}
+
+.onPhone {
+  display: inline-block;
+  word-break: keep-all;
+}
+
+.MainContent > section > h4 {
+  margin-top: 5px;
+}
+
+.MainContent > p {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: colors.$bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.MainContent > p::after {
+  content: "";
+  position: absolute;
+  left: -1%;
+  top: 101%;
+  width: 102%;
+  height: 2.5px;
+  background-color: colors.$bold;
+  transition: transform 0.1s ease-out;
+}
+
+.MainContent > p:hover::after,
+.MainContent > p:focus::after {
+  transform: translateY(3px);
+}
+
+@media screen and (max-width: 550px) {
+  .MainContent > h1 {
+    font-size: 1.35rem;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .MainContent h2 {
+    margin-bottom: 5px;
+  }
+
+  .MainContent > section > h4 {
+    margin-top: 20px;
+  }
+
+  .MainContent {
+    margin: 0;
+  }
+}

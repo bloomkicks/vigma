@@ -1,0 +1,7 @@
+@use '../../styles/mixins';
+
+.Important {
+  display: inline-block;
+  @include mixins.inherited-font;
+  @include mixins.important-font;
+}

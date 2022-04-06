@@ -1,0 +1,50 @@
+@use "fonts.scss";
+@use "colors.scss";
+
+@mixin inherited-font {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+@mixin title-font {
+  font-family: fonts.$sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: colors.$anti-theme;
+}
+
+@mixin secondary-font {
+  @include title-font;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+@mixin third-font {
+  @include secondary-font;
+  font-size: 1.1rem;
+}
+
+@mixin important-font {
+  font-weight: bold;
+  color: colors.$bold;
+}
+
+@mixin interactive-font {
+  font-family: fonts.$serif;
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: colors.$interact;
+  cursor: pointer;
+}
+
+@mixin italic-font {
+  font-style: italic;
+}
+
+@mixin anchor-font {
+  @include italic-font;
+  font-style: normal;
+  color: colors.$bold;
+  text-decoration: underline;
+  cursor: pointer;
+}

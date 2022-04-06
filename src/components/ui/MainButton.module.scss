@@ -1,0 +1,23 @@
+@use "../../styles/colors.scss";
+@use '../../styles/mixins.scss';
+
+.Button {
+  @include mixins.interactive-font;
+  background-color: colors.$anti-theme;
+  border: none;
+  border-radius: 30px;
+  padding: 7px 10px;
+  transition: transform 50ms ease-in;
+}
+
+.Button > p {
+  transition: transform 50ms ease-in;
+}
+
+.Button:hover, .Button:focus {
+  transform: scalex(1.05);
+}
+
+.Button:hover > p, .Button:focus > p {
+  transform: scalex(0.95);
+}
