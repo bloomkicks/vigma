@@ -55,6 +55,8 @@ const TotalOrderForm = (props) => {
   const emailRef = useRef();
   const commentRef = useRef();
 
+  const { item } = props;
+
   const orderHandler = async (e) => {
     e.preventDefault();
 
@@ -163,6 +165,7 @@ const TotalOrderForm = (props) => {
           }}
           input={{
             props: {
+              required: true,
               ref: nameRef,
               type: "text",
               placeholder: "Имя",
@@ -182,6 +185,7 @@ const TotalOrderForm = (props) => {
                 type: "tel",
                 placeholder: "+_ (___) ___ __-__",
                 onInput: telInputHandler,
+                required: true,
               },
               className: classes.MinInput,
             }}

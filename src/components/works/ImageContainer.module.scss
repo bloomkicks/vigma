@@ -90,3 +90,9 @@
   width: 45%;
   height: 50%;
 }
+
+@media screen and (max-width: 550px) {
+  .images {
+    height: 70vw;
+  } 
+}

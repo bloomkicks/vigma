@@ -29,7 +29,7 @@ const kitchenShapes = {
 const tableMaterials = {
   title: "Столешница",
   question: "Выбирете материалы столешницы",
-  path: "/order-assets/kitchen/materials/table",
+  path: "/order-assets/kitchen/table",
   queryType: "&table",
   names: {
     "stone-acryl": "Искусственный камень Акрил",
@@ -43,7 +43,7 @@ const tableMaterials = {
 const kitchenBundle = {
   title: "Кухня",
   question: "Выбирете составляющие кухни",
-  path: "/order-assets/kitchen/",
+  path: "/order-assets/kitchen",
   names: {
     shape: "Форма",
     front: "Фасад",

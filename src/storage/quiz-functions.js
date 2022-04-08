@@ -56,6 +56,7 @@ export function getBundle({
     const section = {
       title,
       imgSrc,
+      path,
       query,
       name,
     };

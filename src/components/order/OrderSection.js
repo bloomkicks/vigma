@@ -12,27 +12,18 @@ const frontSrc =
   "/order-assets/materials/front/plastic.jpg";
 
 const OrderSection = (props) => {
-  const {
+  let {
     imgSrc: initImgSrc,
     custom,
     isFurther,
     query,
     isBody,
+    path,
     isFront,
     title,
     name,
     ...sectionProps
   } = props;
-
-  const imgSrc = custom
-    ? customSrc
-    : isFurther
-    ? furtherSrc
-    : isBody
-    ? bodySrc
-    : isFront
-    ? frontSrc
-    : initImgSrc;
 
   const router = useRouter();
 
@@ -57,18 +48,13 @@ const OrderSection = (props) => {
 
   const orderClickHandler = (e) => {
     let url = `${router.pathname}?${allQueries}`;
-    if (
-      allQueries.has("bundle") ||
-      (allQueries.keys.length === 0 && custom)
-    )
-      url = `/order?${allQueries}`;
 
     router.push(url);
   };
 
   let curParams = new URLSearchParams(router.query);
 
-  let condition =
+  let valueCond =
     !curParams.has("bundle") &&
     !isFurther &&
     curParams.has("category") &&
@@ -77,12 +63,57 @@ const OrderSection = (props) => {
     curParams.get("body") !== "current" &&
     curParams.get("table") !== "current";
 
-  let result =
+  let valueRes =
     orderTranslations[curParams.get(name)] ||
     curParams.get(name) ||
     "Не Выбрано";
 
-  let value = condition && result;
+  let value = valueCond && valueRes;
+  let isChosen = false;
+  let chosenSrc = null;
+  if (valueCond) {
+    let myValue = curParams.get(name);
+    if (myValue) {
+      isChosen = true;
+      chosenSrc =
+        path +
+        "/" +
+        name +
+        "/" +
+        curParams.get(name) +
+        ".jpg";
+      if ("frontbody".includes(name)) {
+        chosenSrc =
+          "/order-assets/materials/" +
+          name +
+          "/" +
+          curParams.get(name) +
+          ".jpg";
+      }
+
+      console.log(chosenSrc);
+    }
+  }
+
+  if (
+    isChosen &&
+    (!orderTranslations[curParams.get(name)] ||
+      curParams.get(name) === "custom")
+  ) {
+    chosenSrc = customSrc;
+  }
+
+  const imgSrc = isChosen
+    ? chosenSrc
+    : custom
+    ? customSrc
+    : isFurther
+    ? furtherSrc
+    : isBody
+    ? bodySrc
+    : isFront
+    ? frontSrc
+    : initImgSrc;
 
   return (
     <Section

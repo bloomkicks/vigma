@@ -8,3 +8,9 @@
   flex-wrap: wrap;
   text-align: left;
 }
+
+@media screen and (max-width: 550px) {
+  .MainWork {
+    margin: 20px 0 10px 0
+  } 
+}

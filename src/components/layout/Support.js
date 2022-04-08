@@ -1,33 +1,49 @@
+import { CSSTransition } from "react-transition-group";
 import { useState, useEffect } from "react";
 import classes from "./Support.module.css";
 
 const Support = (props) => {
   const [isShown, setIsShown] = useState(true);
-  const [expanded, setExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   function expandHandler(e) {
     e.stopPropagation();
-    setExpanded(true);
+    setIsExpanded(true);
   }
   function unexpandHandler() {
-    setExpanded(false);
+    setIsExpanded(false);
   }
 
   useEffect(() => {
-    window.addEventListener("click", unexpandHandler);
-    setTimeout(() => setIsShown(true), 180000);
+    window.addEventListener("click", () => {
+      setIsShown(false);
+      unexpandHandler();
+    });
   }, []);
 
   return (
     <section className={classes.support}>
-      {expanded && (
+      <CSSTransition
+        timeout={500}
+        in={isExpanded}
+        classNames={{
+          enterActive: classes.expanding,
+          enterDone: classes.expanded,
+          exitActive: classes.unexpanding,
+          exitDone: classes.unexpanded,
+        }}
+      >
         <div
           className={classes.stack}
           onClick={(e) => {
             e.stopPropagation();
           }}
         >
-          <a target="_blank" href="https://vk.com/vigmaspb">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://vk.com/vigmaspb"
+          >
             <img
               src="/support_vk.svg"
               alt="Помощь ВКонтакте"
@@ -46,33 +62,43 @@ const Support = (props) => {
             />
           </a>
         </div>
-      )}
+      </CSSTransition>
       <img
         onClick={
-          expanded
+          isExpanded
             ? (e) => unexpandHandler(e)
             : (e) => expandHandler(e)
         }
-        src="/support.png"
+        src={
+          isShown ? "/support_message.png" : "/support.png"
+        }
         alt="Иконка Тех. Поддержки"
         className={classes.bg}
       />
-      {isShown && (
+      <CSSTransition
+        timeout={500}
+        in={isShown}
+        classNames={{
+          enterDone: classes.shown,
+          exitActive: classes.unshowing,
+          exitDone: classes.unshown,
+        }}
+      >
         <div
           onClick={(e) => {
-            expandHandler(e);
-            setIsShown(false)
+            setTimeout(() => setIsShown(true), 40000);
+            setIsShown(false);
             e.stopPropagation();
           }}
           className={classes.message}
         >
           <b>Готовы помочь!</b>
           <p>
-            Здравствуйте, если у вас возникли вопросы - мы с
-            радостью на них ответим и поможем
+            Здравствуйте, если у вас возник вопрос - просто
+            позвоните или напишите, и мы вам поможем
           </p>
         </div>
-      )}
+      </CSSTransition>
     </section>
   );
 };

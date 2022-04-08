@@ -1,6 +1,5 @@
-import OrdersFooter from "./OrdersFooter";
+import OrdersTitle from "./OrdersTitle";
 import AntiButton from "../ui/AntiButton";
-import Question from "../ui/Question";
 import Content from "../layout/Content";
 import Orders from "./Orders";
 import Link from "next/link";
@@ -11,14 +10,14 @@ const OrderContent = (props) => {
 
   return (
     <Content className={classes.OrderContent}>
-      <Question>{props.question}</Question>
+      {title && <OrdersTitle>{title}</OrdersTitle>}
       <Orders orders={props.orders} />
-      {!title ? (
+      {!title && (
         <Link href="/contacts" passHref>
-          <AntiButton><p>По Телефону</p></AntiButton>
+          <AntiButton>
+            <p>По Телефону</p>
+          </AntiButton>
         </Link>
-      ) : (
-        <OrdersFooter>{title}</OrdersFooter>
       )}
     </Content>
   );

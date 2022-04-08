@@ -19,9 +19,15 @@ const TotalOrderTree = (props) => {
       {orderInfo
         .filter((item) => item.property)
         .map((info, index, array) => {
-          const isLast = index >= array.length - 1;
+          const isFirst = index === 0;
           return (
             <div key={index}>
+              {!isFirst && (
+                <img
+                  src={doubleArrowSvg}
+                  key={Math.random()}
+                />
+              )}
               <div>
                 <p>{info.key}:</p>
                 {typeof info.property === "object" ? (
@@ -32,12 +38,6 @@ const TotalOrderTree = (props) => {
                   <Third>{info.property}</Third>
                 )}
               </div>
-              {!isLast && (
-                <img
-                  src={doubleArrowSvg}
-                  key={Math.random()}
-                />
-              )}
             </div>
           );
         })}

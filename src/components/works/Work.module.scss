@@ -26,12 +26,14 @@
 }
 
 .left > h2 {
+  z-index: 1;
+  font-size: 1.2rem;
   line-height: 1.04em;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .left > p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .right {
