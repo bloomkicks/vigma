@@ -10,24 +10,40 @@ const TotalOrderPage = (props) => {
   const router = useRouter();
   const item = router.query.item;
 
+  function translate(word) {
+    return (
+      orderTranslations[router.query[word]] ||
+      router.query[word]
+    );
+  }
+
   let orderInfo;
   if (!item) {
     orderInfo = [
       {
+        actual: "category",
         key: "Категория",
-        property: orderTranslations.type[router.query.type],
+        property: translate("category"),
       },
       {
+        actual: "shape",
         key: "Форма",
-        property:
-          orderTranslations.shape[router.query.shape],
+        property: translate("shape"),
       },
       {
-        key: "Материалы",
-        property: (router.query.material || "")
-          .split("+")
-          .map((query) => orderTranslations.material[query])
-          .join(" + "),
+        actual: "front",
+        key: "Фасад",
+        property: translate("front"),
+      },
+      {
+        actual: "table",
+        key: "Столешница",
+        property: translate("table"),
+      },
+      {
+        actual: "body",
+        key: "Корпус",
+        property: translate("body"),
       },
     ];
   }

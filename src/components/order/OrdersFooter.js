@@ -10,21 +10,25 @@ const OrdersFooter = (props) => {
   const clickHandler = (e) => {
     const searchParams = new URLSearchParams(router.query);
     let lastCloset = "";
-    searchParams.forEach((value, key) => (lastCloset = key));
-    searchParams.delete(lastCloset)
+    searchParams.forEach(
+      (value, key) => (lastCloset = key)
+    );
+    searchParams.delete(lastCloset);
 
     router.push(`${location.pathname}?${searchParams}`);
   };
 
   return (
-    <div className={classes.OrdersFooter}>
+    <div
+      className={classes.OrdersFooter}
+      onClick={clickHandler}
+    >
       <img
-        onClick={clickHandler}
         src={arrowSvg}
         alt="Назад"
         className={classes.Arrow}
       />
-      <Third>{children}</Third>
+      <Third style={{cursor: 'pointer'}}>{children}</Third>
     </div>
   );
 };

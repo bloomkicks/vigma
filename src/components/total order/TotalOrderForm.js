@@ -93,6 +93,10 @@ const TotalOrderForm = (props) => {
       comment,
     };
 
+    const orderInfo = props.orderInfo.map(
+      (info) => info.actual
+    );
+
     const emailParams = {
       item,
       ...orderInfo,

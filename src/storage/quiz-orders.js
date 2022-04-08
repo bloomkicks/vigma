@@ -1,110 +1,240 @@
-// STARTING ORDERS
-const kitchenSrc = "/order-assets/starting_items/kitchen.jpg";
-const closetSrc = "/order-assets/starting_items/closet.jpg";
-const childSrc = "/order-assets/starting_items/child.jpg";
-const officeSrc = "/order-assets/starting_items/office.jpg";
-const bathSrc = "/order-assets/starting_items/bath.jpg";
-const tradeSrc = "/order-assets/starting_items/trade.jpg";
+import { getMetaOrders, getBundle } from "./quiz-functions";
+const categories = {
+  question: "Выбирете категорию мебели",
+  path: "/order-assets/starting_items",
+  queryType: "?category",
+  names: {
+    kitchen: "Кухни",
+    closet: "Шкафы",
+    child: "Детская мебель",
+    bath: "Мебель для Ванной",
+    trade: "Торговая мебель",
+    office: "Офисная мебель",
+  },
+};
 
-// KITCHEN ORDERS
-const linearSrc = "/order-assets/kitchen/linear.jpg";
-const angledSrc = "/order-assets/kitchen/angle.jpg";
-const uShapedSrc = "/order-assets/kitchen/u-shaped.jpg";
-const kitchenOthersSrc = "/order-assets/kitchen/other.jpg";
+// KITCHEN
+const kitchenShapes = {
+  title: "Форма Кухни",
+  question: "Выбирете форму мебели",
+  path: "/order-assets/kitchen/shape",
+  queryType: "&shape",
+  names: {
+    linear: "Прямая",
+    angled: "Угловая",
+    "u-shaped": "П-образная",
+  },
+};
 
-// MATERIALS ORDERS
-const ldspSrc = "/order-assets/materials/ldsp.jpg";
-const mdfSrc = "/order-assets/materials/mdf.jpg";
-const massiveSrc = "/order-assets/materials/massive.jpg";
-const materialsOthersSrc = "/order-assets/materials/other.jpg";
+const tableMaterials = {
+  title: "Столешница",
+  question: "Выбирете материалы столешницы",
+  path: "/order-assets/kitchen/materials/table",
+  queryType: "&table",
+  names: {
+    "stone-acryl": "Искусственный камень Акрил",
+    massive: "Массив",
+    troya: "ДСП Троя",
+    agra: "ДСП Агра",
+    quartz: "Искусственный камень Кварц",
+  },
+};
 
-const startingOrders = [
-  {
-    imgSrc: kitchenSrc,
-    title: "Кухня",
-    query: "?type=kitchen",
+const kitchenBundle = {
+  title: "Кухня",
+  question: "Выбирете составляющие кухни",
+  path: "/order-assets/kitchen/",
+  names: {
+    shape: "Форма",
+    front: "Фасад",
+    body: "Корпус",
+    table: "Столешница",
   },
-  {
-    imgSrc: closetSrc,
-    title: "Шкаф или Прихожая",
-    query: "?type=closet",
-  },
-  {
-    imgSrc: childSrc,
-    title: "Детская",
-    query: "?type=child",
-  },
-  {
-    imgSrc: officeSrc,
-    title: "Офисная мебель",
-    query: "?type=office",
-  },
-  {
-    imgSrc: bathSrc,
-    title: "Мебель для Ванной",
-    query: "?type=bath",
-  },
-  {
-    imgSrc: tradeSrc,
-    title: "Торговая мебель",
-    query: "?type=trade",
-  },
-];
+};
 
-const kitchenOrders = [
-  {
-    imgSrc: linearSrc,
-    title: "Прямая",
-    query: "&shape=linear",
+// CLOSET
+const closetShapes = {
+  title: "Тип Шкафа",
+  question: "Выбирете тип шкафа",
+  path: "/order-assets/closet/shape",
+  queryType: "&shape",
+  names: {
+    kupe: "Шкаф-Купе",
+    entry: "Прихожая",
+    wardrobe: "Гардеробная",
   },
-  {
-    imgSrc: angledSrc,
-    title: "Угловая",
-    query: "&shape=angled",
-  },
-  {
-    imgSrc: uShapedSrc,
-    title: "П-образная",
-    query: "&shape=u-shaped",
-  },
-  {
-    imgSrc: kitchenOthersSrc,
-    others: true,
-    query: "&shape=others",
-  },
-];
+};
 
-const materialsOrders = [
-  {
-    imgSrc: ldspSrc,
-    title: "ЛДСП",
-    query: "&material=ldsp",
-    total: true,
+const closetBundle = {
+  title: "Шкаф",
+  question: "Выбирете составляющие шкафа",
+  path: "/order-assets/closet",
+  names: {
+    shape: "Тип Шкафа",
+    front: "Фасад",
+    body: "Корпус",
   },
-  {
-    imgSrc: mdfSrc,
-    title: "МДФ",
-    query: "&material=mdf",
-    total: true,
-  },
-  {
-    imgSrc: massiveSrc,
-    title: "Массив",
-    query: "&material=massive",
-    total: true,
-  },
-  {
-    imgSrc: materialsOthersSrc,
-    others: true,
-    query: "&material=others",
-    total: true,
-  },
-];
+};
 
-const quizOrders = {
-  starting: startingOrders,
-  kitchen: kitchenOrders,
-  materials: materialsOrders
-}
+// CHILD
+const childShapes = {
+  title: "Категория Детской мебели",
+  question: "Выбирете категорию детской мебели",
+  queryType: "&shape",
+  path: "/order-assets/child/shape",
+  names: {
+    table: "Столики",
+    bed: "Кровати",
+    wall: "Детские Стенки",
+  },
+};
 
-export default quizOrders
+const childBundle = {
+  title: "Детская мебель",
+  question: "Выбирете составляющие детской мебели",
+  path: "/order-assets/child",
+  names: {
+    shape: "Категория",
+    front: "Фасад",
+    body: "Корпус",
+  },
+};
+
+// OFFICE
+const officeShapes = {
+  title: "Категория Офисной мебели",
+  question: "Выбирете категорию офисной мебели",
+  queryType: "&shape",
+  path: "/order-assets/office/shape",
+  names: {
+    table: "Столы",
+    shelf: "Стеллажи",
+    wardrobe: "Гардеробные",
+  },
+};
+
+const officeBundle = {
+  title: "Офисная мебель",
+  question: "Выбирете составляющие офисной мебели",
+  path: "/order-assets/office",
+  names: {
+    shape: "Категория",
+    front: "Фасад",
+    body: "Корпус",
+  },
+};
+
+// TRADE
+const tradeShapes = {
+  title: "Категория Торговой мебели",
+  question: "Выбирете категорию торговой мебели",
+  queryType: "&shape",
+  path: "/order-assets/trade/shape",
+  names: {
+    island: "Островки",
+    stall: "Прилавки",
+    shelf: "Стеллажи",
+  },
+};
+
+const tradeBundle = {
+  title: "Торговая мебель",
+  question: "Выбирете составляющие торговой мебели",
+  path: "/order-assets/trade",
+  names: {
+    shape: "Категория",
+    front: "Фасад",
+    body: "Корпус",
+  },
+};
+
+// BATH
+const bathShapes = {
+  title: "Категория мебели для Ванной",
+  question: "Выбирете пенал для ванной",
+  queryType: "&shape",
+  path: "/order-assets/bath/shape",
+  names: {
+    penal: "Напольный Пенал",
+    flying: "Подвесной Пенал",
+  },
+};
+
+const bathBundle = {
+  title: "Мебель для Ванной",
+  question: "Выбирете составляющие для мебели в ванной",
+  path: "/order-assets/bath",
+  names: {
+    shape: "Пенал",
+    front: "Фасад",
+    body: "Корпус",
+  },
+};
+
+// BODY MATERIALS
+const bodyMaterials = {
+  title: "Корпус",
+  question: "Выбирете материалы корпуса",
+  path: "/order-assets/materials/body",
+  queryType: "&body",
+  names: { egger: "ЛДСП Egger", ldsp: "ЛДСП", dsp: "ДСП" },
+};
+
+// FRONT MATERIALS
+const frontMaterials = {
+  title: "Фасад",
+  question: "Выбирете материалы фасада",
+  path: "/order-assets/materials/front",
+  queryType: "&front",
+  names: {
+    ldsp: "ЛДСП",
+    plastic: "Пластик",
+    agt: "МДФ AGT",
+    acryllic: "Акрил",
+    dyed: "МДФ Крашенный",
+    tape: "МДФ Плёнка",
+    massive: "Массив",
+  },
+};
+
+const allOrders = {
+  category: getMetaOrders(categories),
+
+  materials: {
+    front: getMetaOrders(frontMaterials),
+    body: getMetaOrders(bodyMaterials),
+  },
+
+  kitchen: {
+    shape: getMetaOrders(kitchenShapes),
+    table: getMetaOrders(tableMaterials),
+    bundle: getBundle(kitchenBundle),
+  },
+
+  closet: {
+    shape: getMetaOrders(closetShapes),
+    bundle: getBundle(closetBundle),
+  },
+
+  child: {
+    shape: getMetaOrders(childShapes),
+    bundle: getBundle(childBundle),
+  },
+
+  office: {
+    shape: getMetaOrders(officeShapes),
+    bundle: getBundle(officeBundle),
+  },
+
+  trade: {
+    shape: getMetaOrders(tradeShapes),
+    bundle: getBundle(tradeBundle),
+  },
+
+  bath: {
+    shape: getMetaOrders(bathShapes),
+    bundle: getBundle(bathBundle),
+  },
+};
+
+export default allOrders;
