@@ -1,59 +1,34 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-5cd94c89d3acac5f.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
-  "ampDevFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/amp.js"
+  ],
   "lowPriorityFiles": [
-    "static/DRm7ZmTnysrunaWugR0J7/_buildManifest.js",
-    "static/DRm7ZmTnysrunaWugR0J7/_ssgManifest.js",
-    "static/DRm7ZmTnysrunaWugR0J7/_middlewareManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_middlewareManifest.js"
   ],
   "pages": {
     "/_app": [
-      "static/chunks/main-797a47df2f6e7f94.js",
-      "static/css/5e0d6c9ae999ea50.css",
-      "static/chunks/pages/_app-8a0223d346423d41.js"
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/main-797a47df2f6e7f94.js",
-      "static/css/8686046bc6a94842.css",
-      "static/chunks/pages/_error-43fdb4333be29546.js"
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
     ],
     "/about-us": [
-      "static/chunks/main-797a47df2f6e7f94.js",
-      "static/css/b340b7f3bc0522f3.css",
-      "static/chunks/pages/about-us-e9c5d3f4da07f262.js"
-    ],
-    "/contacts": [
-      "static/chunks/main-797a47df2f6e7f94.js",
-      "static/css/92924e10625e2f53.css",
-      "static/chunks/pages/contacts-7f11f433331fd005.js"
+      "static/chunks/main.js",
+      "static/chunks/pages/about-us.js"
     ],
     "/main": [
-      "static/chunks/main-797a47df2f6e7f94.js",
-      "static/css/30285eb2179ff5f2.css",
-      "static/chunks/pages/main-e225ac5b662ab7af.js"
-    ],
-    "/order": [
-      "static/chunks/main-797a47df2f6e7f94.js",
-      "static/css/2d327ef3da519e12.css",
-      "static/chunks/pages/order-b520394bff024d21.js"
-    ],
-    "/order/quiz": [
-      "static/chunks/main-797a47df2f6e7f94.js",
-      "static/css/26d89dab983e31c3.css",
-      "static/chunks/pages/order/quiz-cf20538f174bdc2e.js"
-    ],
-    "/reviews": [
-      "static/chunks/main-797a47df2f6e7f94.js",
-      "static/css/66863edeff3c56df.css",
-      "static/chunks/pages/reviews-1960d2cc2f63535d.js"
-    ],
-    "/works": [
-      "static/chunks/main-797a47df2f6e7f94.js",
-      "static/css/e36a1a1e8277f972.css",
-      "static/chunks/pages/works-152c081da8ad47dd.js"
+      "static/chunks/main.js",
+      "static/chunks/pages/main.js"
     ]
   },
   "ampFirstPages": []

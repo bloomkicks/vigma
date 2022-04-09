@@ -1,6 +1,5 @@
-const doubleArrowSvg = "/order-assets/double-arrow.svg";
 import Section from "../ui/Section";
-import Third from "../ui/Third";
+import Secondary from "../ui/Secondary";
 import classes from "./TotalOrderTree.module.scss";
 
 const TotalOrderTree = (props) => {
@@ -8,39 +7,18 @@ const TotalOrderTree = (props) => {
 
   if (item) {
     return (
-      <h2>
-        {item}
-      </h2>
-    )
+      <Secondary className={classes.work}>{item}</Secondary>
+    );
   }
-
   return (
-    <Section className={classes.TotalOrderTree}>
-      {orderInfo
-        .filter((item) => item.property)
-        .map((info, index, array) => {
-          const isFirst = index === 0;
-          return (
-            <div key={index}>
-              {!isFirst && (
-                <img
-                  src={doubleArrowSvg}
-                  key={Math.random()}
-                />
-              )}
-              <div>
-                <p>{info.key}:</p>
-                {typeof info.property === "object" ? (
-                  info.property.map((prop, i) => {
-                    <Third key={prop + i}>{prop}</Third>;
-                  })
-                ) : (
-                  <Third>{info.property}</Third>
-                )}
-              </div>
-            </div>
-          );
-        })}
+    <Section className={classes.tree}>
+      {orderInfo.map((info) => {
+        if (info.property) return (
+          <p key={Math.random()}>
+            <b>{info.key}</b>: {info.property}
+          </p>
+        ) 
+      })}
     </Section>
   );
 };

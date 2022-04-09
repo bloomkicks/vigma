@@ -1,6 +1,6 @@
 import { CSSTransition } from "react-transition-group";
 import { useState, useEffect } from "react";
-import classes from "./Support.module.css";
+import classes from "./Support.module.scss";
 
 const Support = (props) => {
   const [isShown, setIsShown] = useState(true);
@@ -49,13 +49,17 @@ const Support = (props) => {
               alt="Помощь ВКонтакте"
             />
           </a>
-          <a href="tel:8 (964) 342 60-51">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://wa.me/79643426051"
+          >
             <img
               src="/support_wa.svg"
               alt="Помощь WhatsApp"
             />
           </a>
-          <a href="tel: 8 (812) 642 60-51">
+          <a href="tel:+7 (812) 642 60-51">
             <img
               src="/support_phone.svg"
               alt="Помощь по Телефону"
@@ -88,11 +92,12 @@ const Support = (props) => {
           onClick={(e) => {
             setTimeout(() => setIsShown(true), 40000);
             setIsShown(false);
+            expandHandler(e);
             e.stopPropagation();
           }}
           className={classes.message}
         >
-          <b>Готовы помочь!</b>
+          <strong>Готовы помочь!</strong>
           <p>
             Здравствуйте, если у вас возник вопрос - просто
             позвоните или напишите, и мы вам поможем

@@ -66,7 +66,7 @@ const OrderSection = (props) => {
   let valueRes =
     orderTranslations[curParams.get(name)] ||
     curParams.get(name) ||
-    "Не Выбрано";
+    "-";
 
   let value = valueCond && valueRes;
   let isChosen = false;
@@ -135,10 +135,12 @@ const OrderSection = (props) => {
           />
         ) : (
           <Secondary>
-            {isFurther
-              ? "Продолжить"
-              : title + ((value && ": ") || "")}
-            {value && <b>{value}</b>}
+            <b>
+              {isFurther
+                ? "Продолжить"
+                : title + ((value && ": ") || "")}
+              {value && <span style={{fontWeight: 'normal'}}>{value}</span>}
+            </b>
           </Secondary>
         )}
       </div>
