@@ -6,7 +6,7 @@ const OrderButton = (props) => {
   return (
     <Link href="/order/quiz" passHref>
       <MainButton tabIndex={5} className={classes.Button}>
-        <p>Заказать дизайн-проект</p>
+        <p>Предварительно Рассчитать</p>
       </MainButton>
     </Link>
   );

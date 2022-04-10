@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import Secondary from "../ui/Secondary";
-import classes from "./OrdersTitle.module.css";
+import classes from "./OrdersTitle.module.scss";
 
 const arrowSvg = "/order-assets/next-arrow.svg";
 const OrdersTitle = (props) => {

@@ -42,7 +42,7 @@ const OrderPage = (props) => {
   const category = router.query["category"];
   const queries = ["shape"];
   if (category === "kitchen") {
-    queries.push("table");
+    queries.push("tablet");
   }
   if (
     [
@@ -55,6 +55,10 @@ const OrderPage = (props) => {
     ].includes(category)
   ) {
     getContent(category, queries);
+  } else if (category) {
+    router.push(
+      `/order?category=${router.query.category}`
+    );
   }
   let allDone = true;
   for (let query of [...queries, "front", "body"]) {
@@ -73,7 +77,7 @@ const OrderPage = (props) => {
   }
 
   return (
-    <Page title="Заказать">
+    <Page title="Рассчитать">
       <OrderContent {...content} />
     </Page>
   );

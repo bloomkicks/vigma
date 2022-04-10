@@ -7,9 +7,9 @@ import orderTranslations from "../../storage/order-translations";
 
 const furtherSrc = "/order-assets/further.jpg";
 const customSrc = "/order-assets/custom.jpg";
-const bodySrc = "/order-assets/materials/body/egger.jpg";
+const bodySrc = "/order-assets/body.jpg";
 const frontSrc =
-  "/order-assets/materials/front/plastic.jpg";
+  "/order-assets/front.jpg";
 
 const OrderSection = (props) => {
   let {
@@ -61,7 +61,7 @@ const OrderSection = (props) => {
     curParams.get("shape") !== "current" &&
     curParams.get("front") !== "current" &&
     curParams.get("body") !== "current" &&
-    curParams.get("table") !== "current";
+    curParams.get("tablet") !== "current";
 
   let valueRes =
     orderTranslations[curParams.get(name)] ||

@@ -50,7 +50,7 @@ const TotalOrderPage = (props) => {
 
   return (
     <Page
-      title="Заказать"
+      title="Рассчитать"
       className={classes.TotalOrderPage}
     >
       <TotalOrderTree item={item} orderInfo={orderInfo} />

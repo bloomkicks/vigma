@@ -29,14 +29,14 @@ const kitchenShapes = {
 const tableMaterials = {
   title: "Столешница",
   question: "Выбирете материалы столешницы",
-  path: "/order-assets/kitchen/table",
-  queryType: "&table",
+  path: "/order-assets/kitchen/tablet",
+  queryType: "&tablet",
   names: {
-    "stone-acryl": "Искусственный камень Акрил",
+    "stone-acryl": "Искусственный Акрил",
     massive: "Массив",
     troya: "ДСП Троя",
     agra: "ДСП Агра",
-    quartz: "Искусственный камень Кварц",
+    quartz: "Искусственный Кварц",
   },
 };
 
@@ -48,13 +48,13 @@ const kitchenBundle = {
     shape: "Форма",
     front: "Фасад",
     body: "Корпус",
-    table: "Столешница",
+    tablet: "Столешница",
   },
 };
 
 // CLOSET
 const closetShapes = {
-  title: "Тип Шкафа",
+  title: "Тип",
   question: "Выбирете тип шкафа",
   path: "/order-assets/closet/shape",
   queryType: "&shape",
@@ -151,12 +151,13 @@ const tradeBundle = {
 // BATH
 const bathShapes = {
   title: "Категория мебели для Ванной",
-  question: "Выбирете пенал для ванной",
+  question: "Выбирете мебель для ванной",
   queryType: "&shape",
   path: "/order-assets/bath/shape",
   names: {
-    penal: "Напольный Пенал",
-    flying: "Подвесной Пенал",
+    penal: "Пенал",
+    closet: "Шкаф",
+    tablet: "Столешница"
   },
 };
 
@@ -165,7 +166,7 @@ const bathBundle = {
   question: "Выбирете составляющие для мебели в ванной",
   path: "/order-assets/bath",
   names: {
-    shape: "Пенал",
+    shape: "Категория",
     front: "Фасад",
     body: "Корпус",
   },
@@ -207,7 +208,7 @@ const allOrders = {
 
   kitchen: {
     shape: getMetaOrders(kitchenShapes),
-    table: getMetaOrders(tableMaterials),
+    tablet: getMetaOrders(tableMaterials),
     bundle: getBundle(kitchenBundle),
   },
 

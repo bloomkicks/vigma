@@ -62,7 +62,7 @@ const Work = (props) => {
         )}
       </figcaption>
       <MainButton tabIndex={1} onClick={orderHandler}>
-        <p>ЗАКАЗАТЬ</p>
+        <p>Рассчитать</p>
       </MainButton>
     </section>
   );

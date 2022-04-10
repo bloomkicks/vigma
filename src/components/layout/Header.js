@@ -75,7 +75,7 @@ const Header = (props) => {
               onBlur={navBlurHandler}
               isBlack
             >
-              Заказать
+              Рассчитать
             </NavLink>
             <NavLink
               href="/contacts"
