@@ -144,7 +144,7 @@
 }
 
 .message > p {
-  margin-top: 1px;
+  margin-top: 3px;
 }
 
 @media screen and (max-width: 550px) {
@@ -152,7 +152,6 @@
     font-size: 0.9rem;
     max-width: 250px;
     width: 90vw;
-    max-height: 100px;
     right: 35%;
     bottom: 115%;
   }

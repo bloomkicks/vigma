@@ -6,18 +6,17 @@ const TotalOrderTree = (props) => {
   const { orderInfo, item, ...treeProps } = props;
 
   if (item) {
-    return (
-      <Secondary className={classes.work}>{item}</Secondary>
-    );
+    return <Secondary className={classes.work}>{item}</Secondary>;
   }
   return (
     <Section className={classes.tree}>
       {orderInfo.map((info) => {
-        if (info.property) return (
-          <p key={Math.random()}>
-            <b>{info.key}</b>: {info.property}
-          </p>
-        ) 
+        if (info.property)
+          return (
+            <p key={Math.random()}>
+              <b>{info.key}</b>: {info.property}
+            </p>
+          );
       })}
     </Section>
   );

@@ -1,6 +1,6 @@
 const orderTranslations = {
-  kitchen: "Кухня",
-  closet: "Шкаф",
+  kitchen: "Кухни",
+  closet: "Шкафы",
   child: "Детская мебель",
   trade: "Торговая мебель",
   office: "Офисная мебель",

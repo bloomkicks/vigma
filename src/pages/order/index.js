@@ -38,7 +38,7 @@ const TotalOrderPage = (props) => {
       {
         actual: "table",
         key: "Столешница",
-        property: translate("table"),
+        property: translate("tablet"),
       },
       {
         actual: "body",

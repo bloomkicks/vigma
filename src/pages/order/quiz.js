@@ -1,80 +1,45 @@
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
+import { quizActions } from "../../store/quiz";
 import OrderContent from "../../components/order/OrderContent";
 import Page from "../../components/layout/Page";
 import allOrders from "../../storage/quiz-orders";
 
+function stringQueries(queries) {
+  let result = "";
+  for (let query in queries) {
+    let value = queries[query];
+    if (value) {
+      let symbol = result.length > 0 ? "&" : "?";
+      result += symbol + query + "=" + value;
+    }
+  }
+
+  return result;
+}
+
 const OrderPage = (props) => {
   const router = useRouter();
+  const dispatch = useDispatch()
+  const quiz = useSelector((state) => state.quiz);
 
-  let content = allOrders.category;
-  function getContent(tree, values) {
-    content = allOrders[tree].bundle;
-    for (let material of content.orders.filter((i) =>
-      "frontbody".includes(i.name)
-    )) {
-      if (material.name === "front") {
-        material.isFront = true;
-      } else {
-        material.isBody = true;
-      }
-    }
-    if (!values || values.length === 0) {
-      return;
-    }
+  const queries = stringQueries(quiz.queries)
 
-    getCurrent: {
-      for (let value of values) {
-        if (router.query[value] === "current") {
-          content = allOrders[tree][value];
-          break getCurrent;
-        }
-      }
-      for (let value of ["front", "body"]) {
-        if (router.query[value] === "current") {
-          content = allOrders.materials[value];
-          break getCurrent;
-        }
-      }
-    }
+  if (quiz.isFinished) {
+    router.push("/order" + queries);
+    dispatch(quizActions.finish(false))
   }
 
-  const category = router.query["category"];
-  const queries = ["shape"];
-  if (category === "kitchen") {
-    queries.push("tablet");
-  }
-  if (
-    [
-      "kitchen",
-      "closet",
-      "child",
-      "bath",
-      "trade",
-      "office",
-    ].includes(category)
-  ) {
-    getContent(category, queries);
-  } else if (category) {
-    router.push(
-      `/order?category=${router.query.category}`
-    );
-  }
-  let allDone = true;
-  for (let query of [...queries, "front", "body"]) {
-    const real = router.query[query];
-    if (real && real !== "current") {
-    } else {
-      allDone = false;
-    }
-  }
-
-  if (allDone) {
-    const url = `/order?${new URLSearchParams(
-      router.query
-    )}`;
-    router.push(url);
-  }
+  let isInMaterials = "frontbody".includes(quiz.current);
+  let content = isInMaterials
+    ? allOrders.materials[quiz.current]
+    : quiz.current
+    ? allOrders[quiz.bundle][quiz.current]
+    : quiz.bundle
+    ? allOrders[quiz.bundle].bundle
+    : allOrders.category;
 
   return (
     <Page title="Рассчитать">

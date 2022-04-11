@@ -1,132 +1,69 @@
-import { useRouter } from "next/router";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Secondary from "../ui/Secondary";
 import Section from "../ui/Section";
 import classes from "./OrderSection.module.scss";
 
 import orderTranslations from "../../storage/order-translations";
+import { quizActions } from "../../store/quiz";
 
-const furtherSrc = "/order-assets/further.jpg";
 const customSrc = "/order-assets/custom.jpg";
-const bodySrc = "/order-assets/body.jpg";
-const frontSrc =
-  "/order-assets/front.jpg";
 
-const OrderSection = (props) => {
-  let {
+const OrderSection = React.memo((props) => {
+  const dispatch = useDispatch();
+  const quiz = useSelector((state) => state.quiz);
+
+  const {
     imgSrc: initImgSrc,
-    custom,
+    isCustom,
     isFurther,
     query,
-    isBody,
     path,
-    isFront,
     title,
     name,
     ...sectionProps
   } = props;
 
-  const router = useRouter();
-
-  function getAllQueries(query, format = (q) => q) {
-    const formattedQuery = format(
-      query.slice(1).split("=")
-    );
-    const searchParams = new URLSearchParams(router.query);
-    searchParams.delete(formattedQuery[0]);
-    searchParams.append(...formattedQuery);
-    return searchParams;
-  }
-
-  let allQueries = getAllQueries(query);
-
+  let customValue = "";
   const inputHandler = (e) => {
-    allQueries = getAllQueries(query, (q) => {
-      q[1] = e.target.value;
-      return q;
-    });
+    customValue = e.target.value;
   };
 
   const orderClickHandler = (e) => {
-    let url = `${router.pathname}?${allQueries}`;
-
-    router.push(url);
+    if (!quiz.bundle && !quiz.current) {
+      if (isCustom) {
+        dispatch(quizActions.selectCustom(customValue));
+        dispatch(quizActions.finish());
+      } else dispatch(quizActions.getIntoBundle(name));
+    } else if (isFurther) {
+      dispatch(quizActions.finish());
+    } else if (isCustom) {
+      dispatch(quizActions.selectCustom(customValue));
+    } else if (!quiz.current) {
+      dispatch(quizActions.setInBundle(name));
+    } else {
+      dispatch(quizActions.selectOrder(name));
+    }
   };
 
-  let curParams = new URLSearchParams(router.query);
-
-  let valueCond =
-    !curParams.has("bundle") &&
-    !isFurther &&
-    curParams.has("category") &&
-    curParams.get("shape") !== "current" &&
-    curParams.get("front") !== "current" &&
-    curParams.get("body") !== "current" &&
-    curParams.get("tablet") !== "current";
-
-  let valueRes =
-    orderTranslations[curParams.get(name)] ||
-    curParams.get(name) ||
-    "-";
-
-  let value = valueCond && valueRes;
-  let isChosen = false;
-  let chosenSrc = null;
-  if (valueCond) {
-    let myValue = curParams.get(name);
-    if (myValue) {
-      isChosen = true;
-      chosenSrc =
-        path +
-        "/" +
-        name +
-        "/" +
-        curParams.get(name) +
-        ".jpg";
-      if ("frontbody".includes(name)) {
-        chosenSrc =
-          "/order-assets/materials/" +
-          name +
-          "/" +
-          curParams.get(name) +
-          ".jpg";
-      }
-
-      console.log(chosenSrc);
-    }
+  let translation = orderTranslations[quiz.queries[name]];
+  const value = translation || quiz.queries[name];
+  let imgSrc = initImgSrc;
+  if (value) {
+    let standard = `${path}/${name}/${quiz.queries[name]}.jpg`;
+    imgSrc = translation ? standard : customSrc;
   }
-
-  if (
-    isChosen &&
-    (!orderTranslations[curParams.get(name)] ||
-      curParams.get(name) === "custom")
-  ) {
-    chosenSrc = customSrc;
-  }
-
-  const imgSrc = isChosen
-    ? chosenSrc
-    : custom
-    ? customSrc
-    : isFurther
-    ? furtherSrc
-    : isBody
-    ? bodySrc
-    : isFront
-    ? frontSrc
-    : initImgSrc;
 
   return (
     <Section
       className={`
-        ${classes.OrderSection} ${
-        (custom && classes.custom) || ""
-      }
+        ${classes.OrderSection} ${(isCustom && classes.custom) || ""}
       `}
       onClick={orderClickHandler}
     >
       <img src={imgSrc} />
       <div className={classes.Title}>
-        {custom ? (
+        {isCustom ? (
           <input
             type="text"
             placeholder="Ваш Вариант"
@@ -136,16 +73,18 @@ const OrderSection = (props) => {
         ) : (
           <Secondary>
             <b>
-              {isFurther
-                ? "Продолжить"
-                : title + ((value && ": ") || "")}
-              {value && <span style={{fontWeight: 'normal'}}>{value}</span>}
+              {title}
+              {value && (
+                <span style={{ fontWeight: "normal" }}>
+                  : {value || "-"}
+                </span>
+              )}
             </b>
           </Secondary>
         )}
       </div>
     </Section>
   );
-};
+});
 
 export default OrderSection;
