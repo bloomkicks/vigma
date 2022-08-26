@@ -46,17 +46,17 @@ const Support = (props) => {
             rel="noreferrer"
             href="https://vk.com/vigmaspb"
           >
-            <img src="/support_vk.svg" alt="Помощь ВКонтакте" />
+            <img src="/support/support_vk.svg" alt="Помощь ВКонтакте" />
           </a>
           <a
             rel="noreferrer"
             target="_blank"
             href="https://wa.me/79643426051"
           >
-            <img src="/support_wa.svg" alt="Помощь WhatsApp" />
+            <img src="/support/support_wa.svg" alt="Помощь WhatsApp" />
           </a>
           <a href="tel:+7 (812) 642 60-51">
-            <img src="/support_phone.svg" alt="Помощь по Телефону" />
+            <img src="/support/support_phone.svg" alt="Помощь по Телефону" />
           </a>
         </div>
       </CSSTransition>
@@ -66,7 +66,7 @@ const Support = (props) => {
             ? (e) => unexpandHandler(e)
             : (e) => expandHandler(e)
         }
-        src={isShown ? "/support_message.png" : "/support.png"}
+        src={isShown ? "/support/support_message.png" : "/support.png"}
         alt="Иконка Тех. Поддержки"
         className={classes.bg}
       />

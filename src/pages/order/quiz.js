@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
+import QuizPage from "../../components/quiz/Page"
 import { quizActions } from "../../store/quiz";
 import OrderContent from "../../components/order/OrderContent";
 import Page from "../../components/layout/Page";
@@ -22,14 +23,14 @@ function stringQueries(queries) {
 
 const OrderPage = (props) => {
   const router = useRouter();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const quiz = useSelector((state) => state.quiz);
 
-  const queries = stringQueries(quiz.queries)
+  const queries = stringQueries(quiz.queries);
 
   if (quiz.isFinished) {
     router.push("/order" + queries);
-    dispatch(quizActions.finish(false))
+    dispatch(quizActions.finish(false));
   }
 
   let isInMaterials = "frontbody".includes(quiz.current);
@@ -43,7 +44,8 @@ const OrderPage = (props) => {
 
   return (
     <Page title="Рассчитать">
-      <OrderContent {...content} />
+      {/* <OrderContent {...content} /> */}
+      <QuizPage />
     </Page>
   );
 };
