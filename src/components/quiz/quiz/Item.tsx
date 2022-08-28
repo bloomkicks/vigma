@@ -1,4 +1,7 @@
-import {useState} from 'react'
+import { quizActions } from "../../../store/quiz";
+import { useDispatch } from "react-redux";
+import { FlatQuestion } from "../../../data/quiz-questions";
+import { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
@@ -6,10 +9,19 @@ import Box from "@mui/material/Box";
 import Radio from "@mui/material/Radio";
 import React from "react";
 
-const Item = ({title = "Неизвестно"}: {title: string}) => {
-  const [isSelected, setIsSelected] = useState<boolean>(false)
-  function clickHandler () {
-    setIsSelected(prev => !prev)
+const Item = ({
+  title = "Неизвестно",
+  isSelected = false,
+}: {
+  title: string | FlatQuestion<string>;
+  isSelected: boolean;
+}) => {
+  const [isSelectedState, setIsSelected] =
+    useState<boolean>(isSelected);
+  const dispatch = useDispatch();
+  function clickHandler() {
+    setIsSelected((prev) => !prev);
+    dispatch(quizActions.toggleSelectAnswer(title));
   }
 
   return (
@@ -23,6 +35,7 @@ const Item = ({title = "Неизвестно"}: {title: string}) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        minWidth: "280px",
       }}
     >
       <Card
@@ -33,7 +46,7 @@ const Item = ({title = "Неизвестно"}: {title: string}) => {
           flexDirection: "column",
           alignItems: "center",
           minWidth: "260px",
-          maxWidth: "300px",
+          maxWidth: "320px",
           width: "100%",
           cursor: "pointer",
         }}
@@ -51,15 +64,15 @@ const Item = ({title = "Неизвестно"}: {title: string}) => {
         </Box>
         <Box width="100%" px={1}>
           <Radio
-            checked={isSelected}
+            checked={isSelectedState}
             sx={{ ".Mui-disabled": { color: "text.primary" } }}
           />
           <Typography
             variant="h2"
             display="inline-block"
-            sx={{ verticalAlign: "middle" }}
+            sx={{ verticalAlign: "middle", userSelect: "none" }}
           >
-            {title} 
+            {title as string}
           </Typography>
         </Box>
       </Card>

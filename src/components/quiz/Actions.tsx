@@ -1,19 +1,43 @@
+import { quizActions } from "../../store/quiz";
+import { useDispatch } from "react-redux";
+
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import React from "react";
 
-const Actions = () => {
+const Actions = ({
+  indexOfQuestion,
+}: {
+  indexOfQuestion: number;
+}) => {
+  const dispatch = useDispatch();
+
+  function nextHandler() {
+    dispatch(quizActions.nextQuestion());
+  }
+
+  function backHandler() {
+    dispatch(quizActions.previousQuestion());
+  }
+
   return (
     <Stack direction="row" spacing={2}>
-      <Button variant="text">
+      <Button
+        variant="text"
+        onClick={backHandler}
+        sx={{
+          display: indexOfQuestion >= 0 ? "block" : "none",
+        }}
+      >
         <Typography
           variant="inherit"
           color="text.secondary"
           position="relative"
         >
           <Box
+            component="span"
             sx={{
               width: "101%",
               height: "1.3px",
@@ -28,7 +52,11 @@ const Actions = () => {
           Назад
         </Typography>
       </Button>
-      <Button variant="contained" color="info">
+      <Button
+        variant="contained"
+        color="info"
+        onClick={nextHandler}
+      >
         Далее
       </Button>
     </Stack>
