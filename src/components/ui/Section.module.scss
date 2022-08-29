@@ -2,21 +2,21 @@
   margin-top: 20px;
 }
 .Section:first-child {
-  margin-top: 0
+  margin-top: 0;
 }
 
 .Horizontal {
   margin-left: 30px;
 }
 .Horizontal:first-child {
-  margin-left: 0
+  margin-left: 0;
 }
 
 .Close {
   margin-top: 10px;
 }
 .CloseHorizontal {
-  margin-left: 20px
+  margin-left: 20px;
 }
 
 .Section > div {
@@ -31,12 +31,13 @@
   .Section {
     width: 100%;
     margin-top: 20px;
-  } 
+  }
   .Close {
     margin-top: 10px;
   }
 
-  .Section > div, .Horizontal > div {
+  .Section > div,
+  .Horizontal > div {
     margin-top: 10px;
   }
 }

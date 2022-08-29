@@ -1,6 +1,6 @@
-import classes from './Section.module.scss'
+import classes from "./Section.module.scss";
 
-const Section = props => {
+const Section = (props) => {
   const {
     close,
     element,
@@ -9,21 +9,24 @@ const Section = props => {
     className,
     isHorizontal,
     ...sectionProps
-  } = props
+  } = props;
 
-  const SectionEl = element || 'section'
+  const SectionEl = element || "section";
 
   return (
-    <SectionEl {...sectionProps} className={`
-      ${isHorizontal ? classes.Horizontal : classes.Section || ''}
-      ${close && isHorizontal && classes.CloseHorizontal || ''}
-      ${close && !isHorizontal && classes.Close || ''}
-      ${centered && classes.Centered || ''}
-      ${className || ''}
-    `.trim()}>
+    <SectionEl
+      {...sectionProps}
+      className={`
+      ${isHorizontal ? classes.Horizontal : classes.Section || ""}
+      ${(close && isHorizontal && classes.CloseHorizontal) || ""}
+      ${(close && !isHorizontal && classes.Close) || ""}
+      ${(centered && classes.Centered) || ""}
+      ${className || ""}
+    `.trim()}
+    >
       {children}
     </SectionEl>
-  )
-}
+  );
+};
 
-export default Section
+export default Section;

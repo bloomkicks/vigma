@@ -1,20 +1,19 @@
-import classes from './Italic.module.scss'
+import classes from "./Italic.module.scss";
 
-const Italic = props => {
-  const {
-    children,
-    className,
-    ...italicProps
-  } = props
+const Italic = (props) => {
+  const { children, className, ...italicProps } = props;
 
   return (
-    <span {...italicProps} className={`
+    <span
+      {...italicProps}
+      className={`
       ${classes.Italic}
-      ${className || ''}
-    `.trim()}>
+      ${className || ""}
+    `.trim()}
+    >
       {children}
     </span>
-  )
-}
+  );
+};
 
-export default Italic
+export default Italic;

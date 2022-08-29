@@ -6,13 +6,7 @@ const MainWork = (props) => {
   return (
     <aside className={classes.MainWork}>
       {firstWorks.map((work, index) => {
-        return (
-          <Work
-            {...work}
-            tabIndex={"1" + index}
-            key={work.id}
-          />
-        );
+        return <Work {...work} tabIndex={"1" + index} key={work.id} />;
       })}
     </aside>
   );

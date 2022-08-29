@@ -22,7 +22,9 @@ const Input = (props) => {
       >
         {label.children}{" "}
         {isNeeded && (
-          <span title="Обязательное поле" className={classes.needSign}>*</span>
+          <span title="Обязательное поле" className={classes.needSign}>
+            *
+          </span>
         )}
       </label>
       <InputElement

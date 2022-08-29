@@ -9,32 +9,22 @@ const ImageContainer = (props) => {
   const zoomHandler = (e) => {
     setZoomed(e.target.src);
   };
-  const unzoomHandler = e => {
-    setZoomed(null)
-  }
+  const unzoomHandler = (e) => {
+    setZoomed(null);
+  };
 
   return (
     <>
-      {zoomed && (
-        <ZoomedImage
-          onClose={unzoomHandler}
-          src={zoomed}
-        />
-      )}
+      {zoomed && <ZoomedImage onClose={unzoomHandler} src={zoomed} />}
       <div className={classes.images}>
         {photos.map((photo) => {
           return (
             <div
               onClick={zoomHandler}
               key={Math.random()}
-              className={
-                photo.isVertical ? classes.ver : classes.hor
-              }
+              className={photo.isVertical ? classes.ver : classes.hor}
             >
-              <img
-                src={photo.src}
-                alt={title + " Фотография"}
-              />
+              <img src={photo.src} alt={title + " Фотография"} />
             </div>
           );
         })}

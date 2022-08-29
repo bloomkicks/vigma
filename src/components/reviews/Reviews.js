@@ -1,6 +1,7 @@
-const woman = "/reviews-assets/woman in a blue shirt.jpg";
-const coolMan2 = "/reviews-assets/cool man 2.jpg";
-const oldMan = "reviews-assets/old man.jpg";
+import { reviewsAssetsPath } from "../../data/general/assets-paths";
+const woman = reviewsAssetsPath + "/woman in a blue shirt.jpg";
+const coolMan2 = reviewsAssetsPath + "/cool man 2.jpg";
+const oldMan = reviewsAssetsPath + "/old man.jpg";
 
 import Review from "./Review";
 import classes from "./Reviews.module.css";

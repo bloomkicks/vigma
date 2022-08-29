@@ -1,12 +1,12 @@
-import MainContent from "../components/main/MainContent"
-import Page from '../components/layout/Page'
+import MainContent from "../components/main/MainContent";
+import Page from "../components/layout/Page";
 
-const MainPage = props => {
+const MainPage = (props) => {
   return (
     <Page>
       <MainContent />
-    </Page >
-  )
-}
+    </Page>
+  );
+};
 
-export default MainPage
+export default MainPage;

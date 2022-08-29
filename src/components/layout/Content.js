@@ -1,21 +1,20 @@
-import classes from './Content.module.scss'
+import classes from "./Content.module.scss";
 
-const Content = props => {
-  const {
-    children,
-    className,
-    ...contentProps
-  } = props
+const Content = (props) => {
+  const { children, className, ...contentProps } = props;
 
   return (
-    <article {...contentProps} className={`
+    <article
+      {...contentProps}
+      className={`
       ${classes.Content} 
-      ${className || ''}
+      ${className || ""}
       ${classes.MediaContent}
-    `}>
+    `}
+    >
       {children}
     </article>
-  )
-}
+  );
+};
 
-export default Content
+export default Content;

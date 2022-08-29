@@ -10,7 +10,7 @@ class MyDocument extends Document {
       <Html lang="ru">
         <Head>
           <link rel="icon" href="/logos/mini_new.svg" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/logos/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
@@ -20,9 +20,7 @@ class MyDocument extends Document {
           />
           {/* REGULAR TAGS */}
           <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#444c78" />
-          <title>{title}</title>
           <meta name="description" content={description} />
           {/* OPEN GRAPH */}
           <meta property="og:type" content="website" />
@@ -36,7 +34,7 @@ class MyDocument extends Document {
           <meta name="twitter:site" content="@vigmamebel.ru" />
           <meta name="twitter:image" content="/logos/mini_blue.jpg" />
           <meta name="twitter:title" content={title} />
-          <meta name="og:description" content={description} />
+          <meta name="twitter:description" content={description} />
         </Head>
         <body>
           <Main />

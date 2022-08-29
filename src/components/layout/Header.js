@@ -32,9 +32,7 @@ const Header = (props) => {
   };
 
   useEffect(() => {
-    window.addEventListener("click", () =>
-      setIsActiveNav(false)
-    );
+    window.addEventListener("click", () => setIsActiveNav(false));
   }, []);
 
   return (
@@ -44,7 +42,7 @@ const Header = (props) => {
           <NavLink
             innerClassName={classes.LogoInnerContainer}
             className={classes.LogoContainer}
-              tabIndex={1}
+            tabIndex={1}
             style={{ color: "black" }}
             href="/main"
           >
@@ -63,9 +61,7 @@ const Header = (props) => {
           />
           <nav
             onClick={navClickHandler}
-            className={`${classes.Nav} ${
-              isActiveNav && classes.Nav__active
-            }`}
+            className={`${classes.Nav} ${isActiveNav && classes.Nav__active}`}
           >
             <NavLink
               href="/order/quiz"

@@ -15,7 +15,7 @@ const Support = (props) => {
   }
 
   useEffect(() => {
-    setIsShown(false)
+    setIsShown(false);
     window.addEventListener("click", () => {
       setIsShown(false);
       unexpandHandler();
@@ -32,7 +32,7 @@ const Support = (props) => {
           enterActive: classes.expanding,
           enterDone: classes.expanded,
           exitActive: classes.unexpanding,
-          exitDone: classes.unexpanded
+          exitDone: classes.unexpanded,
         }}
       >
         <div
@@ -41,18 +41,10 @@ const Support = (props) => {
             e.stopPropagation();
           }}
         >
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://vk.com/vigmaspb"
-          >
+          <a target="_blank" rel="noreferrer" href="https://vk.com/vigmaspb">
             <img src="/support/support_vk.svg" alt="Помощь ВКонтакте" />
           </a>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://wa.me/79643426051"
-          >
+          <a rel="noreferrer" target="_blank" href="https://wa.me/79643426051">
             <img src="/support/support_wa.svg" alt="Помощь WhatsApp" />
           </a>
           <a href="tel:+7 (812) 642 60-51">
@@ -62,9 +54,7 @@ const Support = (props) => {
       </CSSTransition>
       <img
         onClick={
-          isExpanded
-            ? (e) => unexpandHandler(e)
-            : (e) => expandHandler(e)
+          isExpanded ? (e) => unexpandHandler(e) : (e) => expandHandler(e)
         }
         src={isShown ? "/support/support_message.png" : "/support.png"}
         alt="Иконка Тех. Поддержки"
@@ -90,8 +80,8 @@ const Support = (props) => {
         >
           <strong>Готовы помочь!</strong>
           <p>
-            Здравствуйте, если у вас возник вопрос - просто позвоните
-            или напишите, и мы вам поможем
+            Здравствуйте, если у вас возник вопрос - просто позвоните или
+            напишите, и мы вам поможем
           </p>
         </div>
       </CSSTransition>

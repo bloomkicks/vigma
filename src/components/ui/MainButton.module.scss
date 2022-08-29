@@ -1,5 +1,5 @@
 @use "../../styles/colors.scss";
-@use '../../styles/mixins.scss';
+@use "../../styles/mixins.scss";
 
 .Button {
   @include mixins.interactive-font;
@@ -14,10 +14,12 @@
   transition: transform 50ms ease-in;
 }
 
-.Button:hover, .Button:focus {
+.Button:hover,
+.Button:focus {
   transform: scalex(1.05);
 }
 
-.Button:hover > p, .Button:focus > p {
+.Button:hover > p,
+.Button:focus > p {
   transform: scalex(0.95);
 }

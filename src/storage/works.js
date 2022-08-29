@@ -1,4 +1,5 @@
-const parentFolder = "/works-assets/";
+import { worksAssetsPath } from "../data/general/assets-paths";
+
 // QUARTZ KITCHEN
 const quartzKitchenFront = "quartz/front.jpeg";
 const quartzKitchenSide = "quartz/side.jpeg";
@@ -315,7 +316,7 @@ const works = [
       "Корпус: ЛДСП Влагостойкий",
       "Фасад: МДФ Плёнка",
       "Фурнитура: Hettich",
-      "Столешница: Массив"
+      "Столешница: Массив",
     ],
     price: "31870",
     colors: [
@@ -462,9 +463,7 @@ works.forEach((work, index) => {
   work.id = id;
   work.query.item = work.title;
 
-  work.photos.forEach(
-    (photo) => (photo.src = parentFolder + photo.src)
-  );
+  work.photos.forEach((photo) => (photo.src = worksAssetsPath + '/' + photo.src));
 });
 
 export default works;

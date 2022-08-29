@@ -1,20 +1,19 @@
-import classes from './Question.module.scss'
+import classes from "./Question.module.scss";
 
-const Question = props => {
-  const {
-    children,
-    className,
-    ...questionProps
-  } = props
+const Question = (props) => {
+  const { children, className, ...questionProps } = props;
 
   return (
-    <div {...questionProps} className={`
+    <div
+      {...questionProps}
+      className={`
       ${classes.Question}
-      ${className || ''}
-    `}>
+      ${className || ""}
+    `}
+    >
       <h2>{props.children}</h2>
     </div>
-  )
-}
+  );
+};
 
-export default Question
+export default Question;

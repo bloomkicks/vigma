@@ -1,4 +1,4 @@
-@use '../../styles/colors.scss';
+@use "../../styles/colors.scss";
 
 div.Backdrop {
   width: 100%;
@@ -19,7 +19,7 @@ div.Backdrop {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:colors.$anti-theme;
+  background-color: colors.$anti-theme;
   border-radius: 15px;
   box-shadow: 1px 1px 10px black;
   color: colors.$theme;
@@ -27,5 +27,5 @@ div.Backdrop {
 }
 
 .Modal > h2 {
-  color: colors.$theme
+  color: colors.$theme;
 }

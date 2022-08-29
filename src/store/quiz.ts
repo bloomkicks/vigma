@@ -1,108 +1,122 @@
-import { PayloadAction } from "@reduxjs/toolkit"
-import categories, { Questions, FlatQuestion } from "../data/quiz-questions"
-import { createSlice } from "@reduxjs/toolkit"
+import { PayloadAction } from "@reduxjs/toolkit";
+import {
+  Questions,
+  FlatQuestion,
+  Category,
+} from "../models/quiz";
+import allCategoryQuestions from '../data/quiz/category-questions'
+import { createSlice } from "@reduxjs/toolkit";
+
+const categories = Object.keys(allCategoryQuestions)
 
 type State = {
   // current question and its index
-  currentQuestion: string,
-  indexOfQuestion: number,
+  currentQuestion: string;
+  indexOfQuestion: number;
 
   // answers AVAILABLE & SELECTED
-  availableAnswers: (string | FlatQuestion<string>)[],
-  selectedAnswers: (string | FlatQuestion<string>)[],
+  availableOptions: (string | FlatQuestion<string>)[];
+  selectedOptions: (string | FlatQuestion<string>)[];
 
   // storage of answered questions (array)
-  answeredQuestions: Questions<string>
+  answeredQuestions: Questions<string>;
 
   // all questions - if has category
-  category?: keyof typeof categories,
-  categoryQuestions?: Questions<string>,
-}
+  category?: Category;
+  categoryQuestions?: Questions<string>;
+};
 
 const initialState: State = {
-  category: null,
-  selectedAnswers: [],
-  answeredQuestions: [],
-  availableAnswers: Object.keys(categories),
-  currentQuestion: 'category',
+  currentQuestion: "category",
   indexOfQuestion: -1,
+  availableOptions: categories,
+  selectedOptions: [],
+  answeredQuestions: [],
+  category: null,
   categoryQuestions: null,
-}
+};
 
 const quizSlice = createSlice({
-  name: 'quiz',
+  name: "quiz",
   initialState,
   reducers: {
-    toggleSelectAnswer(state: State, action: PayloadAction<string | FlatQuestion<string>>) {
-      const answer = action.payload
-      const selectedIndex = state.selectedAnswers.findIndex(answ => answ === answer)
+    toggleSelectOption(
+      state: State,
+      action: PayloadAction<string | FlatQuestion<string>>,
+    ) {
+      const answer = action.payload;
+      const selectedIndex = state.selectedOptions.findIndex(
+        (answ) => answ === answer,
+      );
       if (selectedIndex !== -1) {
-        state.selectedAnswers.splice(selectedIndex, 1)
-      }
-      else {
-        state.selectedAnswers.push(answer)
+        state.selectedOptions.splice(selectedIndex, 1);
+      } else {
+        state.selectedOptions.push(answer);
       }
     },
     nextQuestion(state: State) {
-      let index = state.indexOfQuestion
+      let index = state.indexOfQuestion;
 
       // EDGE CASES
       // no answers selected
-      if (state.selectedAnswers.length === 0) {
-        return state
+      if (state.selectedOptions.length === 0) {
+        return state;
       }
 
       // set category if first question
       if (index === -1) {
-        state.category = state.selectedAnswers[0] as string
-        state.categoryQuestions = categories[state.category]
+        state.category = state.selectedOptions[0] as Category;
+        state.categoryQuestions = allCategoryQuestions[state.category];
       }
-
       // if it's a last question
       else if (index >= state.categoryQuestions.length - 1) {
-        return state
+        return state;
       }
 
       // SAVE ANSWERS IN ANSWERED QUESTIONS
-      const answeredQuestion = {}
-      answeredQuestion[state.currentQuestion] = state.selectedAnswers.slice()
+      const answeredQuestion = {};
+      answeredQuestion[state.currentQuestion] = state.selectedOptions.slice();
 
-      state.answeredQuestions[index] = answeredQuestion
+      state.answeredQuestions[index] = answeredQuestion;
 
       // GET NEXT QUESTION
-      state.indexOfQuestion++
-      const nextQuestion = state.categoryQuestions![state.indexOfQuestion]
+      state.indexOfQuestion++;
+      const nextQuestion = state.categoryQuestions![state.indexOfQuestion];
 
       // SET NEXT QUESTION SET (question, availableAnswers, selectedAnswers)
-      state.currentQuestion = Object.keys(nextQuestion)[0]
-      state.availableAnswers = Object.values(nextQuestion)[0]
-      state.selectedAnswers = []
+      state.currentQuestion = Object.keys(nextQuestion)[0];
+      state.availableOptions = Object.values(nextQuestion)[0];
+      state.selectedOptions = [];
 
-      return state
+      return state;
     },
     previousQuestion(state: State) {
-      let index = state.indexOfQuestion
-
-      if (index <= 0) {
-        state.category = null
-        state.categoryQuestions = null
-        state.currentQuestion = 'category'
-        state.availableAnswers = Object.keys(categories)
-        state.selectedAnswers = Object.values(state.answeredQuestions[state.indexOfQuestion])[0].slice()
-      }
-      else {
+      let index = state.indexOfQuestion;
+      
+      if (index === 0) {
+        state.category = null;
+        state.categoryQuestions = null;
+        state.currentQuestion = "category";
+        state.availableOptions = categories;
+        state.selectedOptions = Object.values(
+          state.answeredQuestions[state.indexOfQuestion],
+        )[0].slice();
+      } else {
         // GET PREVIUOS QUESTION
-        state.indexOfQuestion--
-        const previuosQuestion = state.categoryQuestions[state.indexOfQuestion]
+        const previuosQuestion = state.categoryQuestions[state.indexOfQuestion];
 
         // SET CURRENT QUESTION AND ANSWERS
-        state.currentQuestion = Object.keys(previuosQuestion)[0]
-        state.availableAnswers = Object.values(previuosQuestion)[0]
-        state.selectedAnswers = Object.values(state.answeredQuestions[state.indexOfQuestion])[0].slice()
+        state.currentQuestion = Object.keys(previuosQuestion)[0];
+        state.availableOptions = Object.values(previuosQuestion)[0];
+        state.selectedOptions = Object.values(
+          state.answeredQuestions[state.indexOfQuestion],
+        )[0].slice();
       }
-    }
-  }
-})
 
-export const quizReducer = quizSlice.reducer
-export const quizActions = quizSlice.actions
+      state.indexOfQuestion--;
+    },
+  },
+});
+
+export const quizReducer = quizSlice.reducer;
+export const quizActions = quizSlice.actions;

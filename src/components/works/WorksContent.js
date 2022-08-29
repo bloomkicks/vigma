@@ -1,5 +1,5 @@
 import Work from "./Work";
-import works from "../../storage/works"
+import works from "../../storage/works";
 import classes from "./WorksContent.module.css";
 
 const WorksContent = (props) => {

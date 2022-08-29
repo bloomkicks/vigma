@@ -4,7 +4,7 @@
 }
 
 .Advantages > h2 {
-  margin-bottom: 25px;  
+  margin-bottom: 25px;
 }
 
 .Advantages > div {
@@ -17,5 +17,5 @@
 @media screen and (max-width: 650px) {
   .Advantages > div {
     flex-wrap: wrap;
-  } 
+  }
 }

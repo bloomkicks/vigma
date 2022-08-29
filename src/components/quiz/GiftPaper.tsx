@@ -39,20 +39,13 @@ const GiftPaper = ({
         sx={{ textTransform: "uppercase", fontWeight: "400" }}
       >
         до подарка осталось:
-        <Typography
-          variant="inherit"
-          sx={{ fontWeight: "bold" }}
-        >
+        <Typography variant="inherit" sx={{ fontWeight: "bold" }}>
           {amountOfQuestions} {questions}
         </Typography>
       </Typography>
       <Box
         component={() => (
-          <Image
-            src="/quiz-assets/gift.png"
-            width="120"
-            height="120"
-          />
+          <Image src="/quiz-assets/gift.png" width="120" height="120" />
         )}
         position="relative"
         left="150"

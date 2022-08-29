@@ -1,6 +1,7 @@
-const packageSvg = "/main-assets/package.svg";
-const rulerSvg = "/main-assets/ruler.svg";
-const gearsSvg = "/main-assets/gears.svg";
+import { mainAssetsPath } from "../../data/general/assets-paths";
+const packageSvg = mainAssetsPath + "/package.svg";
+const rulerSvg = mainAssetsPath + "/ruler.svg";
+const gearsSvg = mainAssetsPath + "/gears.svg";
 
 import MainAdvantage from "./MainAdvantage";
 import Secondary from "../ui/Secondary";
@@ -27,7 +28,8 @@ const MainAdvantages = (pros) => {
           Предоставляем дизайн-проект с замером бесплатно
         </MainAdvantage>
         <MainAdvantage title="Доставка и установка" logoSrc={packageSvg}>
-          Мы оказываем услуги по установке и доставке в пределах Санкт-Петербурга и ЛО
+          Мы оказываем услуги по установке и доставке в пределах
+          Санкт-Петербурга и ЛО
         </MainAdvantage>
       </div>
     </Section>

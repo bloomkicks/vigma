@@ -1,7 +1,4 @@
-import {
-  createTheme,
-  ThemeProvider as Provider,
-} from "@mui/material";
+import { createTheme, ThemeProvider as Provider } from "@mui/material";
 
 const theme = createTheme({
   palette: {

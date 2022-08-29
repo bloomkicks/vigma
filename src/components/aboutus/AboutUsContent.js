@@ -1,9 +1,11 @@
-const servicesSrc = "/about us/Services.svg";
-const cartSrc = "/about us/Cart.svg";
-const materialsSrc = "/about us/Materials.svg";
-const clockSrc = "/about us/Clock.svg";
-const deliverySrc = "/about us/Delivery.svg";
-const buildingSrc = "/about us/Building.svg";
+import { aboutsUsAssetsPath } from "../../data/general/assets-paths";
+
+const servicesSrc = aboutsUsAssetsPath + "/Services.svg";
+const cartSrc = aboutsUsAssetsPath + "/Cart.svg";
+const materialsSrc = aboutsUsAssetsPath + "/Materials.svg";
+const clockSrc = aboutsUsAssetsPath + "/Clock.svg";
+const deliverySrc = aboutsUsAssetsPath + "/Delivery.svg";
+const buildingSrc = aboutsUsAssetsPath + "/Building.svg";
 
 import AboutUsSection from "./AboutUsSection";
 import Content from "../layout/Content";

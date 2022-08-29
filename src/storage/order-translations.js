@@ -33,7 +33,7 @@ const orderTranslations = {
   troya: "ДСП Троя",
   agra: "ДСП Агра",
   quartz: "Искуственный Кварц",
-  custom: "Ваш Вариант"
+  custom: "Ваш Вариант",
 };
 
 export default orderTranslations;

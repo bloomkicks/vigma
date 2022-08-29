@@ -1,11 +1,7 @@
-import classes from './Bold.module.scss'
+import classes from "./Bold.module.scss";
 
-const Bold = props => {
-  return (
-    <b className={classes.Important}>
-      {props.children}
-    </b>
-  )
-}
+const Bold = (props) => {
+  return <b className={classes.Important}>{props.children}</b>;
+};
 
-export default Bold
+export default Bold;

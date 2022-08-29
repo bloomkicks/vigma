@@ -14,8 +14,8 @@
 
 .Input {
   @include mixins.interactive-font;
-  font-family: Roboto, "Segoe UI", Raleway, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: Roboto, "Segoe UI", Raleway, "Open Sans", "Helvetica Neue",
+    sans-serif;
   height: 2.2rem;
   width: 100%;
   border: none;

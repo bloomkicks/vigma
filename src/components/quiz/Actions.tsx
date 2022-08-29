@@ -7,11 +7,7 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import React from "react";
 
-const Actions = ({
-  indexOfQuestion,
-}: {
-  indexOfQuestion: number;
-}) => {
+const Actions = ({ indexOfQuestion }: { indexOfQuestion: number }) => {
   const dispatch = useDispatch();
 
   function nextHandler() {
@@ -52,11 +48,7 @@ const Actions = ({
           Назад
         </Typography>
       </Button>
-      <Button
-        variant="contained"
-        color="info"
-        onClick={nextHandler}
-      >
+      <Button variant="contained" color="info" onClick={nextHandler}>
         Далее
       </Button>
     </Stack>

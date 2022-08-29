@@ -21,14 +21,7 @@ function formatPrice(price) {
 
 const Work = (props) => {
   const router = useRouter();
-  const {
-    photos,
-    title,
-    description,
-    price,
-    colors,
-    query,
-  } = props;
+  const { photos, title, description, price, colors, query } = props;
 
   let formattedPrice = "";
   if (price) {

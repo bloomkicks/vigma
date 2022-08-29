@@ -14,7 +14,7 @@ export const Backdrop = (props) => {
 const Modal = (props) => {
   const [isActive, setIsActive] = useState(true);
   const clickHandler = (e) => {
-    props.onClose && props.onClose(e)  
+    props.onClose && props.onClose(e);
     setIsActive(false);
   };
 

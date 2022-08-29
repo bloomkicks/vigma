@@ -7,7 +7,7 @@ const Title = (props) => {
     <h1
       className={`
         ${classes.Title}
-        ${className || ''}
+        ${className || ""}
       `.trim()}
     >
       {props.children}

@@ -11,10 +11,7 @@ const TotalOrderPage = (props) => {
   const item = router.query.item;
 
   function translate(word) {
-    return (
-      orderTranslations[router.query[word]] ||
-      router.query[word]
-    );
+    return orderTranslations[router.query[word]] || router.query[word];
   }
 
   let orderInfo;
@@ -49,10 +46,7 @@ const TotalOrderPage = (props) => {
   }
 
   return (
-    <Page
-      title="Рассчитать"
-      className={classes.TotalOrderPage}
-    >
+    <Page title="Рассчитать" className={classes.TotalOrderPage}>
       <TotalOrderTree item={item} orderInfo={orderInfo} />
       <TotalOrderForm item={item} orderInfo={orderInfo} />
     </Page>

@@ -1,6 +1,6 @@
 @use "sass:color" as col;
 @use "../../styles/colors.scss";
-@use '../../styles/mixins.scss';
+@use "../../styles/mixins.scss";
 
 .AntiButton {
   background-color: col.adjust(colors.$interact, $lightness: 20%);
@@ -12,10 +12,11 @@
 }
 
 .AntiButton > p {
-  transition: transform 50ms ease-in
+  transition: transform 50ms ease-in;
 }
 
-.AntiButton:hover, .AntiButton:focus {
+.AntiButton:hover,
+.AntiButton:focus {
   transform: scalex(1.05);
 }
 
@@ -25,5 +26,5 @@
 
 .AntiButton > * {
   @include mixins.interactive-font;
-  color:colors.$anti-theme;
+  color: colors.$anti-theme;
 }

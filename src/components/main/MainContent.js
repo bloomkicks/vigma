@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 import MainWork from "./MainWork";
 import MainAdvantages from "./MainAdvantages";
 import OrderButton from "./OrderButton";

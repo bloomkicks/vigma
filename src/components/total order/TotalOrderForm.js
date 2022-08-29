@@ -32,9 +32,7 @@ function telInputHandler(e) {
     }
   };
   const signs = ["+", " (", ") ", " ", "-"];
-  number.forEach((group) =>
-    addNumbers(signs.shift(), group)
-  );
+  number.forEach((group) => addNumbers(signs.shift(), group));
 
   e.target.value = formattedNumber;
 }
@@ -66,17 +64,13 @@ const TotalOrderForm = (props) => {
     const comment = getTrim(commentRef);
 
     const isNameValid = name.length > 2;
-    let isEmailValid = email.match(
-      /^.*@[A-Za-z]+\.[A-Za-z]+$/g
-    );
+    let isEmailValid = email.match(/^.*@[A-Za-z]+\.[A-Za-z]+$/g);
     let isNumberValid =
-      (number.match(/\d+/g) && number.length >= 7) ||
-      isEmailValid;
+      (number.match(/\d+/g) && number.length >= 7) || isEmailValid;
 
     isEmailValid = isEmailValid || isNumberValid;
 
-    const isFormValid =
-      isEmailValid && isNameValid && isNumberValid;
+    const isFormValid = isEmailValid && isNameValid && isNumberValid;
     if (!isFormValid) {
       setError({
         status: "Неверная форма",
@@ -95,9 +89,7 @@ const TotalOrderForm = (props) => {
       comment,
     };
 
-    const orderInfo = props.orderInfo.map(
-      (info) => info.actual
-    );
+    const orderInfo = props.orderInfo.map((info) => info.actual);
 
     const emailParams = {
       item,
@@ -106,12 +98,7 @@ const TotalOrderForm = (props) => {
     };
 
     try {
-      await send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        emailParams,
-        USER_ID
-      );
+      await send(SERVICE_ID, TEMPLATE_ID, emailParams, USER_ID);
       setIsLoading(false);
       setIsSent(true);
     } catch (err) {
@@ -136,8 +123,7 @@ const TotalOrderForm = (props) => {
           setIsLoading(false);
         }}
         text={
-          error.text ||
-          "Что-то пошло не так. Пожалуйста, повторите попытку"
+          error.text || "Что-то пошло не так. Пожалуйста, повторите попытку"
         }
       />
     );
@@ -153,10 +139,7 @@ const TotalOrderForm = (props) => {
 
   return (
     <>
-      <form
-        className={classes.TotalOrderForm}
-        onSubmit={orderHandler}
-      >
+      <form className={classes.TotalOrderForm} onSubmit={orderHandler}>
         <Input
           id="name-input"
           isNeeded
@@ -237,10 +220,7 @@ const TotalOrderForm = (props) => {
           />
         </label>
       </button> */}
-        <MainButton
-          type="submit"
-          className={classes.MainButton}
-        >
+        <MainButton type="submit" className={classes.MainButton}>
           <p>Оставить заявку</p>
         </MainButton>
       </form>

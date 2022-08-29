@@ -1,8 +1,9 @@
-const phoneSrc = "/contact/phone.svg";
-const emailSrc = "/contact/email.svg";
-const locationSrc = "/contact/location.svg";
-const timeSrc = "/contact/time.svg";
-const directorSrc = "/contact/director.svg";
+import { contactsAssetsPath } from "../../data/general/assets-paths";
+const phoneSrc = contactsAssetsPath + "/phone.svg";
+const emailSrc = contactsAssetsPath + "/email.svg";
+const locationSrc = contactsAssetsPath + "/location.svg";
+const timeSrc = contactsAssetsPath + "/time.svg";
+const directorSrc = contactsAssetsPath + "/director.svg";
 
 import Anchor from "../ui/Anchor";
 import Content from "../layout/Content";
@@ -24,7 +25,7 @@ const ContactsContent = (props) => {
           <b>+7 (812) 642 60-51</b>
         </Anchor>
         <p>
-          WhatsApp: {" "}
+          WhatsApp:{" "}
           <Anchor tabIndex="1" href="tel:+7 (812) 642 60-51">
             <b>+7 (964) 342 60-51</b>
           </Anchor>
@@ -35,7 +36,7 @@ const ContactsContent = (props) => {
       <ContactsSection
         contactKey="Адрес эл. почты:"
         logoSrc={emailSrc}
-        imgProps={{ style: { width: "2.5rem", height: "auto", left: "-40%"} }}
+        imgProps={{ style: { width: "2.5rem", height: "auto", left: "-40%" } }}
       >
         <Anchor href="mailto:vigmaspb@gmail.com">
           <b>vigmaspb@gmail.com</b>

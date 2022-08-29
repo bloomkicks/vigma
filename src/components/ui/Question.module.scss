@@ -1,8 +1,8 @@
 @use "../../styles/colors.scss";
-@use '../../styles/mixins.scss';
+@use "../../styles/mixins.scss";
 
 .Question {
-  background-color:colors.$anti-theme;
+  background-color: colors.$anti-theme;
   padding: 10px 20px;
   text-align: center;
   // position: absolute;
