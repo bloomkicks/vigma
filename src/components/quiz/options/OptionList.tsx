@@ -4,13 +4,13 @@ import Grid from "@mui/material/Grid";
 import React from "react";
 
 const OptionList = ({
-  answers,
-  selectedAnswers,
+  options,
+  selectedOptions,
   category,
   question,
 }: {
-  answers: (string | FlatQuestion<string>)[];
-  selectedAnswers: (string | FlatQuestion<string>)[];
+  options: (string | FlatQuestion<string>)[];
+  selectedOptions: (string | FlatQuestion<string>)[];
   category: Category;
   question: string;
 }) => {
@@ -20,13 +20,13 @@ const OptionList = ({
       rowSpacing={{ xs: 2, sm: 3 }}
       columnSpacing={3}
       justifyContent="center"
-      sx={{ mb: 3, px: 1.2 }}
+      sx={{ mb: 3, px: { xs: 1.2, sm: 3 } }}
     >
-      {answers.map((answer) => {
+      {options.map((answer) => {
         return (
           <Option
             title={answer}
-            isSelected={selectedAnswers.includes(answer)}
+            isSelected={selectedOptions.includes(answer)}
             category={category}
             question={question}
             key={answer.toString()}

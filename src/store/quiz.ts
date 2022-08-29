@@ -1,3 +1,4 @@
+import { translateQuestion } from "../features/quiz/translate";
 import { PayloadAction } from "@reduxjs/toolkit";
 import {
   Questions,
@@ -24,10 +25,14 @@ type State = {
   // all questions - if has category
   category?: Category;
   categoryQuestions?: Questions<string>;
+
+  // translated
+  translatedQuestion?: string
 };
 
 const initialState: State = {
   currentQuestion: "category",
+  translatedQuestion: translateQuestion('category', null),
   indexOfQuestion: -1,
   availableOptions: categories,
   selectedOptions: [],
@@ -44,14 +49,14 @@ const quizSlice = createSlice({
       state: State,
       action: PayloadAction<string | FlatQuestion<string>>,
     ) {
-      const answer = action.payload;
+      const selectedOption = action.payload;
       const selectedIndex = state.selectedOptions.findIndex(
-        (answ) => answ === answer,
+        (answ) => answ === selectedOption,
       );
       if (selectedIndex !== -1) {
-        state.selectedOptions.splice(selectedIndex, 1);
+        state.selectedOptions = [];
       } else {
-        state.selectedOptions.push(answer);
+        state.selectedOptions = [selectedOption];
       }
     },
     nextQuestion(state: State) {
@@ -85,6 +90,7 @@ const quizSlice = createSlice({
 
       // SET NEXT QUESTION SET (question, availableAnswers, selectedAnswers)
       state.currentQuestion = Object.keys(nextQuestion)[0];
+      state.translatedQuestion = translateQuestion(state.currentQuestion, state.category)
       state.availableOptions = Object.values(nextQuestion)[0];
       state.selectedOptions = [];
 
@@ -92,28 +98,32 @@ const quizSlice = createSlice({
     },
     previousQuestion(state: State) {
       let index = state.indexOfQuestion;
-      
+
       if (index === 0) {
+        state.selectedOptions = [state.category]
+
         state.category = null;
         state.categoryQuestions = null;
+
         state.currentQuestion = "category";
+        state.translatedQuestion = translateQuestion(state.currentQuestion, null)
         state.availableOptions = categories;
-        state.selectedOptions = Object.values(
-          state.answeredQuestions[state.indexOfQuestion],
-        )[0].slice();
+
+        state.indexOfQuestion--;
       } else {
         // GET PREVIUOS QUESTION
+        state.indexOfQuestion--;
         const previuosQuestion = state.categoryQuestions[state.indexOfQuestion];
 
         // SET CURRENT QUESTION AND ANSWERS
         state.currentQuestion = Object.keys(previuosQuestion)[0];
+        state.translatedQuestion = translateQuestion(state.currentQuestion, state.category)
         state.availableOptions = Object.values(previuosQuestion)[0];
         state.selectedOptions = Object.values(
           state.answeredQuestions[state.indexOfQuestion],
         )[0].slice();
       }
 
-      state.indexOfQuestion--;
     },
   },
 });

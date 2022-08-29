@@ -1,3 +1,4 @@
+import { quizAssetsPath } from "../../data/general/assets-paths";
 import Image from "next/image";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
@@ -45,7 +46,7 @@ const GiftPaper = ({
       </Typography>
       <Box
         component={() => (
-          <Image src="/quiz-assets/gift.png" width="120" height="120" />
+          <Image src={`${quizAssetsPath}/gift.png`} width="120" height="120" />
         )}
         position="relative"
         left="150"

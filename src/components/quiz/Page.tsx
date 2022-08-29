@@ -12,7 +12,7 @@ const Page = () => {
   const quizState = useSelector((state: RootState) => state.quiz);
 
   return (
-    <Stack alignItems="center" sx={{ pt: 3 }}>
+    <Stack alignItems="center" sx={{ pt: 3, maxWidth: "1366px" }}>
       <GiftPaper
         amountOfQuestions={
           (quizState.categoryQuestions
@@ -21,13 +21,13 @@ const Page = () => {
         }
       />
       <Typography variant="h1" mb={1.5} align="center">
-        {quizState.currentQuestion}
+        {quizState.translatedQuestion}
       </Typography>
       <OptionList
-        answers={quizState.availableOptions}
+        options={quizState.availableOptions}
         category={quizState.category}
         question={quizState.currentQuestion}
-        selectedAnswers={quizState.selectedOptions}
+        selectedOptions={quizState.selectedOptions}
       />
       <Actions indexOfQuestion={quizState.indexOfQuestion} />
     </Stack>
