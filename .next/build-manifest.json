@@ -29,6 +29,10 @@
     "/order/quiz": [
       "static/chunks/main.js",
       "static/chunks/pages/order/quiz.js"
+    ],
+    "/works": [
+      "static/chunks/main.js",
+      "static/chunks/pages/works.js"
     ]
   },
   "ampFirstPages": []

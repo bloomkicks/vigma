@@ -8,9 +8,9 @@
   background-color: rgb(16, 63, 107);
   background: linear-gradient(
     135deg,
-    colors.$theme,
-    col.adjust(colors.$theme, $lightness: -5%) 60%,
-    colors.$theme
+    colors.$background,
+    col.adjust(colors.$background, $lightness: +5%) 60%,
+    colors.$background
   );
   background-blend-mode: multiply;
   margin-bottom: 30px;

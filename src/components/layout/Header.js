@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import NavLink from "../ui/NavLink";
 import classes from "./Header.module.scss";
 
-const hamMenuSvg = "/ham-menu.svg";
+const hamMenuSvg = "/pictures/header/ham-menu.svg";
+const crossSvg = "/pictures/header/cross.svg";
 const blueLogo = "/logos/header_new.png";
 
 const Header = (props) => {
@@ -53,12 +54,21 @@ const Header = (props) => {
               alt="На Главную"
             />
           </NavLink>
-          <img
-            src={hamMenuSvg}
-            onClick={menuClickHandler}
-            alt="Открыть меню"
-            className={classes.HamMenu}
-          />
+          {isActiveNav ? (
+            <img
+              src={crossSvg}
+              onClick={menuClickHandler}
+              alt="Закрыть меню"
+              className={classes.Cross}
+            />
+          ) : (
+            <img
+              src={hamMenuSvg}
+              onClick={menuClickHandler}
+              alt="Открыть меню"
+              className={classes.HamMenu}
+            />
+          )}
           <nav
             onClick={navClickHandler}
             className={`${classes.Nav} ${isActiveNav && classes.Nav__active}`}
@@ -91,8 +101,7 @@ const Header = (props) => {
               onBlur={navBlurHandler}
               isBlack
             >
-              Наши
-              <br /> работы
+              Наши работы
             </NavLink>
             <NavLink
               href="/about-us"

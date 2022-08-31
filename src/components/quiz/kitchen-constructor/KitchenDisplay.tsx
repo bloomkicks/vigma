@@ -23,6 +23,7 @@ const KitchenDisplay = () => {
     >
       <img
         src={`${quizAssetsPath}/kitchen/constructor/${kitchenDisplay}.webp`}
+        alt="Получившаяся кухня"
         width="500px"
         height="337px"
       />

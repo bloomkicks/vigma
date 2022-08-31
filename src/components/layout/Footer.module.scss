@@ -10,9 +10,9 @@
   background-color: rgb(16, 63, 107);
   background: linear-gradient(
     -135deg,
-    colors.$theme 1%,
-    col.adjust(colors.$theme, $lightness: -5%) 70%,
-    colors.$theme 99%
+    colors.$background 1%,
+    col.adjust(colors.$background, $lightness: +5%) 70%,
+    colors.$background 99%
   );
   z-index: 5;
 }

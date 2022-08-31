@@ -46,7 +46,12 @@ const GiftPaper = ({
       </Typography>
       <Box
         component={() => (
-          <Image src={`${quizAssetsPath}/gift.png`} width="120" height="120" />
+          <Image
+            src={`${quizAssetsPath}/gift.png`}
+            alt=""
+            width="120"
+            height="120"
+          />
         )}
         position="relative"
         left="150"

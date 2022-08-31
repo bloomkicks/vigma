@@ -6,7 +6,15 @@ const OrderButton = (props) => {
   return (
     <Link href="/order/quiz" passHref>
       <MainButton tabIndex={5} className={classes.Button}>
-        <p>Предварительно Рассчитать</p>
+        <p
+          style={{
+            lineHeight: "1em",
+            verticalAlign: "baseline",
+            display: "inline-block",
+          }}
+        >
+          Предварительно Рассчитать
+        </p>
       </MainButton>
     </Link>
   );
