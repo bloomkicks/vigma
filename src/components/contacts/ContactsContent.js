@@ -36,7 +36,9 @@ const ContactsContent = (props) => {
       <ContactsSection
         contactKey="Адрес эл. почты:"
         logoSrc={emailSrc}
-        imgProps={{ style: { width: "2.5rem", height: "auto", left: "-40%" } }}
+        imgProps={{
+          style: { width: "2.5rem", height: "auto", left: "-40%" },
+        }}
       >
         <Anchor href="mailto:vigmaspb@gmail.com">
           <b>vigmaspb@gmail.com</b>

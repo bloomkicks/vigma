@@ -33,6 +33,10 @@ const theme = createTheme({
     h3: {
       fontSize: "1.1rem",
     },
+    h4: {
+      fontSize: "1.05rem",
+      fontWeight: "500",
+    },
     h6: {
       fontFamily: "'Didact Gothic', Cambria, sans-serif",
     },

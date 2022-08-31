@@ -1,4 +1,4 @@
-import { Questions } from "../../../models/quiz";
+import { Questions } from "../../../types/quiz";
 
 const office: Questions<string> = [
   { category: ["Столы", "Стеллажи", "Гардеробные"] },

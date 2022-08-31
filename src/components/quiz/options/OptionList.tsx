@@ -1,4 +1,5 @@
-import { FlatQuestion, Category } from "../../../models/quiz";
+import getImgSrc from "../../../features/quiz/get-img-src";
+import { FlatQuestion, Category } from "../../../types/quiz";
 import Option from "./Option";
 import Grid from "@mui/material/Grid";
 import React from "react";
@@ -9,8 +10,8 @@ const OptionList = ({
   category,
   question,
 }: {
-  options: (string | FlatQuestion<string>)[];
-  selectedOptions: (string | FlatQuestion<string>)[];
+  options: string[];
+  selectedOptions: string[];
   category: Category;
   question: string;
 }) => {
@@ -22,14 +23,17 @@ const OptionList = ({
       justifyContent="center"
       sx={{ mb: 3, px: { xs: 1.2, sm: 3 } }}
     >
-      {options.map((answer) => {
+      {options.map((option) => {
+        const imgSrc = getImgSrc(category, question, option);
+
         return (
           <Option
-            title={answer}
-            isSelected={selectedOptions.includes(answer)}
+            option={option}
             category={category}
+            isSelected={selectedOptions.includes(option)}
             question={question}
-            key={answer.toString()}
+            imgSrc={imgSrc}
+            key={option.toString()}
           />
         );
       })}

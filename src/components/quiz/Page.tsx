@@ -1,3 +1,5 @@
+import KitchenConstructor from "./kitchen-constructor/KitchenConstructor";
+import { FlatQuestion } from "../../types/quiz";
 import { RootState } from "../../store";
 import { useSelector } from "react-redux";
 
@@ -6,7 +8,6 @@ import GiftPaper from "./GiftPaper";
 import Actions from "./Actions";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import React from "react";
 
 const Page = () => {
   const quizState = useSelector((state: RootState) => state.quiz);
@@ -23,12 +24,18 @@ const Page = () => {
       <Typography variant="h1" mb={1.5} align="center">
         {quizState.translatedQuestion}
       </Typography>
-      <OptionList
-        options={quizState.availableOptions}
-        category={quizState.category}
-        question={quizState.currentQuestion}
-        selectedOptions={quizState.selectedOptions}
-      />
+      {quizState.currentQuestion === "constructor" ? (
+        <KitchenConstructor
+          questions={quizState.availableOptions as FlatQuestion[]}
+        />
+      ) : (
+        <OptionList
+          options={quizState.availableOptions as string[]}
+          category={quizState.category}
+          question={quizState.currentQuestion}
+          selectedOptions={quizState.selectedOptions as string[]}
+        />
+      )}
       <Actions indexOfQuestion={quizState.indexOfQuestion} />
     </Stack>
   );

@@ -1,4 +1,4 @@
-import {footerAssetsPath} from '../../data/general/assets-paths'
+import { footerAssetsPath } from "../../data/general/assets-paths";
 const instaSvg = footerAssetsPath + "/instagram.svg";
 const vkSvg = footerAssetsPath + "/vkontakte.svg";
 

@@ -463,7 +463,9 @@ works.forEach((work, index) => {
   work.id = id;
   work.query.item = work.title;
 
-  work.photos.forEach((photo) => (photo.src = worksAssetsPath + '/' + photo.src));
+  work.photos.forEach(
+    (photo) => (photo.src = worksAssetsPath + "/" + photo.src),
+  );
 });
 
 export default works;

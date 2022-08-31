@@ -1,23 +1,20 @@
 import { translateQuestion } from "../features/quiz/translate";
 import { PayloadAction } from "@reduxjs/toolkit";
-import {
-  Questions,
-  FlatQuestion,
-  Category,
-} from "../models/quiz";
-import allCategoryQuestions from '../data/quiz/category-questions'
+import { Questions, FlatQuestion, Category } from "../types/quiz";
+import allCategoryQuestions from "../data/quiz/category-questions";
 import { createSlice } from "@reduxjs/toolkit";
 
-const categories = Object.keys(allCategoryQuestions)
+const categories = Object.keys(allCategoryQuestions);
 
+type ConstructorQuestions = { [question: string]: string | null };
 type State = {
   // current question and its index
   currentQuestion: string;
   indexOfQuestion: number;
 
   // answers AVAILABLE & SELECTED
-  availableOptions: (string | FlatQuestion<string>)[];
-  selectedOptions: (string | FlatQuestion<string>)[];
+  availableOptions: (string | FlatQuestion)[];
+  selectedOptions: (string | FlatQuestion)[];
 
   // storage of answered questions (array)
   answeredQuestions: Questions<string>;
@@ -27,28 +24,35 @@ type State = {
   categoryQuestions?: Questions<string>;
 
   // translated
-  translatedQuestion?: string
+  translatedQuestion?: string;
+
+  // constructor question
+  selectedConstructorOptions: ConstructorQuestions;
 };
 
 const initialState: State = {
   currentQuestion: "category",
-  translatedQuestion: translateQuestion('category', null),
+  translatedQuestion: translateQuestion("category", null),
   indexOfQuestion: -1,
   availableOptions: categories,
   selectedOptions: [],
   answeredQuestions: [],
   category: null,
   categoryQuestions: null,
+  selectedConstructorOptions: {
+    dishwasher: null,
+    oven: null,
+    hood: null,
+    microwave: null,
+    fridge: null,
+  },
 };
 
 const quizSlice = createSlice({
   name: "quiz",
   initialState,
   reducers: {
-    toggleSelectOption(
-      state: State,
-      action: PayloadAction<string | FlatQuestion<string>>,
-    ) {
+    toggleSelectOption(state: State, action: PayloadAction<string>) {
       const selectedOption = action.payload;
       const selectedIndex = state.selectedOptions.findIndex(
         (answ) => answ === selectedOption,
@@ -90,7 +94,10 @@ const quizSlice = createSlice({
 
       // SET NEXT QUESTION SET (question, availableAnswers, selectedAnswers)
       state.currentQuestion = Object.keys(nextQuestion)[0];
-      state.translatedQuestion = translateQuestion(state.currentQuestion, state.category)
+      state.translatedQuestion = translateQuestion(
+        state.currentQuestion,
+        state.category,
+      );
       state.availableOptions = Object.values(nextQuestion)[0];
       state.selectedOptions = [];
 
@@ -100,13 +107,16 @@ const quizSlice = createSlice({
       let index = state.indexOfQuestion;
 
       if (index === 0) {
-        state.selectedOptions = [state.category]
+        state.selectedOptions = [state.category];
 
         state.category = null;
         state.categoryQuestions = null;
 
         state.currentQuestion = "category";
-        state.translatedQuestion = translateQuestion(state.currentQuestion, null)
+        state.translatedQuestion = translateQuestion(
+          state.currentQuestion,
+          null,
+        );
         state.availableOptions = categories;
 
         state.indexOfQuestion--;
@@ -117,13 +127,28 @@ const quizSlice = createSlice({
 
         // SET CURRENT QUESTION AND ANSWERS
         state.currentQuestion = Object.keys(previuosQuestion)[0];
-        state.translatedQuestion = translateQuestion(state.currentQuestion, state.category)
+        state.translatedQuestion = translateQuestion(
+          state.currentQuestion,
+          state.category,
+        );
         state.availableOptions = Object.values(previuosQuestion)[0];
         state.selectedOptions = Object.values(
           state.answeredQuestions[state.indexOfQuestion],
         )[0].slice();
       }
+    },
+    selectConstructorOption(
+      state: State,
+      action: PayloadAction<{ [question: string]: string }>,
+    ) {
+      const constructorQuestions = state.selectedConstructorOptions;
+      const [question, answer] = Object.entries(action.payload)[0];
 
+      if (constructorQuestions[question] === answer) {
+        constructorQuestions[question] = null;
+      } else {
+        constructorQuestions[question] = answer;
+      }
     },
   },
 });

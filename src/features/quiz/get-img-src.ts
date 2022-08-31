@@ -1,5 +1,5 @@
 import { quizAssetsPath } from "../../data/general/assets-paths";
-import { Category } from "../../models/quiz";
+import { Category } from "../../types/quiz";
 
 function getImgSrc(category: Category, question: string, title: string) {
   const fileName = title.toLowerCase().replaceAll(" ", "+");

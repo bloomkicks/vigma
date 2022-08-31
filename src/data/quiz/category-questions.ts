@@ -1,4 +1,4 @@
-import { Category, Questions } from "../../models/quiz";
+import { Category, Questions } from "../../types/quiz";
 import { frontOptions, bodyOptions } from "./materials";
 
 import kitchen from "./categories/kitchen";
@@ -13,7 +13,9 @@ import office from "./categories/office";
   category.push(...[{ front: frontOptions }, { body: bodyOptions }]),
 );
 
-const allCategoryQuestions: { [category in Category]: Questions<string> } = {
+const allCategoryQuestions: {
+  [category in Category]: Questions<string>;
+} = {
   kitchen,
   closet,
   childish,

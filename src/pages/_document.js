@@ -13,7 +13,11 @@ class MyDocument extends Document {
           <link rel="icon" href="/logos/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
             rel="stylesheet"
