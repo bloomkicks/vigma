@@ -1,6 +1,6 @@
-import { Questions } from "../../../types/quiz";
+import { FlatQuestion } from "../../../types/quiz";
 
-const childish: Questions<string> = [
+const childish: FlatQuestion[] = [
   { category: ["Столики", "Кроватки", "Детские Стенки"] },
 ];
 

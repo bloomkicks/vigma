@@ -1,6 +1,6 @@
-import { Questions } from "../../../types/quiz";
+import { FlatQuestion } from "../../../types/quiz";
 
-const office: Questions<string> = [
+const office: FlatQuestion[] = [
   { category: ["Столы", "Стеллажи", "Гардеробные"] },
 ];
 

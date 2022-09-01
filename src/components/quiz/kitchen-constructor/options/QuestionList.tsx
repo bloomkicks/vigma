@@ -1,14 +1,21 @@
-import { FlatQuestion } from "../../../../types/quiz";
+import { ConstructorQuestions } from "../../../../types/quiz";
+import allConstructorQuestions from "../../../../data/quiz/constructor-questions";
 import Question from "./Question";
 import Grid from "@mui/material/Grid";
 
-const QuestionList = ({ questions }: { questions: FlatQuestion[] }) => {
+const QuestionList = ({ questions }: { questions: ConstructorQuestions }) => {
   return (
     <Grid container spacing={4} sx={{ alignContent: "center" }}>
-      {questions.map((question) => {
-        const entry: [string, string[]] = Object.entries(question)[0];
+      {Object.keys(questions).map((question) => {
+        const availableOptions = allConstructorQuestions.find((flatQuestion) =>
+          flatQuestion.hasOwnProperty(question),
+        )[question];
         return (
-          <Question question={entry[0]} radios={entry[1]} key={entry[0]} />
+          <Question
+            question={question}
+            radios={availableOptions}
+            key={question}
+          />
         );
       })}
     </Grid>

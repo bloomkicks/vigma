@@ -1,6 +1,6 @@
-import { Questions } from "../../../types/quiz";
+import { FlatQuestion } from "../../../types/quiz";
 
-const closet: Questions<string> = [
+const closet: FlatQuestion[] = [
   { shape: ["Шкафы-Купе", "Прихожие", "Гардеробные"] },
 ];
 

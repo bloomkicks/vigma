@@ -9,7 +9,7 @@ import Box from "@mui/material/Box";
 
 const KitchenDisplay = () => {
   const constructorOptions = useSelector(
-    (state: RootState) => state.quiz.selectedConstructorOptions,
+    (state: RootState) => state.quiz.constructorQuestions,
   );
 
   const kitchenDisplay = getKitchenDisplay(constructorOptions);

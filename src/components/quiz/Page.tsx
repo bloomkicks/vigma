@@ -26,14 +26,14 @@ const Page = () => {
       </Typography>
       {quizState.currentQuestion === "constructor" ? (
         <KitchenConstructor
-          questions={quizState.availableOptions as FlatQuestion[]}
+          questions={quizState.constructorQuestions}
         />
       ) : (
         <OptionList
-          options={quizState.availableOptions as string[]}
+          options={quizState.availableOptions}
           category={quizState.category}
           question={quizState.currentQuestion}
-          selectedOptions={quizState.selectedOptions as string[]}
+          selectedOptions={quizState.selectedOptions}
         />
       )}
       <Actions indexOfQuestion={quizState.indexOfQuestion} />

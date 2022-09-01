@@ -11,7 +11,7 @@ import RadioOption from "./RadioOption";
 
 const Question = ({
   question,
-  radios,
+  radios
 }: {
   question: string;
   radios: string[];

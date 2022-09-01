@@ -1,33 +1,32 @@
 import { translateQuestion } from "../features/quiz/translate";
 import { PayloadAction } from "@reduxjs/toolkit";
-import { Questions, FlatQuestion, Category } from "../types/quiz";
+import { FlatQuestion, Category, ConstructorQuestions } from "../types/quiz";
 import allCategoryQuestions from "../data/quiz/category-questions";
 import { createSlice } from "@reduxjs/toolkit";
 
 const categories = Object.keys(allCategoryQuestions);
 
-type ConstructorQuestions = { [question: string]: string | null };
 type State = {
   // current question and its index
   currentQuestion: string;
   indexOfQuestion: number;
 
   // answers AVAILABLE & SELECTED
-  availableOptions: (string | FlatQuestion)[];
-  selectedOptions: (string | FlatQuestion)[];
+  availableOptions: string[];
+  selectedOptions: string[];
 
   // storage of answered questions (array)
-  answeredQuestions: Questions<string>;
+  answeredQuestions: FlatQuestion[];
 
   // all questions - if has category
   category?: Category;
-  categoryQuestions?: Questions<string>;
+  categoryQuestions?: FlatQuestion[];
 
   // translated
   translatedQuestion?: string;
 
   // constructor question
-  selectedConstructorOptions: ConstructorQuestions;
+  constructorQuestions: ConstructorQuestions;
 };
 
 const initialState: State = {
@@ -39,13 +38,9 @@ const initialState: State = {
   answeredQuestions: [],
   category: null,
   categoryQuestions: null,
-  selectedConstructorOptions: {
+  constructorQuestions: {
     dishwasher: null,
-    oven: null,
-    hood: null,
-    microwave: null,
-    fridge: null,
-  },
+  }
 };
 
 const quizSlice = createSlice({
@@ -141,14 +136,21 @@ const quizSlice = createSlice({
       state: State,
       action: PayloadAction<{ [question: string]: string }>,
     ) {
-      const constructorQuestions = state.selectedConstructorOptions;
+      const constructorQuestions = state.constructorQuestions;
+      const allQuestions = state.availableOptions
       const [question, answer] = Object.entries(action.payload)[0];
 
-      if (constructorQuestions[question] === answer) {
-        constructorQuestions[question] = null;
-      } else {
-        constructorQuestions[question] = answer;
+      constructorQuestions[question] = answer;
+
+      const nextQuestionIndex = allQuestions.indexOf(question) + 1
+      if (nextQuestionIndex > allQuestions.length) {
+        return state
       }
+      const nextQuestion = allQuestions[nextQuestionIndex]
+      if (constructorQuestions[nextQuestion]) {
+
+      } 
+      constructorQuestions[nextQuestion] = null
     },
   },
 });

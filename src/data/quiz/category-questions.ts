@@ -1,4 +1,4 @@
-import { Category, Questions } from "../../types/quiz";
+import { FlatQuestion } from "../../types/quiz";
 import { frontOptions, bodyOptions } from "./materials";
 
 import kitchen from "./categories/kitchen";
@@ -14,7 +14,7 @@ import office from "./categories/office";
 );
 
 const allCategoryQuestions: {
-  [category in Category]: Questions<string>;
+  [category: string]: FlatQuestion[];
 } = {
   kitchen,
   closet,

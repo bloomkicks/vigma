@@ -1,5 +1,4 @@
 export type FlatQuestion<T = string> = { [question: string]: T[] };
-export type Questions<T> = FlatQuestion<T | FlatQuestion<T>>[];
 export type Category =
   | "kitchen"
   | "closet"
@@ -12,4 +11,7 @@ export type Category =
   | "hood"
   | "microwave"
   | "fridge";
+
+export type ConstructorQuestions = { [question: string]: string | null };
+
 export type Translation = ((category: Category) => string) | string;
