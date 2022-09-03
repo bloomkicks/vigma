@@ -1,5 +1,13 @@
 import { Category, Translation } from "../../types/quiz";
 
+const constructorQuestions = [
+  "dishwasher",
+  "oven",
+  "hood",
+  "microwave",
+  "fridge",
+];
+
 const constructorOptions: {
   [question: string]: Translation;
 } = {
@@ -18,6 +26,7 @@ const constructorOptions: {
   Широкий: "2",
   Встроенный: "3",
   null: "0",
+  undefined: "0",
 };
 
 function translateConstructorOption(
@@ -33,10 +42,18 @@ function translateConstructorOption(
 function getKitchenDisplay(constructorOptions: {
   [category: string]: string;
 }): string {
-  const kitchenDisplay = Object.entries(constructorOptions).map(
-    (entry: [Category, string]) =>
+  const kitchenDisplay = Object.entries(constructorOptions)
+    .sort(
+      (a, b) =>
+        constructorQuestions.indexOf(a[0]) - constructorQuestions.indexOf(b[0]),
+    )
+    .map((entry: [Category, string]) =>
       translateConstructorOption(entry[1], entry[0]),
-  );
+    );
+
+  while (kitchenDisplay.length < 5) {
+    kitchenDisplay.push("0");
+  }
 
   if (kitchenDisplay[1] === "3" && kitchenDisplay[4] === "3") {
     kitchenDisplay[4] = "1";

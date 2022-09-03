@@ -27,6 +27,7 @@ const Page = () => {
       {quizState.currentQuestion === "constructor" ? (
         <KitchenConstructor
           questions={quizState.constructorQuestions}
+          allQuestions={quizState.availableOptions}
         />
       ) : (
         <OptionList

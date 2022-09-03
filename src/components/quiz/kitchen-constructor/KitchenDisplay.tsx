@@ -4,15 +4,12 @@ import getKitchenDisplay from "../../../features/quiz/get-kitchen-display";
 import type { RootState } from "../../../store";
 import { useSelector } from "react-redux";
 
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 const KitchenDisplay = () => {
-  const constructorOptions = useSelector(
-    (state: RootState) => state.quiz.constructorQuestions,
+  const kitchenDisplay = useSelector((state: RootState) =>
+    getKitchenDisplay(state.quiz.constructorQuestions),
   );
-
-  const kitchenDisplay = getKitchenDisplay(constructorOptions);
 
   return (
     <Box

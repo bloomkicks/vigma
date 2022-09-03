@@ -1,3 +1,4 @@
+import React from "react";
 import { translateCategory } from "../../../../features/quiz/translate";
 import { useDispatch } from "react-redux";
 import { quizActions } from "../../../../store/quiz";
@@ -11,9 +12,11 @@ import RadioOption from "./RadioOption";
 
 const Question = ({
   question,
-  radios
+  radios,
+  selected,
 }: {
   question: string;
+  selected: string;
   radios: string[];
 }) => {
   const dispatch = useDispatch();
@@ -29,7 +32,14 @@ const Question = ({
         <Typography variant="h4">{translateCategory(question)}</Typography>
         <RadioGroup onChange={selectOptionHandler}>
           {radios.map((radio) => {
-            return <RadioOption value={radio} label={radio} key={radio} />;
+            return (
+              <RadioOption
+                isChecked={selected === radio}
+                value={radio}
+                label={radio}
+                key={radio}
+              />
+            );
           })}
         </RadioGroup>
       </Stack>
@@ -37,4 +47,4 @@ const Question = ({
   );
 };
 
-export default Question;
+export default React.memo(Question);

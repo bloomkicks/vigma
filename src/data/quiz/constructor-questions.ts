@@ -8,4 +8,4 @@ const constructorQuestions: FlatQuestion[] = [
   { fridge: ["Обычный", "Широкий", "Встроенный"] },
 ];
 
-export default constructorQuestions
+export default constructorQuestions;
