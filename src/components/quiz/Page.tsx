@@ -1,5 +1,5 @@
 import KitchenConstructor from "./kitchen-constructor/KitchenConstructor";
-import { FlatQuestion } from "../../types/quiz";
+import SizeQuestion from "./SizeQuestion";
 import { RootState } from "../../store";
 import { useSelector } from "react-redux";
 
@@ -13,7 +13,7 @@ const Page = () => {
   const quizState = useSelector((state: RootState) => state.quiz);
 
   return (
-    <Stack alignItems="center" sx={{ pt: 3, maxWidth: "1366px" }}>
+    <Stack alignItems="center" sx={{ pt: 3, maxWidth: "1366px", px: 2 }}>
       <GiftPaper
         amountOfQuestions={
           (quizState.categoryQuestions
@@ -21,7 +21,7 @@ const Page = () => {
             : 2) - quizState.indexOfQuestion
         }
       />
-      <Typography variant="h1" mb={1.5} align="center">
+      <Typography variant="h1" mb={2} align="center">
         {quizState.translatedQuestion}
       </Typography>
       {quizState.currentQuestion === "constructor" ? (
@@ -29,6 +29,8 @@ const Page = () => {
           questions={quizState.constructorQuestions}
           allQuestions={quizState.availableOptions}
         />
+      ) : quizState.currentQuestion === "size" ? (
+        <SizeQuestion />
       ) : (
         <OptionList
           options={quizState.availableOptions}
@@ -37,7 +39,19 @@ const Page = () => {
           selectedOptions={quizState.selectedOptions}
         />
       )}
-      <Actions indexOfQuestion={quizState.indexOfQuestion} />
+      <Actions
+        indexOfQuestion={quizState.indexOfQuestion}
+        disabled={
+          quizState.selectedOptions.length < 1 &&
+          quizState.currentQuestion === "category"
+        }
+        isDalee={
+          quizState.selectedOptions.length > 0 ||
+          (quizState.currentQuestion === "constructor" &&
+            !!quizState.constructorQuestions["dishwasher"]) ||
+          quizState.currentQuestion === "category"
+        }
+      />
     </Stack>
   );
 };

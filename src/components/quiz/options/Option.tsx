@@ -43,8 +43,8 @@ const Option = ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        minWidth: "280px",
-        maxWidth: { xs: "100%", sm: "350px" },
+        minWidth: "260px",
+        maxWidth: { xs: "100%", sm: "290px" },
       }}
     >
       <Card
@@ -54,8 +54,8 @@ const Option = ({
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          minWidth: "260px",
-          maxWidth: "320px",
+          minWidth: "240px",
+          maxWidth: "260px",
           width: "100%",
           cursor: "pointer",
         }}
@@ -73,7 +73,7 @@ const Option = ({
         <Box
           width="100%"
           px={1}
-          pl={{ xs: 6.5, lg: 7 }}
+          pl={{ xs: 6.5, lg: 6.5 }}
           py={1}
           pt={{ xs: 1.25, sm: 1 }}
           position="relative"
@@ -87,6 +87,7 @@ const Option = ({
               position: "absolute",
               left: (theme) => theme.spacing(1),
               top: 0,
+              height: "100%",
               ".Mui-disabled": { color: "text.primary" },
             }}
           />
@@ -95,7 +96,7 @@ const Option = ({
             display="inline"
             sx={{
               userSelect: "none",
-              fontSize: { lg: 26 },
+              fontSize: { lg: 21 },
             }}
           >
             {optionTitle}

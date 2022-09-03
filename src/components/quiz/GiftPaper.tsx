@@ -31,13 +31,14 @@ const GiftPaper = ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        bgcolor: "primary.dark",
       }}
     >
       <Typography
         variant="h2"
         align="center"
         display="inline-block"
-        sx={{ textTransform: "uppercase", fontWeight: "400" }}
+        sx={{ textTransform: "uppercase", fontWeight: "400", color: "#fff" }}
       >
         до подарка осталось:
         <Typography variant="inherit" sx={{ fontWeight: "bold" }}>

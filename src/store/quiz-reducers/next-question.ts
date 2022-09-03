@@ -7,14 +7,6 @@ function nextQuestion(state: State) {
   let index = state.indexOfQuestion;
 
   // EDGE CASES
-  // no answers selected
-  if (
-    state.selectedOptions.length === 0 &&
-    state.currentQuestion !== "constructor"
-  ) {
-    return state;
-  }
-
   // set category if first question
   if (index === -1) {
     state.category = state.selectedOptions[0] as Category;

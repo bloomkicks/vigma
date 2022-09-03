@@ -7,7 +7,15 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import React from "react";
 
-const Actions = ({ indexOfQuestion }: { indexOfQuestion: number }) => {
+const Actions = ({
+  indexOfQuestion,
+  isDalee,
+  disabled,
+}: {
+  indexOfQuestion: number;
+  isDalee: boolean;
+  disabled: boolean;
+}) => {
   const dispatch = useDispatch();
 
   function nextHandler() {
@@ -19,7 +27,7 @@ const Actions = ({ indexOfQuestion }: { indexOfQuestion: number }) => {
   }
 
   return (
-    <Stack direction="row" spacing={2}>
+    <Stack direction="row" spacing={2} sx={{ mt: 5 }}>
       <Button
         variant="text"
         onClick={backHandler}
@@ -48,8 +56,13 @@ const Actions = ({ indexOfQuestion }: { indexOfQuestion: number }) => {
           Назад
         </Typography>
       </Button>
-      <Button variant="contained" color="info" onClick={nextHandler}>
-        Далее
+      <Button
+        variant="contained"
+        color="info"
+        onClick={nextHandler}
+        disabled={disabled}
+      >
+        {isDalee ? "Далее" : "Пропустить"}
       </Button>
     </Stack>
   );

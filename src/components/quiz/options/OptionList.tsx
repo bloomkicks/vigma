@@ -1,5 +1,5 @@
 import getImgSrc from "../../../features/quiz/get-img-src";
-import { FlatQuestion, Category } from "../../../types/quiz";
+import { Category } from "../../../types/quiz";
 import Option from "./Option";
 import Grid from "@mui/material/Grid";
 import React from "react";
@@ -20,8 +20,9 @@ const OptionList = ({
       container
       rowSpacing={{ xs: 2, sm: 3 }}
       columnSpacing={3}
+      alignItems="flex-start"
       justifyContent="center"
-      sx={{ mb: 3, px: { xs: 1.2, sm: 3 } }}
+      sx={{ px: { xs: 1.2, sm: 3 } }}
     >
       {options.map((option) => {
         const imgSrc = getImgSrc(category, question, option);

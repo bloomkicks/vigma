@@ -13,7 +13,7 @@ const KitchenConstructor = ({
   allQuestions: string[];
 }) => {
   return (
-    <Stack alignItems="center">
+    <Stack alignItems="center" sx={{ maxWidth: "1366px" }}>
       <KitchenDisplay />
       <QuestionList questions={questions} allQuestions={allQuestions} />
     </Stack>
