@@ -27,7 +27,7 @@ const Actions = ({
   }
 
   return (
-    <Stack direction="row" spacing={2} sx={{ mt: 5 }}>
+    <Stack direction="row" spacing={2} sx={{ mt: 5, mb: 6 }}>
       <Button
         variant="text"
         onClick={backHandler}

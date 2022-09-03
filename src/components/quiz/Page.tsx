@@ -21,7 +21,7 @@ const Page = () => {
             : 2) - quizState.indexOfQuestion
         }
       />
-      <Typography variant="h1" mb={2} align="center">
+      <Typography variant="h1" mb={3.5} align="center">
         {quizState.translatedQuestion}
       </Typography>
       {quizState.currentQuestion === "constructor" ? (

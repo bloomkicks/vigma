@@ -18,11 +18,10 @@ const OptionList = ({
   return (
     <Grid
       container
-      rowSpacing={{ xs: 2, sm: 3 }}
-      columnSpacing={3}
+      spacing={3}
       alignItems="flex-start"
       justifyContent="center"
-      sx={{ px: { xs: 1.2, sm: 3 } }}
+      sx={{ px: { xs: 1.2, sm: 3 }, maxWidth: "1200px" }}
     >
       {options.map((option) => {
         const imgSrc = getImgSrc(category, question, option);

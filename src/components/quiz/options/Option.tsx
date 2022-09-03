@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import Radio from "@mui/material/Radio";
 // MUI END
 
+import Image from "next/image";
 import { quizActions } from "../../../store/quiz";
 import { useDispatch } from "react-redux";
 import { translateCategory } from "../../../features/quiz/translate";
@@ -37,8 +38,7 @@ const Option = ({
       item
       xs={12}
       sm={6}
-      md={3}
-      lg={3}
+      md={4}
       sx={{
         display: "flex",
         alignItems: "center",
@@ -60,16 +60,7 @@ const Option = ({
           cursor: "pointer",
         }}
       >
-        <Box
-          component="img"
-          src={imgSrc}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          height="auto"
-          width="100%"
-          sx={{ bgcolor: "text.secondary" }}
-        ></Box>
+        <Image src={imgSrc} alt="" width={260} height={145} />
         <Box
           width="100%"
           px={1}

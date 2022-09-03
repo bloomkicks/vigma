@@ -11,7 +11,19 @@ const QuestionList = ({
   allQuestions: string[];
 }) => {
   return (
-    <Grid container spacing={4} sx={{ alignContent: "center" }}>
+    <Grid
+      container
+      spacing={4}
+      columnSpacing={{ xs: 3, sm: 4 }}
+      sx={{
+        alignContent: "center",
+        mx: "auto",
+        ml: { xs: "0px" },
+        width: "fit-content",
+      }}
+      justifyContent="flex-start"
+      alignItems="flex-start"
+    >
       {allQuestions
         .filter((question) => questions[question] !== undefined)
         .map((question) => {

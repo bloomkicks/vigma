@@ -19,13 +19,19 @@ const KitchenDisplay = () => {
         boxShadow: `0px 2px 2px -1px rgba(0,0,0,0.4),
             0px 1px 2px 1px rgba(0,0,0,0.28),
             0px 1px 5px 1px rgba(0,0,0,0.24)`,
+        maxWidth: "95%",
+        minWidth: "300px",
+        position: "relative",
       }}
-      src={`${quizAssetsPath}/kitchen/constructor/${kitchenDisplay}.webp`}
-      alt="Получившаяся кухня"
-      width="500px"
-      height="337px"
-      component="img"
-    ></Card>
+    >
+      <Image
+        src={`${quizAssetsPath}/kitchen/constructor/${kitchenDisplay}.webp`}
+        alt="Получившаяся кухня"
+        loading="eager"
+        width={741.3}
+        height={500}
+      />
+    </Card>
   );
 };
 
