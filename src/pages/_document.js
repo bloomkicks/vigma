@@ -9,9 +9,9 @@ class MyDocument extends Document {
     return (
       <Html lang="ru">
         <Head>
-          <link rel="icon" href="/logos/mini_new.svg" />
-          <link rel="icon" href="/logos/favicon.ico" />
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="icon" href="./logos/mini_new.svg" />
+          <link rel="icon" href="./logos/favicon.ico" />
+          <link rel="manifest" href="./manifest.json" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
@@ -28,7 +28,7 @@ class MyDocument extends Document {
           <meta name="description" content={description} />
           {/* OPEN GRAPH */}
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="/logos/mini_blue.jpg" />
+          <meta property="og:image" content="./logos/mini_blue.jpg" />
           <meta property="og:url" content="vigmamebel.ru" />
           <meta property="og:site_name" content="Мебель на Заказ" />
           <meta property="og:title" content={title} />
@@ -36,7 +36,7 @@ class MyDocument extends Document {
           {/* TWITTER */}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@vigmamebel.ru" />
-          <meta name="twitter:image" content="/logos/mini_blue.jpg" />
+          <meta name="twitter:image" content="./logos/mini_blue.jpg" />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
         </Head>
