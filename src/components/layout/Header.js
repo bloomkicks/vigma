@@ -74,7 +74,7 @@ const Header = (props) => {
             className={`${classes.Nav} ${isActiveNav && classes.Nav__active}`}
           >
             <NavLink
-              href="/order/quiz"
+              href="/order"
               tabIndex={1}
               onClick={navClickHandler}
               onFocus={navFocusHandler}

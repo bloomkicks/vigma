@@ -1,9 +1,11 @@
+import { useRouter } from "next/router";
+import { quizActions } from "../../store/quiz";
 import MainButton from "../ui/MainButton";
 import Bold from "../ui/Bold";
 import Secondary from "../ui/Secondary";
 import ImageContainer from "./ImageContainer";
 import classes from "./Work.module.scss";
-import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
 
 function formatPrice(price) {
   let formattedPrice = "";
@@ -21,7 +23,8 @@ function formatPrice(price) {
 
 const Work = (props) => {
   const router = useRouter();
-  const { photos, title, description, price, colors, query } = props;
+  const dispatch = useDispatch();
+  const { photos, title, description, price, colors } = props;
 
   let formattedPrice = "";
   if (price) {
@@ -29,7 +32,8 @@ const Work = (props) => {
   }
 
   const orderHandler = (e) => {
-    router.push("/order?item=" + query.item);
+    dispatch(quizActions.selectItem(title));
+    router.push("/order");
   };
 
   return (
@@ -55,7 +59,7 @@ const Work = (props) => {
         )}
       </figcaption>
       <MainButton tabIndex={1} onClick={orderHandler}>
-        <p>Рассчитать</p>
+        <p>Заказать</p>
       </MainButton>
     </section>
   );

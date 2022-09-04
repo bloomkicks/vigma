@@ -22,13 +22,13 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/main": [
+    "/order": [
       "static/chunks/main.js",
-      "static/chunks/pages/main.js"
+      "static/chunks/pages/order.js"
     ],
-    "/order/quiz": [
+    "/works": [
       "static/chunks/main.js",
-      "static/chunks/pages/order/quiz.js"
+      "static/chunks/pages/works.js"
     ]
   },
   "ampFirstPages": []

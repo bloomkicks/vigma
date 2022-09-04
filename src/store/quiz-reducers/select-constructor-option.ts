@@ -1,8 +1,8 @@
 import { PayloadAction } from "@reduxjs/toolkit";
-import { State } from "../quiz";
+import { QuizState } from "../quiz";
 
 function selectConstructorOption(
-  state: State,
+  state: QuizState,
   action: PayloadAction<{ [question: string]: string }>,
 ) {
   const constructorQuestions = state.constructorQuestions;

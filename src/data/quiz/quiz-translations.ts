@@ -16,6 +16,7 @@ export const categoriesTranslations = {
   fridge: "Холодильник",
 };
 
+let gift = "Выбирете ваш подарок";
 // KITCHEN
 let table = "Выбирете материалы столешницы";
 let furniture = "Выбирете фурнитуру шкафов";
@@ -32,6 +33,7 @@ export const questionsTranslations: {
   furniture,
   size,
   constructor,
+  gift,
 };
 
 // FUNCTION TRANSLATIONS

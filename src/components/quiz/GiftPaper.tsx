@@ -1,62 +1,92 @@
 import { quizAssetsPath } from "../../data/general/assets-paths";
-import Image from "next/image";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import React from "react";
+import getFormOfQuestions from "../../features/quiz/get-form-of-questions";
 
-const GiftPaper = ({
-  amountOfQuestions = 5,
-}: {
-  amountOfQuestions: number;
-}) => {
-  let questions = "вопросов";
-  switch (amountOfQuestions) {
-    case 1:
-      questions = "вопрос";
-      break;
-    case 2:
-    case 3:
-    case 4:
-      questions = "вопроса";
-      break;
-  }
+const GiftPaper = ({ amountOfQuestions }: { amountOfQuestions: number }) => {
+  const isKnown = typeof amountOfQuestions === "number";
+  const isGift = amountOfQuestions === 0;
+  const questions = getFormOfQuestions(amountOfQuestions);
+
   return (
     <Paper
       sx={{
-        boxShadow: "none",
-        px: 2,
-        mb: 3,
-        width: "80%",
+        mb: isGift ? 2 : 5,
+        height: {
+          xs: "120px",
+          sm: "150px",
+          md: "180px",
+        },
+        width: "100%",
+        px: 5,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        bgcolor: "primary.dark",
+        position: "relative",
       }}
     >
+      <Box
+        component="img"
+        src={`${quizAssetsPath}/giftpaper.jpg`}
+        alt=""
+        position="absolute"
+        height="100%"
+        width="100%"
+        left="0"
+        top="0"
+      ></Box>
       <Typography
         variant="h2"
         align="center"
         display="inline-block"
-        sx={{ textTransform: "uppercase", fontWeight: "400", color: "#fff" }}
-      >
-        до подарка осталось:
-        <Typography variant="inherit" sx={{ fontWeight: "bold" }}>
-          {amountOfQuestions} {questions}
-        </Typography>
-      </Typography>
-      <Box
-        component={() => (
-          <Image
-            src={`${quizAssetsPath}/gift.png`}
-            alt=""
-            width="120"
-            height="120"
-          />
-        )}
         position="relative"
-        left="150"
-      ></Box>
+        sx={{
+          textTransform: "uppercase",
+          color: "#fff",
+          fontFamily: "Rubik, sans-serif",
+          fontSize: { xs: 17, sm: 25, md: 35 },
+          top: isKnown && !isGift ? { xs: 5, sm: 10 } : 0,
+        }}
+      >
+        {!isKnown ? (
+          "Пройдите опрос и получите подарок"
+        ) : isGift ? (
+          <>
+            Выбирете ваш{" "}
+            <Box component="span" color="primary.light">
+              подарок
+            </Box>
+          </>
+        ) : (
+          <>
+            ДО ПОДАРКА ОСТАЛОСЬ:
+            <br />
+            <Box component="span">
+              <Box
+                component="span"
+                sx={{
+                  fontSize: { xs: 34, sm: 50, md: 70 },
+                  verticalAlign: "middle",
+                }}
+              >
+                {amountOfQuestions}
+              </Box>
+              <Box
+                component="span"
+                sx={{
+                  verticalAlign: "middle",
+                  ml: 1.1,
+                  top: "1px",
+                }}
+              >
+                {questions}
+              </Box>
+            </Box>
+          </>
+        )}
+      </Typography>
     </Paper>
   );
 };

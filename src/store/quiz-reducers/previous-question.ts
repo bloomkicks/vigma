@@ -1,8 +1,9 @@
 import { translateQuestion } from "../../features/quiz/translate";
-import { State, categories } from "../quiz";
+import { QuizState, categories } from "../quiz";
 
-function previousQuestion(state: State) {
+function previousQuestion(state: QuizState) {
   let index = state.indexOfQuestion;
+  state.isFinished = false;
 
   if (index === 0) {
     state.selectedOptions = [state.category];

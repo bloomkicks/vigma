@@ -8,9 +8,10 @@ import bathroom from "./categories/bathroom";
 import shop from "./categories/shop";
 import office from "./categories/office";
 
+const gift = ["Сковорода", "Смеситель", "Набор Ножей"];
 // add front and body material questions
 [closet, childish, bathroom, shop, office].forEach((category) =>
-  category.push(...[{ front: frontOptions }, { body: bodyOptions }]),
+  category.push(...[{ front: frontOptions }, { body: bodyOptions }, { gift }]),
 );
 
 const allCategoryQuestions: {

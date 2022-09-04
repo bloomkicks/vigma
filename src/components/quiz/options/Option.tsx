@@ -25,7 +25,6 @@ const Option = ({
   imgSrc: string;
   category: string;
 }) => {
-  console.log("Reevaluated " + option);
   const dispatch = useDispatch();
   const optionTitle = category ? option : translateCategory(option);
 

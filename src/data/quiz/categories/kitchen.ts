@@ -12,7 +12,7 @@ const gift = ["Сковорода", "Смеситель", "Набор Ножей
 const kitchen: FlatQuestion[] = [
   { shape },
   { constructor },
-  { furniture },
+  // { furniture },
   { front },
   { table },
   { size },

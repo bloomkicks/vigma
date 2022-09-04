@@ -1,7 +1,6 @@
 import KitchenConstructor from "./kitchen-constructor/KitchenConstructor";
 import SizeQuestion from "./SizeQuestion";
-import { RootState } from "../../store";
-import { useSelector } from "react-redux";
+import { Category, FlatQuestion, ConstructorQuestions } from "../../types/quiz";
 
 import OptionList from "./options/OptionList";
 import GiftPaper from "./GiftPaper";
@@ -9,47 +8,64 @@ import Actions from "./Actions";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
-const Page = () => {
-  const quizState = useSelector((state: RootState) => state.quiz);
-
+const Page = ({
+  currentQuestion,
+  translatedQuestion,
+  availableOptions,
+  category,
+  selectedOptions,
+  indexOfQuestion,
+  categoryQuestions,
+  constructorQuestions,
+}: {
+  currentQuestion: string;
+  translatedQuestion: string;
+  availableOptions: string[];
+  category: Category;
+  selectedOptions: string[];
+  indexOfQuestion: number;
+  categoryQuestions: FlatQuestion[];
+  constructorQuestions: ConstructorQuestions;
+}) => {
   return (
-    <Stack alignItems="center" sx={{ pt: 3, maxWidth: "1366px", px: 2 }}>
+    <Stack
+      alignItems="center"
+      sx={{ pt: 3, maxWidth: "1366px", px: 2, width: "95%" }}
+    >
       <GiftPaper
         amountOfQuestions={
-          (quizState.categoryQuestions
-            ? quizState.categoryQuestions!.length
-            : 2) - quizState.indexOfQuestion
+          categoryQuestions
+            ? categoryQuestions!.length - indexOfQuestion - 1
+            : undefined
         }
       />
       <Typography variant="h1" mb={3.5} align="center">
-        {quizState.translatedQuestion}
+        {currentQuestion === "gift" ? undefined : translatedQuestion}
       </Typography>
-      {quizState.currentQuestion === "constructor" ? (
+      {currentQuestion === "constructor" ? (
         <KitchenConstructor
-          questions={quizState.constructorQuestions}
-          allQuestions={quizState.availableOptions}
+          questions={constructorQuestions}
+          allQuestions={availableOptions}
         />
-      ) : quizState.currentQuestion === "size" ? (
+      ) : currentQuestion === "size" ? (
         <SizeQuestion />
       ) : (
         <OptionList
-          options={quizState.availableOptions}
-          category={quizState.category}
-          question={quizState.currentQuestion}
-          selectedOptions={quizState.selectedOptions}
+          options={availableOptions}
+          category={category}
+          question={currentQuestion}
+          selectedOptions={selectedOptions}
         />
       )}
       <Actions
-        indexOfQuestion={quizState.indexOfQuestion}
-        disabled={
-          quizState.selectedOptions.length < 1 &&
-          quizState.currentQuestion === "category"
-        }
+        indexOfQuestion={indexOfQuestion}
+        disabled={selectedOptions.length < 1 && currentQuestion === "category"}
         isDalee={
-          quizState.selectedOptions.length > 0 ||
-          (quizState.currentQuestion === "constructor" &&
-            !!quizState.constructorQuestions["dishwasher"]) ||
-          quizState.currentQuestion === "category"
+          selectedOptions.length > 0 ||
+          currentQuestion === "size" ||
+          (currentQuestion === "constructor" &&
+            !!constructorQuestions["dishwasher"]) ||
+          currentQuestion === "category"
         }
       />
     </Stack>

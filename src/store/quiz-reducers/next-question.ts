@@ -1,9 +1,9 @@
 import allCategoryQuestions from "../../data/quiz/category-questions";
 import { Category } from "../../types/quiz";
 import { translateQuestion } from "../../features/quiz/translate";
-import { State } from "../quiz";
+import { QuizState } from "../quiz";
 
-function nextQuestion(state: State) {
+function nextQuestion(state: QuizState) {
   let index = state.indexOfQuestion;
 
   // EDGE CASES
@@ -12,16 +12,18 @@ function nextQuestion(state: State) {
     state.category = state.selectedOptions[0] as Category;
     state.categoryQuestions = allCategoryQuestions[state.category];
   }
-  // if it's a last question
-  else if (index >= state.categoryQuestions.length - 1) {
-    return state;
-  }
 
   // SAVE ANSWERS IN ANSWERED QUESTIONS
   const answeredQuestion = {};
   answeredQuestion[state.currentQuestion] = state.selectedOptions.slice();
 
   state.answeredQuestions[index] = answeredQuestion;
+
+  // if it's a last question
+  if (index >= state.categoryQuestions.length - 1) {
+    state.isFinished = true;
+    return state;
+  }
 
   // GET NEXT QUESTION
   state.indexOfQuestion++;
