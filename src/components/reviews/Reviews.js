@@ -1,7 +1,6 @@
-import { reviewsAssetsPath } from "../../data/general/assets-paths";
-const woman = reviewsAssetsPath + "/woman in a blue shirt.jpg";
-const coolMan2 = reviewsAssetsPath + "/cool man 2.jpg";
-const oldMan = reviewsAssetsPath + "/old man.jpg";
+const woman = process.env.REVIEWS_ASSETS + "/woman in a blue shirt.jpg";
+const coolMan2 = process.env.REVIEWS_ASSETS + "/cool man 2.jpg";
+const oldMan = process.env.REVIEWS_ASSETS + "/old man.jpg";
 
 import Review from "./Review";
 import classes from "./Reviews.module.css";

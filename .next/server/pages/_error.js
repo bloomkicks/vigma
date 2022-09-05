@@ -185,7 +185,7 @@ const ErrorPage = ()=>{
                 ]
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                src: "/pictures/error-page/error-arrow.svg",
+                src: "./pictures/general" + "/error-arrow.svg",
                 alt: "Наверху",
                 className: (_ErrorPage_module_css__WEBPACK_IMPORTED_MODULE_3___default().Arrow)
             })

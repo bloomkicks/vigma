@@ -1,7 +1,6 @@
-import { mainAssetsPath } from "../../data/general/assets-paths";
-const packageSvg = mainAssetsPath + "/package.svg";
-const rulerSvg = mainAssetsPath + "/ruler.svg";
-const gearsSvg = mainAssetsPath + "/gears.svg";
+const packageSvg = process.env.MAIN_ASSETS + "/package.svg";
+const rulerSvg = process.env.MAIN_ASSETS + "/ruler.svg";
+const gearsSvg = process.env.MAIN_ASSETS + "/gears.svg";
 
 import MainAdvantage from "./MainAdvantage";
 import Secondary from "../ui/Secondary";

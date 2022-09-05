@@ -1,5 +1,5 @@
 import { quizAssetsPath } from "../../../data/general/assets-paths";
-import getImgSrc from "../../../features/quiz/get-img-src";
+import getOptionImgSrc from "../../../features/quiz/get-option-img-src";
 import { Category } from "../../../types/quiz";
 import Option from "./Option";
 import Grid from "@mui/material/Grid";
@@ -20,12 +20,13 @@ const OptionList = ({
     <Grid
       container
       spacing={3}
+      className="large-fading"
       alignItems="flex-start"
       justifyContent="center"
       sx={{ px: { xs: 1.2, sm: 3 }, maxWidth: "1200px" }}
     >
       {options.map((option) => {
-        const imgSrc = getImgSrc(category, question, option);
+        const imgSrc = getOptionImgSrc(category, question, option);
 
         return (
           <Option
@@ -44,7 +45,7 @@ const OptionList = ({
           category={category}
           isSelected={selectedOptions.includes("Помощь специалиста")}
           question={question}
-          imgSrc={`${quizAssetsPath}/help.jpg`}
+          imgSrc={`${process.env.QUIZ_ASSETS}/help.jpg`}
         />
       )}
     </Grid>

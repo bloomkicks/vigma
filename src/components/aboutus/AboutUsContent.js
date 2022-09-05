@@ -1,11 +1,9 @@
-import { aboutsUsAssetsPath } from "../../data/general/assets-paths";
-
-const servicesSrc = aboutsUsAssetsPath + "/Services.svg";
-const cartSrc = aboutsUsAssetsPath + "/Cart.svg";
-const materialsSrc = aboutsUsAssetsPath + "/Materials.svg";
-const clockSrc = aboutsUsAssetsPath + "/Clock.svg";
-const deliverySrc = aboutsUsAssetsPath + "/Delivery.svg";
-const buildingSrc = aboutsUsAssetsPath + "/Building.svg";
+const servicesSrc = process.env.ABOUT_US_ASSETS + "/Services.svg";
+const cartSrc = process.env.ABOUT_US_ASSETS + "/Cart.svg";
+const materialsSrc = process.env.ABOUT_US_ASSETS + "/Materials.svg";
+const clockSrc = process.env.ABOUT_US_ASSETS + "/Clock.svg";
+const deliverySrc = process.env.ABOUT_US_ASSETS + "/Delivery.svg";
+const buildingSrc = process.env.ABOUT_US_ASSETS + "/Building.svg";
 
 import AboutUsSection from "./AboutUsSection";
 import Content from "../layout/Content";

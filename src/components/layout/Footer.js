@@ -1,6 +1,5 @@
-import { footerAssetsPath } from "../../data/general/assets-paths";
-const instaSvg = footerAssetsPath + "/instagram.svg";
-const vkSvg = footerAssetsPath + "/vkontakte.svg";
+const instaSvg = process.env.GENERAL_ASSETS + "/instagram.svg";
+const vkSvg = process.env.GENERAL_ASSETS + "/vkontakte.svg";
 
 import Section from "../ui/Section";
 

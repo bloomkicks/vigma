@@ -1,11 +1,11 @@
 import KitchenConstructor from "./kitchen-constructor/KitchenConstructor";
 import SizeQuestion from "./SizeQuestion";
 import { Category, FlatQuestion, ConstructorQuestions } from "../../types/quiz";
-
 import OptionList from "./options/OptionList";
 import GiftPaper from "./GiftPaper";
 import Actions from "./Actions";
 import Stack from "@mui/material/Stack";
+import classes from "./Page.module.css";
 import Typography from "@mui/material/Typography";
 
 const Page = ({
@@ -51,6 +51,7 @@ const Page = ({
         <SizeQuestion />
       ) : (
         <OptionList
+          key={category + currentQuestion}
           options={availableOptions}
           category={category}
           question={currentQuestion}

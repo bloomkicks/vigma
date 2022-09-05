@@ -10,7 +10,7 @@ const ErrorPage = () => {
         <p>Сверху достпуна корректная навигация по сайту</p>
       </div>
       <img
-        src="/pictures/error-page/error-arrow.svg"
+        src={process.env.GENERAL_ASSETS + "/error-arrow.svg"}
         alt="Наверху"
         className={classes.Arrow}
       ></img>

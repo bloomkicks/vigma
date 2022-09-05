@@ -38,6 +38,34 @@ a {
 .block {
   display: inline-block;
 }
+.large-fading {
+  animation: large-fade 600ms ease-in-out;
+}
+.fading {
+  animation: fade 600ms ease-out;
+}
+
+@keyframes large-fade {
+  0% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: translateX(60%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 /* LAPTOP */
 @media screen and (max-width: 1400px) {

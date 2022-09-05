@@ -1,5 +1,3 @@
-import { worksAssetsPath } from "../data/general/assets-paths";
-
 // QUARTZ KITCHEN
 const quartzKitchenFront = "quartz/front.jpeg";
 const quartzKitchenSide = "quartz/side.jpeg";
@@ -464,7 +462,7 @@ works.forEach((work, index) => {
   work.query.item = work.title;
 
   work.photos.forEach(
-    (photo) => (photo.src = worksAssetsPath + "/" + photo.src),
+    (photo) => (photo.src = process.env.WORKS_ASSETS + "/" + photo.src),
   );
 });
 

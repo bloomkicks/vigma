@@ -2914,30 +2914,6 @@ const Section = (props)=>{
 
 /***/ }),
 
-/***/ 8138:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Fp": () => (/* binding */ mainAssetsPath),
-/* harmony export */   "Fz": () => (/* binding */ reviewsAssetsPath),
-/* harmony export */   "NE": () => (/* binding */ aboutsUsAssetsPath),
-/* harmony export */   "Nf": () => (/* binding */ quizAssetsPath),
-/* harmony export */   "XX": () => (/* binding */ worksAssetsPath),
-/* harmony export */   "qu": () => (/* binding */ contactsAssetsPath),
-/* harmony export */   "s0": () => (/* binding */ footerAssetsPath)
-/* harmony export */ });
-const mainAssetsPath = "./pictures/main";
-const quizAssetsPath = "./pictures/quiz";
-const contactsAssetsPath = "./pictures/contacts";
-const worksAssetsPath = "./pictures/works";
-const aboutsUsAssetsPath = "./pictures/about-us";
-const reviewsAssetsPath = "./pictures/reviews";
-const footerAssetsPath = "./pictures/footer";
-
-
-/***/ }),
-
 /***/ 2817:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -3112,8 +3088,6 @@ const ThemeProvider = (props)=>{
 };
 /* harmony default export */ const layout_ThemeProvider = (ThemeProvider);
 
-// EXTERNAL MODULE: ./src/data/general/assets-paths.ts
-var assets_paths = __webpack_require__(8138);
 // EXTERNAL MODULE: ./src/components/ui/Section.js
 var Section = __webpack_require__(4568);
 // EXTERNAL MODULE: ./src/components/layout/Footer.module.scss
@@ -3121,9 +3095,8 @@ var Footer_module = __webpack_require__(9873);
 var Footer_module_default = /*#__PURE__*/__webpack_require__.n(Footer_module);
 ;// CONCATENATED MODULE: ./src/components/layout/Footer.js
 
-
-const instaSvg = assets_paths/* footerAssetsPath */.s0 + "/instagram.svg";
-const vkSvg = assets_paths/* footerAssetsPath */.s0 + "/vkontakte.svg";
+const instaSvg = "./pictures/general" + "/instagram.svg";
+const vkSvg = "./pictures/general" + "/vkontakte.svg";
 
 
 const Footer = (props)=>{
@@ -3294,9 +3267,9 @@ var Header_module_default = /*#__PURE__*/__webpack_require__.n(Header_module);
 
 
 
-const hamMenuSvg = "/pictures/header/ham-menu.svg";
-const crossSvg = "/pictures/header/cross.svg";
-const blueLogo = "/logos/header_new.png";
+const hamMenuSvg = "./pictures/general" + "/ham-menu.svg";
+const crossSvg = "./pictures/general" + "/cross.svg";
+const blueLogo = "./logos" + "/header_new.png";
 const Header = (props)=>{
     const { 0: isActiveNav , 1: setIsActiveNav  } = (0,external_react_.useState)(false);
     const menuClickHandler = (e)=>{
@@ -3506,16 +3479,15 @@ var translate = __webpack_require__(2817);
 const frontOptions = [
     "ЛДСП",
     "МДФ Пластик",
-    "МДФ AGT",
-    "МДФ Акрил",
     "МДФ Крашенный",
+    "МДФ AGT",
     "МДФ в Плёнке",
+    "МДФ Акрил",
     "Массив", 
 ];
 const bodyOptions = [
     "ЛДСП",
     "ВДСП",
-    "ДСП",
     "МДФ"
 ];
 

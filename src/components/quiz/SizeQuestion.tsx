@@ -18,7 +18,7 @@ const SizeQuestion = () => {
   }
 
   return (
-    <Stack spacing={1.5}>
+    <Stack spacing={1.5} className="large-fading">
       <TextField
         type="number"
         label="Ширина"

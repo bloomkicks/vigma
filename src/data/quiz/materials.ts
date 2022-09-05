@@ -1,11 +1,11 @@
 export const frontOptions = [
   "ЛДСП",
   "МДФ Пластик",
-  "МДФ AGT",
-  "МДФ Акрил",
   "МДФ Крашенный",
+  "МДФ AGT",
   "МДФ в Плёнке",
+  "МДФ Акрил",
   "Массив",
 ];
 
-export const bodyOptions = ["ЛДСП", "ВДСП", "ДСП", "МДФ"];
+export const bodyOptions = ["ЛДСП", "ВДСП", "МДФ"];

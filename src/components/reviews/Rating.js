@@ -1,4 +1,4 @@
-const starSrc = "/reviews-assets/star.svg";
+const starSrc = process.env.REVIEWS_ASSETS + "/star.svg";
 import classes from "./Rating.module.css";
 
 const Rating = (props) => {

@@ -1,9 +1,8 @@
-import { contactsAssetsPath } from "../../data/general/assets-paths";
-const phoneSrc = contactsAssetsPath + "/phone.svg";
-const emailSrc = contactsAssetsPath + "/email.svg";
-const locationSrc = contactsAssetsPath + "/location.svg";
-const timeSrc = contactsAssetsPath + "/time.svg";
-const directorSrc = contactsAssetsPath + "/director.svg";
+const phoneSrc = process.env.CONTACTS_ASSETS + "/phone.svg";
+const emailSrc = process.env.CONTACTS_ASSETS + "/email.svg";
+const locationSrc = process.env.CONTACTS_ASSETS + "/location.svg";
+const timeSrc = process.env.CONTACTS_ASSETS + "/time.svg";
+const directorSrc = process.env.CONTACTS_ASSETS + "/director.svg";
 
 import Anchor from "../ui/Anchor";
 import Content from "../layout/Content";

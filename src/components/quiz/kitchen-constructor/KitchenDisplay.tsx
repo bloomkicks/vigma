@@ -1,8 +1,6 @@
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
 import Image from "next/image";
 
-import { quizAssetsPath } from "../../../data/general/assets-paths";
 import getKitchenDisplay from "../../../features/quiz/get-kitchen-display";
 import type { RootState } from "../../../store";
 import { useSelector } from "react-redux";
@@ -28,7 +26,7 @@ const KitchenDisplay = () => {
       }}
     >
       <Image
-        src={`${quizAssetsPath}/kitchen/constructor/${kitchenDisplay}.webp`}
+        src={`${process.env.QUIZ_ASSETS}/kitchen/constructor/${kitchenDisplay}.webp`}
         alt="Получившаяся кухня"
         loading="eager"
         width={741.3}

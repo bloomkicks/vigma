@@ -3,10 +3,6 @@ import { QuizState } from "../../store/quiz";
 import { send } from "@emailjs/browser";
 import { Size } from "../../types/quiz";
 
-const SERVICE_ID = "service_kiq0jp9";
-const TEMPLATE_ID = "template_hci5war";
-const USER_ID = "user_2FU0yfDjTaoUzX8yIWhal";
-
 async function sendOrder(tel: string, quiz: QuizState, size: Size) {
   const { answeredQuestions, constructorQuestions } = quiz;
   const isKitchen = quiz.category === "kitchen";
@@ -34,7 +30,12 @@ async function sendOrder(tel: string, quiz: QuizState, size: Size) {
     ...constructorQuestions,
   };
 
-  send(SERVICE_ID, TEMPLATE_ID, emailParams, USER_ID);
+  send(
+    process.env.SERVICE_ID,
+    process.env.TEMPLATE_ID,
+    emailParams,
+    process.env.USER_ID,
+  );
 }
 
 export default sendOrder;

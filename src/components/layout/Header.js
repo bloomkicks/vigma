@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import NavLink from "../ui/NavLink";
 import classes from "./Header.module.scss";
 
-const hamMenuSvg = "/pictures/header/ham-menu.svg";
-const crossSvg = "/pictures/header/cross.svg";
-const blueLogo = "/logos/header_new.png";
+const hamMenuSvg = process.env.GENERAL_ASSETS + "/ham-menu.svg";
+const crossSvg = process.env.GENERAL_ASSETS + "/cross.svg";
+const blueLogo = process.env.LOGOS_ASSETS + "/header_new.png";
 
 const Header = (props) => {
   const [isActiveNav, setIsActiveNav] = useState(false);
