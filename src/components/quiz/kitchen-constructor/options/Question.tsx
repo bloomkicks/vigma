@@ -29,7 +29,9 @@ const Question = ({
   return (
     <Grid item>
       <Stack>
-        <Typography variant="h4">{translateCategory(question)}</Typography>
+        <Typography variant="h4" mb={1.25}>
+          {translateCategory(question)}
+        </Typography>
         <RadioGroup onChange={selectOptionHandler}>
           {radios.map((radio) => {
             return (

@@ -1,12 +1,13 @@
 import { translateCategory } from "../quiz/translate";
 import { QuizState } from "../../store/quiz";
 import { send } from "@emailjs/browser";
+import { Size } from "../../types/quiz";
 
 const SERVICE_ID = "service_kiq0jp9";
 const TEMPLATE_ID = "template_hci5war";
 const USER_ID = "user_2FU0yfDjTaoUzX8yIWhal";
 
-async function sendOrder(tel: string, quiz: QuizState) {
+async function sendOrder(tel: string, quiz: QuizState, size: Size) {
   const { answeredQuestions, constructorQuestions } = quiz;
   const isKitchen = quiz.category === "kitchen";
   const isShape = isKitchen || quiz.category === "closet";
@@ -17,19 +18,20 @@ async function sendOrder(tel: string, quiz: QuizState) {
   let giftQuestion = answeredQuestions[answeredQuestions.length - 1];
 
   const emailParams = {
-    item: quiz.item,
+    number: tel,
     connectWay: quiz.connectWay === "call" ? "по телефону" : quiz.connectWay,
 
-    category: translateCategory(quiz.category),
-    type: typeQuestion && typeQuestion[isShape ? "shape" : "category"],
-    front: frontQuestion && frontQuestion.front,
-    body: bodyQuestion && bodyQuestion.body,
-    table: tableQuestion && tableQuestion.table,
-    gift: giftQuestion && giftQuestion.gift,
+    item: quiz.item || "Не выбрано",
+    ...size,
+
+    category: translateCategory(quiz.category) || "-",
+    type: (typeQuestion && typeQuestion[isShape ? "shape" : "category"]) || "-",
+    front: (frontQuestion && frontQuestion.front) || "-",
+    body: (bodyQuestion && bodyQuestion.body) || "-",
+    table: (tableQuestion && tableQuestion.table) || "-",
+    gift: (giftQuestion && giftQuestion.gift) || "-",
 
     ...constructorQuestions,
-
-    number: tel,
   };
 
   send(SERVICE_ID, TEMPLATE_ID, emailParams, USER_ID);

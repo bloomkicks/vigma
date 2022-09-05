@@ -4,8 +4,8 @@ export const frontOptions = [
   "МДФ AGT",
   "МДФ Акрил",
   "МДФ Крашенный",
-  "МДФ Плёнка",
+  "МДФ в Плёнке",
   "Массив",
 ];
 
-export const bodyOptions = ["ЛДСП Egger", "ЛДСП", "ДСП"];
+export const bodyOptions = ["ЛДСП", "ВДСП", "ДСП", "МДФ"];

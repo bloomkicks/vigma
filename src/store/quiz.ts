@@ -1,5 +1,10 @@
 import { translateQuestion } from "../features/quiz/translate";
-import { FlatQuestion, Category, ConstructorQuestions } from "../types/quiz";
+import {
+  FlatQuestion,
+  Category,
+  ConstructorQuestions,
+  Size,
+} from "../types/quiz";
 import allCategoryQuestions from "../data/quiz/category-questions";
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -67,10 +72,6 @@ export type QuizState = {
 
   // constructor question
   constructorQuestions: ConstructorQuestions;
-  sizes?: {
-    width: number;
-    height: number;
-  };
 };
 export const quizReducer = quizSlice.reducer;
 export const quizActions = quizSlice.actions;

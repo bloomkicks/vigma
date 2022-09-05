@@ -13,15 +13,18 @@ const KitchenDisplay = () => {
   );
 
   return (
-    <Card
+    <Box
       sx={{
         mb: 3,
-        boxShadow: `0px 2px 2px -1px rgba(0,0,0,0.4),
-            0px 1px 2px 1px rgba(0,0,0,0.28),
-            0px 1px 5px 1px rgba(0,0,0,0.24)`,
+        boxShadow: `0px 0px 2px -1px rgba(0,0,0,0.3),
+              0px 1px 2px 1px rgba(0,0,0,0.2),
+              0px 1px 5px 1px rgba(0,0,0,0.27)`,
         maxWidth: "95%",
         minWidth: "300px",
-        position: "relative",
+        height: "min-content",
+        "& > span": {
+          display: "block !important",
+        },
       }}
     >
       <Image
@@ -31,7 +34,7 @@ const KitchenDisplay = () => {
         width={741.3}
         height={500}
       />
-    </Card>
+    </Box>
   );
 };
 

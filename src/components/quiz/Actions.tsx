@@ -1,3 +1,4 @@
+import { Size } from "../../types/quiz";
 import { quizActions } from "../../store/quiz";
 import { useDispatch } from "react-redux";
 

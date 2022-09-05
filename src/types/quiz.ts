@@ -13,5 +13,10 @@ export type Category =
   | "fridge";
 
 export type ConstructorQuestions = { [question: string]: string | null };
+export type Size = {
+  width?: string;
+  height?: string;
+  depth?: string;
+};
 
 export type Translation = ((category: Category) => string) | string;

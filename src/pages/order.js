@@ -11,7 +11,7 @@ import OrderForm from "../components/quiz/order-form/OrderForm";
 import QuizPage from "../components/quiz/Page";
 import Page from "../components/layout/Page";
 
-const OrderPage = (props) => {
+const OrderPage = () => {
   const dispatch = useDispatch();
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setIsError] = useState(null);

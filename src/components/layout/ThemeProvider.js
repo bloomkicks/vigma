@@ -20,8 +20,7 @@ const theme = createTheme({
   },
   typography: {
     allVariants: {
-      fontFamily:
-        "Roboto, 'Segoe UI', Raleway, 'Open Sans', 'Helvetica Neue', sans-serif",
+      fontFamily: "Roboto, Raleway, 'Open Sans', 'Helvetica Neue', sans-serif",
     },
     h1: {
       fontSize: "1.8rem",
@@ -39,6 +38,7 @@ const theme = createTheme({
       fontWeight: "500",
     },
     h6: {
+      lineHeight: "1.1em",
       fontFamily: "'Didact Gothic', Cambria, sans-serif",
     },
   },

@@ -1153,15 +1153,15 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1__["default"] {
                     children: [
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
                             rel: "icon",
-                            href: "/logos/mini_new.svg"
+                            href: "./logos/mini_new.svg"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
                             rel: "icon",
-                            href: "/logos/favicon.ico"
+                            href: "./logos/favicon.ico"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
                             rel: "manifest",
-                            href: "/manifest.json"
+                            href: "./manifest.json"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
                             rel: "preconnect",
@@ -1193,7 +1193,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1__["default"] {
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                             property: "og:image",
-                            content: "/logos/mini_blue.jpg"
+                            content: "./logos/mini_blue.jpg"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                             property: "og:url",
@@ -1221,7 +1221,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1__["default"] {
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                             name: "twitter:image",
-                            content: "/logos/mini_blue.jpg"
+                            content: "./logos/mini_blue.jpg"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                             name: "twitter:title",

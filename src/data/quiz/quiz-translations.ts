@@ -21,6 +21,7 @@ let gift = "Выбирете ваш подарок";
 let table = "Выбирете материалы столешницы";
 let furniture = "Выбирете фурнитуру шкафов";
 let constructor = "Выбирете технику для кухни";
+let layout = "Выбирете планировку верхних шкафов";
 
 export const questionsTranslations: {
   [question: string]: Translation;
@@ -31,6 +32,7 @@ export const questionsTranslations: {
   body,
   table,
   furniture,
+  layout,
   size,
   constructor,
   gift,
@@ -54,8 +56,19 @@ function shape(category: Category): string {
   return result;
 }
 
-function size(): string {
-  return "Укажите размеры кухни";
+function size(category: Category): string {
+  let result = "Укажите размеры ";
+  switch (category) {
+    case "kitchen":
+      result += "кухни";
+      break;
+    case "closet":
+      result += "шкафа";
+      break;
+    default:
+      result += "нужной мебели";
+  }
+  return result;
 }
 function category(category: Category): string {
   if (!category) {

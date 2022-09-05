@@ -1,3 +1,5 @@
+import { RootState } from "../../../store";
+import { useSelector } from "react-redux";
 import { QuizState } from "../../../store/quiz";
 import sendOrder from "../../../features/order-form/send-order";
 import FormControl from "@mui/material/FormControl";
@@ -19,13 +21,14 @@ const OrderForm = ({
   onSuccess: () => void;
   onError: (err: string) => void;
 }) => {
+  const size = useSelector((state: RootState) => state.size);
   const telRef = useRef<HTMLInputElement>();
   const [isAble, setIsAble] = useState<boolean>(false);
   async function totalSubmitHandler(e: React.FormEvent) {
     e.preventDefault();
     if (!isAble) return;
     try {
-      await sendOrder(telRef.current.value, quizState);
+      await sendOrder(telRef.current.value, quizState, size);
       onSuccess();
     } catch (err) {
       onError(err);
@@ -37,7 +40,7 @@ const OrderForm = ({
   }
 
   return (
-    <Box component="main" mb={5} px={2}>
+    <Box component="main" mb={5} px={2} mt={3}>
       <Typography variant="h1" mb={4} align="center">
         Как Вам удобнее получить результат?
       </Typography>

@@ -63,7 +63,7 @@ const Option = ({
         <Box
           width="100%"
           px={1}
-          pl={{ xs: 6.5, lg: 6.5 }}
+          pl={{ xs: 6.5, lg: 6.75 }}
           py={1}
           pt={{ xs: 1.25, sm: 1 }}
           position="relative"

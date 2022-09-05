@@ -17,7 +17,7 @@ const MainContent = (props) => {
         <span className="block">Санкт-Петербурге</span> и Лен. области
       </Title>
       <MainAdvantages />
-      <section>
+      <section style={{ marginTop: "15px" }}>
         <h4>
           Есть вопрос?{" "}
           <span className={classes.onPhone}>

@@ -13,13 +13,12 @@ const QuestionList = ({
   return (
     <Grid
       container
-      spacing={4}
+      spacing={5}
       columnSpacing={{ xs: 3, sm: 4 }}
       sx={{
-        alignContent: "center",
         mx: "auto",
         ml: { xs: "0px" },
-        width: "fit-content",
+        width: { xs: "fit-content" },
       }}
       justifyContent="flex-start"
       alignItems="flex-start"

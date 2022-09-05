@@ -1,8 +1,6 @@
 {
   "files.exclude": {
     ".next": true,
-    "**/node_modules": true,
-    "out": true,
-    "out.zip": true
+    "**/node_modules": true
   }
 }

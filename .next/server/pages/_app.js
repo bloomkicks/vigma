@@ -2927,13 +2927,13 @@ const Section = (props)=>{
 /* harmony export */   "qu": () => (/* binding */ contactsAssetsPath),
 /* harmony export */   "s0": () => (/* binding */ footerAssetsPath)
 /* harmony export */ });
-const mainAssetsPath = "/pictures/main";
-const quizAssetsPath = "/pictures/quiz";
-const contactsAssetsPath = "/pictures/contacts";
-const worksAssetsPath = "/pictures/works";
-const aboutsUsAssetsPath = "/pictures/about-us";
-const reviewsAssetsPath = "/pictures/reviews";
-const footerAssetsPath = "/pictures/footer";
+const mainAssetsPath = "./pictures/main";
+const quizAssetsPath = "./pictures/quiz";
+const contactsAssetsPath = "./pictures/contacts";
+const worksAssetsPath = "./pictures/works";
+const aboutsUsAssetsPath = "./pictures/about-us";
+const reviewsAssetsPath = "./pictures/reviews";
+const footerAssetsPath = "./pictures/footer";
 
 
 /***/ }),
@@ -2969,6 +2969,7 @@ let gift = "Выбирете ваш подарок";
 let table = "Выбирете материалы столешницы";
 let furniture = "Выбирете фурнитуру шкафов";
 let quiz_translations_constructor = "Выбирете технику для кухни";
+let layout = "Выбирете планировку верхних шкафов";
 const questionsTranslations = {
     category,
     shape,
@@ -2976,6 +2977,7 @@ const questionsTranslations = {
     body,
     table,
     furniture,
+    layout,
     size,
     constructor: quiz_translations_constructor,
     gift
@@ -2995,8 +2997,19 @@ function shape(category) {
     }
     return result;
 }
-function size() {
-    return "Укажите размеры кухни";
+function size(category) {
+    let result = "Укажите размеры ";
+    switch(category){
+        case "kitchen":
+            result += "кухни";
+            break;
+        case "closet":
+            result += "шкафа";
+            break;
+        default:
+            result += "нужной мебели";
+    }
+    return result;
 }
 function category(category) {
     if (!category) {
@@ -3068,7 +3081,7 @@ const theme = (0,material_.createTheme)({
     },
     typography: {
         allVariants: {
-            fontFamily: "Roboto, 'Segoe UI', Raleway, 'Open Sans', 'Helvetica Neue', sans-serif"
+            fontFamily: "Roboto, Raleway, 'Open Sans', 'Helvetica Neue', sans-serif"
         },
         h1: {
             fontSize: "1.8rem",
@@ -3086,6 +3099,7 @@ const theme = (0,material_.createTheme)({
             fontWeight: "500"
         },
         h6: {
+            lineHeight: "1.1em",
             fontFamily: "'Didact Gothic', Cambria, sans-serif"
         }
     }
@@ -3417,14 +3431,18 @@ const Layout = (props)=>{
 
 // EXTERNAL MODULE: external "@reduxjs/toolkit"
 var toolkit_ = __webpack_require__(5184);
+// EXTERNAL MODULE: ./src/store/size.ts
+var size = __webpack_require__(6540);
 // EXTERNAL MODULE: ./src/store/quiz.ts + 15 modules
 var quiz = __webpack_require__(4876);
 ;// CONCATENATED MODULE: ./src/store/index.ts
 
 
+
 const store = (0,toolkit_.configureStore)({
     reducer: {
-        quiz: quiz/* quizReducer */.$d
+        quiz: quiz/* quizReducer */.$d,
+        size: size/* sizeReducer */.G
     }
 });
 /* harmony default export */ const src_store = (store);
@@ -3491,13 +3509,14 @@ const frontOptions = [
     "МДФ AGT",
     "МДФ Акрил",
     "МДФ Крашенный",
-    "МДФ Плёнка",
+    "МДФ в Плёнке",
     "Массив", 
 ];
 const bodyOptions = [
-    "ЛДСП Egger",
     "ЛДСП",
-    "ДСП"
+    "ВДСП",
+    "ДСП",
+    "МДФ"
 ];
 
 ;// CONCATENATED MODULE: ./src/data/quiz/categories/kitchen.ts
@@ -3514,15 +3533,23 @@ const kitchen_constructor = [
     "microwave",
     "fridge"
 ];
-const furniture = (/* unused pure expression or super */ null && ([
+const furniture = [
     "Эконом",
     "Стандарт",
     "Премиум"
-]));
+];
 const front = frontOptions;
+const layout = [
+    "Без верхних шкафов",
+    "Посередине",
+    "Со стороны",
+    "Посередине и со стороны",
+    "Посередине и с обоих сторон", 
+];
 const table = [
     "Пластик",
-    "Иск. Камень"
+    "Иск. Камень",
+    "Нат. Камень"
 ];
 const size = [];
 const gift = [
@@ -3537,7 +3564,12 @@ const kitchen = [
     {
         constructor: kitchen_constructor
     },
-    // { furniture },
+    {
+        layout
+    },
+    {
+        furniture
+    },
     {
         front
     },
@@ -3646,6 +3678,7 @@ const office = [
 
 
 
+const category_questions_size = [];
 const category_questions_gift = [
     "Сковорода",
     "Смеситель",
@@ -3664,6 +3697,9 @@ const category_questions_gift = [
         },
         {
             body: bodyOptions
+        },
+        {
+            size: category_questions_size
         },
         {
             gift: category_questions_gift
@@ -3697,7 +3733,7 @@ function nextQuestion(state) {
     answeredQuestion[state.currentQuestion] = state.selectedOptions.slice();
     state.answeredQuestions[index] = answeredQuestion;
     // if it's a last question
-    if (index >= state.categoryQuestions.length - 1) {
+    if (index >= state.categoryQuestions.length - 1 || state.selectedOptions[0] === "Помощь специалиста") {
         state.isFinished = true;
         return state;
     }
@@ -3863,6 +3899,36 @@ const quizSlice = (0,toolkit_.createSlice)({
 });
 const quizReducer = quizSlice.reducer;
 const quizActions = quizSlice.actions;
+
+
+/***/ }),
+
+/***/ 6540:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "G": () => (/* binding */ sizeReducer),
+/* harmony export */   "I": () => (/* binding */ sizeActions)
+/* harmony export */ });
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5184);
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);
+
+const sizeSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
+    name: "size",
+    initialState: {},
+    reducers: {
+        setSize (state, action) {
+            const [which, value] = action.payload;
+            state[which] = value;
+        },
+        clear () {
+            return {};
+        }
+    }
+});
+const sizeActions = sizeSlice.actions;
+const sizeReducer = sizeSlice.reducer;
 
 
 /***/ }),

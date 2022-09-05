@@ -1,3 +1,4 @@
+import { quizAssetsPath } from "../../../data/general/assets-paths";
 import getImgSrc from "../../../features/quiz/get-img-src";
 import { Category } from "../../../types/quiz";
 import Option from "./Option";
@@ -37,6 +38,15 @@ const OptionList = ({
           />
         );
       })}
+      {category && question !== "gift" && (
+        <Option
+          option="Помощь специалиста"
+          category={category}
+          isSelected={selectedOptions.includes("Помощь специалиста")}
+          question={question}
+          imgSrc={`${quizAssetsPath}/help.jpg`}
+        />
+      )}
     </Grid>
   );
 };
