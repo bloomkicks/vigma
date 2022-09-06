@@ -16,6 +16,9 @@
 }
 
 @media screen and (max-width: 680px) {
+  .Advantages {
+    margin-right: 10px !important;
+  }
   .Advantages > div {
     flex-direction: column;
     justify-content: flex-start;

@@ -19,10 +19,10 @@ const MainAdvantages = (pros) => {
           У нас быстро и чисто
         </MainAdvantage>
         <MainAdvantage title="Бесплатный дизайн-проект" logoSrc={rulerSvg}>
-          У нас красиво и удобно
+          У нас красиво и профессиально
         </MainAdvantage>
         <MainAdvantage title="Собственное производство" logoSrc={gearsSvg}>
-          У нас доступно и легко
+          У нас доступно и практично
         </MainAdvantage>
       </div>
     </Section>

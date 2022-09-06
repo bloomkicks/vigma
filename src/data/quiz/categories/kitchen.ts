@@ -14,7 +14,6 @@ const layout = [
 ];
 const table = ["Пластик", "Иск. Камень", "Нат. Камень"];
 const size = [];
-const gift = ["Сковорода", "Смеситель", "Набор Ножей"];
 
 const kitchen: FlatQuestion[] = [
   { shape },
@@ -24,7 +23,6 @@ const kitchen: FlatQuestion[] = [
   { front },
   { table },
   { size },
-  { gift },
 ];
 
 export default kitchen;
