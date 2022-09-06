@@ -20,11 +20,13 @@ function nextQuestion(state: QuizState) {
   state.answeredQuestions[index] = answeredQuestion;
 
   // if it's a last question
-  if (
-    index >= state.categoryQuestions.length - 1 ||
-    state.selectedOptions[0] === "Помощь специалиста"
-  ) {
+  if (index >= state.categoryQuestions.length - 1) {
     state.isFinished = true;
+
+    return state;
+  } else if (state.selectedOptions[0] === "Помощь специалиста") {
+    state.isFinished = true;
+
     return state;
   }
 

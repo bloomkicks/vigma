@@ -3,11 +3,13 @@
 
 .Button {
   @include mixins.interactive-font;
+  display: block;
   background-color: colors.$anti-theme;
   border: none;
   border-radius: 30px;
   padding: 7px 10px;
   transition: transform 50ms ease-in;
+  text-decoration: none;
 }
 
 .Button > p {

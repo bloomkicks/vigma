@@ -14,7 +14,7 @@ const NavLink = (props) => {
 
   return (
     <Link href={href || ""} passHref>
-      <div
+      <a
         className={`
           ${classes.Link}
           ${(isBlack && classes.black) || ""}
@@ -22,8 +22,8 @@ const NavLink = (props) => {
         `.trim()}
         {...linkProps}
       >
-        <div className={innerClassName}>{children}</div>
-      </div>
+        <p className={innerClassName}>{children}</p>
+      </a>
     </Link>
   );
 };

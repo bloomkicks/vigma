@@ -10,7 +10,8 @@ export type Category =
   | "oven"
   | "hood"
   | "microwave"
-  | "fridge";
+  | "fridge"
+  | "item";
 
 export type ConstructorQuestions = { [question: string]: string | null };
 export type Size = {

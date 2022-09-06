@@ -29,7 +29,7 @@
   color: colors.$theme;
 }
 
-.Link > div {
+.Link > p {
   @include mixins.interactive-font;
 }
 

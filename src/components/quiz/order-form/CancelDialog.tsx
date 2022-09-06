@@ -23,7 +23,7 @@ const CancelDialog = ({
 
   return (
     <Dialog open={open} onClose={onClose}>
-      <DialogTitle sx={{ fontFamily: "Roboto, sans-serif" }}>
+      <DialogTitle sx={{ fontFamily: "Roboto, sans-serif", paddingBottom: 1 }}>
         Вы уверены, что хотите отменить рассчет?
       </DialogTitle>
       <DialogContent>

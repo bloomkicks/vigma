@@ -1,12 +1,17 @@
 import classes from "./MainButton.module.scss";
 
 const MainButton = (props) => {
-  const { children, className, ...buttonProps } = props;
+  const { children, className, component, ...buttonProps } = props;
+
+  let Component = component || "button";
 
   return (
-    <button {...buttonProps} className={`${classes.Button} ${className || ""}`}>
+    <Component
+      {...buttonProps}
+      className={`${classes.Button} ${className || ""}`}
+    >
       {children}
-    </button>
+    </Component>
   );
 };
 

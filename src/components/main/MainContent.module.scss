@@ -31,7 +31,7 @@
   margin-top: 5px;
 }
 
-.MainContent > p {
+.MoreWorks {
   display: block;
   margin: 0 auto;
   font-size: 1.1rem;
@@ -40,9 +40,10 @@
   color: colors.$bold;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
 }
 
-.MainContent > p::after {
+.MoreWorks::after {
   content: "";
   position: absolute;
   left: -1%;
@@ -53,8 +54,8 @@
   transition: transform 0.1s ease-out;
 }
 
-.MainContent > p:hover::after,
-.MainContent > p:focus::after {
+.MoreWorks:hover::after,
+.MoreWorks:focus::after {
   transform: translateY(3px);
 }
 

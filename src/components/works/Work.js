@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { quizActions } from "../../store/quiz";
 import MainButton from "../ui/MainButton";
@@ -32,6 +33,7 @@ const Work = (props) => {
   }
 
   const orderHandler = (e) => {
+    e.preventDefault();
     dispatch(quizActions.selectItem(title));
     router.push("/order");
   };
@@ -58,9 +60,11 @@ const Work = (props) => {
           </div>
         )}
       </figcaption>
-      <MainButton tabIndex={1} onClick={orderHandler}>
-        <p>Заказать</p>
-      </MainButton>
+      <Link href="/order" passHref>
+        <MainButton component="a" onClick={orderHandler}>
+          <p>Заказать</p>
+        </MainButton>
+      </Link>
     </section>
   );
 };

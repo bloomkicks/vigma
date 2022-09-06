@@ -29,6 +29,12 @@ const OrderPage = () => {
     setIsSuccess(false);
   }
 
+  let isGiftSlelected =
+    quiz.answeredQuestions[0] &&
+    quiz.answeredQuestions[quiz.answeredQuestions.length - 1].hasOwnProperty(
+      "gift",
+    );
+
   return (
     <Page>
       {quiz.isFinished ? (
@@ -50,7 +56,7 @@ const OrderPage = () => {
         />
       )}
       <Dialog open={isSuccess} onClose={closeHandler}>
-        <DialogTitle sx={{ fontFamily: "Roboto, sans-serif" }}>
+        <DialogTitle sx={{ fontFamily: "Roboto, sans-serif", pb: 1 }}>
           Вы успешно отправили заявку на рассчет
         </DialogTitle>
         <DialogContent>
@@ -60,7 +66,10 @@ const OrderPage = () => {
         </DialogContent>
       </Dialog>
       <Dialog open={!!error} onClose={closeHandler}>
-        <DialogTitle color="error" sx={{ fontFamily: "Roboto, sans-serif" }}>
+        <DialogTitle
+          color="error"
+          sx={{ fontFamily: "Roboto, sans-serif", pb: 1 }}
+        >
           Что-то пошло не так
         </DialogTitle>
         <DialogContent>

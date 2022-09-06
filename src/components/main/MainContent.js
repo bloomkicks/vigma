@@ -29,7 +29,7 @@ const MainContent = (props) => {
       <OrderButton />
       <MainWork />
       <Link passHref href="/works">
-        <p tabIndex={20}>Больше наших работ</p>
+        <a className={classes.MoreWorks}>Больше наших работ</a>
       </Link>
     </Content>
   );

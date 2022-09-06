@@ -35,6 +35,7 @@ const Option = ({
   return (
     <Grid
       item
+      component="section"
       xs={12}
       sm={6}
       md={4}

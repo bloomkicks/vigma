@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 import NavLink from "../ui/NavLink";
@@ -5,7 +6,7 @@ import classes from "./Header.module.scss";
 
 const hamMenuSvg = process.env.GENERAL_ASSETS + "/ham-menu.svg";
 const crossSvg = process.env.GENERAL_ASSETS + "/cross.svg";
-const blueLogo = process.env.LOGOS_ASSETS + "/header_new.png";
+const logo = process.env.LOGOS_ASSETS + "/header_new.png";
 
 const Header = (props) => {
   const [isActiveNav, setIsActiveNav] = useState(false);
@@ -43,28 +44,36 @@ const Header = (props) => {
           <NavLink
             innerClassName={classes.LogoInnerContainer}
             className={classes.LogoContainer}
-            tabIndex={1}
             style={{ color: "black" }}
             href="/main"
           >
             <img
-              src={blueLogo}
+              height={36.5}
+              width={49.5}
+              src={logo}
               className={classes.Logo}
               title="На Главную"
+              loading="eager"
               alt="На Главную"
             />
           </NavLink>
           {isActiveNav ? (
-            <img
+            <Image
+              height={23}
+              width={24.05}
+              loading="eager"
               src={crossSvg}
               onClick={menuClickHandler}
               alt="Закрыть меню"
               className={classes.Cross}
             />
           ) : (
-            <img
+            <Image
+              height={23}
+              width={31.5}
               src={hamMenuSvg}
               onClick={menuClickHandler}
+              loading="eager"
               alt="Открыть меню"
               className={classes.HamMenu}
             />
@@ -75,7 +84,6 @@ const Header = (props) => {
           >
             <NavLink
               href="/order"
-              tabIndex={1}
               onClick={navClickHandler}
               onFocus={navFocusHandler}
               onBlur={navBlurHandler}
@@ -85,7 +93,6 @@ const Header = (props) => {
             </NavLink>
             <NavLink
               href="/contacts"
-              tabIndex={1}
               onClick={navClickHandler}
               onFocus={navFocusHandler}
               onBlur={navBlurHandler}
@@ -95,7 +102,6 @@ const Header = (props) => {
             </NavLink>
             <NavLink
               href="/works"
-              tabIndex={1}
               onClick={navClickHandler}
               onFocus={navFocusHandler}
               onBlur={navBlurHandler}
@@ -105,7 +111,6 @@ const Header = (props) => {
             </NavLink>
             <NavLink
               href="/about-us"
-              tabIndex={1}
               onClick={navClickHandler}
               onFocus={navFocusHandler}
               onBlur={navBlurHandler}

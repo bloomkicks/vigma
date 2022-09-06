@@ -20,12 +20,12 @@ const ContactsContent = (props) => {
         }}
         contactKey="Номер телефона:"
       >
-        <Anchor tabIndex="1" href="tel:+7 (812) 642 60-51">
+        <Anchor href="tel:+7 (812) 642 60-51">
           <b>+7 (812) 642 60-51</b>
         </Anchor>
         <p>
           WhatsApp:{" "}
-          <Anchor tabIndex="1" href="tel:+7 (812) 642 60-51">
+          <Anchor href="tel:+7 (812) 642 60-51">
             <b>+7 (964) 342 60-51</b>
           </Anchor>
         </p>

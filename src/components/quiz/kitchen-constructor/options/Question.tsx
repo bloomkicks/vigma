@@ -27,7 +27,7 @@ const Question = ({
   }
 
   return (
-    <Grid item className="fading">
+    <Grid item component="section" className="fading">
       <Stack>
         <Typography variant="h4" mb={1.25}>
           {translateCategory(question)}

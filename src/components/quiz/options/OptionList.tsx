@@ -39,7 +39,7 @@ const OptionList = ({
           />
         );
       })}
-      {category && question !== "gift" && (
+      {!["category", "gift"].includes(question) && (
         <Option
           option="Помощь специалиста"
           category={category}
