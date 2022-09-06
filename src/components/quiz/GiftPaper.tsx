@@ -51,7 +51,7 @@ const GiftPaper = ({ amountOfQuestions }: { amountOfQuestions: number }) => {
         }}
       >
         {!isKnown ? (
-          "Пройдите опрос и получите подарок"
+          "Узнайте стоимость и получите подарок"
         ) : isGift ? (
           <>
             Выбирете ваш{" "}

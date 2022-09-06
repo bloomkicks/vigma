@@ -43,15 +43,12 @@
   transform: scale(1.04);
 }
 
-.Logo {
-}
 .Logo:focus {
   outline: none;
 }
 
-.HamMenu,
-.Cross {
-  display: none;
+.InnerHeader > span {
+  display: none !important;
   height: 23px;
   width: auto;
   cursor: pointer;
@@ -122,9 +119,8 @@
     transform: translatex(-100%);
   }
 
-  .HamMenu,
-  .Cross {
-    display: block;
+  .InnerHeader > span {
+    display: block !important;
   }
 
   .LogoContainer {

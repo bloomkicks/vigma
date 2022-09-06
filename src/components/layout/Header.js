@@ -47,7 +47,7 @@ const Header = (props) => {
             style={{ color: "black" }}
             href="/main"
           >
-            <img
+            <Image
               height={36.5}
               width={49.5}
               src={logo}
