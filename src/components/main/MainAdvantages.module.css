@@ -1,6 +1,7 @@
 .Advantages {
   margin: 10px;
   margin-bottom: 0;
+  margin-right: -35px;
 }
 
 .Advantages > h2 {
@@ -14,8 +15,10 @@
   margin-top: 18px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 680px) {
   .Advantages > div {
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 }

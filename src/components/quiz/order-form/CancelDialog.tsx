@@ -23,7 +23,9 @@ const CancelDialog = ({
 
   return (
     <Dialog open={open} onClose={onClose}>
-      <DialogTitle sx={{ fontFamily: "Roboto, sans-serif", paddingBottom: 1 }}>
+      <DialogTitle
+        sx={{ fontFamily: "Roboto, sans-serif", paddingBottom: 1, mt: 1 }}
+      >
         Вы уверены, что хотите отменить рассчет?
       </DialogTitle>
       <DialogContent>
@@ -31,11 +33,11 @@ const CancelDialog = ({
           Это очистит выбранные вами ответы
         </Typography>
       </DialogContent>
-      <DialogActions>
-        <Button onClick={onClose} color="info">
+      <DialogActions sx={{ mr: 2 }}>
+        <Button onClick={onClose} sx={{ color: "text.secondary" }}>
           Нет
         </Button>
-        <Button onClick={cancelHandler} color="warning">
+        <Button onClick={cancelHandler} color="error">
           Отменить
         </Button>
       </DialogActions>

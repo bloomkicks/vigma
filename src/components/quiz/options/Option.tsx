@@ -26,7 +26,8 @@ const Option = ({
   category: string;
 }) => {
   const dispatch = useDispatch();
-  const optionTitle = category ? option : translateCategory(option);
+  const optionTitle =
+    category || question === "gift" ? option : translateCategory(option);
 
   function clickHandler() {
     dispatch(quizActions.toggleSelectOption(option));

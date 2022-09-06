@@ -5,16 +5,30 @@ import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import React from "react";
 
+function debounce(cb, seconds: number = 1) {
+  let timeout: NodeJS.Timeout | null = null;
+
+  return function (e) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => cb(e), seconds * 1000);
+  };
+}
+
 const SizeQuestion = () => {
   const dispatch = useDispatch();
+
+  function change(dim: "width" | "height" | "depth", val: string) {
+    dispatch(sizeActions.setSize([dim, val]));
+  }
+
   function widthHandler(e: React.ChangeEvent<HTMLInputElement>) {
-    dispatch(sizeActions.setSize(["width", e.target.value]));
+    change("width", e.target.value);
   }
   function heightHandler(e: React.ChangeEvent<HTMLInputElement>) {
-    dispatch(sizeActions.setSize(["height", e.target.value]));
+    change("height", e.target.value);
   }
   function depthHandler(e: React.ChangeEvent<HTMLInputElement>) {
-    dispatch(sizeActions.setSize(["depth", e.target.value]));
+    change("depth", e.target.value);
   }
 
   return (
@@ -23,7 +37,7 @@ const SizeQuestion = () => {
         type="number"
         label="Ширина"
         name="ширина"
-        onChange={widthHandler}
+        onChange={debounce(widthHandler)}
         color="info"
         InputProps={{
           inputProps: {
@@ -36,7 +50,7 @@ const SizeQuestion = () => {
         type="number"
         label="Высота"
         name="высота"
-        onChange={heightHandler}
+        onChange={debounce(heightHandler)}
         color="info"
         InputProps={{
           inputProps: {
@@ -49,7 +63,7 @@ const SizeQuestion = () => {
         type="number"
         label="Глубина"
         name="глубина"
-        onChange={depthHandler}
+        onChange={debounce(depthHandler)}
         color="info"
         InputProps={{
           inputProps: {

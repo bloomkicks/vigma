@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 
 import Typography from "@mui/material/Typography";
 import OrderForm from "../components/quiz/order-form/OrderForm";
-import QuizPage from "../components/quiz/Page";
+import QuizPage from "../components/quiz/QuizPage";
 import Page from "../components/layout/Page";
 
 const OrderPage = () => {
@@ -29,12 +29,6 @@ const OrderPage = () => {
     setIsSuccess(false);
   }
 
-  let isGiftSlelected =
-    quiz.answeredQuestions[0] &&
-    quiz.answeredQuestions[quiz.answeredQuestions.length - 1].hasOwnProperty(
-      "gift",
-    );
-
   return (
     <Page>
       {quiz.isFinished ? (
@@ -49,6 +43,8 @@ const OrderPage = () => {
           translatedQuestion={quiz.translatedQuestion}
           availableOptions={quiz.availableOptions}
           category={quiz.category}
+          isGift={quiz.isGift}
+          isFinished={quiz.isFinished}
           selectedOptions={quiz.selectedOptions}
           indexOfQuestion={quiz.indexOfQuestion}
           categoryQuestions={quiz.categoryQuestions}
@@ -56,7 +52,7 @@ const OrderPage = () => {
         />
       )}
       <Dialog open={isSuccess} onClose={closeHandler}>
-        <DialogTitle sx={{ fontFamily: "Roboto, sans-serif", pb: 1 }}>
+        <DialogTitle sx={{ fontFamily: "Roboto, sans-serif", pb: 1, mt: 1 }}>
           Вы успешно отправили заявку на рассчет
         </DialogTitle>
         <DialogContent>
@@ -68,7 +64,7 @@ const OrderPage = () => {
       <Dialog open={!!error} onClose={closeHandler}>
         <DialogTitle
           color="error"
-          sx={{ fontFamily: "Roboto, sans-serif", pb: 1 }}
+          sx={{ fontFamily: "Roboto, sans-serif", pb: 1, mt: 1 }}
         >
           Что-то пошло не так
         </DialogTitle>

@@ -5,8 +5,8 @@ import OptionList from "./options/OptionList";
 import GiftPaper from "./GiftPaper";
 import Actions from "./Actions";
 import Stack from "@mui/material/Stack";
-import classes from "./Page.module.css";
 import Typography from "@mui/material/Typography";
+import giftOptions from "../../data/quiz/gift-options";
 
 const Page = ({
   currentQuestion,
@@ -34,7 +34,9 @@ const Page = ({
     >
       <GiftPaper
         amountOfQuestions={
-          categoryQuestions
+          currentQuestion === "gift"
+            ? 0
+            : categoryQuestions
             ? categoryQuestions!.length - indexOfQuestion - 1
             : undefined
         }
@@ -58,9 +60,12 @@ const Page = ({
           selectedOptions={selectedOptions}
         />
       )}
+
       <Actions
-        indexOfQuestion={indexOfQuestion}
-        disabled={selectedOptions.length < 1 && currentQuestion === "category"}
+        backDisabled={indexOfQuestion === 0 || currentQuestion === "gift"}
+        nextDisabled={
+          selectedOptions.length < 1 && currentQuestion === "category"
+        }
         isDalee={
           selectedOptions.length > 0 ||
           currentQuestion === "size" ||

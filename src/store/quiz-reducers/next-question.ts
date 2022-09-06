@@ -6,8 +6,7 @@ import { QuizState } from "../quiz";
 function nextQuestion(state: QuizState) {
   let index = state.indexOfQuestion;
 
-  // EDGE CASES
-  // set category if first question
+  // SET CATEGORY IF FIRST QUESTION
   if (index === -1) {
     state.category = state.selectedOptions[0] as Category;
     state.categoryQuestions = allCategoryQuestions[state.category];
@@ -17,15 +16,31 @@ function nextQuestion(state: QuizState) {
   const answeredQuestion = {};
   answeredQuestion[state.currentQuestion] = state.selectedOptions.slice();
 
-  state.answeredQuestions[index] = answeredQuestion;
+  state.answeredQuestions[index > -1 ? index : 0] = answeredQuestion;
 
-  // if it's a last question
-  if (index >= state.categoryQuestions.length - 1) {
+  // FINISH WHEN:
+  //   GIFT IS ASKED
+  if (state.indexOfQuestion === -5) {
     state.isFinished = true;
 
     return state;
-  } else if (state.selectedOptions[0] === "Помощь специалиста") {
-    state.isFinished = true;
+  }
+  // SET GIFT WHEN:
+  //   ITEM IS SELECTED
+  //   THIS IS A LAST QUESTION
+  //   HELP IS PRESSED
+  else if (
+    state.item ||
+    index >= state.categoryQuestions.length - 1 ||
+    state.selectedOptions[0] === "Помощь специалиста"
+  ) {
+    state.indexOfQuestion = -5;
+
+    state.currentQuestion = "gift";
+    state.translatedQuestion = "";
+
+    state.availableOptions = ["Сковорода", "Набор Ножей", "Смеситель"];
+    state.selectedOptions = [];
 
     return state;
   }

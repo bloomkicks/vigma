@@ -5,6 +5,7 @@ function previousQuestion(state: QuizState) {
   let index = state.indexOfQuestion;
   state.isFinished = false;
 
+  // IF BACK TO CATEGORY QUESTION
   if (index === 0) {
     state.selectedOptions = [state.category];
 

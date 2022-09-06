@@ -1,3 +1,4 @@
+import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider as Provider } from "@mui/material";
 
 const theme = createTheme({
@@ -45,7 +46,12 @@ const theme = createTheme({
 });
 
 const ThemeProvider = (props) => {
-  return <Provider theme={theme}>{props.children}</Provider>;
+  return (
+    <Provider theme={theme}>
+      <CssBaseline />
+      {props.children}
+    </Provider>
+  );
 };
 
 export default ThemeProvider;

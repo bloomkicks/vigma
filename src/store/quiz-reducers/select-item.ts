@@ -5,13 +5,20 @@ function selectItem(state: QuizState, action: PayloadAction<string>) {
   const item = action.payload;
   state.item = item;
 
-  // state.category = 'item'
-  // state.currentQuestion = 'gift';
-  // state.translatedQuestion = '';
-  // state.availableOptions = ['Сковорода', 'Набор Ножей', 'Смеситель'];
-  // state.selectedOptions = [];
+  // SAVE PREVIUS ANSWER
+  const answeredQuestion = {};
+  answeredQuestion[state.currentQuestion] = state.selectedOptions.slice();
 
-  state.isFinished = true;
+  state.answeredQuestions[state.indexOfQuestion] = answeredQuestion;
+
+  // SET THE GIFT
+  state.indexOfQuestion = -5;
+
+  state.currentQuestion = "gift";
+  state.translatedQuestion = "";
+
+  state.availableOptions = ["Сковорода", "Набор Ножей", "Смеситель"];
+  state.selectedOptions = [];
 }
 
 export default selectItem;

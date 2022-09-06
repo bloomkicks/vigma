@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { quizAssetsPath } from "../../data/general/assets-paths";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
@@ -10,8 +11,15 @@ const GiftPaper = ({ amountOfQuestions }: { amountOfQuestions: number }) => {
   const isGift = amountOfQuestions === 0;
   const questions = getFormOfQuestions(amountOfQuestions);
 
+  useEffect(() => {
+    const giftPaper = document.getElementById("gift-paper");
+
+    giftPaper.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [amountOfQuestions]);
+
   return (
     <Paper
+      id="gift-paper"
       sx={{
         mb: isGift ? 2 : 5,
         height: {

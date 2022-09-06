@@ -7,9 +7,9 @@ const OrderButton = (props) => {
       <Button
         component="a"
         variant="contained"
-        sx={{ alignSelf: "center", mt: 2 }}
+        sx={{ alignSelf: "center", mt: 0.6 }}
       >
-        Рассчитать
+        Узнать Стоимость
       </Button>
     </Link>
   );

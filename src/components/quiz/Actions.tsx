@@ -9,13 +9,13 @@ import Box from "@mui/material/Box";
 import React from "react";
 
 const Actions = ({
-  indexOfQuestion,
   isDalee,
-  disabled,
+  nextDisabled,
+  backDisabled,
 }: {
-  indexOfQuestion: number;
   isDalee: boolean;
-  disabled: boolean;
+  nextDisabled: boolean;
+  backDisabled: boolean;
 }) => {
   const dispatch = useDispatch();
 
@@ -33,7 +33,7 @@ const Actions = ({
         variant="text"
         onClick={backHandler}
         sx={{
-          display: indexOfQuestion >= 0 ? "block" : "none",
+          display: backDisabled ? "none" : "block",
         }}
       >
         <Typography
@@ -61,7 +61,7 @@ const Actions = ({
         variant="contained"
         color="info"
         onClick={nextHandler}
-        disabled={disabled}
+        disabled={nextDisabled}
       >
         {isDalee ? "Далее" : "Пропустить"}
       </Button>

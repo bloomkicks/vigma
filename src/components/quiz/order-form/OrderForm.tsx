@@ -40,7 +40,7 @@ const OrderForm = ({
   }
 
   return (
-    <Box component="main" mb={5} px={2} mt={3}>
+    <Box mb={5} px={2} mt={3} className="vertical-large-fading">
       <Typography variant="h1" mb={4} align="center">
         Как Вам удобнее получить результат?
       </Typography>
