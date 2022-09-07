@@ -18,7 +18,9 @@ async function sendOrder(tel: string, quiz: QuizState, size: Size) {
     connectWay: quiz.connectWay === "call" ? "по телефону" : quiz.connectWay,
 
     item: quiz.item || "Не выбрано",
-    ...size,
+    width: size.width || "-",
+    height: size.height || "-",
+    depth: size.depth || "-",
 
     category: translateCategory(quiz.category) || "-",
     type: (typeQuestion && typeQuestion[isShape ? "shape" : "category"]) || "-",

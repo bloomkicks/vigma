@@ -1,24 +1,18 @@
+import setQuestion from "../../features/quiz/store/set-question";
+import save from "../../features/quiz/store/save";
 import { QuizState } from "../quiz";
 import { PayloadAction } from "@reduxjs/toolkit";
 
 function selectItem(state: QuizState, action: PayloadAction<string>) {
-  const item = action.payload;
-  state.item = item;
+  state.item = action.payload;
 
-  // SAVE PREVIUS ANSWER
-  const answeredQuestion = {};
-  answeredQuestion[state.currentQuestion] = state.selectedOptions.slice();
+  // SAVE PREVIUS QUESTION
+  save(state);
 
-  state.answeredQuestions[state.indexOfQuestion] = answeredQuestion;
-
-  // SET THE GIFT
   state.indexOfQuestion = -5;
 
-  state.currentQuestion = "gift";
-  state.translatedQuestion = "";
-
-  state.availableOptions = ["Сковорода", "Набор Ножей", "Смеситель"];
-  state.selectedOptions = [];
+  // SET THE GIFT
+  setQuestion(state, { gift: ["Сковорода", "Набор Ножей", "Смеситель"] });
 }
 
 export default selectItem;

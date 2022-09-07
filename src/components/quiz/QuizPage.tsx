@@ -62,7 +62,7 @@ const Page = ({
       )}
 
       <Actions
-        backDisabled={indexOfQuestion === 0 || currentQuestion === "gift"}
+        backDisabled={["category", "gift"].includes(currentQuestion)}
         nextDisabled={
           selectedOptions.length < 1 && currentQuestion === "category"
         }

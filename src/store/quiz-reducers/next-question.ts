@@ -1,6 +1,8 @@
+import setQuestion from "../../features/quiz/store/set-question";
+import save from "../../features/quiz/store/save";
+
 import allCategoryQuestions from "../../data/quiz/category-questions";
 import { Category } from "../../types/quiz";
-import { translateQuestion } from "../../features/quiz/translate";
 import { QuizState } from "../quiz";
 
 function nextQuestion(state: QuizState) {
@@ -13,10 +15,7 @@ function nextQuestion(state: QuizState) {
   }
 
   // SAVE ANSWERS IN ANSWERED QUESTIONS
-  const answeredQuestion = {};
-  answeredQuestion[state.currentQuestion] = state.selectedOptions.slice();
-
-  state.answeredQuestions[index > -1 ? index : 0] = answeredQuestion;
+  save(state);
 
   // FINISH WHEN:
   //   GIFT IS ASKED
@@ -35,12 +34,7 @@ function nextQuestion(state: QuizState) {
     state.selectedOptions[0] === "Помощь специалиста"
   ) {
     state.indexOfQuestion = -5;
-
-    state.currentQuestion = "gift";
-    state.translatedQuestion = "";
-
-    state.availableOptions = ["Сковорода", "Набор Ножей", "Смеситель"];
-    state.selectedOptions = [];
+    setQuestion(state, { gift: ["Сковорода", "Набор Ножей", "Смеситель"] });
 
     return state;
   }
@@ -49,14 +43,7 @@ function nextQuestion(state: QuizState) {
   state.indexOfQuestion++;
   const nextQuestion = state.categoryQuestions![state.indexOfQuestion];
 
-  // SET NEXT QUESTION SET (question, availableAnswers, selectedAnswers)
-  state.currentQuestion = Object.keys(nextQuestion)[0];
-  state.translatedQuestion = translateQuestion(
-    state.currentQuestion,
-    state.category,
-  );
-  state.availableOptions = Object.values(nextQuestion)[0];
-  state.selectedOptions = [];
+  setQuestion(state, nextQuestion);
 
   return state;
 }

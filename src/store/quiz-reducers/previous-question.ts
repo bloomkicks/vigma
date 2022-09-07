@@ -1,9 +1,11 @@
-import { translateQuestion } from "../../features/quiz/translate";
+import setQuestion from "../../features/quiz/store/set-question";
 import { QuizState, categories } from "../quiz";
 
 function previousQuestion(state: QuizState) {
   let index = state.indexOfQuestion;
+
   state.isFinished = false;
+  state.indexOfQuestion--;
 
   // IF BACK TO CATEGORY QUESTION
   if (index === 0) {
@@ -12,26 +14,17 @@ function previousQuestion(state: QuizState) {
     state.category = null;
     state.categoryQuestions = null;
 
-    state.currentQuestion = "category";
-    state.translatedQuestion = translateQuestion(state.currentQuestion, null);
-    state.availableOptions = categories;
-
-    state.indexOfQuestion--;
+    setQuestion(state, { category: categories });
   } else {
     // GET PREVIUOS QUESTION
-    state.indexOfQuestion--;
-    const previuosQuestion = state.categoryQuestions[state.indexOfQuestion];
+    const previousQuestion = state.categoryQuestions[state.indexOfQuestion];
 
     // SET CURRENT QUESTION AND ANSWERS
-    state.currentQuestion = Object.keys(previuosQuestion)[0];
-    state.translatedQuestion = translateQuestion(
-      state.currentQuestion,
-      state.category,
+    setQuestion(
+      state,
+      previousQuestion,
+      Object.values(state.answeredQuestions[state.indexOfQuestion])[0],
     );
-    state.availableOptions = Object.values(previuosQuestion)[0];
-    state.selectedOptions = Object.values(
-      state.answeredQuestions[state.indexOfQuestion],
-    )[0].slice();
   }
 }
 

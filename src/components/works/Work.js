@@ -62,7 +62,7 @@ const Work = (props) => {
       </figcaption>
       <Link href="/order" passHref>
         <MainButton component="a" onClick={orderHandler}>
-          <p>Заказать</p>
+          <p>Рассчитать для Вас</p>
         </MainButton>
       </Link>
     </section>
