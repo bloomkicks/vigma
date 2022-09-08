@@ -24,7 +24,7 @@ const MainContent = (props) => {
         </h3>
       </Box>
       <OrderButton />
-      <Secondary>Закончились идеи? Посмотрите уже готовые работы</Secondary>
+      <Secondary>Закончились идеи? Посмотрите уже выполненные работы</Secondary>
       <MainWork />
       <Link passHref href="/works">
         <a className={classes.MoreWorks}>Больше наших работ</a>
