@@ -6,7 +6,7 @@ import classes from "./Header.module.scss";
 
 const hamMenuSvg = process.env.GENERAL_ASSETS + "/ham-menu.svg";
 const crossSvg = process.env.GENERAL_ASSETS + "/cross.svg";
-const logo = process.env.LOGOS_ASSETS + "/header_new.png";
+const logo = process.env.GENERAL_ASSETS + "/header.png";
 
 const Header = (props) => {
   const [isActiveNav, setIsActiveNav] = useState(false);

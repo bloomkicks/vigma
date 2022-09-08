@@ -1,17 +1,34 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-const title = "Мебель на Заказ от Производителя в СПб - Vigma/Вигма";
-const description =
-  "Недорогая корпусная мебель по индивидуальным размерам. Быстрое производство и доставка от 4 дней.  Широкий ассортимент - кухни, шкафы, кровати, прихожие ...";
+const title = process.env.MAIN_TITLE;
+const description = process.env.MAIN_DESCRIPTION;
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="ru">
         <Head>
-          <link rel="icon" href={process.env.LOGOS_ASSETS + "/mini_new.svg"} />
-          <link rel="icon" href={process.env.LOGOS_ASSETS + "/favicon.ico"} />
           <link rel="manifest" href="./manifest.json" />
+          {/* LOGOS */}
+          <link rel="icon" sizes="any" href="./favicon.ico" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./favicon-16x16.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./favicon-32x32.png"
+          />
+          {/* FONTS */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"

@@ -3,7 +3,7 @@ import Reviews from "../components/reviews/Reviews";
 import Page from "../components/layout/Page";
 import Head from "next/head";
 
-const title = "Отзывы - Vigma";
+const title = "Отзывы - VIGMA";
 const description = "Отзывы наших клиентов";
 
 const ReviewsPage = (props) => {

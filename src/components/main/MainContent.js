@@ -5,6 +5,7 @@ import MainAdvantages from "./MainAdvantages";
 import OrderButton from "./OrderButton";
 import Content from "../layout/Content";
 import Title from "../ui/Title";
+import Secondary from "../ui/Secondary";
 import Bold from "../ui/Bold";
 import classes from "./MainContent.module.scss";
 
@@ -19,10 +20,11 @@ const MainContent = (props) => {
       <MainAdvantages />
       <Box component="section" sx={{ marginTop: 2.5 }}>
         <h3 style={{ fontWeight: 400 }}>
-          Узнайте стоимость и получите <Bold>подарок</Bold>
+          Рассчитайте стоимость и получите <Bold>подарок</Bold>
         </h3>
       </Box>
       <OrderButton />
+      <Secondary>Закончились идеи? Посмотрите уже готовые работы</Secondary>
       <MainWork />
       <Link passHref href="/works">
         <a className={classes.MoreWorks}>Больше наших работ</a>

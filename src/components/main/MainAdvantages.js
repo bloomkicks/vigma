@@ -5,7 +5,9 @@ const gearsSvg = process.env.MAIN_ASSETS + "/gears.svg";
 import MainAdvantage from "./MainAdvantage";
 import Secondary from "../ui/Secondary";
 import Bold from "../ui/Bold";
+import Third from "../ui/Third";
 import Section from "../ui/Section";
+import advClasses from "./MainAdvantage.module.css";
 import classes from "./MainAdvantages.module.css";
 
 const MainAdvantages = (pros) => {
@@ -18,9 +20,16 @@ const MainAdvantages = (pros) => {
         <MainAdvantage title="Доставка и установка" logoSrc={packageSvg}>
           У нас быстро и чисто
         </MainAdvantage>
-        <MainAdvantage title="Бесплатный дизайн-проект" logoSrc={rulerSvg}>
-          У нас красиво и профессиально
-        </MainAdvantage>
+        <div className={advClasses.MainAdvantage}>
+          <Third>
+            Бесплатный{" "}
+            <span style={{ wordBreak: "keep-all", display: "inline-block" }}>
+              дизайн-проект
+            </span>
+            <img alt="" src={rulerSvg} className={advClasses.Logo} />
+          </Third>
+          <p>У нас красиво и профессиально</p>
+        </div>
         <MainAdvantage title="Собственное производство" logoSrc={gearsSvg}>
           У нас доступно и практично
         </MainAdvantage>

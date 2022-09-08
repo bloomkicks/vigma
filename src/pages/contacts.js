@@ -3,8 +3,8 @@ import ContactsMap from "../components/contacts/ContactsMap.js";
 import Head from "next/head";
 import Page from "../components/layout/Page";
 
-const title = "Контакты - Vigma";
-const description = "+7 (812) 642 60-51 | vigmaspb@gmail.com";
+const title = process.env.CONTACTS_TITLE;
+const description = process.env.CONTACTS_DESCRIPTION;
 
 const Contacts = (props) => {
   return (

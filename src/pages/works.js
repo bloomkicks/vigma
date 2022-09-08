@@ -2,8 +2,8 @@ import WorksContent from "../components/works/WorksContent";
 import Head from "next/head";
 import Page from "../components/layout/Page";
 
-const title = "Наши работы - Vigma";
-const description = "Посмотрите на наши работы и найдете мебель себе по душе";
+const title = process.env.WORKS_TITLE;
+const description = process.env.WORKS_DESCRIPTION;
 
 const WorkPage = (props) => {
   return (

@@ -2,9 +2,8 @@ import Head from "next/head";
 import AboutUsContent from "../components/aboutus/AboutUsContent";
 import Page from "../components/layout/Page";
 
-const title = "О Нас - Vigma";
-const description =
-  "Мы занимаемся изготовлением, сборкой, распилом, доставкой и установкой корпусной мебели на заказ";
+const title = process.env.ABOUT_US_TITLE;
+const description = process.env.ABOUT_US_DESCRIPTION;
 
 const AboutUsPage = (props) => {
   return (

@@ -1,10 +1,39 @@
 {
-  "short_name": "Vigma",
-  "name": "Vigma - лучшая мебель на заказ, быстро, качественно и на века!",
+  "short_name": "VIGMA - Производство Мебели",
+  "start_url": "https://vigmamebel/main",
+  "lang": "ru",
+  "name": "Мебель на Заказ от Производителя в СПб - Vigma/Вигма",
+  "description": "Качественная корпусная мебель на заказ. Быстрое производство и доставка от 4 дней. Широкий ассортимент - кухни, шкафы, кровати, прихожие ...",
   "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ],
-  "start_url": ".",
+  "shortcuts": [
+    {
+      "name": "Рассчитать Стоимость",
+      "url": "/order",
+      "description": "Узнайте стоимость и получите подарок"
+    },
+    {
+      "name": "Контакты",
+      "url": "/contacts",
+      "description": "Если у вас есть вопрос, Вы можете связаться с нами по этим контактам"
+    },
+    {
+      "name": "Наши Работы",
+      "url": "/works",
+      "description": "Каталог уже выполненных работ, источник для вдохновения"
+    }
+  ],
   "display": "standalone",
-  "theme_color": "#444c78",
-  "background_color": "#ffffff"
+  "theme_color": "#97dd9e",
+  "background_color": "#ededed"
 }
