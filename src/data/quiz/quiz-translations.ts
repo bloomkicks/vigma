@@ -7,7 +7,7 @@ export const categoriesTranslations = {
   childish: "Детская мебель",
   bathroom: "Мебель для Ванной",
   shop: "Торговая мебель",
-  office: "Оффисная мебель",
+  office: "Офисная мебель",
   // constructor questions - categories
   dishwasher: "Посудомойка",
   oven: "Духовoка",
