@@ -1,3 +1,4 @@
+import Paper from "@mui/material/Paper";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { quizActions } from "../../store/quiz";
@@ -39,7 +40,7 @@ const Work = (props) => {
   };
 
   return (
-    <section className={classes.work}>
+    <Paper component="section" className={classes.work}>
       <ImageContainer photos={photos} title={title} />
       <figcaption className={classes.left}>
         <Secondary>{title}</Secondary>
@@ -65,7 +66,7 @@ const Work = (props) => {
           <p>Рассчитать для Вас</p>
         </MainButton>
       </Link>
-    </section>
+    </Paper>
   );
 };
 
