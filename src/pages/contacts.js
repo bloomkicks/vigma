@@ -22,7 +22,7 @@ const Contacts = (props) => {
       </Head>
       <Page notSpaced={true} title="Контакты">
         <ContactsContent />
-        <ContactsMap />
+        {/* <ContactsMap /> */}
       </Page>
     </>
   );

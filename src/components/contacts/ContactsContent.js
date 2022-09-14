@@ -51,12 +51,13 @@ const ContactsContent = (props) => {
             bottom: "-15px",
             left: "-20%",
             height: "2.5rem",
+            marginBottom: "20px",
           },
         }}
         contactKey="Адрес производства:"
       >
         <br />
-        <b style={{ maxWidth: "90%" }}>
+        <b>
           <span>г. Санкт-Петербург,</span> <span>ул. Автобусная,</span>{" "}
           <span>д. 3,</span> <span>лит. Б</span>
         </b>

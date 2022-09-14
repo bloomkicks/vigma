@@ -1,7 +1,6 @@
 .ContactsSection {
-  margin-bottom: 15px;
-  max-height: 2.5rem;
-  max-width: 25rem;
+  margin-bottom: 25px;
+  max-width: 99%;
 }
 
 .Text {
@@ -32,4 +31,23 @@
 
 .Key {
   position: relative;
+}
+
+@media (max-width: 550px) {
+  .Logo {
+    display: none;
+  }
+
+  .Text {
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 10px;
+    max-width: 430px;
+    margin-left: 0;
+  }
+
+  .ContactsSection {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
