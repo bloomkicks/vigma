@@ -9,7 +9,6 @@ module.exports = {
     };
     return config;
   },
-  assetPrefix: "./",
   experimental: {
     images: {
       unoptimized: true,
