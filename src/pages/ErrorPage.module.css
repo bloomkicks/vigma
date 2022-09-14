@@ -1,5 +1,15 @@
 .ErrorPage {
   text-align: right;
+  flex-wrap: nowrap;
+  width: 80%;
+}
+
+.ErrorPage > div > h2 {
+  line-height: 1.4em;
+}
+
+.ErrorPage > div > p {
+  margin-top: 10px;
 }
 
 .Arrow {

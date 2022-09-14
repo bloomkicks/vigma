@@ -23,11 +23,11 @@ const ErrorPage = () => {
       <Page className={classes.ErrorPage}>
         <div>
           <Secondary>Страница по данному адресу не найдена</Secondary>
-          <p>Сверху достпуна корректная навигация по сайту</p>
+          <p>Попробуйте использовать навигацию сверху страницы</p>
         </div>
         <img
           src={process.env.GENERAL_ASSETS + "/error-arrow.svg"}
-          alt="Сверху сайта"
+          alt=""
           className={classes.Arrow}
         ></img>
       </Page>

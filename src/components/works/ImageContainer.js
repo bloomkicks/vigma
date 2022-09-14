@@ -24,7 +24,7 @@ const ImageContainer = (props) => {
               key={Math.random()}
               className={photo.isVertical ? classes.ver : classes.hor}
             >
-              <img src={photo.src} alt={title + " Фотография"} />
+              <img src={photo.src} alt={"Фотография не найдена"} />
             </div>
           );
         })}

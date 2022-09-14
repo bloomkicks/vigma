@@ -56,7 +56,7 @@ const ContactsContent = (props) => {
         contactKey="Адрес производства:"
       >
         <br />
-        <b>
+        <b style={{ maxWidth: "90%" }}>
           <span>г. Санкт-Петербург,</span> <span>ул. Автобусная,</span>{" "}
           <span>д. 3,</span> <span>лит. Б</span>
         </b>

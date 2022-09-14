@@ -40,7 +40,11 @@ const Work = (props) => {
   };
 
   return (
-    <Paper component="section" className={classes.work}>
+    <Paper
+      component="section"
+      sx={{ backgroundColor: "#d3f5d6" }}
+      className={classes.work}
+    >
       <ImageContainer photos={photos} title={title} />
       <figcaption className={classes.left}>
         <Secondary>{title}</Secondary>

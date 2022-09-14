@@ -1,6 +1,6 @@
 import classes from "./ContactsMap.module.css";
 
-const ContactsMap = (props) => {
+const ContactsMap = () => {
   return (
     <aside
       style={{ position: "relative", overflow: "hidden" }}

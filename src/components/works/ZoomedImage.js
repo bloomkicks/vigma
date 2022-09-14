@@ -6,7 +6,7 @@ const ZoomedImage = (props) => {
     <Modal className={classes.ZoomedWrapper} onClose={props.onClose}>
       <img
         src={props.src}
-        alt="Фотография в фокусе"
+        alt="Не получилось загрузить фотографию, попробуйте позже"
         className={classes.ZoomedImage}
       />
     </Modal>
