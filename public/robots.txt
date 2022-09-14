@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /reviews
 Disallow: /404
-Sitemap: http://www.vigmamebel.ru/sitemap.xml
+Sitemap: https://www.vigmamebel.ru/sitemap.xml
