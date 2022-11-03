@@ -1,6 +1,6 @@
 import WorksContent from "../components/works/WorksContent";
 import Head from "next/head";
-import Page from "../components/layout/Page";
+// import Page from "../components/layout/Page";
 
 const title = process.env.WORKS_TITLE;
 const description = process.env.WORKS_DESCRIPTION;
@@ -18,9 +18,9 @@ const WorkPage = (props) => {
         <meta name="twitter:title" content={title} />
         <meta name="og:description" content={description} />
       </Head>
-      <Page title="Наши работы">
+      <div title="Наши работы">
         <WorksContent />
-      </Page>
+      </div>
     </>
   );
 };

@@ -10,11 +10,14 @@ const theme = createTheme({
     primary: {
       main: "#97dd9e",
     },
+    secondary: {
+      main: "#ffffff",
+    },
     text: {
       primary: "#303030",
       secondary: "#535353",
       button: "#ffffff",
-      light: "#fff",
+      light: "#ffffff",
     },
     info: {
       main: "#3b3983",
@@ -45,13 +48,9 @@ const theme = createTheme({
       lineHeight: "30.8px",
       fontWeight: "600",
     },
-    h4: {
-      fontFamily: headingFontFamily,
-      fontSize: "1.05rem",
-      fontWeight: "500",
-    },
     h6: {
-      fontFamily: headingFontFamily,
+      fontFamily: bodyFontFamily,
+      fontWeight: "400",
       lineHeight: "1.1em",
     },
     body1: {
@@ -64,8 +63,35 @@ const theme = createTheme({
     },
     button: {
       fontSize: 21,
-      lineHeight: "24.6px",
+      lineHeight: "60px",
       textTransform: "uppercase",
+    },
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        scrollBehavior: "smooth",
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          padding: "0 34px",
+          borderRadius: "50px",
+        },
+      },
+    },
+    MuiDivider: {
+      defaultProps: { component: "span" },
+      styleOverrides: {
+        root: {
+          display: "block",
+          width: "95%",
+          height: "2px",
+          margin: "0 auto",
+          backgroundColor: "black",
+        },
+      },
     },
   },
 });

@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 import Typography from "@mui/material/Typography";
 import OrderForm from "../components/quiz/order-form/OrderForm";
 import QuizPage from "../components/quiz/QuizPage";
-import Page from "../components/layout/Page";
+// import Page from "../components/layout/Page";
 
 const title = process.env.ORDER_TITLE;
 const description = process.env.ORDER_DESCRIPTION;
@@ -46,7 +46,7 @@ const OrderPage = () => {
         <meta name="twitter:title" content={title} />
         <meta name="og:description" content={description} />
       </Head>
-      <Page>
+      <div>
         {quiz.isFinished ? (
           <OrderForm
             quizState={quiz}
@@ -91,7 +91,7 @@ const OrderPage = () => {
             </Typography>
           </DialogContent>
         </Dialog>
-      </Page>
+      </div>
     </>
   );
 };

@@ -1,6 +1,5 @@
 import Secondary from "../components/ui/Secondary";
 import Head from "next/head";
-import Page from "../components/layout/Page";
 import classes from "./ErrorPage.module.css";
 
 const title = process.env.ERROR_TITLE;
@@ -20,7 +19,7 @@ const ErrorPage = () => {
         <meta name="twitter:title" content={title} />
         <meta name="og:description" content={description} />
       </Head>
-      <Page className={classes.ErrorPage}>
+      <div className={classes.ErrorPage}>
         <div>
           <Secondary>Страница по данному адресу не найдена</Secondary>
           <p>Попробуйте использовать навигацию сверху страницы</p>
@@ -30,7 +29,7 @@ const ErrorPage = () => {
           alt=""
           className={classes.Arrow}
         ></img>
-      </Page>
+      </div>
     </>
   );
 };

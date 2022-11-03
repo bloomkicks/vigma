@@ -83,16 +83,7 @@ const Header = (props) => {
             className={`${classes.Nav} ${isActiveNav && classes.Nav__active}`}
           >
             <NavLink
-              href="/order"
-              onClick={navClickHandler}
-              onFocus={navFocusHandler}
-              onBlur={navBlurHandler}
-              isBlack
-            >
-              Рассчитать
-            </NavLink>
-            <NavLink
-              href="/contacts"
+              href="#contacts"
               onClick={navClickHandler}
               onFocus={navFocusHandler}
               onBlur={navBlurHandler}
@@ -110,13 +101,13 @@ const Header = (props) => {
               Наши работы
             </NavLink>
             <NavLink
-              href="/about-us"
+              href="/order"
               onClick={navClickHandler}
               onFocus={navFocusHandler}
               onBlur={navBlurHandler}
               isBlack
             >
-              О нас
+              Рассчитать
             </NavLink>
           </nav>
         </div>
