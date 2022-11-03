@@ -48,6 +48,12 @@ const theme = createTheme({
       lineHeight: "30.8px",
       fontWeight: "600",
     },
+    h4: {
+      fontFamily: headingFontFamily,
+      fontSize: 32,
+      lineHeight: "38px",
+      fontWeight: "500",
+    },
     h6: {
       fontFamily: bodyFontFamily,
       fontWeight: "400",
