@@ -43,9 +43,13 @@ class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Roboto:ital,wght@0,400;0,500;1,400&family=Rubik:wght@600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:wght@500;600&display=swap"
             rel="stylesheet"
           />
+          {/* <link
+            href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Roboto:ital,wght@0,400;0,500;1,400&family=Rubik:wght@600&display=swap"
+            rel="stylesheet"
+          /> */}
           {/* REGULAR TAGS */}
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#444c78" />
