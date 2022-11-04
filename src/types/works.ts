@@ -5,6 +5,9 @@ export type WorkProperty = {
 
 export type WorkImage = {
   src: string;
+  isVertical?: boolean;
+  width: number;
+  height: number;
 };
 
 export type WorkInfoProps = {
@@ -13,4 +16,10 @@ export type WorkInfoProps = {
   price: string;
   colors: string[];
   properties: WorkProperty[];
+};
+
+export type WorkProps = {
+  id?: string;
+  info: WorkInfoProps;
+  images: WorkImage[];
 };

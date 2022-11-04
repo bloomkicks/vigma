@@ -1,14 +1,20 @@
 import ItemImage from "./ItemImage";
 import type { WorkImage } from "../../../../../types/works";
-import Stack from "@mui/material/Stack";
+import ImageList from "@mui/material/ImageList";
 
-const ListImage = ({ images }: { images: WorkImage[] }) => {
+const ListImage = ({
+  images,
+  onFocus,
+}: {
+  images: WorkImage[];
+  onFocus: (index: number) => void;
+}) => {
   return (
-    <Stack>
-      {images.map((image) => (
-        <ItemImage {...image} key={image.src} />
+    <ImageList rowHeight={130} sx={{ width: "100%" }}>
+      {images.map((image, index) => (
+        <ItemImage {...image} onFocus={() => onFocus(index)} key={image.src} />
       ))}
-    </Stack>
+    </ImageList>
   );
 };
 

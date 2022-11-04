@@ -1,3 +1,4 @@
+import Works from "../components/works/Works";
 import WorksContent from "../components/works/WorksContent";
 import Head from "next/head";
 // import Page from "../components/layout/Page";
@@ -18,9 +19,9 @@ const WorkPage = (props) => {
         <meta name="twitter:title" content={title} />
         <meta name="og:description" content={description} />
       </Head>
-      <div title="Наши работы">
-        <WorksContent />
-      </div>
+      {/* <div title="Наши работы"> */}
+      <Works />
+      {/* </div> */}
     </>
   );
 };

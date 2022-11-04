@@ -1,18 +1,14 @@
+import type { WorkProps } from "../../../types/works";
+import ImageGroup from "./image-group/ImageGroup";
 import WorkInfo from "./work-info/WorkInfo";
-import type { WorkInfoProps, WorkImage } from "../../../types/works";
-import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
 
-const Work = ({
-  workInfoProps,
-  images,
-}: {
-  workInfoProps: WorkInfoProps;
-  images: WorkImage[];
-}) => {
+const Work = ({ info, images }: WorkProps) => {
   return (
-    <Box>
-      <WorkInfo {...workInfoProps} />
-    </Box>
+    <Stack direction="row" spacing={4}>
+      <ImageGroup images={images} />
+      <WorkInfo {...info} />
+    </Stack>
   );
 };
 

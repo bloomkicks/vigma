@@ -4,13 +4,17 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import type { WorkImage } from "../../../../types/works";
 
-const ImageGroup = ({ images }: { images: WorkImage[] }) => {
-  const [focusedImageIndex, setFocusedImageIndex] = useState<string>();
+const ImageGroup = ({ images, sx }: { images: WorkImage[] } & { sx?: any }) => {
+  const [focusedImageIndex, setFocusedImageIndex] = useState<number>();
+
+  function focusHandler(index: number) {
+    setFocusedImageIndex(index);
+  }
 
   return (
-    <Box component="section">
+    <Box sx={sx}>
       <FocusedImage {...images[focusedImageIndex]} />
-      <ListImage images={images} />
+      <ListImage images={images} onFocus={focusHandler} />
     </Box>
   );
 };
