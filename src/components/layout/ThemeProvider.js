@@ -12,6 +12,7 @@ const theme = createTheme({
     },
     secondary: {
       main: "#ffffff",
+      dark: "#e5e5e5",
     },
     text: {
       primary: "#303030",
@@ -93,9 +94,10 @@ const theme = createTheme({
         root: {
           display: "block",
           width: "95%",
-          height: "2px",
+          height: "1.5px",
           margin: "0 auto",
           backgroundColor: "black",
+          opacity: 0.7,
         },
       },
     },

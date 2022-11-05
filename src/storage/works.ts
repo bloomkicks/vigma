@@ -1,4 +1,5 @@
-import type { WorkProps, WorkInfoProps, WorkImage } from "../types/works";
+import type { WorkProps, WorkInfoProps } from "../types/works";
+
 // QUARTZ KITCHEN
 const quartzKitchenFront = "quartz/front.jpeg";
 const quartzKitchenSide = "quartz/side.jpeg";
@@ -53,11 +54,7 @@ const solidKitchenAngleMain = "solid/angle_main.jpeg";
 const solidKitchenAngle2 = "solid/angle2.jpeg";
 const solidKitchenMain = "solid/main.jpeg";
 
-export const firstWorks: {
-  images: (Omit<WorkImage, "width" | "height"> & { isVertical?: boolean })[];
-  info: Omit<WorkInfoProps, "description">;
-  query?: any;
-}[] = [
+const works: WorkProps[] = [
   {
     images: [
       {
@@ -83,11 +80,6 @@ export const firstWorks: {
       ],
       price: "38651",
       colors: ["#cdcbcc", "#7d665e"],
-    },
-    query: {
-      type: "kitchen",
-      shape: "straight",
-      material: "ldsp+mdf",
     },
   },
   {
@@ -120,20 +112,7 @@ export const firstWorks: {
         "repeating-linear-gradient(90deg, #733617, #965632 3px)",
       ],
     },
-    query: {
-      type: "kitchen",
-      shape: "angled",
-      material: "lsdp+mdf",
-    },
   },
-];
-
-const works: {
-  images: (Omit<WorkImage, "width" | "height"> & { isVertical?: boolean })[];
-  info: Omit<WorkInfoProps, "description">;
-  query?: any;
-}[] = [
-  ...firstWorks,
   {
     // FUTURISTIC
     images: [
@@ -156,17 +135,6 @@ const works: {
       price: "29875",
       colors: ["#b8b19f", "#353444"],
     },
-    query: {
-      type: "kitchen",
-      shape: "angled",
-      material: "lsdp+mdf",
-    },
-    // style: {
-    //   height: "350px",
-    // },
-    // imgContainerStyle: {
-    //   height: "65%",
-    // },
   },
   {
     // RED BRUSNIKA
@@ -195,11 +163,6 @@ const works: {
         "linear-gradient(45deg, #bb2725 30%, #c26267 50%, #bb2725 65%)",
       ],
     },
-    query: {
-      type: "kitchen",
-      shape: "angled",
-      material: "ldsp+lsdp+mdf",
-    },
   },
   {
     // MODERN
@@ -227,17 +190,6 @@ const works: {
       price: "33870",
       colors: ["#747675", "#c4baa4", "#644028"],
     },
-    query: {
-      type: "kitchen",
-      shape: "island",
-      material: "lsdp+mdf",
-    },
-    // style: {
-    //   height: "350px",
-    // },
-    // imgContainerStyle: {
-    //   height: "60%",
-    // },
   },
   {
     images: [
@@ -267,14 +219,6 @@ const works: {
         "repeating-linear-gradient(90deg, #a37452, #894f20 3px)",
       ],
     },
-    query: {
-      type: "kitchen",
-      shape: "angled",
-      material: "lsdp+mdf",
-    },
-    // style: {
-    //   height: "350px",
-    // },
   },
   {
     // EXPLIT
@@ -301,11 +245,6 @@ const works: {
       ],
       price: "19400",
       colors: ["#c6bbb7", "#141614"],
-    },
-    query: {
-      type: "kitchen",
-      shape: "straight",
-      material: "lsdp+mdf",
     },
   },
   {
@@ -339,11 +278,6 @@ const works: {
         "#0b151f",
       ],
     },
-    query: {
-      type: "kitchen",
-      shape: "angled",
-      material: "lsdp+mdf",
-    },
   },
   {
     // QUARTZ
@@ -369,17 +303,6 @@ const works: {
       price: "41300",
       colors: ["#a3bec5", "#6b5851"],
     },
-    query: {
-      type: "kitchen",
-      shape: "angled",
-      material: "ldsp+mdf",
-    },
-    // style: {
-    //   height: "300px",
-    // },
-    // imgContainerStyle: {
-    //   height: "70%",
-    // },
   },
   {
     // TIMBER
@@ -401,10 +324,6 @@ const works: {
         { property: "Фурнитура", value: "Boyard (Китай)" },
       ],
       price: "28400",
-    },
-    query: {
-      type: "closet",
-      material: "ldsp+mdf",
     },
   },
   {
@@ -431,10 +350,6 @@ const works: {
         "#c4c2b6",
         "repeating-linear-gradient(-45deg, #aca89c, #786859 3px)",
       ],
-    },
-    query: {
-      type: "child",
-      material: "ldsp",
     },
   },
   {
@@ -465,30 +380,7 @@ const works: {
         "linear-gradient(45deg, #4f3d2b 20%, #86634d 50%, #4f3d2b)",
       ],
     },
-    query: {
-      type: "kitchen",
-      shape: "angled",
-      material: "lsdp+mdf",
-    },
   },
 ];
 
-works.forEach((work: WorkProps, index: number) => {
-  const zeros = Array(3 - index.toString().length)
-    .fill("0")
-    .join("");
-  const id = "p" + zeros + index;
-
-  work.id = id;
-  // work.query.item = work.title;
-  work.info.description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada ex ut tellus eleifend, vel fermentum nisl lacinia";
-
-  work.images.forEach((image) => {
-    image.src = process.env.WORKS_ASSETS + "/" + image.src;
-    image.width = image.isVertical ? 1080 : 1920;
-    image.height = image.isVertical ? 1920 : 1080;
-  });
-});
-
-export default works as WorkProps[];
+export default works;

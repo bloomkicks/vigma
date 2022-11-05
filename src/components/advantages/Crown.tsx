@@ -13,6 +13,7 @@ const Crown = () => {
     >
       <Image
         src="/pictures/advantages/crown.png"
+        alt=""
         width={533}
         height={858}
         layout="responsive"

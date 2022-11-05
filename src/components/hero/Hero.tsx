@@ -13,6 +13,7 @@ const Hero = () => {
         px: { lg: 28 },
         pt: { lg: 16 },
         pb: { lg: 15 },
+        maxWidth: "100% !important",
       }}
     >
       <Background />

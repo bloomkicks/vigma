@@ -1,3 +1,4 @@
+import HeroWork from "../components/hero/HeroWork";
 import Footer from "../components/layout/Footer";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
@@ -21,6 +22,8 @@ const MainPage = (props) => {
           width: "100%",
           pt: { lg: "60px" },
           pb: { lg: "65px" },
+          maxWidth: 1366,
+          mx: "auto",
         },
         "& > section > h2": {
           mb: { lg: "45px" },
@@ -29,6 +32,8 @@ const MainPage = (props) => {
     >
       <Hero />
       <Advantages />
+      <Divider />
+      <HeroWork />
       <Divider />
       <Contacts />
       <Footer />

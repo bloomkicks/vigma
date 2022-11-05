@@ -4,11 +4,12 @@ import Box from "@mui/material/Box";
 
 const FocusedImage = ({ src, width, height }: WorkImage) => {
   return (
-    <Box bgcolor="#f3f3f3" width="100%" mb={2}>
+    <Box position="relative" bgcolor="secondary.dark" width="100%" height="65%">
       <Image
-        src={src}
+        src={process.env.WORKS_ASSETS + "/" + src}
         width={width}
         height={height}
+        loading="eager"
         layout="fill"
         objectFit="contain"
         objectPosition="center"

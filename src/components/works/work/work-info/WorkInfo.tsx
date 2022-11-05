@@ -14,8 +14,13 @@ const WorkInfo = ({
 }: WorkInfoProps & { sx?: any }) => {
   return (
     <Box sx={sx}>
-      <Typography variant="h4">{title}</Typography>
-      <Typography>{description}</Typography>
+      <Typography variant="h4" sx={{ textTransform: "uppercase", mb: 1.5 }}>
+        {title}
+      </Typography>
+      <Typography mb={1.4}>
+        {description ||
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada ex ut tellus eleifend, vel fermentum nisl lacinia"}
+      </Typography>
       <ListColor colors={colors} />
       <ListProperty properties={properties} />
     </Box>

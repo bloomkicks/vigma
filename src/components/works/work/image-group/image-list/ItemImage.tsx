@@ -1,4 +1,3 @@
-import ImageListItem from "@mui/material/ImageListItem";
 import Image from "next/image";
 import type { WorkImage } from "../../../../../types/works";
 import Box from "@mui/material/Box";
@@ -8,21 +7,20 @@ const ItemImage = ({
   width,
   height,
   onFocus,
-}: WorkImage & { onFocus: () => void }) => {
+  isFocused,
+}: WorkImage & { onFocus: () => void; isFocused: boolean }) => {
   return (
-    <ImageListItem onClick={onFocus}>
-      <Box width="50%" height="100%">
-        <Image
-          src={src}
-          width={width}
-          height={height}
-          layout="fill"
-          objectFit="contain"
-          objectPosition="center"
-          alt="Изображение не найдено..."
-        />
-      </Box>
-    </ImageListItem>
+    <Box
+      component="img"
+      onClick={onFocus}
+      src={src}
+      alt="Изображение не найдено..."
+      sx={{
+        height: "100%",
+        width: "auto",
+        border: isFocused ? "3px solid black" : "",
+      }}
+    ></Box>
   );
 };
 

@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 
 const ListProperty = ({ properties }: { properties: WorkProperty[] }) => {
   return (
-    <Stack spacing={3.1}>
+    <Stack spacing={2}>
       {properties.map((property) => (
         <ItemProperty {...property} key={property.property + property.value} />
       ))}

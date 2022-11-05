@@ -1,20 +1,49 @@
+import Stack from "@mui/material/Stack";
 import ItemImage from "./ItemImage";
 import type { WorkImage } from "../../../../../types/works";
-import ImageList from "@mui/material/ImageList";
 
 const ListImage = ({
   images,
+  focusedImageIndex,
   onFocus,
 }: {
   images: WorkImage[];
+  focusedImageIndex: number;
   onFocus: (index: number) => void;
 }) => {
   return (
-    <ImageList rowHeight={130} sx={{ width: "100%" }}>
+    <Stack
+      direction="row"
+      justifyContent="flex-start"
+      flexWrap="nowrap"
+      spacing={2}
+      sx={{
+        width: "100%",
+        height: "35%",
+        overflowX: "auto",
+        overflowY: "hidden",
+        pt: 2,
+        pb: "4px",
+        "::-webkit-scrollbar": {
+          height: "10px",
+          backgroundColor: "#f0f0f0",
+        },
+        "::-webkit-scrollbar-thumb": {
+          backgroundColor: "#cdcdcd",
+        },
+        scrollbarWidth: "thin",
+      }}
+    >
       {images.map((image, index) => (
-        <ItemImage {...image} onFocus={() => onFocus(index)} key={image.src} />
+        <ItemImage
+          {...image}
+          src={process.env.WORKS_ASSETS + "/" + image.src}
+          onFocus={() => onFocus(index)}
+          isFocused={index === focusedImageIndex}
+          key={image.src}
+        />
       ))}
-    </ImageList>
+    </Stack>
   );
 };
 

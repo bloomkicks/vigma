@@ -6,13 +6,13 @@ export type WorkProperty = {
 export type WorkImage = {
   src: string;
   isVertical?: boolean;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 };
 
 export type WorkInfoProps = {
   title: string;
-  description: string;
+  description?: string;
   price: string;
   colors: string[];
   properties: WorkProperty[];
