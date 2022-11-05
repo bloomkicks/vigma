@@ -6,13 +6,16 @@ import ButtonChoice from "./ButtonChoice";
 const Hero = () => {
   return (
     <Stack
-      component="section"
+      component="article"
+      id="hero"
       alignItems="center"
       justifyContent="center"
       sx={{
-        px: { lg: 28 },
-        pt: { lg: 16 },
-        pb: { lg: 15 },
+        px: { md: 28 },
+        "article#hero&": {
+          pt: { md: 16, lg: 18 },
+          pb: { md: 15, lg: 17 },
+        },
         maxWidth: "100% !important",
       }}
     >
@@ -22,7 +25,7 @@ const Hero = () => {
         color="text.light"
         sx={{
           position: "relative",
-          mb: 2.4,
+          mb: 2,
           maxWidth: 982,
         }}
       >
@@ -32,7 +35,7 @@ const Hero = () => {
         color="text.light"
         sx={{
           position: "relative",
-          mb: 11.5,
+          mb: 10.5,
           maxWidth: 800,
         }}
       >

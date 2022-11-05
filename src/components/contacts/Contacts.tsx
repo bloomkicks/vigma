@@ -1,27 +1,24 @@
-import ItemContact from "./contact-list/ItemContact";
-import ListContact from "./contact-list/ListContact";
+import ContactsMap from "./ContactsMap";
+import ContactsInfo from "./ContactsInfo";
 import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 
 const Contacts = () => {
   return (
     <Box
+      component="article"
       id="contacts"
-      component="section"
       sx={{
         bgcolor: "secondary.main",
         px: 15,
       }}
     >
       <Typography variant="h2">Наши контакты</Typography>
-      <ListContact />
-      <ItemContact
-        contact="Производство"
-        value="г. Санкт-Петербург, ул. Автобусная, д. 3"
-        link="none"
-        isColumn
-        sx={{ mt: 5 }}
-      />
+      <Stack direction="row" justifyContent="center" spacing={7}>
+        <ContactsInfo sx={{ width: "48%" }} />
+        <ContactsMap sx={{ width: "48%" }} />
+      </Stack>
     </Box>
   );
 };

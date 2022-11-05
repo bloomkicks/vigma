@@ -84,7 +84,7 @@ const Option = ({
             }}
           />
           <Typography
-            variant="h2"
+            variant="h5"
             display="inline"
             sx={{
               userSelect: "none",

@@ -1,6 +1,6 @@
 import type { WorkProps } from "../../types/works";
 import Work from "../works/work/Work";
-import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 // LATTE KITCHEN
@@ -38,8 +38,13 @@ let work: WorkProps = {
   },
 };
 
-const HeroWork = () => {
-  return <Work {...work} />;
+const MainWork = () => {
+  return (
+    <Box component="article" id="work">
+      <Typography variant="h2">Пример работы</Typography>
+      <Work {...work} />
+    </Box>
+  );
 };
 
-export default HeroWork;
+export default MainWork;

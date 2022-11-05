@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { WorkImage } from "../../../../../types/works";
 import Box from "@mui/material/Box";
 
@@ -18,7 +17,9 @@ const ItemImage = ({
       sx={{
         height: "100%",
         width: "auto",
-        border: isFocused ? "3px solid black" : "",
+        borderWidth: isFocused ? 5 : 0,
+        borderStyle: "solid",
+        borderColor: "primary.dark",
       }}
     ></Box>
   );

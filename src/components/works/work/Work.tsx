@@ -3,7 +3,7 @@ import ImageGroup from "./image-group/ImageGroup";
 import WorkInfo from "./work-info/WorkInfo";
 import Stack from "@mui/material/Stack";
 
-const Work = ({ info, images }: WorkProps) => {
+const Work = ({ info, images, overrides }: WorkProps & { overrides?: any }) => {
   return (
     <Stack
       component="section"
@@ -12,6 +12,7 @@ const Work = ({ info, images }: WorkProps) => {
       flexWrap="nowrap"
       spacing={4}
       sx={{ width: "100%", mx: "auto", px: 4, textAlign: "left" }}
+      {...overrides}
     >
       <ImageGroup
         images={images}
@@ -24,16 +25,16 @@ const Work = ({ info, images }: WorkProps) => {
 
 export default Work;
 
-function formatPrice(price) {
-  let formattedPrice = "";
-  for (let i = price.length; i > 0; i--) {
-    let toAdd = "";
-    if (i % 3 === 0) {
-      toAdd = ".";
-    }
-    toAdd += price[i - 1];
-    formattedPrice = toAdd + formattedPrice;
-  }
-  formattedPrice = "от " + formattedPrice;
-  return formattedPrice;
-}
+// function formatPrice(price) {
+//   let formattedPrice = "";
+//   for (let i = price.length; i > 0; i--) {
+//     let toAdd = "";
+//     if (i % 3 === 0) {
+//       toAdd = ".";
+//     }
+//     toAdd += price[i - 1];
+//     formattedPrice = toAdd + formattedPrice;
+//   }
+//   formattedPrice = "от " + formattedPrice;
+//   return formattedPrice;
+// }

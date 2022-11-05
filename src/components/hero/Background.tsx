@@ -19,6 +19,7 @@ const Background = () => {
         alt=""
         width={1920}
         height={1008}
+        style={{ userSelect: "none" }}
       />
     </Box>
   );

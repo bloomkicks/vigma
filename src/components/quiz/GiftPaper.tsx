@@ -76,6 +76,7 @@ const GiftPaper = ({ amountOfQuestions }: { amountOfQuestions: number }) => {
                 component="span"
                 sx={{
                   fontSize: { xs: 34, sm: 50, md: 70 },
+                  color: "secondary.main",
                   verticalAlign: "middle",
                 }}
               >
@@ -85,6 +86,7 @@ const GiftPaper = ({ amountOfQuestions }: { amountOfQuestions: number }) => {
                 component="span"
                 sx={{
                   verticalAlign: "middle",
+                  color: "secondary.main",
                   ml: 1.1,
                   top: "1px",
                 }}

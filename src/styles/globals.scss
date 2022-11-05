@@ -15,6 +15,9 @@
 *:focus {
   outline: 1px dashed;
 }
+button:focus {
+  outline: none;
+}
 
 .vertical-large-fading {
   animation: vertical-large-fade 650ms ease-in-out;

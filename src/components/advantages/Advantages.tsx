@@ -6,7 +6,8 @@ import Box from "@mui/material/Box";
 const Advantages = () => {
   return (
     <Box
-      component="section"
+      component="article"
+      id="advantages"
       sx={{
         px: 15,
         bgcolor: "secondary.main",

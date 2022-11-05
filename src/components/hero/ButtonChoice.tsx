@@ -13,7 +13,7 @@ const ButtonChoice = () => {
         mx: "auto",
       }}
     >
-      <Button variant="contained">Рассчитать Стоимость</Button>
+      <Button variant="contained">Рассчёт Стоимости</Button>
       <Typography
         variant="body2"
         color="text.light"
@@ -24,7 +24,10 @@ const ButtonChoice = () => {
       <Button
         variant="contained"
         color="secondary"
-        sx={{ backgroundColor: "rgba(255,255,255,80%)" }}
+        sx={{
+          backgroundColor: "rgba(255,255,255,90%)",
+          "&:hover": { bgcolor: "secondary.dark" },
+        }}
       >
         Выполненные Работы
       </Button>

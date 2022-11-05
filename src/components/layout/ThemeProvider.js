@@ -9,10 +9,11 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#97dd9e",
+      dark: "#79b57f",
     },
     secondary: {
       main: "#ffffff",
-      dark: "#e5e5e5",
+      dark: "#c5c5c5",
     },
     text: {
       primary: "#303030",
@@ -55,6 +56,11 @@ const theme = createTheme({
       lineHeight: "38px",
       fontWeight: "500",
     },
+    h5: {
+      fontSize: 23,
+      lineHeight: 1.15,
+      fontWeight: "400",
+    },
     h6: {
       fontFamily: bodyFontFamily,
       fontWeight: "400",
@@ -82,7 +88,7 @@ const theme = createTheme({
     },
     MuiButton: {
       styleOverrides: {
-        root: {
+        contained: {
           padding: "0 34px",
           borderRadius: "50px",
         },

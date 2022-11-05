@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 
 const Footer = () => {
   return (
-    <Box mt={20} mb={3}>
+    <Box component="footer" mt={15} mb={5}>
       <Typography>Производство Корпусной Мебели - Вигма</Typography>
     </Box>
   );
