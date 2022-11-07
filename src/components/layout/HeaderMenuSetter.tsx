@@ -19,6 +19,7 @@ const HeaderMenuSetter = ({
       height={23}
       sx={{
         display: { xs: "block", md: "none" },
+        mr: 1,
         "&:hover, &:focus": {
           outline: "none",
           transform: "scaleY(1.15)",
@@ -41,6 +42,7 @@ const HeaderMenuSetter = ({
       height={23}
       sx={{
         display: { xs: "block", md: "none" },
+        mr: 1,
         "&:hover, &:focus": {
           outline: "none",
           transform: "scaleX(1.15)",

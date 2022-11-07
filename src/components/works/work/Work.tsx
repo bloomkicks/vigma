@@ -7,18 +7,29 @@ const Work = ({ info, images, overrides }: WorkProps & { overrides?: any }) => {
   return (
     <Stack
       component="section"
-      direction="row"
+      direction={{ xs: "column", md: "row" }}
       justifyContent="center"
       flexWrap="nowrap"
       spacing={4}
-      sx={{ width: "100%", mx: "auto", px: 4, textAlign: "left" }}
+      sx={{
+        width: "100%",
+        mx: "auto",
+        textAlign: "left",
+      }}
       {...overrides}
     >
       <ImageGroup
         images={images}
-        sx={{ width: "50%", maxWidth: 630, height: 550 }}
+        sx={{
+          width: { xs: "100%", md: "50%" },
+          maxWidth: 630,
+          height: { xs: 400, md: 550 },
+        }}
       />
-      <WorkInfo {...info} sx={{ width: "50%" }} />
+      <WorkInfo
+        {...info}
+        sx={{ width: { xs: "100%", md: "48%" }, maxWidth: 630 }}
+      />
     </Stack>
   );
 };

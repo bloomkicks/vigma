@@ -21,8 +21,8 @@ const ItemContact = ({
       <Typography
         variant="h3"
         display={isColumn ? "block" : "inline-block"}
-        mr={isColumn ? 0 : 1.9}
-        mb={isColumn ? 1.9 : 0}
+        mr={{ xs: 1, md: isColumn ? 0 : 1.9 }}
+        mb={{ xs: 0.3, md: isColumn ? 0.3 : 0 }}
       >
         {contact}:
       </Typography>
@@ -32,7 +32,7 @@ const ItemContact = ({
         variant="subtitle2"
         href={link}
         display="inline-block"
-        sx={{ fontSize: 26, lineHeight: "30px" }}
+        sx={{ fontSize: "1.625rem", lineHeight: 1.185 }}
       >
         {value}
       </Typography>

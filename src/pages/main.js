@@ -20,13 +20,18 @@ const MainPage = (props) => {
         "& > article": {
           position: "relative",
           width: "100%",
-          pt: { lg: "60px" },
-          pb: { lg: "65px" },
+          pt: { xs: "65px", md: "60px" },
+          pb: { xs: "70px", md: "65px" },
+          px: { xs: 3, md: 4, lg: 9 },
           maxWidth: 1366,
           mx: "auto",
         },
+        "& > article#advantages": {
+          px: { xs: 3, md: 6, lg: 10 },
+          pr: { xs: 3, md: 10, lg: 12 },
+        },
         "& > article > h2": {
-          mb: { lg: "45px" },
+          mb: { xs: "45px" },
         },
       }}
     >

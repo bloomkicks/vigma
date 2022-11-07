@@ -5,16 +5,11 @@ import Box from "@mui/material/Box";
 
 const Advantages = () => {
   return (
-    <Box
-      component="article"
-      id="advantages"
-      sx={{
-        px: 20,
-        bgcolor: "secondary.main",
-      }}
-    >
+    <Box component="article" id="advantages">
       <Crown />
-      <Typography variant="h2">Почему выбирают нас:</Typography>
+      <Typography position="relative" variant="h2">
+        Почему выбирают нас:
+      </Typography>
       <ListAdvantage sx={{ position: "relative", maxWidth: { lg: "85%" } }} />
     </Box>
   );

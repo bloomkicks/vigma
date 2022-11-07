@@ -31,7 +31,7 @@ let contacts = [
 
 const ListContact = ({ sx }: { sx?: any }) => {
   return (
-    <Stack spacing={3.8} sx={sx}>
+    <Stack spacing={{ xs: 3.9, md: 3.8 }} sx={sx}>
       {contacts.map((contact) => (
         <ItemContact {...contact} key="contact.contact" />
       ))}

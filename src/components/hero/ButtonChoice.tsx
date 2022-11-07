@@ -1,4 +1,3 @@
-import Divider from "@mui/material/Divider";
 import Link from "next/link";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
@@ -20,7 +19,7 @@ const ButtonChoice = () => {
           component="a"
           variant="contained"
           sx={{
-            lineHeight: "60px",
+            lineHeight: { xs: 2.9, md: "60px" },
           }}
         >
           Расчёт Стоимости
@@ -29,7 +28,7 @@ const ButtonChoice = () => {
       <Typography
         variant="body2"
         color="text.light"
-        sx={{ fontSize: 20, position: "relative" }}
+        sx={{ position: "relative" }}
       >
         ИЛИ
       </Typography>
@@ -40,7 +39,7 @@ const ButtonChoice = () => {
           color="secondary"
           sx={{
             backgroundColor: "rgba(255,255,255,90%)",
-            lineHeight: "60px",
+            lineHeight: { xs: 2.9, md: "60px" },
           }}
         >
           Каталог Мебели

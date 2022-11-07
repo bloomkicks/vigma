@@ -8,6 +8,7 @@ const ContactsMap = ({ sx }: { sx?: any }) => {
           position: "relative",
           overflow: "hidden",
           width: "100%",
+          height: "100%",
         }}
       >
         <a
@@ -30,11 +31,9 @@ const ContactsMap = ({ sx }: { sx?: any }) => {
         </a>
         <iframe
           src="https://yandex.ru/map-widget/v1/-/CCU6ZBUM3A"
-          width="560"
-          height="400"
           frameBorder="0"
           allowFullScreen
-          style={{ position: "relative" }}
+          style={{ position: "relative", width: "100%", height: "100%" }}
         ></iframe>
       </div>
     </Box>

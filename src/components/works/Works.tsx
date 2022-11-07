@@ -14,7 +14,12 @@ const Works = () => {
         component="main"
         direction="column"
         spacing={6}
-        sx={{ pt: 10, alignItems: "center" }}
+        sx={{
+          pt: { xs: 4, md: 10 },
+          px: 4,
+          alignItems: "center",
+          width: "100%",
+        }}
       >
         {works.map((work) => (
           <>

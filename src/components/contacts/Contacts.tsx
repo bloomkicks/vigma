@@ -11,18 +11,28 @@ const Contacts = () => {
       id="contacts"
       sx={{
         bgcolor: "secondary.main",
-        px: 15,
       }}
     >
       <Typography variant="h2">Наши контакты</Typography>
       <Stack
-        direction="row"
+        direction={{ xs: "column", md: "row" }}
         justifyContent="center"
-        spacing={7}
-        sx={{ height: 410 }}
+        spacing={{ xs: 3, lg: 7 }}
+        sx={{ height: { xs: "auto", md: 410 } }}
       >
-        <ContactsInfo sx={{ width: "48%" }} />
-        <ContactsMap sx={{ width: "48%", height: "100%" }} />
+        <ContactsInfo
+          sx={{
+            width: { xs: "100%", md: "53%", lg: "48%" },
+            minWidth: { md: 485 },
+          }}
+        />
+        <ContactsMap
+          sx={{
+            width: { xs: "100%", md: "43%", lg: "48%" },
+            height: { xs: 380, md: "100%" },
+            minHeight: { xs: 380, md: 410 },
+          }}
+        />
       </Stack>
     </Box>
   );

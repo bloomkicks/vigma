@@ -31,12 +31,13 @@ const WorkInfo = ({
         {description || ""}
       </Typography>
       <ListColor colors={colors} />
-      <ListProperty properties={properties} sx={{ mb: 7.5 }} />
+      <ListProperty properties={properties} sx={{ mb: { xs: 6, md: 7.5 } }} />
       <Button
         variant="contained"
         sx={{
-          lineHeight: "61px",
+          lineHeight: { xs: 2.9, md: "61px" },
           borderRadius: "10px",
+          mx: { xs: "auto", md: 1 },
         }}
         onClick={orderHandler}
       >

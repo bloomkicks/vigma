@@ -56,16 +56,23 @@ button:focus {
   }
 }
 
-// /* LAPTOP */
-// @media screen and (max-width: 1400px) {
-//   :root {
-//     font-size: 17.5px;
-//   }
-// }
+/* xlarge - desktop */
+@media (min-width: 1568px) {
+  html {
+    font-size: 16.5px;
+  }
+}
 
-// /* MOBILE */
-// @media screen and (max-width: 550px) {
-//   :root {
-//     font-size: 15px;
-//   }
-// }
+/* medium - tablet */
+@media (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* xsmall - mobile */
+@media (max-width: 500px) {
+  html {
+    font-size: 12.5px;
+  }
+}

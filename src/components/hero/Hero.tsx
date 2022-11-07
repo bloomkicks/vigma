@@ -1,9 +1,14 @@
+import useTheme from "@mui/system/useTheme";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
 import Background from "./Background";
 import Stack from "@mui/material/Stack";
 import ButtonChoice from "./ButtonChoice";
 
 const Hero = () => {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  // let isDesktop = true
   return (
     <Stack
       component="article"
@@ -11,10 +16,9 @@ const Hero = () => {
       alignItems="center"
       justifyContent="center"
       sx={{
-        px: { md: 28 },
         "article#hero&": {
-          pt: { md: 16, lg: 18 },
-          pb: { md: 15, lg: 17 },
+          pt: { xs: 14, md: 16, lg: 19 },
+          pb: { xs: 13, md: 15, lg: 17.5 },
         },
         maxWidth: "100% !important",
       }}
@@ -29,7 +33,9 @@ const Hero = () => {
           maxWidth: 982,
         }}
       >
-        КАЧЕСТВЕННАЯ КОРПУСНАЯ МЕБЕЛЬ ПО ИНДИВИДУАЛЬНОМУ ПРОЕКТУ
+        {isDesktop
+          ? "КАЧЕСТВЕННАЯ КОРПУСНАЯ МЕБЕЛЬ ПО ИНДИВИДУАЛЬНОМУ ПРОЕКТУ"
+          : "КАЧЕСТВЕННАЯ КОРПУСНАЯ МЕБЕЛЬ НА ЗАКАЗ"}
       </Typography>
       <Typography
         component="p"

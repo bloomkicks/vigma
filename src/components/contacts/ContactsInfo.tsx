@@ -11,7 +11,7 @@ const ContactsInfo = ({ sx }: { sx?: any }) => {
         value="г. Санкт-Петербург, ул. Автобусная, д. 3"
         link="none"
         isColumn
-        sx={{ mt: 7 }}
+        sx={{ mt: { xs: 4, md: 7 } }}
       />
     </Box>
   );

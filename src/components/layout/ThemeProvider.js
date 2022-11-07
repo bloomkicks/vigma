@@ -1,5 +1,9 @@
 import CssBaseline from "@mui/material/CssBaseline";
-import { createTheme, ThemeProvider as Provider } from "@mui/material";
+import {
+  createTheme,
+  ThemeProvider as Provider,
+  useMediaQuery,
+} from "@mui/material";
 
 const bodyFontFamily =
   "Roboto, -apple-system, 'Open Sans', Raleway, sans-serif";
@@ -13,7 +17,7 @@ const theme = createTheme({
     },
     secondary: {
       main: "#ffffff",
-      dark: "#c5c5c5",
+      dark: "#c9c9c9",
     },
     text: {
       primary: "#303030",
@@ -29,57 +33,80 @@ const theme = createTheme({
     },
   },
   typography: {
+    htmlFontSize: 16,
     allVariants: {
       fontFamily: bodyFontFamily,
     },
     h1: {
       fontFamily: headingFontFamily,
-      fontSize: 48,
-      lineHeight: "56.9px",
+      // fontSize: 48,
+      // lineHeight: "56px",
+      fontSize: "3rem",
+      lineHeight: 1.167,
       fontWeight: "500",
     },
     h2: {
       fontFamily: headingFontFamily,
-      fontSize: 38,
-      lineHeight: "45px",
+      // fontSize: 38,
+      // lineHeight: "45px",
+      fontSize: "2.375rem",
+      lineHeight: 1.184,
       fontWeight: "600",
     },
     h3: {
       fontFamily: headingFontFamily,
-      fontSize: 26,
-      lineHeight: "30.8px",
+      // fontSize: 26,
+      // lineHeight: "30.8px",
+      fontSize: "1.625rem",
+      lineHeight: 1.185,
       fontWeight: "600",
     },
     h4: {
       fontFamily: headingFontFamily,
-      fontSize: 32,
-      lineHeight: "38px",
+      // fontSize: 32,
+      // lineHeight: "38px",
+      fontSize: "2rem",
+      lineHeight: 1.188,
       fontWeight: "500",
     },
     h5: {
-      fontSize: 23,
+      // fontSize: 23,
+      fontSize: "1.4375rem",
       lineHeight: 1.15,
     },
     h6: {
       fontFamily: bodyFontFamily,
-      lineHeight: "1.1em",
+      fontSize: "1.3rem",
+      lineHeight: 1.2,
     },
     body1: {
-      fontSize: 22,
-      lineHeight: "25.8px",
+      // fontSize: 22,
+      // lineHeight: "25.8px",
+      fontSize: "1.375rem",
+      lineHeight: 1.173,
+    },
+    body2: {
+      // fontSize: 20,
+      // lineHeight: "23px",
+      fontSize: "1.25rem",
+      lineHeight: 1.15,
     },
     button: {
-      fontSize: 21,
+      // fontSize: 21,
+      fontSize: "1.3125rem",
+      lineHeight: 1.9,
       textTransform: "uppercase",
     },
     subtitle1: {
       fontFamily: headingFontFamily,
-      fontSize: 25,
-      lineHeight: 1.15,
+      // fontSize: 25,
+      fontSize: "1.5625rem",
+      lineHeight: 1.2,
     },
     subtitle2: {
-      fontSize: 24,
-      lineHeight: "28.1px",
+      // fontSize: 24,
+      fontSize: "1.5rem",
+      lineHeight: 1.2,
     },
   },
   components: {
