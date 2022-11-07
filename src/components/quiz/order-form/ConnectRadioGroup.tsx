@@ -11,7 +11,18 @@ const ConnectRadioGroup = () => {
   }
 
   return (
-    <RadioGroup defaultValue="call" onChange={changeHandler}>
+    <RadioGroup
+      defaultValue="call"
+      onChange={changeHandler}
+      sx={{
+        mb: 4,
+        mx: "auto",
+        minWidth: { md: 708 },
+        "& > *": {
+          mr: "auto",
+        },
+      }}
+    >
       <FormControlLabel
         value="call"
         name="как получить результат"

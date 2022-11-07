@@ -19,9 +19,7 @@ const WorkPage = (props) => {
         <meta name="twitter:title" content={title} />
         <meta name="og:description" content={description} />
       </Head>
-      {/* <div title="Наши работы"> */}
       <Works />
-      {/* </div> */}
     </>
   );
 };

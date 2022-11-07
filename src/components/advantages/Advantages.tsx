@@ -9,13 +9,13 @@ const Advantages = () => {
       component="article"
       id="advantages"
       sx={{
-        px: 15,
+        px: 20,
         bgcolor: "secondary.main",
       }}
     >
       <Crown />
       <Typography variant="h2">Почему выбирают нас:</Typography>
-      <ListAdvantage sx={{ position: "relative", maxWidth: { lg: "75%" } }} />
+      <ListAdvantage sx={{ position: "relative", maxWidth: { lg: "85%" } }} />
     </Box>
   );
 };

@@ -29,6 +29,7 @@ const ItemContact = ({
 
       <Typography
         component={isLink ? "a" : "p"}
+        variant="subtitle2"
         href={link}
         display="inline-block"
         sx={{ fontSize: 26, lineHeight: "30px" }}

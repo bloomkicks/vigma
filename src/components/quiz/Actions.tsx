@@ -34,12 +34,27 @@ const Actions = ({
         onClick={backHandler}
         sx={{
           display: backDisabled ? "none" : "block",
+          px: 2.5,
+          py: "6px",
+          borderRadius: "6px",
+          fontSize: 18,
+          "&:hover": {
+            bgcolor: (theme) =>
+              theme.palette.primary.light
+                .replace("rgb", "rgba")
+                .replace(")", ", 0.4)"),
+          },
         }}
       >
         <Typography
           variant="inherit"
           color="text.secondary"
-          position="relative"
+          sx={{
+            lineHeight: 1.15,
+            position: "relative",
+            display: "inline-block",
+            width: "fit-content",
+          }}
         >
           <Box
             component="span"
@@ -48,7 +63,7 @@ const Actions = ({
               height: "1.3px",
               position: "absolute",
               left: "50%",
-              bottom: 4,
+              bottom: 0.6,
               transform: "translateX(-50%)",
               bgcolor: "text.secondary",
               opacity: "0.8",
@@ -62,6 +77,12 @@ const Actions = ({
         color="info"
         onClick={nextHandler}
         disabled={nextDisabled}
+        sx={{
+          px: 2.5,
+          py: "6px",
+          borderRadius: "6px",
+          fontSize: 18,
+        }}
       >
         {isDalee ? "Далее" : "Пропустить"}
       </Button>

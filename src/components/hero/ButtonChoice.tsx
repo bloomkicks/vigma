@@ -1,3 +1,5 @@
+import Divider from "@mui/material/Divider";
+import Link from "next/link";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
@@ -13,7 +15,17 @@ const ButtonChoice = () => {
         mx: "auto",
       }}
     >
-      <Button variant="contained">Рассчёт Стоимости</Button>
+      <Link href="/order" passHref>
+        <Button
+          component="a"
+          variant="contained"
+          sx={{
+            lineHeight: "60px",
+          }}
+        >
+          Расчёт Стоимости
+        </Button>
+      </Link>
       <Typography
         variant="body2"
         color="text.light"
@@ -21,16 +33,19 @@ const ButtonChoice = () => {
       >
         ИЛИ
       </Typography>
-      <Button
-        variant="contained"
-        color="secondary"
-        sx={{
-          backgroundColor: "rgba(255,255,255,90%)",
-          "&:hover": { bgcolor: "secondary.dark" },
-        }}
-      >
-        Выполненные Работы
-      </Button>
+      <Link href="/works" passHref>
+        <Button
+          component="a"
+          variant="contained"
+          color="secondary"
+          sx={{
+            backgroundColor: "rgba(255,255,255,90%)",
+            lineHeight: "60px",
+          }}
+        >
+          Каталог Мебели
+        </Button>
+      </Link>
     </Stack>
   );
 };

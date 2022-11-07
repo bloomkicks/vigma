@@ -15,9 +15,14 @@ const Contacts = () => {
       }}
     >
       <Typography variant="h2">Наши контакты</Typography>
-      <Stack direction="row" justifyContent="center" spacing={7}>
+      <Stack
+        direction="row"
+        justifyContent="center"
+        spacing={7}
+        sx={{ height: 410 }}
+      >
         <ContactsInfo sx={{ width: "48%" }} />
-        <ContactsMap sx={{ width: "48%" }} />
+        <ContactsMap sx={{ width: "48%", height: "100%" }} />
       </Stack>
     </Box>
   );

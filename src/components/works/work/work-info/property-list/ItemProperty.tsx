@@ -6,11 +6,15 @@ const ItemProperty = ({ property, value }: WorkProperty) => {
   return (
     <Box>
       <Typography
+        component="p"
+        variant="subtitle2"
         sx={{ display: "inline-block", fontWeight: "bold", mr: "15px" }}
       >
         {property}:
       </Typography>
-      <Typography display="inline-block">{value}</Typography>
+      <Typography component="p" variant="subtitle2" display="inline-block">
+        {value}
+      </Typography>
     </Box>
   );
 };

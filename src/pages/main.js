@@ -36,7 +36,6 @@ const MainPage = (props) => {
       <MainWork />
       <Divider />
       <Contacts />
-      <Footer />
     </Container>
   );
 };

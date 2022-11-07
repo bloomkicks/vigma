@@ -1,3 +1,4 @@
+import type { FlatQuestion } from "../../types/quiz";
 import { useEffect } from "react";
 import { quizAssetsPath } from "../../data/general/assets-paths";
 import Paper from "@mui/material/Paper";
@@ -6,10 +7,16 @@ import Typography from "@mui/material/Typography";
 import React from "react";
 import getFormOfQuestions from "../../features/quiz/get-form-of-questions";
 
-const GiftPaper = ({ amountOfQuestions }: { amountOfQuestions: number }) => {
+const GiftPaper = ({
+  amountOfQuestions,
+  currentQuestion,
+}: {
+  amountOfQuestions: number;
+  currentQuestion: string;
+}) => {
   const isKnown = typeof amountOfQuestions === "number";
-  const isGift = amountOfQuestions === 0;
-  const questions = getFormOfQuestions(amountOfQuestions);
+  const isGift = amountOfQuestions === 0 && currentQuestion !== "size";
+  const questions = getFormOfQuestions(amountOfQuestions + 1);
 
   useEffect(() => {
     const giftPaper = document.getElementById("gift-paper");
@@ -71,7 +78,7 @@ const GiftPaper = ({ amountOfQuestions }: { amountOfQuestions: number }) => {
           <>
             ДО ПОДАРКА ОСТАЛОСЬ:
             <br />
-            <Box component="span">
+            <Box component="span" display="block" mt={0.75}>
               <Box
                 component="span"
                 sx={{
@@ -80,7 +87,7 @@ const GiftPaper = ({ amountOfQuestions }: { amountOfQuestions: number }) => {
                   verticalAlign: "middle",
                 }}
               >
-                {amountOfQuestions}
+                {amountOfQuestions + 1}
               </Box>
               <Box
                 component="span"

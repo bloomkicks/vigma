@@ -5,17 +5,17 @@ const Crown = () => {
   return (
     <Box
       position="absolute"
-      right="0"
-      top="-20px"
+      top={{ xs: 0, lg: -75 }}
+      right={{ md: -230, lg: -200 }}
       sx={{
-        width: 350,
+        width: 570,
       }}
     >
       <Image
         src="/pictures/advantages/crown.png"
         alt=""
-        width={533}
-        height={858}
+        width={824}
+        height={831}
         layout="responsive"
       />
     </Box>

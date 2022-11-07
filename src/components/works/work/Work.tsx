@@ -24,17 +24,3 @@ const Work = ({ info, images, overrides }: WorkProps & { overrides?: any }) => {
 };
 
 export default Work;
-
-// function formatPrice(price) {
-//   let formattedPrice = "";
-//   for (let i = price.length; i > 0; i--) {
-//     let toAdd = "";
-//     if (i % 3 === 0) {
-//       toAdd = ".";
-//     }
-//     toAdd += price[i - 1];
-//     formattedPrice = toAdd + formattedPrice;
-//   }
-//   formattedPrice = "от " + formattedPrice;
-//   return formattedPrice;
-// }

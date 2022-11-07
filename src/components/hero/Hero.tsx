@@ -32,6 +32,8 @@ const Hero = () => {
         КАЧЕСТВЕННАЯ КОРПУСНАЯ МЕБЕЛЬ ПО ИНДИВИДУАЛЬНОМУ ПРОЕКТУ
       </Typography>
       <Typography
+        component="p"
+        variant="subtitle2"
         color="text.light"
         sx={{
           position: "relative",
@@ -40,7 +42,7 @@ const Hero = () => {
         }}
       >
         Рассчитайте стоимость собственного проекта или выберите понравившуюся
-        работу среди нашего каталога выполненных работ
+        работу среди нашего каталога мебели
       </Typography>
       <ButtonChoice />
     </Stack>

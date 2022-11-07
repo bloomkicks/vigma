@@ -5,22 +5,22 @@ let contacts = [
   {
     contact: "Номер Телефона",
     value: "+7 (812) 642-60-51",
-    link: "#",
+    link: "tel:+7 (812) 642-60-51",
   },
   {
     contact: "WhatsApp",
     value: "+7 (964) 342-60-51",
-    link: "#",
+    link: "tel:+7 (964) 342-60-51",
   },
   {
     contact: "ВКонтакте",
     value: "vk.com/vigmaspb",
-    link: "#",
+    link: "https://vk.com/vigmaspb",
   },
   {
     contact: "Адрес Эл. Почты",
     value: "vigmaspb@gmail.com",
-    link: "#",
+    link: "mailto:vigmaspb@gmail.com",
   },
   {
     contact: "Имя Менеджера",

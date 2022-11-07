@@ -29,7 +29,7 @@ const Question = ({
   return (
     <Grid item component="section" className="fading">
       <Stack>
-        <Typography variant="h4" mb={1.25}>
+        <Typography variant="subtitle1" mb={1.25}>
           {translateCategory(question)}
         </Typography>
         <RadioGroup onChange={selectOptionHandler}>

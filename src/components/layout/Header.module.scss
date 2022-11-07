@@ -28,43 +28,12 @@
   padding: 0 30px;
 }
 
-.LogoContainer,
-.LogoInnerContainer {
-  height: 100%;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  transform: translateY(-1px);
-}
-
-.LogoContainer:hover,
-.LogoContainer:focus {
-  outline: none;
-  transform: scale(1.04);
-}
-
-.Logo:focus {
-  outline: none;
-}
-
 .InnerHeader > span {
   display: none !important;
   height: 23px;
   width: auto;
   cursor: pointer;
   transition: transform 85ms ease-in;
-}
-
-.HamMenu:hover,
-.HamMenu:focus {
-  outline: none;
-  transform: scaleY(1.05);
-}
-
-.Cross:hover,
-.Cross:focus {
-  outline: none;
-  transform: scaleX(1.05);
 }
 
 .Nav {
@@ -104,9 +73,6 @@
     outline: none;
   }
 
-  .Nav > a:hover > p {
-    text-decoration: underline;
-  }
   .Nav > a:focus {
     outline: 2px dashed colors.$theme;
   }
@@ -121,10 +87,5 @@
 
   .InnerHeader > span {
     display: block !important;
-  }
-
-  .LogoContainer {
-    margin-left: 12.5px;
-    margin-top: 2px;
   }
 }

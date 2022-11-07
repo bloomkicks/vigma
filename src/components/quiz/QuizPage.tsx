@@ -30,7 +30,7 @@ const Page = ({
   return (
     <Stack
       alignItems="center"
-      sx={{ pt: 3, maxWidth: "1366px", px: 2, width: "95%" }}
+      sx={{ pt: 3, maxWidth: "1366px", px: 2, width: "95%", mx: "auto" }}
     >
       <GiftPaper
         amountOfQuestions={
@@ -40,8 +40,9 @@ const Page = ({
             ? categoryQuestions!.length - indexOfQuestion - 1
             : undefined
         }
+        currentQuestion={currentQuestion}
       />
-      <Typography variant="h4" mb={3.5} align="center">
+      <Typography variant="h4" mb={3.5} mt={5} align="center">
         {currentQuestion === "gift" ? undefined : translatedQuestion}
       </Typography>
       {currentQuestion === "constructor" ? (

@@ -48,19 +48,15 @@ const OrderForm = ({
   }
 
   return (
-    <Box mb={5} px={2} mt={3} id="order-form" className="vertical-large-fading">
-      <Typography variant="h1" mb={4} align="center">
-        Как Вам удобнее получить результат?
+    <Box mb={5} px={2} pt={7} id="order-form" className="vertical-large-fading">
+      <Typography variant="h4" mb={4} align="center">
+        Как Вы хотите, чтобы мы с вами связались?
       </Typography>
-      <Stack spacing={4} alignItems="flex-start">
-        <FormControl component="form" fullWidth onSubmit={totalSubmitHandler}>
-          <ConnectRadioGroup />
-          <Stack spacing={3} mt={4} sx={{ alignSelf: "center" }}>
-            <TelInput ref={telRef} onChange={telInputChangeHandler} />
-            <Actions isAble={isAble} />
-          </Stack>
-        </FormControl>
-      </Stack>
+      <FormControl component="form" fullWidth onSubmit={totalSubmitHandler}>
+        <ConnectRadioGroup />
+        <TelInput ref={telRef} onChange={telInputChangeHandler} />
+        <Actions isAble={isAble} />
+      </FormControl>
     </Box>
   );
 };

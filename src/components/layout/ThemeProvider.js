@@ -59,25 +59,27 @@ const theme = createTheme({
     h5: {
       fontSize: 23,
       lineHeight: 1.15,
-      fontWeight: "400",
     },
     h6: {
       fontFamily: bodyFontFamily,
-      fontWeight: "400",
       lineHeight: "1.1em",
     },
     body1: {
-      fontSize: 24,
-      lineHeight: "28.1px",
-    },
-    body2: {
       fontSize: 22,
       lineHeight: "25.8px",
     },
     button: {
       fontSize: 21,
-      lineHeight: "60px",
       textTransform: "uppercase",
+    },
+    subtitle1: {
+      fontFamily: headingFontFamily,
+      fontSize: 25,
+      lineHeight: 1.15,
+    },
+    subtitle2: {
+      fontSize: 24,
+      lineHeight: "28.1px",
     },
   },
   components: {

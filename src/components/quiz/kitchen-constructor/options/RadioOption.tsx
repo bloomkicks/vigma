@@ -15,9 +15,7 @@ const RadioOption = ({
       value={value}
       label={label}
       checked={isChecked}
-      control={
-        <MuiRadio size="small" color="info" sx={{ lineHeight: "1em" }} />
-      }
+      control={<MuiRadio size="small" color="info" sx={{ lineHeight: 1 }} />}
     />
   );
 };

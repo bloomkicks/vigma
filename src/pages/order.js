@@ -1,21 +1,21 @@
 import Head from "next/head";
 import { quizActions } from "../store/quiz";
-import { useDispatch } from "react-redux";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
-import Typography from "@mui/material/Typography";
+import SuccessDialog from "../components/quiz/order-form/SuccessDialog";
+import ErrorDialog from "../components/quiz/order-form/ErrorDialog";
 import OrderForm from "../components/quiz/order-form/OrderForm";
 import QuizPage from "../components/quiz/QuizPage";
+import Box from "@mui/material/Box";
 // import Page from "../components/layout/Page";
 
 const title = process.env.ORDER_TITLE;
 const description = process.env.ORDER_DESCRIPTION;
 
 const OrderPage = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setIsError] = useState(null);
@@ -31,6 +31,7 @@ const OrderPage = () => {
     dispatch(quizActions.clear());
     setIsError(null);
     setIsSuccess(false);
+    router.push("/main");
   }
 
   return (
@@ -46,7 +47,7 @@ const OrderPage = () => {
         <meta name="twitter:title" content={title} />
         <meta name="og:description" content={description} />
       </Head>
-      <div>
+      <Box pt={2} width="100%">
         {quiz.isFinished ? (
           <OrderForm
             quizState={quiz}
@@ -67,31 +68,9 @@ const OrderPage = () => {
             constructorQuestions={quiz.constructorQuestions}
           />
         )}
-        <Dialog open={isSuccess} onClose={closeHandler}>
-          <DialogTitle sx={{ fontFamily: "Roboto, sans-serif", pb: 1, mt: 1 }}>
-            Вы успешно отправили заявку на рассчет
-          </DialogTitle>
-          <DialogContent>
-            <Typography variant="body1">
-              В течении суток с вами свяжется наш консультант
-            </Typography>
-          </DialogContent>
-        </Dialog>
-        <Dialog open={!!error} onClose={closeHandler}>
-          <DialogTitle
-            color="error"
-            sx={{ fontFamily: "Roboto, sans-serif", pb: 1, mt: 1 }}
-          >
-            Что-то пошло не так
-          </DialogTitle>
-          <DialogContent>
-            <Typography variant="body1" color="error">
-              Попробуйте позже <br />
-              Ошибка: {error}
-            </Typography>
-          </DialogContent>
-        </Dialog>
-      </div>
+        <ErrorDialog error={error} closeHandler={closeHandler} />
+        <SuccessDialog isSuccess={isSuccess} closeHandler={closeHandler} />
+      </Box>
     </>
   );
 };

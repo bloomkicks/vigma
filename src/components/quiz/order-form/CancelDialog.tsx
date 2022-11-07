@@ -23,10 +23,10 @@ const CancelDialog = ({
 
   return (
     <Dialog open={open} onClose={onClose}>
-      <DialogTitle
-        sx={{ fontFamily: "Roboto, sans-serif", paddingBottom: 1, mt: 1 }}
-      >
-        Вы уверены, что хотите отменить рассчет?
+      <DialogTitle sx={{ pb: 1, mt: 1, pr: 3.5 }}>
+        <Typography variant="subtitle1">
+          Вы уверены, что хотите отменить расчёт стоимости?
+        </Typography>
       </DialogTitle>
       <DialogContent>
         <Typography variant="body1">
@@ -34,10 +34,10 @@ const CancelDialog = ({
         </Typography>
       </DialogContent>
       <DialogActions sx={{ mr: 2 }}>
-        <Button onClick={onClose} sx={{ color: "text.secondary" }}>
+        <Button onClick={onClose} sx={{ color: "text.secondary", px: 1.75 }}>
           Нет
         </Button>
-        <Button onClick={cancelHandler} color="error">
+        <Button onClick={cancelHandler} color="error" sx={{ px: 1.75 }}>
           Отменить
         </Button>
       </DialogActions>

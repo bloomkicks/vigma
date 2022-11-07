@@ -13,7 +13,9 @@ const ItemAdvantage = ({
       <Typography variant="h3" mb={1.25}>
         {title}
       </Typography>
-      <Typography>{description}</Typography>
+      <Typography component="p" variant="subtitle2">
+        {description}
+      </Typography>
     </Box>
   );
 };

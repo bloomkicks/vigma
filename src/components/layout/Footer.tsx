@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 
 const Footer = () => {
   return (
-    <Box component="footer" mt={15} mb={5}>
-      <Typography>Производство Корпусной Мебели - Вигма</Typography>
+    <Box component="footer" mt="auto" mb={5} textAlign="center" px={2}>
+      <Typography mt={15}>Производство Корпусной Мебели - Вигма</Typography>
     </Box>
   );
 };

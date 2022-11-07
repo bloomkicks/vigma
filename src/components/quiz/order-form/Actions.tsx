@@ -12,9 +12,18 @@ const Actions = ({ isAble }: { isAble: boolean }) => {
         open={isDialogOpen}
         onClose={() => setIsDialogOpen(false)}
       />
-      <Stack>
-        <Button variant="contained" type="submit" disabled={!isAble}>
-          ПОЛУЧИТЬ РЕЗУЛЬТАТ
+      <Stack sx={{ mx: "auto" }}>
+        <Button
+          variant="contained"
+          type="submit"
+          disabled={!isAble}
+          sx={{
+            px: 3.5,
+            py: "7px",
+            borderRadius: "6px",
+          }}
+        >
+          ОТПРАВИТЬ ЗАЯВКУ
         </Button>
         <Button
           variant="outlined"
@@ -22,6 +31,15 @@ const Actions = ({ isAble }: { isAble: boolean }) => {
             color: "primary.dark",
             textDecoration: "underline",
             mt: 2,
+            px: 3.5,
+            py: "7px",
+            borderRadius: "6px",
+            "&:hover": {
+              bgcolor: (theme) =>
+                theme.palette.primary.light
+                  .replace("rgb", "rgba")
+                  .replace(")", ", 0.2)"),
+            },
           }}
           onClick={() => setIsDialogOpen(true)}
         >

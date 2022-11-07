@@ -1,0 +1,62 @@
+import Image from "next/image";
+import Box from "@mui/material/Box";
+import classes from "./HeaderMenuSetter.module.css";
+
+let hamMenuSvg = process.env.GENERAL_ASSETS + "/ham-menu.svg";
+let crossSvg = process.env.GENERAL_ASSETS + "/cross.svg";
+
+const HeaderMenuSetter = ({
+  isActive,
+  toggleMenuHandler,
+}: {
+  isActive: boolean;
+  toggleMenuHandler: (e: any) => void;
+}) => {
+  return !isActive ? (
+    <Box
+      position="relative"
+      width={31.5}
+      height={23}
+      sx={{
+        display: { xs: "block", md: "none" },
+        "&:hover, &:focus": {
+          outline: "none",
+          transform: "scaleY(1.15)",
+        },
+      }}
+    >
+      <Image
+        src={hamMenuSvg}
+        alt="Открыть меню"
+        title="Открыть меню"
+        layout="fill"
+        loading="eager"
+        onClick={toggleMenuHandler}
+      />
+    </Box>
+  ) : (
+    <Box
+      position="relative"
+      width={24.05}
+      height={23}
+      sx={{
+        display: { xs: "block", md: "none" },
+        "&:hover, &:focus": {
+          outline: "none",
+          transform: "scaleX(1.15)",
+        },
+      }}
+    >
+      <Image
+        src={crossSvg}
+        alt="Закрыть меню"
+        title="Закрыть меню"
+        layout="fill"
+        loading="eager"
+        onClick={toggleMenuHandler}
+      />
+    </Box>
+  );
+};
+
+export default HeaderMenuSetter;

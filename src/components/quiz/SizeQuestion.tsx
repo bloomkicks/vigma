@@ -40,6 +40,7 @@ const SizeQuestion = () => {
         onChange={debounce(widthHandler)}
         color="info"
         InputProps={{
+          type: "number",
           inputProps: {
             min: 100,
           },
@@ -53,6 +54,7 @@ const SizeQuestion = () => {
         onChange={debounce(heightHandler)}
         color="info"
         InputProps={{
+          type: "number",
           inputProps: {
             min: 100,
           },
@@ -66,6 +68,7 @@ const SizeQuestion = () => {
         onChange={debounce(depthHandler)}
         color="info"
         InputProps={{
+          type: "number",
           inputProps: {
             min: 100,
           },
