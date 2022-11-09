@@ -3,7 +3,7 @@ import { ConstructorQuestions } from "../../../types/quiz";
 import Stack from "@mui/material/Stack";
 
 import KitchenDisplay from "./KitchenDisplay";
-import QuestionList from "./options/QuestionList";
+import ConstructQuestionList from "./construct-question-list/index";
 
 const KitchenConstructor = ({
   questions,
@@ -14,8 +14,11 @@ const KitchenConstructor = ({
 }) => {
   return (
     <Stack alignItems="center" sx={{ maxWidth: "1366px" }}>
-      <KitchenDisplay />
-      <QuestionList questions={questions} allQuestions={allQuestions} />
+      <KitchenDisplay questions={questions} />
+      <ConstructQuestionList
+        questions={questions}
+        allQuestions={allQuestions}
+      />
     </Stack>
   );
 };

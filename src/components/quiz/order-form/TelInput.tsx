@@ -3,12 +3,7 @@ import TextField from "@mui/material/TextField";
 import React from "react";
 
 const TelInput = React.forwardRef(
-  (
-    {
-      onChange,
-    }: { onChange: (e: React.ChangeEvent<HTMLInputElement>) => void },
-    ref,
-  ) => {
+  ({ onChange }: { onChange: (e: any) => void }, ref) => {
     return (
       <TextField
         variant="outlined"

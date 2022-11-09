@@ -10,7 +10,7 @@ import Stack from "@mui/material/Stack";
 
 import RadioOption from "./RadioOption";
 
-const Question = ({
+const ConstructQuestion = ({
   question,
   radios,
   selected,
@@ -49,4 +49,4 @@ const Question = ({
   );
 };
 
-export default React.memo(Question);
+export default React.memo(ConstructQuestion);

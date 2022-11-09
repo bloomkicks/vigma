@@ -1,9 +1,9 @@
-import CancelDialog from "./CancelDialog";
+import CancelDialog from "../dialogs/CancelDialog";
 import Stack from "@mui/material/Stack";
 import { useState } from "react";
 import Button from "@mui/material/Button";
 
-const Actions = ({ isAble }: { isAble: boolean }) => {
+const OrderActions = ({ isAble }: { isAble: boolean }) => {
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
 
   return (
@@ -12,7 +12,7 @@ const Actions = ({ isAble }: { isAble: boolean }) => {
         open={isDialogOpen}
         onClose={() => setIsDialogOpen(false)}
       />
-      <Stack sx={{ mx: "auto" }}>
+      <Stack sx={{ mx: "auto", maxWidth: 400, width: "90%" }}>
         <Button
           variant="contained"
           type="submit"
@@ -50,4 +50,4 @@ const Actions = ({ isAble }: { isAble: boolean }) => {
   );
 };
 
-export default Actions;
+export default OrderActions;

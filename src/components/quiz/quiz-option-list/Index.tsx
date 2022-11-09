@@ -1,11 +1,11 @@
 import { quizAssetsPath } from "../../../data/general/assets-paths";
 import getOptionImgSrc from "../../../features/quiz/get-option-img-src";
 import { Category } from "../../../types/quiz";
-import Option from "./Option";
+import QuizOption from "./QuizOption";
 import Grid from "@mui/material/Grid";
 import React from "react";
 
-const OptionList = ({
+const QuizOptionList = ({
   options,
   selectedOptions,
   category,
@@ -29,7 +29,7 @@ const OptionList = ({
         const imgSrc = getOptionImgSrc(category, question, option);
 
         return (
-          <Option
+          <QuizOption
             option={option}
             category={category}
             isSelected={selectedOptions.includes(option)}
@@ -40,7 +40,7 @@ const OptionList = ({
         );
       })}
       {!["category", "gift"].includes(question) && (
-        <Option
+        <QuizOption
           option="Помощь специалиста"
           category={category}
           isSelected={selectedOptions.includes("Помощь специалиста")}
@@ -52,4 +52,4 @@ const OptionList = ({
   );
 };
 
-export default OptionList;
+export default QuizOptionList;

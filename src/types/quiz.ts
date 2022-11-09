@@ -21,3 +21,30 @@ export type Size = {
 };
 
 export type Translation = ((category: Category) => string) | string;
+
+export type QuizState = {
+  connectWay: string;
+  item?: string;
+  isFinished: boolean;
+
+  // current question and its index
+  currentQuestion: string;
+  indexOfQuestion: number;
+
+  // answers AVAILABLE & SELECTED
+  availableOptions: string[];
+  selectedOptions: string[];
+
+  // storage of answered questions (array)
+  answeredQuestions: FlatQuestion[];
+
+  // all questions - if has category
+  category?: Category;
+  categoryQuestions?: FlatQuestion[];
+
+  // translated
+  translatedQuestion?: string;
+
+  // constructor question
+  constructorQuestions: ConstructorQuestions;
+};

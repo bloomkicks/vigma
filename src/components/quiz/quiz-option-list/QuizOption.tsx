@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import { translateCategory } from "../../../features/quiz/translate";
 import React from "react";
 
-const Option = ({
+const QuizOption = ({
   option = "Неизвестно",
   isSelected,
   question,
@@ -99,4 +99,4 @@ const Option = ({
   );
 };
 
-export default React.memo(Option);
+export default React.memo(QuizOption);

@@ -1,5 +1,5 @@
 import { translateQuestion } from "../features/quiz/translate";
-import { FlatQuestion, Category, ConstructorQuestions } from "../types/quiz";
+import type { QuizState } from "../types/quiz";
 import allCategoryQuestions from "../data/quiz/category-questions";
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -42,31 +42,5 @@ const quizSlice = createSlice({
   },
 });
 
-export type QuizState = {
-  connectWay: string;
-  item?: string;
-  isFinished: boolean;
-
-  // current question and its index
-  currentQuestion: string;
-  indexOfQuestion: number;
-
-  // answers AVAILABLE & SELECTED
-  availableOptions: string[];
-  selectedOptions: string[];
-
-  // storage of answered questions (array)
-  answeredQuestions: FlatQuestion[];
-
-  // all questions - if has category
-  category?: Category;
-  categoryQuestions?: FlatQuestion[];
-
-  // translated
-  translatedQuestion?: string;
-
-  // constructor question
-  constructorQuestions: ConstructorQuestions;
-};
 export const quizReducer = quizSlice.reducer;
 export const quizActions = quizSlice.actions;

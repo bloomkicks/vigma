@@ -1,12 +1,11 @@
+import type { QuizState } from "../../types/quiz";
 import KitchenConstructor from "./kitchen-constructor/KitchenConstructor";
-import SizeQuestion from "./SizeQuestion";
-import { Category, FlatQuestion, ConstructorQuestions } from "../../types/quiz";
-import OptionList from "./options/OptionList";
+import SizeForm from "./SizeForm";
+import QuizOptionList from "./quiz-option-list/Index";
 import GiftPaper from "./GiftPaper";
 import Actions from "./Actions";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import giftOptions from "../../data/quiz/gift-options";
 
 const Page = ({
   currentQuestion,
@@ -17,20 +16,18 @@ const Page = ({
   indexOfQuestion,
   categoryQuestions,
   constructorQuestions,
-}: {
-  currentQuestion: string;
-  translatedQuestion: string;
-  availableOptions: string[];
-  category: Category;
-  selectedOptions: string[];
-  indexOfQuestion: number;
-  categoryQuestions: FlatQuestion[];
-  constructorQuestions: ConstructorQuestions;
-}) => {
+}: Omit<QuizState, "answeredQuestions" | "connectWay">) => {
   return (
     <Stack
       alignItems="center"
-      sx={{ pt: 3, maxWidth: "1366px", px: 2, width: "95%", mx: "auto" }}
+      sx={{
+        pt: 3,
+        maxWidth: "1366px",
+        px: 2,
+        width: "95%",
+        mx: "auto",
+        overflowX: "hidden",
+      }}
     >
       <GiftPaper
         amountOfQuestions={
@@ -51,9 +48,9 @@ const Page = ({
           allQuestions={availableOptions}
         />
       ) : currentQuestion === "size" ? (
-        <SizeQuestion />
+        <SizeForm />
       ) : (
-        <OptionList
+        <QuizOptionList
           key={category + currentQuestion}
           options={availableOptions}
           category={category}

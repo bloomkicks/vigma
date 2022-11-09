@@ -1,24 +1,23 @@
 import { RootState } from "../../../store";
-import { useSelector } from "react-redux";
-import { QuizState } from "../../../store/quiz";
-import sendOrder from "../../../features/order-form/send-order";
+
 import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ConnectRadioGroup from "./ConnectRadioGroup";
-import Actions from "./Actions";
-import { useEffect } from "react";
+import OrderActions from "./OrderActions";
 import TelInput from "./TelInput";
 
-import { useRef, useState } from "react";
+import { useSelector } from "react-redux";
+import { useEffect, useRef, useState } from "react";
+import sendOrder from "../../../features/order-form/send-order";
+import type { QuizState } from "../../../types/quiz";
 
 const OrderForm = ({
-  quizState,
+  quiz,
   onSuccess,
   onError,
 }: {
-  quizState: QuizState;
+  quiz: QuizState;
   onSuccess: () => void;
   onError: (err: string) => void;
 }) => {
@@ -36,7 +35,7 @@ const OrderForm = ({
     e.preventDefault();
     if (!isAble) return;
     try {
-      await sendOrder(telRef.current.value, quizState, size);
+      await sendOrder(telRef.current.value, quiz, size);
       onSuccess();
     } catch (err) {
       onError(err);
@@ -48,14 +47,14 @@ const OrderForm = ({
   }
 
   return (
-    <Box mb={5} px={2} pt={7} id="order-form" className="vertical-large-fading">
+    <Box mb={5} px={2} pt={9} id="order-form" className="vertical-large-fading">
       <Typography variant="h4" mb={4} align="center">
         Как Вы хотите, чтобы мы с вами связались?
       </Typography>
       <FormControl component="form" fullWidth onSubmit={totalSubmitHandler}>
         <ConnectRadioGroup />
         <TelInput ref={telRef} onChange={telInputChangeHandler} />
-        <Actions isAble={isAble} />
+        <OrderActions isAble={isAble} />
       </FormControl>
     </Box>
   );

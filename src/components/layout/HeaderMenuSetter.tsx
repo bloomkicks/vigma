@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Box from "@mui/material/Box";
-import classes from "./HeaderMenuSetter.module.css";
 
 let hamMenuSvg = process.env.GENERAL_ASSETS + "/ham-menu.svg";
 let crossSvg = process.env.GENERAL_ASSETS + "/cross.svg";

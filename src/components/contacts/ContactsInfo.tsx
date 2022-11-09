@@ -8,7 +8,17 @@ const ContactsInfo = ({ sx }: { sx?: any }) => {
       <ListContact />
       <ItemContact
         contact="Производство"
-        value="г. Санкт-Петербург, ул. Автобусная, д. 3"
+        value={
+          <>
+            <Box display="inline-block" mr={1.2}>
+              г. Санкт-Петербург,
+            </Box>
+            <Box display="inline-block" mr={1.2}>
+              ул. Автобусная,
+            </Box>
+            <Box display="inline-block">д. 3</Box>
+          </>
+        }
         link="none"
         isColumn
         sx={{ mt: { xs: 4, md: 7 } }}

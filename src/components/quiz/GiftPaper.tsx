@@ -28,7 +28,7 @@ const GiftPaper = ({
     <Paper
       id="gift-paper"
       sx={{
-        mb: isGift ? 2 : 5,
+        mb: isGift ? 2 : 4,
         height: {
           xs: "120px",
           sm: "150px",
@@ -60,8 +60,7 @@ const GiftPaper = ({
         sx={{
           textTransform: "uppercase",
           color: "#fff",
-          fontFamily: "Rubik, sans-serif",
-          fontSize: { xs: 17, sm: 25, md: 35 },
+          fontSize: { xs: 20, sm: 25, md: 35 },
           top: isKnown && !isGift ? { xs: 5, sm: 10 } : 0,
         }}
       >
@@ -78,7 +77,7 @@ const GiftPaper = ({
           <>
             ДО ПОДАРКА ОСТАЛОСЬ:
             <br />
-            <Box component="span" display="block" mt={0.75}>
+            <Box component="span" display="block">
               <Box
                 component="span"
                 sx={{

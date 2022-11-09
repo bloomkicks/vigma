@@ -5,7 +5,11 @@ import Box from "@mui/material/Box";
 
 const Advantages = () => {
   return (
-    <Box component="article" id="advantages">
+    <Box
+      component="article"
+      id="advantages"
+      sx={{ overflowX: { xs: "hidden", md: "visible" } }}
+    >
       <Crown />
       <Typography position="relative" variant="h2">
         Почему выбирают нас:

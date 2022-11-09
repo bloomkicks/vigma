@@ -1,4 +1,3 @@
-import { Size } from "../../types/quiz";
 import { quizActions } from "../../store/quiz";
 import { useDispatch } from "react-redux";
 
@@ -28,7 +27,7 @@ const Actions = ({
   }
 
   return (
-    <Stack direction="row" spacing={2} sx={{ mt: 5, mb: 6 }}>
+    <Stack direction="row" spacing={2} sx={{ mt: 6, mb: 6 }}>
       <Button
         variant="text"
         onClick={backHandler}

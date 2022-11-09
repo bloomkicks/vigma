@@ -19,6 +19,7 @@ const ButtonChoice = () => {
           component="a"
           variant="contained"
           sx={{
+            px: 7,
             lineHeight: { xs: 2.9, md: "60px" },
           }}
         >

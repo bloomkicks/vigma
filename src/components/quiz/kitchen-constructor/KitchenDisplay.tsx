@@ -1,3 +1,4 @@
+import type { ConstructorQuestions } from "../../../types/quiz";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 
@@ -5,10 +6,8 @@ import getKitchenDisplay from "../../../features/quiz/get-kitchen-display";
 import type { RootState } from "../../../store";
 import { useSelector } from "react-redux";
 
-const KitchenDisplay = () => {
-  const kitchenDisplay = useSelector((state: RootState) =>
-    getKitchenDisplay(state.quiz.constructorQuestions),
-  );
+const KitchenDisplay = ({ questions }: { questions: ConstructorQuestions }) => {
+  const kitchenDisplay = getKitchenDisplay(questions);
 
   return (
     <Box

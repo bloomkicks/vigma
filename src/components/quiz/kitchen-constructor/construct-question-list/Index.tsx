@@ -1,9 +1,9 @@
 import { ConstructorQuestions } from "../../../../types/quiz";
 import allConstructorQuestions from "../../../../data/quiz/constructor-questions";
-import Question from "./Question";
+import ConstructQuestion from "./ConstructQuestion";
 import Grid from "@mui/material/Grid";
 
-const QuestionList = ({
+const ConstructQuestionList = ({
   questions,
   allQuestions,
 }: {
@@ -31,7 +31,7 @@ const QuestionList = ({
           )[question];
 
           return (
-            <Question
+            <ConstructQuestion
               question={question}
               selected={questions[question]}
               radios={availableOptions}
@@ -43,4 +43,4 @@ const QuestionList = ({
   );
 };
 
-export default QuestionList;
+export default ConstructQuestionList;

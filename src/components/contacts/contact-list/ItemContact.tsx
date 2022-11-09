@@ -9,7 +9,7 @@ const ItemContact = ({
   sx,
 }: {
   contact: string;
-  value: string;
+  value: string | React.ReactNode;
   link: string;
   isColumn?: boolean;
   sx?: any;

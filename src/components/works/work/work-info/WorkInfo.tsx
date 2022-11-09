@@ -37,6 +37,7 @@ const WorkInfo = ({
         sx={{
           lineHeight: { xs: 2.9, md: "61px" },
           borderRadius: "10px",
+          display: "flex",
           mx: { xs: "auto", md: 1 },
         }}
         onClick={orderHandler}

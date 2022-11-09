@@ -67,7 +67,7 @@ function size(category: Category): string {
       result += "шкафа";
       break;
     default:
-      result += "нужной мебели";
+      result = "Укажите желаемые размеры";
   }
   return result;
 }

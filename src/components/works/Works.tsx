@@ -7,16 +7,20 @@ import works from "../../storage/works";
 const Works = () => {
   return (
     <>
-      <Typography variant="h1" mb={1} mt={5}>
+      <Typography
+        variant="h1"
+        mt={5}
+        mb={{ xs: 4, md: 8 }}
+        sx={{ textAlign: "center" }}
+      >
         Каталог Мебели
       </Typography>
       <Stack
         component="main"
         direction="column"
-        spacing={6}
+        spacing={7}
         sx={{
-          pt: { xs: 4, md: 10 },
-          px: 4,
+          px: { xs: 3, md: 4, lg: 9 },
           alignItems: "center",
           width: "100%",
         }}
