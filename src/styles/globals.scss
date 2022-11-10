@@ -1,9 +1,14 @@
+// SETTINGS
+$body-ff: Roboto, -apple-system, "Open Sans", Raleway, sans-serif;
+$heading-ff: Rubik, Roboto, -apple-system, "Open Sans", Raleway, sans-serif;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: black;
-  font-size: 16;
+  font-size: 16px;
+  font-family: $body-ff;
 }
 
 *:focus {
@@ -13,6 +18,7 @@ button:focus {
   outline: none;
 }
 
+// ANIMATIONS
 .vertical-large-fading {
   animation: vertical-large-fade 650ms ease-in-out;
 }
@@ -56,6 +62,7 @@ button:focus {
   }
 }
 
+// RESPONSIVE FONT
 /* xlarge - desktop */
 @media (min-width: 1568px) {
   html {

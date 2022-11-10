@@ -1,5 +1,4 @@
-import { FlatQuestion } from "../../../types/quiz";
-import { QuizState } from "../../../store/quiz";
+import { FlatQuestion, QuizState } from "../../../types/quiz";
 
 function save(state: QuizState) {
   const answeredQuestion: FlatQuestion = {};

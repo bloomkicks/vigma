@@ -1,5 +1,5 @@
 import Footer from "./Footer";
-import Header from "./Header";
+import Header from "./header/Header";
 import classes from "./Layout.module.css";
 
 const Layout = (props) => {

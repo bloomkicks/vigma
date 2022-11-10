@@ -1,6 +1,4 @@
-import type { FlatQuestion } from "../../types/quiz";
 import { useEffect } from "react";
-import { quizAssetsPath } from "../../data/general/assets-paths";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -28,7 +26,7 @@ const GiftPaper = ({
     <Paper
       id="gift-paper"
       sx={{
-        mb: isGift ? 2 : 4,
+        mb: isGift ? 2 : 5,
         height: {
           xs: "120px",
           sm: "150px",
@@ -44,7 +42,7 @@ const GiftPaper = ({
     >
       <Box
         component="img"
-        src={`${quizAssetsPath}/giftpaper.jpg`}
+        src={`${process.env.QUIZ_ASSETS}/giftpaper.jpg`}
         alt=""
         position="absolute"
         height="100%"
@@ -54,12 +52,11 @@ const GiftPaper = ({
       ></Box>
       <Typography
         variant="h2"
-        align="center"
-        display="inline-block"
+        textAlign="center"
         position="relative"
         sx={{
           textTransform: "uppercase",
-          color: "#fff",
+          color: "secondary.main",
           fontSize: { xs: 20, sm: 25, md: 35 },
           top: isKnown && !isGift ? { xs: 5, sm: 10 } : 0,
         }}
@@ -69,17 +66,23 @@ const GiftPaper = ({
         ) : isGift ? (
           <>
             Выбирете ваш{" "}
-            <Box component="span" color="primary.light">
+            <Typography
+              variant="h2"
+              fontSize={{ xs: 20, sm: 25, md: 35 }}
+              component="span"
+              color="primary.light"
+            >
               подарок
-            </Box>
+            </Typography>
           </>
         ) : (
           <>
             ДО ПОДАРКА ОСТАЛОСЬ:
             <br />
-            <Box component="span" display="block">
-              <Box
+            <Typography component="span" display="block">
+              <Typography
                 component="span"
+                variant="h2"
                 sx={{
                   fontSize: { xs: 34, sm: 50, md: 70 },
                   color: "secondary.main",
@@ -87,19 +90,21 @@ const GiftPaper = ({
                 }}
               >
                 {amountOfQuestions + 1}
-              </Box>
-              <Box
+              </Typography>
+              <Typography
                 component="span"
+                variant="h2"
                 sx={{
                   verticalAlign: "middle",
                   color: "secondary.main",
                   ml: 1.1,
+                  fontSize: { xs: 20, sm: 25, md: 35 },
                   top: "1px",
                 }}
               >
                 {questions}
-              </Box>
-            </Box>
+              </Typography>
+            </Typography>
           </>
         )}
       </Typography>

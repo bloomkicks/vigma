@@ -2,8 +2,7 @@ import setQuestion from "../../features/quiz/store/set-question";
 import save from "../../features/quiz/store/save";
 
 import allCategoryQuestions from "../../data/quiz/category-questions";
-import { Category } from "../../types/quiz";
-import { QuizState } from "../quiz";
+import { Category, QuizState } from "../../types/quiz";
 
 function nextQuestion(state: QuizState) {
   let index = state.indexOfQuestion;
@@ -25,11 +24,11 @@ function nextQuestion(state: QuizState) {
     return state;
   }
   // SET GIFT WHEN:
-  //   ITEM IS SELECTED
+  //   PRODUCT IS SELECTED
   //   THIS IS A LAST QUESTION
   //   HELP IS PRESSED
   else if (
-    state.item ||
+    state.product ||
     index >= state.categoryQuestions.length - 1 ||
     state.selectedOptions[0] === "Помощь специалиста"
   ) {

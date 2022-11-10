@@ -39,7 +39,7 @@ const Page = ({
         }
         currentQuestion={currentQuestion}
       />
-      <Typography variant="h4" mb={3.5} mt={5} align="center">
+      <Typography variant="h4" mb={3.5} align="center">
         {currentQuestion === "gift" ? undefined : translatedQuestion}
       </Typography>
       {currentQuestion === "constructor" ? (

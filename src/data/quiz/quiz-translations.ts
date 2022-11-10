@@ -14,7 +14,7 @@ export const categoriesTranslations = {
   hood: "Вытяжка",
   microwave: "Микроволновка",
   fridge: "Холодильник",
-  item: "Наша Работа",
+  product: "Мебель из Каталога",
 };
 
 let gift = "Выбирете ваш подарок";

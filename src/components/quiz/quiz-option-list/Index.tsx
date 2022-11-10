@@ -1,4 +1,3 @@
-import { quizAssetsPath } from "../../../data/general/assets-paths";
 import getOptionImgSrc from "../../../features/quiz/get-option-img-src";
 import { Category } from "../../../types/quiz";
 import QuizOption from "./QuizOption";

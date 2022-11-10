@@ -13,7 +13,7 @@ const Crown = () => {
       }}
     >
       <Image
-        src="/pictures/advantages/crown.png"
+        src={process.env.ADVANTAGES_ASSETS + "/crown.png"}
         alt=""
         width={824}
         height={831}

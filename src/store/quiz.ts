@@ -9,7 +9,7 @@ import setConnectWay from "./quiz-reducers/set-connect-way";
 import toggleSelectOption from "./quiz-reducers/toggle-select-option";
 import previousQuestion from "./quiz-reducers/previous-question";
 import selectConstructorOption from "./quiz-reducers/select-constructor-option";
-import selectItem from "./quiz-reducers/select-item";
+import selectProduct from "./quiz-reducers/select-product";
 
 export const categories = Object.keys(allCategoryQuestions);
 const initialState: QuizState = {
@@ -36,7 +36,7 @@ const quizSlice = createSlice({
     nextQuestion,
     previousQuestion,
     selectConstructorOption,
-    selectItem,
+    selectProduct,
     clear,
     setConnectWay,
   },

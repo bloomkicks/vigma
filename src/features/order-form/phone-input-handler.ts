@@ -4,7 +4,7 @@ function phoneInputHandler(e: React.KeyboardEvent<HTMLInputElement>) {
   let cleanNumber = e.currentTarget.value.replace(/[^\d]/g, "");
 
   if (!cleanNumber) return (e.currentTarget.value = "");
-  const number = [
+  const numberGroups = [
     cleanNumber[0],
     cleanNumber.slice(1, 4),
     cleanNumber.slice(4, 7),
@@ -18,8 +18,8 @@ function phoneInputHandler(e: React.KeyboardEvent<HTMLInputElement>) {
       formattedNumber += prefix + group;
     }
   };
-  const signs = ["+", " (", ") ", " ", "-"];
-  number.forEach((group) => addNumbers(signs.shift(), group));
+  const signs = ["+", " (", ") ", "-", "-"];
+  numberGroups.forEach((group) => addNumbers(signs.shift(), group));
 
   e.currentTarget.value = formattedNumber;
 }

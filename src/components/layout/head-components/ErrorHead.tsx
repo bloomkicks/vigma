@@ -1,20 +1,18 @@
 import Head from "next/head";
 
-const title = process.env.ERROR_TITLE;
-const description = process.env.ERROR_DESCRIPTION;
+import { errorTitle, errorDescription } from "../../../data/general/page-meta";
 
 const ErrorHead = () => {
   return (
     <Head>
-      <meta name="description" content={description} />
-      <title>{title}</title>
+      <meta name="description" content={errorDescription} />
+      <title>{errorTitle}</title>
       {/* OPEN GRAPH */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-
+      <meta property="og:title" content={errorTitle} />
+      <meta property="og:description" content={errorDescription} />
       {/* TWITTER */}
-      <meta name="twitter:title" content={title} />
-      <meta name="og:description" content={description} />
+      <meta name="twitter:title" content={errorTitle} />
+      <meta name="og:description" content={errorDescription} />
     </Head>
   );
 };

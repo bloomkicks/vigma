@@ -13,7 +13,7 @@ const Background = () => {
       top="0"
     >
       <Image
-        src="/pictures/hero/background.png"
+        src={process.env.HERO_ASSETS + "/background.png"}
         layout="fill"
         objectFit="cover"
         alt=""

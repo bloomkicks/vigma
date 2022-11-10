@@ -1,4 +1,4 @@
-import { QuizState } from "../quiz";
+import { QuizState } from "../../types/quiz";
 import { PayloadAction } from "@reduxjs/toolkit";
 
 function toggleSelectOption(state: QuizState, action: PayloadAction<string>) {

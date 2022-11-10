@@ -26,7 +26,7 @@ const Hero = () => {
       <Background />
       <Typography
         variant="h1"
-        color="text.light"
+        color="secondary.main"
         sx={{
           position: "relative",
           mb: 2,
@@ -40,7 +40,7 @@ const Hero = () => {
       <Typography
         component="p"
         variant="subtitle2"
-        color="text.light"
+        color="secondary.main"
         sx={{
           position: "relative",
           mb: 10.5,

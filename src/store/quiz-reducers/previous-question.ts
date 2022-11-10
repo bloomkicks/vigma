@@ -1,5 +1,6 @@
 import setQuestion from "../../features/quiz/store/set-question";
-import { QuizState, categories } from "../quiz";
+import { QuizState } from "../../types/quiz";
+import { categories } from "../quiz";
 
 function previousQuestion(state: QuizState) {
   let index = state.indexOfQuestion;

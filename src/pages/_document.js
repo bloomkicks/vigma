@@ -1,14 +1,17 @@
 import Script from "next/script";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-const title = process.env.MAIN_TITLE;
-const description = process.env.MAIN_DESCRIPTION;
+import {
+  mainTitle as title,
+  mainDescription as description,
+} from "../data/general/page-meta";
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="ru">
         <Head>
+          {/* ENGINES */}
           <link
             rel="sitemap"
             type="application/xml"
@@ -46,31 +49,21 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:wght@500;600&display=swap"
             rel="stylesheet"
           />
-          {/* <link
-            href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Roboto:ital,wght@0,400;0,500;1,400&family=Rubik:wght@600&display=swap"
-            rel="stylesheet"
-          /> */}
           {/* REGULAR TAGS */}
           <meta charSet="utf-8" />
-          <meta name="theme-color" content="#444c78" />
+          <meta name="theme-color" content="#79b57f" />
           <meta name="description" content={description} />
           {/* OPEN GRAPH */}
           <meta property="og:type" content="website" />
-          <meta
-            property="og:image"
-            content={process.env.LOGOS_ASSETS + "/mini_new.jpg"}
-          />
-          <meta property="og:url" content="vigmamebel.ru" />
+          <meta property="og:image" content="/apple-touch-icon.png" />
+          <meta property="og:url" content="https://www.vigmamebel.ru" />
           <meta property="og:site_name" content="Мебель на Заказ" />
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
           {/* TWITTER */}
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="@vigmamebel.ru" />
-          <meta
-            name="twitter:image"
-            content={process.env.LOGOS_ASSETS + "/mini_new.jpg"}
-          />
+          <meta name="twitter:site" content="https://www.vigmamebel.ru" />
+          <meta name="twitter:image" content="/apple-touch-icon.png" />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
           {/* Google tag (gtag.js) */}

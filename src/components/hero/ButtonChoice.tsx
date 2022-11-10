@@ -28,12 +28,12 @@ const ButtonChoice = () => {
       </Link>
       <Typography
         variant="body2"
-        color="text.light"
+        color="secondary.main"
         sx={{ position: "relative" }}
       >
         ИЛИ
       </Typography>
-      <Link href="/works" passHref>
+      <Link href="/catalog" passHref>
         <Button
           component="a"
           variant="contained"

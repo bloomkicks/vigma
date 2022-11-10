@@ -1,5 +1,5 @@
 import { PayloadAction } from "@reduxjs/toolkit";
-import { QuizState } from "../quiz";
+import { QuizState } from "../../types/quiz";
 
 function selectConstructorOption(
   state: QuizState,

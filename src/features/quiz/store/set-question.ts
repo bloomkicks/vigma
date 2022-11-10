@@ -1,6 +1,5 @@
-import { FlatQuestion } from "../../../types/quiz";
+import { FlatQuestion, QuizState } from "../../../types/quiz";
 import { translateQuestion } from "../translate";
-import { QuizState } from "../../../store/quiz";
 
 function setQuestion(
   state: QuizState,

@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /reviews
 Disallow: /404
+Disallow: /error
 Sitemap: https://www.vigmamebel.ru/sitemap.xml

@@ -5,10 +5,7 @@ const sizeSlice = createSlice({
   name: "size",
   initialState: {},
   reducers: {
-    setSize(
-      state,
-      action: PayloadAction<["width" | "height" | "depth", string]>,
-    ) {
+    setSize(state, action: PayloadAction<[keyof Size, string]>) {
       const [which, value] = action.payload;
       state[which] = value;
     },

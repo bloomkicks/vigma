@@ -1,4 +1,4 @@
-import MainWork from "../components/main-work/MainWork";
+import MainProduct from "../components/main-product/MainProduct";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Advantages from "../components/advantages/Advantages";
@@ -38,7 +38,7 @@ const MainPage = () => {
       <Hero />
       <Advantages />
       <Divider />
-      <MainWork />
+      <MainProduct />
       <Divider />
       <Contacts />
     </Container>

@@ -1,5 +1,6 @@
 import ItemContact from "./contact-list/ItemContact";
 import ListContact from "./contact-list/ListContact";
+import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 const ContactsInfo = ({ sx }: { sx?: any }) => {
@@ -10,13 +11,27 @@ const ContactsInfo = ({ sx }: { sx?: any }) => {
         contact="Производство"
         value={
           <>
-            <Box display="inline-block" mr={1.2}>
+            <Typography
+              variant="subtitle2"
+              component="span"
+              sx={{ fontSize: "1.625rem", display: "inline-block", mr: 1.2 }}
+            >
               г. Санкт-Петербург,
-            </Box>
-            <Box display="inline-block" mr={1.2}>
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              component="span"
+              sx={{ fontSize: "1.625rem", display: "inline-block", mr: 1.2 }}
+            >
               ул. Автобусная,
-            </Box>
-            <Box display="inline-block">д. 3</Box>
+            </Typography>
+            <Typography
+              component="span"
+              variant="subtitle2"
+              sx={{ fontSize: "1.625rem", display: "inline-block" }}
+            >
+              д. 3
+            </Typography>
           </>
         }
         link="none"

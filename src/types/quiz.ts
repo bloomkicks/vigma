@@ -11,7 +11,7 @@ export type Category =
   | "hood"
   | "microwave"
   | "fridge"
-  | "item";
+  | "product";
 
 export type ConstructorQuestions = { [question: string]: string | null };
 export type Size = {
@@ -24,7 +24,7 @@ export type Translation = ((category: Category) => string) | string;
 
 export type QuizState = {
   connectWay: string;
-  item?: string;
+  product?: string;
   isFinished: boolean;
 
   // current question and its index

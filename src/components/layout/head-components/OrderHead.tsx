@@ -1,20 +1,18 @@
 import Head from "next/head";
 
-const title = process.env.ORDER_TITLE;
-const description = process.env.ORDER_DESCRIPTION;
+import { orderTitle, orderDescription } from "../../../data/general/page-meta";
 
 const OrderHead = () => {
   return (
     <Head>
-      <meta name="description" content={description} />
-      <title>{title}</title>
+      <meta name="description" content={orderDescription} />
+      <title>{orderTitle}</title>
       {/* OPEN GRAPH */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-
+      <meta property="og:title" content={orderTitle} />
+      <meta property="og:description" content={orderDescription} />
       {/* TWITTER */}
-      <meta name="twitter:title" content={title} />
-      <meta name="og:description" content={description} />
+      <meta name="twitter:title" content={orderTitle} />
+      <meta name="og:description" content={orderDescription} />
     </Head>
   );
 };
