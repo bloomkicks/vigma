@@ -31,7 +31,7 @@ const ProductInfo = ({
         {description || ""}
       </Typography>
       <ColorList colors={colors} />
-      <PropertyList properties={properties} sx={{ mb: { xs: 6, md: 7.5 } }} />
+      <PropertyList properties={properties} sx={{ mb: { xs: 5, md: 7 } }} />
       <Button
         variant="contained"
         sx={{

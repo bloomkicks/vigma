@@ -33,7 +33,7 @@ const ListContact = ({ sx }: { sx?: any }) => {
   return (
     <Stack spacing={{ xs: 3.9, md: 3.8 }} sx={sx}>
       {contacts.map((contact) => (
-        <ItemContact {...contact} key="contact.contact" />
+        <ItemContact {...contact} key={contact.contact} />
       ))}
     </Stack>
   );

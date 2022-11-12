@@ -1,9 +1,12 @@
+import useMediaQuery from "@mui/material/useMediaQuery";
 import Link from "next/link";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
 const ButtonChoice = () => {
+  const isReallySmall = useMediaQuery("(max-width: 376px)");
+
   return (
     <Stack
       spacing={2.5}
@@ -20,7 +23,8 @@ const ButtonChoice = () => {
           variant="contained"
           sx={{
             px: 7,
-            lineHeight: { xs: 2.9, md: "60px" },
+            lineHeight: isReallySmall ? 1.2 : { xs: 2.9, md: "60px" },
+            padding: isReallySmall ? "14px 40px" : "",
           }}
         >
           Расчёт Стоимости
@@ -40,7 +44,8 @@ const ButtonChoice = () => {
           color="secondary"
           sx={{
             backgroundColor: "rgba(255,255,255,90%)",
-            lineHeight: { xs: 2.9, md: "60px" },
+            lineHeight: isReallySmall ? 1.2 : { xs: 2.9, md: "60px" },
+            padding: isReallySmall ? "14px 40px" : "",
           }}
         >
           Каталог Мебели

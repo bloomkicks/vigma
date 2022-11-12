@@ -11,10 +11,13 @@ const LinkToCatalog = () => {
           display: "inline-block",
           mx: "auto",
           textDecoration: "underline",
-          mt: 4.5,
+          mt: { xs: 8, md: 6 },
+          "&:hover": {
+            letterSpacing: 0.5,
+          },
         }}
       >
-        Больше Выполненных Заказов
+        Перейти в Каталог Мебели
       </Typography>
     </Link>
   );

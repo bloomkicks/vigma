@@ -4,41 +4,41 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import LinkToCatalog from "./LinkToCatalog";
 
-// LATTE KITCHEN
-const latteKitchenMain = "latte/main.jpeg";
-const latteKitchenAngle = "latte/angle.jpeg";
-const latteKitchenFar = "latte/far.jpeg";
+const solidKitchenAngleMain = "solid/angle_main.jpeg";
+const solidKitchenAngle2 = "solid/angle2.jpeg";
+const solidKitchenMain = "solid/main.jpeg";
 
 let product: ProductProps = {
+  // SOLID
   images: [
     {
-      src: latteKitchenMain,
+      src: solidKitchenAngleMain,
     },
     {
-      src: latteKitchenAngle,
+      src: solidKitchenAngle2,
       isVertical: true,
     },
     {
-      src: latteKitchenFar,
+      src: solidKitchenMain,
       isVertical: true,
     },
   ],
   info: {
-    title: 'Кухня "Латте" Прямая',
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada ex ut tellus eleifend, vel fermentum nisl lacinia",
+    title: 'Кухня "Солид" Угловая',
     properties: [
-      { property: "Габариты", value: "3000x500x2400" },
+      { property: "Габариты", value: "4200x2420x600" },
       { property: "Корпус", value: "ЛДСП Влагостойкий" },
-      { property: "Фасад", value: "МДФ Пластик" },
+      { property: "Фасад", value: "МДФ Эмаль" },
       { property: "Фурнитура", value: "Hettich" },
-      { property: "Столешница", value: "ДСП Пластик Троя" },
+      { property: "Столешница", value: "Пластик" },
     ],
-    price: "38651",
-    colors: ["#cdcbcc", "#7d665e"],
+    price: "34376",
+    colors: [
+      "#746d71",
+      "repeating-linear-gradient(90deg, #733617, #965632 3px)",
+    ],
   },
 };
-
 const MainProduct = () => {
   return (
     <Box component="article" id="product">

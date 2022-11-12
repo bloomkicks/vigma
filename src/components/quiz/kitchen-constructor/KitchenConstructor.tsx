@@ -3,7 +3,7 @@ import { ConstructorQuestions } from "../../../types/quiz";
 import Stack from "@mui/material/Stack";
 
 import KitchenDisplay from "./KitchenDisplay";
-import ConstructQuestionList from "./construct-question-list/index";
+import ConstructQuestionList from "./construct-question-list/Index";
 
 const KitchenConstructor = ({
   questions,

@@ -26,7 +26,7 @@ const GiftPaper = ({
     <Paper
       id="gift-paper"
       sx={{
-        mb: isGift ? 2 : 5,
+        mb: isGift ? 2 : 6,
         height: {
           xs: "120px",
           sm: "150px",

@@ -32,7 +32,11 @@ const ItemContact = ({
         variant="subtitle2"
         href={link}
         display="inline-block"
-        sx={{ fontSize: "1.625rem", lineHeight: 1.185 }}
+        sx={{
+          fontSize: "1.625rem",
+          lineHeight: 1.185,
+          textDecoration: isLink ? "underline" : "none",
+        }}
       >
         {value}
       </Typography>

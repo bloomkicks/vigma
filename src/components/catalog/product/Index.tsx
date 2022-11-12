@@ -14,7 +14,7 @@ const Product = ({
       direction={{ xs: "column", md: "row" }}
       justifyContent="center"
       flexWrap="nowrap"
-      spacing={4}
+      spacing={{ xs: 2, md: 4 }}
       sx={{
         width: "100%",
         mx: "auto",

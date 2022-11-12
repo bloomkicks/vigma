@@ -7,8 +7,8 @@ const Color = ({ color }: { color: string }) => {
         display: "inline-block",
         mr: 1,
         background: color,
-        width: 42,
-        height: 42,
+        width: { xs: 36, md: 42 },
+        height: { xs: 36, md: 42 },
         border: "1px solid #00000040",
         borderRadius: 2,
       }}

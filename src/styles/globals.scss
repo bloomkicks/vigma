@@ -83,3 +83,10 @@ button:focus {
     font-size: 12.5px;
   }
 }
+
+/* just to see */
+@media (max-width: 376px) {
+  html {
+    font-size: 12px;
+  }
+}

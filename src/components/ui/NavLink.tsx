@@ -8,7 +8,6 @@ const NavLink = (props) => {
   const router = useRouter();
   const { isBlack, img, href, children, ...linkProps } = props;
   const isActive = router.asPath === href;
-  console.log(router);
 
   return (
     <Link href={href || "/error"} passHref>

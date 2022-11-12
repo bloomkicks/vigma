@@ -7,6 +7,7 @@ import ButtonChoice from "./ButtonChoice";
 
 const Hero = () => {
   const theme = useTheme();
+  const isReallySmall = useMediaQuery("(max-width: 376px)");
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   // let isDesktop = true
   return (
@@ -15,13 +16,6 @@ const Hero = () => {
       id="hero"
       alignItems="center"
       justifyContent="center"
-      sx={{
-        "article#hero&": {
-          pt: { xs: 14, md: 16, lg: 19 },
-          pb: { xs: 13, md: 15, lg: 17.5 },
-        },
-        maxWidth: "100% !important",
-      }}
     >
       <Background />
       <Typography
@@ -43,11 +37,11 @@ const Hero = () => {
         color="secondary.main"
         sx={{
           position: "relative",
-          mb: 10.5,
+          mb: isReallySmall ? 7 : { xs: 8, md: 9, lg: 10.5 },
           maxWidth: 800,
         }}
       >
-        Рассчитайте стоимость собственного проекта или выберите понравившуюся
+        Рассчитайте стоимость собственного проекта или закажите понравившуюся
         работу среди нашего каталога мебели
       </Typography>
       <ButtonChoice />
