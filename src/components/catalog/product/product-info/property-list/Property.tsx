@@ -8,7 +8,7 @@ const Property = ({ property, value }: ProductProperty) => {
       <Typography
         component="p"
         variant="subtitle2"
-        sx={{ display: "inline-block", fontWeight: "bold", mr: "15px" }}
+        sx={{ display: "inline-block", fontWeight: "600", mr: "15px" }}
       >
         {property}:
       </Typography>

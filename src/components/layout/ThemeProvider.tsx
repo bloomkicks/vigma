@@ -33,7 +33,7 @@ const theme = createTheme({
       fontFamily: headingFontFamily,
       // fontSize: 48,
       // lineHeight: "56px",
-      fontSize: "3rem",
+      fontSize: "3.2rem",
       lineHeight: 1.167,
       fontWeight: "500",
     },
@@ -43,7 +43,7 @@ const theme = createTheme({
       // lineHeight: "45px",
       fontSize: "2.375rem",
       lineHeight: 1.184,
-      fontWeight: "600",
+      fontWeight: "500",
     },
     h3: {
       fontFamily: headingFontFamily,
@@ -51,7 +51,7 @@ const theme = createTheme({
       // lineHeight: "30.8px",
       fontSize: "1.625rem",
       lineHeight: 1.185,
-      fontWeight: "600",
+      fontWeight: "500",
     },
     h4: {
       fontFamily: headingFontFamily,

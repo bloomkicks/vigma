@@ -10,7 +10,7 @@ const PropertyList = ({
   sx?: any;
 }) => {
   return (
-    <Stack spacing={2} sx={sx}>
+    <Stack spacing={1.6} sx={sx}>
       {properties.map((property) => (
         <Property {...property} key={property.property + property.value} />
       ))}

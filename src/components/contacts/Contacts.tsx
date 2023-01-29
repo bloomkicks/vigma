@@ -1,3 +1,4 @@
+import ItemContact from "./contact-list/ItemContact";
 import ContactsMap from "./ContactsMap";
 import ContactsInfo from "./ContactsInfo";
 import Typography from "@mui/material/Typography";
@@ -19,6 +20,7 @@ const Contacts = () => {
         justifyContent="center"
         spacing={{ xs: 3, lg: 7 }}
         sx={{ height: { xs: "auto", md: 410 } }}
+        mb={5}
       >
         <ContactsInfo
           sx={{
@@ -34,6 +36,18 @@ const Contacts = () => {
           }}
         />
       </Stack>
+      <ItemContact
+        contact="ИНН"
+        value="292501389176"
+        link="none"
+        sx={{ display: "inline-block", mr: 5 }}
+      />
+      <ItemContact
+        contact="ОРГН"
+        value="319290100012218"
+        link="none"
+        sx={{ display: "inline-block", mr: "auto" }}
+      />
     </Box>
   );
 };

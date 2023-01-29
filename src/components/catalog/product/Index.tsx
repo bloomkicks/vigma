@@ -17,6 +17,7 @@ const Product = ({
       spacing={{ xs: 2, md: 4 }}
       sx={{
         width: "100%",
+        maxWidth: { sm: 630, md: 1920 },
         mx: "auto",
         textAlign: "left",
       }}

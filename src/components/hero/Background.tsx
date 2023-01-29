@@ -7,7 +7,7 @@ const Background = () => {
       position="absolute"
       width="100%"
       height="100%"
-      maxHeight={900}
+      maxHeight={{ xs: 800, md: 700, xl: 900 }}
       overflow="hidden"
       left="0"
       top="0"

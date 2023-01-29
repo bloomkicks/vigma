@@ -9,7 +9,7 @@ const ButtonChoice = () => {
 
   return (
     <Stack
-      spacing={2.5}
+      spacing={2.3}
       alignItems="stretch"
       sx={{
         display: "inline-flex",
@@ -48,7 +48,7 @@ const ButtonChoice = () => {
             padding: isReallySmall ? "14px 40px" : "",
           }}
         >
-          Каталог Мебели
+          Каталог Кухонь
         </Button>
       </Link>
     </Stack>

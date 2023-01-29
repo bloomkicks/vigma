@@ -66,7 +66,13 @@ button:focus {
 /* xlarge - desktop */
 @media (min-width: 1568px) {
   html {
-    font-size: 16.5px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1568px) {
+  html {
+    font-size: 15.5px;
   }
 }
 

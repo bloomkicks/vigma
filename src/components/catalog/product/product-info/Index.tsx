@@ -24,14 +24,17 @@ const ProductInfo = ({
 
   return (
     <Box position="relative" sx={sx}>
-      <Typography variant="h4" sx={{ textTransform: "uppercase", mb: 0.8 }}>
+      <Typography
+        variant="h4"
+        sx={{ textTransform: "uppercase", mb: 0.5, fontWeight: "400" }}
+      >
         {title}
       </Typography>
-      <Typography component="p" variant="subtitle2" mb={1.4}>
+      <Typography component="p" variant="subtitle2" mb={0.5}>
         {description || ""}
       </Typography>
       <ColorList colors={colors} />
-      <PropertyList properties={properties} sx={{ mb: { xs: 5, md: 7 } }} />
+      <PropertyList properties={properties} sx={{ mb: { xs: 4, md: 6 } }} />
       <Button
         variant="contained"
         sx={{

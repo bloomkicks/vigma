@@ -6,7 +6,7 @@ export const orderTitle = "Расчёт Стоимости - VIGMA";
 export const orderDescription =
   "Узнайте стоимость и получите подарок на ваш выбор";
 
-export const catalogTitle = "Каталог Мебели - VIGMA";
+export const catalogTitle = "Каталог Кухонь - VIGMA";
 export const catalogDescription =
   "Каталог уже выполненных заказов, источник для вдохновения";
 

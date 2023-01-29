@@ -9,7 +9,7 @@ const Crown = () => {
       right={{ xs: -150, sm: -230, lg: -200 }}
       sx={{
         width: 570,
-        opacity: { xs: 0.2, sm: 0.5, md: 0.8, lg: 1 },
+        opacity: { xs: 0.2, sm: 0.4, md: 0.5, lg: 1 },
       }}
     >
       <Image

@@ -36,7 +36,7 @@ const ContactsInfo = ({ sx }: { sx?: any }) => {
         }
         link="none"
         isColumn
-        sx={{ mt: { xs: 4, md: 7 } }}
+        sx={{ mt: { xs: 3, md: 7 } }}
       />
     </Box>
   );

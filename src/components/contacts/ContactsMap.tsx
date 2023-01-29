@@ -9,6 +9,7 @@ const ContactsMap = ({ sx }: { sx?: any }) => {
           overflow: "hidden",
           width: "100%",
           height: "100%",
+          bottom: 5,
         }}
       >
         <a

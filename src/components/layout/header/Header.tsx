@@ -12,7 +12,7 @@ let links = [
   },
   {
     link: "/catalog",
-    title: "Каталог Мебели",
+    title: "Каталог Кухонь",
   },
   {
     link: "/order",

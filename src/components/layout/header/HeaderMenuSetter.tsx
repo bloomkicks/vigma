@@ -21,7 +21,7 @@ const HeaderMenuSetter = ({
         mr: 1,
         "&:hover, &:focus": {
           outline: "none",
-          transform: "scaleY(1.15)",
+          transform: "scaleY(1.1)",
         },
       }}
     >
@@ -44,7 +44,7 @@ const HeaderMenuSetter = ({
         mr: 1,
         "&:hover, &:focus": {
           outline: "none",
-          transform: "scaleX(1.15)",
+          transform: "scaleX(1.1)",
         },
       }}
     >

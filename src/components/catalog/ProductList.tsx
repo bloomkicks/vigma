@@ -13,7 +13,7 @@ const ProductList = () => {
         mb={{ xs: 4, md: 8 }}
         sx={{ textAlign: "center" }}
       >
-        Каталог Мебели
+        Каталог Кухонь
       </Typography>
       <Stack
         component="main"

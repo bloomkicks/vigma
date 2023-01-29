@@ -42,7 +42,7 @@ let product: ProductProps = {
 const MainProduct = () => {
   return (
     <Box component="article" id="product">
-      <Typography variant="h2">Пример работы</Typography>
+      <Typography variant="h2">Пример нашей работы</Typography>
       <Product {...product} />
       <LinkToCatalog />
     </Box>
