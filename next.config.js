@@ -9,6 +9,19 @@ module.exports = {
     };
     return config;
   },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: "/*",
+  //       headers: [
+  //         {
+  //           key: "Content-Security-Policy",
+  //           value: "default-src *; script-src * 'self' 'unsafe-inline' 'unsafe-eval'",
+  //         },
+  //       ],
+  //     },
+  //   ];
+  // },
   experimental: {
     images: {
       unoptimized: true,

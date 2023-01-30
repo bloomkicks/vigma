@@ -21,7 +21,7 @@ const ItemContact = ({
       <Typography
         fontWeight="500"
         display={isColumn ? "block" : "inline-block"}
-        mr={{ xs: 1, md: isColumn ? 0 : 1.7 }}
+        mr={{ xs: 1, md: isColumn ? 0 : 1.5 }}
         mb={{ xs: 0.3, md: isColumn ? 0.5 : 0 }}
       >
         {contact}:

@@ -34,12 +34,13 @@ const Contacts = () => {
             width: { xs: "100%", md: "43%", lg: "48%" },
             height: { xs: 380, md: "100%" },
             minHeight: { xs: 380, md: 410 },
+            maxWidth: 500,
           }}
         />
       </Stack>
       <Stack
         direction={{ xs: "column", md: "row" }}
-        spacing={{ xs: 1.5, lg: 4.5 }}
+        spacing={{ xs: 1.5, md: 4, lg: 4.5 }}
       >
         <ItemContact contact="ОРГНИП" value="319290100012218" link="none" />
         <ItemContact contact="ИНН" value="292501389176" link="none" />

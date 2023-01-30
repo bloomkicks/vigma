@@ -7,6 +7,7 @@ import getFormOfQuestions from "../../features/quiz/get-form-of-questions";
 
 const giftFont = {
   fontFamily: "Rubik, Roboto, -apple-system, 'Open Sans', Raleway, sans-serif",
+  letterSpacing: 0.2,
   fontSize: { xs: 20, sm: 25, md: 35 },
 };
 
