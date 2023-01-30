@@ -1,5 +1,5 @@
 import type { ProductProps } from "../../types/products";
-import Product from "../catalog/product/Index";
+import Product from "../catalog/product/Product";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import LinkToCatalog from "./LinkToCatalog";

@@ -16,7 +16,7 @@ const ContactsMap = ({ sx }: { sx?: any }) => {
           href="https://yandex.ru/maps/org/vigma_mebel/191512945068/?utm_medium=mapframe&utm_source=maps"
           style={{ color: "#eee", fontSize: 12, position: "absolute", top: 0 }}
         >
-          Вигма Мебель
+          VIGMA Мебель
         </a>
         <a
           href="https://yandex.ru/maps/2/saint-petersburg/category/furniture_factory/184106634/?utm_medium=mapframe&utm_source=maps"

@@ -29,9 +29,9 @@ let contacts = [
   },
 ];
 
-const ListContact = ({ sx }: { sx?: any }) => {
+const ContactList = ({ sx }: { sx?: any }) => {
   return (
-    <Stack spacing={{ xs: 3, md: 3.8 }} sx={sx}>
+    <Stack spacing={{ xs: 2.5, md: 3.5 }} sx={sx}>
       {contacts.map((contact) => (
         <ItemContact {...contact} key={contact.contact} />
       ))}
@@ -39,4 +39,4 @@ const ListContact = ({ sx }: { sx?: any }) => {
   );
 };
 
-export default ListContact;
+export default ContactList;

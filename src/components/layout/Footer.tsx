@@ -12,7 +12,7 @@ const Footer = () => {
         pb: 5,
       }}
     >
-      <Typography>Производство Корпусной Мебели - Вигма</Typography>
+      <Typography>Производство Корпусной Мебели - VIGMA</Typography>
     </Box>
   );
 };

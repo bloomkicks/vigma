@@ -1,5 +1,5 @@
 import FocusedImage from "./FocusedImage";
-import ListImage from "./image-list/ListImage";
+import ListImage from "./image-list/ImageList";
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import type { ProductImage } from "../../../../types/products";

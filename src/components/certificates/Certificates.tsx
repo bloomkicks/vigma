@@ -1,43 +1,34 @@
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import ItemCertificate from "./ItemCertificate";
 
 let certificates = ["фасад", "столешницы", "ламинат", "еггер"];
 
 const Certificates = () => {
   return (
     <Box component="article" id="certificates">
-      <Typography variant="h2">Сертификаты качества материалов</Typography>
+      <Typography variant="h2">Сертификаты качества</Typography>
       <Stack
-        direction={{ xs: "column", md: "row" }}
+        direction={{ xs: "column", sm: "row" }}
         spacing={1.5}
-        flexWrap={{ md: "wrap", xl: "nowrap" }}
+        flexWrap={{ sm: "wrap", lg: "nowrap" }}
         justifyContent="center"
         alignItems={{ xs: "center", md: "flex-start" }}
+        px={{ sm: 5, md: 5, lg: 0 }}
       >
         {certificates.map((certificate, i, a) => {
           let isLast = i == a.length - 1;
+          let is2ndLast = i == a.length - 2;
+          const imgSrc = `${process.env.CERTIFICATES_ASSETS}/сертификат на ${certificate}.png`;
 
           return (
-            <Box
-              component="img"
-              src={
-                process.env.CERTIFICATES_ASSETS +
-                "/сертификат на " +
-                certificate +
-                ".png"
-              }
-              sx={{
-                "&": {
-                  ml: { md: isLast ? 0 : "12px !important", xl: 1.5 },
-                  mt: {
-                    md: isLast ? "12px !important" : 0,
-                    xl: "0 !important",
-                  },
-                },
-              }}
+            <ItemCertificate
+              imgSrc={imgSrc}
+              isLast={isLast}
+              is2ndLast={is2ndLast}
               key={certificate + i}
-            ></Box>
+            ></ItemCertificate>
           );
         })}
       </Stack>

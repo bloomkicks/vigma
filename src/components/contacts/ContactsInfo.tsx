@@ -1,42 +1,36 @@
 import ItemContact from "./contact-list/ItemContact";
-import ListContact from "./contact-list/ListContact";
 import Typography from "@mui/material/Typography";
+import ContactList from "./contact-list/ContactList";
 import Box from "@mui/material/Box";
 
 const ContactsInfo = ({ sx }: { sx?: any }) => {
   return (
     <Box component="section" sx={sx}>
-      <ListContact />
+      <ContactList />
       <ItemContact
         contact="Производство"
         value={
           <>
             <Typography
-              variant="subtitle2"
               component="span"
-              sx={{ fontSize: "1.625rem", display: "inline-block", mr: 1.2 }}
+              sx={{ display: "inline-block", mr: 1.2 }}
             >
               г. Санкт-Петербург,
             </Typography>
             <Typography
-              variant="subtitle2"
               component="span"
-              sx={{ fontSize: "1.625rem", display: "inline-block", mr: 1.2 }}
+              sx={{ display: "inline-block", mr: 1.2 }}
             >
               ул. Автобусная,
             </Typography>
-            <Typography
-              component="span"
-              variant="subtitle2"
-              sx={{ fontSize: "1.625rem", display: "inline-block" }}
-            >
+            <Typography component="span" sx={{ display: "inline-block" }}>
               д. 3
             </Typography>
           </>
         }
         link="none"
         isColumn
-        sx={{ mt: { xs: 3, md: 7 } }}
+        sx={{ mt: { xs: 2.5, md: 4.5 } }}
       />
     </Box>
   );

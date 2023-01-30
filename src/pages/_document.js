@@ -55,7 +55,7 @@ class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Rubik:wght@400;500;600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@500;600&family=Unbounded:wght@400;500&display=swap"
             rel="stylesheet"
           />
           {/* REGULAR TAGS */}

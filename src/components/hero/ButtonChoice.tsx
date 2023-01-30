@@ -13,7 +13,7 @@ const ButtonChoice = () => {
       alignItems="stretch"
       sx={{
         display: "inline-flex",
-        width: "fit-content",
+        width: { xs: "fit-content", xl: 400 },
         mx: "auto",
       }}
     >

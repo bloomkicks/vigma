@@ -2,7 +2,7 @@ import Stack from "@mui/material/Stack";
 import ItemImage from "./ItemImage";
 import type { ProductImage } from "../../../../../types/products";
 
-const ListImage = ({
+const ImageList = ({
   images,
   focusedImageIndex,
   onFocus,
@@ -47,4 +47,4 @@ const ListImage = ({
   );
 };
 
-export default ListImage;
+export default ImageList;

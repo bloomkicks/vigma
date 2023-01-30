@@ -2,8 +2,8 @@ import { useRouter } from "next/router";
 import { quizActions } from "../../../../store/quiz";
 import { useDispatch } from "react-redux";
 import type { ProductInfoProps } from "../../../../types/products";
-import ColorList from "./color-list/Index";
-import PropertyList from "./property-list/Index";
+import Colors from "./Colors";
+import Properties from "./Properties";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
@@ -26,15 +26,18 @@ const ProductInfo = ({
     <Box position="relative" sx={sx}>
       <Typography
         variant="h4"
-        sx={{ textTransform: "uppercase", mb: 0.5, fontWeight: "400" }}
+        sx={{ textTransform: "uppercase", mb: 0.75, fontWeight: "500" }}
       >
         {title}
       </Typography>
       <Typography component="p" variant="subtitle2" mb={0.5}>
         {description || ""}
       </Typography>
-      <ColorList colors={colors} />
-      <PropertyList properties={properties} sx={{ mb: { xs: 4, md: 6 } }} />
+      <Colors colors={colors} />
+      <Properties
+        properties={properties}
+        sx={{ mb: { xs: 4, md: 6 }, display: { xs: "none", md: "flex" } }}
+      />
       <Button
         variant="contained"
         sx={{

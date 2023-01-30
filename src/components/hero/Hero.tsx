@@ -16,6 +16,7 @@ const Hero = () => {
       id="hero"
       alignItems="center"
       justifyContent="center"
+      height={{ md: 700, xl: 800 }}
     >
       <Background />
       <Typography
@@ -25,6 +26,7 @@ const Hero = () => {
           position: "relative",
           mb: 2,
           maxWidth: 982,
+          bottom: { xl: 30 },
         }}
       >
         {isDesktop
@@ -39,10 +41,11 @@ const Hero = () => {
           position: "relative",
           mb: isReallySmall ? 5 : { xs: 6.5, md: 7.5, lg: 8.5 },
           maxWidth: 800,
+          bottom: { xl: 30 },
         }}
       >
-        Рассчитайте стоимость собственного проекта или закажите понравившуюся
-        работу в нашем каталоге кухонь
+        Рассчитайте стоимость своего проекта или закажите понравившуюся работу в
+        нашем каталоге кухонь
       </Typography>
       <ButtonChoice />
     </Stack>

@@ -19,21 +19,19 @@ const ItemContact = ({
   return (
     <Box textAlign="left" sx={sx}>
       <Typography
-        variant="h3"
+        fontWeight="500"
         display={isColumn ? "block" : "inline-block"}
-        mr={{ xs: 1, md: isColumn ? 0 : 1.9 }}
-        mb={{ xs: 0.3, md: isColumn ? 0.3 : 0 }}
+        mr={{ xs: 1, md: isColumn ? 0 : 1.7 }}
+        mb={{ xs: 0.3, md: isColumn ? 0.5 : 0 }}
       >
         {contact}:
       </Typography>
 
       <Typography
         component={isLink ? "a" : "p"}
-        variant="subtitle2"
         href={link}
         display="inline-block"
         sx={{
-          fontSize: "1.625rem",
           lineHeight: 1.185,
           textDecoration: isLink ? "underline" : "none",
         }}

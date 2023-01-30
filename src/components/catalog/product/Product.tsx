@@ -1,6 +1,6 @@
 import type { ProductProps } from "../../../types/products";
+import ProductInfo from "./product-info/ProductInfo";
 import ImageGroup from "./image-group/ImageGroup";
-import ProductInfo from "./product-info/Index";
 import Stack from "@mui/material/Stack";
 
 const Product = ({

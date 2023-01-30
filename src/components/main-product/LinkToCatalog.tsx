@@ -13,7 +13,7 @@ const LinkToCatalog = () => {
           textDecoration: "underline",
           mt: { xs: 8, md: 6 },
           "&:hover": {
-            letterSpacing: 0.5,
+            letterSpacing: "0.25px",
           },
         }}
       >

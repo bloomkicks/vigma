@@ -5,6 +5,11 @@ import Typography from "@mui/material/Typography";
 import React from "react";
 import getFormOfQuestions from "../../features/quiz/get-form-of-questions";
 
+const giftFont = {
+  fontFamily: "Rubik, Roboto, -apple-system, 'Open Sans', Raleway, sans-serif",
+  fontSize: { xs: 20, sm: 25, md: 35 },
+};
+
 const GiftPaper = ({
   amountOfQuestions,
   currentQuestion,
@@ -59,6 +64,7 @@ const GiftPaper = ({
           color: "secondary.main",
           fontSize: { xs: 20, sm: 25, md: 35 },
           top: isKnown && !isGift ? { xs: 5, sm: 10 } : 0,
+          ...giftFont,
         }}
       >
         {!isKnown ? (
@@ -71,6 +77,7 @@ const GiftPaper = ({
               fontSize={{ xs: 20, sm: 25, md: 35 }}
               component="span"
               color="primary.light"
+              {...giftFont}
             >
               подарок
             </Typography>
@@ -85,6 +92,7 @@ const GiftPaper = ({
                 variant="h2"
                 sx={{
                   fontSize: { xs: 34, sm: 50, md: 70 },
+                  fontFamily: giftFont.fontFamily,
                   color: "secondary.main",
                   verticalAlign: "middle",
                 }}
@@ -98,8 +106,8 @@ const GiftPaper = ({
                   verticalAlign: "middle",
                   color: "secondary.main",
                   ml: 1.1,
-                  fontSize: { xs: 20, sm: 25, md: 35 },
                   top: "1px",
+                  ...giftFont,
                 }}
               >
                 {questions}

@@ -17,7 +17,7 @@ const NavLink = (props) => {
         sx={{
           px: 2.5,
           py: 1,
-          borderRadius: 0,
+          borderRadius: { xs: "5px", md: 0 },
           "&:hover": {
             bgcolor: (theme) => theme.palette.primary.dark + "3a",
           },
@@ -28,7 +28,6 @@ const NavLink = (props) => {
           color={isActive ? "primary.main" : "secondary.main"}
           sx={{
             textTransform: "capitalize",
-            fontWeight: isActive ? "bold" : 400,
           }}
         >
           {children}

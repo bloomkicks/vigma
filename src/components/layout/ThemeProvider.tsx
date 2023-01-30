@@ -3,6 +3,7 @@ import { ThemeProvider as Provider, createTheme } from "@mui/material/styles";
 
 const bodyFontFamily =
   "Roboto, -apple-system, 'Open Sans', Raleway, sans-serif";
+const bigHeadingFontFamily = `Unbounded, ${bodyFontFamily}`;
 const headingFontFamily = `Rubik, ${bodyFontFamily}`;
 
 const theme = createTheme({
@@ -28,9 +29,10 @@ const theme = createTheme({
     htmlFontSize: 16,
     allVariants: {
       fontFamily: bodyFontFamily,
+      fontWeight: "400",
     },
     h1: {
-      fontFamily: headingFontFamily,
+      fontFamily: bigHeadingFontFamily,
       // fontSize: 48,
       // lineHeight: "56px",
       fontSize: "3.2rem",
@@ -38,15 +40,16 @@ const theme = createTheme({
       fontWeight: "500",
     },
     h2: {
-      fontFamily: headingFontFamily,
+      fontFamily: bigHeadingFontFamily,
       // fontSize: 38,
       // lineHeight: "45px",
-      fontSize: "2.375rem",
+      fontSize: "2.2rem",
+      letterSpacing: "0.25px",
       lineHeight: 1.184,
-      fontWeight: "500",
+      fontWeight: "400",
     },
     h3: {
-      fontFamily: headingFontFamily,
+      fontFamily: bodyFontFamily,
       // fontSize: 26,
       // lineHeight: "30.8px",
       fontSize: "1.625rem",
@@ -54,7 +57,7 @@ const theme = createTheme({
       fontWeight: "500",
     },
     h4: {
-      fontFamily: headingFontFamily,
+      fontFamily: bodyFontFamily,
       // fontSize: 32,
       // lineHeight: "38px",
       fontSize: "2rem",
@@ -120,10 +123,11 @@ const theme = createTheme({
         root: {
           display: "block",
           width: "95%",
-          height: "1.5px",
+          height: "1.4px",
           margin: "0 auto",
           backgroundColor: "black",
-          opacity: 0.7,
+          opacity: 0.6,
+          border: "none",
         },
       },
     },

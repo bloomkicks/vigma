@@ -1,16 +1,16 @@
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
-import Product from "./product/Index";
+import Product from "./product/Product";
 import products from "../../data/products";
 
 const ProductList = () => {
   return (
     <>
       <Typography
-        variant="h1"
+        variant="h2"
         mt={5}
-        mb={{ xs: 4, md: 8 }}
+        mb={{ xs: 7, md: 8 }}
         sx={{ textAlign: "center" }}
       >
         Каталог Кухонь
