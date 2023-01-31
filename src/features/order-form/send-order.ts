@@ -3,7 +3,12 @@ import { QuizState } from "../../types/quiz";
 import { send } from "@emailjs/browser";
 import { Size } from "../../types/quiz";
 
-async function sendOrder(tel: string, quiz: QuizState, size: Size) {
+async function sendOrder(
+  tel: string,
+  quiz: QuizState,
+  size: Size,
+  name: string,
+) {
   const { answeredQuestions, constructorQuestions } = quiz;
   const isKitchen = quiz.category === "kitchen";
   const isTypeEqualsShape = isKitchen || quiz.category === "closet";
@@ -15,8 +20,8 @@ async function sendOrder(tel: string, quiz: QuizState, size: Size) {
   let giftQuestion = answeredQuestions[answeredQuestions.length - 1];
 
   const emailParams = {
+    name: name,
     number: tel,
-    connectWay: quiz.connectWay === "call" ? "по телефону" : quiz.connectWay,
 
     product: quiz.product || "Не выбрано",
     width: size.width || "-",

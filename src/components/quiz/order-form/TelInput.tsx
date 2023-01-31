@@ -18,7 +18,6 @@ const TelInput = React.forwardRef(
         inputRef={ref}
         helperText="Введите номер вашего телефона"
         placeholder="+7 (___) ___-__-__"
-        sx={{ mx: "auto", mb: 8 }}
       />
     );
   },

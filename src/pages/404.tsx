@@ -6,7 +6,7 @@ const ErrorPage = () => {
   return (
     <>
       <ErrorHead />
-      <Box sx={{ textAlign: "center", pt: 15, px: 3 }}>
+      <Box sx={{ textAlign: "center", pt: 15, px: 3, mb: 5 }}>
         <Box
           component="img"
           alt=""

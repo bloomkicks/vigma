@@ -9,11 +9,11 @@ const ButtonChoice = () => {
 
   return (
     <Stack
-      spacing={2.3}
+      spacing={{ xs: 2.8, sm: 3.5 }}
       alignItems="stretch"
       sx={{
         display: "inline-flex",
-        width: { xs: "fit-content", xl: 400 },
+        width: { xs: "fit-content", lg: 450 },
         mx: "auto",
       }}
     >
@@ -30,13 +30,6 @@ const ButtonChoice = () => {
           Расчёт Стоимости
         </Button>
       </Link>
-      <Typography
-        variant="body2"
-        color="secondary.main"
-        sx={{ position: "relative" }}
-      >
-        ИЛИ
-      </Typography>
       <Link href="/catalog" passHref>
         <Button
           component="a"

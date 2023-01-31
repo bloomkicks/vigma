@@ -18,7 +18,7 @@ const OrderActions = ({ isAble }: { isAble: boolean }) => {
           type="submit"
           disabled={!isAble}
           sx={{
-            px: 3.5,
+            px: 3,
             py: "7px",
             borderRadius: "6px",
           }}
@@ -31,7 +31,7 @@ const OrderActions = ({ isAble }: { isAble: boolean }) => {
             color: "primary.dark",
             textDecoration: "underline",
             mt: 2,
-            px: 3.5,
+            px: 3,
             py: "7px",
             borderRadius: "6px",
             "&:hover": {

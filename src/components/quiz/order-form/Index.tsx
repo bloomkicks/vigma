@@ -3,8 +3,9 @@ import { RootState } from "../../../store";
 import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import ConnectRadioGroup from "./ConnectRadioGroup";
+import Stack from "@mui/material/Stack";
 import OrderActions from "./OrderActions";
+import NameInput from "./NameInput";
 import TelInput from "./TelInput";
 
 import { useSelector } from "react-redux";
@@ -30,12 +31,13 @@ const OrderForm = ({
   }, []);
   const size = useSelector((state: RootState) => state.size);
   const telRef = useRef<HTMLInputElement>();
+  const nameRef = useRef<HTMLInputElement>();
   const [isAble, setIsAble] = useState<boolean>(false);
   async function totalSubmitHandler(e: React.FormEvent) {
     e.preventDefault();
     if (!isAble) return;
     try {
-      await sendOrder(telRef.current.value, quiz, size);
+      await sendOrder(telRef.current.value, quiz, size, nameRef.current.value);
       onSuccess();
     } catch (err) {
       onError(err);
@@ -47,13 +49,26 @@ const OrderForm = ({
   }
 
   return (
-    <Box mb={5} px={2} pt={9} id="order-form" className="vertical-large-fading">
-      <Typography variant="h4" mb={4} align="center">
-        Как Вы хотите, чтобы мы с вами связались?
+    <Box
+      mb={6}
+      px={2}
+      pt={10}
+      id="order-form"
+      className="vertical-large-fading"
+    >
+      <Typography variant="h4" mb={5.5} align="center">
+        За каким номером зафиксировать подарок?
       </Typography>
       <FormControl component="form" fullWidth onSubmit={totalSubmitHandler}>
-        <ConnectRadioGroup />
-        <TelInput ref={telRef} onChange={telInputChangeHandler} />
+        <Stack
+          direction="column"
+          alignItems="center"
+          spacing={2}
+          sx={{ mb: 8, width: "100%", "&>*": { maxWidth: 500, width: "100%" } }}
+        >
+          <TelInput ref={telRef} onChange={telInputChangeHandler} />
+          <NameInput ref={nameRef} />
+        </Stack>
         <OrderActions isAble={isAble} />
       </FormControl>
     </Box>

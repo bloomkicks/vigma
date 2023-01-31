@@ -21,7 +21,7 @@ const Contacts = () => {
         alignItems="center"
         spacing={{ xs: 3, lg: 4.5 }}
         sx={{ height: { xs: "auto", md: 410 } }}
-        mb={{ xs: 4, md: 5 }}
+        mb={{ xs: 2.5, md: 5 }}
       >
         <ContactsInfo
           sx={{
@@ -40,7 +40,7 @@ const Contacts = () => {
       </Stack>
       <Stack
         direction={{ xs: "column", md: "row" }}
-        spacing={{ xs: 1.5, md: 4, lg: 4.5 }}
+        spacing={{ xs: 1, md: 4, lg: 4.5 }}
       >
         <ItemContact contact="ОРГНИП" value="319290100012218" link="none" />
         <ItemContact contact="ИНН" value="292501389176" link="none" />
