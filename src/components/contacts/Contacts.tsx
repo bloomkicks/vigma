@@ -20,12 +20,14 @@ const Contacts = () => {
         justifyContent="center"
         alignItems="center"
         spacing={{ xs: 3, lg: 4.5 }}
-        sx={{ height: { xs: "auto", md: 410 } }}
+        sx={{
+          height: { xs: "auto", md: 410 },
+        }}
         mb={{ xs: 2.5, md: 5 }}
       >
         <ContactsInfo
           sx={{
-            width: { xs: "100%", md: "53%", lg: "48%" },
+            width: { xs: "100%", md: "45%" },
             minWidth: { md: 485 },
           }}
         />
@@ -40,6 +42,7 @@ const Contacts = () => {
       </Stack>
       <Stack
         direction={{ xs: "column", md: "row" }}
+        justifyContent="center"
         spacing={{ xs: 1, md: 4, lg: 4.5 }}
       >
         <ItemContact contact="ОРГНИП" value="319290100012218" link="none" />

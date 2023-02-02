@@ -28,6 +28,16 @@ button:focus {
 .fading {
   animation: fade 600ms ease-out;
 }
+.fading-right {
+  animation: fade-right 600ms ease-out;
+}
+.absolute {
+  position: absolute;
+  z-index: 1;
+}
+.fading-left {
+  animation: fade-left 750ms ease-out;
+}
 
 @keyframes vertical-large-fade {
   0% {
@@ -59,6 +69,30 @@ button:focus {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    position: absolute;
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-60%, 15%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    position: absolute;
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(60%, 15%) scale(0.8);
+    opacity: 0;
   }
 }
 

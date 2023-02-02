@@ -3,7 +3,7 @@ import MainProduct from "../components/main-product/MainProduct";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Advantages from "../components/advantages/Advantages";
-import Reviews from "../components/reviews/Reviews";
+import SectionReviews from "../components/reviews/SectionReviews";
 import Contacts from "../components/contacts/Contacts";
 import Hero from "../components/hero/Hero";
 import Certificates from "../components/certificates/Certificates";
@@ -61,7 +61,7 @@ const MainPage = () => {
       <Divider />
       <MainProduct />
       <Divider />
-      <Reviews />
+      <SectionReviews />
       <Divider />
       <Certificates />
       <Divider />

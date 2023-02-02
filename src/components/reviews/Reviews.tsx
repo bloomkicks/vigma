@@ -1,63 +1,67 @@
-import ItemReview from "./ItemReview";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import CSSTransition from "react-transition-group/CSSTransition";
+import ReviewPhoto from "./ReviewPhoto";
 import Stack from "@mui/material/Stack";
-import type { Review } from "../../types/reviews";
 
-let reviews: Review[] = [
+const reviews = [
   {
-    title: "Быстро и чисто",
-    imgSrc: "anna.jpg",
-    rating: 5,
-    text: "Я заказывала рабочую зону со шкафами. Мастера приехали, все померили, заключили договор. После установили шкафов за собой все убрали. Мы довольны и выражаем огромную благодарность! Вы делаете людей счастливее) Спасибо!",
+    imgName: "Геннадий-Дальневосточный.jpg",
   },
   {
-    title: "Настоящие профи",
-    imgSrc: "igor.jpg",
-    rating: 5,
-    text: "Отличные специалисты своего дела, настоящие профи, я очень рад, что не ошибся в выборе этой мебельной компании. Всё чётко, по договорённости, аккуратно и добротно, без кривизны и без царапин! И даже раньше чем в договоре, на целых две недели! Желаю вам успехов в работе!",
+    imgName: "Ирина-Репищева.jpg",
   },
   {
-    title: "Справились на отлично",
-    imgSrc: "liya.jpg",
-    rating: 4,
-    text: "Изготовили и установили мебель на лоджию (шкаф и тумбу), задание было непростое) Справились на отлично! Спасибо!",
+    imgName: "Лидия-Александровна.jpg",
+  },
+  {
+    imgName: "Наталья-Вавиловых.jpg",
+  },
+  {
+    imgName: "Ольга-Тореза.jpg",
   },
 ];
 
-const Reviews = () => {
+const Reviews = ({
+  currentIndex,
+  prevIndex,
+  slice,
+}: {
+  currentIndex: number;
+  prevIndex: number;
+  slice: number;
+}) => {
+  let isSlice = slice > 0;
+  let isLeft = currentIndex > prevIndex;
   return (
-    <Box component="article" id="reviews">
-      <Typography variant="h2">Отзывы клиентов</Typography>
-      <Stack
-        direction={{ xs: "column", md: "row" }}
-        spacing={{ xs: 3, md: 4, lg: 3, xl: 4 }}
-        ml={{ xs: 0, md: -4, lg: -3, xl: -4 }}
-        flexWrap={{ xs: "wrap", lg: "nowrap" }}
-        alignItems={{ xs: "center", md: "flex-start" }}
-        justifyContent="center"
-      >
-        {reviews.map((review, i, a) => {
-          let isLast = i == a.length - 1;
-
-          return (
-            <ItemReview
-              {...review}
-              sx={{
-                "&": {
-                  ml: { md: isLast ? 0 : 3, xl: 3 },
-                  mt: {
-                    md: isLast ? "24px !important" : 0,
-                    lg: "0 !important",
-                  },
-                },
-              }}
-              key={review.title + i}
-            />
-          );
-        })}
-      </Stack>
-    </Box>
+    <Stack
+      direction="row"
+      flexWrap="nowrap"
+      justifyContent="center"
+      alignItems="center"
+      spacing={isSlice ? 3 : 0}
+      sx={{ maxWidth: "90%", position: "relative", zIndex: 2 }}
+    >
+      {reviews.map((review, i) => (
+        <CSSTransition
+          in={i == currentIndex || i == currentIndex + slice}
+          timeout={600}
+          unmountOnExit
+          classNames={{
+            exit: isLeft ? "absolute fading-left" : "absolute fading-right",
+            exitActive: "absolute",
+            exitDone: "absolute",
+          }}
+          key={review.imgName + i}
+        >
+          <ReviewPhoto
+            imgSrc={process.env.REVIEWS_ASSETS + "/" + review.imgName}
+            sx={{
+              position: "relative",
+              zIndex: 3,
+            }}
+          />
+        </CSSTransition>
+      ))}
+    </Stack>
   );
 };
 
