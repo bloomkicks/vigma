@@ -38,26 +38,36 @@ const Reviews = ({
       justifyContent="center"
       alignItems="center"
       spacing={isSlice ? 3 : 0}
-      sx={{ maxWidth: "90%", position: "relative", zIndex: 2 }}
+      minHeight={{ xs: 550, md: 700 }}
+      minWidth={{ xs: 266.8, md: 339.6 }}
+      sx={{
+        maxWidth: "90%",
+        zIndex: 2,
+      }}
     >
       {reviews.map((review, i) => (
         <CSSTransition
           in={i == currentIndex || i == currentIndex + slice}
-          timeout={600}
-          unmountOnExit
+          timeout={{ appear: 0, enter: 400, exit: 500 }}
+          appear
           classNames={{
-            exit: isLeft ? "absolute fading-left" : "absolute fading-right",
-            exitActive: "absolute",
-            exitDone: "absolute",
+            appearDone: "visible",
+            enter: "visible",
+            enterActive: isLeft
+              ? "visible fading-in-right"
+              : "visible fading-in-left",
+            enterDone: "visible",
+            exit: "invisible",
+            exitActive: isLeft
+              ? "invisible fading-left"
+              : "invisible fading-right",
+            exitDone: "invisible",
           }}
           key={review.imgName + i}
         >
           <ReviewPhoto
             imgSrc={process.env.REVIEWS_ASSETS + "/" + review.imgName}
-            sx={{
-              position: "relative",
-              zIndex: 3,
-            }}
+            sx={{}}
           />
         </CSSTransition>
       ))}

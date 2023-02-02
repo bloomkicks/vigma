@@ -3,6 +3,9 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 
 module.exports = {
   assetPrefix: "./",
+  images: {
+    unoptimized: true,
+  },
   webpack(config, options) {
     config.optimization = {
       minimize: true,
@@ -23,11 +26,6 @@ module.exports = {
   //     },
   //   ];
   // },
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
-  },
   env: {
     SERVICE_ID: "service_kiq0jp9",
     TEMPLATE_ID: "template_hci5war",

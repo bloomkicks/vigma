@@ -28,15 +28,28 @@ button:focus {
 .fading {
   animation: fade 600ms ease-out;
 }
-.fading-right {
-  animation: fade-right 600ms ease-out;
-}
-.absolute {
+.invisible {
+  opacity: 0;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
+}
+.visible {
+  opacity: 1;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0.5px 2px 5px 2px rgba(0, 0, 0, 25%);
 }
 .fading-left {
-  animation: fade-left 750ms ease-out;
+  animation: fade-left 550ms ease-out;
+}
+.fading-right {
+  animation: fade-right 550ms ease-out;
+}
+.fading-in-right {
+  animation: fade-in-right 450ms ease-out;
+}
+.fading-in-left {
+  animation: fade-in-left 450ms ease-out;
 }
 
 @keyframes vertical-large-fade {
@@ -74,25 +87,45 @@ button:focus {
 
 @keyframes fade-left {
   0% {
-    position: absolute;
     transform: translateX(0);
     opacity: 1;
   }
   100% {
-    transform: translate(-60%, 15%) scale(0.8);
+    transform: translate(20%, 2%) scale(0.8);
     opacity: 0;
   }
 }
 
 @keyframes fade-right {
   0% {
-    position: absolute;
     transform: translateX(0);
     opacity: 1;
   }
   100% {
-    transform: translate(60%, 15%) scale(0.8);
+    transform: translate(-20%, 2%) scale(0.8);
     opacity: 0;
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    transform: translate(-10%, 2%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    transform: translate(10%, 2%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 

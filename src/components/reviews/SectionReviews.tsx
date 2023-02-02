@@ -29,7 +29,7 @@ const SectionReviews = () => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        spacing={{ xs: 0.5, sm: 1.5, lg: 2 }}
+        spacing={{ xs: 0.1, sm: 1.5, lg: 2 }}
       >
         <Arrow
           isLeft
