@@ -4,41 +4,36 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import LinkToCatalog from "./LinkToCatalog";
 
-const solidKitchenAngleMain = "solid/angle_main.jpeg";
-const solidKitchenAngle2 = "solid/angle2.jpeg";
-const solidKitchenMain = "solid/main.jpeg";
+const winterKitchenFullsize = "winter/fullsize.jpg";
+const winterKitchenBottom = "winter/bottom.jpg";
+const winterKitchenTop = "winter/top.jpg";
 
 let product: ProductProps = {
-  // SOLID
+  // WINTER
   images: [
     {
-      src: solidKitchenAngleMain,
+      src: winterKitchenFullsize,
     },
     {
-      src: solidKitchenAngle2,
-      isVertical: true,
+      src: winterKitchenBottom,
     },
     {
-      src: solidKitchenMain,
-      isVertical: true,
+      src: winterKitchenTop,
     },
   ],
   info: {
-    title: 'Кухня "Солид" Угловая',
+    title: 'Кухня "Винтер" Прямая',
+    colors: ["#E4E9E5", "#84847A", "#E8C399"],
     properties: [
-      { property: "Габариты", value: "4200x2420x600" },
+      { property: "Габариты", value: "2400x600x2100" },
       { property: "Корпус", value: "ЛДСП Влагостойкий" },
-      { property: "Фасад", value: "МДФ Эмаль" },
-      { property: "Фурнитура", value: "Hettich" },
-      { property: "Столешница", value: "Пластик" },
+      { property: "Фасад", value: "МДФ" },
+      { property: "Фурнитура", value: "Boyard (Китай)" },
     ],
-    price: "34376",
-    colors: [
-      "#746d71",
-      "repeating-linear-gradient(90deg, #733617, #965632 3px)",
-    ],
+    price: "28400",
   },
 };
+
 const MainProduct = () => {
   return (
     <Box component="article" id="product">

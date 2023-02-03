@@ -1,4 +1,18 @@
-import type { ProductProps, ProductInfoProps } from "../types/products";
+import type { ProductProps } from "../types/products";
+
+// GOLD KITCHEN
+const goldKitchenFurniture = "gold/furniture.jpg";
+const goldKitchenFullsize = "gold/fullsize.jpg";
+const goldKitchenAngled = "gold/angled.jpg";
+
+// WINTER KITCHEN
+const winterKitchenFullsize = "winter/fullsize.jpg";
+const winterKitchenBottom = "winter/bottom.jpg";
+const winterKitchenTop = "winter/top.jpg";
+
+// STANDARD KITCHEN
+const standardKitchenFullsize = "standard/fullsize.jpg";
+const standardKitchenAngled = "standard/angled.jpg";
 
 // QUARTZ KITCHEN
 const quartzKitchenFront = "quartz/front.jpeg";
@@ -56,6 +70,57 @@ const solidKitchenMain = "solid/main.jpeg";
 
 const products: ProductProps[] = [
   {
+    // WINTER
+    images: [
+      {
+        src: winterKitchenFullsize,
+      },
+      {
+        src: winterKitchenBottom,
+      },
+      {
+        src: winterKitchenTop,
+      },
+    ],
+    info: {
+      title: 'Кухня "Винтер" Прямая',
+      colors: ["#E4E9E5", "#84847A", "#E8C399"],
+      properties: [
+        { property: "Габариты", value: "2400x600x2100" },
+        { property: "Корпус", value: "ЛДСП Влагостойкий" },
+        { property: "Фасад", value: "МДФ" },
+        { property: "Фурнитура", value: "Boyard (Китай)" },
+      ],
+      price: "28400",
+    },
+  },
+  {
+    // GOLD
+    images: [
+      {
+        src: goldKitchenFullsize,
+      },
+      {
+        src: goldKitchenAngled,
+      },
+      {
+        src: goldKitchenFurniture,
+      },
+    ],
+    info: {
+      title: 'Кухня "Голд" Угловая',
+      colors: ["#CDBDAD", "#E1EBF7"],
+      properties: [
+        { property: "Габариты", value: "2600x700x2100" },
+        { property: "Корпус", value: "ЛДСП Egger" },
+        { property: "Фасад", value: "МДФ Дуб Молочный" },
+        { property: "Фурнитура", value: "Hettich" },
+      ],
+      price: "28400",
+    },
+  },
+  // LATTE
+  {
     images: [
       {
         src: latteKitchenMain,
@@ -86,14 +151,14 @@ const products: ProductProps[] = [
     // SOLID
     images: [
       {
+        src: solidKitchenMain,
+        isVertical: true,
+      },
+      {
         src: solidKitchenAngleMain,
       },
       {
         src: solidKitchenAngle2,
-        isVertical: true,
-      },
-      {
-        src: solidKitchenMain,
         isVertical: true,
       },
     ],
@@ -117,10 +182,10 @@ const products: ProductProps[] = [
     // FUTURISTIC
     images: [
       {
-        src: futureKitchenTop,
+        src: futureKitchenBottom,
       },
       {
-        src: futureKitchenBottom,
+        src: futureKitchenTop,
       },
     ],
     info: {
@@ -134,6 +199,28 @@ const products: ProductProps[] = [
       ],
       price: "29875",
       colors: ["#b8b19f", "#353444"],
+    },
+  },
+  {
+    // STANDARD
+    images: [
+      {
+        src: standardKitchenFullsize,
+      },
+      {
+        src: standardKitchenAngled,
+      },
+    ],
+    info: {
+      title: 'Кухня "Стандарт" Прямая',
+      colors: ["#86958E", "#21262C", "#c0bcc3"],
+      properties: [
+        { property: "Габариты", value: "1800x500x2200" },
+        { property: "Корпус", value: "ЛДСП Egger" },
+        { property: "Фасад", value: "МДФ" },
+        { property: "Фурнитура", value: "Boyard (Китай)" },
+      ],
+      price: "28400",
     },
   },
   {
@@ -192,62 +279,6 @@ const products: ProductProps[] = [
     },
   },
   {
-    images: [
-      {
-        src: norwayKitchenMain,
-      },
-      {
-        src: norwayKitchenAngle,
-      },
-      {
-        src: norwayKitchenLight,
-      },
-    ],
-    info: {
-      title: 'Кухня "Норвегия" Угловая',
-      properties: [
-        { property: "Габариты", value: "2750х500х2400" },
-        { property: "Корпус", value: "ЛДСП Влагостойкий" },
-        { property: "Фасад", value: "МДФ Плёнка" },
-        { property: "Фурнитура", value: "Hettich" },
-        { property: "Столешница", value: "Пластик" },
-      ],
-      price: "22600",
-      colors: [
-        "#b8bab9",
-        "#41454e",
-        "repeating-linear-gradient(90deg, #a37452, #894f20 3px)",
-      ],
-    },
-  },
-  {
-    // EXPLIT
-    images: [
-      {
-        src: linear2KitchenMain,
-      },
-      {
-        src: linear2KitchenLilFar,
-        isVertical: true,
-      },
-      {
-        src: linear2KitchenFar,
-        isVertical: true,
-      },
-    ],
-    info: {
-      title: 'Кухня "Эксплит" Прямая',
-      properties: [
-        { property: "Габариты", value: "2850x500x23500" },
-        { property: "Корпус", value: "ЛДСП Влагостойкий" },
-        { property: "Фасад", value: "МДФ Плёнка" },
-        { property: "Фурнитура", value: "Boyard (Китай)" },
-      ],
-      price: "19400",
-      colors: ["#c6bbb7", "#141614"],
-    },
-  },
-  {
     // SAFARI
     images: [
       {
@@ -280,6 +311,33 @@ const products: ProductProps[] = [
     },
   },
   {
+    // EXPLIT
+    images: [
+      {
+        src: linear2KitchenMain,
+      },
+      {
+        src: linear2KitchenLilFar,
+        isVertical: true,
+      },
+      {
+        src: linear2KitchenFar,
+        isVertical: true,
+      },
+    ],
+    info: {
+      title: 'Кухня "Эксплит" Прямая',
+      properties: [
+        { property: "Габариты", value: "2850x500x23500" },
+        { property: "Корпус", value: "ЛДСП Влагостойкий" },
+        { property: "Фасад", value: "МДФ Плёнка" },
+        { property: "Фурнитура", value: "Boyard (Китай)" },
+      ],
+      price: "19400",
+      colors: ["#c6bbb7", "#141614"],
+    },
+  },
+  {
     // QUARTZ
     images: [
       {
@@ -302,6 +360,36 @@ const products: ProductProps[] = [
       ],
       price: "41300",
       colors: ["#a3bec5", "#6b5851"],
+    },
+  },
+  {
+    // NORWAY
+    images: [
+      {
+        src: norwayKitchenMain,
+      },
+      {
+        src: norwayKitchenAngle,
+      },
+      {
+        src: norwayKitchenLight,
+      },
+    ],
+    info: {
+      title: 'Кухня "Норвегия" Угловая',
+      properties: [
+        { property: "Габариты", value: "2750х500х2400" },
+        { property: "Корпус", value: "ЛДСП Влагостойкий" },
+        { property: "Фасад", value: "МДФ Плёнка" },
+        { property: "Фурнитура", value: "Hettich" },
+        { property: "Столешница", value: "Пластик" },
+      ],
+      price: "22600",
+      colors: [
+        "#b8bab9",
+        "#41454e",
+        "repeating-linear-gradient(90deg, #a37452, #894f20 3px)",
+      ],
     },
   },
   {

@@ -1,17 +1,20 @@
 import Image from "next/image";
 import Box from "@mui/material/Box";
 
-const ReviewPhoto = ({ imgSrc, sx }: { imgSrc: string; sx: any }) => {
+const ReviewPhoto = ({ imgSrc, sx }: { imgSrc: string; sx?: any }) => {
   return (
     <Box
-      height={{ xs: 550, md: 700 }}
-      width={{ xs: 266.8, md: 339.6 }}
+      height={{ xs: 510, md: 700 }}
+      width={{ xs: 253.9, md: 348.5 }}
       className="invisible"
-      sx={{
-        ...sx,
-      }}
     >
-      <Image src={imgSrc} width={473} height={975} layout="fill" />
+      <Image
+        src={imgSrc}
+        alt="Не удалось найти изображение. Попробуйте позже"
+        width={348.5}
+        height={700}
+        layout="fill"
+      />
     </Box>
   );
 };

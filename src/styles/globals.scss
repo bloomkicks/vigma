@@ -88,10 +88,14 @@ button:focus {
 @keyframes fade-left {
   0% {
     transform: translateX(0);
-    opacity: 1;
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(7%, 0.5%) scale(0.96);
+    opacity: 0.3;
   }
   100% {
-    transform: translate(20%, 2%) scale(0.8);
+    transform: translate(10%, 2%) scale(0.9);
     opacity: 0;
   }
 }
@@ -99,10 +103,14 @@ button:focus {
 @keyframes fade-right {
   0% {
     transform: translateX(0);
-    opacity: 1;
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-7%, 0.5%) scale(0.96);
+    opacity: 0.3;
   }
   100% {
-    transform: translate(-20%, 2%) scale(0.8);
+    transform: translate(-10%, 2%) scale(0.9);
     opacity: 0;
   }
 }

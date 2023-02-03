@@ -7,44 +7,44 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 
 const SectionReviews = () => {
-  let length = 5;
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const prevIndex = useRef<number>(0);
+  let length = 8;
+  const [reviewIndex, setReviewIndex] = useState<number>(0);
+  const prevReviewIndex = useRef<number>(0);
   // const isSlice = useMediaQuery("(min-width: 1200px)");
 
   function currentIndexChanger(isLeft: boolean): void {
     function changeIndex(i: number, isLeft: boolean, l: number): number {
       let result = isLeft ? i - 1 : i + 1;
-      prevIndex.current = i;
+      prevReviewIndex.current = i;
       if (0 <= result && result <= l - 1) return result;
       return i;
     }
-    setCurrentIndex((prev) => changeIndex(prev, isLeft, length));
+    setReviewIndex((prev) => changeIndex(prev, isLeft, length));
   }
 
   return (
     <Box component="article" id="reviews" sx={{ overflow: "hidden" }}>
-      <Typography variant="h2">Отзывы клиентов</Typography>
+      <Typography variant="h2">Отзывы заказчиков</Typography>
       <Stack
         direction="row"
         justifyContent="center"
         alignItems="center"
-        spacing={{ xs: 0.1, sm: 1.5, lg: 2 }}
+        spacing={{ xs: 0.1, sm: 1.75, lg: 2.25 }}
       >
         <Arrow
           isLeft
           clickHandler={currentIndexChanger}
-          currentIndex={currentIndex}
+          reviewIndex={reviewIndex}
           length={length}
         />
         <Reviews
-          currentIndex={currentIndex}
-          prevIndex={prevIndex.current}
+          reviewIndex={reviewIndex}
+          prevReviewIndex={prevReviewIndex.current}
           slice={0}
         />
         <Arrow
           clickHandler={currentIndexChanger}
-          currentIndex={currentIndex}
+          reviewIndex={reviewIndex}
           length={length}
         />
       </Stack>

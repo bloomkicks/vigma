@@ -3,16 +3,16 @@ import Box from "@mui/material/Box";
 const Arrow = ({
   isLeft,
   clickHandler,
-  currentIndex,
+  reviewIndex,
   length,
 }: {
   isLeft?: boolean;
   clickHandler: (isLeft: boolean) => void;
-  currentIndex: number;
+  reviewIndex: number;
   length: number;
 }) => {
   let isActive =
-    (0 < currentIndex && isLeft) || (currentIndex < length - 1 && !isLeft);
+    (0 < reviewIndex && isLeft) || (reviewIndex < length - 1 && !isLeft);
 
   return (
     <Box
@@ -29,15 +29,19 @@ const Arrow = ({
         minWidth: 50,
         position: "relative",
         zIndex: 3,
-        opacity: isActive ? 1 : 0.4,
+        opacity: isActive ? 1 : 0.35,
       }}
       onClick={() => clickHandler(isLeft)}
     >
       <Box
         component="img"
-        src={process.env.REVIEWS_ASSETS + "/arrow-right.svg"}
+        src={
+          process.env.REVIEWS_ASSETS +
+          (isLeft ? "/arrow-left.svg" : "/arrow-right.svg")
+        }
+        alt={isLeft ? "Назад" : "Вперед"}
         height={{ xs: 38, md: 50 }}
-        sx={{ transform: isLeft ? "rotate(180deg)" : "", mb: 2 }}
+        sx={{ mb: 2 }}
       ></Box>
     </Box>
   );

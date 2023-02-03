@@ -4,7 +4,7 @@ import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Advantages from "../components/advantages/Advantages";
 import SectionReviews from "../components/reviews/SectionReviews";
-import Contacts from "../components/contacts/Contacts";
+import SectionContacts from "../components/contacts/SectionContacts";
 import Hero from "../components/hero/Hero";
 import Certificates from "../components/certificates/Certificates";
 
@@ -65,7 +65,7 @@ const MainPage = () => {
       <Divider />
       <Certificates />
       <Divider />
-      <Contacts />
+      <SectionContacts />
     </Container>
   );
 };

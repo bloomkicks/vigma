@@ -18,19 +18,28 @@ const reviews = [
   {
     imgName: "Ольга-Тореза.jpg",
   },
+  {
+    imgName: "Александра+Ветеранов.jpg",
+  },
+  {
+    imgName: "Нина+Денис.jpg",
+  },
+  {
+    imgName: "Надежда+Конструкторов.jpg",
+  },
 ];
 
 const Reviews = ({
-  currentIndex,
-  prevIndex,
+  reviewIndex,
+  prevReviewIndex,
   slice,
 }: {
-  currentIndex: number;
-  prevIndex: number;
+  reviewIndex: number;
+  prevReviewIndex: number;
   slice: number;
 }) => {
   let isSlice = slice > 0;
-  let isLeft = currentIndex > prevIndex;
+  let isLeft = reviewIndex > prevReviewIndex;
   return (
     <Stack
       direction="row"
@@ -38,8 +47,8 @@ const Reviews = ({
       justifyContent="center"
       alignItems="center"
       spacing={isSlice ? 3 : 0}
-      minHeight={{ xs: 550, md: 700 }}
-      minWidth={{ xs: 266.8, md: 339.6 }}
+      minHeight={{ xs: 510, md: 700 }}
+      minWidth={{ xs: 253.9, md: 348.5 }}
       sx={{
         maxWidth: "90%",
         zIndex: 2,
@@ -47,8 +56,8 @@ const Reviews = ({
     >
       {reviews.map((review, i) => (
         <CSSTransition
-          in={i == currentIndex || i == currentIndex + slice}
-          timeout={{ appear: 0, enter: 400, exit: 500 }}
+          in={i == reviewIndex || i == reviewIndex + slice}
+          timeout={{ enter: 400, exit: 500 }}
           appear
           classNames={{
             appearDone: "visible",
@@ -67,7 +76,6 @@ const Reviews = ({
         >
           <ReviewPhoto
             imgSrc={process.env.REVIEWS_ASSETS + "/" + review.imgName}
-            sx={{}}
           />
         </CSSTransition>
       ))}

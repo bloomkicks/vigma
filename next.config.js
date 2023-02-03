@@ -32,13 +32,13 @@ module.exports = {
     USER_ID: "user_2FU0yfDjTaoUzX8yIWhal",
 
     // ASSETS
-    MAIN_ASSETS: "/images",
-    HERO_ASSETS: "/images/hero",
-    REVIEWS_ASSETS: "/images/reviews",
-    ADVANTAGES_ASSETS: "/images/advantages",
-    PRODUCTS_ASSETS: "/images/products",
-    GENERAL_ASSETS: "/images/general",
-    QUIZ_ASSETS: "/images/quiz",
-    CERTIFICATES_ASSETS: "/images/certificates",
+    MAIN_ASSETS: "./images",
+    HERO_ASSETS: "./images/hero",
+    REVIEWS_ASSETS: "./images/reviews",
+    ADVANTAGES_ASSETS: "./images/advantages",
+    PRODUCTS_ASSETS: "./images/products",
+    GENERAL_ASSETS: "./images/general",
+    QUIZ_ASSETS: "./images/quiz",
+    CERTIFICATES_ASSETS: "./images/certificates",
   },
 };
