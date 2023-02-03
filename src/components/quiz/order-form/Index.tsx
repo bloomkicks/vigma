@@ -1,3 +1,5 @@
+import Divider from "@mui/material/Divider";
+import Link from "next/link";
 import { RootState } from "../../../store";
 
 import FormControl from "@mui/material/FormControl";
@@ -49,28 +51,50 @@ const OrderForm = ({
   }
 
   return (
-    <Box
-      mb={6}
-      px={2}
-      pt={10}
-      id="order-form"
-      className="vertical-large-fading"
-    >
-      <Typography variant="h4" mb={5.5} align="center">
+    <Box mb={6} px={2} pt={8} id="order-form" className="vertical-large-fading">
+      <Divider sx={{ mb: 4 }} />
+      <Typography variant="h4" mb={{ xs: 3.5, md: 4 }} align="center">
         За каким номером зафиксировать подарок?
       </Typography>
       <FormControl component="form" fullWidth onSubmit={totalSubmitHandler}>
         <Stack
           direction="column"
           alignItems="center"
-          spacing={2}
-          sx={{ mb: 8, width: "100%", "&>*": { maxWidth: 500, width: "100%" } }}
+          spacing={{ xs: 1.5, md: 2 }}
+          sx={{
+            mb: { xs: 4.5, md: 6 },
+            width: "100%",
+            "&>*": { maxWidth: 500, width: "100%" },
+          }}
         >
           <TelInput ref={telRef} onChange={telInputChangeHandler} />
           <NameInput ref={nameRef} />
         </Stack>
         <OrderActions isAble={isAble} />
       </FormControl>
+      <Typography
+        variant="body2"
+        fontSize={{ xs: "12px", md: "14px" }}
+        maxWidth="80%"
+        mt={{ xs: 6, md: 7 }}
+        mx="auto"
+        textAlign="center"
+        sx={{
+          opacity: 0.7,
+        }}
+      >
+        Продолжая, вы соглашаетесь с{" "}
+        <Link href="/privacy" passHref>
+          <Typography
+            component="a"
+            variant="body2"
+            fontSize={{ xs: "12px", md: "14px" }}
+          >
+            нашей политикой конфиденциальности
+          </Typography>
+        </Link>
+      </Typography>
+      <Divider sx={{ mt: 3 }} />
     </Box>
   );
 };

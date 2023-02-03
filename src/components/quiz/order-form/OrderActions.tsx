@@ -12,15 +12,16 @@ const OrderActions = ({ isAble }: { isAble: boolean }) => {
         open={isDialogOpen}
         onClose={() => setIsDialogOpen(false)}
       />
-      <Stack sx={{ mx: "auto", maxWidth: 400, width: "90%" }}>
+      <Stack sx={{ mx: "auto", maxWidth: 275, width: "90%" }}>
         <Button
           variant="contained"
           type="submit"
           disabled={!isAble}
           sx={{
-            px: 3,
+            px: 2,
             py: "7px",
             borderRadius: "6px",
+            fontSize: { xs: 16, md: 18 },
           }}
         >
           ОТПРАВИТЬ ЗАЯВКУ
@@ -29,9 +30,9 @@ const OrderActions = ({ isAble }: { isAble: boolean }) => {
           variant="outlined"
           sx={{
             color: "primary.dark",
-            textDecoration: "underline",
             mt: 2,
-            px: 3,
+            px: 2,
+            fontSize: { xs: 16, md: 18 },
             py: "7px",
             borderRadius: "6px",
             "&:hover": {
