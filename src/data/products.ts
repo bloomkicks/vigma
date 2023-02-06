@@ -1,5 +1,15 @@
 import type { ProductProps } from "../types/products";
 
+// BARHAT KITCHEN
+const barhatKitchenFullsize = "barhat/fullsize.jpg";
+const barhatKitchenAngled = "barhat/angled.jpg";
+const barhatKitchenZoomed = "barhat/zoomed.jpg";
+
+// MODERN KITCHEN
+const modernKitchenFullsize = "modern/fullsize.jpg";
+const modernKitchenAngled = "modern/angled.jpg";
+const modernKitchenZoomed = "modern/zoomed.jpg";
+
 // GOLD KITCHEN
 const goldKitchenFurniture = "gold/furniture.jpg";
 const goldKitchenFullsize = "gold/fullsize.jpg";
@@ -48,10 +58,10 @@ const linear2KitchenMain = "linear_2/main.jpeg";
 const linear2KitchenLilFar = "linear_2/lilfar.jpeg";
 const linear2KitchenFar = "linear_2/far.jpeg";
 
-// MODERN KITCHEN
-const modernKitchenMain = "modern/main.jpeg";
-const modernKitchenFront = "modern/front.jpeg";
-const modernKitchenLong = "modern/long.jpeg";
+// MINI KITCHEN
+const miniKitchenMain = "mini/main.jpeg";
+const miniKitchenFront = "mini/front.jpeg";
+const miniKitchenLong = "mini/long.jpeg";
 
 // NORWAY KITCHEN
 const norwayKitchenMain = "norway/main.jpeg";
@@ -69,6 +79,56 @@ const solidKitchenAngle2 = "solid/angle2.jpeg";
 const solidKitchenMain = "solid/main.jpeg";
 
 const products: ProductProps[] = [
+  {
+    // BARHAT
+    images: [
+      {
+        src: barhatKitchenFullsize,
+      },
+      {
+        src: barhatKitchenAngled,
+      },
+      {
+        src: barhatKitchenZoomed,
+      },
+    ],
+    info: {
+      title: 'Кухня "Бархарт" Прямая',
+      colors: ["#0C0C0C", "#4A494F", "#514039"],
+      properties: [
+        { property: "Габариты", value: "2400x600x2100" },
+        { property: "Корпус", value: "ЛДСП Влагостойкий" },
+        { property: "Фасад", value: "МДФ" },
+        { property: "Фурнитура", value: "Ettich" },
+      ],
+      price: "28400",
+    },
+  },
+  {
+    // MODERN
+    images: [
+      {
+        src: modernKitchenFullsize,
+      },
+      {
+        src: modernKitchenAngled,
+      },
+      {
+        src: modernKitchenZoomed,
+      },
+    ],
+    info: {
+      title: 'Кухня "Модерн" с Островком',
+      colors: ["#1D1D1D", "#9C876C"],
+      properties: [
+        { property: "Габариты", value: "2300x700x2100" },
+        { property: "Корпус", value: "ЛДСП Влагостойкий" },
+        { property: "Фасад", value: "МДФ" },
+        { property: "Фурнитура", value: "Boyard (Китай)" },
+      ],
+      price: "28400",
+    },
+  },
   {
     // WINTER
     images: [
@@ -119,6 +179,37 @@ const products: ProductProps[] = [
       price: "28400",
     },
   },
+  {
+    // SOLID
+    images: [
+      {
+        src: solidKitchenMain,
+        isVertical: true,
+      },
+      {
+        src: solidKitchenAngle2,
+        isVertical: true,
+      },
+      {
+        src: solidKitchenAngleMain,
+      },
+    ],
+    info: {
+      title: 'Кухня "Солид" Угловая',
+      properties: [
+        { property: "Габариты", value: "4200x2420x600" },
+        { property: "Корпус", value: "ЛДСП Влагостойкий" },
+        { property: "Фасад", value: "МДФ Эмаль" },
+        { property: "Фурнитура", value: "Hettich" },
+        { property: "Столешница", value: "Пластик" },
+      ],
+      price: "34376",
+      colors: [
+        "#746d71",
+        "repeating-linear-gradient(90deg, #733617, #965632 3px)",
+      ],
+    },
+  },
   // LATTE
   {
     images: [
@@ -145,37 +236,6 @@ const products: ProductProps[] = [
       ],
       price: "38651",
       colors: ["#cdcbcc", "#7d665e"],
-    },
-  },
-  {
-    // SOLID
-    images: [
-      {
-        src: solidKitchenMain,
-        isVertical: true,
-      },
-      {
-        src: solidKitchenAngleMain,
-      },
-      {
-        src: solidKitchenAngle2,
-        isVertical: true,
-      },
-    ],
-    info: {
-      title: 'Кухня "Солид" Угловая',
-      properties: [
-        { property: "Габариты", value: "4200x2420x600" },
-        { property: "Корпус", value: "ЛДСП Влагостойкий" },
-        { property: "Фасад", value: "МДФ Эмаль" },
-        { property: "Фурнитура", value: "Hettich" },
-        { property: "Столешница", value: "Пластик" },
-      ],
-      price: "34376",
-      colors: [
-        "#746d71",
-        "repeating-linear-gradient(90deg, #733617, #965632 3px)",
-      ],
     },
   },
   {
@@ -252,21 +312,21 @@ const products: ProductProps[] = [
     },
   },
   {
-    // MODERN
+    // MINI
     images: [
       {
-        src: modernKitchenMain,
+        src: miniKitchenMain,
       },
       {
-        src: modernKitchenFront,
+        src: miniKitchenFront,
         isVertical: true,
       },
       {
-        src: modernKitchenLong,
+        src: miniKitchenLong,
       },
     ],
     info: {
-      title: 'Кухня "Модерн" c островком',
+      title: 'Кухня "Мини" c островком',
       properties: [
         { property: "Габариты", value: "2650х600х2500" },
         { property: "Корпус", value: "ЛДСП Lamarty" },

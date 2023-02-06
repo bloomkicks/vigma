@@ -1,14 +1,14 @@
-import ReviewsSlider from "./ReviewsSlider";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useState } from "react";
-import Arrow from "./Arrow";
+import Arrow from "../reviews/Arrow";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
+import CertificatesSlider from "./CertificatesSlider";
 
-const SectionReviews = () => {
-  let length = 8;
-  const [reviewIndex, setReviewIndex] = useState<number>(0);
+const Certificates = () => {
+  let length = 4;
+  const [certifIndex, setCertifIndex] = useState<number>(0);
   const isDesktop = useMediaQuery("(min-width: 1200px)");
   let slice = isDesktop ? 1 : 0;
 
@@ -18,12 +18,11 @@ const SectionReviews = () => {
       if (0 <= result && result <= l - 1 - slice) return result;
       return i;
     }
-    setReviewIndex((prev) => changeIndex(prev, isLeft, length));
+    setCertifIndex((prev) => changeIndex(prev, isLeft, length));
   }
-
   return (
-    <Box component="article" id="reviews" sx={{ overflow: "hidden" }}>
-      <Typography variant="h2">Отзывы заказчиков</Typography>
+    <Box component="article" id="certificates">
+      <Typography variant="h2">Сертификаты качества</Typography>
       <Stack
         direction="row"
         justifyContent="center"
@@ -33,14 +32,14 @@ const SectionReviews = () => {
         <Arrow
           isLeft
           clickHandler={currentIndexChanger}
-          reviewIndex={reviewIndex}
+          reviewIndex={certifIndex}
           length={length}
           slice={slice}
         />
-        <ReviewsSlider reviewIndex={reviewIndex} slice={slice} />
+        <CertificatesSlider certifIndex={certifIndex} slice={slice} />
         <Arrow
           clickHandler={currentIndexChanger}
-          reviewIndex={reviewIndex}
+          reviewIndex={certifIndex}
           length={length}
           slice={slice}
         />
@@ -49,4 +48,4 @@ const SectionReviews = () => {
   );
 };
 
-export default SectionReviews;
+export default Certificates;

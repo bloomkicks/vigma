@@ -16,16 +16,16 @@ const ImageList = ({
       direction="row"
       justifyContent="flex-start"
       flexWrap="nowrap"
-      spacing={2}
+      spacing={1.2}
       sx={{
         width: "100%",
-        height: "35%",
+        height: "30%",
         overflowX: "auto",
         overflowY: "hidden",
-        pt: 2,
+        pt: 1.2,
         pb: "4px",
         "::-webkit-scrollbar": {
-          height: "10px",
+          height: "5px",
           backgroundColor: "#f0f0f0",
         },
         "::-webkit-scrollbar-thumb": {

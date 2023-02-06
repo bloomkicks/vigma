@@ -1,3 +1,4 @@
+import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
@@ -9,29 +10,26 @@ const ProductList = () => {
     <>
       <Typography
         variant="h2"
-        mt={5}
-        mb={{ xs: 7, md: 8 }}
+        mt={6}
+        mb={{ xs: 4, md: 5 }}
         sx={{ textAlign: "center" }}
       >
         Каталог Кухонь
       </Typography>
-      <Stack
+      <Grid
+        container
         component="main"
-        direction="column"
-        spacing={7}
-        sx={{
-          px: { xs: 3, md: 4, lg: 9 },
-          alignItems: "center",
-          width: "100%",
-        }}
+        spacing={4}
+        justifyContent="center"
+        px={{ xs: 1, md: 2, lg: 7 }}
+        alignItems="flex-start"
       >
         {products.map((product) => (
           <>
             <Product {...product} key={product.info.title} />
-            <Divider />
           </>
         ))}
-      </Stack>
+      </Grid>
     </>
   );
 };

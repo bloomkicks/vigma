@@ -5,14 +5,17 @@ const Arrow = ({
   clickHandler,
   reviewIndex,
   length,
+  slice,
 }: {
   isLeft?: boolean;
   clickHandler: (isLeft: boolean) => void;
   reviewIndex: number;
   length: number;
+  slice: number;
 }) => {
   let isActive =
-    (0 < reviewIndex && isLeft) || (reviewIndex < length - 1 && !isLeft);
+    (0 < reviewIndex && isLeft) ||
+    (reviewIndex < length - 1 - slice && !isLeft);
 
   return (
     <Box
@@ -41,7 +44,7 @@ const Arrow = ({
         }
         alt={isLeft ? "Назад" : "Вперед"}
         height={{ xs: 38, md: 50 }}
-        sx={{ mb: 2 }}
+        sx={{ mb: 2, "&::selection": { backgroundColor: "transparent" } }}
       ></Box>
     </Box>
   );

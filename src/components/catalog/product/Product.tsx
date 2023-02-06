@@ -1,3 +1,4 @@
+import Grid from "@mui/material/Grid";
 import type { ProductProps } from "../../../types/products";
 import ProductInfo from "./product-info/ProductInfo";
 import ImageGroup from "./image-group/ImageGroup";
@@ -9,33 +10,39 @@ const Product = ({
   overrides,
 }: ProductProps & { overrides?: any }) => {
   return (
-    <Stack
-      component="section"
-      direction={{ xs: "column", md: "row" }}
-      justifyContent="center"
-      flexWrap="nowrap"
-      spacing={{ xs: 2, md: 4 }}
-      sx={{
-        width: "100%",
-        maxWidth: { sm: 630, md: 1920 },
-        mx: "auto",
-        textAlign: "left",
-      }}
-      {...overrides}
-    >
-      <ImageGroup
-        images={images}
+    <Grid item md={6} xs={12} sx={{ maxWidth: { sm: "500px !important" } }}>
+      <Stack
+        component="section"
+        direction={{ xs: "column", md: "column" }}
+        justifyContent="center"
+        flexWrap="nowrap"
+        spacing={{ xs: 1 }}
+        mx="auto"
         sx={{
-          width: { xs: "100%", md: "50%" },
-          maxWidth: 630,
-          height: { xs: 400, md: 550 },
+          width: 500,
+          maxWidth: "100%",
+          // maxWidth: { sm: 600, md: 1920 },
+          textAlign: "left",
+          bgcolor: "rgba(0,0,0,0.05)",
+          boxShadow: "1px 2px 4px rgba(0,0,0,0.4)",
+          px: { xs: 2, md: 2.5 },
+          py: 4,
+          pt: 2,
+          borderRadius: "8px",
         }}
-      />
-      <ProductInfo
-        {...info}
-        sx={{ width: { xs: "100%", md: "48%" }, maxWidth: 630 }}
-      />
-    </Stack>
+        {...overrides}
+      >
+        <ImageGroup
+          images={images}
+          sx={{
+            width: "100%",
+            maxWidth: 600,
+            height: { xs: 400, md: 500 },
+          }}
+        />
+        <ProductInfo sx={{ width: "100%" }} {...info} />
+      </Stack>
+    </Grid>
   );
 };
 

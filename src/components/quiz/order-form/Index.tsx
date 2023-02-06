@@ -51,8 +51,8 @@ const OrderForm = ({
   }
 
   return (
-    <Box mb={6} px={2} pt={8} id="order-form" className="vertical-large-fading">
-      <Divider sx={{ mb: 4 }} />
+    <Box pb={6} px={2} pt={6} id="order-form" className="vertical-large-fading">
+      <Divider sx={{ mb: 3 }} />
       <Typography variant="h4" mb={{ xs: 3.5, md: 4 }} align="center">
         За каким номером зафиксировать подарок?
       </Typography>
@@ -83,7 +83,7 @@ const OrderForm = ({
           opacity: 0.7,
         }}
       >
-        Продолжая, вы соглашаетесь с{" "}
+        Нажимая на кнопку, вы соглашаетесь с{" "}
         <Link href="/privacy" passHref>
           <Typography
             component="a"

@@ -3,7 +3,7 @@ import { ThemeProvider as Provider, createTheme } from "@mui/material/styles";
 
 const bodyFontFamily =
   "Roboto, -apple-system, 'Open Sans', Raleway, sans-serif";
-const bigHeadingFontFamily = `Unbounded, ${bodyFontFamily}`;
+const bigHeadingFontFamily = `Raleway, ${bodyFontFamily}`;
 const headingFontFamily = `Rubik, ${bodyFontFamily}`;
 
 const theme = createTheme({
@@ -15,7 +15,7 @@ const theme = createTheme({
     },
     secondary: {
       main: "#ffffff",
-      dark: "#c9c9c9",
+      dark: "#d5d5d5",
       contrastText: "#535353",
     },
     info: {
@@ -35,18 +35,17 @@ const theme = createTheme({
       fontFamily: bigHeadingFontFamily,
       // fontSize: 48,
       // lineHeight: "56px",
-      fontSize: "3.2rem",
-      lineHeight: 1.167,
-      fontWeight: "500",
+      fontSize: "3.4rem",
+      lineHeight: 1.15,
+      fontWeight: "700",
     },
     h2: {
       fontFamily: bigHeadingFontFamily,
       // fontSize: 38,
       // lineHeight: "45px",
-      fontSize: "2.2rem",
-      letterSpacing: "-0.2px",
+      fontSize: "2.3rem",
       lineHeight: 1.184,
-      fontWeight: "400",
+      fontWeight: "600",
     },
     h3: {
       fontFamily: bodyFontFamily,

@@ -4,7 +4,16 @@ import Box from "@mui/material/Box";
 
 const FocusedImage = ({ src, width, height }: ProductImage) => {
   return (
-    <Box position="relative" bgcolor="secondary.dark" width="100%" height="65%">
+    <Box
+      position="relative"
+      bgcolor="secondary.dark"
+      width="100%"
+      height="70%"
+      sx={{
+        borderTopLeftRadius: "6px",
+        borderTopRightRadius: "6px",
+      }}
+    >
       <Image
         src={process.env.PRODUCTS_ASSETS + "/" + src}
         width={width}

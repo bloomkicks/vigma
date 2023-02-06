@@ -11,11 +11,7 @@ const Advantages = () => {
       sx={{ overflowX: { xs: "hidden", md: "visible" } }}
     >
       <Crown />
-      <Typography
-        position="relative"
-        variant="h2"
-        sx={{ letterSpacing: "-1px" }}
-      >
+      <Typography position="relative" variant="h2">
         Почему выбирают нас:
       </Typography>
       <AdvantageList sx={{ position: "relative", maxWidth: { lg: "85%" } }} />

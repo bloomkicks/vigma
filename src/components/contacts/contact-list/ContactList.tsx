@@ -43,21 +43,10 @@ let contacts = [
 
 const ContactList = ({ sx }: { sx?: any }) => {
   return (
-    <Stack spacing={{ xs: 2.5, md: 3.5 }} sx={{ textAlign: "left", ...sx }}>
+    <Stack spacing={{ xs: 2.5, md: 3.25 }} sx={{ textAlign: "left", ...sx }}>
       {contacts.map((contact) => (
         <ItemContact {...contact} key={contact.contact} />
       ))}
-      <Box display={{ xs: "block", md: "none" }}>
-        <Typography mb={1}>ОГРНИП: 319290100012218</Typography>
-        <Typography>ИНН: 292501389176</Typography>
-      </Box>
-      {/* <ItemContact
-        contact="ОРГНИП"
-        value="319290100012218"
-        link="none"
-        sx={{ mb: 0 }}
-      />
-      <ItemContact contact="ИНН" value="292501389176" link="none" /> */}
     </Stack>
   );
 };

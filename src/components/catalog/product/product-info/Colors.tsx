@@ -2,7 +2,9 @@ import Box from "@mui/material/Box";
 
 const Colors = ({ colors }: { colors: string[] }) => {
   return (
-    <Box mb={{ xs: 3, md: 5 }}>
+    <Box
+    // mb={{ xs: 1, md: 4 }}
+    >
       {colors.map((color) => (
         <Box
           sx={{

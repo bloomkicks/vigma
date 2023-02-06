@@ -1,12 +1,12 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
-import MainProduct from "../components/main-product/MainProduct";
+import MainProducts from "../components/main-products/SectionMainProducts";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Advantages from "../components/advantages/Advantages";
 import SectionReviews from "../components/reviews/SectionReviews";
 import SectionContacts from "../components/contacts/SectionContacts";
 import Hero from "../components/hero/Hero";
-import Certificates from "../components/certificates/Certificates";
+import Certificates from "../components/certificates/SectionCertificates";
 
 const MainPage = () => {
   const isReallySmall = useMediaQuery("(max-width: 376px)");
@@ -42,7 +42,8 @@ const MainPage = () => {
         "& > article#advantages > h2": {
           mb: { xs: "30px", md: "40px" },
         },
-        "& > article#product": {
+        "& > article#products": {
+          px: { xs: 1, md: 2, lg: 7 },
           pb: { xs: "40px", md: "55px" },
         },
         "& > article#reviews": {
@@ -59,7 +60,7 @@ const MainPage = () => {
       <Hero />
       <Advantages />
       <Divider />
-      <MainProduct />
+      <MainProducts />
       <Divider />
       <SectionReviews />
       <Divider />
