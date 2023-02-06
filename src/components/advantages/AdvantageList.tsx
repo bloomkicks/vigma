@@ -65,10 +65,10 @@ const AdvantageList = ({ sx }: { sx?: any }) => {
     <Stack spacing={4} sx={sx}>
       {advantages.map((advantage) => (
         <Box textAlign="left" key={advantage.title}>
-          <Typography variant="h3" mb={1.25}>
+          <Typography variant="h3" mb={0.75}>
             {advantage.title}
           </Typography>
-          <Typography component="p" variant="subtitle2">
+          <Typography component="p" variant="body2">
             {advantage.description}
           </Typography>
         </Box>

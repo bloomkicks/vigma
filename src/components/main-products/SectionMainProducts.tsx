@@ -35,7 +35,7 @@ let products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Бархарт" Прямая',
-      colors: ["#0C0C0C", "#4A494F", "#514039"],
+      colors: ["#0C0C0C", "#4A494F", "#615049"],
       properties: [
         { property: "Габариты", value: "2400x600x2100" },
         { property: "Корпус", value: "ЛДСП Влагостойкий" },
@@ -106,7 +106,7 @@ let products: ProductProps[] = [
 const SectionMainProducts = () => {
   return (
     <Box component="article" id="products">
-      <Typography variant="h2">Примеры наших проектов</Typography>
+      <Typography variant="h2">Наши проекты</Typography>
       <Grid
         container
         spacing={4}

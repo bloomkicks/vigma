@@ -94,7 +94,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Бархарт" Прямая',
-      colors: ["#0C0C0C", "#4A494F", "#514039"],
+      colors: ["#0C0C0C", "#4A494F", "#615049"],
       properties: [
         { property: "Габариты", value: "2400x600x2100" },
         { property: "Корпус", value: "ЛДСП Влагостойкий" },

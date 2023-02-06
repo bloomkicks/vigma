@@ -37,14 +37,16 @@ const ReviewsSlider = ({
 }) => {
   let height = 700;
   let width = 348.52;
-  let mobileHeight = 510;
-  let mobileWidth = 253.92;
+  let mobileHeight = 512.16;
+  let mobileWidth = 255;
 
   return (
     <Stack
       direction="row"
       alignItems="flex-start"
+      flexShrink={0}
       height={{ xs: mobileHeight + 3, md: height + 3 }}
+      minWidth={mobileWidth}
       width={{
         xs: mobileWidth,
         md: slice == 0 ? width : width * (slice + 1) + 19 * slice,
