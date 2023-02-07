@@ -11,15 +11,20 @@ const Actions = ({
   isDalee,
   nextDisabled,
   backDisabled,
+  onNextClick,
 }: {
   isDalee: boolean;
   nextDisabled: boolean;
   backDisabled: boolean;
+  onNextClick?: () => void;
 }) => {
   const dispatch = useDispatch();
 
   function nextHandler() {
     dispatch(quizActions.nextQuestion());
+    if (onNextClick) {
+      onNextClick();
+    }
   }
 
   function backHandler() {

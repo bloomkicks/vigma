@@ -70,6 +70,7 @@ const QuizOption = ({
           pt={{ xs: 1.25, sm: 1 }}
           position="relative"
           minHeight={(theme) => theme.spacing(5.2)}
+          textAlign="left"
         >
           <Radio
             checked={isSelected}

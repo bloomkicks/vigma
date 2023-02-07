@@ -27,7 +27,7 @@ const Hero = () => {
           mb: 2,
           maxWidth: 982,
           bottom: { xl: 30 },
-          letterSpacing: "1px",
+          letterSpacing: { xs: "0.5px", md: "0.7px" },
         }}
       >
         {isDesktop

@@ -51,14 +51,12 @@ const Page = ({
         <SizeForm />
       ) : (
         <QuizOptionList
-          key={category + currentQuestion}
           options={availableOptions}
           category={category}
           question={currentQuestion}
           selectedOptions={selectedOptions}
         />
       )}
-
       <Actions
         backDisabled={
           (!category && currentQuestion === "category") ||

@@ -7,6 +7,7 @@ import SectionReviews from "../components/reviews/SectionReviews";
 import SectionContacts from "../components/contacts/SectionContacts";
 import Hero from "../components/hero/Hero";
 import Certificates from "../components/certificates/SectionCertificates";
+import SectionMainQuiz from "../components/main-quiz/SectoinMainQuiz";
 
 const MainPage = () => {
   const isReallySmall = useMediaQuery("(max-width: 376px)");
@@ -42,6 +43,9 @@ const MainPage = () => {
         "& > article#advantages > h2": {
           mb: { xs: "30px", md: "40px" },
         },
+        "& > article#quiz": {
+          px: 0,
+        },
         "& > article#products": {
           px: { xs: 1, md: 2, lg: 7 },
           pb: { xs: "40px", md: "55px" },
@@ -67,6 +71,8 @@ const MainPage = () => {
       <Certificates />
       <Divider />
       <SectionContacts />
+      <Divider />
+      <SectionMainQuiz />
     </Container>
   );
 };

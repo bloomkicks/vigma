@@ -25,7 +25,9 @@ const GiftPaper = ({
   useEffect(() => {
     const giftPaper = document.getElementById("gift-paper");
 
-    giftPaper.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (currentQuestion && currentQuestion !== "category") {
+      giftPaper.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }, [amountOfQuestions]);
 
   return (

@@ -52,8 +52,8 @@ const OrderForm = ({
 
   return (
     <Box pb={6} px={2} pt={6} id="order-form" className="vertical-large-fading">
-      <Divider sx={{ mb: 3 }} />
-      <Typography variant="h4" mb={{ xs: 3.5, md: 4 }} align="center">
+      <Divider sx={{ mb: 3.5 }} />
+      <Typography variant="h4" mb={{ xs: 3.75, md: 4.5 }} align="center">
         За каким номером зафиксировать подарок?
       </Typography>
       <FormControl component="form" fullWidth onSubmit={totalSubmitHandler}>

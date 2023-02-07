@@ -20,13 +20,12 @@ const SectionContacts = () => {
         justifyContent="center"
         alignItems="center"
         spacing={{ xs: 3, lg: 3 }}
-        mb={{ xs: 2.5, md: 5 }}
       >
         <ContactsInfo
           sx={{
             width: { xs: "100%", sm: "80%", md: "45%", lg: 450 },
             minWidth: { md: 390 },
-            mb: { md: 1, lg: 1.5 },
+            mb: { md: 1.7, lg: 1.6 },
           }}
         />
         <ContactsMap
@@ -34,7 +33,7 @@ const SectionContacts = () => {
             width: { xs: "100%", md: "44%" },
             height: { xs: 320, sm: 300, md: 340, lg: 360 },
             // minHeight: { xs: 380, sm: 300, md: 280 },
-            maxWidth: 450,
+            maxWidth: { xs: 400, lg: 450 },
           }}
         />
       </Stack>
