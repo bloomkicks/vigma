@@ -46,7 +46,7 @@ const ReviewsSlider = ({
       alignItems="flex-start"
       flexShrink={0}
       height={{ xs: mobileHeight + 3, md: height + 3 }}
-      minWidth={mobileWidth}
+      minWidth={mobileWidth + 3}
       width={{
         xs: mobileWidth,
         md: slice == 0 ? width : width * (slice + 1) + 19 * slice,
@@ -64,7 +64,7 @@ const ReviewsSlider = ({
               md: `translateX(-${reviewIndex * (width + 16)}px)`,
             },
             transition: "transform 0.3s ease-out",
-            boxShadow: "2px 3px 3px rgba(0,0,0,0.25)",
+            boxShadow: "1px 3px 3px rgba(0,0,0,0.25)",
           }}
           width={{ xs: mobileWidth, md: width }}
           // height="100%"

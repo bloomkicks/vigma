@@ -24,7 +24,7 @@ const Hero = () => {
         color="secondary.main"
         sx={{
           position: "relative",
-          mb: 2,
+          mb: 1.6,
           maxWidth: 982,
           bottom: { xl: 30 },
           letterSpacing: { xs: "0.5px", md: "0.7px" },

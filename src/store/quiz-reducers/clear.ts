@@ -1,18 +1,16 @@
+import kitchenQuestions from "../../data/quiz/kitchen-questions";
+import type { QuizState } from "../../types/quiz";
 import { translateQuestion } from "../../features/quiz/translate";
-import { categories } from "../quiz";
 
-function clear() {
+function clear(): QuizState {
   return {
     isFinished: false,
-    connectWay: "call",
-    currentQuestion: "category",
-    translatedQuestion: translateQuestion("category", null),
-    indexOfQuestion: -1,
-    availableOptions: categories,
+    currentQuestion: "shape",
+    translatedQuestion: translateQuestion("shape"),
+    indexOfQuestion: 0,
     selectedOptions: [],
     answeredQuestions: [],
-    category: null,
-    categoryQuestions: null,
+    availableOptions: kitchenQuestions[0].shape,
     constructorQuestions: {
       dishwasher: null,
     },

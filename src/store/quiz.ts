@@ -1,28 +1,24 @@
 import { translateQuestion } from "../features/quiz/translate";
 import type { QuizState } from "../types/quiz";
-import allCategoryQuestions from "../data/quiz/category-questions";
+// import allCategoryQuestions from "../data/quiz/category-questions";
+import kitchenQuestions from "../data/quiz/kitchen-questions";
 import { createSlice } from "@reduxjs/toolkit";
 
 import nextQuestion from "./quiz-reducers/next-question";
 import clear from "./quiz-reducers/clear";
-import setConnectWay from "./quiz-reducers/set-connect-way";
 import toggleSelectOption from "./quiz-reducers/toggle-select-option";
 import previousQuestion from "./quiz-reducers/previous-question";
 import selectConstructorOption from "./quiz-reducers/select-constructor-option";
 import selectProduct from "./quiz-reducers/select-product";
 
-export const categories = Object.keys(allCategoryQuestions);
 const initialState: QuizState = {
   isFinished: false,
-  connectWay: "call",
-  currentQuestion: "category",
-  translatedQuestion: translateQuestion("category", null),
-  indexOfQuestion: -1,
-  availableOptions: categories,
+  currentQuestion: "shape",
+  translatedQuestion: translateQuestion("shape"),
+  indexOfQuestion: 0,
+  availableOptions: kitchenQuestions[0].shape,
   selectedOptions: [],
   answeredQuestions: [],
-  category: null,
-  categoryQuestions: null,
   constructorQuestions: {
     dishwasher: null,
   },
@@ -38,7 +34,6 @@ const quizSlice = createSlice({
     selectConstructorOption,
     selectProduct,
     clear,
-    setConnectWay,
   },
 });
 

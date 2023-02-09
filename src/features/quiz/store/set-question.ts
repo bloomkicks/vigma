@@ -9,7 +9,7 @@ function setQuestion(
   let questionKey = Object.keys(question)[0];
 
   state.currentQuestion = questionKey;
-  state.translatedQuestion = translateQuestion(questionKey, state.category);
+  state.translatedQuestion = translateQuestion(questionKey);
   state.availableOptions = question[questionKey];
   state.selectedOptions = selectedOptions || [];
 }

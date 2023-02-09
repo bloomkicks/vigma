@@ -15,7 +15,18 @@ const RadioOption = ({
       value={value}
       label={label}
       checked={isChecked}
-      control={<MuiRadio size="small" color="info" sx={{ lineHeight: 1 }} />}
+      sx={{ "& .MuiFormControlLabel-label": { fontSize: 16 }, mb: 0.2 }}
+      control={
+        <MuiRadio
+          size="small"
+          color="info"
+          sx={{
+            lineHeight: 1,
+            mr: -0.2,
+            height: "30px",
+          }}
+        />
+      }
     />
   );
 };

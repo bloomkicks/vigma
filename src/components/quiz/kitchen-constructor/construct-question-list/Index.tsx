@@ -14,7 +14,8 @@ const ConstructQuestionList = ({
     <Grid
       container
       spacing={5}
-      columnSpacing={{ xs: 3, sm: 4 }}
+      columnSpacing={{ xs: 4, md: 5 }}
+      rowSpacing={{ xs: 3, md: 5 }}
       sx={{
         mx: "auto",
         ml: { xs: "0px" },

@@ -23,9 +23,8 @@ export type Size = {
 export type Translation = ((category: Category) => string) | string;
 
 export type QuizState = {
-  connectWay: string;
   product?: string;
-  isFinished: boolean;
+  isFinished?: boolean;
 
   // current question and its index
   currentQuestion: string;
@@ -37,10 +36,6 @@ export type QuizState = {
 
   // storage of answered questions (array)
   answeredQuestions: FlatQuestion[];
-
-  // all questions - if has category
-  category?: Category;
-  categoryQuestions?: FlatQuestion[];
 
   // translated
   translatedQuestion?: string;

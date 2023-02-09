@@ -1,17 +1,11 @@
+import kitchenQuestions from "../../data/quiz/kitchen-questions";
 import setQuestion from "../../features/quiz/store/set-question";
 import save from "../../features/quiz/store/save";
 
-import allCategoryQuestions from "../../data/quiz/category-questions";
 import { Category, QuizState } from "../../types/quiz";
 
 function nextQuestion(state: QuizState) {
   let index = state.indexOfQuestion;
-
-  // SET CATEGORY IF FIRST QUESTION
-  if (index === -1) {
-    state.category = state.selectedOptions[0] as Category;
-    state.categoryQuestions = allCategoryQuestions[state.category];
-  }
 
   // SAVE ANSWERS IN ANSWERED QUESTIONS
   save(state);
@@ -29,7 +23,7 @@ function nextQuestion(state: QuizState) {
   //   HELP IS PRESSED
   else if (
     state.product ||
-    index >= state.categoryQuestions.length - 1 ||
+    index >= kitchenQuestions.length - 1 ||
     state.selectedOptions[0] === "Помощь специалиста"
   ) {
     state.indexOfQuestion = -5;
@@ -40,7 +34,7 @@ function nextQuestion(state: QuizState) {
 
   // GET NEXT QUESTION
   state.indexOfQuestion++;
-  const nextQuestion = state.categoryQuestions![state.indexOfQuestion];
+  const nextQuestion = kitchenQuestions[state.indexOfQuestion];
 
   setQuestion(state, nextQuestion);
 

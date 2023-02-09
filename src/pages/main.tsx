@@ -7,7 +7,7 @@ import SectionReviews from "../components/reviews/SectionReviews";
 import SectionContacts from "../components/contacts/SectionContacts";
 import Hero from "../components/hero/Hero";
 import Certificates from "../components/certificates/SectionCertificates";
-import SectionMainQuiz from "../components/main-quiz/SectoinMainQuiz";
+import SectionMainQuiz from "../components/main-quiz/SectionMainQuiz";
 
 const MainPage = () => {
   const isReallySmall = useMediaQuery("(max-width: 376px)");

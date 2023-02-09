@@ -9,7 +9,6 @@ import Radio from "@mui/material/Radio";
 import Image from "next/image";
 import { quizActions } from "../../../store/quiz";
 import { useDispatch } from "react-redux";
-import { translateCategory } from "../../../features/quiz/translate";
 import React from "react";
 
 const QuizOption = ({
@@ -17,17 +16,13 @@ const QuizOption = ({
   isSelected,
   question,
   imgSrc,
-  category,
 }: {
   option: string;
   isSelected: boolean;
   question: string;
   imgSrc: string;
-  category: string;
 }) => {
   const dispatch = useDispatch();
-  const optionTitle =
-    category || question === "gift" ? option : translateCategory(option);
 
   function clickHandler() {
     dispatch(quizActions.toggleSelectOption(option));
@@ -92,7 +87,7 @@ const QuizOption = ({
               fontSize: { lg: 21 },
             }}
           >
-            {optionTitle}
+            {option}
           </Typography>
         </Box>
       </Card>

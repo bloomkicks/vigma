@@ -2,6 +2,7 @@ import type { QuizState } from "../../types/quiz";
 import KitchenConstructor from "./kitchen-constructor/KitchenConstructor";
 import SizeForm from "./SizeForm";
 import QuizOptionList from "./quiz-option-list/Index";
+import kitchenQuestions from "../../data/quiz/kitchen-questions";
 import GiftPaper from "./GiftPaper";
 import Actions from "./Actions";
 import Stack from "@mui/material/Stack";
@@ -11,10 +12,8 @@ const Page = ({
   currentQuestion,
   translatedQuestion,
   availableOptions,
-  category,
   selectedOptions,
   indexOfQuestion,
-  categoryQuestions,
   constructorQuestions,
 }: Omit<QuizState, "answeredQuestions" | "connectWay">) => {
   return (
@@ -33,8 +32,8 @@ const Page = ({
         amountOfQuestions={
           currentQuestion === "gift"
             ? 0
-            : categoryQuestions
-            ? categoryQuestions!.length - indexOfQuestion - 1
+            : kitchenQuestions
+            ? kitchenQuestions.length - indexOfQuestion - 1
             : undefined
         }
         currentQuestion={currentQuestion}
@@ -52,25 +51,18 @@ const Page = ({
       ) : (
         <QuizOptionList
           options={availableOptions}
-          category={category}
           question={currentQuestion}
           selectedOptions={selectedOptions}
         />
       )}
       <Actions
-        backDisabled={
-          (!category && currentQuestion === "category") ||
-          ["gift"].includes(currentQuestion)
-        }
-        nextDisabled={
-          selectedOptions.length < 1 && currentQuestion === "category"
-        }
+        backDisabled={["gift"].includes(currentQuestion)}
+        nextDisabled={selectedOptions.length < 0}
         isDalee={
           selectedOptions.length > 0 ||
           currentQuestion === "size" ||
           (currentQuestion === "constructor" &&
-            !!constructorQuestions["dishwasher"]) ||
-          currentQuestion === "category"
+            !!constructorQuestions["dishwasher"])
         }
       />
     </Stack>

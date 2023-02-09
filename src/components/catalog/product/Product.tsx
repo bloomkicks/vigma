@@ -25,9 +25,9 @@ const Product = ({
           textAlign: "left",
           bgcolor: "rgba(0,0,0,0.05)",
           boxShadow: "1px 2px 4px rgba(0,0,0,0.4)",
-          px: { xs: 1.5, md: 2.5 },
+          px: { xs: 1.5, md: 2 },
           py: 4,
-          pt: 2,
+          pt: { xs: 1.7, md: 2.1 },
           borderRadius: "8px",
         }}
         {...overrides}

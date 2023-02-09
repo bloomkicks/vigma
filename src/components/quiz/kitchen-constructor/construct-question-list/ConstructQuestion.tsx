@@ -29,10 +29,10 @@ const ConstructQuestion = ({
   return (
     <Grid item component="section" className="fading">
       <Stack>
-        <Typography variant="subtitle1" mb={1.25}>
+        <Typography mb={1} variant="subtitle2">
           {translateCategory(question)}
         </Typography>
-        <RadioGroup onChange={selectOptionHandler}>
+        <RadioGroup onChange={selectOptionHandler} sx={{ ml: "4px" }}>
           {radios.map((radio) => {
             return (
               <RadioOption

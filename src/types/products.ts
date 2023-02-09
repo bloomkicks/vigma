@@ -5,7 +5,7 @@ export type ProductProperty = {
 
 export type ProductImage = {
   src: string;
-  isVertical?: boolean;
+  isHorizontal?: boolean;
   width?: number;
   height?: number;
 };
@@ -15,7 +15,6 @@ export type ProductInfoProps = {
   description?: string;
   price: string;
   colors: string[];
-  properties: ProductProperty[];
 };
 
 export type ProductProps = {

@@ -3,12 +3,12 @@ import { Category } from "../../types/quiz";
 
 export const categoriesTranslations = {
   kitchen: "Кухни",
-  closet: "Шкафы",
-  childish: "Детская мебель",
-  bathroom: "Мебель для Ванной",
-  shop: "Торговая мебель",
-  office: "Офисная мебель",
-  // constructor questions - categories
+  // closet: "Шкафы",
+  // childish: "Детская мебель",
+  // bathroom: "Мебель для Ванной",
+  // shop: "Торговая мебель",
+  // office: "Офисная мебель",
+  // // constructor questions - categories
   dishwasher: "Посудомойка",
   oven: "Духовoка",
   hood: "Вытяжка",

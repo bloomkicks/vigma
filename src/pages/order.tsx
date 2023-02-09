@@ -46,11 +46,9 @@ const OrderPage = () => {
             currentQuestion={quiz.currentQuestion}
             translatedQuestion={quiz.translatedQuestion}
             availableOptions={quiz.availableOptions}
-            category={quiz.category}
             isFinished={quiz.isFinished}
             selectedOptions={quiz.selectedOptions}
             indexOfQuestion={quiz.indexOfQuestion}
-            categoryQuestions={quiz.categoryQuestions}
             constructorQuestions={quiz.constructorQuestions}
           />
         )}

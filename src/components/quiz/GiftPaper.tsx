@@ -18,14 +18,14 @@ const GiftPaper = ({
   amountOfQuestions: number;
   currentQuestion: string;
 }) => {
-  const isKnown = typeof amountOfQuestions === "number";
-  const isGift = amountOfQuestions === 0 && currentQuestion !== "size";
+  const isKnown = currentQuestion !== "shape";
+  const isGift = currentQuestion === "gift";
   const questions = getFormOfQuestions(amountOfQuestions + 1);
 
   useEffect(() => {
     const giftPaper = document.getElementById("gift-paper");
 
-    if (currentQuestion && currentQuestion !== "category") {
+    if (currentQuestion !== "shape") {
       giftPaper.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [amountOfQuestions]);
@@ -41,7 +41,7 @@ const GiftPaper = ({
           md: "180px",
         },
         width: "100%",
-        px: 5,
+        px: { xs: 4, md: 5 },
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -94,7 +94,7 @@ const GiftPaper = ({
                 component="span"
                 variant="h2"
                 sx={{
-                  fontSize: { xs: 34, sm: 50, md: 70 },
+                  fontSize: { xs: 32, sm: 48, md: 68 },
                   fontFamily: giftFont.fontFamily,
                   color: "secondary.main",
                   verticalAlign: "middle",
@@ -108,7 +108,7 @@ const GiftPaper = ({
                 sx={{
                   verticalAlign: "middle",
                   color: "secondary.main",
-                  ml: 1.1,
+                  ml: { xs: 0.9, md: 1.1 },
                   top: "1px",
                   ...giftFont,
                 }}

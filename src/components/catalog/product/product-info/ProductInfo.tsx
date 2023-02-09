@@ -12,7 +12,6 @@ const ProductInfo = ({
   title,
   description,
   colors,
-  properties,
   sx,
 }: ProductInfoProps & { sx?: any }) => {
   const router = useRouter();
