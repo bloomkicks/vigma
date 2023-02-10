@@ -30,9 +30,7 @@ const Hero = () => {
           letterSpacing: { xs: "0.5px", md: "0.7px" },
         }}
       >
-        {isDesktop
-          ? "КОРПУСНАЯ МЕБЕЛЬ ПО ИНДИВИДУАЛЬНОМУ ПРОЕКТУ"
-          : "КОРПУСНАЯ МЕБЕЛЬ НА ЗАКАЗ"}
+        {isDesktop ? "КУХНИ ПО ИНДИВИДУАЛЬНОМУ ПРОЕКТУ" : "КУХНИ НА ЛЮБОЙ ВКУС"}
       </Typography>
       <Typography
         component="p"

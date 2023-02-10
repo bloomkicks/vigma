@@ -103,7 +103,7 @@ export const mainProducts: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Бархарт" Прямая',
-      colors: ["#0C0C0C", "#4A494F", "#615049"],
+      colors: ["wood-#A88879-#6C5952", "#0C0C0C", "#6F717D"],
       price: "28400",
     },
   },
@@ -122,7 +122,7 @@ export const mainProducts: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Пинк" Угловая',
-      colors: ["#A18E87", "#C2C3C0", "#B2A489"],
+      colors: ["#D2BFC3", "#F6F6F6", "light-#DBC892-#CEBA87"],
       price: "28400",
     },
   },
@@ -141,7 +141,7 @@ export const mainProducts: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Мастер" Угловая',
-      colors: ["wood-#F6F8B7-#A78663", "#3E3C3B", "#CCC3C2"],
+      colors: ["wood-#F6E8B7-#A78663", "#3E3C3B", "#EFE3E3"],
       price: "28400",
     },
   },
@@ -160,7 +160,7 @@ export const mainProducts: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Модерн" с островком',
-      colors: ["#1D1D1D", "#9C876C"],
+      colors: ["wood-#B1A396-#826F60", "light-#222222-#171612"],
       price: "28400",
     },
   },
@@ -183,7 +183,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Фордж" Угловая',
-      colors: ["wood-#D8C3A6-#B4A485", "#385053", "light-#F6F8B7"],
+      colors: ["wood-#D8C3A6-#B4A485", "#385053"],
       price: "28400",
     },
   },
@@ -202,7 +202,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Скай" Угловая',
-      colors: ["#F2EADF", "wood-#BB9872-#8E6143", "#E1CFBF"],
+      colors: ["wood-#BB9872-#8E6143", "#F2EADF", "#E1CFBF"],
       price: "28400",
     },
   },
@@ -221,7 +221,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Шайн" Угловая',
-      colors: ["#A7947D", "wood-#E0B896-#A47E60", "light-#E3C9B0"],
+      colors: ["wood-#E0B896-#A47E60", "#D6CEC7", "light-#EACDA9-#EFE4B8"],
       price: "28400",
     },
   },
@@ -274,15 +274,13 @@ const products: ProductProps[] = [
       },
       {
         src: solid3,
+        isHorizontal: true,
       },
     ],
     info: {
       title: 'Кухня "Солид" Угловая',
       price: "34376",
-      colors: [
-        "#746d71",
-        "repeating-linear-gradient(90deg, #733617, #965632 3px)",
-      ],
+      colors: ["wood-#733617-#965632", "#746d71"],
     },
   },
   {
@@ -300,7 +298,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Винтер" Прямая',
-      colors: ["#E4E9E5", "#84847A", "#E8C399"],
+      colors: ["wood-#D4B596-#C2A482", "#E4E9E5", "#84847A"],
       price: "28400",
     },
   },
@@ -374,7 +372,7 @@ const products: ProductProps[] = [
     info: {
       title: 'Кухня "Мини" c островком',
       price: "33870",
-      colors: ["#747675", "#c4baa4", "#644028"],
+      colors: ["wood-#8D694F-#634938", "#747675", "#c4baa4"],
     },
   },
   {
@@ -413,7 +411,7 @@ const products: ProductProps[] = [
     info: {
       title: 'Кухня "Футуристик" Прямая',
       price: "29875",
-      colors: ["#b8b19f", "#353444"],
+      colors: ["#A49C8F", "#353434", "light-#7C7FC2-#9Fa7eF"],
     },
   },
   {
@@ -429,7 +427,7 @@ const products: ProductProps[] = [
     info: {
       title: 'Кухня "Кварц" Угловая',
       price: "41300",
-      colors: ["#a3bec5", "#6b5851"],
+      colors: ["wood-#8C7F92-#6F5E43", "#BABABF"],
     },
   },
 ];

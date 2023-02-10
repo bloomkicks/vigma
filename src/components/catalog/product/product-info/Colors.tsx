@@ -9,10 +9,12 @@ const Colors = ({ colors }: { colors: string[] }) => {
 
         if (color.includes("wood")) {
           gradient = color.split("-");
-          background = gradient[1];
+          background = `repeating-linear-gradient(89deg, ${gradient[1]} 0px, ${gradient[2]} 2px, ${gradient[1]} 5px, ${gradient[2]} 7px)`;
         } else if (color.includes("light")) {
           gradient = color.split("-");
-          background = gradient[1];
+          background = `linear-gradient(45deg, ${gradient[1]} 18%, ${
+            gradient[2] || "#ffe9bb"
+          } 44%, ${gradient[1]} 70%)`;
         }
 
         return (
