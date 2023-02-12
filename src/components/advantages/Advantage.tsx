@@ -25,8 +25,8 @@ const Advantage = ({
       <Box
         px={1.1}
         py={0.8}
-        pt={isCase ? 0.6 : isContract ? 0.8 : 1}
-        width={{ xs: "70px", md: "80px" }}
+        pt={isCase ? 0.8 : isContract ? 0.8 : 1}
+        width={{ xs: "65px", sm: "70px", md: "80px" }}
         flexShrink="0"
         height="fit-content"
         sx={{

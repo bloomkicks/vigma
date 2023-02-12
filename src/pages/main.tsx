@@ -55,8 +55,8 @@ const MainPage = () => {
         "& > article#hero": {
           maxWidth: "100%",
           px: { xs: 3, md: 5, lg: 6 },
-          pt: isReallySmall ? 9 : { xs: 13, md: 12, lg: 14, xl: 15 },
-          pb: isReallySmall ? 11 : { xs: 16.5, md: 14, lg: 16, xl: 18.5 },
+          pt: isReallySmall ? 9 : { xs: 12, lg: 14, xl: 15 },
+          pb: isReallySmall ? 11 : { xs: 15, md: 14, lg: 16, xl: 18.5 },
           // pt: 0,
           // pb: 0,
         },

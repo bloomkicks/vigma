@@ -49,7 +49,7 @@ const ButtonChoice = () => {
               fontSize: "1.12rem",
               padding: isReallySmall ? "14px 40px" : "",
               borderRadius: "10px",
-              boxShadow: "2px 4px 4px rgba(0,0,0,0.5)",
+              boxShadow: "2px 4px 4px rgba(0,0,0,0.3)",
               ...button.sx,
             }}
           >
