@@ -7,7 +7,7 @@ const Background = () => {
       position="absolute"
       width="100%"
       height="100%"
-      maxHeight={{ xs: 800, md: 700, xl: 800 }}
+      // maxHeight={{ xs: 800, md: 700, xl: 800 }}
       overflow="hidden"
       left="0"
       top="0"
@@ -22,6 +22,22 @@ const Background = () => {
         style={{ userSelect: "none" }}
       />
     </Box>
+    // <Box
+    //   component="img"
+    //   src={process.env.HERO_ASSETS + "/background.png"}
+    //   alt=""
+    //   height="100%"
+    //   width="100%"
+    //   sx={{
+    //     position: "absolute",
+    //     top: 0,
+    //     left: 0,
+    //     overflow: "hidden",
+    //     layout: "fill",
+    //     objectFit: "cover",
+    //     userSelect: "none",
+    //   }}
+    // ></Box>
   );
 };
 

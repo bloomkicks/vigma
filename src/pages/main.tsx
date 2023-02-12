@@ -2,7 +2,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import MainProducts from "../components/main-products/SectionMainProducts";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
-import Advantages from "../components/advantages/Advantages";
+import SectionAdvantages from "../components/advantages/SectionAdvantages";
 import SectionReviews from "../components/reviews/SectionReviews";
 import SectionContacts from "../components/contacts/SectionContacts";
 import Hero from "../components/hero/Hero";
@@ -35,8 +35,7 @@ const MainPage = () => {
           mb: { xs: "30px", md: "35px" },
         },
         "& > article#advantages": {
-          px: { xs: 3, sm: 5, md: 8, lg: 10 },
-          pr: { xs: 3, md: 10, lg: 12 },
+          px: { xs: 3, sm: 5, md: 4, lg: 9 },
           pb: { lg: "55px" },
           pt: "60px",
         },
@@ -55,14 +54,16 @@ const MainPage = () => {
         },
         "& > article#hero": {
           maxWidth: "100%",
-          px: { sm: 6 },
-          pt: isReallySmall ? 9 : { xs: 14.5, md: 12.5, lg: 14, xl: 18.5 },
+          px: { xs: 3, md: 5, lg: 6 },
+          pt: isReallySmall ? 9 : { xs: 13, md: 12, lg: 14, xl: 15 },
           pb: isReallySmall ? 11 : { xs: 16.5, md: 14, lg: 16, xl: 18.5 },
+          // pt: 0,
+          // pb: 0,
         },
       }}
     >
       <Hero />
-      <Advantages />
+      <SectionAdvantages />
       <Divider />
       <MainProducts />
       <Divider />

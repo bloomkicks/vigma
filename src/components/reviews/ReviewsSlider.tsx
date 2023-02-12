@@ -47,6 +47,7 @@ const ReviewsSlider = ({
       flexShrink={0}
       height={{ xs: mobileHeight + 3, md: height + 3 }}
       minWidth={mobileWidth + 3}
+      maxWidth="100vw"
       width={{
         xs: mobileWidth,
         md: slice == 0 ? width : width * (slice + 1) + 19 * slice,

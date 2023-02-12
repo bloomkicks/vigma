@@ -10,10 +10,10 @@ const CertificatesSlider = ({
   certifIndex: number;
   slice: number;
 }) => {
-  let height = 503;
-  let width = 359;
-  let mobileHeight = 392.31;
-  let mobileWidth = 280;
+  let height = 500;
+  let width = 350;
+  let mobileHeight = 378;
+  let mobileWidth = 269;
 
   return (
     <Stack
@@ -22,6 +22,7 @@ const CertificatesSlider = ({
       alignItems="flex-start"
       flexShrink={0}
       minWidth={mobileWidth}
+      maxWidth="100vw"
       width={{
         xs: mobileWidth,
         md: slice == 0 ? width : width * (slice + 1) + 16 * slice,

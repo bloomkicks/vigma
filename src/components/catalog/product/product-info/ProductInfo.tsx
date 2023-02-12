@@ -10,7 +10,6 @@ import Box from "@mui/material/Box";
 
 const ProductInfo = ({
   title,
-  description,
   colors,
   sx,
 }: ProductInfoProps & { sx?: any }) => {
@@ -33,9 +32,6 @@ const ProductInfo = ({
         }}
       >
         {title}
-      </Typography>
-      <Typography component="p" variant="subtitle2" mb={1}>
-        {description || ""}
       </Typography>
       <Stack direction="row" justifyContent="space-between">
         <Colors colors={colors} />

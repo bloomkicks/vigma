@@ -29,10 +29,11 @@ const Arrow = ({
         pl: { xs: 0.2, sm: isLeft ? 0 : 0.7 },
         pr: { xs: 0.2, sm: isLeft ? 0.7 : 0 },
         maxWidth: "10%",
-        minWidth: 50,
+        width: 50,
         position: "relative",
         zIndex: 3,
         opacity: isActive ? 1 : 0.35,
+        flexShrink: { xs: 1, sm: 0 },
       }}
       onClick={() => clickHandler(isLeft)}
     >

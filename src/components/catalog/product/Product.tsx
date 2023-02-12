@@ -28,7 +28,7 @@ const Product = ({
           px: { xs: 1.5, md: 2 },
           py: 4,
           pt: { xs: 1.7, md: 2.1 },
-          borderRadius: "8px",
+          borderRadius: "4px",
         }}
         {...overrides}
       >

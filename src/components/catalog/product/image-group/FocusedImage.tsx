@@ -10,8 +10,8 @@ const FocusedImage = ({ src, width, height }: ProductImage) => {
       width="100%"
       height="70%"
       sx={{
-        borderTopLeftRadius: "6px",
-        borderTopRightRadius: "6px",
+        borderTopLeftRadius: "3px",
+        borderTopRightRadius: "3px",
       }}
     >
       <Image
