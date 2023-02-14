@@ -14,6 +14,10 @@ const Footer = () => {
         pb: 5,
         mt: 9,
         bgcolor: "info.main",
+        color: "white",
+        "& a": {
+          color: "white",
+        },
       }}
     >
       <Typography mb={2} color="white">

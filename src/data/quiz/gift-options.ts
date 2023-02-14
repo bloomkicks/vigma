@@ -1,3 +1,7 @@
-const giftOptions = ["Сковорода", "Набор Ножей", "Смеситель"];
+const giftOptions = [
+  "Встраимаевая вытяжка",
+  "Электрическая плита",
+  "Микроволновая печь",
+];
 
 export default giftOptions;

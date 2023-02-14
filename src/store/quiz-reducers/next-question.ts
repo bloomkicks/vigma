@@ -1,5 +1,6 @@
 import kitchenQuestions from "../../data/quiz/kitchen-questions";
 import setQuestion from "../../features/quiz/store/set-question";
+import giftOptions from "../../data/quiz/gift-options";
 import save from "../../features/quiz/store/save";
 
 import { Category, QuizState } from "../../types/quiz";
@@ -27,7 +28,7 @@ function nextQuestion(state: QuizState) {
     state.selectedOptions[0] === "Помощь специалиста"
   ) {
     state.indexOfQuestion = -5;
-    setQuestion(state, { gift: ["Сковорода", "Набор Ножей", "Смеситель"] });
+    setQuestion(state, { gift: giftOptions });
 
     return state;
   }

@@ -42,6 +42,7 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-end;
+  margin-left: auto;
 }
 
 @media (max-width: 900px) {
@@ -57,7 +58,7 @@
     flex-direction: column;
     transition: transform 0.2s ease-out;
     width: 100%;
-    padding-top: 150px;
+    padding-top: 120px;
   }
 
   .Nav > a {
@@ -88,6 +89,12 @@
     display: block !important;
   }
   .InnerHeader {
-    flex-direction: row-reverse;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 376px) {
+  .InnerHeader {
+    padding: 0 20px;
   }
 }

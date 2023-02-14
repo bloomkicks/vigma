@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+import CallButton from "./CallButton";
 import HeaderMenuSetter from "./HeaderMenuSetter";
 import HeaderLogo from "./HeaderLogo";
 import NavLink from "../../ui/NavLink";
@@ -20,7 +21,7 @@ let links = [
   },
 ];
 
-const Header = (props) => {
+const Header = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   const toggleMenuHandler = (e) => {
@@ -36,7 +37,7 @@ const Header = (props) => {
     e.stopPropagation();
     setIsMenuActive(true);
   };
-  const navBlurHandler = (e) => {
+  const navBlurHandler = () => {
     setIsMenuActive(false);
   };
   const navClickHandler = (e) => {
@@ -53,10 +54,6 @@ const Header = (props) => {
     <>
       <header className={classes.Header}>
         <div className={classes.InnerHeader}>
-          <HeaderMenuSetter
-            toggleMenuHandler={toggleMenuHandler}
-            isActive={isMenuActive}
-          />
           <HeaderLogo />
           <nav
             onClick={navClickHandler}
@@ -74,6 +71,11 @@ const Header = (props) => {
               </NavLink>
             ))}
           </nav>
+          <CallButton />
+          <HeaderMenuSetter
+            toggleMenuHandler={toggleMenuHandler}
+            isActive={isMenuActive}
+          />
         </div>
       </header>
       <div id="header-space" className={classes.HeaderSpace}></div>

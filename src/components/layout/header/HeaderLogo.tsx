@@ -5,7 +5,7 @@ let logoSrc = process.env.GENERAL_ASSETS + "/header-logo.png";
 
 const HeaderLogo = () => {
   return (
-    <NavLink href="/main">
+    <NavLink href="/main" sx={{ pl: 1.5, pr: 2 }}>
       <Image
         height={36.5}
         width={49.5}

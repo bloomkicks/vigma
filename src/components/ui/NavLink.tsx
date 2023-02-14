@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const NavLink = (props) => {
   const router = useRouter();
-  const { isBlack, img, href, children, ...linkProps } = props;
+  const { isBlack, img, href, children, sx, ...linkProps } = props;
   const isActive = router.asPath === href;
 
   return (
@@ -21,6 +21,7 @@ const NavLink = (props) => {
           "&:hover": {
             bgcolor: (theme) => theme.palette.primary.dark + "3a",
           },
+          ...sx,
         }}
       >
         <Typography

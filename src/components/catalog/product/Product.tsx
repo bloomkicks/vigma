@@ -21,14 +21,13 @@ const Product = ({
         sx={{
           width: 500,
           maxWidth: "100%",
-          // maxWidth: { sm: 600, md: 1920 },
           textAlign: "left",
           bgcolor: "rgba(0,0,0,0.05)",
           boxShadow: "1px 2px 4px rgba(0,0,0,0.4)",
           px: { xs: 1.5, md: 2 },
           py: 4,
           pt: { xs: 1.7, md: 2.1 },
-          borderRadius: "4px",
+          borderRadius: "3px",
         }}
         {...overrides}
       >
