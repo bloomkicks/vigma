@@ -40,6 +40,11 @@ const OrderForm = ({
     if (!isAble) return;
     try {
       await sendOrder(telRef.current.value, quiz, size, nameRef.current.value);
+      try {
+        (window as any).ym(90359214, "reachGoal", "order_sent");
+      } catch (err) {
+        console.log("[Данные для аналитики]: Яндекс цель не отправилась");
+      }
       onSuccess();
     } catch (err) {
       onError(err);

@@ -24,7 +24,7 @@ const CancelDialog = ({
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogTitle sx={{ pb: 1, mt: 1, pr: 3.5 }}>
-        <Typography variant="subtitle1">
+        <Typography component="p" variant="subtitle1">
           Вы уверены, что хотите отменить расчёт стоимости?
         </Typography>
       </DialogTitle>

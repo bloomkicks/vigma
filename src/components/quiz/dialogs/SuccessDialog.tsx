@@ -15,7 +15,7 @@ const SuccessDialog = ({
   return (
     <Dialog open={isSuccess}>
       <DialogTitle sx={{ pb: 1, mt: 1, pr: 5 }}>
-        <Typography variant="subtitle1">
+        <Typography component="p" variant="subtitle1">
           Вы успешно отправили заявку на расчёт стоимости
         </Typography>
       </DialogTitle>
