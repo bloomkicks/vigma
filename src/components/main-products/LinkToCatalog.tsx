@@ -14,7 +14,7 @@ const LinkToCatalog = () => {
           mx: "auto",
         }}
       >
-        Перейти в Каталог Кухонь
+        Смотреть весь каталог
       </Button>
     </Link>
   );

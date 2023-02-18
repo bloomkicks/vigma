@@ -1,7 +1,5 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import Stack from "@mui/material/Stack";
 import Product from "./product/Product";
 import products from "../../data/products";
 
@@ -19,10 +17,13 @@ const ProductList = () => {
       <Grid
         container
         component="main"
-        spacing={4}
+        columnSpacing={{ xs: 0, sm: 4 }}
+        rowSpacing={4}
         justifyContent="center"
         px={{ xs: 1, md: 2, lg: 7 }}
         alignItems="flex-start"
+        maxWidth={{ xs: "100%", md: 1366 }}
+        mx="auto"
       >
         {products.map((product) => (
           <>

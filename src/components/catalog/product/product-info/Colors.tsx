@@ -9,7 +9,7 @@ const Colors = ({ colors }: { colors: string[] }) => {
 
         if (color.includes("wood")) {
           gradient = color.split("-");
-          background = `repeating-linear-gradient(89deg, ${gradient[1]} 0px, ${gradient[2]} 2px, ${gradient[1]} 5px, ${gradient[2]} 7px)`;
+          background = `repeating-linear-gradient(90deg, ${gradient[1]} 0px, ${gradient[2]} 2px, ${gradient[1]} 5px, ${gradient[2]} 7px)`;
         } else if (color.includes("light")) {
           gradient = color.split("-");
           background = `linear-gradient(45deg, ${gradient[1]} 18%, ${
@@ -21,12 +21,12 @@ const Colors = ({ colors }: { colors: string[] }) => {
           <Box
             sx={{
               display: "inline-block",
-              mr: 1,
+              mr: 0.7,
               background: background,
-              width: { xs: 36, md: 42 },
-              height: { xs: 36, md: 42 },
-              border: "1px solid #00000040",
-              borderRadius: 2,
+              width: { xs: 38, md: 42.5 },
+              height: { xs: 22, md: 24 },
+              border: "1px solid #101010",
+              borderRadius: "3px",
             }}
             key={color}
           ></Box>

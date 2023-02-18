@@ -11,6 +11,7 @@ import Box from "@mui/material/Box";
 const ProductInfo = ({
   title,
   colors,
+  price,
   sx,
 }: ProductInfoProps & { sx?: any }) => {
   const router = useRouter();
@@ -21,34 +22,61 @@ const ProductInfo = ({
   }
 
   return (
-    <Box position="relative" sx={sx}>
+    <Box
+      position="relative"
+      sx={{
+        px: { xs: 1.5, md: 1.7 },
+        pt: 2.3,
+        pb: 4,
+        borderBottomLeftRadius: "14px",
+        borderBottomRightRadius: "14px",
+        border: "2px solid black",
+        borderTop: "0 solid black",
+        ...sx,
+      }}
+    >
+      <Box
+        position="absolute"
+        top="0"
+        left="0"
+        height="8px"
+        width="100%"
+        bgcolor="#B7D86F"
+        borderBottom="2px solid black"
+      ></Box>
       <Typography
         variant="h3"
         sx={{
-          textTransform: "uppercase",
-          fontSize: "1.75rem",
-          mb: 0.75,
+          textTransform: "capitalize",
+          fontSize: "1.9rem",
           fontWeight: "500",
+          mb: 0.75,
         }}
       >
         {title}
       </Typography>
-      <Stack direction="row" justifyContent="space-between">
+      <Stack direction="row" justifyContent="space-between" mb={2.7}>
+        <Typography variant="body2">от {price} руб/п. м.</Typography>
         <Colors colors={colors} />
-        <Button
-          variant="contained"
-          sx={{
-            lineHeight: { xs: 2.9, md: "61px" },
-            borderRadius: "10px",
-            display: "flex",
-            mt: 2,
-            mr: 0.5,
-          }}
-          onClick={orderHandler}
-        >
-          ЗАКАЗАТЬ
-        </Button>
       </Stack>
+      <Button
+        variant="contained"
+        sx={{
+          lineHeight: { xs: "42px", md: "48px" },
+          fontSize: { xs: "1.3rem", md: "1.15rem" },
+          borderRadius: "10px",
+          mx: "auto",
+          display: "flex",
+          px: 3,
+          bgcolor: "#B7D86F",
+          "&:hover": {
+            bgcolor: "#A2C863",
+          },
+        }}
+        onClick={orderHandler}
+      >
+        ХОЧУ ТАКУЮ КУХНЮ
+      </Button>
     </Box>
   );
 };

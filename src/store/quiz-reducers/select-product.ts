@@ -1,3 +1,4 @@
+import giftOptions from "../../data/quiz/gift-options";
 import setQuestion from "../../features/quiz/store/set-question";
 import save from "../../features/quiz/store/save";
 import { QuizState } from "../../types/quiz";
@@ -12,7 +13,7 @@ function selectProduct(state: QuizState, action: PayloadAction<string>) {
   state.indexOfQuestion = -5;
 
   // SET THE GIFT
-  setQuestion(state, { gift: ["Сковорода", "Набор Ножей", "Смеситель"] });
+  setQuestion(state, { gift: giftOptions });
 }
 
 export default selectProduct;

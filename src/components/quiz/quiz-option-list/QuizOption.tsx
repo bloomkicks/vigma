@@ -60,7 +60,7 @@ const QuizOption = ({
         <Box
           width="100%"
           px={1}
-          pl={{ xs: 6.5, lg: 6.75 }}
+          pl={{ xs: 5.8, lg: 6.7 }}
           py={1}
           pt={{ xs: 1.25, sm: 1 }}
           position="relative"
@@ -73,9 +73,11 @@ const QuizOption = ({
             value={option}
             sx={{
               position: "absolute",
-              left: (theme) => theme.spacing(1),
+              left: 10,
               top: 0,
               height: "100%",
+              textAlign: "left",
+              verticalAlign: "middle",
               ".Mui-disabled": { color: "text.primary" },
             }}
           />
@@ -85,6 +87,8 @@ const QuizOption = ({
             sx={{
               userSelect: "none",
               fontSize: { lg: 21 },
+              textAlign: "left",
+              verticalAlign: "middle",
             }}
           >
             {option}
