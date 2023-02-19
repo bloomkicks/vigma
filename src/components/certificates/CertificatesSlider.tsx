@@ -10,9 +10,9 @@ const CertificatesSlider = ({
   certifIndex: number;
   slice: number;
 }) => {
-  let height = 500;
+  let height = 495;
   let width = 350;
-  let mobileHeight = 378;
+  let mobileHeight = 381;
   let mobileWidth = 269;
 
   return (

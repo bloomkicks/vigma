@@ -26,11 +26,11 @@ const ProductInfo = ({
       position="relative"
       sx={{
         px: { xs: 1.5, md: 1.7 },
-        pt: 2.3,
+        pt: 2.1,
         pb: 4,
         borderBottomLeftRadius: "14px",
         borderBottomRightRadius: "14px",
-        border: "2px solid black",
+        border: "1px solid black",
         borderTop: "0 solid black",
         ...sx,
       }}
@@ -39,10 +39,10 @@ const ProductInfo = ({
         position="absolute"
         top="0"
         left="0"
-        height="8px"
+        height="6px"
         width="100%"
-        bgcolor="#B7D86F"
-        borderBottom="2px solid black"
+        bgcolor="#97dd9e"
+        borderBottom="1px solid black"
       ></Box>
       <Typography
         variant="h3"
@@ -68,10 +68,6 @@ const ProductInfo = ({
           mx: "auto",
           display: "flex",
           px: 3,
-          bgcolor: "#B7D86F",
-          "&:hover": {
-            bgcolor: "#A2C863",
-          },
         }}
         onClick={orderHandler}
       >

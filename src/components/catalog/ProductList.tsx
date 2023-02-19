@@ -17,13 +17,11 @@ const ProductList = () => {
       <Grid
         container
         component="main"
-        columnSpacing={{ xs: 0, sm: 4 }}
+        columnSpacing={{ xs: 0, sm: 3 }}
         rowSpacing={4}
         justifyContent="center"
-        px={{ xs: 1, md: 2, lg: 7 }}
+        px={{ xs: 1, md: 2, lg: 10, xl: 24 }}
         alignItems="flex-start"
-        maxWidth={{ xs: "100%", md: 1366 }}
-        mx="auto"
       >
         {products.map((product) => (
           <>

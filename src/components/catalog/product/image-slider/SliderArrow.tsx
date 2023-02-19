@@ -18,14 +18,14 @@ const SliderArrow = ({
         left: isRight ? "" : 0,
         right: isRight ? 0 : "",
         top: "50%",
-        transform: "translateY(-40%)",
+        transform: "translateY(-35%)",
         zIndex: 2,
         outline: "none",
         border: "none",
       }}
       width={40}
       height={80}
-      bgcolor="rgba(75, 110, 6, 0.4)"
+      bgcolor="rgba(65, 100, 40, 0.4)"
       onClick={() => onClick(isRight)}
     >
       <Box

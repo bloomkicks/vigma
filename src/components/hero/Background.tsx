@@ -13,7 +13,7 @@ const Background = () => {
       sx={{ bgcolor: "#313231" }}
     >
       <Image
-        src={process.env.HERO_ASSETS + "/background.png"}
+        src={process.env.HERO_ASSETS + "/background.jpg"}
         layout="fill"
         objectFit="cover"
         alt=""

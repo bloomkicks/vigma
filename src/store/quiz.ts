@@ -1,8 +1,7 @@
 import { translateQuestion } from "../features/quiz/translate";
-import type { QuizState } from "../types/quiz";
-// import allCategoryQuestions from "../data/quiz/category-questions";
 import kitchenQuestions from "../data/quiz/kitchen-questions";
 import { createSlice } from "@reduxjs/toolkit";
+import type { QuizState } from "../types/quiz";
 
 import nextQuestion from "./quiz-reducers/next-question";
 import clear from "./quiz-reducers/clear";

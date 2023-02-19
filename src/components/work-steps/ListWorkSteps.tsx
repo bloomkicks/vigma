@@ -5,8 +5,8 @@ import Box from "@mui/material/Box";
 let workSteps = [
   "Предоставляем консультацию и отправляем предварительный расчёт",
   "Производим замеры и составляем дизайн-проект",
-  "Заключаем договор, вносится аванс 70% от договора",
-  "Изготавливаем мебель на производстве",
+  "Заключаем договор, вносится аванс 70% по договору",
+  "Изготавливаем мебель на нашем производстве",
   "Доставляем и устанавливаем, вносится остаток 30% по договору",
 ];
 
@@ -15,9 +15,9 @@ const ListWorkSteps = () => {
     <Stack
       alignItems="flex-start"
       justifyContent="flex-start"
-      spacing={1.1}
+      spacing={1}
       mt={{ xs: -2, md: -2.5 }}
-      maxWidth={{ xs: 420, md: 800 }}
+      maxWidth={{ xs: 420, md: 780 }}
       mx="auto"
       pl={{ md: 2 }}
     >
@@ -27,13 +27,23 @@ const ListWorkSteps = () => {
           pl={index === 0 ? "2.5px" : 0}
           textAlign={{ xs: "center", md: "left" }}
         >
-          <Typography variant="h2" component="strong" display="inline-block">
+          <Typography
+            variant="h2"
+            component="strong"
+            fontSize={index < 2 ? "2.4rem" : "2.25rem"}
+            display="inline-block"
+            sx={{
+              transform: `translateY(${
+                index === 2 ? "-1.5" : index === 1 ? "3" : ""
+              }px)`,
+            }}
+          >
             {index + 1}
           </Typography>
           <Box
             sx={{
               height: 35,
-              width: 2,
+              minWidth: 2,
               verticalAlign: "bottom",
               bgcolor: "black",
               ml: 0.8,
@@ -44,7 +54,7 @@ const ListWorkSteps = () => {
           <Typography
             variant="subtitle2"
             display={{ xs: "inline-block", md: "inline" }}
-            sx={{ verticalAlign: "middle" }}
+            sx={{ verticalAlign: "middle", lineHeight: 1.3 }}
           >
             {step}
           </Typography>

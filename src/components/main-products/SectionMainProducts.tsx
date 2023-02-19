@@ -11,7 +11,7 @@ const SectionMainProducts = () => {
       <Typography variant="h2">Наши проекты</Typography>
       <Grid
         container
-        spacing={4}
+        spacing={{ xs: 0, md: 3 }}
         rowSpacing={{ xs: 4, md: 3 }}
         justifyContent="center"
         alignItems="flex-start"

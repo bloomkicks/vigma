@@ -6,15 +6,17 @@ const ErrorPage = () => {
   return (
     <>
       <ErrorHead />
-      <Box sx={{ textAlign: "center", pt: 15, px: 3, mb: 5 }}>
+      <Box sx={{ textAlign: "center", pt: { xs: 12, md: 20 }, px: 3, mb: 25 }}>
         <Box
           component="img"
           alt=""
-          src={process.env.GENERAL_ASSETS + "/error-arrow.svg"}
+          src={process.env.GENERAL_ASSETS + "/error-arrow.png"}
           sx={{
             display: "block",
             mx: "auto",
-            mb: 2,
+            mb: { md: 2 },
+            height: { xs: 110, md: 160 },
+            width: "auto",
             mr: { xs: 1, md: "auto" },
           }}
         ></Box>

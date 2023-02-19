@@ -10,7 +10,7 @@ const Product = ({
   overrides,
 }: ProductProps & { overrides?: any }) => {
   return (
-    <Grid item md={6} xs={12} sx={{ maxWidth: { sm: "420px !important" } }}>
+    <Grid item md={6} xs={12} sx={{ maxWidth: { sm: "405px !important" } }}>
       <Stack
         component="section"
         direction={{ xs: "column", md: "column" }}

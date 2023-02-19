@@ -25,57 +25,57 @@ const econom1 = "econom/fullsize.jpg";
 const econom2 = "econom/angled.jpg";
 
 // Quartz
-const quartz1 = "quartz/fullsize.jpeg";
-const quartz2 = "quartz/angled.jpeg";
+const quartz1 = "quartz/fullsize.jpg";
+const quartz2 = "quartz/angled.jpg";
 
 // Brusnika
-const brusnika1 = "brusnika/longside.jpeg";
-const brusnika2 = "brusnika/angled.jpeg";
+const brusnika1 = "brusnika/longside.jpg";
+const brusnika2 = "brusnika/angled.jpg";
 
 // Mini
-const mini1 = "mini/fullsize.jpeg";
-const mini2 = "mini/zoomed-in.jpeg";
-const mini3 = "mini/zoomed-out.jpeg";
+const mini1 = "mini/fullsize.jpg";
+const mini2 = "mini/zoomed-in.jpg";
+const mini3 = "mini/zoomed-out.jpg";
 
 // Solid
-const solid1 = "solid/fullsize.jpeg";
-const solid2 = "solid/angled.jpeg";
-const solid3 = "solid/zoomed-out.jpeg";
+const solid1 = "solid/fullsize.jpg";
+const solid2 = "solid/angled.jpg";
+const solid3 = "solid/zoomed-out.jpg";
 
 // Sky
-const sky1 = "sky/fullsize.png";
-const sky2 = "sky/longside.png";
-const sky3 = "sky/furniture.png";
+const sky1 = "sky/fullsize.jpg";
+const sky2 = "sky/longside.jpg";
+const sky3 = "sky/furniture.jpg";
 
 // Fair
-const fair1 = "fair/fullsize.png";
-const fair2 = "fair/furniture.png";
-const fair3 = "fair/table.png";
+const fair1 = "fair/fullsize.jpg";
+const fair2 = "fair/furniture.jpg";
+const fair3 = "fair/table.jpg";
 
 // Fordge
-const forge1 = "forge/fullsize.png";
-const forge2 = "forge/longside.png";
-const forge3 = "forge/angled.png";
+const forge1 = "forge/fullsize.jpg";
+const forge2 = "forge/longside.jpg";
+const forge3 = "forge/angled.jpg";
 
 // Master
-const master1 = "master/fullsize.png";
-const master2 = "master/angled.png";
-const master3 = "master/island.png";
+const master1 = "master/fullsize.jpg";
+const master2 = "master/angled.jpg";
+const master3 = "master/island.jpg";
 
 // Pink
-const pink1 = "pink/fullsize.png";
-const pink2 = "pink/longside.png";
-const pink3 = "pink/angled.png";
+const pink1 = "pink/fullsize.jpg";
+const pink2 = "pink/longside.jpg";
+const pink3 = "pink/angled.jpg";
 
 // Shine
-const shine1 = "shine/angled.png";
-const shine2 = "shine/longside.png";
-const shine3 = "shine/furniture.png";
+const shine1 = "shine/angled.jpg";
+const shine2 = "shine/longside.jpg";
+const shine3 = "shine/furniture.jpg";
 
 // Standard
-const standard1 = "standard/angled.png";
-const standard2 = "standard/longside.png";
-const standard3 = "standard/fridge.png";
+const standard1 = "standard/angled.jpg";
+const standard2 = "standard/longside.jpg";
+const standard3 = "standard/fridge.jpg";
 
 // Futuristic
 const futuristic1 = "futuristic/furniture.jpg";
@@ -83,8 +83,8 @@ const futuristic2 = "futuristic/shelfs.jpg";
 const futuristic3 = "futuristic/zoomed-out.jpg";
 
 // Explit
-const explit1 = "explit/fullsize.jpeg";
-const explit2 = "explit/zoomed-out.jpeg";
+const explit1 = "explit/fullsize.jpg";
+const explit2 = "explit/zoomed-out.jpg";
 
 export const mainProducts: ProductProps[] = [
   {

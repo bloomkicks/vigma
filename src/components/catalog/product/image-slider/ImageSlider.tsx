@@ -31,8 +31,8 @@ const ImageSlider = ({ images }: { images: ProductImage[] }) => {
       sx={{
         borderTopLeftRadius: "15px",
         borderTopRightRadius: "15px",
-        border: "2px solid black",
-        borderTop: "2.5px solid black",
+        border: "1px solid black",
+        borderTop: "1.5px solid black",
         overflow: "hidden",
       }}
     >
