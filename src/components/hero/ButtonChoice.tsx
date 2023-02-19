@@ -29,7 +29,7 @@ const ButtonChoice = () => {
   return (
     <Stack
       direction={{ xs: "column", sm: "row" }}
-      spacing={{ xs: 2.3, md: 4 }}
+      spacing={{ xs: 2.2, md: 4 }}
       alignItems={{ xs: "stretch", sm: "center" }}
       justifyContent="center"
       sx={{

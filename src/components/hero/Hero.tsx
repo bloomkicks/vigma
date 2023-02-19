@@ -27,7 +27,7 @@ const Hero = () => {
           position: "relative",
           mb: { xs: 1.4, md: 1.6 },
           // letterSpacing: { xs: "0.5px", md: "0.6px" },
-          fontSize: { xs: "2.4rem", sm: "3rem", md: "3.4rem" },
+          fontSize: { xs: "2.5rem", sm: "3rem", md: "3.4rem" },
           maxWidth: 1000,
         }}
       >
@@ -38,14 +38,15 @@ const Hero = () => {
       <Typography
         variant="h2"
         component="h3"
-        fontSize={{ xs: "1.75rem", md: "1.94rem" }}
+        fontSize={{ xs: "1.65rem", md: "1.9rem" }}
         lineHeight={1.3}
         fontWeight="400"
         position="relative"
         color="white"
         mb={6}
+        maxWidth={900}
       >
-        Дешевле рынка на
+        Специальное предложение
         <Typography
           variant="inherit"
           component="span"
@@ -53,18 +54,29 @@ const Hero = () => {
           sx={{ fontWeight: "bold" }}
         >
           {" "}
-          40%{" "}
+          до конца месяца
         </Typography>
-        до 8 марта. Успейте сделать заказ
-      </Typography>
-      <Typography position="relative" color="white" mb={3.6}>
-        Рассчитайте стоимость кухни и получите подарок на выбор.{" "}
-        <Box component="br" display={{ xs: "none", md: "block" }}></Box>
-        Замер и составление{" "}
+        . Все кухни нашего производства на заказ со скидкой{" "}
         <Typography variant="inherit" component="span" display="inline-block">
-          дизайн-проекта
+          до{" "}
+          <Typography
+            variant="inherit"
+            component="span"
+            display="inline"
+            sx={{ fontWeight: "bold" }}
+          >
+            40%
+          </Typography>
+        </Typography>
+      </Typography>
+      <Typography position="relative" color="white" mb={{ xs: 3.2, md: 3.4 }}>
+        Успейте сделать заказ и получите подарок на выбор.{" "}
+        <Box component="br" display={{ xs: "none", md: "block" }}></Box>
+        Составляем{" "}
+        <Typography variant="inherit" component="span" display="inline-block">
+          дизайн-проект
         </Typography>{" "}
-        – бесплатно
+        под ключ
       </Typography>
       <ButtonChoice />
     </Stack>
