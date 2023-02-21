@@ -6,7 +6,7 @@ import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import ButtonChoice from "./ButtonChoice";
 
-const Hero = () => {
+const SectionHero = () => {
   const theme = useTheme();
   const isReallySmall = useMediaQuery("(max-width: 376px)");
   const isNotMobile = useMediaQuery(theme.breakpoints.up("sm"));
@@ -83,4 +83,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default SectionHero;

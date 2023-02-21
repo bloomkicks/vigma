@@ -7,8 +7,8 @@ import { useRouter } from "next/router";
 
 import SuccessDialog from "../components/quiz/dialogs/SuccessDialog";
 import ErrorDialog from "../components/quiz/dialogs/ErrorDialog";
-import OrderForm from "../components/quiz/order-form/Index";
-import QuizPage from "../components/quiz/QuizPage";
+import OrderForm from "../components/quiz/order-form/OrderForm";
+import PageQuiz from "../components/quiz/PageQuiz";
 import Box from "@mui/material/Box";
 
 const OrderPage = () => {
@@ -42,7 +42,7 @@ const OrderPage = () => {
             onError={errorHandler}
           />
         ) : (
-          <QuizPage
+          <PageQuiz
             currentQuestion={quiz.currentQuestion}
             translatedQuestion={quiz.translatedQuestion}
             availableOptions={quiz.availableOptions}

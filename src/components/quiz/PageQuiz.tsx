@@ -1,14 +1,14 @@
 import type { QuizState } from "../../types/quiz";
 import KitchenConstructor from "./kitchen-constructor/KitchenConstructor";
 import SizeForm from "./SizeForm";
-import QuizOptionList from "./quiz-option-list/Index";
+import ListQuizOption from "./quiz-option-list/ListQuizOption";
 import kitchenQuestions from "../../data/quiz/kitchen-questions";
 import GiftPaper from "./GiftPaper";
 import Actions from "./Actions";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
-const Page = ({
+const PageQuiz = ({
   currentQuestion,
   translatedQuestion,
   availableOptions,
@@ -49,7 +49,7 @@ const Page = ({
       ) : currentQuestion === "size" ? (
         <SizeForm />
       ) : (
-        <QuizOptionList
+        <ListQuizOption
           options={availableOptions}
           question={currentQuestion}
           selectedOptions={selectedOptions}
@@ -69,4 +69,4 @@ const Page = ({
   );
 };
 
-export default Page;
+export default PageQuiz;

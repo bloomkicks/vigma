@@ -13,10 +13,13 @@ const HeaderMenuSetter = ({
 }) => {
   return !isActive ? (
     <Box
+      component="button"
       position="relative"
       width={31.5}
       height={23}
       sx={{
+        border: "none",
+        bgcolor: "transparent",
         display: { xs: "block", md: "none" },
         mr: 1,
         "&:hover, &:focus": {
@@ -24,6 +27,7 @@ const HeaderMenuSetter = ({
           transform: "scaleY(1.1)",
         },
       }}
+      onClick={toggleMenuHandler}
     >
       <Image
         src={hamMenuSrc}
@@ -31,15 +35,17 @@ const HeaderMenuSetter = ({
         title="Открыть меню"
         layout="fill"
         loading="eager"
-        onClick={toggleMenuHandler}
       />
     </Box>
   ) : (
     <Box
+      component="button"
       position="relative"
       width={24.05}
       height={23}
       sx={{
+        border: "none",
+        bgcolor: "transparent",
         display: { xs: "block", md: "none" },
         mr: 1,
         "&:hover, &:focus": {
@@ -47,6 +53,7 @@ const HeaderMenuSetter = ({
           transform: "scaleX(1.1)",
         },
       }}
+      onClick={toggleMenuHandler}
     >
       <Image
         src={crossSrc}
@@ -54,7 +61,6 @@ const HeaderMenuSetter = ({
         title="Закрыть меню"
         layout="fill"
         loading="eager"
-        onClick={toggleMenuHandler}
       />
     </Box>
   );

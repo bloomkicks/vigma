@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import React from "react";
 
 const TelInput = React.forwardRef(
-  ({ onChange }: { onChange: (e: any) => void }, ref) => {
+  ({ onChange, sx }: { onChange: (e: any) => void; sx?: any }, ref) => {
     return (
       <TextField
         variant="outlined"
@@ -18,6 +18,7 @@ const TelInput = React.forwardRef(
         inputRef={ref}
         helperText="Введите номер вашего телефона"
         placeholder="+7 (___) ___-__-__"
+        sx={sx || {}}
       />
     );
   },

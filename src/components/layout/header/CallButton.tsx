@@ -1,12 +1,15 @@
-import Link from "next/link";
-import Typography from "@mui/material/Typography";
+import { useState } from "react";
+import ContactForm from "../../contact-form/ContactForm";
 import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
 
 const CallButton = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Link href="tel:+7 (812) 642-60-51" passHref>
+    <>
+      <ContactForm open={isOpen} onClose={() => setIsOpen(false)} />
       <Button
+        onClick={() => setIsOpen(true)}
         variant="contained"
         color="primary"
         sx={{
@@ -20,7 +23,7 @@ const CallButton = () => {
       >
         ПОЗВОНИТЬ
       </Button>
-    </Link>
+    </>
   );
 };
 

@@ -1,9 +1,11 @@
+import { useState } from "react";
+import ContactForm from "../contact-form/ContactForm";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Link from "next/link";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
-let buttons = [
+let buttons: any[] = [
   {
     link: "/order",
     title: "РАССЧИТАТЬ СТОИМОСТЬ",
@@ -12,7 +14,7 @@ let buttons = [
     },
   },
   {
-    link: "#contacts",
+    link: "#",
     title: "СВЯЗАТЬСЯ С НАМИ",
     sx: {
       bgcolor: "rgba(255,255,255,90%)",
@@ -25,6 +27,8 @@ let buttons = [
 ];
 const ButtonChoice = () => {
   const isReallySmall = useMediaQuery("(max-width: 376px)");
+  const [isOpen, setIsOpen] = useState(false);
+  buttons[1].onClick = () => setIsOpen(true);
 
   return (
     <Stack
@@ -43,6 +47,7 @@ const ButtonChoice = () => {
           <Button
             component="a"
             variant="contained"
+            onClick={button.onClick || function () {}}
             sx={{
               lineHeight: isReallySmall ? 1.4 : { xs: 3.1 },
               flexShrink: 0,
@@ -57,6 +62,7 @@ const ButtonChoice = () => {
           </Button>
         </Link>
       ))}
+      <ContactForm open={isOpen} onClose={() => setIsOpen(false)} />
     </Stack>
   );
 };

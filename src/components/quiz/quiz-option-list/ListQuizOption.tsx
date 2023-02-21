@@ -3,7 +3,7 @@ import QuizOption from "./QuizOption";
 import Grid from "@mui/material/Grid";
 import React from "react";
 
-const QuizOptionList = ({
+const ListQuizOption = ({
   options,
   selectedOptions,
   question,
@@ -46,4 +46,4 @@ const QuizOptionList = ({
   );
 };
 
-export default QuizOptionList;
+export default ListQuizOption;

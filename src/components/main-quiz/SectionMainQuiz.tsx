@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 import KitchenConstructor from "../quiz/kitchen-constructor/KitchenConstructor";
 import SizeForm from "../quiz/SizeForm";
-import QuizOptionList from "../quiz/quiz-option-list/Index";
+import ListQuizOption from "../quiz/quiz-option-list/ListQuizOption";
 import GiftPaper from "../quiz/GiftPaper";
 import Actions from "../quiz/Actions";
 import Stack from "@mui/material/Stack";
@@ -59,7 +59,7 @@ const SectionMainQuiz = () => {
         ) : currentQuestion === "size" ? (
           <SizeForm />
         ) : (
-          <QuizOptionList
+          <ListQuizOption
             key={currentQuestion}
             options={availableOptions}
             question={currentQuestion}

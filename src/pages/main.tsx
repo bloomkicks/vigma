@@ -1,12 +1,12 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
-import MainProducts from "../components/main-products/SectionMainProducts";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
+import SectionMainProducts from "../components/main-products/SectionMainProducts";
 import SectionAdvantages from "../components/advantages/SectionAdvantages";
 import SectionReviews from "../components/reviews/SectionReviews";
 import SectionContacts from "../components/contacts/SectionContacts";
-import Hero from "../components/hero/Hero";
-import Certificates from "../components/certificates/SectionCertificates";
+import SectionHero from "../components/hero/SectionHero";
+import SectionCertificates from "../components/certificates/SectionCertificates";
 import SectionMainQuiz from "../components/main-quiz/SectionMainQuiz";
 import SectionWorkSteps from "../components/work-steps/SectionWorkSteps";
 
@@ -60,16 +60,16 @@ const MainPage = () => {
         },
       }}
     >
-      <Hero />
+      <SectionHero />
       <SectionAdvantages />
       <Divider />
       <SectionWorkSteps />
       <Divider />
-      <MainProducts />
+      <SectionMainProducts />
       <Divider />
       <SectionReviews />
       <Divider />
-      <Certificates />
+      <SectionCertificates />
       <Divider />
       <SectionContacts />
       <Divider />
