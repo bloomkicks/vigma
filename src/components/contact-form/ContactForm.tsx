@@ -40,10 +40,8 @@ const ContactForm = ({
   }
 
   const { submitHandler, isSuccess, isLoading, error, clearState } = useForm({
-    onSubmit: onSubmit,
-    isValid: phoneRef.current
-      ? phoneRef.current.value.replaceAll(/[^\d]/g, "").length >= 11
-      : false,
+    onSubmit,
+    isValid,
   });
 
   return (
@@ -84,8 +82,8 @@ const ContactForm = ({
             clickHandler={onClose}
             sx={{
               position: "absolute",
-              top: 16.5,
-              right: 12,
+              top: 17,
+              right: { xs: 13, sm: 15 },
               opacity: 0.9,
               width: { xs: 30, sm: 40 },
               height: { xs: 29, sm: 38 },

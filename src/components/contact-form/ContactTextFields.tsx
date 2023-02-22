@@ -22,7 +22,6 @@ const ContactTextFields = ({
         inputProps={{
           onInput: phoneInputHandler,
           onChange: onPhoneChange,
-          required: true,
         }}
         inputRef={phoneRef}
         placeholder="+7 (___) ___-__-__"

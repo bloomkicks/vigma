@@ -22,8 +22,12 @@ const CancelDialog = ({
   }
 
   return (
-    <Dialog open={open} onClose={onClose}>
-      <DialogTitle sx={{ pb: 1, mt: 1, pr: 3.5 }}>
+    <Dialog
+      open={open}
+      onClose={onClose}
+      sx={{ "& .MuiPaper-root": { mx: 2 } }}
+    >
+      <DialogTitle sx={{ pb: 1, mt: 1, pr: { md: 3.5 } }}>
         <Typography component="p" variant="subtitle1">
           Вы уверены, что хотите отменить расчёт стоимости?
         </Typography>
@@ -33,7 +37,7 @@ const CancelDialog = ({
           Это очистит выбранные вами ответы
         </Typography>
       </DialogContent>
-      <DialogActions sx={{ mr: 2 }}>
+      <DialogActions sx={{ mr: 2, mb: 0.2 }}>
         <Button onClick={onClose} sx={{ color: "text.secondary", px: 1.75 }}>
           Нет
         </Button>

@@ -2,7 +2,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 
 module.exports = {
-  assetPrefix: "./",
+  // assetPrefix: "./",
   images: {
     unoptimized: true,
   },
@@ -40,5 +40,6 @@ module.exports = {
     GENERAL_ASSETS: "./images/general",
     QUIZ_ASSETS: "./images/quiz",
     CERTIFICATES_ASSETS: "./images/certificates",
+    SOCIAL_ASSETS: "./images/social",
   },
 };

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { ContactFormState } from "../../types/contact-form";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -21,24 +20,32 @@ const ContactInfoDialogs = ({
       onClose={() => {
         setTimeout(() => onClose(), 2000);
       }}
+      sx={{ "& .MuiPaper-root": { mx: 2 } }}
     >
-      <DialogTitle sx={{ pb: 1, mt: 1, pr: 5 }}>
+      <DialogTitle
+        sx={{ pb: { xs: 1.05, sm: 1.25 }, mt: 1, px: 2.75, pr: { md: 3.5 } }}
+      >
         <Typography component="p" variant="subtitle1">
           {isSuccess || !error
             ? "Вы успешно отправили заявку"
             : "Что-то пошло не так, попробуйте позже"}
         </Typography>
       </DialogTitle>
-      <DialogContent sx={{ mb: 1 }}>
+      <DialogContent sx={{ px: 2.75, pr: { md: 3.5 } }}>
         <Typography variant="body1">
           {isSuccess || !error
             ? "В течении суток с вами свяжется наш консультант"
             : "Ошибка: " + error}
         </Typography>
       </DialogContent>
-      <DialogActions sx={{ mr: 2 }}>
+      <DialogActions sx={{ mr: { sm: 1 }, mb: 0.25 }}>
         <Button
-          sx={{ color: "text.secondary", px: 1.75, textTransform: "none" }}
+          sx={{
+            color: "text.secondary",
+            px: 1.75,
+            ml: "auto",
+            textTransform: "none",
+          }}
           onClick={onClose}
         >
           Вернуться на главную страницу

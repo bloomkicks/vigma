@@ -1,3 +1,6 @@
+import ContactInfoDialogs from "../../contact-form/ContactInfoDialogs";
+import PrivacyAgree from "../../privacy/PrivacyAgree";
+import useForm from "../../../hooks/use-form";
 import Divider from "@mui/material/Divider";
 import Link from "next/link";
 import { RootState } from "../../../store";
@@ -17,12 +20,10 @@ import type { QuizState } from "../../../types/quiz";
 
 const OrderForm = ({
   quiz,
-  onSuccess,
-  onError,
+  onClose,
 }: {
   quiz: QuizState;
-  onSuccess: () => void;
-  onError: (err: string) => void;
+  onClose: () => void;
 }) => {
   useEffect(() => {
     const orderForm = document.querySelector("#order-form");
@@ -34,73 +35,76 @@ const OrderForm = ({
   const size = useSelector((state: RootState) => state.size);
   const telRef = useRef<HTMLInputElement>();
   const nameRef = useRef<HTMLInputElement>();
-  const [isAble, setIsAble] = useState<boolean>(false);
-  async function totalSubmitHandler(e: React.FormEvent) {
-    e.preventDefault();
-    if (!isAble) return;
+  const [isValid, setIsValid] = useState<boolean>(false);
+
+  async function onSubmit() {
+    await sendOrder(telRef.current.value, quiz, size, nameRef.current.value);
     try {
-      await sendOrder(telRef.current.value, quiz, size, nameRef.current.value);
-      try {
-        (window as any).ym(90359214, "reachGoal", "order_sent");
-      } catch (err) {
-        console.log("[Данные для аналитики]: Яндекс цель не отправилась");
-      }
-      onSuccess();
+      (window as any).ym(90359214, "reachGoal", "order_sent");
     } catch (err) {
-      onError(err);
+      console.log("[Данные для аналитики]: Яндекс цель не отправилась");
     }
   }
+
   function telInputChangeHandler(e: React.ChangeEvent<HTMLInputElement>) {
     const number = e.target.value.replaceAll(/[^\d]/g, "");
-    setIsAble(number.length === 11);
+    setIsValid(number.length === 11);
   }
 
+  const { submitHandler, isSuccess, error, clearState } = useForm({
+    onSubmit: onSubmit,
+    isValid,
+  });
+
   return (
-    <Box pb={6} px={2} pt={6} id="order-form" className="vertical-large-fading">
-      <Divider sx={{ mb: 3.5 }} />
-      <Typography variant="h4" mb={{ xs: 3.75, md: 4.5 }} align="center">
-        За каким номером зафиксировать подарок?
-      </Typography>
-      <FormControl component="form" fullWidth onSubmit={totalSubmitHandler}>
-        <Stack
-          direction="column"
-          alignItems="center"
-          spacing={{ xs: 1.5, md: 2 }}
-          sx={{
-            mb: { xs: 4.5, md: 6 },
-            width: "100%",
-            "&>*": { maxWidth: 500, width: "100%" },
-          }}
-        >
-          <TelInput ref={telRef} onChange={telInputChangeHandler} />
-          <NameInput ref={nameRef} />
-        </Stack>
-        <OrderActions isAble={isAble} />
-      </FormControl>
-      <Typography
-        variant="body2"
-        fontSize={{ xs: "12px", md: "14px" }}
-        maxWidth="80%"
-        mt={{ xs: 6, md: 7 }}
-        mx="auto"
-        textAlign="center"
-        sx={{
-          opacity: 0.7,
-        }}
+    <>
+      <Box
+        pb={6}
+        px={2}
+        pt={6}
+        id="order-form"
+        className="vertical-large-fading"
       >
-        Нажимая на кнопку, вы соглашаетесь с{" "}
-        <Link href="/privacy" passHref>
-          <Typography
-            component="a"
-            variant="body2"
-            fontSize={{ xs: "12px", md: "14px" }}
+        <Divider sx={{ mb: 3.5 }} />
+        <Typography variant="h4" mb={{ xs: 3.75, md: 4.5 }} align="center">
+          За каким номером зафиксировать подарок?
+        </Typography>
+        <FormControl component="form" fullWidth onSubmit={submitHandler}>
+          <Stack
+            direction="column"
+            alignItems="center"
+            spacing={{ xs: 1.5, md: 2 }}
+            sx={{
+              mb: { xs: 4.5, md: 6 },
+              width: "100%",
+              "&>*": { maxWidth: 500, width: "100%" },
+            }}
           >
-            нашей политикой конфиденциальности
-          </Typography>
-        </Link>
-      </Typography>
-      <Divider sx={{ mt: 3 }} />
-    </Box>
+            <TelInput ref={telRef} onChange={telInputChangeHandler} />
+            <NameInput ref={nameRef} />
+          </Stack>
+          <OrderActions isAble={isValid} />
+        </FormControl>
+        <PrivacyAgree
+          sx={{
+            maxWidth: "80%",
+            mt: { xs: 6, md: 7 },
+            mx: "auto",
+          }}
+        />
+        <Divider sx={{ mt: 3 }} />
+      </Box>
+      <ContactInfoDialogs
+        open={isSuccess || !!error}
+        error={error}
+        isLoading={false}
+        isSuccess={isSuccess}
+        onClose={() => {
+          onClose();
+          clearState();
+        }}
+      />
+    </>
   );
 };
 

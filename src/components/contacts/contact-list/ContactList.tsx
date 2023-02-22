@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 
 let contacts = [
   {
-    contact: "Номер Телефона",
+    contact: "Телефон",
     value: "+7 (812) 642-60-51",
     link: "tel:+7 (812) 642-60-51",
   },
@@ -25,8 +25,8 @@ let contacts = [
   //   link: "mailto:vigmaspb@gmail.com",
   // },
   {
-    contact: "Имя Менеджера",
-    value: "Филатова Галина",
+    contact: "Менеджер",
+    value: "Галина Филатова",
     link: "none",
   },
   // {
