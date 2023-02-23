@@ -24,6 +24,7 @@ const ContactsMap = ({ sx }: { sx?: any }) => {
           Вигма Мебель
         </a>
         <iframe
+          title="Мы на yandex картах"
           src="https://yandex.ru/map-widget/v1/?from=mapframe&indoorLevel=1&ll=30.273911%2C60.028111&mode=search&oid=191512945068&ol=biz&source=mapframe&utm_source=mapframe&z=17.6"
           frameBorder="0"
           allowFullScreen

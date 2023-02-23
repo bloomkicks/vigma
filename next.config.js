@@ -13,19 +13,6 @@ module.exports = {
     };
     return config;
   },
-  // async headers() {
-  //   return [
-  //     {
-  //       source: "/*",
-  //       headers: [
-  //         {
-  //           key: "Content-Security-Policy",
-  //           value: "default-src *; script-src * 'self' 'unsafe-inline' 'unsafe-eval'",
-  //         },
-  //       ],
-  //     },
-  //   ];
-  // },
   env: {
     SERVICE_ID: "service_kiq0jp9",
     TEMPLATE_ID: "template_hci5war",

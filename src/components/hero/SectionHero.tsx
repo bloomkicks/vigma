@@ -8,7 +8,6 @@ import ButtonChoice from "./ButtonChoice";
 
 const SectionHero = () => {
   const theme = useTheme();
-  const isReallySmall = useMediaQuery("(max-width: 376px)");
   const isNotMobile = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
@@ -26,7 +25,6 @@ const SectionHero = () => {
         sx={{
           position: "relative",
           mb: { xs: 1.4, md: 1.6 },
-          // letterSpacing: { xs: "0.5px", md: "0.6px" },
           fontSize: { xs: "2.5rem", sm: "3rem", md: "3.4rem" },
           maxWidth: 1000,
         }}

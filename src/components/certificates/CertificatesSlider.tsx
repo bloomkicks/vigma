@@ -10,10 +10,10 @@ const CertificatesSlider = ({
   certifIndex: number;
   slice: number;
 }) => {
-  let height = 495;
-  let width = 350;
-  let mobileHeight = 381;
-  let mobileWidth = 269;
+  let height = 484 + 4;
+  let width = 340 + 4;
+  let mobileHeight = 377 + 4;
+  let mobileWidth = 265 + 4;
 
   return (
     <Stack
@@ -31,18 +31,25 @@ const CertificatesSlider = ({
       sx={{ overflow: "hidden" }}
     >
       {certificates.map((certif) => {
-        const imgSrc = `${process.env.CERTIFICATES_ASSETS}/сертификат-${certif}.png`;
+        const imgSrc = `${process.env.CERTIFICATES_ASSETS}/сертификат-${certif}`;
         return (
           <Box
             component="img"
-            src={imgSrc}
+            src={imgSrc + ".jpg"}
             sx={{
               transform: {
-                xs: `translateX(-${certifIndex * (mobileWidth + 16)}px)`,
+                xs: `translateX(-${certifIndex * (mobileWidth + 14)}px)`,
                 md: `translateX(-${certifIndex * (width + 16)}px)`,
               },
+              boxShadow: "1px 2px 4px rgba(0,0,0,0.4)",
               transition: "transform 0.3s ease-out",
             }}
+            srcSet={`${imgSrc}.jpg 340w, ${imgSrc}-sm.jpg 265w`}
+            sizes={`
+              (max-width: 901px) 265px,
+              340px
+            `}
+            alt="Изображение не найдено. Попробуйте обновить страницу"
             width={{ xs: mobileWidth, md: width }}
             key={certif}
           />

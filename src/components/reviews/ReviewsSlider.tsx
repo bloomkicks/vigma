@@ -3,28 +3,28 @@ import Box from "@mui/material/Box";
 
 const reviews = [
   {
-    imgName: "Геннадий-Дальневосточный.jpg",
+    imgName: "Геннадий-Дальневосточный",
   },
   {
-    imgName: "Ирина-Репищева.jpg",
+    imgName: "Ирина-Репищева",
   },
   {
-    imgName: "Лидия-Александровна.jpg",
+    imgName: "Лидия-Александровна",
   },
   {
-    imgName: "Наталья-Вавиловых.jpg",
+    imgName: "Наталья-Вавиловых",
   },
   {
-    imgName: "Ольга-Тореза.jpg",
+    imgName: "Ольга-Тореза",
   },
   {
-    imgName: "Александра+Ветеранов.jpg",
+    imgName: "Александра+Ветеранов",
   },
   {
-    imgName: "Нина+Денис.jpg",
+    imgName: "Нина+Денис",
   },
   {
-    imgName: "Надежда+Конструкторов.jpg",
+    imgName: "Надежда+Конструкторов",
   },
 ];
 
@@ -55,23 +55,31 @@ const ReviewsSlider = ({
       spacing={2}
       sx={{ overflow: "hidden" }}
     >
-      {reviews.map((review) => (
-        <Box
-          component="img"
-          src={process.env.REVIEWS_ASSETS + "/" + review.imgName}
-          sx={{
-            transform: {
-              xs: `translateX(-${reviewIndex * (mobileWidth + 16)}px)`,
-              md: `translateX(-${reviewIndex * (width + 16)}px)`,
-            },
-            transition: "transform 0.3s ease-out",
-            boxShadow: "1px 3px 3px rgba(0,0,0,0.25)",
-          }}
-          width={{ xs: mobileWidth, md: width }}
-          // height="100%"
-          key={review.imgName}
-        />
-      ))}
+      {reviews.map((review) => {
+        const imgSrc = process.env.REVIEWS_ASSETS + "/" + review.imgName;
+        return (
+          <Box
+            component="img"
+            alt="Изображение не найдено. Попробуйте обновить страницу"
+            src={imgSrc + ".jpg"}
+            srcSet={`${imgSrc}.jpg 349w, ${imgSrc}-sm.jpg 255w`}
+            sizes={`
+            (max-width: 901px) 255px,
+            349px
+          `}
+            sx={{
+              transform: {
+                xs: `translateX(-${reviewIndex * (mobileWidth + 16)}px)`,
+                md: `translateX(-${reviewIndex * (width + 16)}px)`,
+              },
+              transition: "transform 0.3s ease-out",
+              boxShadow: "1px 3px 3px rgba(0,0,0,0.25)",
+            }}
+            width={{ xs: mobileWidth, md: width }}
+            key={review.imgName}
+          />
+        );
+      })}
     </Stack>
   );
 };

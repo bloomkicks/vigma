@@ -71,6 +71,7 @@ const QuizOption = ({
             checked={isSelected}
             name={question}
             value={option}
+            id={question + "-" + option}
             sx={{
               position: "absolute",
               left: 10,
@@ -83,6 +84,8 @@ const QuizOption = ({
           />
           <Typography
             variant="h5"
+            component="label"
+            htmlFor={question + "-" + option}
             display="inline"
             sx={{
               userSelect: "none",

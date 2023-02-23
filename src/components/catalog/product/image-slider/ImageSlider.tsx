@@ -55,8 +55,8 @@ const ImageSlider = ({ images }: { images: ProductImage[] }) => {
         >
           <Box
             component="img"
+            alt="Изображение не найдено. Попробуйте обновить страницу"
             src={process.env.PRODUCTS_ASSETS + "/" + image.src}
-            alt=""
             width={{ xs: mobileWidth, md: width }}
             minHeight={{ xs: mobileHeight, md: height }}
             sx={{
