@@ -1,3 +1,4 @@
+import Socials from "../layout/footer/Socials";
 import ItemContact from "./contact-list/ItemContact";
 import Typography from "@mui/material/Typography";
 import ContactList from "./contact-list/ContactList";
@@ -6,7 +7,8 @@ import Box from "@mui/material/Box";
 const ContactsInfo = ({ sx }: { sx?: any }) => {
   return (
     <Box component="section" sx={sx}>
-      <ContactList />
+      <ContactList sx={{ mb: { xs: 2.5, md: 3 } }} />
+      <Socials sx={{ mb: { xs: 5, md: 7 } }} />
       <ItemContact
         contact="Производство"
         value={
@@ -24,13 +26,12 @@ const ContactsInfo = ({ sx }: { sx?: any }) => {
               ул. Автобусная,
             </Typography>
             <Typography component="span" sx={{ display: "inline-block" }}>
-              д. 3
+              д. 3В
             </Typography>
           </>
         }
         link="none"
         isColumn
-        sx={{ mt: { xs: 2.5, md: 4.5 } }}
       />
     </Box>
   );

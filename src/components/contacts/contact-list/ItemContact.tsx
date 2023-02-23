@@ -14,6 +14,7 @@ const ItemContact = ({
   isColumn?: boolean;
   sx?: any;
 }) => {
+  const isEmail = link.includes("mailto");
   const isLink = link !== "none";
 
   return (
@@ -23,10 +24,10 @@ const ItemContact = ({
         display={isColumn ? "block" : "inline-block"}
         mr={{ xs: 1, md: isColumn ? 0 : 1.5 }}
         mb={{ xs: 0.5, md: isColumn ? 0.75 : 0 }}
+        title={(isEmail && "Электронная почта") || ""}
       >
         {contact}:
       </Typography>
-
       <Typography
         component={isLink ? "a" : "p"}
         href={link}

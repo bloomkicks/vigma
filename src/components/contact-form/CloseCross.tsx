@@ -13,6 +13,7 @@ const CloseCross = ({
   return (
     <Box
       component="button"
+      type="button"
       position="relative"
       width={30}
       height={28}

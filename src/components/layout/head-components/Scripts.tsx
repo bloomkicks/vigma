@@ -40,6 +40,9 @@ const Scripts = () => {
             gtag('config', 'G-C6CPE1YJYN');
         `}
       </Script>
+      <Script id="disable-warnings">
+        {"window.console.warning = function(){}"}
+      </Script>
       {/* ========== */}
     </>
   );

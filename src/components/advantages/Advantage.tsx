@@ -12,7 +12,8 @@ const Advantage = ({
   description: string;
 }) => {
   let isContract = imgSrc.includes("contract");
-  let isCase = imgSrc.includes("case");
+  let isTools = imgSrc.includes("tools");
+  let isPackage = imgSrc.includes("package");
   return (
     <Stack
       direction="row"
@@ -25,7 +26,7 @@ const Advantage = ({
       <Box
         px={1.1}
         py={0.8}
-        pt={isCase ? 0.8 : isContract ? 0.8 : 1}
+        pt={isTools || isContract ? 0.9 : isPackage ? 0.6 : 1}
         width={{ xs: "65px", sm: "70px", md: "80px" }}
         flexShrink="0"
         height="fit-content"
@@ -38,9 +39,8 @@ const Advantage = ({
           component="img"
           src={imgSrc}
           alt=""
-          width={!isContract ? "100%" : "95%"}
-          ml={isCase ? "3px" : "auto"}
-          mt={isCase ? "3px" : "auto"}
+          width={!isContract && !isTools ? "100%" : "92%"}
+          mb={isContract ? "-2px" : 0}
           height="auto"
         />
       </Box>

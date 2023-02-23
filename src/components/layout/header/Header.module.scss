@@ -58,7 +58,7 @@
     flex-direction: column;
     transition: transform 0.2s ease-out;
     width: 100%;
-    padding-top: 120px;
+    padding-top: 102px;
   }
 
   .Nav > a {
@@ -77,10 +77,6 @@
     outline: 2px dashed colors.$theme;
   }
 
-  .Nav > a > p {
-    font-size: 1.5rem;
-  }
-
   .Nav__active {
     transform: translatex(-100%);
   }
@@ -96,5 +92,8 @@
 @media (max-width: 376px) {
   .InnerHeader {
     padding: 0 20px;
+  }
+  .Nav {
+    padding-top: 100px;
   }
 }

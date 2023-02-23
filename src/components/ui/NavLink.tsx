@@ -29,6 +29,8 @@ const NavLink = (props) => {
           color={isActive ? "primary.main" : "secondary.main"}
           sx={{
             textTransform: "capitalize",
+            fontSize: { xs: "1.6rem", md: "1.3rem" },
+            fontWeight: "500",
           }}
         >
           {children}

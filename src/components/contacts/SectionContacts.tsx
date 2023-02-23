@@ -25,7 +25,7 @@ const SectionContacts = () => {
           sx={{
             width: { xs: "100%", sm: "80%", md: "45%", lg: 450 },
             minWidth: { md: 390 },
-            mb: { md: 1.7, lg: 1.6 },
+            mb: { mb: 0.25, lg: 1.6 },
           }}
         />
         <ContactsMap

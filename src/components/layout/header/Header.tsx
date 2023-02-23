@@ -1,3 +1,4 @@
+import MenuSocials from "./MenuSocials";
 import { useState, useEffect } from "react";
 
 import CallButton from "./CallButton";
@@ -12,12 +13,12 @@ let links = [
     title: "Контакты",
   },
   {
-    link: "/catalog",
-    title: "Каталог Кухонь",
-  },
-  {
     link: "/order",
     title: "Расчёт Стоимости",
+  },
+  {
+    link: "/catalog",
+    title: "Каталог",
   },
 ];
 
@@ -70,6 +71,7 @@ const Header = () => {
                 {link.title}
               </NavLink>
             ))}
+            <MenuSocials />
           </nav>
           <CallButton />
           <HeaderMenuSetter

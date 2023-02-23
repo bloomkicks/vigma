@@ -4,44 +4,59 @@ import Box from "@mui/material/Box";
 
 let socials = [
   {
-    imgName: "/vk.png",
+    imgName: "/vk",
     title: "ВКонтакте",
     link: "https://vk.com/vigmaspb",
   },
   {
-    imgName: "/whatsapp.png",
+    imgName: "/whatsapp",
     title: "WhatsApp",
     link: "https://wa.me/79643426051",
   },
   {
-    imgName: "/telegram.png",
+    imgName: "/telegram",
     title: "Телеграм",
     link: "https://t.me/vigmamebel",
   },
   {
-    imgName: "/gmail.png",
+    imgName: "/gmail",
     title: "Эл. Почта",
     link: "mailto:vigmaspb@gmail.com",
   },
 ];
 
-const Socials = ({ sx }: { sx: any }) => {
+const Socials = ({ sx, isWhite }: { sx: any; isWhite?: boolean }) => {
   return (
     <Stack direction="row" spacing={2} height={{ xs: 55, sm: 60 }} sx={sx}>
       {socials.map((social) => (
-        <Link href={social.link} key={social.title}>
+        <Link href={social.link} key={social.title} passHref>
           <Box
-            component="img"
-            src={process.env.SOCIAL_ASSETS + social.imgName}
-            alt={social.title}
-            title={social.title}
+            component="a"
+            width="min-content"
             sx={{
-              width: "auto",
               height: "100%",
-              borderRadius: "10px",
-              boxShadow: "2px 2.5px 4px rgba(0,0,0,0.45)",
+              width: "auto",
+              display: "block",
             }}
-          ></Box>
+          >
+            <Box
+              component="img"
+              src={
+                process.env.SOCIAL_ASSETS +
+                social.imgName +
+                (isWhite ? "-white.png" : ".png")
+              }
+              alt={social.title}
+              title={social.title}
+              sx={{
+                width: "auto",
+                height: "100%",
+                borderRadius: "12.5px",
+                boxShadow: "1px 1.5px 4px rgba(0,0,0,0.6)",
+                userSelect: "none",
+              }}
+            ></Box>
+          </Box>
         </Link>
       ))}
     </Stack>
