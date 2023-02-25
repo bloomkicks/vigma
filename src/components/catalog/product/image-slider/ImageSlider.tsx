@@ -9,7 +9,7 @@ const ImageSlider = ({ images }: { images: ProductImage[] }) => {
   let width = 381;
   let height = 420;
   let mobileWidth = 361;
-  let mobileHeight = 390;
+  let mobileHeight = 380;
 
   function slideHandler(isRight: boolean): void {
     if (
