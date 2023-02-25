@@ -38,8 +38,8 @@ const CertificatesSlider = ({
             src={imgSrc + ".jpg"}
             sx={{
               transform: {
-                xs: `translateX(-${certifIndex * (mobileWidth + 14)}px)`,
-                md: `translateX(-${certifIndex * (width + 16)}px)`,
+                xs: `translateX(-${certifIndex * (mobileWidth + 12)}px)`,
+                md: `translateX(-${certifIndex * (width + 12)}px)`,
               },
               boxShadow: "1px 2px 4px rgba(0,0,0,0.4)",
               transition: "transform 0.3s ease-out",

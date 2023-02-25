@@ -8,20 +8,20 @@ const ContactsInfo = ({ sx }: { sx?: any }) => {
   return (
     <Box component="section" sx={sx}>
       <ContactList sx={{ mb: { xs: 2.5, md: 3 } }} />
-      <Socials sx={{ mb: { xs: 5, md: 7 } }} />
+      <Socials sx={{ mb: { xs: 4, sm: 5, md: 7 } }} />
       <ItemContact
         contact="Производство"
         value={
           <>
             <Typography
               component="span"
-              sx={{ display: "inline-block", mr: 1.2 }}
+              sx={{ display: "inline-block", mr: { xs: 1.1, md: 1.2 } }}
             >
               г. Санкт-Петербург,
             </Typography>
             <Typography
               component="span"
-              sx={{ display: "inline-block", mr: 1.2 }}
+              sx={{ display: "inline-block", mr: { xs: 1.1, md: 1.2 } }}
             >
               ул. Автобусная,
             </Typography>

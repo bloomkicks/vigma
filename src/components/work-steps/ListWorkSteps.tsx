@@ -17,7 +17,7 @@ const ListWorkSteps = () => {
       justifyContent="flex-start"
       spacing={1}
       mt={{ xs: -2, md: -2.5 }}
-      maxWidth={{ xs: 420, md: 780 }}
+      maxWidth={{ xs: 420, md: 800 }}
       mx="auto"
       pl={{ md: 2 }}
     >

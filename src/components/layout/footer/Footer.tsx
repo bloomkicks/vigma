@@ -12,7 +12,7 @@ const Footer = () => {
       sx={{
         px: 4,
         textAlign: { xs: "center" },
-        pt: { xs: 6.2, md: 5.2 },
+        pt: { xs: 6.4, sm: 6.2, md: 6 },
         pb: 4.5,
         mt: 9,
         bgcolor: "info.main",
@@ -23,19 +23,21 @@ const Footer = () => {
       }}
     >
       <Typography
-        mb={3.25}
+        mb={{ xs: 3.25, sm: 4.5 }}
         color="white"
         variant="h4"
-        sx={{ fontSize: { xs: "2.3rem", md: "2.1rem" } }}
+        sx={{ fontSize: { xs: "2.3rem", md: "2.2rem" } }}
+        display={{ xs: "block", md: "none" }}
         component="h6"
       >
         Наши контакты
       </Typography>
       <Stack
         direction={{ xs: "column", md: "row-reverse" }}
-        spacing={{ xs: 4, md: 6 }}
+        spacing={{ xs: 4.2, md: 6.5 }}
         alignItems={{ xs: "center", md: "flex-start" }}
         justifyContent="center"
+        pr={{ md: 2 }}
       >
         <Socials sx={{ justifyContent: "center" }} />
         <Box>
@@ -45,6 +47,7 @@ const Footer = () => {
               color="white"
               display="block"
               variant="subtitle1"
+              fontSize={{ md: "1.5rem" }}
               mb={{ xs: 1.5, md: 1.25 }}
               mt={0.2}
             >

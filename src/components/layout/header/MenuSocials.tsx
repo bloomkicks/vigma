@@ -26,18 +26,19 @@ let socials = [
 ];
 
 const MenuSocials = () => {
-  let iconWidth = 50;
-  let spacing = 32;
+  let iconWidth = 46;
+  let spacing = 33;
+
   return (
     <Grid
       container
       display={{ xs: "flex", md: "none" }}
-      mt={8}
+      mt={6}
       width={(iconWidth + spacing) * 2 + 4}
       justifyContent="center"
       alignItems="center"
       spacing={spacing + "px"}
-      rowSpacing={spacing - 8 + "px"}
+      rowSpacing={spacing - 9 + "px"}
     >
       {socials.map((social) => (
         <Link href={social.link} key={social.title} passHref>
@@ -47,8 +48,11 @@ const MenuSocials = () => {
               src={process.env.SOCIAL_ASSETS + social.imgName + "-white.png"}
               alt={social.title}
               title={social.title}
-              width={iconWidth + (social.imgName === "/vk" ? 4 : 0)}
-              sx={{ userSelect: "none" }}
+              width={iconWidth + (social.imgName === "/vk" ? 6 : 0)}
+              mt={social.imgName === "/vk" ? "4px" : 0}
+              sx={{
+                userSelect: "none",
+              }}
             ></Box>
           </Grid>
         </Link>
