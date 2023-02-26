@@ -40,7 +40,7 @@ const MainPage = () => {
           pb: { lg: "55px" },
         },
         "& > article#work-steps": {
-          pt: { xs: "37.5px", md: "40px" },
+          pt: { xs: "37.5px", md: "37.5px" },
         },
         "& > article#quiz": {
           px: 0,
