@@ -52,7 +52,7 @@ const SectionHero = () => {
           sx={{ fontWeight: "bold" }}
         >
           {" "}
-          до конца месяца
+          до 31 марта
         </Typography>
         . Все кухни нашего производства на заказ со скидкой{" "}
         <Typography variant="inherit" component="span" display="inline-block">
