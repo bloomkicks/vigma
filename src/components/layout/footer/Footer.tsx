@@ -1,4 +1,3 @@
-import ItemContact from "../../contacts/contact-list/ItemContact";
 import Socials from "./Socials";
 import Link from "next/link";
 import Typography from "@mui/material/Typography";
@@ -20,6 +19,7 @@ const Footer = () => {
         "& a": {
           color: "white",
         },
+        opacity: 0.95,
       }}
     >
       <Typography

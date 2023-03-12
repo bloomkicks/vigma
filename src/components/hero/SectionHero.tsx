@@ -53,8 +53,8 @@ const SectionHero = () => {
         >
           {" "}
           до 31 марта
-        </Typography>
-        . Все кухни нашего производства на заказ со скидкой{" "}
+        </Typography>{" "}
+        - все кухни нашего производства со скидкой{" "}
         <Typography variant="inherit" component="span" display="inline-block">
           до{" "}
           <Typography
