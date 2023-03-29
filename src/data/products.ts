@@ -2,89 +2,89 @@ import type { ProductProps } from "../types/products";
 
 // Barhat
 const barhat1 = "barhat/fullsize.jpg";
-const barhat2 = "barhat/longside.jpg";
-const barhat3 = "barhat/zoomed-in.jpg";
+const barhat2 = "barhat/longside.webp";
+const barhat3 = "barhat/zoomed-in.webp";
 
 // Modern
 const modern1 = "modern/zoomed-out.jpg";
-const modern2 = "modern/fullsize.jpg";
-const modern3 = "modern/zoomed-in.jpg";
+const modern2 = "modern/fullsize.webp";
+const modern3 = "modern/zoomed-in.webp";
 
 // Gold
-const gold1 = "gold/longside.jpg";
-const gold2 = "gold/angled.jpg";
-const gold3 = "gold/furniture.jpg";
+const gold1 = "gold/longside.webp";
+const gold2 = "gold/angled.webp";
+const gold3 = "gold/furniture.webp";
 
 // Winter
-const winter1 = "winter/fullsize.jpg";
-const winter2 = "winter/furniture.jpg";
-const winter3 = "winter/shelfs.jpg";
+const winter1 = "winter/fullsize.webp";
+const winter2 = "winter/furniture.webp";
+const winter3 = "winter/shelfs.webp";
 
 // Econom
-const econom1 = "econom/fullsize.jpg";
-const econom2 = "econom/angled.jpg";
+const econom1 = "econom/fullsize.webp";
+const econom2 = "econom/angled.webp";
 
 // Quartz
-const quartz1 = "quartz/fullsize.jpg";
-const quartz2 = "quartz/angled.jpg";
+const quartz1 = "quartz/fullsize.webp";
+const quartz2 = "quartz/angled.webp";
 
 // Brusnika
-const brusnika1 = "brusnika/longside.jpg";
-const brusnika2 = "brusnika/angled.jpg";
+const brusnika1 = "brusnika/longside.webp";
+const brusnika2 = "brusnika/angled.webp";
 
 // Mini
-const mini1 = "mini/fullsize.jpg";
-const mini2 = "mini/zoomed-in.jpg";
-const mini3 = "mini/zoomed-out.jpg";
+const mini1 = "mini/fullsize.webp";
+const mini2 = "mini/zoomed-in.webp";
+const mini3 = "mini/zoomed-out.webp";
 
 // Solid
-const solid1 = "solid/fullsize.jpg";
-const solid2 = "solid/angled.jpg";
-const solid3 = "solid/zoomed-out.jpg";
+const solid1 = "solid/fullsize.webp";
+const solid2 = "solid/angled.webp";
+const solid3 = "solid/zoomed-out.webp";
 
 // Sky
-const sky1 = "sky/fullsize.jpg";
-const sky2 = "sky/longside.jpg";
-const sky3 = "sky/furniture.jpg";
+const sky1 = "sky/fullsize.webp";
+const sky2 = "sky/longside.webp";
+const sky3 = "sky/furniture.webp";
 
 // Fair
-const fair1 = "fair/fullsize.jpg";
-const fair2 = "fair/furniture.jpg";
-const fair3 = "fair/table.jpg";
+const fair1 = "fair/fullsize.webp";
+const fair2 = "fair/furniture.webp";
+const fair3 = "fair/table.webp";
 
 // Fordge
-const forge1 = "forge/fullsize.jpg";
-const forge2 = "forge/longside.jpg";
-const forge3 = "forge/angled.jpg";
+const forge1 = "forge/fullsize.webp";
+const forge2 = "forge/longside.webp";
+const forge3 = "forge/angled.webp";
 
 // Master
 const master1 = "master/fullsize.jpg";
-const master2 = "master/angled.jpg";
-const master3 = "master/island.jpg";
+const master2 = "master/angled.webp";
+const master3 = "master/island.webp";
 
 // Pink
 const pink1 = "pink/fullsize.jpg";
-const pink2 = "pink/longside.jpg";
-const pink3 = "pink/angled.jpg";
+const pink2 = "pink/longside.webp";
+const pink3 = "pink/angled.webp";
 
 // Shine
-const shine1 = "shine/angled.jpg";
-const shine2 = "shine/longside.jpg";
-const shine3 = "shine/furniture.jpg";
+const shine1 = "shine/angled.webp";
+const shine2 = "shine/longside.webp";
+const shine3 = "shine/furniture.webp";
 
 // Standard
-const standard1 = "standard/angled.jpg";
-const standard2 = "standard/longside.jpg";
-const standard3 = "standard/fridge.jpg";
+const standard1 = "standard/angled.webp";
+const standard2 = "standard/longside.webp";
+const standard3 = "standard/fridge.webp";
 
 // Futuristic
-const futuristic1 = "futuristic/furniture.jpg";
-const futuristic2 = "futuristic/shelfs.jpg";
-const futuristic3 = "futuristic/zoomed-out.jpg";
+const futuristic1 = "futuristic/furniture.webp";
+const futuristic2 = "futuristic/shelfs.webp";
+const futuristic3 = "futuristic/zoomed-out.webp";
 
 // Explit
-const explit1 = "explit/fullsize.jpg";
-const explit2 = "explit/zoomed-out.jpg";
+const explit1 = "explit/fullsize.webp";
+const explit2 = "explit/zoomed-out.webp";
 
 export const mainProducts: ProductProps[] = [
   {

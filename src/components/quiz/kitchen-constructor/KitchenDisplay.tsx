@@ -3,8 +3,6 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 
 import getKitchenDisplay from "../../../features/quiz/get-kitchen-display";
-import type { RootState } from "../../../store";
-import { useSelector } from "react-redux";
 
 const KitchenDisplay = ({ questions }: { questions: ConstructorQuestions }) => {
   const kitchenDisplay = getKitchenDisplay(questions);
@@ -28,8 +26,8 @@ const KitchenDisplay = ({ questions }: { questions: ConstructorQuestions }) => {
         src={`${process.env.QUIZ_ASSETS}/kitchen/constructor/${kitchenDisplay}.webp`}
         alt="Получившаяся кухня"
         loading="eager"
-        width={741.3}
-        height={500}
+        width={750}
+        height={506}
       />
     </Box>
   );

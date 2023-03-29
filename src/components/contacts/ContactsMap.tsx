@@ -13,7 +13,7 @@ const ContactsMap = ({ sx }: { sx?: any }) => {
         }}
       >
         <a
-          href="https://yandex.ru/maps/org/vigma_mebel/191512945068/?utm_medium=mapframe&utm_source=maps"
+          href="https://yandex.com/maps/org/vigma_mebel/93431171837/?utm_medium=mapframe&utm_source=maps"
           style={{
             color: "#eee",
             fontSize: "12px",
@@ -21,11 +21,33 @@ const ContactsMap = ({ sx }: { sx?: any }) => {
             top: "0px",
           }}
         >
-          Вигма Мебель
+          Vigma Мебель
+        </a>
+        <a
+          href="https://yandex.com/maps/2/saint-petersburg/category/furniture_factory/184106634/?utm_medium=mapframe&utm_source=maps"
+          style={{
+            color: "#eeeeee",
+            fontSize: 12,
+            position: "absolute",
+            top: 14,
+          }}
+        >
+          Мебельная фабрика в Санкт‑Петербурге
+        </a>
+        <a
+          href="https://yandex.com/maps/2/saint-petersburg/category/cabinet_furniture/184107869/?utm_medium=mapframe&utm_source=maps"
+          style={{
+            color: "#eeeeee",
+            fontSize: 12,
+            position: "absolute",
+            top: 28,
+          }}
+        >
+          Корпусная мебель в Санкт‑Петербурге
         </a>
         <iframe
           title="Мы на yandex картах"
-          src="https://yandex.ru/map-widget/v1/?from=mapframe&indoorLevel=1&ll=30.273911%2C60.028111&mode=search&oid=191512945068&ol=biz&source=mapframe&utm_source=mapframe&z=17.6"
+          src="https://yandex.com/map-widget/v1/?ll=30.271816%2C60.028367&mode=poi&poi%5Bpoint%5D=30.271118%2C60.028429&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D93431171837&z=18.8"
           frameBorder="0"
           allowFullScreen
           style={{ position: "relative", width: "100%", height: "100%" }}

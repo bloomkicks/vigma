@@ -20,7 +20,7 @@ const ProductList = () => {
         columnSpacing={{ xs: 0, sm: 3 }}
         rowSpacing={4}
         justifyContent="center"
-        px={{ xs: 1, md: 2, lg: 10, xl: 24 }}
+        px={{ xs: 1.85, md: 2, lg: 10, xl: 24 }}
         alignItems="flex-start"
       >
         {products.map((product) => (

@@ -27,7 +27,7 @@ let socials = [
 
 const Socials = ({ sx, isWhite }: { sx: any; isWhite?: boolean }) => {
   return (
-    <Stack direction="row" spacing={2} height={{ xs: 52, sm: 60 }} sx={sx}>
+    <Stack direction="row" spacing={2} height={{ xs: 50, sm: 58 }} sx={sx}>
       {socials.map((social) => (
         <Link href={social.link} key={social.title} passHref>
           <Box

@@ -33,7 +33,7 @@ const MainPage = () => {
           mx: "auto",
         },
         "& > article > h2": {
-          mb: { xs: "30px", md: "35px" },
+          mb: { xs: "27.5px", md: "30px" },
         },
         "& > article#advantages": {
           pl: { xs: 2, sm: 5, md: 4, lg: 9 },

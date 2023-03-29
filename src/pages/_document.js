@@ -65,8 +65,11 @@ class MyDocument extends Document {
           <meta name="twitter:image" content="/apple-touch-icon.png" />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
+          <meta name="yandex-verification" content="eaf61e3fbaf62eb9" />
         </Head>
         <body>
+          <Main />
+          <NextScript />
           <noscript>
             <div>
               <img
@@ -82,8 +85,6 @@ class MyDocument extends Document {
               style={{ display: "none", visibility: "hidden" }}
             ></iframe>
           </noscript>
-          <Main />
-          <NextScript />
         </body>
       </Html>
     );
