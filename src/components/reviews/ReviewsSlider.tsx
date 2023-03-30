@@ -36,8 +36,8 @@ const ReviewsSlider = ({
   slice: number;
 }) => {
   let height = 700;
-  let width = 348.52;
-  let mobileHeight = 512.16;
+  let width = 348.5;
+  let mobileHeight = 512.2;
   let mobileWidth = 255;
 
   return (

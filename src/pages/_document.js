@@ -10,13 +10,6 @@ class MyDocument extends Document {
     return (
       <Html lang="ru">
         <Head>
-          {/* ENGINES */}
-          <link
-            rel="sitemap"
-            type="application/xml"
-            title="Sitemap"
-            href="/sitemap.xml"
-          />
           {/* FONTS */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
@@ -29,7 +22,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           {/* REGULAR TAGS */}
-          <meta charSet="utf-8" />
+          <meta charSet="UTF-8" />
           <meta name="theme-color" content="#79b57f" />
           <meta name="description" content={description} />
           <link rel="manifest" href="/manifest.json" />
@@ -66,6 +59,13 @@ class MyDocument extends Document {
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
           <meta name="yandex-verification" content="eaf61e3fbaf62eb9" />
+          {/* ENGINES */}
+          <link
+            rel="sitemap"
+            type="application/xml"
+            title="Sitemap"
+            href="/sitemap.xml"
+          />
         </Head>
         <body>
           <Main />

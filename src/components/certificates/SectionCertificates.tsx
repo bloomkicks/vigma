@@ -1,10 +1,16 @@
+import dynamic from "next/dynamic";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useState } from "react";
 import Arrow from "../reviews/Arrow";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-import CertificatesSlider from "./CertificatesSlider";
+import SliderSkeleton from "./SliderSkeleton";
+
+const CertificatesSlider = dynamic(() => import("./CertificatesSlider"), {
+  loading: SliderSkeleton,
+});
+// const CertificatesSlider = SliderSkeleton;
 
 const Certificates = () => {
   let length = 4;
