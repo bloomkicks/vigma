@@ -14,6 +14,7 @@ const Advantage = ({
   let isContract = imgSrc.includes("contract");
   let isTools = imgSrc.includes("tools");
   let isPackage = imgSrc.includes("package");
+  let isDishwasher = imgSrc.includes("dishwasher");
   return (
     <Stack
       direction="row"
@@ -39,7 +40,7 @@ const Advantage = ({
           component="img"
           src={imgSrc}
           alt=""
-          width={!isContract && !isTools ? "100%" : "92%"}
+          width={!isContract && !isTools && !isDishwasher ? "100%" : "92%"}
           mb={isContract ? "-2px" : 0}
           height="auto"
         />

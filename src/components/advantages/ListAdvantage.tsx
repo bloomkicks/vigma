@@ -27,6 +27,12 @@ let advantages = [
     imgName: "materials.png",
   },
   {
+    title: "Подключение техники",
+    description:
+      "Предлагаем бесплатное подключение техники на кухне (плита, вытяжка, посудомоечная машина и др.)",
+    imgName: "dishwasher.png",
+  },
+  {
     title: "Доставка и установка",
     description: "Доставка по Санкт-Петербургу и Лен. области в короткие сроки",
     imgName: "package.png",

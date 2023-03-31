@@ -35,7 +35,7 @@ const theme = createTheme({
       fontFamily: bigHeadingFontFamily,
       // fontSize: 48,
       // lineHeight: "56px",
-      fontSize: "3.4rem",
+      fontSize: "5rem",
       lineHeight: 1.15,
       fontWeight: "700",
     },

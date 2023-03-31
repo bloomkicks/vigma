@@ -26,14 +26,14 @@ let buttons: any[] = [
   },
 ];
 const ButtonChoice = () => {
-  const isReallySmall = useMediaQuery("(max-width: 376px)");
+  const isReallySmall = useMediaQuery("(max-width: 374px)");
   const [isOpen, setIsOpen] = useState(false);
   buttons[1].onClick = () => setIsOpen(true);
 
   return (
     <Stack
       direction={{ xs: "column", sm: "row" }}
-      spacing={{ xs: 2.2, md: 4 }}
+      spacing={{ xs: 2.2, sm: 3, md: 4.5 }}
       alignItems={{ xs: "stretch", sm: "center" }}
       justifyContent="center"
       sx={{
@@ -49,10 +49,10 @@ const ButtonChoice = () => {
             variant="contained"
             onClick={button.onClick || function () {}}
             sx={{
-              lineHeight: isReallySmall ? 1.4 : { xs: 3.1 },
+              lineHeight: isReallySmall ? 1.1 : { xs: 3, sm: 3 },
               flexShrink: 0,
-              fontSize: "1.12rem",
-              padding: isReallySmall ? "14px 40px" : "",
+              fontSize: { xs: "1.1rem", sm: "1.05rem", md: "1.1rem" },
+              padding: isReallySmall ? "14px 35px" : "",
               borderRadius: "10px",
               boxShadow: "2px 4px 4px rgba(0,0,0,0.3)",
               ...button.sx,

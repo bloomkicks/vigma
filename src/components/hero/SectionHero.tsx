@@ -8,7 +8,7 @@ import ButtonChoice from "./ButtonChoice";
 
 const SectionHero = () => {
   const theme = useTheme();
-  const isNotMobile = useMediaQuery(theme.breakpoints.up("sm"));
+  const isVerySmall = useMediaQuery("(max-width: 374px)");
 
   return (
     <Stack
@@ -25,24 +25,32 @@ const SectionHero = () => {
         sx={{
           position: "relative",
           mb: { xs: 1.4, md: 1.6 },
-          fontSize: { xs: "2.5rem", sm: "3rem", md: "3.4rem" },
-          maxWidth: 1000,
+          fontSize: isVerySmall
+            ? "2.95rem"
+            : { xs: "3.15rem", sm: "4rem", md: "4.25rem" },
+          maxWidth: 1100,
+          px: { sm: 2, md: 4 },
         }}
       >
-        {isNotMobile
+        {/* {isNotMobile
           ? "КУХНИ ПО ИНДИВИДУАЛЬНОМУ ДИЗАЙН-ПРОЕКТУ В СПБ"
-          : "КУХНИ ПО ИНДИВИДУАЛЬНОМУ ДИЗАЙН-ПРОЕКТУ В САНКТ-ПЕТЕРБУРГЕ"}
+          : "КУХНИ ПО ИНДИВИДУАЛЬНОМУ ДИЗАЙН-ПРОЕКТУ В САНКТ-ПЕТЕРБУРГЕ"
+          } */}
+        ЛЮБЫЕ КУХНИ НА ЗАКАЗ ОТ ПРОИЗВОДИТЕЛЯ
       </Typography>
       <Typography
         variant="h2"
         component="h3"
-        fontSize={{ xs: "1.65rem", md: "1.9rem" }}
+        fontSize={{ xs: "1.5rem", md: "1.9rem" }}
         lineHeight={1.3}
         fontWeight="400"
         position="relative"
         color="white"
-        mb={6}
-        maxWidth={900}
+        mb={{ xs: 5, md: 6 }}
+        maxWidth={950}
+        sx={{
+          px: { sm: 2, md: 4 },
+        }}
       >
         Специальное предложение
         <Typography
@@ -52,9 +60,9 @@ const SectionHero = () => {
           sx={{ fontWeight: "bold" }}
         >
           {" "}
-          до 31 марта
+          до 15 апреля
         </Typography>{" "}
-        - все кухни нашего производства со скидкой{" "}
+        ‒ все кухни нашего производства со скидкой{" "}
         <Typography variant="inherit" component="span" display="inline-block">
           до{" "}
           <Typography
@@ -67,14 +75,41 @@ const SectionHero = () => {
           </Typography>
         </Typography>
       </Typography>
-      <Typography position="relative" color="white" mb={{ xs: 3.2, md: 3.4 }}>
-        Успейте сделать заказ и получите подарок на выбор.{" "}
-        <Box component="br" display={{ xs: "none", md: "block" }}></Box>
-        Составляем{" "}
-        <Typography variant="inherit" component="span" display="inline-block">
+      <Typography
+        position="relative"
+        variant="h2"
+        component="p"
+        color="white"
+        mb={{ xs: 3, md: 3.4 }}
+        maxWidth={{ sm: 800, md: 900 }}
+        sx={{
+          px: { sm: 2, md: 4 },
+          fontSize: { xs: "1.45rem", md: "1.8rem" },
+          fontWeight: 400,
+        }}
+      >
+        Успейте сделать заказ ‒ получите
+        <Typography
+          variant="inherit"
+          component="span"
+          display="inline"
+          sx={{ fontWeight: "bold" }}
+        >
+          {" "}
           дизайн-проект
         </Typography>{" "}
-        под ключ
+        и
+        <Typography
+          variant="inherit"
+          component="span"
+          display="inline"
+          sx={{ fontWeight: "bold" }}
+        >
+          {" "}
+          подарок
+        </Typography>{" "}
+        на выбор
+        {/* <Box component="br" display={{ xs: "none", md: "block" }}></Box> */}
       </Typography>
       <ButtonChoice />
     </Stack>

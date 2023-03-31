@@ -11,7 +11,7 @@ const Footer = () => {
       sx={{
         px: 4,
         textAlign: { xs: "center" },
-        pt: { xs: 6.4, sm: 6.2, md: 6 },
+        pt: { xs: 6.2, sm: 6.2, md: 5.5 },
         pb: 4.5,
         mt: 9,
         bgcolor: "info.main",
@@ -23,14 +23,14 @@ const Footer = () => {
       }}
     >
       <Typography
-        mb={{ xs: 3.25, sm: 4.5 }}
+        mb={{ xs: 5, sm: 4.5 }}
         color="white"
         variant="h4"
         sx={{ fontSize: { xs: "2.3rem", md: "2.2rem" } }}
         display={{ xs: "block", md: "none" }}
         component="h6"
       >
-        Наши контакты
+        Дополнительная информация
       </Typography>
       <Stack
         direction={{ xs: "column", md: "row-reverse" }}
