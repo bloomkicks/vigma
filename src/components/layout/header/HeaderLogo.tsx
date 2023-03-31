@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NavLink from "../../ui/NavLink";
+import NavLink from "./NavLink";
 
 let logoSrc = process.env.GENERAL_ASSETS + "/header-logo.png";
 

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import CallButton from "./CallButton";
 import HeaderMenuSetter from "./HeaderMenuSetter";
 import HeaderLogo from "./HeaderLogo";
-import NavLink from "../../ui/NavLink";
+import NavLink from "./NavLink";
 import classes from "./Header.module.scss";
 
 let links = [
