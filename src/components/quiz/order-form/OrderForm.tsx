@@ -2,7 +2,6 @@ import ContactInfoDialogs from "../../contact-form/ContactInfoDialogs";
 import PrivacyAgree from "../../privacy/PrivacyAgree";
 import useForm from "../../../hooks/use-form";
 import Divider from "@mui/material/Divider";
-import Link from "next/link";
 import { RootState } from "../../../store";
 
 import FormControl from "@mui/material/FormControl";
@@ -42,7 +41,9 @@ const OrderForm = ({
     try {
       (window as any).ym(90359214, "reachGoal", "order_sent");
     } catch (err) {
-      console.log("[Данные для аналитики]: Яндекс цель не отправилась");
+      console.log(
+        "[Данные для аналитики]: Ошибка с отправкой Яндекс цели - order_sent",
+      );
     }
   }
 

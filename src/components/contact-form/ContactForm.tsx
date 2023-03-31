@@ -30,7 +30,9 @@ const ContactForm = ({
     try {
       (window as any).ym(90359214, "reachGoal", "contacts_sent");
     } catch (err) {
-      console.log("[Данные для аналитики]: Яндекс цель не отправилась");
+      console.log(
+        "[Данные для аналитики]: Ошибка с отправкой Яндекс цели - contacts_sent",
+      );
     }
   }
 

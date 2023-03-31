@@ -1,10 +1,7 @@
-import useForm from "../hooks/use-form";
-import ContactInfoDialogs from "../components/contact-form/ContactInfoDialogs";
 import OrderHead from "../components/layout/head-components/OrderHead";
 import type { RootState } from "../store";
 import { quizActions } from "../store/quiz";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
 import { useRouter } from "next/router";
 
 import OrderForm from "../components/quiz/order-form/OrderForm";
