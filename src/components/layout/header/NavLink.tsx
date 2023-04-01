@@ -1,18 +1,22 @@
 import { useRouter } from "next/router";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Link from "next/link";
 
-const NavLink = (props) => {
+const NavLink = (props: any) => {
   const router = useRouter();
-  const { isBlack, img, href, children, sx, ...linkProps } = props;
+  const { isBlack, img, href, children, sx, onAnchorClick, ...linkProps } =
+    props;
   const isActive = router.asPath === href;
 
   return (
     <Link href={href || "/error"} passHref>
       <Button
         component="a"
+        onClick={(e: any) => {
+          onAnchorClick && e.preventDefault();
+          onAnchorClick && onAnchorClick();
+        }}
         variant="text"
         sx={{
           px: 2.5,

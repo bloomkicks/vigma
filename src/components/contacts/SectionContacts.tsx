@@ -1,4 +1,3 @@
-import ItemContact from "./contact-list/ItemContact";
 import ContactsMap from "./ContactsMap";
 import ContactsInfo from "./ContactsInfo";
 import Typography from "@mui/material/Typography";

@@ -7,14 +7,18 @@ import Stack from "@mui/material/Stack";
 
 let buttons: any[] = [
   {
-    link: "/order",
+    link: "/main#quiz-start",
     title: "РАССЧИТАТЬ СТОИМОСТЬ",
     sx: {
       px: { sm: 4 },
     },
+    onClick: () => {
+      const quizDivider = document.getElementById("quiz-start");
+      quizDivider.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
   },
   {
-    link: "#",
+    link: "/main#contacts-start",
     title: "СВЯЗАТЬСЯ С НАМИ",
     sx: {
       bgcolor: "rgba(255,255,255,90%)",
@@ -28,7 +32,7 @@ let buttons: any[] = [
 const ButtonChoice = () => {
   const isReallySmall = useMediaQuery("(max-width: 374px)");
   const [isOpen, setIsOpen] = useState(false);
-  buttons[1].onClick = () => setIsOpen(true);
+  buttons[1].onClick = () => setTimeout(() => setIsOpen(true), 100);
 
   return (
     <Stack

@@ -74,7 +74,7 @@ const QuizOption = ({
             id={question + "-" + option}
             sx={{
               position: "absolute",
-              left: 10,
+              left: 11,
               top: 0,
               height: "100%",
               textAlign: "left",
@@ -91,7 +91,7 @@ const QuizOption = ({
               userSelect: "none",
               fontSize: { lg: 21 },
               textAlign: "left",
-              verticalAlign: "middle",
+              verticalAlign: "top",
             }}
           >
             {option}

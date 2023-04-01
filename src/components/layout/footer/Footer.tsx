@@ -30,7 +30,7 @@ const Footer = () => {
         display={{ xs: "block", md: "none" }}
         component="h6"
       >
-        Дополнительная информация
+        Дополнительная информация:
       </Typography>
       <Stack
         direction={{ xs: "column", md: "row-reverse" }}

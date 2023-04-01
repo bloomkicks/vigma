@@ -26,6 +26,7 @@ const HeaderMenuSetter = ({
           outline: "none",
           transform: "scaleY(1.1)",
         },
+        p: "4px",
       }}
       onClick={toggleMenuHandler}
     >

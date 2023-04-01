@@ -26,7 +26,7 @@ const MainPage = () => {
         "& > article": {
           position: "relative",
           width: "100%",
-          pt: { xs: "45px", md: "50px" },
+          pt: { xs: "40px", md: "45px" },
           pb: { xs: "40px", md: "45px" },
           px: { xs: 3, sm: 5, md: 4, lg: 9 },
           maxWidth: 1366,
@@ -70,9 +70,9 @@ const MainPage = () => {
       <SectionReviews />
       <Divider />
       <SectionCertificates />
-      <Divider />
+      <Divider id="contacts-start" />
       <SectionContacts />
-      <Divider />
+      <Divider id="quiz-start" />
       <SectionMainQuiz />
     </Container>
   );

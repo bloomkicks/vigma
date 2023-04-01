@@ -9,11 +9,19 @@ import classes from "./Header.module.scss";
 
 let links = [
   {
-    link: "/main#contacts",
+    link: "/main#contacts-start",
+    onAnchorClick: () => {
+      const contactsDivider = document.getElementById("contacts-start");
+      contactsDivider.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
     title: "Контакты",
   },
   {
-    link: "/order",
+    link: "/main#quiz-start",
+    onAnchorClick: () => {
+      const quizDivider = document.getElementById("quiz-start");
+      quizDivider.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
     title: "Расчёт Стоимости",
   },
   {
@@ -34,13 +42,7 @@ const Header = () => {
       return !prevState;
     });
   };
-  const navFocusHandler = (e) => {
-    e.stopPropagation();
-    setIsMenuActive(true);
-  };
-  const navBlurHandler = () => {
-    setIsMenuActive(false);
-  };
+
   const navClickHandler = (e) => {
     e.stopPropagation();
     setIsMenuActive((prevState) => !prevState);
@@ -61,13 +63,7 @@ const Header = () => {
             className={`${classes.Nav} ${isMenuActive && classes.Nav__active}`}
           >
             {links.map((link) => (
-              <NavLink
-                href={link.link}
-                key={link.link}
-                onClick={navClickHandler}
-                onFocus={navFocusHandler}
-                onBlur={navBlurHandler}
-              >
+              <NavLink href={link.link} key={link.link}>
                 {link.title}
               </NavLink>
             ))}
