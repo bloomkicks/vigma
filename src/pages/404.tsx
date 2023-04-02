@@ -20,7 +20,7 @@ const ErrorPage = () => {
             mr: { xs: 1, md: "auto" },
           }}
         ></Box>
-        <Typography variant="h1" mb={1} fontSize="3.4rem">
+        <Typography variant="h1" mb={1.75} fontSize="3.4rem">
           Страница по данному адресу не найдена
         </Typography>
         <Typography

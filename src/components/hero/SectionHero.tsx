@@ -1,4 +1,3 @@
-import useTheme from "@mui/system/useTheme";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
 import Background from "./Background";
@@ -7,7 +6,6 @@ import Box from "@mui/material/Box";
 import ButtonChoice from "./ButtonChoice";
 
 const SectionHero = () => {
-  const theme = useTheme();
   const isVerySmall = useMediaQuery("(max-width: 374px)");
 
   return (
@@ -32,10 +30,6 @@ const SectionHero = () => {
           px: { sm: 2, md: 4 },
         }}
       >
-        {/* {isNotMobile
-          ? "КУХНИ ПО ИНДИВИДУАЛЬНОМУ ДИЗАЙН-ПРОЕКТУ В СПБ"
-          : "КУХНИ ПО ИНДИВИДУАЛЬНОМУ ДИЗАЙН-ПРОЕКТУ В САНКТ-ПЕТЕРБУРГЕ"
-          } */}
         ЛЮБЫЕ КУХНИ НА ЗАКАЗ ОТ ПРОИЗВОДИТЕЛЯ
       </Typography>
       <Typography

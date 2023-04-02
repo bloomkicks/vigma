@@ -26,14 +26,14 @@ const MainPage = () => {
         "& > article": {
           position: "relative",
           width: "100%",
-          pt: { xs: "40px", md: "45px" },
+          pt: { xs: "37.5px", md: "45px" },
           pb: { xs: "40px", md: "45px" },
           px: { xs: 3, sm: 5, md: 4, lg: 9 },
           maxWidth: 1366,
           mx: "auto",
         },
         "& > article > h2": {
-          mb: { xs: "27.5px", md: "30px" },
+          mb: { xs: "25px", md: "30px" },
         },
         "& > article#advantages": {
           pl: { xs: 2, sm: 5, md: 4, lg: 9 },

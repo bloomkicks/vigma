@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 const SectionWorkSteps = () => {
   return (
     <Box component="article" id="work-steps">
-      <Typography variant="h2">Этапы работы</Typography>
+      <Typography variant="h2">Этапы работы:</Typography>
       <ListWorkSteps />
     </Box>
   );
