@@ -10,7 +10,7 @@ const LinkToCatalog = () => {
         color="info"
         component="a"
         sx={{
-          mt: { xs: 6.5, md: 4 },
+          mt: { xs: 4.5, md: 4 },
           mx: "auto",
         }}
       >

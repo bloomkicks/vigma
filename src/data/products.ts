@@ -52,10 +52,10 @@ const fair1 = "fair/fullsize.webp";
 const fair2 = "fair/furniture.webp";
 const fair3 = "fair/table.webp";
 
-// Fordge
-const forge1 = "forge/fullsize.webp";
-const forge2 = "forge/longside.webp";
-const forge3 = "forge/angled.webp";
+// Fate
+const fate1 = "fate/fullsize.webp";
+const fate2 = "fate/longside.webp";
+const fate3 = "fate/angled.webp";
 
 // Master
 const master1 = "master/fullsize.jpg";
@@ -67,10 +67,10 @@ const pink1 = "pink/fullsize.jpg";
 const pink2 = "pink/longside.webp";
 const pink3 = "pink/angled.webp";
 
-// Shine
-const shine1 = "shine/angled.webp";
-const shine2 = "shine/longside.webp";
-const shine3 = "shine/furniture.webp";
+// Forge
+const forge1 = "forge/angled.webp";
+const forge2 = "forge/longside.webp";
+const forge3 = "forge/furniture.webp";
 
 // Standard
 const standard1 = "standard/angled.webp";
@@ -104,7 +104,7 @@ export const mainProducts: ProductProps[] = [
     info: {
       title: 'Кухня "Бархарт" Прямая',
       colors: ["wood-#A88879-#6C5952", "#0C0C0C", "#6F717D"],
-      price: "62.490",
+      price: "39.500",
     },
   },
   {
@@ -123,7 +123,7 @@ export const mainProducts: ProductProps[] = [
     info: {
       title: 'Кухня "Пинк" Угловая',
       colors: ["#D2BFC3", "#F6F6F6", "light-#DBC892-#CEBA87"],
-      price: "42.490",
+      price: "34.500",
     },
   },
   {
@@ -142,7 +142,7 @@ export const mainProducts: ProductProps[] = [
     info: {
       title: 'Кухня "Мастер" Угловая',
       colors: ["wood-#F6E8B7-#A78663", "#3E3C3B", "#EFE3E3"],
-      price: "52.490",
+      price: "34.500",
     },
   },
   {
@@ -161,7 +161,7 @@ export const mainProducts: ProductProps[] = [
     info: {
       title: 'Кухня "Модерн" с островком',
       colors: ["wood-#B1A396-#826F60", "light-#222222-#171612"],
-      price: "62.490",
+      price: "39.500",
     },
   },
 ];
@@ -169,22 +169,22 @@ export const mainProducts: ProductProps[] = [
 const products: ProductProps[] = [
   ...mainProducts,
   {
-    // Fordge
+    // Fate
     images: [
       {
-        src: forge1,
+        src: fate1,
       },
       {
-        src: forge2,
+        src: fate2,
       },
       {
-        src: forge3,
+        src: fate3,
       },
     ],
     info: {
-      title: 'Кухня "Фордж" Угловая',
+      title: 'Кухня "Фэйт" Угловая',
       colors: ["wood-#D8C3A6-#B4A485", "#385053"],
-      price: "45.490",
+      price: "44.500",
     },
   },
   {
@@ -203,26 +203,26 @@ const products: ProductProps[] = [
     info: {
       title: 'Кухня "Скай" Угловая',
       colors: ["wood-#BB9872-#8E6143", "#F2EADF", "#E1CFBF"],
-      price: "42.490",
+      price: "39.500",
     },
   },
   {
-    // Shine
+    // Forge
     images: [
       {
-        src: shine1,
+        src: forge1,
       },
       {
-        src: shine2,
+        src: forge2,
       },
       {
-        src: shine3,
+        src: forge3,
       },
     ],
     info: {
-      title: 'Кухня "Шайн" Угловая',
+      title: 'Кухня "Фордж" Угловая',
       colors: ["wood-#E0B896-#A47E60", "#D6CEC7", "light-#EACDA9-#EFE4B8"],
-      price: "45.490",
+      price: "44.500",
     },
   },
   {
@@ -241,7 +241,7 @@ const products: ProductProps[] = [
     info: {
       title: 'Кухня "Фэер" Прямая',
       colors: ["#33414A", "#E5EEEB", "#92A5B1"],
-      price: "42.490",
+      price: "39.500",
     },
   },
   {
@@ -260,7 +260,7 @@ const products: ProductProps[] = [
     info: {
       title: 'Кухня "Стандарт" Угловая',
       colors: ["#86958E", "#21262C", "#c0bcc3"],
-      price: "40.490",
+      price: "34.500",
     },
   },
   {
@@ -279,7 +279,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Солид" Угловая',
-      price: "40.490",
+      price: "39.500",
       colors: ["wood-#733617-#965632", "#746d71"],
     },
   },
@@ -299,7 +299,7 @@ const products: ProductProps[] = [
     info: {
       title: 'Кухня "Винтер" Прямая',
       colors: ["wood-#D4B596-#C2A482", "#E4E9E5", "#84847A"],
-      price: "38.490",
+      price: "34.500",
     },
   },
   {
@@ -318,7 +318,7 @@ const products: ProductProps[] = [
     info: {
       title: 'Кухня "Голд" Угловая',
       colors: ["#CDBDAD", "#E1EBF7"],
-      price: "42.490",
+      price: "34.500",
     },
   },
   {
@@ -334,7 +334,7 @@ const products: ProductProps[] = [
     info: {
       title: 'Кухня "Эконом" Прямая',
       colors: ["#86958E", "#21262C", "#c0bcc3"],
-      price: "38.490",
+      price: "29.500",
     },
   },
   {
@@ -349,7 +349,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Брусника" Угловая',
-      price: "40.490",
+      price: "34.500",
       colors: [
         "#fcfaee",
         "linear-gradient(45deg, #bb2725 30%, #c26267 50%, #bb2725 65%)",
@@ -371,7 +371,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Мини" c островком',
-      price: "42.490",
+      price: "34.500",
       colors: ["wood-#8D694F-#634938", "#747675", "#c4baa4"],
     },
   },
@@ -388,7 +388,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Эксплит" Прямая',
-      price: "40.490",
+      price: "34.500",
       colors: ["#c6bbb7", "#141614"],
     },
   },
@@ -410,7 +410,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Футуристик" Прямая',
-      price: "40.490",
+      price: "34.500",
       colors: ["#A49C8F", "#353434", "light-#7C7FC2-#9Fa7eF"],
     },
   },
@@ -426,7 +426,7 @@ const products: ProductProps[] = [
     ],
     info: {
       title: 'Кухня "Кварц" Угловая',
-      price: "42.490",
+      price: "34.500",
       colors: ["wood-#8C7F92-#6F5E43", "#BABABF"],
     },
   },

@@ -2,7 +2,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
 import Background from "./Background";
 import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Box";
 import ButtonChoice from "./ButtonChoice";
 
 const SectionHero = () => {
@@ -14,7 +13,7 @@ const SectionHero = () => {
       id="hero"
       alignItems="center"
       justifyContent="center"
-      height={{ sm: 700, lg: 800 }}
+      height={{ md: 700, lg: 800 }}
     >
       <Background />
       <Typography
@@ -30,7 +29,7 @@ const SectionHero = () => {
           px: { sm: 2, md: 4 },
         }}
       >
-        ЛЮБЫЕ КУХНИ НА ЗАКАЗ ОТ ПРОИЗВОДИТЕЛЯ
+        КУХНЯ СПЕЦИАЛЬНО ДЛЯ ВАШЕГО ДОМА
       </Typography>
       <Typography
         variant="h2"
@@ -40,24 +39,14 @@ const SectionHero = () => {
         fontWeight="400"
         position="relative"
         color="white"
-        mb={{ xs: 5, md: 6 }}
-        maxWidth={950}
+        mb={{ xs: 4.5, md: 6 }}
+        maxWidth={900}
         sx={{
           px: { sm: 2, md: 4 },
         }}
       >
-        Специальное предложение
-        <Typography
-          variant="inherit"
-          component="span"
-          display="inline"
-          sx={{ fontWeight: "bold" }}
-        >
-          {" "}
-          до 15 апреля
-        </Typography>{" "}
-        ‒ все кухни нашего производства со скидкой{" "}
-        <Typography variant="inherit" component="span" display="inline-block">
+        Получите скидку{" "}
+        <Typography variant="inherit" component="span" display="inline">
           до{" "}
           <Typography
             variant="inherit"
@@ -65,8 +54,28 @@ const SectionHero = () => {
             display="inline"
             sx={{ fontWeight: "bold" }}
           >
-            40%
+            30%{" "}
           </Typography>
+          при заказе
+          <Typography
+            variant="inherit"
+            component="span"
+            display="inline"
+            sx={{ fontWeight: "bold" }}
+          >
+            {" "}
+            до 30 апреля
+          </Typography>{" "}
+          в честь{" "}
+          <Typography
+            variant="inherit"
+            component="span"
+            display="inline"
+            sx={{ fontWeight: "bold" }}
+          >
+            6
+          </Typography>
+          -летия нашей компании
         </Typography>
       </Typography>
       <Typography
@@ -75,7 +84,7 @@ const SectionHero = () => {
         component="p"
         color="white"
         mb={{ xs: 3, md: 3.4 }}
-        maxWidth={{ sm: 800, md: 900 }}
+        maxWidth={{ sm: 800, md: 850 }}
         sx={{
           px: { sm: 2, md: 4 },
           fontSize: { xs: "1.45rem", md: "1.8rem" },

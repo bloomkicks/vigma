@@ -18,10 +18,10 @@ const Product = ({
         flexWrap="nowrap"
         mx="auto"
         sx={{
-          width: { xs: 360, md: 380 },
+          width: { xs: 335, md: 380 },
           maxWidth: "100%",
           textAlign: "left",
-          bgcolor: "rgba(0,0,0,0.05)",
+          bgcolor: "rgba(0,0,0,0.02)",
           boxShadow: "1px 2px 4px rgba(0,0,0,0.3)",
           borderRadius: "14px",
         }}

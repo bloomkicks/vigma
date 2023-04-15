@@ -36,7 +36,7 @@ const theme = createTheme({
       // fontSize: 48,
       // lineHeight: "56px",
       fontSize: "5rem",
-      lineHeight: 1.15,
+      lineHeight: 1.12,
       fontWeight: "800",
       letterSpacing: 0.5,
     },

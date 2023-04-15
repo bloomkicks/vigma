@@ -27,7 +27,7 @@ const ProductInfo = ({
         px: { xs: 1.5, md: 1.7 },
         // pt: 2.1,
         pt: 1.45,
-        pb: 4,
+        pb: { xs: 2.6, md: 3.1 },
         borderBottomLeftRadius: "14px",
         borderBottomRightRadius: "14px",
         border: "1px solid black",
@@ -41,14 +41,18 @@ const ProductInfo = ({
           textTransform: "capitalize",
           fontSize: { xs: "2.12rem", md: "1.9rem" },
           fontWeight: "500",
-          mb: 0.8,
+          mb: 1,
         }}
       >
         {title}
       </Typography>
-      <Stack direction="row" justifyContent="space-between" mb={2.7}>
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        mb={{ xs: 1.7, md: 2 }}
+      >
         <Typography variant="body2" fontSize={{ xs: "1.5rem", sm: "1.3rem" }}>
-          от {price} руб/п. м.
+          от {price} руб.
         </Typography>
         <Colors colors={colors} />
       </Stack>

@@ -7,9 +7,9 @@ import Stack from "@mui/material/Stack";
 const ImageSlider = ({ images }: { images: ProductImage[] }) => {
   const [focusedIndex, setFocusedIndex] = useState(0);
   let width = 381;
-  let height = 420;
-  let mobileWidth = 361;
-  let mobileHeight = 380;
+  let height = 410;
+  let mobileWidth = 336;
+  let mobileHeight = 370;
 
   function slideHandler(isRight: boolean): void {
     if (

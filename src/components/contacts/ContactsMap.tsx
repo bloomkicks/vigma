@@ -4,6 +4,7 @@ const ContactsMap = ({ sx }: { sx?: any }) => {
   return (
     <Box component="section" sx={sx}>
       <iframe
+        title="Мы на Yandex Картах"
         src="https://yandex.com/map-widget/v1/?z=12&ol=biz&oid=93431171837"
         frameBorder="0"
         style={{
