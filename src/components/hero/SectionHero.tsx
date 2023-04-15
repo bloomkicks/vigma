@@ -13,7 +13,7 @@ const SectionHero = () => {
       id="hero"
       alignItems="center"
       justifyContent="center"
-      height={{ md: 700, lg: 710, xl: 800 }}
+      height={{ md: 700, lg: 690, xl: 720 }}
     >
       <Background />
       <Typography

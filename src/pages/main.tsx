@@ -26,8 +26,8 @@ const MainPage = () => {
         "& > article": {
           position: "relative",
           width: "100%",
-          pt: { xs: "37.5px", md: "45px" },
-          pb: { xs: "40px", md: "45px" },
+          pt: { xs: "37.5px", md: "40px" },
+          pb: { xs: "40px", md: "40px" },
           px: { xs: 3, sm: 5, md: 4, lg: 9 },
           maxWidth: 1366,
           mx: "auto",
@@ -38,6 +38,7 @@ const MainPage = () => {
         "& > article#advantages": {
           pl: { xs: 2, sm: 5, md: 4, lg: 9 },
           pb: { lg: "55px" },
+          pt: { xs: "37.5px", md: "40px" },
         },
         "& > article#work-steps": {
           pt: { xs: "37.5px", md: "37.5px" },
@@ -55,8 +56,8 @@ const MainPage = () => {
         "& > article#hero": {
           maxWidth: "100%",
           px: { xs: 3, md: 5, lg: 6 },
-          pt: isReallySmall ? 9 : { xs: 12.5, lg: 12, xl: 12.5 },
-          pb: isReallySmall ? 8 : { xs: 11.5, md: 13, lg: 12.5, xl: 16.5 },
+          pt: isReallySmall ? 9 : { xs: 12.5, lg: 11.8, xl: 11.5 },
+          pb: isReallySmall ? 8 : { xs: 11.5, md: 13.5, lg: 11.5, xl: 12 },
         },
       }}
     >
