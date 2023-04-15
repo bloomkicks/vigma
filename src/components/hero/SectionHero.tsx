@@ -65,8 +65,8 @@ const SectionHero = () => {
           >
             {" "}
             до 30 апреля
-          </Typography>{" "}
-          в честь{" "}
+          </Typography>
+          . Отпразднуйте{" "}
           <Typography
             variant="inherit"
             component="span"
@@ -75,7 +75,7 @@ const SectionHero = () => {
           >
             6
           </Typography>
-          -летия нашей компании
+          -летие компании вместе с нами!
         </Typography>
       </Typography>
       <Typography
@@ -100,6 +100,16 @@ const SectionHero = () => {
         >
           {" "}
           дизайн-проект
+        </Typography>
+        ,{" "}
+        <Typography
+          variant="inherit"
+          component="span"
+          display="inline"
+          sx={{ fontWeight: "bold" }}
+        >
+          {" "}
+          консультацию
         </Typography>{" "}
         и
         <Typography
