@@ -38,7 +38,6 @@ const theme = createTheme({
       fontSize: "5rem",
       lineHeight: 1.12,
       fontWeight: "800",
-      letterSpacing: 0.5,
     },
     h2: {
       fontFamily: bigHeadingFontFamily,
