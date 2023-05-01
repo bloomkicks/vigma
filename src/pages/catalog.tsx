@@ -1,12 +1,18 @@
 import CatalogHead from "../components/layout/head-components/CatalogHead";
-import ProductList from "../components/catalog/ProductList";
+import SectionHero from "../components/pages/catalog/hero/SectionHero";
+import ProductList from "../components/pages/catalog/ProductList";
+import Container from "@mui/material/Container";
 
 const CatalogPage = () => {
   return (
-    <>
+    <Container
+      component="main"
+      sx={{ width: "auto", maxWidth: { xs: "none" }, overflow: "hidden" }}
+    >
       <CatalogHead />
+      <SectionHero />
       <ProductList />
-    </>
+    </Container>
   );
 };
 

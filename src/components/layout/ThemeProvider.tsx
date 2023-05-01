@@ -14,9 +14,11 @@ const theme = createTheme({
       contrastText: "#303030",
     },
     secondary: {
-      main: "#ffffff",
-      dark: "#d5d5d5",
-      contrastText: "#535353",
+      main: "#97D0DD",
+      dark: "#2B6EAB",
+      // main: "#ffffff",
+      // dark: "#d5d5d5",
+      // contrastText: "#535353",
     },
     info: {
       main: "#3b3983",
@@ -27,6 +29,7 @@ const theme = createTheme({
   },
   typography: {
     htmlFontSize: 16,
+    fontFamily: bodyFontFamily,
     allVariants: {
       fontFamily: bodyFontFamily,
       fontWeight: "400",
@@ -76,19 +79,19 @@ const theme = createTheme({
     body1: {
       // fontSize: 22,
       // lineHeight: "25.8px",
-      fontSize: "1.375rem",
+      fontSize: "1.35rem",
       lineHeight: 1.175,
     },
     body2: {
       // fontSize: 20,
       // lineHeight: "23px",
-      fontSize: "1.25rem",
+      fontSize: "1.2rem",
       lineHeight: 1.15,
     },
     button: {
       // fontSize: 21,
-      fontSize: "1.3125rem",
-      lineHeight: 1.9,
+      fontSize: "1.15rem",
+      lineHeight: 1.175,
       textTransform: "uppercase",
     },
     subtitle1: {
@@ -111,9 +114,20 @@ const theme = createTheme({
     },
     MuiButton: {
       styleOverrides: {
-        contained: {
-          padding: "0 34px",
-          borderRadius: "50px",
+        root: ({ ownerState }) => {
+          let result = {};
+          if (ownerState.variant === "contained") {
+            result = {
+              padding: "9px 35px",
+              borderRadius: "50px",
+            };
+            if (ownerState.color === "primary") {
+              result["&:hover, &:focus"] = {
+                backgroundColor: "rgb(135, 205, 142)",
+              };
+            }
+          }
+          return result;
         },
       },
     },

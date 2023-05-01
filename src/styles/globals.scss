@@ -14,10 +14,25 @@ html {
   box-sizing: border-box;
 }
 
+button,
+button:hover {
+  border: none;
+}
+
+input,
+input:focus,
+input:hover {
+  border: none;
+  outline: none;
+  font-size: inherit;
+  color: inherit;
+}
+
 *:focus {
   outline: 1px dashed;
 }
-button:focus {
+button:focus,
+input:focus {
   outline: none;
 }
 
@@ -157,12 +172,12 @@ button:focus {
 /* medium - tablet */
 @media (max-width: 900px) {
   html {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
 /* xsmall - mobile */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   html {
     font-size: 12.5px;
   }

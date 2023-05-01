@@ -19,18 +19,24 @@ const NavLink = (props: any) => {
         }}
         variant="text"
         sx={{
+          minWidth: "max-content",
+          maxWidth: "100vw",
+          my: { xs: 1.25, md: 0 },
+          textAlign: "center",
+          height: { md: "100%" },
+          mx: { md: 0.5 },
           px: 2.5,
-          py: 1,
+          py: 2,
           borderRadius: { xs: "5px", md: 0 },
-          "&:hover": {
-            bgcolor: (theme) => theme.palette.primary.dark + "3a",
+          "&:hover, &:focus": {
+            bgcolor: "rgba(121, 181, 127, 0.23)",
           },
           ...sx,
         }}
       >
         <Typography
           variant="h6"
-          color={isActive ? "primary.main" : "secondary.main"}
+          color={isActive ? "primary.main" : "white"}
           sx={{
             textTransform: "capitalize",
             fontSize: { xs: "1.6rem", md: "1.3rem" },

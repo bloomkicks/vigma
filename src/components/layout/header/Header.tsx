@@ -1,7 +1,7 @@
 import MenuSocials from "./MenuSocials";
 import { useState, useEffect } from "react";
 
-import CallButton from "./CallButton";
+import MenuCallButton from "./MenuCallButton";
 import HeaderMenuSetter from "./HeaderMenuSetter";
 import HeaderLogo from "./HeaderLogo";
 import NavLink from "./NavLink";
@@ -22,11 +22,11 @@ let links = [
       const quizDivider = document.getElementById("quiz-start");
       quizDivider.scrollIntoView({ behavior: "smooth", block: "start" });
     },
-    title: "Расчёт Стоимости",
+    title: "Рассчитать | Заказать",
   },
   {
     link: "/catalog",
-    title: "Каталог",
+    title: "Наши кухни",
   },
 ];
 
@@ -69,7 +69,7 @@ const Header = () => {
             ))}
             <MenuSocials />
           </nav>
-          <CallButton />
+          <MenuCallButton />
           <HeaderMenuSetter
             toggleMenuHandler={toggleMenuHandler}
             isActive={isMenuActive}

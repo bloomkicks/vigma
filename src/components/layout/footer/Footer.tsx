@@ -11,8 +11,8 @@ const Footer = () => {
       sx={{
         px: 4,
         textAlign: { xs: "center" },
-        pt: { xs: 6.2, sm: 6.2, md: 6.25 },
-        pb: 4.5,
+        pt: { xs: 6.2, sm: 6.2, md: 3.5 },
+        pb: { xs: 4.5, md: 5 },
         mt: 9,
         bgcolor: "info.main",
         color: "white",
@@ -23,14 +23,41 @@ const Footer = () => {
       }}
     >
       <Typography
-        mb={{ xs: 5.5, sm: 4.5 }}
+        mb={{ xs: 5.5, sm: 4.5, md: 5.5 }}
         color="white"
         variant="h4"
-        sx={{ fontSize: { xs: "2.3rem", md: "2.2rem" } }}
-        display={{ xs: "block", md: "none" }}
+        sx={{
+          fontSize: { xs: "2.3rem", md: "2.2rem" },
+        }}
+        // display={{ xs: "block", md: "none" }}
         component="h6"
+        position="relative"
       >
-        Дополнительная информация:
+        Дополнительная информация
+        <Box
+          position="absolute"
+          top={-7}
+          left="50%"
+          width={{ xs: "90%", md: "0%" }}
+          height={2}
+          bgcolor="white"
+          sx={{
+            transform: "translateX(-50%)",
+            opacity: 0.8,
+          }}
+        ></Box>
+        <Box
+          position="absolute"
+          bottom={-8}
+          left="50%"
+          width={{ xs: "90%", md: 900 }}
+          height={2}
+          bgcolor="white"
+          sx={{
+            transform: "translateX(-50%)",
+            opacity: 0.8,
+          }}
+        ></Box>
       </Typography>
       <Stack
         direction={{ xs: "column", md: "row-reverse" }}
@@ -68,7 +95,7 @@ const Footer = () => {
               ул. Автобусная,
             </Typography>
             <Typography component="span" sx={{ display: "inline-block" }}>
-              д. 3В
+              д. 3
             </Typography>
           </Typography>
         </Box>
@@ -98,7 +125,11 @@ const Footer = () => {
           variant="body2"
           color="white"
           component="a"
-          sx={{ display: "inline-block", mx: "auto", mt: 6.75 }}
+          sx={{
+            display: "inline-block",
+            mx: "auto",
+            mt: { xs: 6.75, md: 2.25 },
+          }}
         >
           Наша политика конфиденциальности
         </Typography>

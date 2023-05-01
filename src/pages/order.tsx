@@ -4,8 +4,8 @@ import { quizActions } from "../store/quiz";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
-import OrderForm from "../components/quiz/order-form/OrderForm";
-import PageQuiz from "../components/quiz/PageQuiz";
+import OrderForm from "../components/pages/order/order-form/OrderForm";
+import PageQuiz from "../components/pages/order/PageQuiz";
 import Box from "@mui/material/Box";
 
 const OrderPage = () => {
