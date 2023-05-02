@@ -21,6 +21,10 @@ const inputs = [
   },
 ];
 
+function telValidate(length) {
+  return length === 11;
+}
+
 const PhoneForm = ({ onClose }: { onClose?: () => void }) => {
   const telRef = useRef<HTMLInputElement>();
   const nameRef = useRef<HTMLInputElement>();
@@ -50,12 +54,13 @@ const PhoneForm = ({ onClose }: { onClose?: () => void }) => {
 
   function phoneChangeHandler(e: React.ChangeEvent<HTMLInputElement>) {
     const number = e.target.value.replaceAll(/[^\d]/g, "");
-    setIsValid(number.length === 11);
+    setIsValid(telValidate(number.length));
   }
-  const { submitHandler, isSuccess, isLoading, error, clearState } = useForm({
-    onSubmit,
-    isValid,
-  });
+  const { submitHandler, isSuccess, isLoading, error, clearState, notValid } =
+    useForm({
+      onSubmit,
+      isValid,
+    });
 
   return (
     <>
@@ -67,33 +72,43 @@ const PhoneForm = ({ onClose }: { onClose?: () => void }) => {
       >
         {inputs.map((inputProps, i) => {
           const inputId = "call-popup-" + inputProps.label;
+          const activeColor =
+            i === 0 && notValid ? "error.main" : "secondary.dark";
+          const bgColor = "rgb(243, 243, 243)";
+          const hoverBgColor = "rgb(227, 227, 227)";
+
           return (
             <TextField
               variant="filled"
               color="secondary"
               size="small"
+              error={i === 0 && !!notValid}
               {...inputProps}
               key={inputId}
               sx={{
-                mb: 2.25 + i * 1.2,
+                mb: { xs: 1.75 + i * 1.25, sm: 2.25 + i * 1.2 },
                 "& .MuiInputLabel-root": {
                   color: "rgba(0, 0, 0, 0.6)",
                   fontSize: { xs: "1.25rem", sm: "1.15rem", lg: "1.3rem" },
                   transform: "translate(15px, 12.5px)",
                 },
                 "& .MuiInputLabel-shrink, & .MuiInputLabel-root.Mui-focused ": {
-                  color: "secondary.dark",
+                  color: activeColor,
                   transform: "translate(15px, 6px) scale(0.75)",
                 },
                 "& .MuiInputBase-root.Mui-focused::after": {
-                  borderColor: "secondary.dark",
+                  borderColor: activeColor,
                   borderBottomWidth: "3px",
                 },
-                "& .MuiInputBase-root.Mui-focused": {
-                  borderRadius: "0px",
-                  borderTopLeftRadius: "9px",
-                  borderTopRightRadius: "9px",
+                "& .MuiInputLabel-root.Mui-error": {
+                  animation: i === 0 ? "shaking 500ms ease-out" : "",
                 },
+                "& .MuiInputBase-root.Mui-focused, & .MuiInputBase-root.Mui-error":
+                  {
+                    borderRadius: "0px",
+                    borderTopLeftRadius: "9px",
+                    borderTopRightRadius: "9px",
+                  },
                 "& .MuiInputBase-root": {
                   boxShadow: "inset 1px 3px 4px rgba(0,0,0,0.35)",
                   borderRadius: "9px",
@@ -101,9 +116,9 @@ const PhoneForm = ({ onClose }: { onClose?: () => void }) => {
                     "border-radius 250ms ease-out, background-color 100ms ease-out",
                 },
                 "& .MuiInputBase-root, & .MuiInputBase-root.Mui-focused, & .MuiInputBase-root:hover, & .MuiInputBase-root:focus":
-                  { bgcolor: "rgb(243, 243, 243)" },
+                  { bgcolor: bgColor },
                 "& .MuiInputBase-root:hover, & .MuiInputBase-root:focus": {
-                  bgcolor: "rgb(227, 227, 227)",
+                  bgcolor: hoverBgColor,
                 },
                 "& .MuiInputBase-input": {
                   transition: "padding 100ms ease-out",
@@ -126,7 +141,6 @@ const PhoneForm = ({ onClose }: { onClose?: () => void }) => {
           type="submit"
           variant="contained"
           color="secondary"
-          disabled={!isValid}
           sx={{
             mx: "auto",
             "&:hover, &:focus": { bgcolor: "#82BBCA" },

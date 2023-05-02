@@ -11,17 +11,19 @@ const CallUsPopup = ({
   isStatic,
   open,
   onClose,
+  title,
   sx,
 }: {
-  isStatic: boolean;
-  open?: boolean;
   onClose?: () => void;
+  title?: string;
   sx?: any;
+  isStatic?: boolean;
+  open?: boolean;
 }) => {
-  const isSmall = useMediaQuery("(max-width: 376px)");
+  // const isSmall = useMediaQuery("(max-width: 376px)");
   const cardSx = {
     width: { xs: 350, sm: 370, md: 400, lg: 420 },
-    px: { xs: 3.6, lg: 3.85 },
+    px: { xs: 3.25, sm: 3.6, lg: 4 },
     py: { xs: 4.5, lg: 4.8 },
     position: "relative",
     backgroundImage: isStatic
@@ -60,7 +62,7 @@ const CallUsPopup = ({
           mr: "auto",
         }}
       >
-        Оставьте заявку
+        {title || "Оставить заявку"}
         <Highlighter
           lines={[
             { length: 82, opacity: 0.5 },
@@ -74,10 +76,10 @@ const CallUsPopup = ({
         sx={{
           fontSize: { xs: "1.2rem", sm: "1.1rem", lg: "1.15rem" },
           color: "#D3D3D3",
-          mb: 3.5,
+          mb: { xs: 2.75, sm: 3.5 },
         }}
       >
-        Заполните анекту и наш консультант позвонит вам в ближайшее время
+        Заполните анкету и наш консультант позвонит вам в ближайшее время
       </Typography>
       <PhoneForm onClose={onClose} />
       <PrivacyAgree
@@ -86,6 +88,7 @@ const CallUsPopup = ({
           "& a": {
             color: "#CDCDCD",
           },
+          px: 2,
         }}
       />
     </ParentElement>

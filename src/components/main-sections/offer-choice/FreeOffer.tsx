@@ -4,7 +4,15 @@ import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
 
-const FreeOffer = ({ sx, isAnother }: { sx?: any; isAnother?: boolean }) => {
+const FreeOffer = ({
+  sx,
+  isAnother,
+  onClick,
+}: {
+  sx?: any;
+  isAnother?: boolean;
+  onClick: () => void;
+}) => {
   let mainColor = isAnother ? "#753030" : "#2E6290";
   let secColor = "white";
   let buttonHoverColor = isAnother ? "rgb(235,220,220)" : "rgb(220,220,235)";
@@ -66,6 +74,7 @@ const FreeOffer = ({ sx, isAnother }: { sx?: any; isAnother?: boolean }) => {
           </>
         )}
         <Button
+          onClick={onClick}
           variant="contained"
           color="secondary"
           sx={{

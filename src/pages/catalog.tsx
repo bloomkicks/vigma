@@ -7,7 +7,12 @@ const CatalogPage = () => {
   return (
     <Container
       component="main"
-      sx={{ width: "auto", maxWidth: { xs: "none" }, overflow: "hidden" }}
+      sx={{
+        width: "auto",
+        maxWidth: { xs: "none" },
+        px: 0.5,
+        overflow: "hidden",
+      }}
     >
       <CatalogHead />
       <SectionHero />

@@ -70,6 +70,21 @@ input:focus {
   animation: fade-in-left 450ms ease-out;
 }
 
+@keyframes shaking {
+  13% {
+    transform: translate(19px, 6px) scale(0.75);
+  }
+  57% {
+    transform: translate(12.5px, 6px) scale(0.75);
+  }
+  85% {
+    transform: translate(16px, 6px) scale(0.75);
+  }
+  100% {
+    transform: translate(15px, 6px) scale(0.75);
+  }
+}
+
 @keyframes vertical-large-fade {
   0% {
     transform: translateY(-20%);

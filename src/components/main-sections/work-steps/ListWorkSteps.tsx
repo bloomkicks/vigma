@@ -33,16 +33,15 @@ const ListWorkSteps = () => {
       alignItems={{ xs: "center", md: "flex-start" }}
       justifyContent="center"
       spacing={{ xs: 0, sm: 1, md: 2, lg: 3.5 }}
-      mt={{ xs: -1.5, sm: -0.75 }}
+      mt={{ xs: -1, sm: -0.75 }}
       maxWidth={{ xs: 420, sm: 620, md: 900 }}
       mx="auto"
       pl={{ md: 2 }}
-      pr={{ xs: 1.5, md: 0 }}
+      pr={{ xs: 1, md: 0 }}
       sx={{
         "& > div, & > div:not(style)": {
           mb: { xs: 2, md: 2.5 },
         },
-        px: 1,
       }}
     >
       {workSteps.map((step, index) => (

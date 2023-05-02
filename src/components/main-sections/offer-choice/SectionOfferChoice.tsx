@@ -1,7 +1,18 @@
+import { useState } from "react";
+import CallUsPopup from "../../general/call-us-popup/CallUsPopup";
 import Stack from "@mui/material/Stack";
 import FreeOffer from "./FreeOffer";
 
 const SectionOfferChoice = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  function popupOpenHandler() {
+    setIsPopupOpen(true);
+  }
+  function popupCloseHandler() {
+    setIsPopupOpen(false);
+  }
+
   return (
     <Stack
       component="article"
@@ -13,8 +24,9 @@ const SectionOfferChoice = () => {
       sx={{ mx: "auto" }}
       pb={4}
     >
-      <FreeOffer isAnother />
-      <FreeOffer />
+      <CallUsPopup open={isPopupOpen} onClose={popupCloseHandler} />
+      <FreeOffer isAnother onClick={popupOpenHandler} />
+      <FreeOffer onClick={popupOpenHandler} />
     </Stack>
   );
 };

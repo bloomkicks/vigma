@@ -47,7 +47,10 @@ function useForm({
   }
   async function submitHandler(e: any) {
     e.preventDefault();
-    if (!isValid) return dispatch({ type: "NOT_VALID" });
+    if (!isValid) {
+      dispatch({ type: "NOT_VALID" });
+      return;
+    }
     dispatch("SUBMIT");
     try {
       await onSubmit();

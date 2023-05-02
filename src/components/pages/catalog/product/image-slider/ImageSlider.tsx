@@ -8,8 +8,8 @@ const ImageSlider = ({ images }: { images: ProductImage[] }) => {
   const [focusedIndex, setFocusedIndex] = useState(0);
   let width = 391;
   let height = 400;
-  let smWidth = 381;
-  let smHeight = 390;
+  let smWidth = 371;
+  let smHeight = 385;
   let mobileWidth = 341;
   let mobileHeight = 355;
 
