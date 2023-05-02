@@ -36,8 +36,8 @@ const ListWorkSteps = () => {
       mt={{ xs: -1, sm: -0.75 }}
       maxWidth={{ xs: 420, sm: 620, md: 900 }}
       mx="auto"
-      pl={{ md: 2 }}
-      pr={{ xs: 1, md: 0 }}
+      pl={{ xs: 0.5, md: 2 }}
+      pr={{ xs: 0.5, md: 0 }}
       sx={{
         "& > div, & > div:not(style)": {
           mb: { xs: 2, md: 2.5 },

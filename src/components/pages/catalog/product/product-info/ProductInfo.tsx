@@ -1,3 +1,4 @@
+import Link from "next/link";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useRouter } from "next/router";
 import { quizActions } from "../../../../../store/quiz";
@@ -13,11 +14,11 @@ import Box from "@mui/material/Box";
 const ProductInfo = ({ title, price, sx }: ProductInfoProps & { sx?: any }) => {
   const isReallySmall = useMediaQuery("(max-width: 374px)");
   const isSmall = useMediaQuery("(max-width: 386px)");
-  const router = useRouter();
+  // const router = useRouter();
   const dispatch = useDispatch();
   function orderHandler() {
     dispatch(quizActions.selectProduct(title));
-    router.push("/order");
+    // router.push("/main#quiz");
   }
 
   return (
@@ -60,18 +61,23 @@ const ProductInfo = ({ title, price, sx }: ProductInfoProps & { sx?: any }) => {
           isReallySmall={isReallySmall}
           isSmall={isSmall}
         />
-        <Button
-          variant="contained"
-          onClick={orderHandler}
-          sx={{
-            fontSize: isReallySmall ? "1.1rem" : "1.15rem",
-            ml: "auto",
-            py: isReallySmall || isSmall ? 1.25 : 1.5,
-            px: isReallySmall ? 2.5 : isSmall ? 3 : 3.5,
-          }}
-        >
-          РАССЧИТАТЬ
-        </Button>
+        <Link href="/main#quiz" passHref>
+          <Button
+            variant="contained"
+            onClick={orderHandler}
+            sx={{
+              fontSize: isReallySmall ? "1.1rem" : "1.15rem",
+              ml: "auto",
+              py: isReallySmall || isSmall ? 1.25 : 1.5,
+              px: isReallySmall ? 2.5 : isSmall ? 3 : 3.5,
+              "&:focus": {
+                outline: "none",
+              },
+            }}
+          >
+            РАССЧИТАТЬ
+          </Button>
+        </Link>
       </Stack>
     </Box>
   );

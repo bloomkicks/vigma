@@ -27,7 +27,11 @@ const WorkStep = ({
         width={{ xs: 71, sm: 75, md: "116.5px" }}
         height="auto"
       />
-      <Typography pb={{ xs: '2px', md: 0 }}>
+      <Typography
+        sx={{
+          fontSize: { xs: "1.45rem", md: "1.35rem" },
+        }}
+      >
         <span style={{ fontWeight: "bold" }}>{index}</span>. {description}
       </Typography>
     </Stack>
