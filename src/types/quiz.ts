@@ -1,45 +1,37 @@
-export type FlatQuestion<T = string> = { [question: string]: T[] };
-export type Category =
-  | "kitchen"
-  | "closet"
-  | "childish"
-  | "bathroom"
-  | "shop"
-  | "office"
-  | "dishwasher"
-  | "oven"
-  | "hood"
-  | "microwave"
-  | "fridge"
-  | "product";
+export type QuizQuestion = {
+  question: string;
+  options?: string[];
+};
 
-export type ConstructorQuestions = { [question: string]: string | null };
-export type Size = {
+export type QuizAnswer = {
+  question: string;
+  selectedOption?: string;
+  equipmentAnswers?: EquipmentAnswer[];
+  sizeAnswers?: SizeAnswers;
+};
+
+type QuizState = {
+  curIndex: number;
+  curQuestion: QuizQuestion;
+  answers: QuizAnswer[];
+  isFinished?: boolean;
+  product?: string;
+};
+
+export type SizeAnswers = {
   width?: string;
   height?: string;
   depth?: string;
 };
 
-export type Translation = ((category: Category) => string) | string;
-
-export type QuizState = {
-  product?: string;
-  isFinished?: boolean;
-
-  // current question and its index
-  currentQuestion: string;
-  indexOfQuestion: number;
-
-  // answers AVAILABLE & SELECTED
-  availableOptions: string[];
-  selectedOptions: string[];
-
-  // storage of answered questions (array)
-  answeredQuestions: FlatQuestion[];
-
-  // translated
-  translatedQuestion?: string;
-
-  // constructor question
-  constructorQuestions: ConstructorQuestions;
+export type EquipmentQuestion = {
+  equipment: string;
+  variants: string[];
 };
+
+export type EquipmentAnswer = {
+  equipment: string;
+  selectedVariant: string;
+};
+
+export default QuizState;

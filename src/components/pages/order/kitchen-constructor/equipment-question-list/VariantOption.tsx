@@ -1,7 +1,7 @@
 import FormControlLabel from "@mui/material/FormControlLabel";
 import MuiRadio from "@mui/material/Radio";
 
-const RadioOption = ({
+const VariantOption = ({
   label,
   value,
   isChecked,
@@ -15,7 +15,12 @@ const RadioOption = ({
       value={value}
       label={label}
       checked={isChecked}
-      sx={{ "& .MuiFormControlLabel-label": { fontSize: 16 }, mb: 0.2 }}
+      sx={{
+        "& .MuiFormControlLabel-label": {
+          fontSize: { xs: "1.3rem", md: "1.2rem" },
+        },
+        mb: 0.2,
+      }}
       control={
         <MuiRadio
           size="small"
@@ -31,4 +36,4 @@ const RadioOption = ({
   );
 };
 
-export default RadioOption;
+export default VariantOption;

@@ -1,6 +1,5 @@
-import { quizActions } from "../../../store/quiz";
+import quizActions from "../../../store/quiz-slice";
 import { useDispatch } from "react-redux";
-
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
@@ -19,16 +18,13 @@ const Actions = ({
   onNextClick?: () => void;
 }) => {
   const dispatch = useDispatch();
-
   function nextHandler() {
-    dispatch(quizActions.nextQuestion());
-    if (onNextClick) {
-      onNextClick();
-    }
+    dispatch(quizActions.moveNext());
+    (onNextClick || function () {})();
   }
 
   function backHandler() {
-    dispatch(quizActions.previousQuestion());
+    dispatch(quizActions.moveBack());
   }
 
   return (

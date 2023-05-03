@@ -1,21 +1,14 @@
-import { Category, Translation } from "../../types/quiz";
+import type { EquipmentAnswer } from "../../types/quiz";
+export const equipments = ["dishwasher", "oven", "hood", "microwave", "fridge"];
 
-const constructorQuestions = [
-  "dishwasher",
-  "oven",
-  "hood",
-  "microwave",
-  "fridge",
-];
-
-const constructorOptions: {
-  [question: string]: Translation;
+const equipmentVariantsTranslations: {
+  [question: string]: string | ((any) => string);
 } = {
   Да: "0",
   "В пенале": "1",
   Внизу: "2",
-  Отдельная: (category) => {
-    if (category === "oven") {
+  Отдельная: (equipment) => {
+    if (equipment === "oven") {
       return "3";
     }
     return "2";
@@ -30,26 +23,19 @@ const constructorOptions: {
 };
 
 function translateConstructorOption(
-  option: string,
-  category: Category,
+  variant: string,
+  equipment: string,
 ): string {
-  const translation = constructorOptions[option];
+  const translation = equipmentVariantsTranslations[variant];
   return typeof translation === "function"
-    ? translation(category)
+    ? translation(equipment)
     : translation;
 }
 
-function getKitchenDisplay(constructorOptions: {
-  [category: string]: string;
-}): string {
-  const kitchenDisplay = Object.entries(constructorOptions)
-    .sort(
-      (a, b) =>
-        constructorQuestions.indexOf(a[0]) - constructorQuestions.indexOf(b[0]),
-    )
-    .map((entry: [Category, string]) =>
-      translateConstructorOption(entry[1], entry[0]),
-    );
+function getKitchenDisplay(equipmentAnswers: EquipmentAnswer[]): string {
+  const kitchenDisplay = equipmentAnswers.map((answer: EquipmentAnswer) =>
+    translateConstructorOption(answer.selectedVariant, answer.equipment),
+  );
 
   while (kitchenDisplay.length < 5) {
     kitchenDisplay.push("0");

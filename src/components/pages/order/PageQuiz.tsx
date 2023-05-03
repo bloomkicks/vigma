@@ -1,21 +1,31 @@
-import type { QuizState } from "../../../types/quiz";
+import type { QuizAnswer, EquipmentAnswer } from "../../../types/quiz";
+import { quizTranslations } from "../../../data/quiz/quiz-translations";
+import quizQuestions from "../../../data/quiz/quiz-questions";
+import type QuizState from "../../../types/quiz";
 import KitchenConstructor from "./kitchen-constructor/KitchenConstructor";
 import SizeForm from "./SizeForm";
 import ListQuizOption from "./quiz-option-list/ListQuizOption";
-import kitchenQuestions from "../../../data/quiz/kitchen-questions";
 import GiftPaper from "./GiftPaper";
 import Actions from "./Actions";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 const PageQuiz = ({
-  currentQuestion,
-  translatedQuestion,
-  availableOptions,
-  selectedOptions,
-  indexOfQuestion,
-  constructorQuestions,
-}: Omit<QuizState, "answeredQuestions" | "connectWay">) => {
+  curQuestion,
+  curIndex,
+  curAnswer,
+  equipmentAnswers,
+  onNextClick,
+  sx,
+}: QuizState & {
+  curAnswer: QuizAnswer;
+  equipmentAnswers: EquipmentAnswer[];
+  answers?: null;
+  onNextClick?: () => void;
+  sx?: any;
+}) => {
+  const questionName = curQuestion.question;
+  const translatedQuestion = quizTranslations[questionName];
   return (
     <Stack
       alignItems="center"
@@ -26,44 +36,41 @@ const PageQuiz = ({
         width: "95%",
         mx: "auto",
         overflowX: "hidden",
+        ...(sx || {}),
       }}
     >
       <GiftPaper
         amountOfQuestions={
-          currentQuestion === "gift"
-            ? 0
-            : kitchenQuestions
-            ? kitchenQuestions.length - indexOfQuestion - 1
-            : undefined
+          questionName === "gift" ? 0 : quizQuestions.length - curIndex - 1
         }
-        currentQuestion={currentQuestion}
+        questionName={questionName}
       />
       <Typography variant="h4" mb={{ xs: 2.5, md: 3.5 }} align="center">
-        {currentQuestion === "gift" ? undefined : translatedQuestion}
+        {questionName === "gift" ? undefined : translatedQuestion}
       </Typography>
-      {currentQuestion === "constructor" ? (
-        <KitchenConstructor
-          questions={constructorQuestions}
-          allQuestions={availableOptions}
-        />
-      ) : currentQuestion === "size" ? (
+      {questionName === "equipment" ? (
+        <KitchenConstructor equipmentAnswers={equipmentAnswers} />
+      ) : questionName === "size" ? (
         <SizeForm />
       ) : (
         <ListQuizOption
-          options={availableOptions}
-          question={currentQuestion}
-          selectedOptions={selectedOptions}
+          curQuestion={curQuestion}
+          selectedOption={curAnswer.selectedOption}
         />
       )}
       <Actions
-        backDisabled={["gift"].includes(currentQuestion)}
-        nextDisabled={selectedOptions.length < 0}
-        isDalee={
-          selectedOptions.length > 0 ||
-          currentQuestion === "size" ||
-          (currentQuestion === "constructor" &&
-            !!constructorQuestions["dishwasher"])
+        backDisabled={questionName === "gift"}
+        nextDisabled={
+          !curQuestion.options &&
+          !["equipment", "size"].includes(curQuestion.question)
         }
+        isDalee={
+          !!curAnswer.selectedOption ||
+          questionName === "size" ||
+          (questionName === "equipment" &&
+            !!equipmentAnswers[0].selectedVariant)
+        }
+        onNextClick={onNextClick}
       />
     </Stack>
   );

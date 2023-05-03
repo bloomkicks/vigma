@@ -44,7 +44,7 @@ const PhoneForm = ({ onClose }: { onClose?: () => void }) => {
       name: nameRef.current.value,
     });
     try {
-      (window as any).ym(90359214, "reachGoal", "contacts_sent");
+      (window as any).ym(process.env.METRICA_KEY, "reachGoal", "contacts_sent");
     } catch (err) {
       console.log(
         "[Данные для аналитики]: Ошибка с отправкой Яндекс цели - contacts_sent",

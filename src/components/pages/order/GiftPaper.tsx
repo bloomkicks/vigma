@@ -14,19 +14,19 @@ const giftFont = {
 
 const GiftPaper = ({
   amountOfQuestions,
-  currentQuestion,
+  questionName,
 }: {
   amountOfQuestions: number;
-  currentQuestion: string;
+  questionName: string;
 }) => {
-  const isKnown = currentQuestion !== "shape";
-  const isGift = currentQuestion === "gift";
+  const isKnown = questionName !== "shape";
+  const isGift = questionName === "gift";
   const questions = getFormOfQuestions(amountOfQuestions + 1);
 
   useEffect(() => {
     const giftPaper = document.getElementById("gift-paper");
 
-    if (currentQuestion !== "shape") {
+    if (questionName !== "shape") {
       giftPaper.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [amountOfQuestions]);

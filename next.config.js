@@ -33,5 +33,6 @@ module.exports = {
     QUIZ_ASSETS: "./images/quiz",
     CERTIFICATES_ASSETS: "./images/certificates",
     SOCIAL_ASSETS: "./images/social",
+    METRICA_KEY: "90359214",
   },
 };

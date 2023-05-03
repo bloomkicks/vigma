@@ -1,38 +1,34 @@
-import { translateCategory } from "../quiz/translate";
-import { QuizState } from "../../types/quiz";
+import { QuizAnswer } from "../../types/quiz";
 import { send } from "@emailjs/browser";
-import { Size } from "../../types/quiz";
 
 async function sendOrder(
   tel: string,
-  quiz: QuizState,
-  size: Size,
+  answers: QuizAnswer[],
   name: string,
+  product?: string,
 ) {
-  const { answeredQuestions, constructorQuestions } = quiz;
-  let typeQuestion = answeredQuestions[0];
-  let frontQuestion = answeredQuestions[2];
-  let bodyQuestion = answeredQuestions[-1];
-  let tableQuestion = answeredQuestions[3];
-  let giftQuestion = answeredQuestions[answeredQuestions.length - 1];
+  const quizData = {
+    shape: answers[0].selectedOption,
+    layout: answers[2].selectedOption,
+    accessories: answers[3].selectedOption,
+    front: answers[4].selectedOption,
+    table: answers[5].selectedOption,
+    gift: answers[7].selectedOption,
+    // EQUIPMENT
+    dishwasher: answers[1].equipmentAnswers[0].selectedVariant,
+    oven: answers[1].equipmentAnswers[1].selectedVariant,
+    hood: answers[1].equipmentAnswers[2].selectedVariant,
+    microwave: answers[1].equipmentAnswers[3].selectedVariant,
+    fridge: answers[1].equipmentAnswers[4].selectedVariant,
+    // SIZE
+    ...answers[6].sizeAnswers,
+  };
 
   const emailParams = {
     name: name,
     number: tel,
-
-    product: quiz.product || "Не выбрано",
-    width: size.width || "-",
-    height: size.height || "-",
-    depth: size.depth || "-",
-
-    category: translateCategory("kitchen") || "-",
-    type: (typeQuestion && typeQuestion["shape"]) || "-",
-    front: (frontQuestion && frontQuestion.front) || "-",
-    body: (bodyQuestion && bodyQuestion.body) || "-",
-    table: (tableQuestion && tableQuestion.table) || "-",
-    gift: (giftQuestion && giftQuestion.gift) || "-",
-
-    ...constructorQuestions,
+    ...quizData,
+    product: product || "Не выбрано",
   };
 
   send(

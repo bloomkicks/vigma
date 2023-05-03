@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { quizActions } from "../../../../store/quiz";
+import quizActions from "../../../../store/quiz-slice";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -31,9 +31,7 @@ const CancelDialog = ({
         </Typography>
       </DialogTitle>
       <DialogContent>
-        <Typography variant="body1">
-          Это очистит выбранные вами ответы
-        </Typography>
+        <Typography variant="body1">Это сбросит ваши ответы</Typography>
       </DialogContent>
       <DialogActions sx={{ mr: 2, mb: 0.5 }}>
         <Button

@@ -1,3 +1,5 @@
+import quizActions from "../../../../store/quiz-slice";
+import { useDispatch } from "react-redux";
 // MUI
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -7,8 +9,6 @@ import Radio from "@mui/material/Radio";
 // MUI END
 
 import Image from "next/image";
-import { quizActions } from "../../../../store/quiz";
-import { useDispatch } from "react-redux";
 import React from "react";
 
 const QuizOption = ({
@@ -23,9 +23,8 @@ const QuizOption = ({
   imgSrc: string;
 }) => {
   const dispatch = useDispatch();
-
-  function clickHandler() {
-    dispatch(quizActions.toggleSelectOption(option));
+  function selectHandler() {
+    dispatch(quizActions.select(option));
   }
 
   return (
@@ -44,7 +43,7 @@ const QuizOption = ({
       }}
     >
       <Card
-        onClick={clickHandler}
+        onClick={selectHandler}
         component="section"
         sx={{
           display: "flex",

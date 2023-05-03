@@ -1,11 +1,15 @@
-import type { ConstructorQuestions } from "../../../../types/quiz";
+import type { EquipmentAnswer } from "../../../../types/quiz";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 
 import getKitchenDisplay from "../../../../features/quiz/get-kitchen-display";
 
-const KitchenDisplay = ({ questions }: { questions: ConstructorQuestions }) => {
-  const kitchenDisplay = getKitchenDisplay(questions);
+const KitchenDisplay = ({
+  equipmentAnswers,
+}: {
+  equipmentAnswers: EquipmentAnswer[];
+}) => {
+  const kitchenDisplay = getKitchenDisplay(equipmentAnswers);
 
   return (
     <Box
@@ -23,7 +27,7 @@ const KitchenDisplay = ({ questions }: { questions: ConstructorQuestions }) => {
       }}
     >
       <Image
-        src={`${process.env.QUIZ_ASSETS}/kitchen/constructor/${kitchenDisplay}.webp`}
+        src={`${process.env.QUIZ_ASSETS}/kitchen/equipment/${kitchenDisplay}.webp`}
         alt="Получившаяся кухня"
         loading="eager"
         width={750}

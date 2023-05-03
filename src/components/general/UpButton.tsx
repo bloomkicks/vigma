@@ -1,15 +1,12 @@
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 const UpButton = ({ sx }: { sx: any }) => {
-  const btnRef = useRef<HTMLButtonElement>();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     (window as Window).addEventListener("scroll", () => {
-      const rect = btnRef.current.getBoundingClientRect();
-
       if (window.scrollY >= 200) {
         setIsVisible(true);
       } else {
@@ -25,7 +22,6 @@ const UpButton = ({ sx }: { sx: any }) => {
 
   return (
     <Button
-      ref={btnRef}
       onClick={clickHandler}
       color="secondary"
       centerRipple

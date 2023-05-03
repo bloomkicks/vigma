@@ -1,16 +1,15 @@
+import type { QuizQuestion, QuizAnswer } from "../../../../types/quiz";
 import getOptionImgSrc from "../../../../features/quiz/get-option-img-src";
 import QuizOption from "./QuizOption";
 import Grid from "@mui/material/Grid";
 import React from "react";
 
 const ListQuizOption = ({
-  options,
-  selectedOptions,
-  question,
+  curQuestion,
+  selectedOption,
 }: {
-  options: string[];
-  selectedOptions: string[];
-  question: string;
+  curQuestion: QuizQuestion;
+  selectedOption: string;
 }) => {
   return (
     <Grid
@@ -21,24 +20,24 @@ const ListQuizOption = ({
       justifyContent="center"
       sx={{ px: { xs: 1.2, sm: 3 }, maxWidth: "1200px" }}
     >
-      {options.map((option) => {
-        const imgSrc = getOptionImgSrc("kitchen", question, option);
+      {curQuestion.options!.map((option) => {
+        const imgSrc = getOptionImgSrc("kitchen", curQuestion.question, option);
 
         return (
           <QuizOption
             option={option}
-            isSelected={selectedOptions.includes(option)}
-            question={question}
+            isSelected={option === selectedOption}
+            question={curQuestion.question}
             imgSrc={imgSrc}
             key={option.toString()}
           />
         );
       })}
-      {"gift" !== question && (
+      {"gift" !== curQuestion.question && (
         <QuizOption
           option="Помощь специалиста"
-          isSelected={selectedOptions.includes("Помощь специалиста")}
-          question={question}
+          isSelected={selectedOption === "Помощь специалиста"}
+          question={curQuestion.question}
           imgSrc={`${process.env.QUIZ_ASSETS}/help.jpg`}
         />
       )}

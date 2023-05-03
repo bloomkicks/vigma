@@ -1,6 +1,4 @@
-import { Category } from "../../types/quiz";
-
-function getOptionImgSrc(category: Category, question: string, title: string) {
+function getOptionImgSrc(category, question: string, title: string) {
   const fileName = title.toLowerCase().replaceAll(" ", "+");
 
   let imgSrc = `${process.env.QUIZ_ASSETS}/categories/${fileName}.jpg`;

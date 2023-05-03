@@ -2,7 +2,6 @@ import FormInfoDialog from "../../../general/FormInfoDialog";
 import PrivacyAgree from "../../privacy/PrivacyAgree";
 import useForm from "../../../../hooks/use-form";
 import Divider from "@mui/material/Divider";
-import { RootState } from "../../../../store";
 
 import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
@@ -12,17 +11,18 @@ import OrderActions from "./OrderActions";
 import NameInput from "./NameInput";
 import TelInput from "./TelInput";
 
-import { useSelector } from "react-redux";
 import { useEffect, useRef, useState } from "react";
 import sendOrder from "../../../../features/order-form/send-order";
-import type { QuizState } from "../../../../types/quiz";
+import type { QuizAnswer } from "../../../../types/quiz";
 
 const OrderForm = ({
-  quiz,
   onClose,
+  answers,
+  product,
 }: {
-  quiz: QuizState;
   onClose: () => void;
+  answers: QuizAnswer[];
+  product?: string;
 }) => {
   useEffect(() => {
     const orderForm = document.querySelector("#order-form");
@@ -31,15 +31,14 @@ const OrderForm = ({
       block: "start",
     });
   }, []);
-  const size = useSelector((state: RootState) => state.size);
   const telRef = useRef<HTMLInputElement>();
   const nameRef = useRef<HTMLInputElement>();
   const [isValid, setIsValid] = useState<boolean>(false);
 
   async function onSubmit() {
-    await sendOrder(telRef.current.value, quiz, size, nameRef.current.value);
+    await sendOrder(telRef.current.value, answers, nameRef.current.value, product);
     try {
-      (window as any).ym(90359214, "reachGoal", "order_sent");
+      (window as any).ym(process.env.METRICA_KEY, "reachGoal", "order_sent");
     } catch (err) {
       console.log(
         "[Данные для аналитики]: Ошибка с отправкой Яндекс цели - order_sent",

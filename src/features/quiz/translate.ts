@@ -1,13 +1,6 @@
-import {
-  categoriesTranslations,
-  questionsTranslations,
-} from "../../data/quiz/quiz-translations";
-
-export function translateCategory(category: string) {
-  return categoriesTranslations[category];
-}
+import { quizTranslations } from "../../data/quiz/quiz-translations";
 
 export function translateQuestion(question: string) {
-  const translate = questionsTranslations[question];
+  const translate = quizTranslations[question];
   return typeof translate === "function" ? translate("kitchen") : translate;
 }

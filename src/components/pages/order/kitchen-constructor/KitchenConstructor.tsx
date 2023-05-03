@@ -1,23 +1,20 @@
-import { ConstructorQuestions } from "../../../../types/quiz";
+import type { EquipmentAnswer } from "../../../../types/quiz";
 
 import Stack from "@mui/material/Stack";
 
 import KitchenDisplay from "./KitchenDisplay";
-import ConstructQuestionList from "./construct-question-list/Index";
+import ListEquipmentQuestion from "./equipment-question-list/ListEquipmentQuestion";
 
 const KitchenConstructor = ({
-  questions,
-  allQuestions,
+  equipmentAnswers,
 }: {
-  questions: ConstructorQuestions;
-  allQuestions: string[];
+  equipmentAnswers: EquipmentAnswer[];
 }) => {
   return (
     <Stack alignItems="center" sx={{ maxWidth: "1366px" }}>
-      <KitchenDisplay questions={questions} />
-      <ConstructQuestionList
-        questions={questions}
-        allQuestions={allQuestions}
+      <KitchenDisplay equipmentAnswers={equipmentAnswers} />
+      <ListEquipmentQuestion
+        equipmentAnswers={equipmentAnswers}
       />
     </Stack>
   );
