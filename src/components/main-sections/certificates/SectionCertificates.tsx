@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useState } from "react";
-import Arrow from "../reviews/Arrow";
+import SliderArrow from "../reviews/SliderArrow";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
@@ -16,6 +16,7 @@ const Certificates = () => {
   let length = 4;
   const [certifIndex, setCertifIndex] = useState<number>(0);
   const isDesktop = useMediaQuery("(min-width: 1200px)");
+  const isSmall = useMediaQuery("(max-width: 376px)");
   let slice = isDesktop ? 1 : 0;
 
   function currentIndexChanger(isLeft: boolean): void {
@@ -28,14 +29,14 @@ const Certificates = () => {
   }
   return (
     <Box component="article" id="certificates">
-      <Typography variant="h2">Сертификаты качества</Typography>
+      <Typography variant="h2">Сертификаты на материалы</Typography>
       <Stack
         direction="row"
         justifyContent="center"
         alignItems="center"
-        spacing={{ xs: 0.12, sm: 1.75, lg: 2.25 }}
+        spacing={isSmall ? 0.2 : { xs: 0.8, sm: 1.75, lg: 2.25 }}
       >
-        <Arrow
+        <SliderArrow
           isLeft
           clickHandler={currentIndexChanger}
           reviewIndex={certifIndex}
@@ -43,7 +44,7 @@ const Certificates = () => {
           slice={slice}
         />
         <CertificatesSlider certifIndex={certifIndex} slice={slice} />
-        <Arrow
+        <SliderArrow
           clickHandler={currentIndexChanger}
           reviewIndex={certifIndex}
           length={length}

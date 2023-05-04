@@ -22,8 +22,6 @@ const ProductInfo = ({ title, price, sx }: ProductInfoProps & { sx?: any }) => {
   return (
     <Box
       sx={{
-        // px: { xs: 1.5, md: 1.7 },
-        // pt: 2.1,
         px: isSmall ? 2 : 2.25,
         pt: isSmall ? 1.5 : { xs: 1.55, sm: 1.75 },
         pb: { xs: 3.25, md: 3.1 },
@@ -37,7 +35,6 @@ const ProductInfo = ({ title, price, sx }: ProductInfoProps & { sx?: any }) => {
       <Typography
         variant="h3"
         sx={{
-          textTransform: "capitalize",
           fontSize:
             isReallySmall || isSmall
               ? "1.9rem"

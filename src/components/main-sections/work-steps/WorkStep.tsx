@@ -17,14 +17,17 @@ const WorkStep = ({
       // alignItems={{ xs: "flex-start", md: "center" }}
       alignItems="center"
       spacing={{ xs: 1.75, md: 1.5 }}
-      width={{ xs: "100%", md: "30%" }}
-      sx={{ textAlign: { xs: "left", md: "center" } }}
+      width={{ xs: "100%", md: index >= 4 ? "33%" : "30%" }}
+      sx={{
+        textAlign: { xs: "left", md: "center" },
+        mb: index >= 4 ? { md: "0 !important" } : "",
+      }}
     >
       <Box
         component="img"
         src={imgSrc}
         alt={description.split(" ").slice(2).join(" ")}
-        width={{ xs: 71, sm: 75, md: "116.5px" }}
+        width={{ xs: 71, sm: 75, md: 100, lg: 103 }}
         height="auto"
       />
       <Typography

@@ -1,4 +1,4 @@
-import { Bold } from "../hero/MainDescription";
+import { Bold } from "../hero/HeroDescription";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";

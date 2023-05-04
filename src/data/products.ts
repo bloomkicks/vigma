@@ -1,22 +1,37 @@
 import type { ProductProps } from "../types/products";
 
+// Art
+const art1 = "art/fullsize.jpg";
+const art2 = "art/angled.jpg";
+const art3 = "art/zoomed-out.jpg";
+
+// Play
+const play1 = "play/fullsize.jpg";
+const play2 = "play/angled.jpg";
+const play3 = "play/zoomed-out.jpg";
+
+// Vast
+const vast1 = "vast/fullsize.jpg";
+const vast2 = "vast/angled.webp";
+const vast3 = "vast/zoomed-out.webp";
+
 // Barhat
 const barhat1 = "barhat/fullsize.jpg";
-const barhat2 = "barhat/longside.webp";
-const barhat3 = "barhat/zoomed-in.webp";
+const barhat2 = "barhat/longside.jpg";
+const barhat3 = "barhat/zoomed-in.jpg";
 
 // Modern
 const modern1 = "modern/fullsize.jpg";
-const modern2 = "modern/zoomed-in.webp";
-const modern3 = "modern/zoomed-out.webp";
+const modern2 = "modern/zoomed-in.jpg";
+const modern3 = "modern/zoomed-out.jpg";
 
 // Gold
-const gold1 = "gold/longside.webp";
+const gold1 = "gold/longside.jpg";
 const gold2 = "gold/angled.webp";
 const gold3 = "gold/furniture.webp";
 
 // Winter
-const winter1 = "winter/fullsize.webp";
+const winter1 = "winter/fullsize.jpg";
 const winter2 = "winter/furniture.webp";
 const winter3 = "winter/shelfs.webp";
 
@@ -33,7 +48,7 @@ const brusnika1 = "brusnika/longside.webp";
 const brusnika2 = "brusnika/angled.webp";
 
 // Mini
-const mini1 = "mini/fullsize.webp";
+const mini1 = "mini/fullsize.jpg";
 const mini2 = "mini/zoomed-in.webp";
 const mini3 = "mini/zoomed-out.webp";
 
@@ -53,19 +68,19 @@ const fair2 = "fair/furniture.webp";
 const fair3 = "fair/table.webp";
 
 // Fate
-const fate1 = "fate/fullsize.webp";
+const fate1 = "fate/fullsize.jpg";
 const fate2 = "fate/longside.webp";
 const fate3 = "fate/angled.webp";
 
 // Master
 const master1 = "master/fullsize.jpg";
-const master2 = "master/angled.webp";
-const master3 = "master/island.webp";
+const master2 = "master/angled.jpg";
+const master3 = "master/island.jpg";
 
 // Pink
 const pink1 = "pink/fullsize.jpg";
-const pink2 = "pink/longside.webp";
-const pink3 = "pink/angled.webp";
+const pink2 = "pink/longside.jpg";
+const pink3 = "pink/angled.jpg";
 
 // Forge
 const forge1 = "forge/angled.webp";
@@ -81,10 +96,6 @@ const standard3 = "standard/fridge.webp";
 const futuristic1 = "futuristic/furniture.webp";
 const futuristic2 = "futuristic/shelfs.webp";
 const futuristic3 = "futuristic/zoomed-out.webp";
-
-// Explit
-const explit1 = "explit/fullsize.webp";
-const explit2 = "explit/zoomed-out.webp";
 
 export const mainProducts: ProductProps[] = [
   {
@@ -107,6 +118,66 @@ export const mainProducts: ProductProps[] = [
       price: "54.500",
     },
   },
+  {
+    // Art
+    images: [
+      {
+        src: art1,
+      },
+      {
+        src: art2,
+      },
+      {
+        src: art3,
+      },
+    ],
+    info: {
+      title: 'Кухня "Арт" с островком',
+      price: "59.500",
+    },
+  },
+  {
+    // Play
+    images: [
+      {
+        src: play1,
+      },
+      {
+        src: play2,
+      },
+      {
+        src: play3,
+        isHorizontal: true,
+      },
+    ],
+    info: {
+      title: 'Кухня "Плэй" Угловая',
+      price: "59.500",
+    },
+  },
+  {
+    // Modern
+    images: [
+      {
+        src: modern1,
+      },
+      {
+        src: modern2,
+      },
+      {
+        src: modern3,
+      },
+    ],
+    info: {
+      title: 'Кухня "Модерн" с островком',
+      colors: ["wood-#B1A396-#826F60", "light-#222222-#171612"],
+      price: "54.500",
+    },
+  },
+];
+
+const products: ProductProps[] = [
+  ...mainProducts,
   {
     // Pink
     images: [
@@ -146,28 +217,23 @@ export const mainProducts: ProductProps[] = [
     },
   },
   {
-    // Modern
+    // Vast
     images: [
       {
-        src: modern1,
+        src: vast1,
       },
       {
-        src: modern2,
+        src: vast2,
       },
       {
-        src: modern3,
+        src: vast3,
       },
     ],
     info: {
-      title: 'Кухня "Модерн" с островком',
-      colors: ["wood-#B1A396-#826F60", "light-#222222-#171612"],
+      title: 'Кухня "Васт" Угловая',
       price: "54.500",
     },
   },
-];
-
-const products: ProductProps[] = [
-  ...mainProducts,
   {
     // Fate
     images: [
@@ -203,7 +269,7 @@ const products: ProductProps[] = [
     info: {
       title: 'Кухня "Скай" Угловая',
       colors: ["wood-#BB9872-#8E6143", "#F2EADF", "#E1CFBF"],
-      price: "49.500",
+      price: "54.500",
     },
   },
   {
@@ -373,23 +439,6 @@ const products: ProductProps[] = [
       title: 'Кухня "Мини" c островком',
       price: "49.500",
       colors: ["wood-#8D694F-#634938", "#747675", "#c4baa4"],
-    },
-  },
-  {
-    // Explit
-    images: [
-      {
-        src: explit1,
-        isHorizontal: true,
-      },
-      {
-        src: explit2,
-      },
-    ],
-    info: {
-      title: 'Кухня "Эксплит" Прямая',
-      price: "49.500",
-      colors: ["#c6bbb7", "#141614"],
     },
   },
   {

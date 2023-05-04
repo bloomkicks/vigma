@@ -1,8 +1,8 @@
 import { useState } from "react";
 import CallUsPopup from "../../general/call-us-popup/CallUsPopup";
-import MainContent from "./MainContent";
+import HeroContent from "./HeroContent";
 
-import Background from "./Background";
+import HeroBackground from "./HeroBackground";
 import Stack from "@mui/material/Stack";
 
 const SectionHero = () => {
@@ -28,8 +28,8 @@ const SectionHero = () => {
         textAlign: "left",
       }}
     >
-      <Background />
-      <MainContent onCallUs={callUsHandler} />
+      <HeroBackground />
+      <HeroContent onCallUs={callUsHandler} />
       <CallUsPopup
         isStatic={!isPopupOpen}
         open={isPopupOpen}

@@ -1,20 +1,20 @@
 import Socials from "../../layout/footer/Socials";
-import ItemContact from "./contact-list/ItemContact";
+import ContactProperty from "./contact-list/ContactProperty";
 import Typography from "@mui/material/Typography";
-import ContactList from "./contact-list/ContactList";
+import ContactPropertyList from "./contact-list/ContactPropertyList";
 import Box from "@mui/material/Box";
 
 const ContactsInfo = ({ sx }: { sx?: any }) => {
   return (
     <Box component="section" sx={sx}>
-      <ContactList sx={{ mb: { xs: 2, md: 3 } }} />
+      <ContactPropertyList sx={{ mb: { xs: 2, md: 3 } }} />
       <Socials
         sx={{
           mb: { xs: 3, sm: 4, md: 7 },
           "& img": { boxShadow: "1px 1.5px 4px rgba(0,0,0,0.4)" },
         }}
       />
-      <ItemContact
+      <ContactProperty
         contact="Производство"
         value={
           <>

@@ -1,17 +1,19 @@
-import ContactsMap from "./ContactsMap";
+import dynamic from "next/dynamic";
+import YaMapSceleton from "./YaMapSceleton";
 import ContactsInfo from "./ContactsInfo";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+
+const ContactsMap = dynamic(() => import("./YaMap"), {
+  loading: YaMapSceleton,
+});
 
 const SectionContacts = () => {
   return (
     <Box
       component="article"
       id="contacts"
-      sx={{
-        bgcolor: "white",
-      }}
     >
       <Typography variant="h2">Наши контакты</Typography>
       <Stack

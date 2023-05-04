@@ -5,8 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import quizActions from "../store/quiz-slice";
 import { useRouter } from "next/router";
 
-import OrderForm from "../components/pages/order/order-form/OrderForm";
-import PageQuiz from "../components/pages/order/PageQuiz";
+import OrderForm from "../components/pages/order-form/OrderForm";
+import QuizPage from "../components/pages/quiz/QuizPage";
 import Box from "@mui/material/Box";
 
 const OrderPage = () => {
@@ -30,7 +30,7 @@ const OrderPage = () => {
             product={quizState.product}
           />
         ) : (
-          <PageQuiz
+          <QuizPage
             curQuestion={quizState.curQuestion}
             curIndex={quizState.curIndex}
             curAnswer={quizState.answers[quizState.curIndex]}

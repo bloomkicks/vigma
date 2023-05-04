@@ -20,7 +20,7 @@ const HeaderLogo = () => {
         width={52}
         height={40}
         src={logoSrc}
-        title="На Главную"
+        title="Главная"
         loading="eager"
         alt="На Главную"
       />

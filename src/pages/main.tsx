@@ -1,13 +1,13 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
-import SectionMainProducts from "../components/main-sections/main-products/SectionMainProducts";
+import SectionProducts from "../components/main-sections/products/SectionProducts";
 import SectionAdvantages from "../components/main-sections/advantages/SectionAdvantages";
 import SectionReviews from "../components/main-sections/reviews/SectionReviews";
 import SectionContacts from "../components/main-sections/contacts/SectionContacts";
 import SectionHero from "../components/main-sections/hero/SectionHero";
 import SectionCertificates from "../components/main-sections/certificates/SectionCertificates";
-import SectionMainQuiz from "../components/main-sections/quiz/SectionMainQuiz";
+import SectionQuiz from "../components/main-sections/quiz/SectionQuiz";
 import SectionWorkSteps from "../components/main-sections/work-steps/SectionWorkSteps";
 import SectionOfferChoice from "../components/main-sections/offer-choice/SectionOfferChoice";
 
@@ -28,7 +28,7 @@ const MainPage = () => {
           position: "relative",
           width: "100%",
           pt: { xs: "37.5px", md: "40px" },
-          pb: { xs: "40px", md: "40px" },
+          pb: { xs: "37.5px", md: "40px" },
           px: { xs: 3, sm: 5, md: 4, lg: 9 },
           maxWidth: 1366,
           mx: "auto",
@@ -42,14 +42,15 @@ const MainPage = () => {
           pt: { xs: "37.5px", md: "40px" },
         },
         "& > article#work-steps": {
-          pt: { xs: "37.5px", md: "37.5px" },
+          pt: { xs: "35px", md: "35px" },
+          pb: { xs: "29.5px", md: "40px" },
         },
         "& > article#quiz": {
           px: 0,
           pb: { xs: "30px", md: "40px" },
         },
         "& > article#offer-choice": {
-          pt: { xs: "35px", md: "37px" },
+          pt: { xs: "35px", md: "32.5px" },
         },
         "& > article#products": {
           px: { xs: 1, md: 2, lg: 7 },
@@ -77,16 +78,16 @@ const MainPage = () => {
       <Divider />
       <SectionWorkSteps />
       <Divider />
-      <SectionMainProducts />
+      <SectionProducts />
       <Divider />
       <SectionReviews />
       <Divider />
       <SectionCertificates />
-      <Divider id="contacts-start" />
+      <Divider />
       <SectionContacts />
       <SectionOfferChoice />
-      <Divider id="quiz-start" />
-      <SectionMainQuiz />
+      <Divider />
+      <SectionQuiz />
     </Container>
   );
 };

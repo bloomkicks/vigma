@@ -11,6 +11,7 @@ const HeaderMenuSetter = ({
   return (
     <Box
       component="button"
+      aria-label="Открыть меню"
       position="relative"
       sx={{
         border: "none",

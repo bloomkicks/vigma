@@ -82,7 +82,6 @@ const ProductPrice = ({
           style={{
             fontWeight: "400",
             fontSize: isReallySmall || isSmall ? "1.35rem" : "1.4rem",
-            // display: isReallySmall ? "block" : "inline-block",
           }}
         >
           за п.м.

@@ -1,5 +1,5 @@
 import CatalogHead from "../components/layout/head-components/CatalogHead";
-import SectionHero from "../components/pages/catalog/hero/SectionHero";
+import CatalogHero from "../components/pages/catalog/hero/CatalogHero";
 import ProductList from "../components/pages/catalog/ProductList";
 import Container from "@mui/material/Container";
 
@@ -15,7 +15,7 @@ const CatalogPage = () => {
       }}
     >
       <CatalogHead />
-      <SectionHero />
+      <CatalogHero />
       <ProductList />
     </Container>
   );

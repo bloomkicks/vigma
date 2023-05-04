@@ -9,18 +9,26 @@ import classes from "./Header.module.scss";
 
 let links = [
   {
-    link: "/main#contacts-start",
+    link: "/main#contacts",
     onAnchorClick: () => {
-      const contactsDivider = document.getElementById("contacts-start");
-      contactsDivider.scrollIntoView({ behavior: "smooth", block: "start" });
+      const contactsSection = document.getElementById("contacts");
+      if (contactsSection.scrollTo) {
+        contactsSection.scrollTo({ behavior: "smooth", top: 3, left: 0 });
+      } else {
+        contactsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     },
     title: "Контакты",
   },
   {
-    link: "/main#quiz-start",
+    link: "/main#quiz",
     onAnchorClick: () => {
-      const quizDivider = document.getElementById("quiz-start");
-      quizDivider.scrollIntoView({ behavior: "smooth", block: "start" });
+      const quizSection = document.getElementById("quiz");
+      if (quizSection.scrollTo) {
+        quizSection.scrollTo({ behavior: "smooth", top: 12, left: 0 });
+      } else {
+        quizSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     },
     title: "Рассчитать | Заказать",
   },

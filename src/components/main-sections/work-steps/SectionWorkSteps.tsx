@@ -1,4 +1,4 @@
-import ListWorkSteps from "./ListWorkSteps";
+import WorkStepList from "./WorkStepList";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
@@ -6,9 +6,9 @@ const SectionWorkSteps = () => {
   return (
     <Box component="article" id="work-steps">
       <Typography variant="h2">
-        Этапы работы:
+        Этапы работы
       </Typography>
-      <ListWorkSteps />
+      <WorkStepList />
     </Box>
   );
 };

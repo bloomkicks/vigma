@@ -1,4 +1,4 @@
-import ListAdvantage from "./ListAdvantage";
+import AdvantageList from "./AdvantageList";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
@@ -8,7 +8,7 @@ const SectionAdvantages = () => {
       <Typography position="relative" variant="h2">
         Почему выбирают нас:
       </Typography>
-      <ListAdvantage sx={{ position: "relative", mx: "auto" }} />
+      <AdvantageList sx={{ position: "relative", mx: "auto" }} />
     </Box>
   );
 };

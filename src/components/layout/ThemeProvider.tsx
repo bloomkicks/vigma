@@ -139,7 +139,7 @@ const theme = createTheme({
           height: "1.4px",
           margin: "0 auto",
           backgroundColor: "black",
-          opacity: 0.6,
+          opacity: 0.5,
           border: "none",
         },
       },

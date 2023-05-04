@@ -14,7 +14,7 @@ export type ProductInfoProps = {
   title: string;
   description?: string;
   price: string;
-  colors: string[];
+  colors?: string[];
 };
 
 export type ProductProps = {

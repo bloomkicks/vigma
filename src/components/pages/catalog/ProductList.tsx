@@ -1,5 +1,4 @@
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import Product from "./product/Product";
 import products from "../../../data/products";
 
