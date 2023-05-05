@@ -15,6 +15,7 @@ export type ProductInfoProps = {
   description?: string;
   price: string;
   colors?: string[];
+  discount?: number;
 };
 
 export type ProductProps = {

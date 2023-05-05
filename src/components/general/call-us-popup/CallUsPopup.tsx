@@ -1,4 +1,3 @@
-import useMediaQuery from "@mui/material/useMediaQuery";
 import Highlighter from "../Highlighter";
 import CloseButton from "./CloseButton";
 import PrivacyAgree from "../../pages/privacy/PrivacyAgree";
@@ -75,11 +74,11 @@ const CallUsPopup = ({
       <Typography
         sx={{
           fontSize: { xs: "1.2rem", sm: "1.1rem", lg: "1.15rem" },
-          color: "#D3D3D3",
+          color: "#DADADA",
           mb: { xs: 2.75, sm: 3.5 },
         }}
       >
-        Заполните анкету и наш консультант позвонит вам в ближайшее время
+        Заполните анкету и наш консультант свяжется с вами в ближайшее время
       </Typography>
       <PhoneForm onClose={onClose} />
       <PrivacyAgree

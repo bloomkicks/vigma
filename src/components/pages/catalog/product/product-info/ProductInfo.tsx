@@ -10,7 +10,12 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 
-const ProductInfo = ({ title, price, sx }: ProductInfoProps & { sx?: any }) => {
+const ProductInfo = ({
+  title,
+  price,
+  discount,
+  sx,
+}: ProductInfoProps & { sx?: any }) => {
   const isReallySmall = useMediaQuery("(max-width: 374px)");
   const isSmall = useMediaQuery("(max-width: 386px)");
 
@@ -27,8 +32,8 @@ const ProductInfo = ({ title, price, sx }: ProductInfoProps & { sx?: any }) => {
         pb: { xs: 3.25, md: 3.1 },
         borderBottomLeftRadius: "14px",
         borderBottomRightRadius: "14px",
-        border: "1px solid black",
-        borderTop: "0 solid black",
+        border: "1px solid #aaaaaa",
+        borderTop: "0 solid #aaaaaa",
         ...sx,
       }}
     >
@@ -53,6 +58,7 @@ const ProductInfo = ({ title, price, sx }: ProductInfoProps & { sx?: any }) => {
       >
         <ProductPrice
           price={price}
+          discount={discount}
           isReallySmall={isReallySmall}
           isSmall={isSmall}
         />

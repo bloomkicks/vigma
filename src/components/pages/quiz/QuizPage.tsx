@@ -17,12 +17,14 @@ const QuizPage = ({
   equipmentAnswers,
   onNextClick,
   sx,
+  isOnMain,
 }: QuizState & {
   curAnswer: QuizAnswer;
   equipmentAnswers: EquipmentAnswer[];
   answers?: null;
   onNextClick?: () => void;
   sx?: any;
+  isOnMain?: boolean;
 }) => {
   const questionName = curQuestion.question;
   const translatedQuestion = quizTranslations[questionName];
@@ -59,6 +61,7 @@ const QuizPage = ({
         />
       )}
       <QuizActions
+        isOnMain
         backDisabled={questionName === "gift"}
         nextDisabled={
           !curQuestion.options &&

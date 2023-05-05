@@ -17,7 +17,7 @@ const TelInput = React.forwardRef(
         }}
         inputRef={ref}
         helperText="Введите номер вашего телефона"
-        placeholder="+7 (___) ___-__-__"
+        placeholder="+7 (999) 999-99-99"
         sx={sx || {}}
       />
     );

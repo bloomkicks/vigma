@@ -34,27 +34,24 @@ const MainPage = () => {
           mx: "auto",
         },
         "& > article > h2": {
-          mb: { xs: "20px", md: "30px" },
+          mb: { xs: "22.5px", md: "30px" },
         },
         "& > article#advantages": {
           pl: { xs: 2.5, sm: 5, md: 4, lg: 9 },
-          pb: { lg: "55px" },
-          pt: { xs: "37.5px", md: "40px" },
+          pb: { lg: "50px" },
         },
         "& > article#work-steps": {
           pt: { xs: "35px", md: "35px" },
-          pb: { xs: "29.5px", md: "40px" },
+          pb: { xs: "37.5px", md: "45px" },
         },
         "& > article#quiz": {
           px: 0,
-          pb: { xs: "30px", md: "40px" },
         },
         "& > article#offer-choice": {
-          pt: { xs: "35px", md: "32.5px" },
+          pt: { xs: "50px", md: "50px" },
         },
         "& > article#products": {
           px: { xs: 1, md: 2, lg: 7 },
-          pb: { xs: "40px", md: "55px" },
         },
         "& > article#reviews": {
           px: { xs: 3, md: 4, lg: 7 },
@@ -67,6 +64,7 @@ const MainPage = () => {
         },
         "& > article#contacts": {
           maxWidth: { xs: 410, sm: 1366 },
+          pb: { xs: "30px", md: "40px" },
         },
         "& > article#contacts > h2, & > article#products > h2": {
           mb: { xs: "25px", md: "30px" },
@@ -74,20 +72,20 @@ const MainPage = () => {
       }}
     >
       <SectionHero />
+      <SectionProducts />
+      {/* <Divider /> */}
       <SectionAdvantages />
-      <Divider />
+      {/* <Divider /> */}
       <SectionWorkSteps />
       <Divider />
-      <SectionProducts />
-      <Divider />
-      <SectionReviews />
-      <Divider />
-      <SectionCertificates />
-      <Divider />
-      <SectionContacts />
       <SectionOfferChoice />
       <Divider />
+      <SectionReviews />
+      <SectionCertificates />
+      {/* <Divider /> */}
       <SectionQuiz />
+      {/* <Divider /> */}
+      <SectionContacts />
     </Container>
   );
 };

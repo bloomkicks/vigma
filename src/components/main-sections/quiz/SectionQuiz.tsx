@@ -13,6 +13,7 @@ const SectionQuiz = () => {
   return (
     <Box component="article" id="quiz" pt={2} width="100%">
       <QuizPage
+        isOnMain
         curQuestion={quizState.curQuestion}
         curIndex={quizState.curIndex}
         curAnswer={quizState.answers[quizState.curIndex]}

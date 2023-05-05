@@ -69,13 +69,13 @@ const ReviewSlider = ({
           `}
             sx={{
               transform: {
-                xs: `translateX(-${reviewIndex * (mobileWidth + 16)}px)`,
-                md: `translateX(-${reviewIndex * (width + 16)}px)`,
+                xs: `translateX(-${reviewIndex * (mobileWidth + 13)}px)`,
+                md: `translateX(-${reviewIndex * (width + 13)}px)`,
               },
               transition: "transform 0.3s ease-out",
               boxShadow: "1px 3px 3px rgba(0,0,0,0.25)",
             }}
-            width={{ xs: mobileWidth, md: width }}
+            width={{ xs: mobileWidth - 3, md: width - 3 }}
             key={review.imgName}
           />
         );

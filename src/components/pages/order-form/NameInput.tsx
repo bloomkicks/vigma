@@ -12,7 +12,7 @@ const NameInput = React.forwardRef((props, ref) => {
         required: true,
       }}
       inputRef={ref}
-      placeholder="Имя"
+      placeholder="Алина..."
     />
   );
 });

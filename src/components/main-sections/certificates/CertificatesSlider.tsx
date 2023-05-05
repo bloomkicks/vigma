@@ -1,7 +1,20 @@
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 
-let certificates = ["фасад", "столешницы", "ламинат", "еггер"];
+let certificates = [
+  "nevskiy-laminat",
+  "kronospan",
+  "egger",
+  "agt1",
+  "agt2",
+  "boyard",
+  "sicticvar",
+  "skif1",
+  "skif2",
+  "slotecs",
+  "souz-balt-komplekt",
+  "souz-balt-stolechnitsa",
+];
 
 const CertificatesSlider = ({
   certifIndex,
@@ -10,8 +23,8 @@ const CertificatesSlider = ({
   certifIndex: number;
   slice: number;
 }) => {
-  let height = 484 + 4;
-  let width = 340 + 4;
+  let height = 518.5 + 4;
+  let width = 360 + 4;
   let mobileHeight = 377 + 4;
   let mobileWidth = 265 + 4;
 
@@ -25,13 +38,13 @@ const CertificatesSlider = ({
       maxWidth="100vw"
       width={{
         xs: mobileWidth,
-        md: slice == 0 ? width : width * (slice + 1) + 16 * slice,
+        md: slice == 0 ? width : width * (slice + 1) + 20 * slice,
       }}
       spacing={2}
       sx={{ overflow: "hidden" }}
     >
-      {certificates.map((certif) => {
-        const imgSrc = `${process.env.CERTIFICATES_ASSETS}/сертификат-${certif}`;
+      {certificates.map((cert) => {
+        const imgSrc = `${process.env.CERTIFICATES_ASSETS}/${cert}-cert`;
         return (
           <Box
             component="img"
@@ -41,17 +54,18 @@ const CertificatesSlider = ({
                 xs: `translateX(-${certifIndex * (mobileWidth + 12)}px)`,
                 md: `translateX(-${certifIndex * (width + 12)}px)`,
               },
-              boxShadow: "1px 2px 4px rgba(0,0,0,0.4)",
+              boxShadow: "1px 2px 4px rgba(0,0,0,0.3)",
               transition: "transform 0.3s ease-out",
+              alignSelf: ["egger", "boyard"].includes(cert) ? "center" : "",
             }}
-            srcSet={`${imgSrc}.jpg 340w, ${imgSrc}-sm.jpg 265w`}
+            srcSet={`${imgSrc}.jpg 360w, ${imgSrc}-sm.jpg 265w`}
             sizes={`
               (max-width: 901px) 265px,
-              340px
+              360px
             `}
             alt="Изображение не найдено. Попробуйте обновить страницу"
-            width={{ xs: mobileWidth, md: width }}
-            key={certif}
+            width={{ xs: mobileWidth - 4, md: width - 4 }}
+            key={cert}
           />
         );
       })}

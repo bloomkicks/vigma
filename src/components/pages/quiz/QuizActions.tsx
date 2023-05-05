@@ -11,11 +11,13 @@ const QuizActions = ({
   nextDisabled,
   backDisabled,
   onNextClick,
+  isOnMain,
 }: {
   isDalee: boolean;
   nextDisabled: boolean;
   backDisabled: boolean;
   onNextClick?: () => void;
+  isOnMain?: boolean;
 }) => {
   const dispatch = useDispatch();
   function nextHandler() {
@@ -28,7 +30,7 @@ const QuizActions = ({
   }
 
   return (
-    <Stack direction="row" spacing={2.5} sx={{ mt: 6, mb: 6 }}>
+    <Stack direction="row" spacing={2.5} sx={{ mt: 6, mb: isOnMain ? 0 : 6 }}>
       <Button
         variant="text"
         onClick={backHandler}

@@ -6,7 +6,7 @@ const SectionWorkSteps = () => {
   return (
     <Box component="article" id="work-steps">
       <Typography variant="h2">
-        Этапы работы
+        Этапы производства
       </Typography>
       <WorkStepList />
     </Box>

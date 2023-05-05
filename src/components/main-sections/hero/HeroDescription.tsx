@@ -38,12 +38,11 @@ const HeroDescription = () => {
         width="95%"
         mb={{ xs: 1.5, md: 2 }}
       >
-        Получите скидку{" "}
+        Акция{" "}
         <Typography variant="inherit" component="span" display="inline">
-          до <Bold>40% </Bold>
+          <Bold>-40% </Bold>
           при заказе
-          <Bold> до 15 мая</Bold>. Отпразднуйте <Bold>6</Bold>
-          -летие компании вместе с нами!
+          <Bold> до 15 мая</Bold> в честь юбилея компании
         </Typography>
       </Typography>
       <Typography

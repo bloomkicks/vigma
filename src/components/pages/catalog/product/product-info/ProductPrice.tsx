@@ -4,17 +4,16 @@ import Box from "@mui/material/Box";
 
 const ProductPrice = ({
   price,
-  discount = "40",
+  discount = 40,
   isReallySmall,
   isSmall,
 }: {
   price: string;
-  discount?: string;
+  discount?: number;
   isReallySmall?: boolean;
   isSmall?: boolean;
 }) => {
-  const oldPrice =
-    parseInt(price) * 1000 + parseInt(price) * parseInt(discount) * 10;
+  const oldPrice = parseInt(price) * 1000 + parseInt(price) * discount * 10;
 
   return (
     <Box>

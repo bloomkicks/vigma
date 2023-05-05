@@ -13,7 +13,7 @@ const CertificatesSlider = dynamic(() => import("./CertificatesSlider"), {
 // const CertificatesSlider = SliderSkeleton;
 
 const Certificates = () => {
-  let length = 4;
+  let length = 12;
   const [certifIndex, setCertifIndex] = useState<number>(0);
   const isDesktop = useMediaQuery("(min-width: 1200px)");
   const isSmall = useMediaQuery("(max-width: 376px)");

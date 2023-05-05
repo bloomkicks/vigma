@@ -64,7 +64,7 @@ const FreeOffer = ({
       <Typography maxWidth={375} mx="auto" color={secColor}>
         {isAnother ? (
           <>
-            Скидка <Bold>40%</Bold> при заказе <Bold>до 15 мая</Bold> в честь{" "}
+            Акция <Bold>-40%</Bold> при заказе <Bold>до 15 мая</Bold> в честь{" "}
             <Bold>6</Bold>-летия компании
           </>
         ) : (

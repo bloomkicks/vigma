@@ -16,7 +16,7 @@ const inputs = [
   },
   {
     label: "Ваше имя",
-    placeholder: "Иван...",
+    placeholder: "Алина...",
     type: "text",
   },
 ];
@@ -153,7 +153,7 @@ const PhoneForm = ({ onClose }: { onClose?: () => void }) => {
             fontSize: { xs: "1.15rem", sm: "1.1rem", lg: "1.15rem" },
           }}
         >
-          Отправить
+          Отправить заявку
         </Button>
       </Stack>
       <FormInfoDialog
