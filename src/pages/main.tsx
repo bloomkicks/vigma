@@ -73,18 +73,19 @@ const MainPage = () => {
     >
       <SectionHero />
       <SectionProducts />
-      {/* <Divider /> */}
+      <Divider />
       <SectionAdvantages />
-      {/* <Divider /> */}
+      <Divider />
       <SectionWorkSteps />
       <Divider />
       <SectionOfferChoice />
       <Divider />
       <SectionReviews />
+      <Divider />
       <SectionCertificates />
-      {/* <Divider /> */}
+      <Divider />
       <SectionQuiz />
-      {/* <Divider /> */}
+      <Divider />
       <SectionContacts />
     </Container>
   );

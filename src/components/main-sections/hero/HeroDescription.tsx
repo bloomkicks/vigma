@@ -36,7 +36,7 @@ const HeroDescription = () => {
         position="relative"
         color="white"
         width="95%"
-        mb={{ xs: 1.5, md: 2 }}
+        mb={{ xs: 1.25, md: 2 }}
       >
         Акция{" "}
         <Typography variant="inherit" component="span" display="inline">

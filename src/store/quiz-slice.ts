@@ -69,8 +69,7 @@ const quizSlice = createSlice({
     },
     selectProduct(state, action: PayloadAction<string>) {
       state.product = action.payload;
-      state.curIndex = 7;
-      state.curQuestion = questions[state.curIndex];
+      state.isFinished = true
     },
     clear(state) {
       state.curIndex = 0;

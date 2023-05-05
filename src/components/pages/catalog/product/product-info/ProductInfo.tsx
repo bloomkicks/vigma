@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useDispatch } from "react-redux";
@@ -18,10 +19,12 @@ const ProductInfo = ({
 }: ProductInfoProps & { sx?: any }) => {
   const isReallySmall = useMediaQuery("(max-width: 374px)");
   const isSmall = useMediaQuery("(max-width: 386px)");
+  const router = useRouter()
 
   const dispatch = useDispatch();
   function orderHandler() {
     dispatch(quizActions.selectProduct(title));
+    router.push('/order')
   }
 
   return (

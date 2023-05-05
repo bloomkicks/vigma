@@ -22,7 +22,7 @@ const Product = ({
           maxWidth: "95%",
           textAlign: "left",
           bgcolor: "rgba(0,0,0,0.02)",
-          boxShadow: "1px 3px 4px rgba(0,0,0,0.28)",
+          boxShadow: "1.25px 2.5px 4px rgba(0,0,0,0.28)",
           borderRadius: "14px",
         }}
         {...overrides}
