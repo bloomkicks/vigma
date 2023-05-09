@@ -2,7 +2,7 @@ import MenuSocials from "./MenuSocials";
 import { useState, useEffect } from "react";
 
 import MenuCallButton from "./MenuCallButton";
-import HeaderMenuSetter from "./HeaderMenuSetter";
+import MenuSetter from "./MenuSetter";
 import HeaderLogo from "./HeaderLogo";
 import NavLink from "./NavLink";
 import classes from "./Header.module.scss";
@@ -78,7 +78,7 @@ const Header = () => {
             <MenuSocials />
           </nav>
           <MenuCallButton />
-          <HeaderMenuSetter
+          <MenuSetter
             toggleMenuHandler={toggleMenuHandler}
             isActive={isMenuActive}
           />

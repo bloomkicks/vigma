@@ -9,7 +9,7 @@ const Layout = (props) => {
       <Header />
       {props.children}
       <Footer />
-      <UpButton sx={{}}  />
+      <UpButton sx={{}} />
     </div>
   );
 };

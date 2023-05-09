@@ -13,8 +13,8 @@ const LinkToCatalog = () => {
           mx: "auto",
           py: 1.5,
           px: 3.75,
-          fontSize: '1.25rem',
-          borderRadius: '8px'
+          fontSize: "1.25rem",
+          borderRadius: "8px",
         }}
       >
         СМОТРЕТЬ ВСЕ КУХНИ

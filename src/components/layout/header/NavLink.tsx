@@ -17,6 +17,10 @@ const NavLink = (props: any) => {
           onAnchorClick && e.preventDefault();
           onAnchorClick && onAnchorClick();
         }}
+        onTouchEnd={(e: any) => {
+          onAnchorClick && e.preventDefault();
+          onAnchorClick && onAnchorClick();
+        }}
         variant="text"
         sx={{
           minWidth: "max-content",

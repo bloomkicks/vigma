@@ -30,7 +30,7 @@ const EquipmentQuestionList = ({
             (i === 4 && equipmentAnswers[2].selectedVariant),
         )
         .map((equipmentQuestion, i) => {
-          let id = i
+          let id = i;
           if (i === 3 && equipmentAnswers[1].selectedVariant !== "В пенале") {
             id = i + 1;
           }

@@ -11,10 +11,7 @@ const ContactsMap = dynamic(() => import("./YaMap"), {
 
 const SectionContacts = () => {
   return (
-    <Box
-      component="article"
-      id="contacts"
-    >
+    <Box component="article" id="contacts">
       <Typography variant="h2">Наши контакты</Typography>
       <Stack
         direction={{ xs: "column", md: "row-reverse" }}

@@ -38,7 +38,7 @@ const SectionHero = () => {
           flexShrink: { xs: 0, md: 1.5, lg: 1 },
           maxWidth: 400,
           width: { xs: 350, md: "32.5%" },
-          mr: {md: "auto"},
+          mr: { md: "auto" },
           display: { xs: isPopupOpen ? "flex" : "none", md: "block" },
         }}
       />

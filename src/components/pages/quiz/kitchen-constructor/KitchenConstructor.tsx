@@ -13,9 +13,7 @@ const KitchenConstructor = ({
   return (
     <Stack alignItems="center" sx={{ maxWidth: "1366px" }}>
       <KitchenDisplay equipmentAnswers={equipmentAnswers} />
-      <EquipmentQuestionList
-        equipmentAnswers={equipmentAnswers}
-      />
+      <EquipmentQuestionList equipmentAnswers={equipmentAnswers} />
     </Stack>
   );
 };
