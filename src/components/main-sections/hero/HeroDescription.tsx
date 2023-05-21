@@ -42,7 +42,7 @@ const HeroDescription = () => {
         <Typography variant="inherit" component="span" display="inline">
           <Bold>-40% </Bold>
           при заказе
-          <Bold> до 15 мая</Bold> в честь юбилея компании
+          <Bold> до 31 мая</Bold> в честь юбилея компании
         </Typography>
       </Typography>
       <Typography
@@ -64,9 +64,8 @@ const HeroDescription = () => {
         }
         fontWeight="400"
       >
-        Успейте оставить заявку ‒ получите
-        <Bold> дизайн-проект</Bold>, <Bold> консультацию</Bold> и
-        <Bold> подарок</Bold> на выбор
+        Получите бесплатный <Bold> дизайн-проект</Bold>,{" "}
+        <Bold> консультацию</Bold> и<Bold> подарок</Bold> на выбор
       </Typography>
     </>
   );

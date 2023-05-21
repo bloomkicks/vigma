@@ -30,7 +30,7 @@ let links = [
         quizSection.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     },
-    title: "Рассчитать | Заказать",
+    title: "Рассчитать",
   },
   {
     link: "/catalog",

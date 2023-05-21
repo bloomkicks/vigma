@@ -8,7 +8,6 @@ import { mainProducts } from "../../../data/products";
 const SectionProducts = () => {
   return (
     <Box component="article" id="products">
-      <Typography variant="h2">Наши проекты</Typography>
       <Grid
         container
         spacing={{ xs: 0, md: 3 }}

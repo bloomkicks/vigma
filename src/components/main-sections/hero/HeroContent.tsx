@@ -14,7 +14,7 @@ const HeroContent = ({ sx, onCallUs }: { onCallUs: () => void; sx?: any }) => {
       sx={{
         flexShrink: 1,
         width: { xs: "95%", sm: "80%", md: "51%", lg: "auto" },
-        maxWidth: { md: 660, lg: 700, xl: 750 },
+        maxWidth: { md: 660, lg: 700, xl: 725 },
         pl: isVerySmall ? 1 : { xs: 1.5, lg: 2 },
         ml: "auto",
         pb: 2,
@@ -55,7 +55,8 @@ const HeroContent = ({ sx, onCallUs }: { onCallUs: () => void; sx?: any }) => {
             },
           ]}
         />
-        УДОБНЫЕ КУХНИ ДЛЯ ВАШЕГО ДОМА
+        {/* УДОБНЫЕ КУХНИ ДЛЯ ВАШЕГО ДОМА */}
+        УДОБНЫЕ КУХНИ НА ЗАКАЗ В СПБ
       </Typography>
       <HeroDescription />
       <CallUsButton

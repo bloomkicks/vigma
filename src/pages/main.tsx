@@ -52,6 +52,7 @@ const MainPage = () => {
         },
         "& > article#products": {
           px: { xs: 1, md: 2, lg: 7 },
+          pt: { xs: "42.5px", md: "45px" },
         },
         "& > article#reviews": {
           px: { xs: 3, md: 4, lg: 7 },
