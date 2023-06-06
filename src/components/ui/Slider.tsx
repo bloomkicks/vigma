@@ -17,17 +17,16 @@ const Slider = ({
 
   return (
     <div
-      className={`overflow-x-hidden shrink-0`}
+      className="overflow-x-hidden shrink-0"
       style={{ width: itemTotalWidth }}
     >
       <div
-        className={`h-full w-max flex flex-row justify-start items-start transition-transform duration-[400ms] ease-out ${
+        className={`h-fit w-max flex flex-row justify-start items-start transition-transform duration-[400ms] ease-out ${
           styles || ""
         }`}
         style={{
           transform: `translateX(-${
-            (itemTotalWidth - (shadowSize || 0) * 2 + spacing) *
-            curIndex
+            (itemWidth + spacing) * curIndex
           }px)`,
         }}
       >

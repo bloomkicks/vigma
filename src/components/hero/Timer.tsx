@@ -13,7 +13,7 @@ function setTime(
     value.length === 2 ? value : "0" + value);
 }
 
-const Timer = () => {
+const Timer = ({ styles }: { styles?: string }) => {
   const date = new Date();
   const hours = useRef<HTMLSpanElement>(null);
   const mins = useRef<HTMLSpanElement>(null);
@@ -43,7 +43,12 @@ const Timer = () => {
   // }, []);
 
   return (
-    <div className="text-[20px] rounded-0.5 bg-[#B0B0B0] bg-opacity-50 px-[9px] py-1 w-fit">
+    <div
+      className={
+        "text-[20px] rounded-0.5 bg-[#B0B0B0] bg-opacity-50 px-[9px] py-1 w-fit " +
+        (styles || "")
+      }
+    >
       <span ref={hours}>{defHours}</span>:
       <span ref={mins}>{defMins}</span>:
       <span ref={secs}>{defSecs}</span>

@@ -1,4 +1,4 @@
-import getSliderIndex from "@/features/get-slider-index";
+import useSlider from "@/hooks/use-slider";
 import { useState } from "react";
 import products from "@/data/products";
 
@@ -7,25 +7,19 @@ import SliderControl from "../ui/SliderControl";
 import Product from "./Product";
 
 const ProductsSection = () => {
-  const [curIndex, setCurIndex] = useState(0);
-  function moveRightHandler() {
-    setCurIndex((prev) => getSliderIndex(prev, products.length));
-  }
-  function moveLeftHandler() {
-    setCurIndex((prev) =>
-      getSliderIndex(prev, products.length, true)
-    );
-  }
+  const { curIndex, moveLeftHandler, moveRightHandler } = useSlider(
+    products.length
+  );
 
   return (
-    <section className="section-light flex flex-row justify-center items-center">
-      <SliderControl isLeft onClick={moveLeftHandler} />
+    <section className="section-light flex flex-row justify-center items-center" id="products">
+      <SliderControl isLeft onClick={moveLeftHandler} isSmall />
       <Slider
         itemWidth={290}
         curIndex={curIndex}
         spacing={16}
         shadowSize={4}
-        styles="space-x-4 pb-1.5"
+        styles="space-x-4 pb-1.5 pt-0.5"
       >
         {products.map((product) => (
           <Product
@@ -35,7 +29,7 @@ const ProductsSection = () => {
           />
         ))}
       </Slider>
-      <SliderControl onClick={moveRightHandler} />
+      <SliderControl onClick={moveRightHandler} isSmall />
     </section>
   );
 };

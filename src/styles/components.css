@@ -31,15 +31,14 @@
   .hero {
     @apply text-hero font-strong font-extrabold;
   }
-  /* LAYOUT */
+  /* COMPONENTS */
   .section-light {
-    @apply pt-[50px] pb-[55px] bg-white-dark;
+    @apply pt-[50px] pb-[55px] bg-white-dark text-black;
   }
   .section-dark {
-    @apply pt-[50px] pb-[55px] bg-black-light;
+    @apply pt-[50px] pb-[55px] bg-black-light text-white;
   }
-  /* COMPONENTS */ 
   .button {
-    @apply txt-button px-[30px] py-[11px]
+    @apply txt-button px-[30px] py-[11px] rounded-2;
   }
 }

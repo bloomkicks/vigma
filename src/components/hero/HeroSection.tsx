@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="relative text-white py-16 z-10 px-11 overflow-x-hidden overflow-y-visible">
+    <section className="relative text-white py-16 z-10 px-11 overflow-x-hidden overflow-y-visible bg-[#262626]">
       <img
         src="/images/hero/hero-illustration.jpg"
         alt=""
@@ -19,7 +19,7 @@ const HeroSection = () => {
         нашей фабрики
       </p>
       <Timer />
-      <button className="bg-primary text-black text-[1.16rem] mx-auto rounded-2 px-[42px] py-[11px] mb-[19px] mt-[39px]">
+      <button className="bg-primary text-black text-[1.16rem] mx-auto px-[42px] py-[11px] mb-[19px] mt-[39px]">
         Оставить заявку
       </button>
       <Link href="#" passHref legacyBehavior>
