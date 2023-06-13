@@ -1,3 +1,4 @@
+import Popup from "@/components/popups/Popup";
 import QuizSection from "@/components/quiz/QuizSection";
 import ContactsSection from "@/components/contacts/ContactsSection";
 import ReviewsSection from "@/components/reviews/ReviewsSection";
@@ -14,21 +15,24 @@ import ServicesSection from "@/components/services/ServicesSection";
 
 const MainPage = () => {
   return (
-    <main className="pt-16">
-      <HeroSection />
-      <BenefitsSection />
-      <ProductsSection />
-      <CategoriesSection />
-      <ServicesSection />
-      <MaterialsSection />
-      <ValuesSection />
-      <StaffSection />
-      <FactorySection />
-      <GetKitchenSection />
-      <ReviewsSection />
-      <QuizSection />
-      <ContactsSection />
-    </main>
+    <>
+      <main className="pt-16">
+        <HeroSection />
+        <BenefitsSection />
+        <ProductsSection />
+        <CategoriesSection />
+        <ServicesSection />
+        <MaterialsSection />
+        <ValuesSection />
+        <StaffSection />
+        <FactorySection />
+        <GetKitchenSection />
+        <ReviewsSection />
+        <QuizSection />
+        <ContactsSection />
+      </main>
+      <Popup />
+    </>
   );
 };
 

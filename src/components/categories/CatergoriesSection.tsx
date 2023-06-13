@@ -1,29 +1,20 @@
 import Category from "./Category";
-
-const categories: { title: string; imgName: string }[] = [
-  {
-    title: "Угловые кухни",
-    imgName: "angled.jpg",
-  },
-  {
-    title: "Прямые кухни",
-    imgName: "linear.jpg",
-  },
-];
+import categories from "@/data/categories";
 
 const CategoriesSection = () => {
   return (
-    <section className="section-dark pl-[35px] pr-[50px]">
-      <h2 className="heading mb-[35px]">
+    <section className="section-dark">
+      <h2 className="heading mb-[35px] lg:mb-[56px]">
         С нами вы получите кухню, которая идеально отразит ваш стиль и
         предпочтения
       </h2>
-      <div className="flex flex-row justify-start items-center overflow-x-scroll overflow-y-visible snap-proximity snap-x pb-2 space-x-[25px] pr-[35px]">
+      <div className="mr-[-35px] flex flex-row justify-start items-center overflow-x-auto overflow-y-visible snap-proximity snap-x pb-2 space-x-[25px] pr-[35px] lg:justify-center lg:flex-wrap lg:space-x-0 lg:mr-[-47px] lg:mb-[-45px]">
         {categories.map((category, i) => (
           <Category
             title={category.title}
-            imgSrc={`/images/categories/${category.imgName}`}
-            key={category.imgName}
+            name={category.name}
+            imgSrc={`/images/categories/${category.name}.jpg`}
+            key={category.name}
           />
         ))}
       </div>

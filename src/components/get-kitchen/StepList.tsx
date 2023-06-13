@@ -1,36 +1,39 @@
 const steps = [
   {
     iconName: "phone.svg",
-    text: "1. Вызвать дизайнера для проведения замеров",
+    text: "Вызвать дизайнера для проведения замеров",
   },
   {
     iconName: "plan.svg",
-    text: "2. Согласовать проект вашей кухни с дизайнером",
+    text: "Согласовать проект вашей кухни с дизайнером",
   },
   {
     iconName: "papers.svg",
-    text: "3. Внести аванс удобным вам способом",
+    text: "Внести аванс удобным вам способом",
   },
   {
     iconName: "stars.svg",
-    text: "4. Получить новую кухню в течение месяца",
+    text: "Получить новую кухню в течение месяца",
   },
 ];
 
 const StepList = () => {
   return (
-    <div className="space-y-5">
-      {steps.map((step) => (
+    <div className="space-y-5 lg:flex lg:flex-row lg:flex-wrap lg:justify-center lg:items-start lg:space-y-0 lg:mr-[-52px] lg:mb-[-44px]">
+      {steps.map((step, i) => (
         <div
-          className="flex flex-row justify-start items-center space-x-3.5"
+          className="text-left flex flex-row justify-start items-center space-x-3.5 lg:w-[40%] lg:space-x-[18px] lg:!mb-[44px] lg:!mr-[48px]"
           key={step.iconName}
         >
           <img
             src={`/images/get-kitchen/${step.iconName}`}
             alt=""
-            className="w-[50px] h-[50px] aspect-square shadow-dark"
+            className="w-[56px] h-[56px] aspect-square shadow-dark lg:w-[80px] lg:h-[80px]"
           />
-          <p>{step.text}</p>
+          <p className="leading-[1.5]">
+            <span className="numbers">{i + 1}. </span>
+            {step.text}
+          </p>
         </div>
       ))}
     </div>

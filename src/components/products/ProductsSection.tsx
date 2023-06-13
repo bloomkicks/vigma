@@ -1,35 +1,39 @@
+import LinkToKitchens from "./LinkToKitchens";
 import useSlider from "@/hooks/use-slider";
-import { useState } from "react";
-import products from "@/data/products";
+import { primaryProducts } from "@/data/products";
 
 import Slider from "../ui/Slider";
 import SliderControl from "../ui/SliderControl";
 import Product from "./Product";
 
 const ProductsSection = () => {
-  const { curIndex, moveLeftHandler, moveRightHandler } = useSlider(
-    products.length
-  );
+  const { curIndex, moveLeftHandler, moveRightHandler, isLaptop } =
+    useSlider(primaryProducts.length, true);
 
   return (
-    <section className="section-light flex flex-row justify-center items-center" id="products">
-      <SliderControl isLeft onClick={moveLeftHandler} isSmall />
-      <Slider
-        itemWidth={290}
-        curIndex={curIndex}
-        spacing={16}
-        shadowSize={4}
-        styles="space-x-4 pb-1.5 pt-0.5"
-      >
-        {products.map((product) => (
-          <Product
-            {...product}
-            key={product.id}
-            styles="shrink-0 translate-x-1"
-          />
-        ))}
-      </Slider>
-      <SliderControl onClick={moveRightHandler} isSmall />
+    <section className="section-light " id="kitchens">
+      <div className="flex flex-row justify-center items-center -ml-1">
+        <SliderControl isLeft onClick={moveLeftHandler} isSmall />
+        <Slider
+          itemWidth={isLaptop ? 860 : 290}
+          curIndex={curIndex}
+          spacing={20}
+          shadowSize={4}
+          styles="space-x-5 lg:duration-[650ms]"
+          isLaptop={isLaptop}
+          isOnly
+        >
+          {primaryProducts.map((product) => (
+            <Product
+              {...product}
+              key={product.name}
+              styles="shrink-0"
+            />
+          ))}
+        </Slider>
+        <SliderControl onClick={moveRightHandler} isSmall />
+      </div>
+      <LinkToKitchens />
     </section>
   );
 };

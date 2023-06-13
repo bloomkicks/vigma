@@ -3,52 +3,51 @@ import SourceChoice from "./SourceChoice";
 import Slider from "../ui/Slider";
 import SliderControl from "../ui/SliderControl";
 import useSlider from "@/hooks/use-slider";
-
-const reviews: { imgName: string; isProfi?: boolean }[] = [
-  {
-    imgName: "irina-repisheva.jpg",
-  },
-  {
-    imgName: "irina-repisheva.jpg",
-    isProfi: true,
-  },
-  {
-    imgName: "irina-repisheva.jpg",
-  },
-];
+import reviews from "@/data/reviews";
 
 const ReviewsSection = () => {
   const [isProfiActive, setIsProfiActive] = useState(false);
 
-  const { curIndex, moveLeftHandler, moveRightHandler } = useSlider(
-    reviews.length
+  const {
+    curIndex,
+    moveLeftHandler,
+    moveRightHandler,
+    isLaptop,
+    setCurIndex,
+  } = useSlider(
+    reviews.filter((review) =>
+      isProfiActive ? review.isProfi : !review.isProfi
+    ).length
   );
 
   function profiChooseHandler() {
     setIsProfiActive(true);
+    setCurIndex(0);
   }
   function messagesChooseHandler() {
     setIsProfiActive(false);
+    setCurIndex(0);
   }
 
   return (
     <section className="section-light" id="reviews">
-      <h2 className="heading mb-8 ml-[40px] pr-[50px]">
-        Послушайте тех, кто уже наслаждается нашей кухней
+      <h2 className="heading mb-[26px] lg:mb-[52px]">
+        Послушайте тех, кто уже получил у нас новую кухню
       </h2>
       <SourceChoice
         onProfiClick={profiChooseHandler}
         onMessagesClick={messagesChooseHandler}
         isProfiActive={isProfiActive}
       />
-      <div className="flex flex-row justify-center items-center mt-6">
+      <div className="flex flex-row justify-center items-center mt-[22px] -ml-1 lg:mt-[46px]">
         <SliderControl isLeft onClick={moveLeftHandler} />
         <Slider
           curIndex={curIndex}
-          itemWidth={240}
+          itemWidth={260}
           shadowSize={4}
           spacing={16}
-          styles="space-x-4 pb-2.5 pt-0.5"
+          styles="space-x-4"
+          isLaptop={isLaptop}
         >
           {reviews
             .filter((review) =>
@@ -59,7 +58,7 @@ const ReviewsSection = () => {
                 src={`/images/reviews/${review.imgName}`}
                 key={review.imgName}
                 alt="Изображение не найдено"
-                className="w-[240px] h-auto shadow-strong rounded-2 translate-x-1"
+                className="w-[260px] h-auto shadow-strong rounded-1"
               />
             ))}
         </Slider>

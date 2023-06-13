@@ -1,3 +1,4 @@
+import React from "react";
 import Socials from "./Socials";
 import Link from "next/link";
 
@@ -14,11 +15,11 @@ const contacts: {
   },
   {
     title: "Главный менеджер",
-    value: "Филатова Г. М.",
+    value: "Филатова Галина",
   },
   {
     title: "Часы работы",
-    value: "9:00 - 20:00 (пн-пт)",
+    value: "9:00 - 21:00 (пн-пт)",
   },
   {
     title: "Наше производство",
@@ -28,16 +29,18 @@ const contacts: {
 ];
 const ContactList = () => {
   return (
-    <div className="space-y-3.5">
+    <div className="space-y-3.5 text-left mb-[22px] lg:space-y-[16px] lg:mb-0">
       {contacts.map((contact, i) => (
-        <>
+        <React.Fragment key={contact.title}>
           {i === 2 && <Socials />}
-          <p key={contact.title} className="px-[35px] pr-[45px]">
-            <span className="font-medium">{contact.title}: </span>
+          <p className="">
+            <span className="font-semibold">{contact.title}: </span>
             {contact.link ? (
               <Link href={contact.link} passHref legacyBehavior>
                 <a
-                  className={contact.isVertical ? "block mt-1.5" : ""}
+                  className={
+                    contact.isVertical ? "block mt-1.5 " : "numbers"
+                  }
                 >
                   {contact.value}
                 </a>
@@ -50,7 +53,7 @@ const ContactList = () => {
               </span>
             )}
           </p>
-        </>
+        </React.Fragment>
       ))}
     </div>
   );

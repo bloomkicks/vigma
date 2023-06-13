@@ -8,14 +8,16 @@ const Service = ({
   iconSrc: string;
 }) => {
   return (
-    <div className="text-center w-[245px] shrink-0">
+    <div className="text-center w-[245px] shrink-0 lg:w-[380px]">
       <img
         src={iconSrc}
         alt=""
-        className="w-[70px] aspect-square mx-auto mb-2"
+        className="w-[80px] h-auto aspect-square mx-auto mb-2 lg:w-[100px]"
       />
-      <b className="subtitle1 block mb-[9px]">{title}</b>
-      <p>{description}</p>
+      <b className="subtitle1 block mb-2.5 lg:!text-desktop-large">
+        {title}
+      </b>
+      <p className="leading-[1.5]">{description}</p>
     </div>
   );
 };

@@ -1,22 +1,52 @@
-import NavMenu from "./NavMenu";
-import { useState } from "react";
+import MobileHeaderContent from "./MobileHeaderContent";
 import Link from "next/link";
-import MenuSetter from "./MenuSetter";
+
+const links: {
+  title: string;
+  link: string;
+}[] = [
+  {
+    title: "Наши кухни",
+    link: "/kitchens",
+  },
+  {
+    title: "Рассчитать стоимость",
+    link: "/#quiz",
+  },
+  {
+    title: "Контакты",
+    link: "/#contacts",
+  },
+  {
+    title: "Отзывы",
+    link: "/#reviews",
+  },
+  {
+    title: "О фабрике",
+    link: "/#factory",
+  },
+];
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  function toggleMenuHandler() {
-    setIsMenuOpen((prev) => !prev);
-  }
-  function closeMenuHandler() {
-    setIsMenuOpen(false);
-  }
-
   return (
-    <header className="fixed top-0 left-0 w-full h-16 bg-black-light z-50 shadow-[1px_3px_4px_rgba(0,0,0,0.25)]">
-      <div className="mx-auto h-full max-w-[1366px] flex flex-row items-center justify-between px-8">
-        <Link href="#" passHref legacyBehavior>
-          <a className="p-2 pt-1.5 -translate-y-px hover:bg-gray-800 rounded-2">
+    <header className="fixed z-50 top-0 left-0 w-full h-16 bg-dark shadow-[1px_3px_4px_rgba(0,0,0,0.35)]">
+      <div className="mx-auto h-full max-w-[1366px] flex flex-row items-center justify-between px-8 lg:justify-center lg:space-x-[36px]">
+        {links.slice(0, 2).map((link) => (
+          <Link
+            href={link.link}
+            passHref
+            legacyBehavior
+            key={link.link}
+          >
+            <a className="fade-out-hover text-white hidden lg:block">
+              <h6 className="font-strong font-semibold">
+                {link.title}
+              </h6>
+            </a>
+          </Link>
+        ))}
+        <Link href="/" passHref legacyBehavior>
+          <a className="transition-colors duration-150 lg:duration-200 p-2 pt-1.5 -translate-y-px hover:bg-dark-lightened hover:opacity-100 rounded-1 lg:!mx-[88px] lg:!mr-[52px]">
             <img
               src="/images/header/logo.svg"
               alt="На главную"
@@ -24,19 +54,22 @@ const Header = () => {
             />
           </a>
         </Link>
-        <button className="p-2 -translate-y-px hover:bg-gray-800 rounded-2 ml-auto mr-[24px]">
-          <img
-            src="/images/header/call-us-button.svg"
-            alt="Звонок"
-            className="w-[31px] h-[31px]"
-          />
-        </button>
-        <MenuSetter
-          onClick={toggleMenuHandler}
-          isMenuOpen={isMenuOpen}
-        />
+        {links.slice(2, 5).map((link) => (
+          <Link
+            href={link.link}
+            passHref
+            legacyBehavior
+            key={link.link}
+          >
+            <a className="fade-out-hover text-white hidden lg:block">
+              <h6 className="font-strong font-semibold">
+                {link.title}
+              </h6>
+            </a>
+          </Link>
+        ))}
+        <MobileHeaderContent />
       </div>
-      <NavMenu open={isMenuOpen} />
     </header>
   );
 };

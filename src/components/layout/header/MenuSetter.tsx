@@ -2,12 +2,12 @@ const MenuSetter = ({
   isMenuOpen,
   onClick,
 }: {
+  isMenuOpen?: boolean;
   onClick: () => void;
-  isMenuOpen: boolean;
 }) => {
   return (
     <button
-      className="group flex flex-col justify-center items-center rounded-2 px-2 py-2.5 hover:bg-gray-800 transition-colors space-y-[5.82px]"
+      className="group flex flex-col justify-center items-center rounded-2 px-2 py-2.5 hover:bg-dark-lightened transition-colors duration-150 lg:duration-200 space-y-[5.82px] lg:hidden"
       onClick={onClick}
     >
       {[0, 1, 2].map((bar) => (

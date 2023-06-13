@@ -1,4 +1,4 @@
-import { MutableRefObject, useRef } from "react";
+import { MutableRefObject, useRef, useEffect } from "react";
 
 function getInt(ref: MutableRefObject<HTMLSpanElement | null>) {
   return parseInt(ref.current!.innerHTML);
@@ -19,7 +19,7 @@ const Timer = ({ styles }: { styles?: string }) => {
   const mins = useRef<HTMLSpanElement>(null);
   const secs = useRef<HTMLSpanElement>(null);
 
-  let defHours = (25 - date.getHours()).toString();
+  let defHours = (24 - date.getHours()).toString();
   let defMins = (60 - date.getMinutes()).toString();
   let defSecs = (60 - date.getSeconds()).toString();
 
@@ -45,13 +45,13 @@ const Timer = ({ styles }: { styles?: string }) => {
   return (
     <div
       className={
-        "text-[20px] rounded-0.5 bg-[#B0B0B0] bg-opacity-50 px-[9px] py-1 w-fit " +
+        "text-button-lg rounded-1 bg-[#B0B0B0] bg-opacity-50 px-3 py-1 w-fit numbers mb-px " +
         (styles || "")
       }
     >
       <span ref={hours}>{defHours}</span>:
       <span ref={mins}>{defMins}</span>:
-      <span ref={secs}>{defSecs}</span>
+      <span ref={secs}>{'01' || defSecs}</span>
     </div>
   );
 };

@@ -1,10 +1,22 @@
-const QuizControls = () => {
+const QuizControls = ({
+  onMoveNext,
+  onMoveBack,
+}: {
+  onMoveNext: () => void;
+  onMoveBack: () => void;
+}) => {
   return (
-    <div className="mt-[42px] ml-5 text-black">
-      <button className="py-2.5 px-8 bg-primary txt-button mr-5 rounded-2 inline-block">
+    <div className="mt-[42px] text-black lg:mt-[48px]">
+      <button
+        onClick={onMoveNext}
+        className="button !py-[9px] !px-8 mr-[18px] inline-block"
+      >
         Далее
       </button>
-      <button className="py-2.5 px-[30px] bg-[#DBDBDB] txt-button rounded-2 inline-block">
+      <button
+        onClick={onMoveBack}
+        className="button !py-[9px] !bg-gray hover:!bg-[#C6C6C6] inline-block"
+      >
         Назад
       </button>
     </div>

@@ -13,18 +13,26 @@ const gifts: { imgName: string; title: string }[] = [
   },
 ];
 
-const GiftBanner = ({ styles }: { styles?: string }) => {
+const GiftBanner = ({
+  styles,
+  title,
+}: {
+  styles?: string;
+  title?: string;
+}) => {
   return (
     <div className={styles || ""}>
-      <p className="subtitle1 mb-3.5">+ Подарок к кухне:</p>
-      <div className="flex flex-row items-center justify-start space-x-2">
+      <p className="subtitle1 mb-3.5 lg:mb-5">
+        {title || "+ Подарок к вашей кухне:"}
+      </p>
+      <div className="flex flex-row items-center justify-start space-x-2 lg:space-x-3">
         {gifts.map((gift) => (
           <img
-            src={`/images/quiz/gifts/${gift.imgName}`}
+            src={`/images/gifts/${gift.imgName}`}
             alt={gift.title}
             title={gift.title}
             key={gift.imgName}
-            className="rounded-2 shadow-normal border-black border-[0.5px]"
+            className="w-[92px] h-auto rounded-1 shadow-normal border-black border-[0.1px] object-cover object-center lg:w-[110px]"
           />
         ))}
       </div>

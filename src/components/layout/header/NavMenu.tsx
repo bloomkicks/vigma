@@ -1,40 +1,45 @@
+import { useDispatch } from "react-redux";
+import { popupActions } from "@/store/popup-slice";
 import GiftBanner from "@/components/ui/GiftBanner";
 import Timer from "@/components/hero/Timer";
-import { useEffect, useState, useRef } from "react";
-import { createPortal } from "react-dom";
 import NavLinks from "./NavLinks";
 
-const NavMenu = ({ open }: { open: boolean }) => {
-  const ref = useRef<HTMLBodyElement>();
-  const [mounted, setMounted] = useState(false);
+const NavMenu = ({
+  open,
+  onClick,
+}: {
+  open: boolean;
+  onClick: () => void;
+}) => {
+  const dispatch = useDispatch();
+  function callConsultantHandler() {
+    dispatch(popupActions.togglePopup('call-consultant'));
+  }
 
-  useEffect(() => {
-    ref.current = document.body as HTMLBodyElement;
-    setMounted(true);
-  }, []);
-
-  return mounted ? (
-    createPortal(
-      <section
-        className="w-full h-[100vh] pt-[128px] pl-[52px] bg-white text-black transition-transform duration-[400ms] ease-out z-40 fixed left-0 top-0 pb-[78px]"
-        style={{ transform: open ? "" : "translateX(100%)" }}
+  return (
+    <nav
+      onClick={onClick}
+      className={
+        "fixed left-0 top-0 w-full h-full min-h-[99vh] pt-[118px] pl-[52px] bg-light text-black pb-[78px] transition-transform duration-[400ms] lg:duration-[450ms] ease-out translate-x-full -z-10 lg:hidden"
+      }
+      style={{ transform: open ? "none" : "translateX(100%)" }}
+    >
+      <div className="absolute top-0 left-0 w-full h-16 bg-dark shadow-[1px_3px_4px_rgba(0,0,0,0.35)]"></div>
+      <NavLinks styles="mb-11" />
+      <div className="mt-auto mb-2">
+        <p className="subtitle1 inline-block mr-[14px]">
+          Акция <span className="font-semibold">-40%</span>
+        </p>
+        <Timer styles="inline-block" />
+      </div>
+      <GiftBanner />
+      <button
+        onClick={callConsultantHandler}
+        className="button shadow-normal mt-[34px]"
       >
-        <NavLinks styles="mb-11" />
-        <div className="mt-auto mb-2">
-          <p className="subtitle1 inline-block mr-[14px]">
-            Акция <span className="font-semibold">-40%</span>
-          </p>
-          <Timer styles="inline-block" />
-        </div>
-        <GiftBanner />
-        <button className="txt-button py-2.5 px-[30px] rounded-2 bg-primary-light shadow-normal mt-[34px]">
-          Оставить заявку
-        </button>
-      </section>,
-      document.body
-    )
-  ) : (
-    <></>
+        Оставить заявку
+      </button>
+    </nav>
   );
 };
 

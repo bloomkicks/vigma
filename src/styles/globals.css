@@ -10,34 +10,45 @@
   margin: 0;
 }
 
+html,
 body {
-  background-color: #ffffff;
-  color: #000000;
-  line-height: 1.15;
   @apply text-body1 font-base font-normal;
+  font-size: 16px;
+  line-height: 1.25;
+  scroll-padding-top: 64px;
+  background-color: #E0E0E0;
+  color: #000000;
 }
 
 a {
-  @apply text-inherit underline;
+  color: inherit;
+  text-decoration: underline;
+  transition: opacity 100ms ease-out;
+}
+a:hover {
+  opacity: 0.77;
 }
 
 button {
-  @apply border-none;
+  @apply text-button font-base font-normal;
+  padding: 30px 10px;
   display: block;
+  border: none;
+  border-radius: 2px;
 }
 
-html {
-  font-size: 16px;
+input {
+  display: block;
+  padding: 10px 16px;
+  border: 1px solid black;
+  color: black;
+  background-color: rgba(254, 254, 254, 0.75);
+  border-radius: 4px;
 }
 
-@media (min-width: 1024px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1560px) {
-  html {
+@media (min-width: 840px) {
+  html,
+  body {
     font-size: 20px;
   }
 }

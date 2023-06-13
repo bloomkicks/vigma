@@ -2,21 +2,37 @@ const Material = ({
   title,
   description,
   imgSrc,
+  properties,
 }: {
   title: string;
   description: string;
   imgSrc: string;
+  properties: { title: string; text: string }[];
 }) => {
   return (
-    <div className="text-center rounded-2.5 shadow-dark w-[250px] shrink-0 translate-x-1">
-      <img
-        src={imgSrc}
-        alt="Изображение не найдено"
-        className="w-full h-[160px] object-cover object-center rounded-t-2.5"
-      />
-      <div className="px-5 pt-4 pb-[26px] rounded-b-2.5 bg-white text-black">
-        <b className="large block mb-1.5">{title}</b>
-        <p>{description}</p>
+    <div className="rounded-2 text-left shadow-dark bg-white text-black pb-[24px] w-[305px] shrink-0 lg:w-[975px] lg:px-[52px] lg:pt-8 lg:pb-[48px]">
+      <div className="mb-1.5 lg:flex lg:flex-row lg:items-center lg:justify-start lg:mb-[40px]">
+        <img
+          src={imgSrc}
+          alt="Изображение не найдено"
+          className="w-full h-[220px] object-cover object-center rounded-t-2 lg:rounded-2 lg:w-[220px] lg:h-[200px] lg:mr-[10px]"
+        />
+        <div className="pl-[25px] pr-[25px] pt-[18px] rounded-b-2">
+          <b className="text-large font-bold !font-strong block lg:mb-[15px]">
+            {title}
+          </b>
+          <p className="mb-3.5 leading-[1.5]">{description}</p>
+        </div>
+      </div>
+      <div className="pl-[25px] pr-[25px] space-y-3.5 lg:space-y-0 lg:space-x-6 lg:flex lg:flex-row lg:items-start lg:justify-center lg:px-0">
+        {properties.map((property) => (
+          <div key={property.title} className="lg:w-[33.3%]">
+            <b className="block font-semibold mb-1 numbers">
+              {property.title}
+            </b>
+            <p className="body2">{property.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

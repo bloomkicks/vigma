@@ -1,62 +1,51 @@
+import MaterialsControls from "./MaterialsControls";
 import Material from "./Material";
 import Slider from "../ui/Slider";
 import useSlider from "@/hooks/use-slider";
-import SliderControl from "../ui/SliderControl";
-
-const materials: {
-  title: string;
-  description: string;
-  imgName: string;
-}[] = [
-  {
-    title: "AGT МДФ",
-    description:
-      "Материал, рассчитанный на использование в качественной корпусной мебели",
-    imgName: "agt-mdf.jpg",
-  },
-  {
-    title: "AGT МДФ №2",
-    description:
-      "Материал, рассчитанный на использование в качественной корпусной мебели",
-    imgName: "agt-mdf.jpg",
-  },
-];
+import materials from "@/data/materials";
 
 const MaterialsSection = () => {
-  const { curIndex, moveLeftHandler, moveRightHandler } = useSlider(
-    materials.length
+  const { curIndex, moveRightHandler, isLaptop } = useSlider(
+    materials.length,
+    true
   );
 
   return (
     <section className="section-dark">
-      <h2 className="heading mb-2 ml-[35px] pr-[50px]">
+      <h2 className="heading mb-2.5 lg:mb-8">
         Наши кухни сохраняют первозданные вид и функциональность от 10
         лет и более
       </h2>
-      <p className="pr-[50px] pl-[35px] mb-8">
+      <p className="mr-2.5 mb-8 leading-[1.5] lg:mb-[60px] max-w-[900px] lg:!mx-auto">
         Благодаря сертифицированным и качественным материалам, которые
         мы тщательно подбираем под каждую кухню
       </p>
-      <div className="flex flex-row justify-center items-center">
-        <SliderControl isDark isLeft onClick={moveLeftHandler} />
-        <Slider
-          curIndex={curIndex}
-          itemWidth={250}
-          spacing={16}
-          styles="space-x-4 pb-2.5 pt-0.5"
-          shadowSize={4}
-        >
-          {materials.map((material) => (
-            <Material
-              title={material.title}
-              description={material.description}
-              imgSrc={`/images/materials/${material.imgName}`}
-              key={material.imgName}
-            />
-          ))}
-        </Slider>
-        <SliderControl isDark onClick={moveRightHandler} />
-      </div>
+      <Slider
+        curIndex={curIndex}
+        itemWidth={isLaptop ? 975 : 305}
+        spacing={16}
+        styles="space-x-4 lg:duration-[450ms]"
+        shadowSize={4}
+        isLaptop={isLaptop}
+        isOnly
+        containerStyles="lg:w-auto"
+      >
+        {materials.map((material) => (
+          <Material
+            title={material.title}
+            description={material.description}
+            imgSrc={`/images/materials/${material.imgName}`}
+            properties={material.properties}
+            key={material.imgName}
+          />
+        ))}
+      </Slider>
+      <MaterialsControls
+        curIndex={curIndex}
+        moveHandler={moveRightHandler}
+        length={materials.length}
+        isLaptop={isLaptop}
+      />
     </section>
   );
 };

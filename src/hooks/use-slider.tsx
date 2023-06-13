@@ -1,33 +1,38 @@
-import { useState } from "react";
+import moveInArray from "@/features/move-in-array";
+import { useEffect, useState } from "react";
 
-function getSliderIndex(
-  cur: number,
+const useSlider = (
   length: number,
-  minus?: boolean
-): number {
-  let result: number | null = null;
-  if (minus) {
-    if (cur === 0) result = length - 1;
-    else result = cur - 1;
-  } else {
-    result = (cur + 1) % length;
-  }
-  return result;
-}
-
-const useSlider = (length: number) => {
+  isOnly?: boolean,
+  isTwo?: boolean
+) => {
   const [curIndex, setCurIndex] = useState(0);
+  const [isLaptop, setIsLaptop] = useState(false);
+
   function moveRightHandler() {
-    setCurIndex((prev) => getSliderIndex(prev, length));
+    setCurIndex((prev) =>
+      moveInArray(prev, length, isLaptop && !isOnly, false, false, isTwo)
+    );
   }
   function moveLeftHandler() {
-    setCurIndex((prev) => getSliderIndex(prev, length, true));
+    setCurIndex((prev) =>
+      moveInArray(prev, length, isLaptop && !isOnly, true, false, isTwo)
+    );
   }
+
+  useEffect(() => {
+    setIsLaptop(window.innerWidth > 1024);
+    window.addEventListener("resize", () => {
+      setIsLaptop(window.innerWidth > 1024);
+    });
+  }, []);
 
   return {
     moveRightHandler,
     moveLeftHandler,
     curIndex,
+    isLaptop,
+    setCurIndex
   };
 };
 export default useSlider;

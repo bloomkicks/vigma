@@ -5,37 +5,53 @@ const links: {
 }[] = [
   {
     title: "Наши кухни",
-    link: "#products",
+    link: "/kitchens",
   },
   {
     title: "Рассчитать стоимость",
-    link: "#quiz",
+    link: "/#quiz",
   },
   {
     title: "Получить кухню",
-    link: "#get-kitchen",
+    link: "/#get-kitchen",
   },
   {
     title: "О фабрике",
-    link: "#factory",
+    link: "/#factory",
   },
   {
     title: "Отзывы",
-    link: "#reviews",
+    link: "/#reviews",
   },
   {
     title: "Контакты",
-    link: "#contacts",
+    link: "/#contacts",
   },
 ];
 
-const NavLinks = ({styles}: {styles?: string}) => {
+const NavLinks = ({
+  styles,
+  linkStyles,
+}: {
+  styles?: string;
+  linkStyles?: string;
+}) => {
   return (
-    <div className={"flex flex-col space-y-[25px] items-start justify-start " + (styles || '')}>
+    <div
+      className={
+        "flex flex-col space-y-[22px] items-start justify-start text-[1.563rem] " +
+        (styles || "")
+      }
+    >
       {links.map((link) => (
-        <Link href={link.link} passHref legacyBehavior>
-          <a>
-            <h6 className="font-strong font-semibold text-[1.56rem]">
+        <Link
+          href={link.link}
+          passHref
+          legacyBehavior
+          key={link.link}
+        >
+          <a className={"fade-out-hover " + (linkStyles || "")}>
+            <h6 className="font-strong font-semibold">
               {link.title}
             </h6>
           </a>
