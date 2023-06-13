@@ -1,8 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-const title =
-  "Кухни На Заказ От Фабрики в СПБ - Удобство и стиль для вашего дома - Вигма Мебель";
-const description =
-  "Кухни от производителя в СПБ и Лен. области - Дизайн-проект, консультация специалистов и гарантия 3 года в подарок - Быстрое производство и доставка от 14 дней";
+import { mainTitle, mainDescription } from "../data/meta";
 
 export default function Document() {
   return (
@@ -10,10 +7,6 @@ export default function Document() {
       <Head>
         {/* GENERAL */}
         <meta charSet="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1"
-        />
         <meta name="theme-color" content="#F3CF88" />
         {/* FONTS */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,10 +43,8 @@ export default function Document() {
         <meta property="og:url" content="https://www.vigmamebel.ru" />
         <meta
           property="og:site_name"
-          content="Кухни от фабрики Вигма Мебель"
+          content="Кухни на заказ в СПБ от фабрики Вигма Мебель"
         />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
         {/* TWITTER */}
         <meta name="twitter:card" content="summary" />
         <meta
@@ -61,10 +52,8 @@ export default function Document() {
           content="https://www.vigmamebel.ru"
         />
         <meta name="twitter:image" content="/apple-touch-icon.png" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="yandex-verification" content="eaf61e3fbaf62eb9" />
         {/* ENGINES */}
+        <meta name="yandex-verification" content="eaf61e3fbaf62eb9" />
         <link
           rel="sitemap"
           type="application/xml"

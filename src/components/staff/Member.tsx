@@ -12,7 +12,10 @@ const Member = ({
       <img
         src={imgSrc}
         alt="Изображение не найдено"
+        height="300px"
+        width="243px"
         className="w-full h-[267px] object-cover object-center lg:h-[300px]"
+        loading="lazy"
       />
       <div className="w-[calc(100%+12px)] -ml-1.5 bg-white text-black px-5 py-3.5 pb-5 rounded-b-1">
         <p className="font-semibold mb-1.5">{name}</p>

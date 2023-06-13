@@ -1,3 +1,5 @@
+import { kitchensTitle, kitchensDescription } from "@/data/meta";
+import MetaHead from "@/components/head-components/MetaHead";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import ProductList from "@/components/kitchens-page/ProductList";
@@ -15,8 +17,15 @@ const KitchensPage = () => {
 
   return (
     <>
+      <MetaHead
+        title={kitchensTitle}
+        description={kitchensDescription}
+      />
       <main className="pt-16">
-        <KitchensPageSection onSort={onSort} selected={sortCategory} />
+        <KitchensPageSection
+          onSort={onSort}
+          selected={sortCategory}
+        />
         <ProductList sortCategory={sortCategory} />
       </main>
       <Popup />

@@ -36,6 +36,18 @@ const quizSlice = createSlice({
     setWay(state, action: PayloadAction<string>) {
       state.way = action.payload;
     },
+    clear(state) {
+      return {
+        shape: [],
+        front: [],
+        additional: [],
+        gift: [],
+        width: "",
+        depth: "",
+        height: "",
+        way: "По телефону",
+      };
+    },
   },
 });
 

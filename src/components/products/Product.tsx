@@ -18,9 +18,9 @@ const Product = ({
 }) => {
   const [isLaptop, setIsLaptop] = useState(false);
   useEffect(() => {
-    setIsLaptop(window.innerWidth > 1024);
+    setIsLaptop(window.innerWidth > 1280);
     window.addEventListener("resize", () => {
-      setIsLaptop(window.innerWidth > 1024);
+      setIsLaptop(window.innerWidth > 1280);
     });
   }, []);
 
@@ -47,6 +47,8 @@ const Product = ({
       ) : (
         <img
           src={"/images/products/" + name + "/1.jpg"}
+          srcSet={`images/products/${name}/1-sm.jpg 290w, images/products/${name}/1.jpg 480w`}
+          sizes="(max-width: 1280px) 290px, 480px"
           alt="Изображение не найдено"
           className="h-[65%] min-w-full object-cover object-center rounded-t-2 bg-gray-200 text-center lg:min-w-0 lg:w-[56%] lg:rounded-l-2 lg:rounded-tr-0"
           style={{
@@ -54,7 +56,10 @@ const Product = ({
           }}
         />
       )}
-      <ProductTags discount={productInfo.discount} isHit={productInfo.isHit} />
+      <ProductTags
+        discount={productInfo.discount}
+        isHit={productInfo.isHit}
+      />
       <ProductInfoBar {...productInfo} name={name} isFull={isFull} />
     </div>
   );

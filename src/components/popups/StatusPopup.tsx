@@ -7,9 +7,6 @@ const StatusPopup = ({
   onClose: () => void;
   open: boolean;
 }) => {
-  function waitToClose() {
-    setTimeout(() => onClose(), 1000);
-  }
   return (
     <section
       className={
@@ -33,7 +30,7 @@ const StatusPopup = ({
           : "Попробуйте связаться с нами, наши контакты указаны на главной странице"}
       </p>
       <button
-        onClick={() => onClose}
+        onClick={() => onClose()}
         className="button !bg-gray hover:!bg-gray-dark mt-4 w-full"
       >
         Вернуться

@@ -21,23 +21,23 @@ const members: StaffMember[] = [
     imgName: "sergey-belonozhko.jpg",
   },
   {
-    name: "Алексей Минаев",
-    specialty: "Главный специалист по сборке кухонь",
-    imgName: "alexey-minaev.jpg",
-  },
-  {
     name: "Галина Филатова",
     specialty: "Главный менеджер-консультант",
     imgName: "galina-filatova.jpg",
   },
   {
-    name: "Михаил Папуков",
+    name: "Алексей Минаев",
+    specialty: "Главный специалист по сборке кухонь",
+    imgName: "alexey-minaev.jpg",
+  },
+  {
+    name: "Михаил Филатов",
     specialty: "Руководитель производства",
     imgName: "mihail-papukov.jpg",
   },
   {
     name: "Кирилл Попов",
-    specialty: "Дизайнер/Менеджер-консультант",
+    specialty: "Дизайнер-проектировщик",
     imgName: "kirill-popov.jpg",
   },
 ];

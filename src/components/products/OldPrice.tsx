@@ -14,7 +14,9 @@ const OldPrice = ({
     oldPrice ||
     (priceNumber + priceNumber * (discount / 100)).toString();
   newOldPrice =
-    newOldPrice.slice(0, 3) + "." + newOldPrice.slice(3, 6);
+    newOldPrice.length === 5
+      ? newOldPrice.slice(0, 2) + "." + newOldPrice.slice(2, 6)
+      : newOldPrice.slice(0, 3) + "." + newOldPrice.slice(3, 6);
 
   return (
     <span
@@ -23,7 +25,7 @@ const OldPrice = ({
         (styles || "")
       }
     >
-      <div className="h-0.5 w-[103%] lg:w-[104%] rotate-[11deg] lg:rotate-[12deg] absolute left-0 top-[9px] lg:top-[11px] bg-black opacity-90"></div>
+      <div className="h-0.5 w-[103%] lg:w-[104%] rotate-[11deg] lg:rotate-[12deg] absolute left-[-1px] top-[9px] lg:top-[11px] bg-black opacity-90"></div>
       {newOldPrice}
     </span>
   );

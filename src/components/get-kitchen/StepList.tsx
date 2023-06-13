@@ -28,6 +28,8 @@ const StepList = () => {
           <img
             src={`/images/get-kitchen/${step.iconName}`}
             alt=""
+            height="80px"
+            width="80px"
             className="w-[56px] h-[56px] aspect-square shadow-dark lg:w-[80px] lg:h-[80px]"
           />
           <p className="leading-[1.5]">

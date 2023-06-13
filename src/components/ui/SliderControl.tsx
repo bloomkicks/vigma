@@ -30,7 +30,7 @@ const SliderControl = ({
           : "mr-2 lg:mr-[68px]"
       } ${
         isProduct
-          ? "absolute top-1/2 -translate-y-1/2 !bg-gray hover:!bg-gray-dark !py-3.5 z-10 shadow-normal lg:translate-x-0 bg-opacity-80 lg:!px-3 "
+          ? "absolute top-1/2 translate-y-[-42.5%] lg:-translate-y-1/2 !bg-gray hover:!bg-gray-dark !py-3.5 z-10 shadow-normal lg:translate-x-0 bg-opacity-80 lg:!px-3 "
           : ""
       } ${
         isProduct

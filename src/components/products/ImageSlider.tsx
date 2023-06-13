@@ -61,11 +61,19 @@ const ImageSlider = ({
             src={`/images/products/${productName}/${
               i === 0 ? "1.jpg" : i + 1 + ".webp"
             }`}
+            srcSet={`images/products/${productName}/${
+              i === 0 ? "1-sm.jpg" : i + 1 + "-sm.webp"
+            } 290w, images/products/${productName}/${
+              i === 0 ? "1.jpg" : i + 1 + ".webp"
+            } 480w`}
+            sizes="(max-width: 1280px) 290px, 480px"
             alt="Изображение не найдено"
             className={
               "w-[290px] h-[290px] aspect-square object-cover object-center " +
               (imageStyles || "")
             }
+            width={width + "px"}
+            height={height}
             style={{
               height: height,
               width: width + "px",

@@ -1,7 +1,11 @@
 {
-  "name": "website",
-  "version": "0.1.0",
+  "name": "vigma-website",
+  "version": "1.1.0",
   "private": true,
+  "browserslist": [
+    "cover 99%",
+    "not dead"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

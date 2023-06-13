@@ -10,11 +10,11 @@ const MaterialsSection = () => {
 
   return (
     <section className="section-dark !px-0 lg:px-[202px]">
-      <h2 className="heading mb-2.5 lg:mb-8 mx-[35px] lg:mx-0">
+      <h2 className="heading mb-2.5 lg:mb-8 mx-[35px] lg:mx-0 xs:mx-8">
         Наши кухни сохраняют первозданные вид и функциональность от 10
         лет и более
       </h2>
-      <p className="ml-8 mr-[42px] mb-8 leading-[1.5] lg:mb-[60px] max-w-[900px] lg:!mx-auto">
+      <p className="ml-[35px] xs:ml-8 mr-[42px] mb-8 leading-[1.5] lg:mb-[60px] max-w-[900px] lg:!mx-auto">
         Благодаря сертифицированным и качественным материалам, которые
         мы тщательно подбираем под каждую кухню
       </p>
@@ -36,7 +36,6 @@ const MaterialsSection = () => {
               imgSrc={`/images/materials/${material.imgName}`}
               properties={material.properties}
               key={material.imgName}
-              isExSmall
             />
           ))}
         </Slider>

@@ -23,12 +23,12 @@ const PopupForm = ({
   const nameRef = useRef() as RefObject<HTMLInputElement>;
   const addressRef = useRef() as RefObject<HTMLInputElement>;
   const [isValid, setIsValid] = useState({
-    "tel": false,
+    tel: false,
     name: false,
     address: true,
   });
   const [isStarted, setIsStarted] = useState({
-    "tel": false,
+    tel: false,
     name: false,
   });
 
@@ -41,6 +41,17 @@ const PopupForm = ({
         addressRef.current ? addressRef.current.value : undefined,
         router.asPath
       );
+      try {
+        (window as any).ym(
+          process.env.METRICA_KEY,
+          "reachGoal",
+          "order_sent"
+        );
+      } catch (err) {
+        console.log(
+          "[Данные для аналитики]: Ошибка с отправкой Яндекс цели - order_sent"
+        );
+      }
       onFormSubmit("success");
     } catch (err) {
       onFormSubmit("error");
@@ -50,11 +61,11 @@ const PopupForm = ({
     if (addressRef.current) addressRef.current.value = "";
     clearState();
     setIsStarted({
-      "tel": false,
+      tel: false,
       name: false,
     });
     setIsValid({
-      "tel": false,
+      tel: false,
       name: false,
       address: true,
     });
@@ -82,11 +93,11 @@ const PopupForm = ({
         telRef.current!.value.replace(/[^\d]/g, "").length >= 11;
       let isNameValid = nameRef.current!.value.length >= 1;
       setIsStarted((prev) => ({
-        "tel": prev["tel"] || name === "tel",
+        tel: prev["tel"] || name === "tel",
         name: prev.name || name === "name",
       }));
       setIsValid((prev) => ({
-        "tel": isTelValid || name === "tel",
+        tel: isTelValid || name === "tel",
         name: isNameValid || name === "name",
         address: true,
       }));
@@ -101,7 +112,7 @@ const PopupForm = ({
       telRef.current!.value.replace(/[^\d]/g, "").length >= 11;
     let isNameValid = nameRef.current!.value.length >= 1;
     setIsValid({
-      "tel": isTelValid,
+      tel: isTelValid,
       name: isNameValid,
       address: true,
     });

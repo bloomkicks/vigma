@@ -32,6 +32,8 @@ const GiftBanner = ({
             alt={gift.title}
             title={gift.title}
             key={gift.imgName}
+            width="110px"
+            height="62px"
             className="w-[92px] h-auto rounded-1 shadow-normal border-black border-[0.1px] object-cover object-center lg:w-[110px]"
           />
         ))}

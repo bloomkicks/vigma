@@ -1,3 +1,4 @@
+import MetaHead from "@/components/head-components/MetaHead";
 import ProductPageSection from "@/components/product-page/ProductPageSection";
 import PriceExplainSection from "@/components/price-explain/PriceExplainSection";
 import ConstructorSection from "@/components/constructor/ConstructorSection";
@@ -17,12 +18,17 @@ import type {
 } from "next";
 
 const ProductPage = ({ productName }: { productName: string }) => {
+  const neededProduct = products.find(
+    (prd) => prd.name === productName
+  )!;
   return (
     <>
+      <MetaHead
+        title={`${neededProduct.title} - ${neededProduct.subtitle} от фабрики Вигма Мебель`}
+        description={`Кухня ${neededProduct.description}, которая станет украшением любого дома`}
+      />
       <main className="pt-16">
-        <ProductPageSection
-          {...products.find((prd) => prd.name === productName)!}
-        />
+        <ProductPageSection {...neededProduct} />
         <PriceExplainSection />
         <ConstructorSection />
         <MaterialsSection />

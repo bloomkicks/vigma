@@ -4,7 +4,6 @@ import { popupActions } from "@/store/popup-slice";
 import type { RootState } from "@/store";
 import { useSelector, useDispatch } from "react-redux";
 
-import GiftBanner from "../ui/GiftBanner";
 import Link from "next/link";
 import PopupForm from "./PopupForm";
 import popups from "@/data/popups";
@@ -19,7 +18,6 @@ const Popup = () => {
   function onFormSubmit(status: string) {
     dispatch(popupActions.togglePopup(status));
   }
-
   function waitToClose() {
     setTimeout(() => togglePopupHandler(false), 1000);
   }
@@ -37,7 +35,7 @@ const Popup = () => {
         }}
       ></div>
       <section
-        className={`popup h-full pt-[114px] px-[40px] pr-[48px] min-h-[99vh] w-full fixed left-0 top-0 z-40 bg-white transition-transform duration-[400ms] lg:duration-[450ms] ease-out pb-8 overflow-y-auto -translate-y-full md:max-w-[480px] md:px-10 md:pr-10 md:left-1/2 md:-translate-x-1/2 lg:pt-[42px] lg:min-h-[650px] lg:h-[80vh] lg:pb-10
+        className={`popup h-full pt-[114px] px-[40px] pr-[48px] min-h-[99vh] w-full fixed left-0 top-0 z-40 bg-white transition-transform duration-[400ms] lg:duration-[450ms] ease-out pb-8 overflow-y-auto -translate-y-full md:max-w-[480px] md:px-10 md:pr-10 md:left-1/2 md:-translate-x-1/2 lg:pt-[42px] lg:min-h-[665px] lg:h-[70vh] lg:pb-10
             ${
               popupState.open &&
               !["success", "error"].includes(popupState.mode)

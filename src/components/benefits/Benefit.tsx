@@ -21,6 +21,8 @@ const Benefit = ({
         <img
           src={iconSrc}
           alt="Фото не найдено"
+          height="48px"
+          width="50px"
           className="w-auto h-full text-[10px]"
         />
       </div>

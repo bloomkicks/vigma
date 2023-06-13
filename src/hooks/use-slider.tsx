@@ -36,10 +36,10 @@ const useSlider = (
   }
 
   useEffect(() => {
-    setIsLaptop(window.innerWidth > 1024);
+    setIsLaptop(window.innerWidth > 1280);
     setIsExSmall(window.innerWidth < 372);
     window.addEventListener("resize", () => {
-      setIsLaptop(window.innerWidth > 1024);
+      setIsLaptop(window.innerWidth > 1280);
       setIsExSmall(window.innerWidth < 372);
     });
   }, []);

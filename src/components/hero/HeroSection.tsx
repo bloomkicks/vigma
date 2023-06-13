@@ -13,11 +13,12 @@ const HeroSection = () => {
     <section className="relative text-white py-16 z-10 px-[42px] xs:px-[38px] pr-10 overflow-x-hidden overflow-y-visible bg-[#262626] md:text-center lg:py-[110px]">
       <img
         src="/images/hero/hero-background.jpg"
-        srcSet="/images/hero/hero-background-sm.jpg 375w, /images/hero/hero-background.jpg 1440w"
-        sizes="(max-width: 480px) 375px, 1440px"
+        srcSet="images/hero/hero-background-sm.jpg 375w, images/hero/hero-background.jpg 1440w"
+        sizes="(max-width: 640px) 375px, 1440px"
+        width="100%"
+        height="100%"
+        className="min-h-[542px] object-cover object-center -z-10 min-w-[376px] h-auto w-full absolute left-1/2 bottom-0 -translate-x-1/2 bg-[#262626] xl:w-full xl:h-auto"
         alt=""
-        className="min-h-[542px] -z-10 min-w-[376px] h-full w-auto absolute left-1/2 bottom-0 -translate-x-1/2 bg-[#262626] xl:w-full xl:h-auto"
-        
       />
       <p className="text-button-lg text-[#D1D1D1] mb-3 lg:mb-4">
         Кухни <span className="font-semibold numbers">№1</span> в

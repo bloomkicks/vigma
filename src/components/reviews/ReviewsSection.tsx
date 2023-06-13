@@ -58,7 +58,10 @@ const ReviewsSection = () => {
                 src={`/images/reviews/${review.imgName}`}
                 key={review.imgName}
                 alt="Изображение не найдено"
-                className="w-[260px] h-auto shadow-strong rounded-1"
+                className="w-[260px] h-auto shadow-strong rounded-1 object-cover object-center"
+                width="260px"
+                height="445.5px"
+                loading="lazy"
               />
             ))}
         </Slider>

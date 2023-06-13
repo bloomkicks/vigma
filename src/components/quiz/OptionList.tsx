@@ -23,6 +23,8 @@ const OptionList = ({
           <img
             src={`/images/quiz/${question}/${option.imgName}`}
             alt="Изображение не найдено"
+            width="190px"
+            height="120px"
             className="w-full h-[80px] rounded-t-1 block object-cover object-center lg:h-[120px]"
           />
           <div

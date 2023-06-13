@@ -43,7 +43,7 @@ const Socials = () => {
           passHref
           legacyBehavior
         >
-          <a className={"block " + (i === 0 ? "!ml-0" : "")}>
+          <a className={"block " + (i === 0 ? "!ml-0 lg:!ml-[26px]" : "")}>
             <img
               src={`/images/contacts/${social.iconName}`}
               alt={social.title}

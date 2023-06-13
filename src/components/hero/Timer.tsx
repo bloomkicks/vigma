@@ -1,3 +1,4 @@
+'use client'
 import { MutableRefObject, useRef, useEffect } from "react";
 
 function getInt(ref: MutableRefObject<HTMLSpanElement | null>) {
@@ -27,20 +28,20 @@ const Timer = ({ styles }: { styles?: string }) => {
   defMins = defMins.length === 2 ? defMins : "0" + defMins;
   defSecs = defSecs.length === 2 ? defSecs : "0" + defSecs;
 
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     setTime(secs, getInt(secs) === 0 ? 60 : getInt(secs) - 1);
-  //     if (getInt(secs) === 60) {
-  //       setTime(mins, getInt(mins) === 0 ? 60 : getInt(mins) - 1);
-  //       if (getInt(mins) === 60) {
-  //         setTime(
-  //           hours,
-  //           getInt(hours) === 0 ? 60 : getInt(hours) - 1
-  //         );
-  //       }
-  //     }
-  //   }, 1100);
-  // }, []);
+  useEffect(() => {
+    setInterval(() => {
+      setTime(secs, getInt(secs) === 0 ? 59 : getInt(secs) - 1);
+      if (getInt(secs) === 60) {
+        setTime(mins, getInt(mins) === 0 ? 59 : getInt(mins) - 1);
+        if (getInt(mins) === 60) {
+          setTime(
+            hours,
+            getInt(hours) === 0 ? 59 : getInt(hours) - 1
+          );
+        }
+      }
+    }, 1100);
+  }, []);
 
   return (
     <div

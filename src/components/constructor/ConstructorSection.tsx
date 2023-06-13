@@ -22,7 +22,8 @@ const ConstructorSection = () => {
           Цвета и текстуры на любой вкус
         </h2>
         <p className="leading-[1.5] mb-5 lg:mb-10">
-          С нами вы можете выбрать любые материалы и цвета для вашей кухни
+          С нами вы можете выбрать любые материалы и цвета для вашей
+          кухни
         </p>
         <div className="flex-row justify-center items-center space-x-5 hidden lg:flex">
           {availableColors.map((clr) => (
@@ -40,12 +41,14 @@ const ConstructorSection = () => {
       </div>
       <div className="mb-[30px] relative aspect-[1.323] shadow-normal w-auto h-auto">
         <div
-          className="w-full h-full transition-colors duration-100 lg:duration-150 ease-out absolute top-0 left-0"
+          className="w-[305px] h-[230.5px] lg:h-[325px] lg:w-[594px] max-w-full max-h-full transition-colors duration-100 lg:duration-150 ease-out absolute top-0 left-0"
           style={{ backgroundColor: color }}
         ></div>
         <img
           src="/images/constructor/kitchen-display.png"
           alt="Изображение не найдено"
+          width="594px"
+          height="325px"
           className="relative z-10 w-[305px] h-[230.5px] lg:h-[325px] lg:w-[594px] object-cover object-center"
         />
       </div>

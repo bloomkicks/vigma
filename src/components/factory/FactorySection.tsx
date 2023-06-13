@@ -18,8 +18,8 @@ const FactorySection = () => {
         Мы используем передовое и высококачественное оборудование при
         производстве и дизайне кухонь, что гарантирует наивысшее
         качество и точность вашего заказа. Также большая площадь
-        производства позволяет сократить сроки изготавления вашей
-        кухни (от 15 дней)
+        производства позволяет сократить сроки изготавления мебели
+        (кухни от 15 дней)
       </p>
       <div className="flex flex-row overscroll overflow-x-scroll pb-2 space-x-4 snap-x snap-proximity pr-[35px] mr-[-35px] h-[185px] lg:h-[320px]">
         {imgNames.map((imgName) => (
@@ -27,6 +27,8 @@ const FactorySection = () => {
             key={imgName}
             src={"/images/factory/" + imgName}
             alt="Изображение не найдено"
+            height="304px"
+            width="456px"
             className="shrink-0 h-full w-auto object-cover object-center rounded-[3px]"
           />
         ))}
