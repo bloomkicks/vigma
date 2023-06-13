@@ -7,12 +7,12 @@ export type StaffMember = {
 const members: StaffMember[] = [
   {
     name: "Владимир Кузнецов",
-    specialty: "Главный дизайнер-замерщик",
+    specialty: "Главный технолог производства",
     imgName: "vladimir-kuznetsov.jpg",
   },
   {
     name: "Станислав Григорьев",
-    specialty: "Главный мебельщик-плотник",
+    specialty: "Главный мебельщик полного цикла",
     imgName: "stanislav-grigoryev.jpg",
   },
   {
@@ -37,7 +37,7 @@ const members: StaffMember[] = [
   },
   {
     name: "Кирилл Попов",
-    specialty: "Дизайнер-проектировщик",
+    specialty: "Главный дизайнер-проектировщик",
     imgName: "kirill-popov.jpg",
   },
 ];

@@ -11,7 +11,7 @@ const StaffSection = () => {
   return (
     <section className="section-dark">
       <h2 className="heading mb-[30px] lg:mb-[52px]">
-        Наша команда специалистов с опытом от 10 лет
+        Наша команда специалистов с опытом от 10 лет:
       </h2>
       <div className="flex flex-row justify-center items-center -ml-1">
         <SliderControl isDark isLeft onClick={moveLeftHandler} />
