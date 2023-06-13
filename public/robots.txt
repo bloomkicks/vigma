@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /error
+Disallow: /privacy
+Sitemap: https://www.vigmamebel.ru/sitemap.xml

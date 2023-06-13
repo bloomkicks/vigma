@@ -23,7 +23,7 @@ const OldPrice = ({
         (styles || "")
       }
     >
-      <div className="h-0.5 w-[104%] rotate-[12deg] absolute left-0 top-[11px] bg-black opacity-90"></div>
+      <div className="h-0.5 w-[103%] lg:w-[104%] rotate-[11deg] lg:rotate-[12deg] absolute left-0 top-[9px] lg:top-[11px] bg-black opacity-90"></div>
       {newOldPrice}
     </span>
   );

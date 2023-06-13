@@ -48,7 +48,7 @@ const Popup = () => {
       >
         <>
           <button
-            onClick={togglePopupHandler}
+            onClick={() => togglePopupHandler()}
             className="absolute right-[26px] top-[92px] p-2 rounded-1 hover:bg-gray transition-colors duration-75 lg:duration-[125ms] ease-out lg:scale-[1.2] lg:top-[28px] lg:right-[32px]"
           >
             <img

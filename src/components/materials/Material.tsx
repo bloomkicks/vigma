@@ -3,14 +3,20 @@ const Material = ({
   description,
   imgSrc,
   properties,
+  isExSmall,
 }: {
   title: string;
   description: string;
   imgSrc: string;
   properties: { title: string; text: string }[];
+  isExSmall: boolean;
 }) => {
   return (
-    <div className="rounded-2 text-left shadow-dark bg-white text-black pb-[24px] w-[305px] shrink-0 lg:w-[975px] lg:px-[52px] lg:pt-8 lg:pb-[48px]">
+    <div
+      className={`rounded-2 text-left shadow-dark bg-white text-black pb-[24px] ${
+        isExSmall ? "w-[295px]" : "w-[305px]"
+      } shrink-0 lg:w-[975px] lg:px-[52px] lg:pt-8 lg:pb-[48px]`}
+    >
       <div className="mb-1.5 lg:flex lg:flex-row lg:items-center lg:justify-start lg:mb-[40px]">
         <img
           src={imgSrc}
@@ -18,7 +24,7 @@ const Material = ({
           className="w-full h-[220px] object-cover object-center rounded-t-2 lg:rounded-2 lg:w-[220px] lg:h-[200px] lg:mr-[10px]"
         />
         <div className="pl-[25px] pr-[25px] pt-[18px] rounded-b-2">
-          <b className="text-large font-bold !font-strong block lg:mb-[15px]">
+          <b className="text-large font-bold !font-strong block mb-1.5 lg:mb-[15px]">
             {title}
           </b>
           <p className="mb-3.5 leading-[1.5]">{description}</p>

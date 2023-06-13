@@ -11,7 +11,7 @@ const ProductsSection = () => {
     useSlider(primaryProducts.length, true);
 
   return (
-    <section className="section-light " id="kitchens">
+    <section className="section-light" id="kitchens">
       <div className="flex flex-row justify-center items-center -ml-1">
         <SliderControl isLeft onClick={moveLeftHandler} isSmall />
         <Slider

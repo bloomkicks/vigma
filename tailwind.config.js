@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -41,7 +43,7 @@ module.exports = {
       ],
     },
     borderRadius: {
-      0: '0',
+      0: "0",
       1: "2px",
       2: "4px",
     },
@@ -111,5 +113,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant("xs", "@media (max-width: 372px)");
+    }),
+  ],
 };

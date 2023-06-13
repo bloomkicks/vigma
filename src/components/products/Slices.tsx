@@ -23,6 +23,7 @@ const Slices = ({
     >
       {slices.map((slice, i) => (
         <img
+          key={i}
           src={`/images/products/${name}/slice${i + 1}.jpg`}
           alt=""
           className="w-[30px] h-[30px] aspect-square rounded-1 border-[1px] border-black lg:w-8 lg:h-8"

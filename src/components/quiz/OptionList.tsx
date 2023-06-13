@@ -16,7 +16,7 @@ const OptionList = ({
     <div className="flex flex-row flex-wrap mb-[-20px] mr-[-25px]">
       {options.map((option) => (
         <label
-          className="w-[45%] max-w-[155px] text-left mr-[16px] mb-[22px] rounded-1 shadow-dark fade-out-hover hover:!opacity-[0.92] animate-[slide-in_500ms_ease-out] cursor-pointer lg:max-w-[190px]"
+          className="w-[45%] xs:w-[44%] max-w-[155px] text-left mr-[16px] mb-[22px] rounded-1 shadow-dark fade-out-hover hover:!opacity-[0.92] animate-[slide-in_500ms_ease-out] cursor-pointer lg:max-w-[190px]"
           key={option.title + question}
           htmlFor={option.title}
         >

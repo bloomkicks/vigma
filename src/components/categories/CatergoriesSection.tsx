@@ -8,7 +8,7 @@ const CategoriesSection = () => {
         С нами вы получите кухню, которая идеально отразит ваш стиль и
         предпочтения
       </h2>
-      <div className="mr-[-35px] flex flex-row justify-start items-center overflow-x-auto overflow-y-visible snap-proximity snap-x pb-2 space-x-[25px] pr-[35px] lg:justify-center lg:flex-wrap lg:space-x-0 lg:mr-[-47px] lg:mb-[-45px]">
+      <div className="mr-[-35px] overscroll flex flex-row justify-start items-center overflow-x-auto overflow-y-visible snap-proximity snap-x pb-2 space-x-[25px] pr-[35px] lg:justify-center lg:flex-wrap lg:space-x-0 lg:mr-[-47px] lg:mb-[-45px]">
         {categories.map((category, i) => (
           <Category
             title={category.title}

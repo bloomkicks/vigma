@@ -20,7 +20,7 @@ const NavMenu = ({
     <nav
       onClick={onClick}
       className={
-        "fixed left-0 top-0 w-full h-full min-h-[99vh] pt-[118px] pl-[52px] bg-light text-black pb-[78px] transition-transform duration-[400ms] lg:duration-[450ms] ease-out translate-x-full -z-10 lg:hidden"
+        "fixed left-0 top-0 w-full h-full min-h-[99vh] pt-[118px] pl-[52px] xs:pl-[40px] bg-light text-black pb-[78px] transition-transform duration-[400ms] lg:duration-[450ms] ease-out translate-x-full -z-10 lg:hidden"
       }
       style={{ transform: open ? "none" : "translateX(100%)" }}
     >

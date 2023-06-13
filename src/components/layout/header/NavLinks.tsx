@@ -4,7 +4,7 @@ const links: {
   link: string;
 }[] = [
   {
-    title: "Наши кухни",
+    title: "Проекты кухонь",
     link: "/kitchens",
   },
   {

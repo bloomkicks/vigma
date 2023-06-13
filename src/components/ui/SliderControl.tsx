@@ -18,7 +18,7 @@ const SliderControl = ({
   return (
     <button
       onClick={onClick}
-      className={`px-2.5 py-6 bg-transparent flex items-center justify-center rounded-1 shrink-0 transition-colors duration-150 lg:duration-200 ease-out lg:px-3.5 ${
+      className={`px-2.5 xs:px-[9px] py-6 bg-transparent flex items-center justify-center rounded-1 shrink-0 transition-colors duration-150 lg:duration-200 ease-out lg:px-3.5 ${
         isDark ? "hover:bg-dark-lightened" : "hover:bg-gray"
       } ${
         !isLeft
@@ -45,7 +45,7 @@ const SliderControl = ({
           isLeft ? "left" : "right"
         }.svg`}
         alt={isLeft ? "Назад" : "Вперед"}
-        className={"w-4 h-auto lg:w-[18px] " + (imgStyles || "")}
+        className={"w-4 h-auto xs:w-[14px] lg:w-[18px] " + (imgStyles || "")}
       />
     </button>
   );

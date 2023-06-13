@@ -32,7 +32,7 @@ export const primaryProducts: ProductProps[] = [
     description: "В стиле: модерн",
     price: "74.500",
     imagesLength: 6,
-    slicesLength: 3,
+    slicesLength: 2,
     categories: ["linear", "bright", "modern"],
     isHit: true,
   },

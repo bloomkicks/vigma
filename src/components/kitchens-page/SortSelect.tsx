@@ -28,15 +28,13 @@ const SortSelect = ({
           onChange={sortHandler}
           name="sort-category"
           id="sort-category"
+          defaultValue={selected}
           className="px-3.5 py-2.5 button-lg shrink w-[82.5%] bg-white appearance-none shadow-normal lg:w-[250px]"
         >
           {[{ name: "all", title: "Все кухни" }]
             .concat(categories)
-            .map((category) => (
-              <option
-                value={category.name}
-                selected={category.name === selected}
-              >
+            .map((category, i) => (
+              <option key={i} value={category.name}>
                 {category.title}
               </option>
             ))}

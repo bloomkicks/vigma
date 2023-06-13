@@ -57,6 +57,7 @@ const ImageSlider = ({
       >
         {images.map((image, i) => (
           <img
+            key={i}
             src={`/images/products/${productName}/${
               i === 0 ? "1.jpg" : i + 1 + ".webp"
             }`}
