@@ -17,7 +17,7 @@ const HeroSection = () => {
         sizes="(max-width: 640px) 375px, 1440px"
         width="100%"
         height="100%"
-        className="min-h-[542px] object-cover object-center -z-10 min-w-[376px] h-auto w-full absolute left-1/2 bottom-0 -translate-x-1/2 bg-[#262626] xl:w-full xl:h-auto"
+        className="min-h-[542px] object-cover object-center -z-10 min-w-[376px] h-full w-full absolute left-1/2 bottom-0 -translate-x-1/2 bg-[#262626] xl:w-full xl:h-auto"
         alt=""
       />
       <p className="text-button-lg text-[#D1D1D1] mb-3 lg:mb-4">

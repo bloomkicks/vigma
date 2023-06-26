@@ -12,12 +12,12 @@ const members: StaffMember[] = [
   },
   {
     name: "Станислав Григорьев",
-    specialty: "Главный мебельщик полного цикла",
+    specialty: "Главный специалист краснодеревщик",
     imgName: "stanislav-grigoryev.jpg",
   },
   {
     name: "Сергей Белоножко",
-    specialty: "Главный специалист краснодеревщик",
+    specialty: "Мебельщик полного цикла",
     imgName: "sergey-belonozhko.jpg",
   },
   {
