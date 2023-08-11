@@ -24,7 +24,7 @@ const ProductPage = ({ productName }: { productName: string }) => {
   return (
     <>
       <MetaHead
-        title={`${neededProduct.title} - ${neededProduct.subtitle} от фабрики Вигма Мебель`}
+        title={`${neededProduct.title} - ${neededProduct.subtitle} от фабрики ВИГМА Мебель`}
         description={`Кухня ${neededProduct.description}, которая станет украшением любого дома`}
       />
       <main className="pt-16">

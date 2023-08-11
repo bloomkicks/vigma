@@ -25,7 +25,7 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section className="section-light overscroll !pt-[30px] flex flex-row justiy-start items-end overflow-x-auto snap-x snap-proximity space-x-5 px-[30px] !pb-2.5 md:pb-1.5 bg-white-dark lg:!pt-[48px] lg:px-[120px] lg:space-x-8">
+    <section className="section-light overscroll !pt-[30px] flex flex-row justiy-start items-end overflow-x-auto snap-x snap-proximity space-x-5 px-[30px] !pb-2.5 md:pb-1.5 bg-white-dark lg:!pt-[58px] lg:!px-8 lg:space-x-8 lg:flex-wrap lg:justify-center lg:!pb-[4px]">
       {benefits.map((benefit) => (
         <Benefit
           text={benefit.text}

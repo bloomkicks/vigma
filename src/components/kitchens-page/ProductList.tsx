@@ -10,7 +10,7 @@ const ProductList = ({ sortCategory }: { sortCategory: string }) => {
   );
 
   return (
-    <section className="section-dark flex flex-col items-center justify-start space-y-10 !pt-[60px] !pb-[70px] mb-[20px]">
+    <section className="section-dark flex flex-col items-center justify-start space-y-10 lg:!space-y-14 !pt-[60px] lg:!pt-[72px] !pb-[70px] mb-[20px] lg:mb-[32px]">
       {filteredProducts.length > 0 ? (
         filteredProducts.map((product) => (
           <Product {...product} key={product.title} isSlider />

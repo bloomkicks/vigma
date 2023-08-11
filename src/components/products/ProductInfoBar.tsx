@@ -20,6 +20,9 @@ const ProductInfoBar = ({
   function calculatePriceHandler() {
     dispatch(popupActions.togglePopup("calculate-price"));
   }
+  function inviteDesignerHandler() {
+    dispatch(popupActions.togglePopup("invite-designer"));
+  }
 
   return (
     <div
@@ -72,12 +75,12 @@ const ProductInfoBar = ({
       {isFull ? (
         <>
           <button
-            onClick={calculatePriceHandler}
+            onClick={inviteDesignerHandler}
             className={`button text-center hover:opacity-100 no-underline w-full mb-2.5 lg:!py-[11px]`}
           >
             Вызвать дизайнера
           </button>
-          <p className="w-[calc(100%+100px)]">
+          <p className="w-[calc(100%+100px)] mt-3">
             Выезд, замер и проект –{" "}
             <span className="inline-block py-0.5 px-[5.5px] bg-primary bg-opacity-[0.45] -skew-x-6 font-semibold">
               бесплатно

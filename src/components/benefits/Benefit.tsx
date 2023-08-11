@@ -8,9 +8,16 @@ const Benefit = ({
   const isLong =
     !iconSrc.includes("date") && !iconSrc.includes("shape");
   const isPackage = iconSrc.includes("package");
+  const isContract = iconSrc.includes("contract");
 
   return (
-    <div className="flex flex-row justify-center items-stretch shrink-0 text-left rounded-1 shadow-normal h-[68px] md:h-[80px]">
+    <div
+      className={`flex flex-row justify-center items-stretch shrink-0 text-left rounded-1 shadow-normal h-[68px] md:h-[80px] ${
+        isPackage || isContract
+          ? "lg:max-w-[40%] lg:mt-6"
+          : "lg:max-w-[31%]"
+      }`}
+    >
       <div
         className={`bg-white rounded-l-1 ${
           iconSrc.includes("contract") || iconSrc.includes("package")
@@ -27,7 +34,7 @@ const Benefit = ({
         />
       </div>
       <div
-        className={`bg-gray py-[15px] pl-4 pr-6 rounded-r-1 ${
+        className={`bg-[rgb(240,240,240)] py-[15px] pl-4 pr-6 rounded-r-1 ${
           isLong
             ? isPackage
               ? "max-w-[230px] md:max-w-[288px]"
@@ -35,7 +42,7 @@ const Benefit = ({
             : "max-w-[180px] md:max-w-[225px]"
         }`}
       >
-        <p className="font-semibold">{text}</p>
+        <p className="font-medium">{text}</p>
       </div>
     </div>
   );

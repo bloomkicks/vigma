@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { mainTitle, mainDescription } from "../data/meta";
+// import { mainTitle, mainDescription } from "../data/meta";
 
 export default function Document() {
   return (
@@ -16,7 +16,7 @@ export default function Document() {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap"
           rel="stylesheet"
         />
         {/* LINKS */}
@@ -29,21 +29,27 @@ export default function Document() {
         <link
           rel="icon"
           type="image/png"
+          sizes="128x128"
+          href="/favicon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
           sizes="64x64"
           href="/favicon-64x64.png"
         />
         <link
           rel="icon"
           type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
+          sizes="48x48"
+          href="/favicon-48x48.png"
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/apple-touch-icon.png" />
         <meta property="og:url" content="https://www.vigmamebel.ru" />
         <meta
           property="og:site_name"
-          content="Кухни на заказ в СПБ от фабрики Вигма Мебель"
+          content="Кухни на заказ в СПБ от фабрики ВИГМА Мебель"
         />
         {/* TWITTER */}
         <meta name="twitter:card" content="summary" />

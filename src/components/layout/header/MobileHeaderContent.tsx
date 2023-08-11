@@ -18,7 +18,7 @@ const MobileHeaderContent = () => {
     <>
       <button
         onClick={callHandler}
-        className="transition-colors duration-150 lg:duration-200 p-2 -translate-y-px hover:bg-dark-lightened rounded-1 ml-auto mr-[24px] lg:hidden"
+        className="transition-colors duration-150 lg:duration-200 p-2 -translate-y-px hover:bg-dark-lightened rounded-1 ml-auto mr-[16px] md:mr-[24px] lg:hidden"
       >
         <img
           src="/images/header/call-us-button.svg"

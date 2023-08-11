@@ -24,7 +24,7 @@ const Category = ({
           <img
             src="/images/general/long-arrow-right.svg"
             alt=""
-            className="inline ml-2 w-[17.25px] h-auto algin-middle lg:scale-110  object-cover object-center"
+            className="inline ml-2 w-[17.25px] h-auto align-middle lg:scale-110 object-cover object-center relative top-[0.5px] md:top-[1.5px]"
           />
         </div>
       </a>

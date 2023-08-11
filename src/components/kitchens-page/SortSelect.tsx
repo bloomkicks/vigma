@@ -18,11 +18,11 @@ const SortSelect = ({
         alt="Сортировать"
         className="h-[26px] w-auto inline-block align-middle"
       />
-      <div className="ml-[22px] inline-flex flex-row justify-start items-center flex-nowrap align-middle">
+      <div className="ml-[24px] inline-flex flex-row justify-start items-center flex-nowrap align-middle">
         <img
           src="/images/general/short-arrow-right.svg"
           alt=""
-          className="w-2.5 h-auto inline-block mr-2.5 shrink-0 lg:scale-110"
+          className="w-2.5 h-auto inline-block mr-[12px] shrink-0 lg:scale-110"
         />
         <select
           onChange={sortHandler}

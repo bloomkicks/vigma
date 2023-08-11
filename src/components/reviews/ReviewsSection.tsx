@@ -31,7 +31,7 @@ const ReviewsSection = () => {
 
   return (
     <section className="section-light" id="reviews">
-      <h2 className="heading mb-[26px] lg:mb-[52px]">
+      <h2 className="heading mb-[26px] lg:mb-[32px]">
         Послушайте тех, кто уже получил у нас новую кухню
       </h2>
       <SourceChoice

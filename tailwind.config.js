@@ -110,6 +110,7 @@ module.exports = {
         strong: "0 1px 4px rgba(0,0,0,0.35)",
         dark: "0 1px 4px rgba(0,0,0,0.75)",
         large: "0 1px 6px rgba(0,0,0,0.25)",
+        section: "0 6px 6px rgba(0,0,0,0.25)",
       },
     },
   },

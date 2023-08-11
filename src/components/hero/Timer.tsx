@@ -1,47 +1,32 @@
-'use client'
-import { MutableRefObject, useRef, useEffect } from "react";
+"use client";
+import { useState, useEffect } from "react";
 
-function getInt(ref: MutableRefObject<HTMLSpanElement | null>) {
-  return parseInt(ref.current!.innerHTML);
-}
+function formatTime(secs: number): string {
+  let newSecs = secs % 60;
+  let mins = Math.floor(secs / 60);
+  let hours = Math.floor(mins / 60);
+  mins -= hours * 60;
 
-function setTime(
-  ref: MutableRefObject<HTMLSpanElement | null>,
-  time: number
-) {
-  let value = time.toString();
-  return (ref.current!.innerHTML =
-    value.length === 2 ? value : "0" + value);
+  return `${hours <= 9 ? "0" + hours : hours}:${
+    mins <= 9 ? "0" + mins : mins
+  }:${newSecs <= 9 ? "0" + newSecs : newSecs}`;
 }
 
 const Timer = ({ styles }: { styles?: string }) => {
-  const date = new Date();
-  const hours = useRef<HTMLSpanElement>(null);
-  const mins = useRef<HTMLSpanElement>(null);
-  const secs = useRef<HTMLSpanElement>(null);
+  const stopDate = new Date();
+  stopDate.setHours(24);
 
-  let defHours = (24 - date.getHours()).toString();
-  let defMins = (60 - date.getMinutes()).toString();
-  let defSecs = (60 - date.getSeconds()).toString();
-
-  defHours = defHours.length === 2 ? defHours : "0" + defHours;
-  defMins = defMins.length === 2 ? defMins : "0" + defMins;
-  defSecs = defSecs.length === 2 ? defSecs : "0" + defSecs;
+  const [leftSecs, setLeftSecs] = useState(
+    (stopDate.getTime() - Date.now()) / 1000
+  );
 
   useEffect(() => {
-    setInterval(() => {
-      setTime(secs, getInt(secs) === 0 ? 59 : getInt(secs) - 1);
-      if (getInt(secs) === 60) {
-        setTime(mins, getInt(mins) === 0 ? 59 : getInt(mins) - 1);
-        if (getInt(mins) === 60) {
-          setTime(
-            hours,
-            getInt(hours) === 0 ? 59 : getInt(hours) - 1
-          );
-        }
-      }
-    }, 1100);
-  }, []);
+    {
+      setTimeout(() => {
+        setLeftSecs((prev) => prev - 1);
+      }, 1000);
+    }
+  }, [leftSecs]);
 
   return (
     <div
@@ -50,9 +35,7 @@ const Timer = ({ styles }: { styles?: string }) => {
         (styles || "")
       }
     >
-      <span ref={hours}>{defHours}</span>:
-      <span ref={mins}>{defMins}</span>:
-      <span ref={secs}>{'01' || defSecs}</span>
+      <p>{formatTime(leftSecs)}</p>
     </div>
   );
 };

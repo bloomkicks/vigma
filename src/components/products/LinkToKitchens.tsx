@@ -3,7 +3,7 @@ import Link from "next/link";
 const LinkToKitchens = () => {
   return (
     <Link href="/kitchens" passHref legacyBehavior>
-      <a className="block w-fit mx-auto p-1 button-lg group mt-[26px] lg:mt-[52px]">
+      <a className="block w-fit mx-auto p-1 button-lg group mt-[26px] lg:mt-[46px]">
         Больше кухонь
         <img
           src="/images/general/long-arrow-right.svg"

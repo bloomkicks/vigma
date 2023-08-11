@@ -9,7 +9,7 @@ const WayChoice = () => {
   }
 
   return (
-    <div className="mb-6 mt-3.5">
+    <div className="mb-6 mt-4">
       <button
         onClick={changeWayHandler("По телефону")}
         className={`button !text-body2 !py-2 !px-2.5 mr-3 inline-block shadow-normal lg:!py-[9px] lg:!px-3.5 ${
