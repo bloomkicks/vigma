@@ -11,7 +11,7 @@ const Material = ({
 }) => {
   return (
     <div
-      className={`rounded-2 text-left shadow-dark bg-white text-black pb-[24px] xs:w-[295px] w-[305px] shrink-0 lg:w-[975px] lg:px-[52px] lg:pt-8 lg:pb-[48px]`}
+      className={`rounded-2 text-left shadow-dark bg-white text-black pb-[24px] xs:w-[295px] w-[305px] shrink-0 md:w-[440px] lg:w-[975px] lg:px-[52px] lg:pt-8 lg:pb-[48px]`}
     >
       <div className="mb-1.5 lg:flex lg:flex-row lg:items-center lg:justify-start lg:mb-[40px]">
         <img

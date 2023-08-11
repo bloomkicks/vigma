@@ -41,7 +41,7 @@ const QuizSection = () => {
   }
 
   return (
-    <section className="section-dark" id="quiz">
+    <section className="section-dark md:!px-[140px]" id="quiz">
       <h2 className="heading mb-8 lg:mb-[48px]">
         Рассчитайте стоимость вашей кухни и получите подарок при
         заказе

@@ -9,7 +9,7 @@ const GetKitchenSection = () => {
   }
 
   return (
-    <section className="section-dark" id="get-kitchen">
+    <section className="section-dark md:!px-[140px]" id="get-kitchen">
       <h2 className="heading mb-[26px] lg:mb-[46px]">
         Получить новую кухню - легко!
       </h2>

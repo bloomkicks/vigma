@@ -29,7 +29,7 @@ const contacts: {
 ];
 const ContactList = () => {
   return (
-    <div className="space-y-3.5 text-left mb-[22px] lg:space-y-[16px] lg:mb-0">
+    <div className="space-y-3.5 text-left mb-[22px] md:space-y-[16px] md:mb-0 md:min-w-[375px]">
       {contacts.map((contact, i) => (
         <React.Fragment key={contact.title}>
           {i === 2 && <Socials />}

@@ -19,8 +19,8 @@ const Category = ({
           height="142px"
           className="w-full h-[115px] object-cover object-center text-center rounded-t-1 lg:h-[142px]"
         />
-        <div className="px-4 pr-4.5 py-2.5 bg-white text-black rounded-b-1">
-          <span className="button-lg align-middle">{title}</span>
+        <div className="px-4 pr-4.5 py-2.5 bg-white text-black rounded-b-1 whitespace-nowrap">
+          <span className="button-lg align-middle whitespace-normal">{title}</span>
           <img
             src="/images/general/long-arrow-right.svg"
             alt=""

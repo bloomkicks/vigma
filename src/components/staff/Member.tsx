@@ -8,7 +8,7 @@ const Member = ({
   imgSrc: string;
 }) => {
   return (
-    <div className="w-[226px] shrink-0 rounded-1 shadow-dark px-1.5 pt-[5px] bg-gray-dark lg:w-[255px] text-left">
+    <div className="w-[226px] shrink-0 rounded-1 shadow-dark px-1.5 pt-[5px] bg-gray-dark md:w-[255px] text-left">
       <img
         src={imgSrc}
         alt="Изображение не найдено"

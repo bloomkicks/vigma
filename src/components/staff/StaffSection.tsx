@@ -6,7 +6,7 @@ import members from "@/data/members";
 
 const StaffSection = () => {
   const { curIndex, moveLeftHandler, moveRightHandler, isLaptop } =
-    useSlider(members.length);
+    useSlider(members.length, false, false, true);
 
   return (
     <section className="section-dark">

@@ -36,10 +36,10 @@
   }
   /* COMPONENTS */
   .section-light {
-    @apply pt-[50px] pb-[55px] px-[35px] max-w-[540px] bg-light text-black lg:text-center lg:px-[202px] lg:pt-[78px] lg:pb-[82px] md:max-w-[1366px] mx-auto shadow-section;
+    @apply pt-[50px] pb-[55px] px-[35px] max-w-[540px] bg-light text-black md:text-center lg:px-[202px] lg:pt-[78px] lg:pb-[82px] md:max-w-[1366px] mx-auto shadow-section;
   }
   .section-dark {
-    @apply pt-[50px] pb-[55px] px-[35px] max-w-[540px] bg-dark text-white lg:text-center lg:px-[202px] lg:pt-[78px] lg:pb-[82px] md:max-w-[1366px] mx-auto shadow-section;
+    @apply pt-[50px] pb-[55px] px-[35px] max-w-[540px] bg-dark text-white md:text-center lg:px-[202px] lg:pt-[78px] lg:pb-[82px] md:max-w-[1366px] mx-auto shadow-section;
   }
   .button {
     @apply txt-button py-2.5 px-[30px] transition-colors duration-150 lg:duration-200 ease-out bg-primary text-black hover:bg-primary-dark text-center lg:py-[13px] lg:pt-3 lg:px-[40px];

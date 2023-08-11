@@ -8,7 +8,7 @@ const covered = [
 
 const PriceExplainSection = () => {
   return (
-    <section className="section-dark">
+    <section className="section-dark md:!px-[150px]">
       <h2 className="heading mb-5 lg:mb-[44px]">
         В стоимость входит:
       </h2>
@@ -29,7 +29,7 @@ const PriceExplainSection = () => {
       </div>
       <GiftBanner
         title="А также вы получите бесплатный подарок на выбор:"
-        styles="mt-[22px] lg:mt-[48px] lg:flex lg:flex-col lg:justify-start lg:items-center lg:space-y-1"
+        styles="mt-[22px] lg:mt-[48px] md:flex md:flex-col md:justify-start md:items-center md:space-y-1"
       />
     </section>
   );

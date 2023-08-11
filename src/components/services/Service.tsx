@@ -8,7 +8,7 @@ const Service = ({
   iconSrc: string;
 }) => {
   return (
-    <div className="text-center w-[245px] shrink-0 lg:w-[380px]">
+    <div className="text-center w-[245px] shrink-0 md:w-[380px]">
       <img
         src={iconSrc}
         alt=""

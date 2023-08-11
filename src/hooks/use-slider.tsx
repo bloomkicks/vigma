@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 const useSlider = (
   length: number,
   isOnly?: boolean,
-  isTwo?: boolean
+  isTwo?: boolean,
+  isMdLaptop?: boolean
 ) => {
   const [curIndex, setCurIndex] = useState(0);
+  const [isMedium, setIsMedium] = useState(false);
   const [isLaptop, setIsLaptop] = useState(false);
   const [isExSmall, setIsExSmall] = useState(false);
 
@@ -36,11 +38,15 @@ const useSlider = (
   }
 
   useEffect(() => {
-    setIsLaptop(window.innerWidth > 1280);
+    let isMd = window.innerWidth > 1024 - 1;
+    setIsMedium(isMd);
+    setIsLaptop(isMd && window.innerWidth > 1280 - 1);
     setIsExSmall(window.innerWidth < 372);
     window.addEventListener("resize", () => {
-      setIsLaptop(window.innerWidth > 1280);
-      setIsExSmall(window.innerWidth < 372);
+      let isMd = window.innerWidth > 1024 - 1;
+      setIsMedium(isMd);
+      setIsLaptop(isMd && window.innerWidth > 1280 - 1);
+      setIsExSmall(!isMd && window.innerWidth < 372);
     });
   }, []);
 
@@ -48,9 +54,10 @@ const useSlider = (
     moveRightHandler,
     moveLeftHandler,
     curIndex,
-    isLaptop,
+    isLaptop: isMdLaptop ? isMedium : isLaptop,
     setCurIndex,
     isExSmall,
+    isMedium,
   };
 };
 export default useSlider;

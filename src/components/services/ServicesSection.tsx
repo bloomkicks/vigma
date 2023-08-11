@@ -43,7 +43,7 @@ const services: {
 
 const ServicesSection = () => {
   const { curIndex, moveLeftHandler, moveRightHandler, isLaptop } =
-    useSlider(services.length, false, true);
+    useSlider(services.length, false, true, true);
   return (
     <section className="section-light">
       <h2 className="heading mb-[30px] lg:mb-[56px]">

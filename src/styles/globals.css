@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   line-height: 1.25;
   scroll-padding-top: 64px;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   color: #000000;
 }
 
@@ -46,7 +46,15 @@ input {
   border-radius: 4px;
 }
 
-@media (min-width: 840px) {
+
+@media (min-width: 640px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
   html,
   body {
     font-size: 19.5px;
@@ -54,7 +62,8 @@ input {
 }
 
 @media (max-width: 372px) {
-  html, body {
-    font-size: 15.5px
+  html,
+  body {
+    font-size: 15.5px;
   }
 }

@@ -20,7 +20,7 @@ const MenuSetter = ({
                 ? "translateY(9.75px) rotate(45deg)"
                 : bar === 2
                 ? "translateY(-9.75px) rotate(-45deg)"
-                : "translateX(100px)"
+                : "translateX(150px)"
               : "none",
           }}
           key={bar}

@@ -49,7 +49,7 @@ const ImageSlider = ({
         styles="space-x-4"
         containerStyles={
           isFull
-            ? "rounded-2"
+            ? "rounded-2 shadow-normal"
             : "rounded-t-2 lg:rounded-l-2 lg:rounded-r-0"
         }
         isLaptop={isLaptop}

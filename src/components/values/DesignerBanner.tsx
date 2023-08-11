@@ -10,7 +10,7 @@ const DesignerBanner = () => {
   return (
     <button
       onClick={clickHandler}
-      className="button mx-auto !py-8 !rounded-2 shadow-strong relative z-10 w-[calc(100%+6px)] ml-[-3px] !text-left lg:w-[44%] max-w-[425px] xs:!pr-5"
+      className="button mx-auto !py-8 !rounded-2 shadow-strong relative z-10 w-[calc(100%+6px)] ml-[-3px] md:ml-auto !text-left lg:w-[44%] max-w-[425px] xs:!pr-5"
     >
       <img
         src="/images/general/long-arrow-right.svg"

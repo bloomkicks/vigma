@@ -31,13 +31,13 @@ const SizeForm = ({
   }
 
   return (
-    <div className="text-left relative lg:flex lg:flex-row-reverse lg:justify-end lg:items-center">
+    <div className="text-left relative md:flex md:flex-row-reverse md:justify-end md:items-center">
       <img
         src="/images/quiz/size-illustration.png"
         alt=""
-        className="w-full max-w-[250px] mb-4 lg:mb-0 lg:w-[280px] h-auto shrink-0 lg:ml-[56px]"
+        className="w-full max-w-[250px] mb-4 md:mb-0 md:w-[280px] h-auto shrink-0 md:ml-[56px]"
       />
-      <div className="flex flex-col justify-start items-start space-y-4 animate-[slide-in_500ms_ease-out] lg:space-y-5">
+      <div className="flex flex-col justify-start items-start space-y-4 animate-[slide-in_500ms_ease-out] md:space-y-5">
         {directions.map((direction) => (
           <div key={direction}>
             <label htmlFor={direction} className="block mb-1.5">
@@ -63,7 +63,7 @@ const SizeForm = ({
               onChange={changeSizeHandler(direction)}
               max="1000"
               step="10"
-              className="max-w-full w-[240px] placeholder:text-[rgba(255,255,255,0.7)] numbers border-[rgba(255,255,255,0.7)] bg-dark-lightened bg-opacity-75 text-white lg:w-[400px]"
+              className="max-w-full w-[240px] placeholder:text-[rgba(255,255,255,0.7)] numbers border-[rgba(255,255,255,0.7)] bg-dark-lightened bg-opacity-75 text-white md:w-[400px]"
             />
           </div>
         ))}

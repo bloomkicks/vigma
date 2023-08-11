@@ -17,7 +17,10 @@ const ReviewsSection = () => {
   } = useSlider(
     reviews.filter((review) =>
       isProfiActive ? review.isProfi : !review.isProfi
-    ).length
+    ).length,
+    false,
+    false,
+    true
   );
 
   function profiChooseHandler() {

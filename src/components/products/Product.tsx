@@ -17,12 +17,25 @@ const Product = ({
   isFull?: boolean;
 }) => {
   const [isLaptop, setIsLaptop] = useState(false);
+  const [isMedium, setIsMedium] = useState(false);
   useEffect(() => {
-    setIsLaptop(window.innerWidth > 1280);
+    let isMd = window.innerWidth > 1024 - 1;
+    setIsMedium(isMd);
+    setIsLaptop(isMd && window.innerWidth > 1280 - 1);
     window.addEventListener("resize", () => {
-      setIsLaptop(window.innerWidth > 1280);
+      let isMd = window.innerWidth > 1024 - 1;
+      setIsMedium(isMd);
+      setIsLaptop(isMd && window.innerWidth > 1280 - 1);
     });
   }, []);
+
+  const productWidth = isLaptop
+    ? 860
+    : isMedium
+    ? 440
+    : isFull
+    ? 307
+    : 290;
 
   return (
     <div
@@ -30,13 +43,19 @@ const Product = ({
         isFull ? "bg-transparent" : "bg-white shadow-strong"
       } text-black lg:flex lg:flex-row lg:items-stretch ${styles}`}
       style={{
-        width: isLaptop ? "860px" : isFull ? "307px" : "290px",
-        height: isLaptop ? "390px" : isFull ? "auto" : "400px",
+        width: productWidth + "px",
+        height: isLaptop
+          ? "390px"
+          : isFull
+          ? "auto"
+          : isMedium
+          ? "420px"
+          : "400px",
       }}
     >
       {isSlider || isFull ? (
         <ImageSlider
-          width={isLaptop ? 480 : isFull ? 307 : 290}
+          width={productWidth}
           height={isLaptop ? "100%" : isFull ? "307px" : "65%"}
           imagesLength={imagesLength}
           productName={name}
@@ -48,7 +67,7 @@ const Product = ({
         <img
           src={"/images/products/" + name + "/1.jpg"}
           srcSet={`images/products/${name}/1-sm.jpg 290w, images/products/${name}/1.jpg 480w`}
-          sizes="(max-width: 1280px) 290px, 480px"
+          sizes="(max-width: 1024px) 290px, 480px"
           alt="Изображение не найдено"
           className="h-[65%] min-w-full object-cover object-center rounded-t-2 bg-gray-200 text-center lg:min-w-0 lg:w-[56%] lg:rounded-l-2 lg:rounded-tr-0"
           style={{

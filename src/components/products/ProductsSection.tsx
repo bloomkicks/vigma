@@ -7,15 +7,20 @@ import SliderControl from "../ui/SliderControl";
 import Product from "./Product";
 
 const ProductsSection = () => {
-  const { curIndex, moveLeftHandler, moveRightHandler, isLaptop } =
-    useSlider(primaryProducts.length, true);
+  const {
+    curIndex,
+    moveLeftHandler,
+    moveRightHandler,
+    isLaptop,
+    isMedium,
+  } = useSlider(primaryProducts.length, true);
 
   return (
     <section className="section-light lg:!pt-[52px]" id="kitchens">
       <div className="flex flex-row justify-center items-center -ml-1">
         <SliderControl isLeft onClick={moveLeftHandler} isSmall />
         <Slider
-          itemWidth={isLaptop ? 860 : 290}
+          itemWidth={isLaptop ? 860 : isMedium ? 440 : 290}
           curIndex={curIndex}
           spacing={20}
           shadowSize={4}
