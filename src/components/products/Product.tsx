@@ -55,7 +55,7 @@ const Product = ({
     >
       {isSlider || isFull ? (
         <ImageSlider
-          width={productWidth}
+          width={isLaptop ? 482 : productWidth}
           height={isLaptop ? "100%" : isFull ? "307px" : "65%"}
           imagesLength={imagesLength}
           productName={name}
