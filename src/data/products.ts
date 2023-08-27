@@ -13,7 +13,7 @@ export type ProductProps = {
   isHit?: boolean;
 };
 
-export const primaryProducts: ProductProps[] = [
+export const mainProducts: ProductProps[] = [
   {
     name: "nature",
     title: "Нэйтер",
@@ -70,7 +70,7 @@ export const primaryProducts: ProductProps[] = [
 ];
 
 const products: ProductProps[] = [
-  ...primaryProducts,
+  ...mainProducts,
   {
     name: "blue",
     title: "Блю",

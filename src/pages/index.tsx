@@ -1,22 +1,24 @@
-import MetaHead from "@/components/head-components/MetaHead";
-import Skeleton from "@/components/ui/Skeleton";
+import { mainTitle, mainDescription } from "../data/meta";
+
 import dynamic from "next/dynamic";
 
-import Popup from "@/components/popups/Popup";
-import QuizSection from "@/components/quiz/QuizSection";
-import ContactsSection from "@/components/contacts/ContactsSection";
-// import ReviewsSection from "@/components/reviews/ReviewsSection";
-import GetKitchenSection from "@/components/get-kitchen/GetKitchenSection";
-import FactorySection from "@/components/factory/FactorySection";
-import StaffSection from "@/components/staff/StaffSection";
-import ValuesSection from "@/components/values/ValuesSection";
-import MaterialsSection from "@/components/materials/MaterialsSection";
-import ProductsSection from "@/components/products/ProductsSection";
-import BenefitsSection from "@/components/benefits/BenefitsSection";
+import MetaHead from "@/components/head-components/MetaHead";
+import Skeleton from "@/components/ui/Skeleton";
+
 import HeroSection from "@/components/hero/HeroSection";
-import CategoriesSection from "@/components/categories/CatergoriesSection";
-import ServicesSection from "@/components/services/ServicesSection";
-import { mainTitle, mainDescription } from "../data/meta";
+import OurBenefitsSection from "@/components/our-benefits/OurBenefitsSection";
+import MainProductsSection from "@/components/main-products/MainProductsSection";
+import KitchenCategoriesSection from "@/components/kitchen-categories/KitchenCatergoriesSection";
+import OurServicesSection from "@/components/our-services/OurServicesSection";
+import OurMaterialsSection from "@/components/our-materials/OurMaterialsSection";
+import OurValuesSection from "@/components/our-values/OurValuesSection";
+import OurStaffSection from "@/components/our-staff/StaffSection";
+import OurFactorySection from "@/components/our-factory/OurFactorySection";
+import GetKitchenSection from "@/components/get-kitchen/GetKitchenSection";
+// import ReviewsSection from "@/components/reviews/ReviewsSection";
+import QuizSection from "@/components/quiz/QuizSection";
+import ContactUsSection from "@/components/contact-us/ContactUsSection";
+import Popup from "@/components/popups/Popup";
 
 const ReviewsSection = dynamic(
   () => import("@/components/reviews/ReviewsSection"),
@@ -31,18 +33,18 @@ const MainPage = () => {
       <MetaHead title={mainTitle} description={mainDescription} />
       <main className="pt-16">
         <HeroSection />
-        <BenefitsSection />
-        <ProductsSection />
-        <CategoriesSection />
-        <ServicesSection />
-        <MaterialsSection />
-        <ValuesSection />
-        <StaffSection />
-        <FactorySection />
+        <OurBenefitsSection />
+        <MainProductsSection />
+        <KitchenCategoriesSection />
+        <OurServicesSection />
+        <OurMaterialsSection />
+        <OurValuesSection />
+        <OurStaffSection />
+        <OurFactorySection />
         <GetKitchenSection />
         <ReviewsSection />
         <QuizSection />
-        <ContactsSection />
+        <ContactUsSection />
       </main>
       <Popup />
     </>

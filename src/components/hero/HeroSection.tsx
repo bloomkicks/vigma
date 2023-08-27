@@ -10,7 +10,7 @@ const HeroSection = () => {
   }
 
   return (
-    <section className="relative text-white py-16 z-10 px-[42px] xs:px-[38px] pr-10 overflow-x-hidden overflow-y-visible bg-[#262626] md:text-center lg:py-[110px] sm:px-24">
+    <section id="hero" className="relative text-white py-16 z-10 px-[42px] xs:px-[38px] pr-10 overflow-x-hidden overflow-y-visible bg-[#262626] md:text-center lg:py-[110px] sm:px-24">
       <img
         src="/images/hero/hero-background.jpg"
         srcSet="images/hero/hero-background-sm.jpg 375w, images/hero/hero-background.jpg 1440w"
@@ -41,7 +41,7 @@ const HeroSection = () => {
       >
         Оставить заявку
       </button>
-      <Link href="#kitchens" passHref legacyBehavior>
+      <Link href="#products" passHref legacyBehavior>
         <a className="anchor block w-fit mx-auto button-lg group">
           Посмотреть кухни
           <img

@@ -33,7 +33,7 @@ const ReviewsSection = () => {
   }
 
   return (
-    <section className="section-light" id="reviews">
+    <section id="reviews" className="section-light">
       <h2 className="heading mb-[26px] lg:mb-[32px]">
         Послушайте тех, кто уже получил у нас новую кухню
       </h2>

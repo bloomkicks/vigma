@@ -3,8 +3,8 @@ export const mainTitle =
 export const mainDescription =
   "Кухни на заказ от производителя в СПБ и Лен. области - Долговечные кухни из 1000+ материалов и цветов - Бесплатный дизайн-проект, консультацию и подарок на ваш выбор - Быстрое производство и доставка от 14 дней";
 
-export const kitchensTitle = "Проекты кухонь на любой вкус";
-export const kitchensDescription =
+export const catalogTitle = "Проекты кухонь на любой вкус";
+export const catalogDescription =
   "Готовые проекты кухонь и источник для вдохновения";
 
 export const errorTitle = "Страница по данному адресу не найдена";

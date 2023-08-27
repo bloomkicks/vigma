@@ -7,7 +7,7 @@ const links: {
 }[] = [
   {
     title: "Наши кухни",
-    link: "/kitchens",
+    link: "/catalog",
   },
   {
     title: "Рассчитать стоимость",
@@ -15,7 +15,7 @@ const links: {
   },
   {
     title: "Контакты",
-    link: "/#contacts",
+    link: "/#contact-us",
   },
   {
     title: "Отзывы",
@@ -23,7 +23,7 @@ const links: {
   },
   {
     title: "О фабрике",
-    link: "/#factory",
+    link: "/#our-factory",
   },
 ];
 

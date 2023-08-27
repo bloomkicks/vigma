@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import type { RootState } from "@/store";
 import { useSelector } from "react-redux";
-import sendEmail from "@/features/send-email";
+import sendEmail from "@/utils/send-email";
 import { RefObject, useRef, useEffect } from "react";
-import telInputHandler from "@/features/tel-input-handler";
+import telInputHandler from "@/utils/tel-input-handler";
 import type { PopupProps } from "@/data/popups";
 import { useState } from "react";
 import useForm from "@/hooks/use-form";

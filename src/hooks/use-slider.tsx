@@ -1,4 +1,4 @@
-import moveInArray from "@/features/move-in-array";
+import moveInArray from "@/utils/move-in-array";
 import { useEffect, useState } from "react";
 
 const useSlider = (

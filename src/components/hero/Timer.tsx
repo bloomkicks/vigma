@@ -1,32 +1,19 @@
-"use client";
 import { useState, useEffect } from "react";
-
-function formatTime(secs: number): string {
-  let newSecs = secs % 60;
-  let mins = Math.floor(secs / 60);
-  let hours = Math.floor(mins / 60);
-  mins -= hours * 60;
-
-  return `${hours <= 9 ? "0" + hours : hours}:${
-    mins <= 9 ? "0" + mins : mins
-  }:${newSecs <= 9 ? "0" + newSecs : newSecs}`;
-}
+import formatTime from "@/utils/format-time";
 
 const Timer = ({ styles }: { styles?: string }) => {
   const stopDate = new Date();
   stopDate.setHours(24);
 
   const [leftSecs, setLeftSecs] = useState(
-    (stopDate.getTime() - Date.now()) / 1000
+    () => (stopDate.getTime() - Date.now()) / 1000
   );
 
   useEffect(() => {
-    {
-      setTimeout(() => {
-        setLeftSecs((prev) => prev - 1);
-      }, 1000);
-    }
-  }, [leftSecs]);
+    setInterval(() => {
+      setLeftSecs((prev) => prev - 1);
+    }, 1000);
+  }, []);
 
   return (
     <div

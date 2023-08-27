@@ -3,7 +3,7 @@ import SizeForm from "./SizeForm";
 import { quizActions } from "@/store/quiz-slice";
 import type { RootState } from "@/store";
 import { useSelector, useDispatch } from "react-redux";
-import moveInArray from "@/features/move-in-array";
+import moveInArray from "@/utils/move-in-array";
 import { useState } from "react";
 import QuizControls from "./QuizControls";
 import OptionList from "./OptionList";
@@ -41,7 +41,7 @@ const QuizSection = () => {
   }
 
   return (
-    <section className="section-dark md:!px-[140px]" id="quiz">
+    <section id="quiz" className="section-dark md:!px-[140px]">
       <h2 className="heading mb-8 lg:mb-[48px]">
         Рассчитайте стоимость вашей кухни и получите подарок при
         заказе

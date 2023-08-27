@@ -1,21 +1,17 @@
 import MetaHead from "@/components/head-components/MetaHead";
-import ProductPageSection from "@/components/product-page/ProductPageSection";
-import PriceExplainSection from "@/components/price-explain/PriceExplainSection";
-import ConstructorSection from "@/components/constructor/ConstructorSection";
-import MaterialsSection from "@/components/materials/MaterialsSection";
-import ServicesSection from "@/components/services/ServicesSection";
+import ProductHeroSection from "@/components/product-page/ProductHeroSection";
+import PriceIncludesSection from "@/components/price-includes/PriceIncludesSection";
+import KitchenConstructorSection from "@/components/kitchen-constructor/KitchenConstructorSection";
+import OurMaterialsSection from "@/components/our-materials/OurMaterialsSection";
+import OurServicesSection from "@/components/our-services/OurServicesSection";
 import GetKitchenSection from "@/components/get-kitchen/GetKitchenSection";
-import ValuesSection from "@/components/values/ValuesSection";
+import OurValuesSection from "@/components/our-values/OurValuesSection";
 import QuizSection from "@/components/quiz/QuizSection";
-import ContactsSection from "@/components/contacts/ContactsSection";
+import ContactUsSection from "@/components/contact-us/ContactUsSection";
 import Popup from "@/components/popups/Popup";
 import products from "@/data/products";
 
-import type {
-  InferGetStaticPropsType,
-  GetStaticProps,
-  GetStaticPaths,
-} from "next";
+import type { GetStaticProps, GetStaticPaths } from "next";
 
 const ProductPage = ({ productName }: { productName: string }) => {
   const neededProduct = products.find(
@@ -28,15 +24,15 @@ const ProductPage = ({ productName }: { productName: string }) => {
         description={`Кухня ${neededProduct.description}, которая станет украшением любого дома`}
       />
       <main className="pt-16">
-        <ProductPageSection {...neededProduct} />
-        <PriceExplainSection />
-        <ConstructorSection />
-        <MaterialsSection />
-        <ServicesSection />
+        <ProductHeroSection {...neededProduct} />
+        <PriceIncludesSection />
+        <KitchenConstructorSection />
+        <OurMaterialsSection />
+        <OurServicesSection />
         <GetKitchenSection />
-        <ValuesSection />
+        <OurValuesSection />
         <QuizSection />
-        <ContactsSection />
+        <ContactUsSection />
       </main>
       <Popup />
     </>

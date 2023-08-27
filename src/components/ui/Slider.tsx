@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 const Slider = ({
   children,
   itemWidth,
@@ -51,8 +50,8 @@ const Slider = ({
           transform: `translateX(-${
             (itemWidth + spacing) * curIndex
           }px) ${height ? "translateY(-50%)" : ""}`,
-          top: height ? "50%" : "",
-          marginLeft: shadowSize ? shadowSize + "px" : "",
+          top: height ? "50%" : "0",
+          marginLeft: shadowSize ? shadowSize + "px" : "0",
         }}
       >
         {children}

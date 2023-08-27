@@ -3,16 +3,6 @@ import Script from "next/script";
 const Scripts = () => {
   return (
     <>
-      {/* GOOGLE TAG MANAGER */}
-      <Script id="google-tag-manager" defer>
-        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-MMKTJ7H');
-        `}
-      </Script>
-      {/* ========== */}
       {/* YANDEX METRICA */}
       <Script type="text/javascript" id="yandex-metrika" defer>
         {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -29,22 +19,32 @@ const Scripts = () => {
         `}
       </Script>
       {/* ========== */}
+      {/* GOOGLE TAG MANAGER */}
+      <Script id="google-tag-manager" async>
+        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MMKTJ7H');
+        `}
+      </Script>
+      {/* ========== */}
       {/* GOOGLE ANALYTICS (gtag.js) */}
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-C6CPE1YJYN"
       ></Script>
-      <Script id="google-analytics" defer>
+      <Script id="google-analytics" async>
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-C6CPE1YJYN');
         `}
       </Script>
-      <Script id="disable-warnings">
-        {"window.console.warning = function(){}"}
-      </Script>
       {/* ========== */}
+      {/* <Script id="disable-warnings">
+        {"window.console.warning = function(){}"}
+      </Script> */}
     </>
   );
 };
