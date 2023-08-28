@@ -24,18 +24,11 @@ async function sendEmail(
     depth: answers.depth,
   };
 
-  // await new Promise((resolve, reject) => {
-  //   setTimeout(() => {
-  //     console.dir(emailParams);
-  //     resolve("okay");
-  //   }, 1000);
-  // });
-
   send(
     process.env.SERVICE_ID!,
     process.env.TEMPLATE_ID!,
     emailParams,
-    process.env.USER_ID
+    process.env.USER_ID!
   );
 }
 

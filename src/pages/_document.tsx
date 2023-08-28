@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         {/* GENERAL */}
         <meta charSet="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta name="theme-color" content="#F3CF88" />
         <link rel="manifest" href="/manifest.json" />
         <link

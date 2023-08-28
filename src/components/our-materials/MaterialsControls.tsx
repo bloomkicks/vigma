@@ -34,7 +34,7 @@ const MaterialsControls = ({
       >
         <img
           src="/images/materials/gold-long-arrow-right.svg"
-          alt=""
+          alt="Вперед"
           className="w-[60px] h-auto group-hover:translate-x-0.5 transition-transform duration-75 lg:duration-[125ms] ease-out lg:scale-110"
         />
       </button>

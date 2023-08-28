@@ -22,10 +22,7 @@ const KitchensPage = () => {
         description={catalogDescription}
       />
       <main className="pt-16">
-        <CatalogHeroSection
-          onSort={onSort}
-          selected={sortCategory}
-        />
+        <CatalogHeroSection onSort={onSort} selected={sortCategory} />
         <ProductList sortCategory={sortCategory} />
       </main>
       <Popup />

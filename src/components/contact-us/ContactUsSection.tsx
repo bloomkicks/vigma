@@ -22,7 +22,10 @@ const ContactUsSection = () => {
         </div>
       </div>
       <div className="bg-[#D6D6D6] w-full h-0.5 mb-[25px] md:mb-[46px] md:hidden"></div>
-      <div className="w-full h-full md:flex md:flex-row-reverse md:justify-center md:items-center md:px-[120px] md:overflow-x-hidden md:overflow-y-visible md:py-1">
+      <div
+        tabIndex={-1}
+        className="w-full h-full md:flex md:flex-row-reverse md:justify-center md:items-center md:px-[120px] md:overflow-x-hidden md:overflow-y-visible md:py-1"
+      >
         <ContactEntryList />
         <YandexMap />
       </div>

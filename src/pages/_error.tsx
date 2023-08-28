@@ -8,12 +8,12 @@ const ErrorPage = () => {
       <MetaHead title={errorTitle} description={errorDescription} />
       <main className="section-light !pt-[128px]">
         <h1 className="heading mb-2.5">
-          Страницы по данному адресу не найдено
+          Не удалось найти страницу по данному адресу
         </h1>
         <p>
-          Попробуйте воспользоваться навигацией сверху сайта
+          Попробуйте воспользоваться меню навигации сверху страницы
           <span className="lg:hidden">
-            , нажав на кнопку справа сверху
+            , нажав на кнопку справа
           </span>
         </p>
       </main>

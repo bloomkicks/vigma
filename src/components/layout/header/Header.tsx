@@ -51,7 +51,7 @@ const Header = () => {
           <a className="transition-colors duration-150 lg:duration-200 p-2 hover:bg-dark-lightened hover:opacity-100 rounded-1 lg:absolute left-1/2 top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2">
             <img
               src="/images/header/long-icon.svg"
-              alt="На главную"
+              alt="ВИГМА"
               className="w-[138.6px] h-[33.5px]"
             />
           </a>

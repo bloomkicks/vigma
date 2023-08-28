@@ -11,7 +11,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier -w src/**"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -33,7 +34,7 @@
     "eslint-config-next": "^13.4.19",
     "html-minimizer-webpack-plugin": "^4.4.0",
     "postcss": "^8.4.28",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.2",
     "terser-webpack-plugin": "^5.3.9",
     "typescript": "^5.2.2"
   }

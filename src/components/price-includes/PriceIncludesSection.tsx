@@ -16,7 +16,7 @@ const PriceIncludesSection = () => {
         {covered.map((cover, i) => (
           <div
             className="text-left flex flex-row justify-start items-center space-x-3.5 mb-3.5 lg:w-[44%] lg:space-x-5 lg:mr-[52px] lg:mb-[40px] lg:max-w-[385px]"
-            key={i}
+            key={cover}
           >
             <img
               src="/images/price-explain/checkmark.svg"

@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import SelectColor from "./SelectColor";
+
 const availableColors = [
   "#0A1012",
   "#8A0202",
@@ -9,10 +11,10 @@ const availableColors = [
 ];
 
 const KitchenConstructorSection = () => {
-  const [color, setColor] = useState("#0A1012");
+  const [curColor, setCurColor] = useState("#0A1012");
 
   function selectColorHandler(clr: string) {
-    return () => setColor(clr);
+    setCurColor(clr);
   }
 
   return (
@@ -25,46 +27,32 @@ const KitchenConstructorSection = () => {
           С нами вы можете выбрать любые материалы и цвета для вашей
           кухни
         </p>
-        <div className="flex-row justify-center items-center space-x-5 hidden md:flex">
-          {availableColors.map((clr) => (
-            <div
-              onClick={selectColorHandler(clr)}
-              className={
-                "w-[38px] h-[38px] rounded-[100px] shadow-strong transition-[border-width] duration-[50ms] ease-out border-primary " +
-                (clr === color ? "border-[2px]" : "")
-              }
-              style={{ backgroundColor: clr }}
-              key={clr}
-            ></div>
-          ))}
-        </div>
+        <SelectColor
+          colors={availableColors}
+          curColor={curColor}
+          onSelect={selectColorHandler}
+        />
       </div>
-      <div className="mb-[30px] relative aspect-[1.323] shadow-normal w-auto h-auto md:w-fit">
+      <div className="mb-[30px] relative aspect-[1.323] shadow-normal mx-auto w-fit h-fit md:mx-0 md:w-fit">
         <div
           className="w-[305px] h-[230.5px] md:h-[325px] md:w-[594px] max-w-full max-h-full transition-colors duration-100 md:duration-150 ease-out absolute top-0 left-0"
-          style={{ backgroundColor: color }}
+          style={{ backgroundColor: curColor }}
         ></div>
         <img
           src="/images/constructor/kitchen-display.png"
           alt="Изображение не найдено"
+          loading="lazy"
           width="594px"
           height="325px"
           className="relative z-10 w-[305px] h-[230.5px] md:h-[325px] md:w-[594px] object-cover object-center"
         />
       </div>
-      <div className="flex flex-row justify-center items-center space-x-5 md:hidden">
-        {availableColors.map((clr) => (
-          <div
-            onClick={selectColorHandler(clr)}
-            className={
-              "w-[38px] h-[38px] rounded-[100px] shadow-strong transition-[border-width] duration-[50ms] md:duration-100 ease-out border-primary " +
-              (clr === color ? "border-[2px]" : "")
-            }
-            style={{ backgroundColor: clr }}
-            key={clr}
-          ></div>
-        ))}
-      </div>
+      <SelectColor
+        colors={availableColors}
+        curColor={curColor}
+        onSelect={selectColorHandler}
+        isMobile
+      />
     </section>
   );
 };

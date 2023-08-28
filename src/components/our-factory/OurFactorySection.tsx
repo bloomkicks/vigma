@@ -27,6 +27,7 @@ const OurFactorySection = () => {
             key={imgName}
             src={"/images/factory/" + imgName}
             alt="Изображение не найдено"
+            loading="lazy"
             height="304px"
             width="456px"
             className="shrink-0 h-full w-auto object-cover object-center rounded-[3px]"

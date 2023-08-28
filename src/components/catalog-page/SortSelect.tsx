@@ -34,7 +34,7 @@ const SortSelect = ({
           {[{ name: "all", title: "Все кухни" }]
             .concat(categories)
             .map((category, i) => (
-              <option key={i} value={category.name}>
+              <option key={category.name} value={category.name}>
                 {category.title}
               </option>
             ))}

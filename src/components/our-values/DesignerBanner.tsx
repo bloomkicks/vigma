@@ -14,7 +14,7 @@ const DesignerBanner = () => {
     >
       <img
         src="/images/general/long-arrow-right.svg"
-        alt="Вперед"
+        alt=""
         className="w-[25px] h-auto absolute top-[23px] right-[30px] body2 -z-10"
       />
       <b className="block heading mb-1.5 lg:!text-heading">

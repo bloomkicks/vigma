@@ -30,26 +30,26 @@ const contactEntries: {
 const ContactEntryList = () => {
   return (
     <div className="space-y-3.5 text-left mb-[22px] md:space-y-[16px] md:mb-0 md:min-w-[375px]">
-      {contactEntries.map((contact, i) => (
-        <React.Fragment key={contact.title}>
+      {contactEntries.map((contactEntry, i) => (
+        <React.Fragment key={contactEntry.title}>
           {i === 2 && <Socials />}
           <p className="">
-            <span className="font-semibold">{contact.title}: </span>
-            {contact.link ? (
-              <Link href={contact.link} passHref legacyBehavior>
+            <span className="font-semibold">{contactEntry.title}: </span>
+            {contactEntry.link ? (
+              <Link href={contactEntry.link} passHref legacyBehavior>
                 <a
                   className={
-                    contact.isVertical ? "block mt-1.5 " : "numbers"
+                    contactEntry.isVertical ? "block mt-1.5 " : "numbers"
                   }
                 >
-                  {contact.value}
+                  {contactEntry.value}
                 </a>
               </Link>
             ) : (
               <span
-                className={contact.isVertical ? "block mt-1.5" : ""}
+                className={contactEntry.isVertical ? "block mt-1.5" : ""}
               >
-                {contact.value}
+                {contactEntry.value}
               </span>
             )}
           </p>
