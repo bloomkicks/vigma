@@ -18,7 +18,7 @@ async function sendEmail(
     front: (front as string[]).join(", "),
     additional: (additional as string[]).join(", "),
     gift: (gift as string[]).join(", "),
-    way: answers.way,
+    connectMethod: answers.connectMethod,
     width: answers.width,
     height: answers.height,
     depth: answers.depth,

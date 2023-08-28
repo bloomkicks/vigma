@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { popupActions } from "@/store/popup-slice";
+import { modalActions } from "@/store/popup-slice";
 import Link from "next/link";
 import Timer from "../hero/Timer";
 import NavLinks from "./header/NavLinks";
@@ -7,7 +7,7 @@ import NavLinks from "./header/NavLinks";
 const Footer = () => {
   const dispatch = useDispatch();
   function clickHandler() {
-    dispatch(popupActions.togglePopup("call-consultant"));
+    dispatch(modalActions.toggleModal("call-consultant"));
   }
 
   return (

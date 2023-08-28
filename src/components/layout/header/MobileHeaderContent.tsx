@@ -1,4 +1,4 @@
-import { popupActions } from "@/store/popup-slice";
+import { modalActions } from "@/store/popup-slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import MenuSetter from "./MenuSetter";
@@ -11,7 +11,7 @@ const MobileHeaderContent = () => {
     setIsMenuOpen((prev) => !prev);
   }
   function callHandler() {
-    dispatch(popupActions.togglePopup("call-consultant"));
+    dispatch(modalActions.toggleModal("call-consultant"));
   }
 
   return (

@@ -8,7 +8,7 @@ import GetKitchenSection from "@/components/get-kitchen/GetKitchenSection";
 import OurValuesSection from "@/components/our-values/OurValuesSection";
 import QuizSection from "@/components/quiz/QuizSection";
 import ContactUsSection from "@/components/contact-us/ContactUsSection";
-import Popup from "@/components/popups/Popup";
+import ModalRoot from "@/components/popups/ModalRoot";
 import products from "@/data/products";
 
 import type { GetStaticProps, GetStaticPaths } from "next";
@@ -34,7 +34,7 @@ const ProductPage = ({ productName }: { productName: string }) => {
         <QuizSection />
         <ContactUsSection />
       </main>
-      <Popup />
+      <ModalRoot />
     </>
   );
 };

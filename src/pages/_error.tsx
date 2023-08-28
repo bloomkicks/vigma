@@ -1,5 +1,5 @@
 import MetaHead from "@/components/head-components/MetaHead";
-import Popup from "@/components/popups/Popup";
+import ModalRoot from "@/components/popups/ModalRoot";
 import { errorTitle, errorDescription } from "@/data/meta";
 
 const ErrorPage = () => {
@@ -12,12 +12,10 @@ const ErrorPage = () => {
         </h1>
         <p>
           Попробуйте воспользоваться меню навигации сверху страницы
-          <span className="lg:hidden">
-            , нажав на кнопку справа
-          </span>
+          <span className="lg:hidden">, нажав на кнопку справа</span>
         </p>
       </main>
-      <Popup />
+      <ModalRoot />
     </>
   );
 };

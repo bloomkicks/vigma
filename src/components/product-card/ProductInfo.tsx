@@ -1,5 +1,5 @@
 import ProductKitchenSlices from "./ProductSlices";
-import { popupActions } from "@/store/popup-slice";
+import { modalActions } from "@/store/popup-slice";
 import { useDispatch } from "react-redux";
 import ProductOldPrice from "./ProductOldPrice";
 import Link from "next/link";
@@ -18,10 +18,10 @@ const ProductInfo = ({
 }: Omit<ProductProps, "imagesLength"> & { isFull?: boolean }) => {
   const dispatch = useDispatch();
   function calculatePriceHandler() {
-    dispatch(popupActions.togglePopup("calculate-price"));
+    dispatch(modalActions.toggleModal("calculate-price"));
   }
   function inviteDesignerHandler() {
-    dispatch(popupActions.togglePopup("invite-designer"));
+    dispatch(modalActions.toggleModal("invite-designer"));
   }
 
   return (

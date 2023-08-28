@@ -1,4 +1,4 @@
-import { popupActions } from "@/store/popup-slice";
+import { modalActions } from "@/store/popup-slice";
 import { useDispatch } from "react-redux";
 import Timer from "./Timer";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import Link from "next/link";
 const HeroSection = () => {
   const dispatch = useDispatch();
   function sendRequestHandler() {
-    dispatch(popupActions.togglePopup("call-consultant"));
+    dispatch(modalActions.toggleModal("call-consultant"));
   }
 
   return (

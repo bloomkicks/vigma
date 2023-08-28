@@ -1,10 +1,10 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-const popupSlice = createSlice({
-  name: "popup",
+const modalSlice = createSlice({
+  name: "modal",
   initialState: { open: false, mode: "calculate-price", text: "" },
   reducers: {
-    togglePopup(state, action: PayloadAction<string>) {
+    toggleModal(state, action: PayloadAction<string>) {
       if (state.mode === action.payload) {
         state.open = !state.open;
       } else {
@@ -21,5 +21,5 @@ const popupSlice = createSlice({
   },
 });
 
-export const popupReducer = popupSlice.reducer;
-export const popupActions = popupSlice.actions;
+export const modalReducer = modalSlice.reducer;
+export const modalActions = modalSlice.actions;

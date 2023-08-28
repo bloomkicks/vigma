@@ -1,5 +1,5 @@
 import MetaHead from "@/components/head-components/MetaHead";
-import Popup from "@/components/popups/Popup";
+import ModalRoot from "@/components/popups/ModalRoot";
 import { errorTitle, errorDescription } from "@/data/meta";
 
 const ErrorPage = () => {
@@ -8,16 +8,14 @@ const ErrorPage = () => {
       <MetaHead title={errorTitle} description={errorDescription} />
       <main className="section-light !pt-[128px]">
         <h1 className="heading mb-2.5">
-          Страницы по данному адресу не найдено
+          Не удалось найти страницу по данному адресу
         </h1>
         <p>
-          Попробуйте воспользоваться навигацией сверху сайта
-          <span className="lg:hidden">
-            , нажав на кнопку справа сверху
-          </span>
+          Попробуйте воспользоваться меню навигации сверху страницы
+          <span className="lg:hidden">, нажав на кнопку справа</span>
         </p>
       </main>
-      <Popup />
+      <ModalRoot />
     </>
   );
 };

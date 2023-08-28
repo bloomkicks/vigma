@@ -10,7 +10,7 @@ const quizSlice = createSlice({
     width: "",
     depth: "",
     height: "",
-    way: "По телефону",
+    connectMethod: "По телефону",
   } as { [question: string]: string[] | string },
   reducers: {
     selectOption(
@@ -33,8 +33,8 @@ const quizSlice = createSlice({
     ) {
       state[action.payload.direction] = action.payload.value;
     },
-    setWay(state, action: PayloadAction<string>) {
-      state.way = action.payload;
+    setConnectMethod(state, action: PayloadAction<string>) {
+      state.connectMethod = action.payload;
     },
     clear(state) {
       return {
@@ -45,7 +45,7 @@ const quizSlice = createSlice({
         width: "",
         depth: "",
         height: "",
-        way: "По телефону",
+        connectMethod: "По телефону",
       };
     },
   },

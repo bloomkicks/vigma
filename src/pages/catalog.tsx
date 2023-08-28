@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import ProductList from "@/components/catalog-page/ProductList";
 import CatalogHeroSection from "@/components/catalog-page/CatalogHeroSection";
-import Popup from "@/components/popups/Popup";
+import ModalRoot from "@/components/popups/ModalRoot";
 
-const KitchensPage = () => {
+const CatalogPage = () => {
   const router = useRouter();
   const [sortCategory, setSortCategory] = useState(
     router.asPath.split("#")[1] || "all"
@@ -25,9 +25,9 @@ const KitchensPage = () => {
         <CatalogHeroSection onSort={onSort} selected={sortCategory} />
         <ProductList sortCategory={sortCategory} />
       </main>
-      <Popup />
+      <ModalRoot />
     </>
   );
 };
 
-export default KitchensPage;
+export default CatalogPage;

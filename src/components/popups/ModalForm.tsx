@@ -8,7 +8,7 @@ import type { PopupProps } from "@/data/popups";
 import { useState } from "react";
 import useForm from "@/hooks/use-form";
 
-const PopupForm = ({
+const ModalForm = ({
   inputs,
   button: buttonText,
   onFormSubmit,
@@ -163,4 +163,4 @@ const PopupForm = ({
   );
 };
 
-export default PopupForm;
+export default ModalForm;

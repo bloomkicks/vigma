@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { popupActions } from "@/store/popup-slice";
+import { modalActions } from "@/store/popup-slice";
 import GiftBanner from "@/components/ui/GiftBanner";
 import Timer from "@/components/hero/Timer";
 import NavLinks from "./NavLinks";
@@ -13,7 +13,7 @@ const NavMenu = ({
 }) => {
   const dispatch = useDispatch();
   function callConsultantHandler() {
-    dispatch(popupActions.togglePopup('call-consultant'));
+    dispatch(modalActions.toggleModal('call-consultant'));
   }
 
   return (

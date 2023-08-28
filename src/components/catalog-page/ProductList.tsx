@@ -1,5 +1,6 @@
-import ProductCard from "../product-card/ProductCard";
 import products from "@/data/products";
+
+import ProductCard from "../product-card/ProductCard";
 
 const ProductList = ({ sortCategory }: { sortCategory: string }) => {
   const filteredProducts = products.filter(

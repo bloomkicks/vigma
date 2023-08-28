@@ -1,5 +1,5 @@
 import MetaHead from "@/components/head-components/MetaHead";
-import Popup from "@/components/popups/Popup";
+import ModalRoot from "@/components/popups/ModalRoot";
 import { privacyTitle, privacyDescription } from "@/data/meta";
 
 const PrivacyPage = () => {
@@ -387,7 +387,7 @@ const PrivacyPage = () => {
           https://www.vigmamebel.ru/privacy.html.
         </p>
       </main>
-      <Popup />
+      <ModalRoot />
     </>
   );
 };

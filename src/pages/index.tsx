@@ -15,7 +15,7 @@ import GetKitchenSection from "@/components/get-kitchen/GetKitchenSection";
 import ReviewsSection from "@/components/reviews/ReviewsSection";
 import QuizSection from "@/components/quiz/QuizSection";
 import ContactUsSection from "@/components/contact-us/ContactUsSection";
-import Popup from "@/components/popups/Popup";
+import ModalRoot from "@/components/popups/ModalRoot";
 
 const MainPage = () => {
   return (
@@ -36,7 +36,7 @@ const MainPage = () => {
         <QuizSection />
         <ContactUsSection />
       </main>
-      <Popup />
+      <ModalRoot />
     </>
   );
 };

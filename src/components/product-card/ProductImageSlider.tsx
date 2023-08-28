@@ -78,6 +78,7 @@ const ProductImageSlider = ({
               height: height,
               width: width + "px",
             }}
+            loading={i !== 0 && !isFull ? "lazy" : "eager"}
           />
         ))}
       </Slider>

@@ -1,11 +1,11 @@
 import { useDispatch } from "react-redux";
-import { popupActions } from "@/store/popup-slice";
+import { modalActions } from "@/store/popup-slice";
 import StepList from "./StepList";
 
 const GetKitchenSection = () => {
   const dispatch = useDispatch();
   function clickHandler() {
-    dispatch(popupActions.togglePopup("invite-designer"));
+    dispatch(modalActions.toggleModal("invite-designer"));
   }
 
   return (

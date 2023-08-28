@@ -1,4 +1,4 @@
-import { popupActions } from "@/store/popup-slice";
+import { modalActions } from "@/store/popup-slice";
 import SizeForm from "./SizeForm";
 import { quizActions } from "@/store/quiz-slice";
 import type { RootState } from "@/store";
@@ -19,7 +19,7 @@ const QuizSection = () => {
 
   function moveNextHandler() {
     if (questionIndex === quizData.length - 1) {
-      dispatch(popupActions.togglePopup("calculate-price"));
+      dispatch(modalActions.toggleModal("calculate-price"));
     } else {
       setQuestionIndex((prev) =>
         moveInArray(prev, quizData.length, false, false, true)

@@ -1,19 +1,22 @@
 import type { RootState } from "@/store";
 import { quizActions } from "@/store/quiz-slice";
 import { useSelector, useDispatch } from "react-redux";
-const WayChoice = () => {
+
+const ConnectMethodChoice = () => {
   const dispatch = useDispatch();
-  const curWay = useSelector((state: RootState) => state.quiz.way);
-  function changeWayHandler(way: string) {
-    return () => dispatch(quizActions.setWay(way));
+  const curConnectMethod = useSelector(
+    (state: RootState) => state.quiz.connectMethod
+  );
+  function changeConnectMethodHandler(connectMethod: string) {
+    return () => dispatch(quizActions.setConnectMethod(connectMethod));
   }
 
   return (
     <div className="mb-6 mt-4">
       <button
-        onClick={changeWayHandler("По телефону")}
+        onClick={changeConnectMethodHandler("По телефону")}
         className={`button !text-body2 !py-2 !px-2.5 mr-3 inline-block shadow-normal lg:!py-[9px] lg:!px-3.5 ${
-          curWay === "По телефону"
+          curConnectMethod === "По телефону"
             ? ""
             : "!bg-gray hover:!bg-gray-dark"
         }`}
@@ -26,9 +29,11 @@ const WayChoice = () => {
         <span className="align-middle">По телефону</span>
       </button>
       <button
-        onClick={changeWayHandler("WhatsApp")}
+        onClick={changeConnectMethodHandler("WhatsApp")}
         className={`button !text-body2 !py-2 !px-2.5 inline-block shadow-normal lg:!py-[9px] lg:!px-3.5 ${
-          curWay === "WhatsApp" ? "" : "!bg-gray hover:!bg-gray-dark"
+          curConnectMethod === "WhatsApp"
+            ? ""
+            : "!bg-gray hover:!bg-gray-dark"
         }`}
       >
         <img
@@ -42,4 +47,4 @@ const WayChoice = () => {
   );
 };
 
-export default WayChoice;
+export default ConnectMethodChoice;
