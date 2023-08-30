@@ -28,7 +28,7 @@ const Slider = ({
   return (
     <div
       className={
-        "overflow-hidden shrink-0 " + (containerStyles || "")
+        "slider overflow-hidden shrink-0 " + (containerStyles || "")
       }
       style={{
         width:
@@ -39,7 +39,7 @@ const Slider = ({
             : itemTotalWidth,
         paddingTop: shadowSize ? "3px" : "0",
         paddingBottom: shadowSize ? "5px" : "0",
-        height: height || "",
+        height: height || "auto",
       }}
     >
       <div

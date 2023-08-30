@@ -12,7 +12,7 @@ import Scripts from "@/components/head-components/Scripts";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Scripts />
+      {process.env.NODE_ENV === "development" ? <></> : <Scripts />}
       <MainHead />
       <Provider store={store}>
         <Layout>

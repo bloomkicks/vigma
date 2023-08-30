@@ -2,8 +2,13 @@
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
+const withPwa = require("next-pwa")({
+  dest: "public",
+  sw: "sw.js",
+  // disable: process.env.NODE_ENV === "development",
+});
 
-const nextConfig = {
+const nextConfig = withPwa({
   // assetPrefix: './',
   output: "export",
   images: {
@@ -26,6 +31,6 @@ const nextConfig = {
     USER_ID: "user_2FU0yfDjTaoUzX8yIWhal",
     METRICA_KEY: "90359214",
   },
-};
+});
 
 module.exports = nextConfig;

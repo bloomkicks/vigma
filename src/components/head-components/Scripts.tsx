@@ -4,7 +4,7 @@ const Scripts = () => {
   return (
     <>
       {/* YANDEX METRICA */}
-      <Script type="text/javascript" id="yandex-metrika" defer>
+      <Script type="text/javascript" id="yandex-metrika">
         {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -20,7 +20,7 @@ const Scripts = () => {
       </Script>
       {/* ========== */}
       {/* GOOGLE TAG MANAGER */}
-      <Script id="google-tag-manager" async>
+      <Script id="google-tag-manager">
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -34,7 +34,7 @@ const Scripts = () => {
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-C6CPE1YJYN"
       ></Script>
-      <Script id="google-analytics" async>
+      <Script id="google-analytics">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());

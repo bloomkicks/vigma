@@ -53,6 +53,12 @@ export default function Document() {
         />
         <link
           rel="icon"
+          sizes="96x96"
+          type="image/png"
+          href="/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
           sizes="64x64"
           type="image/png"
           href="/favicon-64x64.png"

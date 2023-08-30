@@ -1,6 +1,6 @@
 {
   "name": "vigma",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": true,
   "license": "MIT",
   "browserslist": [
@@ -30,9 +30,11 @@
     "autoprefixer": "^10.4.15",
     "css-minimizer-webpack-plugin": "^5.0.0",
     "cssnano": "^6.0.1",
+    "cypress": "^12.17.4",
     "eslint": "^8.48.0",
     "eslint-config-next": "^13.4.19",
     "html-minimizer-webpack-plugin": "^4.4.0",
+    "next-pwa": "^5.6.0",
     "postcss": "^8.4.28",
     "prettier": "^3.0.2",
     "terser-webpack-plugin": "^5.3.9",

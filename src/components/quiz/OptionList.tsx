@@ -18,10 +18,10 @@ const OptionList = ({
 
   return (
     <div className="flex flex-row flex-wrap mb-[-20px] mr-[-25px]">
-      {options.map((option) => (
+      {options.map((option, i) => (
         <label
           className="w-[45%] xs:w-[44%] max-w-[155px] text-left mr-[16px] mb-[22px] rounded-1 shadow-dark fade-out-hover hover:!opacity-[0.92] animate-[slide-in_500ms_ease-out] cursor-pointer lg:max-w-[190px]"
-          key={option.title}
+          key={option.title + i}
           htmlFor={option.title}
         >
           <img
@@ -42,7 +42,7 @@ const OptionList = ({
             <div
               className={`border-black border-[1px] w-[13px] h-[13px] aspect-square rounded-[1px] lg:w-[15px] lg:h-[15px] ${
                 option.title === focused
-                  ? "[outline:2px_solid_lightblue]"
+                  ? "[outline:2.5px_solid_rgb(126,145,255)] outline-offset-[0.5px]"
                   : ""
               }`}
             >

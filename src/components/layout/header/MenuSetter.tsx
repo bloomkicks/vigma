@@ -9,6 +9,7 @@ const MenuSetter = ({
     <button
       className="group flex flex-col justify-center items-center rounded-2 px-2 py-2.5 hover:bg-dark-lightened transition-colors duration-150 lg:duration-200 space-y-[5.82px] lg:hidden"
       onClick={onClick}
+      aria-label="Открыть меню"
     >
       {[0, 1, 2].map((bar) => (
         <div
