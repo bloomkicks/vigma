@@ -46,9 +46,7 @@ const ContactEntryList = () => {
                 </a>
               </Link>
             ) : (
-              <span
-                className={contactEntry.isVertical ? "block mt-1.5" : ""}
-              >
+              <span className={contactEntry.isVertical ? "block mt-1.5" : ""}>
                 {contactEntry.value}
               </span>
             )}

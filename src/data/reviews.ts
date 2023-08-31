@@ -27,23 +27,23 @@ const reviews: Review[] = [
   },
   {
     isProfi: true,
-    imgName:'inna-profi.jpg'
+    imgName: "inna-profi.jpg",
   },
   {
     isProfi: true,
-    imgName:'ilya-profi.jpg'
+    imgName: "ilya-profi.jpg",
   },
   {
     isProfi: true,
-    imgName:'ekaterina-profi.jpg'
+    imgName: "ekaterina-profi.jpg",
   },
   {
     isProfi: true,
-    imgName:'sergei-profi.jpg'
+    imgName: "sergei-profi.jpg",
   },
   {
     isProfi: true,
-    imgName:'natalia-profi.jpg'
+    imgName: "natalia-profi.jpg",
   },
 ];
 export default reviews;

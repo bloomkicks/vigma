@@ -21,8 +21,10 @@ const ProductImageSlider = ({
   productName: string;
   isFull?: boolean;
 }) => {
-  const { curIndex, moveLeftHandler, moveRightHandler, isLaptop } =
-    useSlider(imagesLength, true);
+  const { curIndex, moveLeftHandler, moveRightHandler, isLaptop } = useSlider(
+    imagesLength,
+    true,
+  );
   const images = new Array(imagesLength).fill(null).map((n, i) => i);
 
   return (

@@ -2,10 +2,10 @@ import SortSelect from "./SortSelect";
 
 const CatalogHeroSection = ({
   onSort,
-  selected
+  selected,
 }: {
   onSort: (category: any) => void;
-  selected: string
+  selected: string;
 }) => {
   return (
     <section className="section-light !pb-[35px] lg:!pb-[76px]">

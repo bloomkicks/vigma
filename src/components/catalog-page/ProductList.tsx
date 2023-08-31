@@ -7,7 +7,7 @@ const ProductList = ({ sortCategory }: { sortCategory: string }) => {
     (product) =>
       sortCategory === "all" ||
       !sortCategory ||
-      product.categories.includes(sortCategory)
+      product.categories.includes(sortCategory),
   );
 
   return (
@@ -18,8 +18,8 @@ const ProductList = ({ sortCategory }: { sortCategory: string }) => {
         ))
       ) : (
         <p className="subtitle1">
-          Проектов с такими параметрами не найдено. Но вы можете
-          получить бесплатный дизайн-проект, вызвав дизайнера на сайте
+          Проектов с такими параметрами не найдено. Но вы можете получить
+          бесплатный дизайн-проект, вызвав дизайнера на сайте
         </p>
       )}
     </section>

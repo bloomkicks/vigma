@@ -2,12 +2,12 @@ const SelectColor = ({
   colors,
   curColor,
   onSelect,
-  isMobile
+  isMobile,
 }: {
   colors: string[];
   curColor: string;
   onSelect: (str: string) => void;
-  isMobile?: boolean
+  isMobile?: boolean;
 }) => {
   function selectHandler(clr: string) {
     return () => {
@@ -16,7 +16,11 @@ const SelectColor = ({
   }
 
   return (
-    <div className={`flex-row justify-center items-center space-x-5 ${isMobile ? "flex md:hidden" : "hidden md:flex"}`}>
+    <div
+      className={`flex-row justify-center items-center space-x-5 ${
+        isMobile ? "flex md:hidden" : "hidden md:flex"
+      }`}
+    >
       {colors.map((color) => (
         <button
           key={color}

@@ -18,8 +18,7 @@ const ModalCard = ({
     <section
       className={`modal h-full pt-[114px] px-[40px] pr-[48px] min-h-[99vh] w-full fixed left-0 top-0 z-40 bg-white transition-transform duration-[400ms] lg:duration-[450ms] ease-out pb-8 overflow-y-auto -translate-y-full md:max-w-[480px] md:px-10 md:pr-10 md:left-1/2 md:-translate-x-1/2 lg:pt-[42px] md:min-h-[665px] md:h-[70vh] lg:pb-10
             ${
-              modalState.open &&
-              !["success", "error"].includes(modalState.mode)
+              modalState.open && !["success", "error"].includes(modalState.mode)
                 ? "translate-y-0 lg:translate-y-[100px]"
                 : "-translate-y-full"
             }
@@ -39,9 +38,7 @@ const ModalCard = ({
         <h2 className="heading mb-2 lg:!text-heading">
           {popups[modalState.mode].title}
         </h2>
-        <p className="leading-[1.5]">
-          {popups[modalState.mode].description}
-        </p>
+        <p className="leading-[1.5]">{popups[modalState.mode].description}</p>
         <ConnectMethodChoice />
         <ModalForm
           inputs={popups[modalState.mode].inputs}
@@ -57,11 +54,7 @@ const ModalCard = ({
           (modalState.mode === "call-consultant" && (
             <p className="mt-3.5">
               Или позвоните нам сами:{" "}
-              <Link
-                href="tel:+7(964)642-60-51"
-                passHref
-                legacyBehavior
-              >
+              <Link href="tel:+7(964)642-60-51" passHref legacyBehavior>
                 <a className="inline-block mt-0.5 numbers">
                   +7 (964) 642-60-51
                 </a>

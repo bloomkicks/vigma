@@ -8,20 +8,15 @@ import reviews from "@/data/reviews";
 const ReviewsSection = () => {
   const [isProfiActive, setIsProfiActive] = useState(false);
 
-  const {
-    curIndex,
-    moveLeftHandler,
-    moveRightHandler,
-    isLaptop,
-    setCurIndex,
-  } = useSlider(
-    reviews.filter((review) =>
-      isProfiActive ? review.isProfi : !review.isProfi
-    ).length,
-    false,
-    false,
-    true
-  );
+  const { curIndex, moveLeftHandler, moveRightHandler, isLaptop, setCurIndex } =
+    useSlider(
+      reviews.filter((review) =>
+        isProfiActive ? review.isProfi : !review.isProfi,
+      ).length,
+      false,
+      false,
+      true,
+    );
 
   function profiChooseHandler() {
     setIsProfiActive(true);
@@ -54,7 +49,7 @@ const ReviewsSection = () => {
         >
           {reviews
             .filter((review) =>
-              isProfiActive ? review.isProfi : !review.isProfi
+              isProfiActive ? review.isProfi : !review.isProfi,
             )
             .map((review) => (
               <img

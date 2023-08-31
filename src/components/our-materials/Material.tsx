@@ -31,9 +31,7 @@ const Material = ({
       <div className="pl-[25px] pr-[25px] space-y-3.5 lg:space-y-0 lg:space-x-6 lg:flex lg:flex-row lg:items-start lg:justify-center lg:px-0">
         {properties.map((property) => (
           <div key={property.title} className="lg:w-[33.3%]">
-            <b className="block font-semibold mb-1 numbers">
-              {property.title}
-            </b>
+            <b className="block font-semibold mb-1 numbers">{property.title}</b>
             <p className="body2">{property.text}</p>
           </div>
         ))}

@@ -44,16 +44,9 @@ const NavLinks = ({
       }
     >
       {links.map((link) => (
-        <Link
-          href={link.link}
-          passHref
-          legacyBehavior
-          key={link.link}
-        >
+        <Link href={link.link} passHref legacyBehavior key={link.link}>
           <a className={"fade-out-hover " + (linkStyles || "")}>
-            <h6 className="font-strong font-semibold">
-              {link.title}
-            </h6>
+            <h6 className="font-strong font-semibold">{link.title}</h6>
           </a>
         </Link>
       ))}

@@ -22,13 +22,13 @@ const QuizSection = () => {
       dispatch(modalActions.toggleModal("calculate-price"));
     } else {
       setQuestionIndex((prev) =>
-        moveInArray(prev, quizData.length, false, false, true)
+        moveInArray(prev, quizData.length, false, false, true),
       );
     }
   }
   function moveBackHandler() {
     setQuestionIndex((prev) =>
-      moveInArray(prev, quizData.length, false, true, true)
+      moveInArray(prev, quizData.length, false, true, true),
     );
   }
   function selectHandler(option: string) {
@@ -36,15 +36,14 @@ const QuizSection = () => {
       quizActions.selectOption({
         question: quizData[questionIndex].question,
         option,
-      })
+      }),
     );
   }
 
   return (
     <section id="quiz" className="section-dark md:!px-[140px]">
       <h2 className="heading mb-8 lg:mb-[48px]">
-        Рассчитайте стоимость вашей кухни и получите подарок при
-        заказе
+        Рассчитайте стоимость вашей кухни и получите подарок при заказе
       </h2>
       <div className="lg:mx-auto lg:max-w-[800px]">
         <h5 className="subtitle1 mb-3 lg:mb-8">
@@ -63,9 +62,7 @@ const QuizSection = () => {
           <OptionList
             options={quizData[questionIndex].options!}
             onSelect={selectHandler}
-            selectedOptions={
-              quiz[quizData[questionIndex].question] as string[]
-            }
+            selectedOptions={quiz[quizData[questionIndex].question] as string[]}
             question={quizData[questionIndex].question}
           />
         )}

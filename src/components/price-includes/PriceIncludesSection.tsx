@@ -9,9 +9,7 @@ const covered = [
 const PriceIncludesSection = () => {
   return (
     <section className="section-dark md:!px-[150px]">
-      <h2 className="heading mb-5 lg:mb-[44px]">
-        В стоимость входит:
-      </h2>
+      <h2 className="heading mb-5 lg:mb-[44px]">В стоимость входит:</h2>
       <div className="lg:flex lg:flex-row lg:flex-wrap lg:justify-center lg:items-start lg:mr-[-52px] lg:mb-[-40px]">
         {covered.map((cover, i) => (
           <div

@@ -14,9 +14,7 @@ const modalSlice = createSlice({
     },
     toggleAll(state, action: PayloadAction<boolean | undefined>) {
       state.open =
-        typeof action.payload === "boolean"
-          ? action.payload
-          : !state.open;
+        typeof action.payload === "boolean" ? action.payload : !state.open;
     },
   },
 });

@@ -13,13 +13,7 @@ const gifts: { imgName: string; title: string }[] = [
   },
 ];
 
-const GiftBanner = ({
-  styles,
-  title,
-}: {
-  styles?: string;
-  title?: string;
-}) => {
+const GiftBanner = ({ styles, title }: { styles?: string; title?: string }) => {
   return (
     <div className={styles || ""}>
       <p className="subtitle1 mb-3.5 lg:mb-5">

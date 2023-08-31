@@ -30,10 +30,7 @@ const MobileHeaderContent = () => {
             className="w-[31px] h-[31px]"
           />
         </button>
-        <MenuSetter
-          isMenuOpen={isMenuOpen}
-          onClick={toggleMenuHandler}
-        />
+        <MenuSetter isMenuOpen={isMenuOpen} onClick={toggleMenuHandler} />
         <NavMenu open={isMenuOpen} onClick={toggleMenuHandler} />
       </>
     );

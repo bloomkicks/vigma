@@ -9,4 +9,4 @@ function formatTime(secs: number): string {
   }:${newSecs <= 9 ? "0" + newSecs : newSecs}`;
 }
 
-export default formatTime
+export default formatTime;

@@ -39,17 +39,13 @@ const ModalForm = ({
         nameRef.current!.value,
         quiz,
         addressRef.current ? addressRef.current.value : undefined,
-        router.asPath
+        router.asPath,
       );
       try {
-        (window as any).ym(
-          process.env.METRICA_KEY,
-          "reachGoal",
-          "order_sent"
-        );
+        (window as any).ym(process.env.METRICA_KEY, "reachGoal", "order_sent");
       } catch (err) {
         console.log(
-          "[Данные для аналитики]: Ошибка с отправкой Яндекс цели - order_sent"
+          "[Данные для аналитики]: Ошибка с отправкой Яндекс цели - order_sent",
         );
       }
       onFormSubmit("success");
@@ -71,11 +67,10 @@ const ModalForm = ({
     });
   }
 
-  const { submitHandler, clearState, isSuccess, error, notValid } =
-    useForm({
-      onSubmit,
-      isValid: !!(isValid["tel"] && isValid.name),
-    });
+  const { submitHandler, clearState, isSuccess, error, notValid } = useForm({
+    onSubmit,
+    isValid: !!(isValid["tel"] && isValid.name),
+  });
 
   function getRefName(name: string) {
     if (name === "name") {
@@ -89,8 +84,7 @@ const ModalForm = ({
 
   function changeHandler(name: string) {
     return (e: any) => {
-      let isTelValid =
-        telRef.current!.value.replace(/[^\d]/g, "").length >= 11;
+      let isTelValid = telRef.current!.value.replace(/[^\d]/g, "").length >= 11;
       let isNameValid = nameRef.current!.value.length >= 1;
       setIsStarted((prev) => ({
         tel: prev["tel"] || name === "tel",
@@ -108,8 +102,7 @@ const ModalForm = ({
   }
 
   function blurHandler(e: any) {
-    let isTelValid =
-      telRef.current!.value.replace(/[^\d]/g, "").length >= 11;
+    let isTelValid = telRef.current!.value.replace(/[^\d]/g, "").length >= 11;
     let isNameValid = nameRef.current!.value.length >= 1;
     setIsValid({
       tel: isTelValid,
@@ -122,8 +115,7 @@ const ModalForm = ({
     <form method="POST" onSubmit={submitHandler} className="w-full">
       {inputs.map((input) => {
         let isError =
-          (isStarted[input.name as keyof typeof isStarted] ||
-            notValid) &&
+          (isStarted[input.name as keyof typeof isStarted] || notValid) &&
           !isValid[input.name as keyof typeof isValid];
 
         return (
@@ -132,9 +124,7 @@ const ModalForm = ({
               htmlFor={input.name}
               className={
                 "block mb-1.5 " +
-                (isError
-                  ? "text-error animate-[shake_400ms_ease-in]"
-                  : "")
+                (isError ? "text-error animate-[shake_400ms_ease-in]" : "")
               }
             >
               {input.label}

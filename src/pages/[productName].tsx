@@ -14,9 +14,7 @@ import products from "@/data/products";
 import type { GetStaticProps, GetStaticPaths } from "next";
 
 const ProductPage = ({ productName }: { productName: string }) => {
-  const neededProduct = products.find(
-    (prd) => prd.name === productName
-  )!;
+  const neededProduct = products.find((prd) => prd.name === productName)!;
   return (
     <>
       <MetaHead

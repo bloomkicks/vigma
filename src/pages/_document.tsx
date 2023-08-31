@@ -33,12 +33,7 @@ export default function Document() {
           type="image/x-icon"
           href="/favicon.ico"
         />
-        <link
-          rel="icon"
-          sizes="128x128"
-          type="image/png"
-          href="/favicon.png"
-        />
+        <link rel="icon" sizes="128x128" type="image/png" href="/favicon.png" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -49,7 +44,13 @@ export default function Document() {
           rel="icon"
           sizes="192x192"
           type="image/png"
-          href="/google-chrome-192x192.png"
+          href="/android-chrome-192x192.png"
+        />
+        <link
+          rel="icon"
+          sizes="512x512"
+          type="image/png"
+          href="/android-chrome-512x512.png"
         />
         <link
           rel="icon"
@@ -80,10 +81,7 @@ export default function Document() {
           content="Кухни на заказ от производителя в СПБ и Лен. области - Долговечные кухни из 1000+ материалов и цветов - Бесплатный дизайн-проект, консультацию и подарок на ваш выбор - Быстрое производство и доставка"
         />
         <meta property="og:url" content="https://www.vigmamebel.ru" />
-        <meta
-          property="og:image"
-          content="/google-chrome-192x192.png"
-        />
+        <meta property="og:image" content="/google-chrome-192x192.png" />
         {/* TWITTER */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@vigma" />
@@ -95,10 +93,7 @@ export default function Document() {
           name="twitter:description"
           content="Кухни на заказ от производителя в СПБ и Лен. области - Долговечные кухни из 1000+ материалов и цветов - Бесплатный дизайн-проект, консультацию и подарок на ваш выбор - Быстрое производство и доставка"
         />
-        <meta
-          name="twitter:image"
-          content="/google-chrome-192x192.png"
-        />
+        <meta name="twitter:image" content="/google-chrome-192x192.png" />
       </Head>
       <body>
         <Main />

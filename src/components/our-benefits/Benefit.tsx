@@ -1,21 +1,12 @@
-const Benefit = ({
-  iconSrc,
-  text,
-}: {
-  iconSrc: string;
-  text: string;
-}) => {
-  const isLong =
-    !iconSrc.includes("date") && !iconSrc.includes("shape");
+const Benefit = ({ iconSrc, text }: { iconSrc: string; text: string }) => {
+  const isLong = !iconSrc.includes("date") && !iconSrc.includes("shape");
   const isPackage = iconSrc.includes("package");
   const isContract = iconSrc.includes("contract");
 
   return (
     <div
       className={`flex flex-row justify-center items-stretch shrink-0 text-left rounded-1 shadow-normal h-[68px] md:h-[80px] ${
-        isPackage || isContract
-          ? "lg:max-w-[40%] lg:mt-6"
-          : "lg:max-w-[31%]"
+        isPackage || isContract ? "lg:max-w-[40%] lg:mt-6" : "lg:max-w-[31%]"
       }`}
     >
       <div

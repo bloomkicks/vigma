@@ -11,13 +11,11 @@ const MaterialsControls = ({
   moveHandler: () => void;
   isLaptop?: boolean;
 }) => {
-  let isFar = curIndex !== 2 
+  let isFar = curIndex !== 2;
   return (
     <div
       className={`pl-1.5 pr-0.5 ${
-        isFar
-          ? "-mt-[68px] md:mt-0 lg:mt-[-20px]"
-          : "mt-2.5 lg:mt-[36px]"
+        isFar ? "-mt-[68px] md:mt-0 lg:mt-[-20px]" : "mt-2.5 lg:mt-[36px]"
       } flex flex-row justify-between items-center transition-[margin] duration-400 ease-out z-10 relative lg:justify-center`}
     >
       <SliderProgress

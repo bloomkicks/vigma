@@ -5,7 +5,7 @@ const useSlider = (
   length: number,
   isOnly?: boolean,
   isTwo?: boolean,
-  isMdLaptop?: boolean
+  isMdLaptop?: boolean,
 ) => {
   const [curIndex, setCurIndex] = useState(0);
   const [isMedium, setIsMedium] = useState(false);
@@ -14,26 +14,12 @@ const useSlider = (
 
   function moveRightHandler() {
     setCurIndex((prev) =>
-      moveInArray(
-        prev,
-        length,
-        isLaptop && !isOnly,
-        false,
-        false,
-        isTwo
-      )
+      moveInArray(prev, length, isLaptop && !isOnly, false, false, isTwo),
     );
   }
   function moveLeftHandler() {
     setCurIndex((prev) =>
-      moveInArray(
-        prev,
-        length,
-        isLaptop && !isOnly,
-        true,
-        false,
-        isTwo
-      )
+      moveInArray(prev, length, isLaptop && !isOnly, true, false, isTwo),
     );
   }
 

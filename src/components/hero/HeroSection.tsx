@@ -22,8 +22,8 @@ const HeroSection = () => {
         alt=""
       />
       <p className="text-button-lg text-[#D1D1D1] mb-3 lg:mb-4">
-        Кухни <span className="font-semibold numbers">№1</span> в
-        Приморском районе
+        Кухни <span className="font-semibold numbers">№1</span> в Приморском
+        районе
       </p>
       <h1 className="hero mb-[22px] max-w-[1014px] mx-auto lg:!text-desktop-hero lg:mb-6">
         КУХНИ НА ЗАКАЗ В СПБ ОТ ФАБРИКИ

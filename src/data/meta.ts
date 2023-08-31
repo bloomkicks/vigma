@@ -7,9 +7,10 @@ export const catalogTitle = "Проекты кухонь на любой вку�
 export const catalogDescription =
   "Готовые проекты кухонь и источник для вдохновения";
 
-export const errorTitle = "Не удалось найти страницу по данному адресу - ВИГМА Мебель";
+export const errorTitle =
+  "Не удалось найти страницу по данному адресу - ВИГМА Мебель";
 export const errorDescription =
   "Попробуйте воспользоваться меню навигации сверху страницы";
 
-export const privacyTitle = mainTitle
-export const privacyDescription = mainDescription
+export const privacyTitle = mainTitle;
+export const privacyDescription = mainDescription;

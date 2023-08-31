@@ -7,13 +7,8 @@ import SliderControl from "../ui/SliderControl";
 import ProductCard from "../product-card/ProductCard";
 
 const MainProductsSection = () => {
-  const {
-    curIndex,
-    moveLeftHandler,
-    moveRightHandler,
-    isLaptop,
-    isMedium,
-  } = useSlider(mainProducts.length, true);
+  const { curIndex, moveLeftHandler, moveRightHandler, isLaptop, isMedium } =
+    useSlider(mainProducts.length, true);
 
   return (
     <section id="products" className="section-light lg:!pt-[52px]">
@@ -29,11 +24,7 @@ const MainProductsSection = () => {
           isOnly
         >
           {mainProducts.map((product) => (
-            <ProductCard
-              {...product}
-              key={product.name}
-              styles="shrink-0"
-            />
+            <ProductCard {...product} key={product.name} styles="shrink-0" />
           ))}
         </Slider>
         <SliderControl onClick={moveRightHandler} isSmall />

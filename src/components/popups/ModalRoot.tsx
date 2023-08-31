@@ -37,10 +37,7 @@ const ModalRoot = () => {
         toggleModalHandler={toggleModalHandler}
       />
       <StatusPopup
-        open={
-          modalState.open &&
-          ["success", "error"].includes(modalState.mode)
-        }
+        open={modalState.open && ["success", "error"].includes(modalState.mode)}
         mode={modalState.mode}
         onClose={toggleModalHandler}
       />

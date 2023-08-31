@@ -5,7 +5,7 @@ type FormState = {
   error?: string | null;
   isLoading: boolean;
   notValid?: boolean;
-}
+};
 
 function formReducer(state: FormState, action: any) {
   let newState: FormState = {

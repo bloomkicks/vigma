@@ -17,7 +17,11 @@ const ProductKitchenSlices = ({
     <div
       className={
         "flex-row space-x-2 mt-4 mb-6 lg:mb-8 " +
-        (isForFull ? isFull ? "flex lg:hidden" : 'hidden' : "hidden lg:flex") +
+        (isForFull
+          ? isFull
+            ? "flex lg:hidden"
+            : "hidden"
+          : "hidden lg:flex") +
         (styles || "")
       }
     >

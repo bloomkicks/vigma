@@ -27,9 +27,7 @@ const Slider = ({
 
   return (
     <div
-      className={
-        "slider overflow-hidden shrink-0 " + (containerStyles || "")
-      }
+      className={"slider overflow-hidden shrink-0 " + (containerStyles || "")}
       style={{
         width:
           isLaptop && !isOnly
@@ -47,9 +45,9 @@ const Slider = ({
           styles || ""
         }`}
         style={{
-          transform: `translateX(-${
-            (itemWidth + spacing) * curIndex
-          }px) ${height ? "translateY(-50%)" : ""}`,
+          transform: `translateX(-${(itemWidth + spacing) * curIndex}px) ${
+            height ? "translateY(-50%)" : ""
+          }`,
           top: height ? "50%" : "0",
           marginLeft: shadowSize ? shadowSize + "px" : "0",
         }}

@@ -54,8 +54,7 @@ const ProductInfo = ({
           discount={discount}
         />
         <p className="body1 numbers font-semibold mt-[0.5px] lg:mt-0">
-          {price}₽{" "}
-          <span className="body2 font-base font-normal">за п.м.</span>
+          {price}₽ <span className="body2 font-base font-normal">за п.м.</span>
         </p>
       </div>
       <ProductKitchenSlices

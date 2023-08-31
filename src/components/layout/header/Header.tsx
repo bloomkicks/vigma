@@ -33,16 +33,9 @@ const Header = () => {
       <div className="mx-auto h-full max-w-[1366px] px-8 sm:px-12 md:px-24 flex flex-row items-center justify-center relative lg:block">
         <div className="hidden lg:flex flex-row items-center h-full absolute right-[60%] top-0 space-x-[36px]">
           {links.slice(0, 2).map((link) => (
-            <Link
-              href={link.link}
-              passHref
-              legacyBehavior
-              key={link.link}
-            >
+            <Link href={link.link} passHref legacyBehavior key={link.link}>
               <a className="fade-out-hover text-white">
-                <h6 className="font-strong font-semibold">
-                  {link.title}
-                </h6>
+                <h6 className="font-strong font-semibold">{link.title}</h6>
               </a>
             </Link>
           ))}
@@ -58,16 +51,9 @@ const Header = () => {
         </Link>
         <div className="hidden lg:flex flex-row items-center h-full absolute left-[60%] top-0 space-x-[36px]">
           {links.slice(2, 5).map((link) => (
-            <Link
-              href={link.link}
-              passHref
-              legacyBehavior
-              key={link.link}
-            >
+            <Link href={link.link} passHref legacyBehavior key={link.link}>
               <a className="fade-out-hover text-white">
-                <h6 className="font-strong font-semibold">
-                  {link.title}
-                </h6>
+                <h6 className="font-strong font-semibold">{link.title}</h6>
               </a>
             </Link>
           ))}

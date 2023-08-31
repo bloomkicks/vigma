@@ -19,9 +19,7 @@ const SliderProgress = ({
 
   return (
     <div
-      className={
-        "flex flex-row space-x-1.5 !lg:space-x-2.5 " + (styles || "")
-      }
+      className={"flex flex-row space-x-1.5 !lg:space-x-2.5 " + (styles || "")}
     >
       {parts.map((i) => (
         <div

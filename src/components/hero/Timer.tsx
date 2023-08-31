@@ -6,7 +6,7 @@ const Timer = ({ styles }: { styles?: string }) => {
   stopDate.setHours(24, 0, 0);
 
   const [leftSecs, setLeftSecs] = useState(() =>
-    Math.floor((stopDate.getTime() - Date.now()) / 1000)
+    Math.floor((stopDate.getTime() - Date.now()) / 1000),
   );
 
   useEffect(() => {

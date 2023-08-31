@@ -4,7 +4,7 @@ function moveInArray(
   isMany: boolean,
   minus?: boolean,
   limited?: boolean,
-  isTwo?: boolean
+  isTwo?: boolean,
 ): number {
   let result: number | null = null;
   let edge = isMany ? (isTwo ? 2 : 3) : 1;

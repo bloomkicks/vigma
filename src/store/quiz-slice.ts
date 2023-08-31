@@ -15,21 +15,19 @@ const quizSlice = createSlice({
   reducers: {
     selectOption(
       state: { [question: string]: string[] | any },
-      action: PayloadAction<{ question: string; option: string }>
+      action: PayloadAction<{ question: string; option: string }>,
     ) {
       let { question, option } = action.payload;
 
       if (state[question].includes(option)) {
-        state[question] = state[question].filter(
-          (i: any) => i !== option
-        );
+        state[question] = state[question].filter((i: any) => i !== option);
       } else {
         state[question].push(option);
       }
     },
     setSize(
       state,
-      action: PayloadAction<{ direction: string; value: string }>
+      action: PayloadAction<{ direction: string; value: string }>,
     ) {
       state[action.payload.direction] = action.payload.value;
     },

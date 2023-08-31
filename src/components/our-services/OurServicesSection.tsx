@@ -42,13 +42,16 @@ const services: {
 ];
 
 const OurServicesSection = () => {
-  const { curIndex, moveLeftHandler, moveRightHandler, isLaptop } =
-    useSlider(services.length, false, true, true);
+  const { curIndex, moveLeftHandler, moveRightHandler, isLaptop } = useSlider(
+    services.length,
+    false,
+    true,
+    true,
+  );
   return (
     <section id="our-services" className="section-light">
       <h2 className="heading mb-[30px] lg:mb-[56px]">
-        Делаем всё, что вам надо – от производства кухни и до
-        установки
+        Делаем всё, что вам надо – от производства кухни и до установки
       </h2>
       <div className="flex flex-row justify-center items-center -ml-1">
         <SliderControl isLeft onClick={moveLeftHandler} />

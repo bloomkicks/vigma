@@ -5,7 +5,7 @@ async function sendEmail(
   name: string = "Не указано",
   answers: { [question: string]: string[] | string },
   address: string = "Не указано",
-  product?: string
+  product?: string,
 ) {
   const { shape, front, additional, gift } = answers;
 
@@ -28,7 +28,7 @@ async function sendEmail(
     process.env.SERVICE_ID!,
     process.env.TEMPLATE_ID!,
     emailParams,
-    process.env.USER_ID!
+    process.env.USER_ID!,
   );
 }
 

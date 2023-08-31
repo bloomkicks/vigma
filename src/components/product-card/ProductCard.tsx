@@ -29,13 +29,7 @@ const ProductCard = ({
     });
   }, []);
 
-  const productWidth = isLaptop
-    ? 860
-    : isMedium
-    ? 440
-    : isFull
-    ? 307
-    : 290;
+  const productWidth = isLaptop ? 860 : isMedium ? 440 : isFull ? 307 : 290;
 
   return (
     <div
@@ -75,10 +69,7 @@ const ProductCard = ({
           }}
         />
       )}
-      <ProductTags
-        discount={productInfo.discount}
-        isHit={productInfo.isHit}
-      />
+      <ProductTags discount={productInfo.discount} isHit={productInfo.isHit} />
       <ProductInfo {...productInfo} name={name} isFull={isFull} />
     </div>
   );

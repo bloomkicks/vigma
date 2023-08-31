@@ -2,13 +2,7 @@ import { useState } from "react";
 
 import SelectColor from "./SelectColor";
 
-const availableColors = [
-  "#0A1012",
-  "#8A0202",
-  "#1449A0",
-  "#20752D",
-  "#DEDEDE",
-];
+const availableColors = ["#0A1012", "#8A0202", "#1449A0", "#20752D", "#DEDEDE"];
 
 const KitchenConstructorSection = () => {
   const [curColor, setCurColor] = useState("#0A1012");
@@ -24,8 +18,7 @@ const KitchenConstructorSection = () => {
           Цвета и текстуры на любой вкус
         </h2>
         <p className="leading-[1.5] mb-5 md:mb-10">
-          С нами вы можете выбрать любые материалы и цвета для вашей
-          кухни
+          С нами вы можете выбрать любые материалы и цвета для вашей кухни
         </p>
         <SelectColor
           colors={availableColors}

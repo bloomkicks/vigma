@@ -4,16 +4,10 @@ import GiftBanner from "@/components/ui/GiftBanner";
 import Timer from "@/components/hero/Timer";
 import NavLinks from "./NavLinks";
 
-const NavMenu = ({
-  open,
-  onClick,
-}: {
-  open: boolean;
-  onClick: () => void;
-}) => {
+const NavMenu = ({ open, onClick }: { open: boolean; onClick: () => void }) => {
   const dispatch = useDispatch();
   function callConsultantHandler() {
-    dispatch(modalActions.toggleModal('call-consultant'));
+    dispatch(modalActions.toggleModal("call-consultant"));
   }
 
   return (

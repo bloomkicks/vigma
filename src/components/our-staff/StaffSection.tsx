@@ -5,8 +5,12 @@ import useSlider from "@/hooks/use-slider";
 import members from "@/data/members";
 
 const OurStaffSection = () => {
-  const { curIndex, moveLeftHandler, moveRightHandler, isLaptop } =
-    useSlider(members.length, false, false, true);
+  const { curIndex, moveLeftHandler, moveRightHandler, isLaptop } = useSlider(
+    members.length,
+    false,
+    false,
+    true,
+  );
 
   return (
     <section id="our-staff" className="section-dark">

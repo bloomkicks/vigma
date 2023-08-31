@@ -17,12 +17,8 @@ const DesignerBanner = () => {
         alt=""
         className="w-[25px] h-auto absolute top-[23px] right-[30px] body2 -z-10"
       />
-      <b className="block heading mb-1.5 lg:!text-heading">
-        Это бесплатно!
-      </b>
-      <p className="subtitle1">
-        Вызвать дизайнера с 250+ образцами материалов
-      </p>
+      <b className="block heading mb-1.5 lg:!text-heading">Это бесплатно!</b>
+      <p className="subtitle1">Вызвать дизайнера с 250+ образцами материалов</p>
     </button>
   );
 };

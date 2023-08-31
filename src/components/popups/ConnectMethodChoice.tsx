@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 const ConnectMethodChoice = () => {
   const dispatch = useDispatch();
   const curConnectMethod = useSelector(
-    (state: RootState) => state.quiz.connectMethod
+    (state: RootState) => state.quiz.connectMethod,
   );
   function changeConnectMethodHandler(connectMethod: string) {
     return () => dispatch(quizActions.setConnectMethod(connectMethod));
@@ -31,9 +31,7 @@ const ConnectMethodChoice = () => {
       <button
         onClick={changeConnectMethodHandler("WhatsApp")}
         className={`button !text-body2 !py-2 !px-2.5 inline-block shadow-normal lg:!py-[9px] lg:!px-3.5 ${
-          curConnectMethod === "WhatsApp"
-            ? ""
-            : "!bg-gray hover:!bg-gray-dark"
+          curConnectMethod === "WhatsApp" ? "" : "!bg-gray hover:!bg-gray-dark"
         }`}
       >
         <img

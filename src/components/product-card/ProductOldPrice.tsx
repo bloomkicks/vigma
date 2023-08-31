@@ -11,8 +11,7 @@ const ProductOldPrice = ({
 }) => {
   let priceNumber = parseInt(price.replace(/[^\d]/g, ""));
   let newOldPrice =
-    oldPrice ||
-    (priceNumber + priceNumber * (discount / 100)).toString();
+    oldPrice || (priceNumber + priceNumber * (discount / 100)).toString();
   newOldPrice =
     newOldPrice.length === 5
       ? newOldPrice.slice(0, 2) + "." + newOldPrice.slice(2, 6)

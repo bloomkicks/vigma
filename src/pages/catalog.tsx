@@ -9,7 +9,7 @@ import ModalRoot from "@/components/popups/ModalRoot";
 const CatalogPage = () => {
   const router = useRouter();
   const [sortCategory, setSortCategory] = useState(
-    router.asPath.split("#")[1] || "all"
+    router.asPath.split("#")[1] || "all",
   );
   function onSort(category: string) {
     setSortCategory(category);
@@ -17,10 +17,7 @@ const CatalogPage = () => {
 
   return (
     <>
-      <MetaHead
-        title={catalogTitle}
-        description={catalogDescription}
-      />
+      <MetaHead title={catalogTitle} description={catalogDescription} />
       <main className="pt-16">
         <CatalogHeroSection onSort={onSort} selected={sortCategory} />
         <ProductList sortCategory={sortCategory} />

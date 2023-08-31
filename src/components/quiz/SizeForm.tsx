@@ -24,7 +24,7 @@ const SizeForm = ({
           quizActions.setSize({
             direction,
             value,
-          })
+          }),
         );
       }, 1000);
     };
