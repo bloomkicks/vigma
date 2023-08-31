@@ -24,7 +24,7 @@ async function sendEmail(
     depth: answers.depth,
   };
 
-  send(
+  await send(
     process.env.SERVICE_ID!,
     process.env.TEMPLATE_ID!,
     emailParams,

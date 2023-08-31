@@ -1,11 +1,9 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import formatTime from "@/utils/format-time";
 
 const Timer = ({ styles }: { styles?: string }) => {
   const stopDate = new Date();
-  stopDate.setHours(24);
+  stopDate.setHours(24, 0, 0);
 
   const [leftSecs, setLeftSecs] = useState(() =>
     Math.floor((stopDate.getTime() - Date.now()) / 1000)
@@ -24,7 +22,7 @@ const Timer = ({ styles }: { styles?: string }) => {
         (styles || "")
       }
     >
-      <p>{formatTime(leftSecs)}</p>
+      <p suppressHydrationWarning>{formatTime(leftSecs)}</p>
     </div>
   );
 };
