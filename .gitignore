@@ -6,6 +6,9 @@
 
 # dependencies
 /node_modules
+/out
+/out.rar
+/_build
 
 # misc
 .DS_Store
