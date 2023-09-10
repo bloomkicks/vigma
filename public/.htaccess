@@ -1,15 +1,25 @@
 ErrorDocument 404 /404.html
+ErrorDocument 500 /504.html
 
 RewriteEngine on
-# if not https - redirect to https
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 
-# if there's .html - rewrite to no html      
-# RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-# RewriteRule ^ /%1 [NC,L,R]
+# NO HTTPS - REDIRECT TO HTTPS
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE]
 
-# if page isn't a file and page.html is  - redirect to html
+# WHEN WWW - REDIRECT TO NO WWW
+RewriteCond %{HTTP_HOST} ^www\.vigmamebel\.ru$ [NC]
+RewriteRule ^ https://vigmamebel.ru%{REQUEST_URI} [R=301,L,NE]
+
+# ENDS WITH .HTML -> REDIRECT TO NO .HTML
+# RewriteCond %{REQUEST_URI} /(.*)\.html$ [NC]
+# RewriteRule ^ /%1 [R=301,NC,L]
+
+# FILEPATH ENDS WITH SLASH -> GIVE THE FILE ANYWAY
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [NC,L]
+
+# FILEPATH ENDS WITH NO .HTML -> GIVE THE .HTML ANYWAY
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html  -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]

@@ -9,7 +9,6 @@ const withPwa = require("next-pwa")({
 });
 
 const nextConfig = withPwa({
-  // assetPrefix: './',
   output: "export",
   images: {
     unoptimized: true,

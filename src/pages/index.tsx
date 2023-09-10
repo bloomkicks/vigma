@@ -17,7 +17,7 @@ import QuizSection from "@/components/quiz/QuizSection";
 import ContactUsSection from "@/components/contact-us/ContactUsSection";
 import ModalRoot from "@/components/popups/ModalRoot";
 
-const MainPage = () => {
+const HomePage = () => {
   return (
     <>
       <MetaHead title={mainTitle} description={mainDescription} />
@@ -41,4 +41,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default HomePage;

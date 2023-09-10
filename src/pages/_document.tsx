@@ -72,28 +72,28 @@ export default function Document() {
         />
         {/* FACEBOOK */}
         <meta property="og:type" content="website" />
-        <meta
+        {/* <meta
           property="og:title"
           content="Кухни на заказ в СПБ от фабрики ВИГМА Мебель"
         />
         <meta
           property="og:description"
           content="Кухни на заказ от производителя в СПБ и Лен. области - Долговечные кухни из 1000+ материалов и цветов - Бесплатный дизайн-проект, консультацию и подарок на ваш выбор - Быстрое производство и доставка"
-        />
-        <meta property="og:url" content="https://www.vigmamebel.ru" />
-        <meta property="og:image" content="/google-chrome-192x192.png" />
-        {/* TWITTER */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@vigma" />
-        <meta
+        /> */}
+        {/* <meta
           name="twitter:title"
           content="Кухни на заказ в СПБ от фабрики ВИГМА Мебель"
         />
         <meta
           name="twitter:description"
           content="Кухни на заказ от производителя в СПБ и Лен. области - Долговечные кухни из 1000+ материалов и цветов - Бесплатный дизайн-проект, консультацию и подарок на ваш выбор - Быстрое производство и доставка"
-        />
-        <meta name="twitter:image" content="/google-chrome-192x192.png" />
+        /> */}
+        <meta property="og:url" content="https://vigmamebel.ru" />
+        <meta property="og:image" content="/android-chrome-192x192.png" />
+        {/* TWITTER */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@vigma" />
+        <meta name="twitter:image" content="/android-chrome-192x192.png" />
       </Head>
       <body>
         <Main />
