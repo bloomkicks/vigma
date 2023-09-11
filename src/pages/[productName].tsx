@@ -14,12 +14,14 @@ import products from "@/data/products";
 import type { GetStaticProps, GetStaticPaths } from "next";
 
 const ProductPage = ({ productName }: { productName: string }) => {
-  const neededProduct = products.find((prd) => prd.name === productName)!;
+  const neededProduct = products.find(
+    (prd) => prd.name === productName
+  )!;
   return (
     <>
       <MetaHead
         title={`${neededProduct.title} - ${neededProduct.subtitle} от фабрики ВИГМА Мебель`}
-        description={`Кухня ${neededProduct.description}, которая станет украшением любого дома`}
+        description={`Кухня ${neededProduct.description.toLowerCase()}, которая станет украшением любого дома`}
       />
       <main className="pt-16">
         <ProductHeroSection {...neededProduct} />
