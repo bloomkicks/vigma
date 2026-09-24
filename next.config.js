@@ -25,10 +25,10 @@ const nextConfig = withPwa({
     return config;
   },
   env: {
-    SERVICE_ID: "service_kiq0jp9",
-    TEMPLATE_ID: "template_hci5war",
-    USER_ID: "user_2FU0yfDjTaoUzX8yIWhal",
-    METRICA_KEY: "90359214",
+    SERVICE_ID: "NAH",
+    TEMPLATE_ID: "NAH",
+    USER_ID: "NAH",
+    METRICA_KEY: "NAH",
   },
 });
 
