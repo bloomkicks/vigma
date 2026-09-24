@@ -19,9 +19,9 @@ module.exports = {
     return config;
   },
   env: {
-    SERVICE_ID: "service_kiq0jp9",
-    TEMPLATE_ID: "template_hci5war",
-    USER_ID: "user_2FU0yfDjTaoUzX8yIWhal",
+    SERVICE_ID: "NAH",
+    TEMPLATE_ID: "NAH",
+    USER_ID: "NAH",
 
     // ASSETS
     MAIN_ASSETS: "./images",
